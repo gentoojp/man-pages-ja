@@ -85,34 +85,39 @@ src_install() {
 - ebuild で変数に値を割り当てるときは、
 変数名と等号の間に \fBスペースを含めることはできない\fR。
 .TP
-\fBP\fR
+.B P
 この変数には ebuild のリビジョンを除いたパッケージ名が入っている。
 この変数は \fB絶対に\fR 変更してはいけない。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$P\fR=='\fIxfree-4.2.1\fR'
 .TP
-\fBPN\fR
+.B PN
 この変数にはバージョン番号を除いた ebuild スクリプト名が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PN\fR=='\fIxfree\fR'
 .TP
-\fBPV\fR
+.B PV
 この変数にはリビジョンを除いたバージョン番号が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PV\fR=='\fI4.2.1\fR'
 .TP
-\fBPR\fR
+.B PR
 この変数にはリビジョン番号、もしくはリビジョン番号が存在しない場合
 は「r0」が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PR\fR=='\fIr2\fR'
 .TP
-\fBPF\fR
+.B PVR
+この変数にはリビジョン番号つきのバージョン番号が入っている。
+.br
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PV\fR=='\fI4.2.1-r2\fR'
+.TP
+.B PF
 この変数には完全なパッケージ名 \fI[PN]\-[PV]-r[PR]\fR が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PF\fR=='\fIxfree-4.2.1-r2\fR'
 .TP
-\fBA\fR
+.B A
 この変数にはパッケージに必要なソースファイル名全てが入っている。
 ebuild 内でこの変数を定義してはいけない。この変数は \fISRC_URI\F 
 変数から自動生成される。
@@ -226,8 +231,17 @@ sys-apps/sed\fI-4.0.5\fR
 sys-libs/zlib\fI-1.1.4-r1\fR
 .br
 net-misc/dhcp\fI-3.0_p2\fR
+
+バージョン番号は 1.2 や 4.5.2 のように、通例ピリオドで区切られた2つか3
+つの番号からなっている。この文字列には 1.2a や 4.5.2z のように1文字末
+尾につけることもできる。この文字は alpha や beta などなどのリリース状態を
+示すために使っては \fBならない\fR ことに注意。リリース状態を示すためには、
+補助的な接頭辞 _alpha, _beta, _pre (プリリリース、pre-release), _rc
+(リリース候補の状態、release candidate) もしくは _p (パッチ patch)
+を使うこと。つまり、あるパッケージの3度目もプリリリースには、1.2_pre3
+のようなバージョンを使う、ということである。
 .TP
-.B アトム接頭演算子 [> >= = <= =]
+.B アトム接頭演算子 [> >= = <= <]
 いつも正確なバージョンを特定するのではなく、
 広く使われているバージョンに依存させることができたらと
 思うこともある。
@@ -243,7 +257,7 @@ net-misc/dhcp\fI-3.0_p2\fR
 .br
 \fI<\fRmedia-libs/libgd-1.6
 .TP
-.B 拡張アトム接頭辞 [!] と接尾辞 [*]
+.B 拡張アトム接頭辞 [!~] と接尾辞 [*]
 もっとすごいこともできる。「!」と「*」を使えばパッケージのブロックや、
 ある範囲のバージョンにマッチするパッケージを定義したりすることができる
 のだ。また、これらの拡張された接頭辞/接尾辞は上で定義されているアトム
@@ -255,29 +269,94 @@ Portage ツリーにあるありふれた例をいくつか挙げると:
 =dev-libs/glib-2\fI*\fR
 .br
 \fI!\fRnet-fs/samba-2\fI*\fR
+.br
+\fI~\fRnet-libs/libnet-1.0.2a
 
 \fI!\fR は同時にインストールされるパッケージのブロックを意味する。
+.br
 \fI*\fR は指定されたベースがマッチするのであれば、
 パッケージのバージョンは問わないことを意味する。
 したがって、バージョン「2*」と書けば、
 「2.1」「2.2」「2.2.1」などにマッチし、
 「1.0」「3.0」「4.1」などにはマッチしないようにすることができる。
+.br
+\fI~\fR は指定されたベースとなるバージョンのどのリビジョンにもマッチ
+することを意味する。よって、上の例では、「1.0.2a」「1.0.2a-r1」
+「1.0.2a-r2」などにマッチする。
 .RE
 .TP
-.B USE の変動
+.B 動的な DEPEND
 プログラムは USE 変数に従って違うものに依存することがあるかもしれない。
-プログラムが依存するパッケージを変えるには、この構文を使う:
-
-DEPEND="media-libs/libsdl
-.br
-	jpeg? ( >=media-libs/jpeg-6b )
-.br
-	tiff? ( >=media-libs/tiff-3.5.5 )
-.br
-	png? ( >=media-libs/libpng-1.2.1 )
-.br
-	X? ( virtual/x11 )"
+Portage はこの依存関係を扱うために選択肢をいくつか用意している。
+後述する構文を使う場合、ここの事例はそれが現れたスコープで1アトムとして
+扱われることに注意。つまり、個々のアトムは条件節を使うことによって複数の
+アトムを含むことができるし、無限の深さまで入れ子にすることができる。
+.RS
 .TP
+.B usevar? ( DEPEND アトム )
+ユーザが \fBUSE\fR に jpeg を指定しているときに jpeg のライブラリを
+含めるには、単に下記の構文を使えばよい:
+.br
+.B jpeg? ( media-libs/jpeg )
+.TP
+.B usevar? ( USE が真の場合のアトム ) : ( USE が偽の場合のアトム )
+これは C 言語での三項演算子と同じように働く。あるパッケージが GTK2
+か GTK1 を使うが、両方同時には使えない場合、このように書けばそれを
+扱うことができる:
+.br
+.B gtk2? ( =x11-libs/gtk+-2* ) : ( =x11-libs/gtk+-1* )
+.br
+こうすることでデフォルトは優れた GTK2 ライブラリになる。
+.TP
+.B !usevar? ( アトム )
+ユーザが \fBUSE\fR 変数にあるオプションを設定していないときにかぎり
+あるパッケージを含めるには、次の構文を使う:
+.br
+.B !nophysfs? ( dev-games/physfs )
+.br
+この構文はある機能の選択をサポートし、さらにデフォルトではその機能を
+有効にしておきたいときに便利である。
+.TP
+.B || ( アトム アトム ... )
+あるパッケージを複数の異なるパッケージと動かすことができるが、
+バーチャルパッケージは適当でないとき、この構文を手軽に使うことができる。
+.br
+.B || (
+.br
+.B     app-games/unreal-tournament
+.br
+.B     app-games/unreal-tournament-goty
+.br
+.B )
+.br
+この例では unreal-tournament には通常版と goty 版があることが分かる。
+これらは同じベースファイルを提供するため、これらに依存するパッケージは
+通常版と goty 版のいずれに依存することもできる。バーチャルを追加するのは
+はこの例だと適用範囲が狭いので不適切である。
+.br
+別の好例は、パッケージが複数のビデオインタフェース向けにビルドできるが、
+同時にはそのうちの1つにだけ対応し、それ以外には対応できない場合がある。
+.br
+.B || (
+.br
+.B     sdl? ( media-libs/libsdl )
+.br
+.B     svga? ( media-libs/svgalib )
+.br
+.B     opengl? ( virtual/opengl )
+.br
+.B     ggi? ( media-libs/libggi )
+.br
+.B     virtual/x11
+.br
+.B )
+.br
+この例では列挙されたパッケージのうち1つだけが選択され、順番づけは現れる
+順番によって決定される。したがって、sdl が選ばれる機会が最も高く、次に
+svga、その次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれ
+も指定しなかった場合には X がデフォルトで使われる。
+.RE
+
 .RE
 .TP
 \fBRDEPEND\fR
@@ -373,14 +452,14 @@ pkg_*inst 関数と同様だが、アンインストール用である。
 初期作業ディレクトリは $PWD。
 .SH "補助関数: 汎用"
 .TP
-\fBdie\fR \fI[理由]\fR
+\fBdie\fR \fI[reason]\fR
 現在の emerge プロセスを中止させる。
-最後の画面には \fI理由\fR が表示される。
+最後の画面には \fIreason\fR が表示される。
 .TP
-\fBuse\fR \fI<USE 項目>\fR
-もし \fIUSE 項目\fR が \fBUSE\fR 変数にあれば、\fIUSE 項目\fR 
+\fBuse\fR \fI<USE item>\fR
+もし \fIUSE item\fR が \fBUSE\fR 変数にあれば、\fIUSE item\fR 
 がエコーされて関数は 0 を返す。
-もし \fIUSE 項目\fR が \fBUSE\fR 変数になければ、
+もし \fIUSE item\fR が \fBUSE\fR 変数になければ、
 関数は 1 を返す。
 .RS
 .TP
@@ -406,14 +485,14 @@ else
 fi
 .RE
 .TP
-\fBuse_with\fR \fI<USE 項目>\fR \fI[configure オプション]\fR
+\fBuse_with\fR \fI<USE item>\fR \fI[configure option]\fR
 カスタムオプションを作成し、configure スクリプトに渡すのに便利である。
-\fIUSE 項目\fR が \fBUSE\fR 変数にある場合、
-\fI--with-[configure オプション]\fR という文字列がエコーされる。
-\fIUSE 項目\fR が \fBUSE\fR 変数にない場合、
-\fI--without-[configure オプション]\fR という文字列がエコーされる。
-\fIconfigure オプション\fR が指定されていなければ、
-\fIUSE 項目\fR がその場所で使われる。
+\fIUSE item\fR が \fBUSE\fR 変数にある場合、
+\fI--with-[configure option]\fR という文字列がエコーされる。
+\fIUSE item\fR が \fBUSE\fR 変数にない場合、
+\fI--without-[configure option]\fR という文字列がエコーされる。
+\fIconfigure option\fR が指定されていなければ、
+\fIUSE item\fR がその場所で使われる。
 .RS
 .TP
 .I 例:
@@ -436,38 +515,38 @@ myconf="`use_with pic`"
 (myconf は "--with-pic" という値になる)
 .RE
 .TP
-\fBuse_enable\fR \fI<USE 項目>\fR \fI[configure オプション]\fR
+\fBuse_enable\fR \fI<USE item>\fR \fI[configure option]\fR
 カスタムオプションを作成し、configure スクリプトに渡すのに便利である。
-\fIUSE 項目\fR が \fBUSE\fR 変数にある場合、
-\fI--enable-[configure オプション]\fR という文字列がエコーされる。
-\fIUSE 項目\fR が \fBUSE\fR 変数にない場合、
-\fI--disable-[configure オプション]\fR という文字列がエコーされる。
-\fIconfigure オプション\fR が指定されていなければ、
-\fIUSE 項目\fR がその場所で使われる。
+\fIUSE item\fR が \fBUSE\fR 変数にある場合、
+\fI--enable-[configure option]\fR という文字列がエコーされる。
+\fIUSE item\fR が \fBUSE\fR 変数にない場合、
+\fI--disable-[configure option]\fR という文字列がエコーされる。
+\fIconfigure option\fR が指定されていなければ、
+\fIUSE item\fR がその場所で使われる。
 .br
 使用例は \fBuse_with\fR を参照。
 .TP
-\fBhas\fR \fI<項目>\fR \fI<項目リスト>\fR
-\fI項目\fR が \fI項目リスト\fR にあった場合、
-\fI項目\fR がエコーされて \fBhas\fR が 0 を返す。
+\fBhas\fR \fI<item>\fR \fI<item list>\fR
+\fIitem\fR が \fIitem list\fR にあった場合、
+\fIitem\fR がエコーされて \fBhas\fR が 0 を返す。
 なかった場合、なにもエコーされず 1 を返す。
 .br
-\fI項目リスト\fR は \fIIFS\fR 変数によって区切られている。
+\fIitem list\fR は \fIIFS\fR 変数によって区切られている。
 この変数はデフォルトで「 」つまりスペースという値をもっている。
 これは \fBbash\fR(1) の設定である。
 .TP
-\fBhas_version\fR \fI<カテゴリ/パッケージバージョン>\fR
-\fIカテゴリ/パッケージバージョン\fR がシステムにインストール
+\fBhas_version\fR \fI<category/package-version>\fR
+\fIcategory/package-version\fR がシステムにインストール
 されているかどうか調べる。
 このパラメータは \fBDEPEND\fR 変数で使用可能な全ての値を使うことができる。
-この関数は \fIカテゴリ/パッケージバージョン\fR がインストール
+この関数は \fIcategory/package-version\fR がインストール
 されていたら 0 を返し、インストールされていないなら 1 を返す。
 .TP
-\fBbest_version\fR \fI<パッケージ名>\fR
+\fBbest_version\fR \fI<package name>\fR
 この関数は現在インストールされているプログラムのデータベースの中から
-\fIパッケージ名\fR を探し、現在インストールされているパッケージの
+\fIpackage name\fR を探し、現在インストールされているパッケージの
 「いちばんいいバージョン」を返す。
-もし \fIパッケージ名\fR にマッチするパッケージがなければこの関数は
+もし \fIpackage name\fR にマッチするパッケージがなければこの関数は
 0 を返す。マッチすれば 1 を返す。
 .RS
 .TP
@@ -477,14 +556,26 @@ VERINS=`best_version net-ftp/glftpd`
 (もし glftpd-1.27 がインストールされていれば、
 VERINS は "net-ftp/glftpd-1.27" という値になる)
 .RE
+.SH "補助関数: 出力"
+.TP
+\fBeinfo\fR \fI"informative message"\fR
+もしメッセージを出力してユーザに読んでもらって注意を喚起したい場合は、
+\fBeinfo\fR を使う。こrは \fBecho\fR(1) と全く同じに働くが、出力にもう
+少し手を加えてユーザの目を引くようにする。
+.TP
+\fBewarn\fR \fI"warning message"\fR
+\fBeinfo\fR と同様だが、ユーザに警告を示したいときに使う。
+.TP
+.fBeerror\fR \fI"error message"\fR
+\fBeinfo\fR と同様だが、ユーザにエラーを示したいときに使う。
 .SH "補助関数: 展開"
 .TP
-\fBunpack\fR \fI<ソース>\fR \fI[他にソースがあれば列挙]\fR
+\fBunpack\fR \fI<source>\fR \fI[list of more sources]\fR
 この関数は列挙されたソースをカレントディレクトリに解凍/展開する。
 この関数は \fIソース\fR を \fBDISTDIR\fR 変数に追加する。 
 .SH "補助関数: コンパイル"
 .TP
-\fBeconf\fR \fI[configure オプション]\fR
+\fBeconf\fR \fI[configure option]\fR
 この関数は configure の代わりに使われる。以下のオプションが実行される:
 .br
 configure \\
@@ -503,14 +594,17 @@ configure \\
 .br
 	--localstatedir=/var/lib \\
 .br
-	\fIconfigure オプション\fR
-
-\fB*註:\fR \fBeconf\fR で自動的に付加されるので
-「|| \fBdie\fR」を使う必要はない。
-.TP
-\fBemake\fR \fI[make オプション]\fR
+	\fI${EXTRA_ECONF}\fR \\
+.br
+	\fIconfigure optioins\fR
+.br
+\fBeconf\fR にオプションを渡すためにはコマンドライン経由でも 
+\fIEXTRA_ECONF\fR 変数経由でもできる。\fBeconf\fR を手動で呼ぶので
+あれば、\fIEXTRA_ECONF\fR 変数を使うのではなく、\fBeconf\fR に追加の
+引数を渡すべきである。
+\fBemake\fR \fI[make options]\fR
 この関数は make の代わりに使われる。
-'make ${MAKEOPTS} \fImake オプション\fR'
+'make ${MAKEOPTS} \fImake options\fR'
 (${MAKEOPTS} は /etc/make.globals で設定される)
 を実行する。デフォルトは MAKEOPTS="\-j2"。
 
@@ -520,12 +614,9 @@ configure \\
 並列 make (make \-j2) を使って問題ないことを確認すること。
 並列 make は _ときどき_ 失敗するが毎回失敗しないことで悪名高いので、
 徹底的にテストしなければならない。
-
-\fB*註:\fR \fBemake\fR が成功したことを保証するために必ず
-「|| \fBdie\fR」を使うこと。
 .SH "補助関数: インストール"
 .TP
-\fBeinstall\fR \fI[make オプション]\fR
+\fBeinstall\fR \fI[make options]\fR
 この関数は make install の代わりとして使われる。実行されるオプションは:
 .br
 make prefix=${D}/usr \\
@@ -542,8 +633,9 @@ make prefix=${D}/usr \\
 .br
             \fImake options\fR install
 
-\fB*註:\fR \fBeinstall\fR で自動的に付加されるので
-「|| \fBdie\fR」を使う必要はない。
+'make install DESTDIR=${D}' が使える場所で einstall を使わないでほしい。
+make ベースのパッケージをインストールするときは
+'make install DESTDIR=${D}' とするほうが好まれる。
 
 .PD 0
 .TP
@@ -627,65 +719,71 @@ ${D}/\fIdir\fR にあるファイル全てを strip する。
 .RE
 .PD 1
 .TP
-\fBdopython\fR \fI<コマンド>\fR
-python で \fIコマンド\fR を実行し、結果を返す。
+\fBdopython\fR \fI<commands>\fR
+python で \fIcommands\fR を実行し、結果を返す。
 .TP
-\fBdosed\fR \fI"s:orig:change:g" <ファイル名>\fR
-\fIファイル名\fR に対し (\fIファイル名\fR の cp/mv を含め) sed
+\fBdosed\fR \fI"s:orig:change:g" <filename>\fR
+\fIfilename名\fR に対し (\fIfilename名\fR の cp/mv を含め) sed
 を実行する。
 .br
 .BR 'dosed\ "s:/usr/local:/usr:g"\ /usr/bin/some-script'
 ${D}/usr/bin/some-script に対し sed を実行
 .TP
-\fBdodir\fR \fI<パス>\fR
+\fBdodir\fR \fI<path>\fR
 ${D} の中にディレクトリを作成する。
 .br
 .BR 'dodir\ /usr/lib/apache'
 ${D}/usr/lib/apache を作成
 .TP
-\fBinto\fR \fI<パス>\fR
+\fBdiropts\fR \fI[options for install(1)]\fR
+\fBdodir\fR で使われる install 関数のオプションを定義するために使われる。
+デフォルトは \fI-m0755\fR。
+.TP
+\fBinto\fR \fI<path>\fR
 \fBdobin\fR、\fBdosbin\fR、\fBdoman\fR、\fBdoinfo\fR、\fBdolib\fR
 のような他の関数のためにルート (\fIDESTTREE\fR) を設定する。
 .br
 デフォルトルートは /usr。
 .TP
-\fBkeepdir\fR \fI<パス>\fR
+\fBkeepdir\fR \fI<path>\fR
 もし仮に空であってもディレクトリをそのままにしておくよう
 Portage に伝える。\fBdodir\fR と同じように機能する。
 .TP
-\fBdobin\fR \fI<バイナリ> [他にもバイナリがあれば列挙]\fR
-\fIバイナリ\fR や列挙されたバイナリを \fIDESTTREE\fR/bin
+\fBdobin\fR \fI<binary> [list of more binaries]\fR
+\fIbinary\fR や列挙されたバイナリを \fIDESTTREE\fR/bin
 にインストールする。必要なディレクトリは全て作成する。
 .TP
-\fBdosbin\fR \fI<バイナリ> [他にもバイナリがあれば列挙]\fR
-\fIバイナリ\fR や列挙されたバイナリを \fIDESTTREE\fR/sbin
+\fBdosbin\fR \fI<binary> [list of more binaries]\fR
+\fIbinary\fR や列挙されたバイナリを \fIDESTTREE\fR/sbin
 にインストールする。必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
-\fBdolib\fR \fI<ライブラリ>\fR \fI[他にもライブラリがあれば列挙]\fR
+\fBdolib\fR \fI<library>\fR \fI[list of more libraries]\fR
 .TP
-\fBdolib.a\fR \fI<ライブラリ>\fR \fI[他にもライブラリがあれば列挙]\fR
+\fBdolib.a\fR \fI<library>\fR \fI[list of more libraries]\fR
 .TP
-\fBdolib.so\fR \fI<ライブラリ>\fR \fI[他にもライブラリがあれば列挙]\fR
+\fBdolib.so\fR \fI<library>\fR \fI[list of more libraries]\fR
 .PD 1
 ライブラリや列挙されたライブラリを \fIDESTTREE\fR/lib
 にインストールする。必要なディレクトリは全て作成する。
 .TP
-\fBdoman\fR \fI<man ページ> [他にも man ページがあれば列挙]\fR
+\fBlibopts\fR \fI[options for install(1)]\fR
+\fBdolib\fR で使われる install 関数のオプションを定義するために使われる。
+デフォルトは \fI-m0644\fR。
+.TP
+\fBdoman\fR \fI<man-page> [list of more man-pages]\fR
 man ファイルの拡張子に従って man ページを \fIDESTDIR\fR/man/man[1\-8n]
 にインストールする。ファイルが gzip されていなければ gzip する。
 必要なディレクトリは全て作成する。
-
-.PD 0
 .TP
-\fBdohard\fR \fI<ファイル名> <リンク名>\fR
+\fBdohard\fR \fI<filename> <linkname>\fR
 .TP
-\fBdosym\fR \fI<ファイル名> <リンク名>\fR
+\fBdosym\fR \fI<filename> <linkname>\fR
 .PD 1
 ln コマンドをハードリンクもしくはシンボリックリンクとして実行する。
 .TP
-\fBdohtml\fR \fI [\-a ファイルタイプ] [\-r] [\-x 無視するディレクトリリスト] [ファイルとディレクトリのリスト]\fR
+\fBdohtml\fR \fI [\-a filetypes] [\-r] [\-x list-of-dirs-to-ignore] [list-of-files-and-dirs]\fR
 ファイルの拡張子が .html、.png、.js、.jpg か .css であった場合、
 ファイルリスト(スペースで区切られたリスト)に挙げられたファイルを
 /usr/share/doc/${PF}/html にインストールする。
@@ -694,88 +792,88 @@ ln コマンドをハードリンクもしくはシンボリックリンクとして実行する。
 \-x で除外するディレクトリを設定できる(CVS はデフォルトで除外される)。
 \-r を設定すれば再帰的に dohtml を実行できる。
 .TP
-\fBdoinfo\fR \fI<info ファイル> [他にも info ファイルがあれば列挙]\fR
+\fBdoinfo\fR \fI<info-file> [list of more info-files]\fR
 info ページを \fIDESTDIR\fR/info にインストールする。
 ファイルは自動的に gzip される。必要なディレクトリは全て作成する。
 .TP
-\fBdojar\fR \fI<jar ファイル> [他にも jar ファイルがあれば列挙]\fR
+\fBdojar\fR \fI<jar file> [list of more jar files]\fR
 jar ファイルを /usr/share/${PN}/lib にインストールし、
 /usr/share/${PN}/classpath.env に追加する。
 .TP
-\fBdomo\fR \fI<locale ファイル> [他にも locale ファイルがあれば追加] \fR
+\fBdomo\fR \fI<locale file> [list of more locale-files] \fR
 locale ファイルを locale ファイルの拡張子に従って
 \fIDESTDIR\fR/usr/share/locale/[言語] に追加する。
 必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
-\fBfowners\fR \fI<パーミッション> <ファイル> [複数のファイル]\fR
+\fBfowners\fR \fI<permissions> <file> [files]\fR
 .TP
-\fBfperms\fR \fI<パーミッション> <ファイル> [複数のファイル]\fR
+\fBfperms\fR \fI<permissions> <file> [files]\fR
 .PD 1
 chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
-\fIファイル\fR に \fIパーミッション\fR を適用する。
+\fIfile\fR に \fIpermissions\fR を適用する。
 .TP
-\fBinsinto\fR \fI[パス]\fR
+\fBinsinto\fR \fI[path]\fR
 \fBdoins\fR 関数のルート (\fIINSDESTTREE\fR) を設定する。
 .br
 デフォルトルートは /。
 .TP
-\fBinsopts\fR \fI[install(1) に対するオプション]\fR
+\fBinsopts\fR \fI[options for install(1)]\fR
 \fBdoins\fR で使われる install に対するオプションを定義するために
 使うことができる。デフォルトは \fI\-m0644\fR。
 .TP
-\fBdoins\fR \fI<ファイル> [他にファイルがあれば列挙]\fR
+\fBdoins\fR \fI<file> [list of more files]\fR
 ファイルを \fIINSDESTTREE\fR にインストールする。
 この関数は \fBinstall\fR(1) を使う。
 .TP
-\fBexeinto\fR \fI[パス]\fR
+\fBexeinto\fR \fI[path]\fR
 \fBdoexe\fR 関数のルート (\fIEXEDESTTREE\fR) を設定する。
 .br
 デフォルトルートは /。
 .TP
-\fBexeopts\fR \fI[install(1) に対するオプション]\fR
+\fBexeopts\fR \fI[options for install(1)]\fR
 \fBdoexe\fR で使われる install に対するオプションを定義するために
 使うことができる。デフォルトは \fI\-m0755\fR。
 .TP
-\fBdoexe\fR \fI<実行バイナリ> [他にも実行バイナリがあれば列挙]\fR
+\fBdoexe\fR \fI<executable> [list of more executables]\fR
 実行バイナリや列挙された実行バイナリを \fIEXEDESTTREE\fR
 にインストールする。この関数は \fBinstall\fR(1) を使う。
 .TP
-\fBdocinto\fR \fI[パス]\fR
+\fBdocinto\fR \fI[path]\fR
 \fBdodoc\fR が使う相対サブディレクトリ (\fIDOCDESTTREE\fR)
 を設定する。
 .TP
-\fBdodoc\fR \fI<ドキュメント> [他にもドキュメントがあれば列挙]\fR
-ドキュメントや列挙されたドキュメントを /usr/doc/${PV}/\fIDOCDESTTREE\fR
+\fBdodoc\fR \fI<document> [list of more documents]\fR
+ドキュメントや列挙されたドキュメントを /usr/share/doc/${PV}/\fIDOCDESTTREE\fR
 にインストールする。ファイルは自動的に gzip される。
 必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
-\fBnewbin\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewbin\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewsbin\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewsbin\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewlib\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewlib\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewlib.so\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewlib.so\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewlib.a\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewlib.a\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewman\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewman\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewinfo\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewinfo\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewins\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewins\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewexe\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewexe\fR \fI<old file> <new filename>\fR
 .TP
-\fBnewdoc\fR \fI<古いファイル> <新しいファイル名>\fR
+\fBnewdoc\fR \fI<old file> <new filename>\fR
 .PD 1
 これらの関数は全て do* 関数と同じように使えるが、
 これらの関数は1つのファイルだけに使うことができ、
-そのファイルは \fI[新しいファイル名]\fR としてインストールされる。
+そのファイルは \fI[new filename]\fR としてインストールされる。
 .SH "バグ報告"
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
 .SH "関連項目"
@@ -804,4 +902,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.46 2003/07/09 18:47:52 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.54 2003/07/09 18:47:52 vapier
