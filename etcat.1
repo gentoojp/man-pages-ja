@@ -1,0 +1,84 @@
+.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Original version: 0.1.4
+.\" Translated on 26 Aug 2003 by Hattya <hattya@inter7.jp>
+.\"
+.TH "etcat" "1" "0.1.4" "Alastair Tse <liquidx@gentoo.org>" "Gentoo Administration"
+.SH "名前"
+.LP 
+etcat \- Gentoo Portage インフォメーションエクストラクター
+.SH "書式"
+.LP 
+etcat [\fIoption\fP|command] <\fIquery|package\fP>
+
+.SH "説明"
+.LP 
+etcat は既存の Portage 関連ツールを補完しようとするものだが、どちらかというと上級者向けである。etcat はユーザーや開発者に対し、 Portage ツリーや Portage データベースを自分で探し回らなくとも、特定のパッケージに関する情報を素早く調べだす事を可能にする。
+
+.LP 
+具体的には、あるパッケージに対して利用可能なバージョンを、その状態により (安定/テスト中/マスク/インストール済み) かを強調して表示したり、パッケージごとの USE フラグをそのフラグの説明つきで表示したり、インストール済みのパッケージのサイズを計算したりする。そしてさらに、パッケージのあるバージョンに関する変更履歴を適切に表示する。
+
+.LP 
+またパッケージの問い合わせに、次のような emerge よりも洗練された構文が使用できる。
+.LP .IP 
+mozilla\-1.1
+.br 
+mozilla\-1.*
+
+.SH "オプション"
+.LP 
+\fB\-b\fR <\fI/path/to/file\fR> [\fIcategory\fR]
+.br 
+\fBbelongs\fR <\fI/path/to/file\fR> [\fIcategory\fR]
+.IP 
+ファイルがどのパッケージに属しているかを、選択した一つ以上のカテゴリーに限定して検索する。検索の速度を上げるために、カテゴリー名をワイルドカードで指定する事も出来る。(例. etcat belogns /usr/lib/libmpeg.so "media\-*")
+
+.LP 
+\fB\-c\fR <\fIpackage[\-version]\fR>
+.br 
+\fBchanges\fR <\fIpackage[\-version]\fR>
+.IP 
+指定された package の version に対する変更履歴を表示する。version が指定されない場合は最新の version が指定されたものとする。
+
+.LP 
+\fB\-d\fR <\fIregex expression\fR>
+.br 
+\fBdepends\fR <\fIregex expression\fR>
+.IP 
+与えられた文字列を正規表現として Portage 中の依存情報を検索し、条件を満たしたパッケージを表示する。
+
+.LP 
+\fB\-f\fR <\fIpackage[\-version]\fR>
+.br 
+\fBfiles\fR <\fIpackage[\-version]\fR>
+.IP 
+package によってインストールされたファイルを表示する。
+
+.LP 
+\fB\-s\fR <\fIpackage\fR>
+.br 
+\fBsize\fR <\fIpackage\fR>
+.IP 
+インストール済み package のサイズを表示する。
+
+.LP 
+\fB\-u\fR <\fIpackage[\-version]\fR>
+.br 
+\fBuses\fR <\fIpackage[\-version]\fR>
+.IP 
+package が使用している USE フラグを、そのフラグの説明とインストール時の状態とともに表示する。
+
+.LP 
+\fB\-v\fR <\fIpackage\fR>
+.br 
+\fBversions\fR <\fIpackage\fR>
+.IP 
+\fIpackage\fR に該当するパッケージを安定、テスト中、マスク、またはインストール済みかを分けて全バージョン表示する。 
+
+.SH "関連項目"
+.LP 
+\fBetcat\fR を引数なしで起動すれば、動作サンプルや詳しい情報が得られる。
+.SH "著者"
+.LP 
+Alastair Tse <liquidx@gentoo.org>
