@@ -1,0 +1,123 @@
+.TH "REPOMAN" "1" "Nov 2002" "Portage 2.0.44" "Portage"
+.SH 名前
+repoman \- Gentoo の portage ツリーに追加されたパッケージの最低レベルの品質の保証を徹底させるプログラム
+.SH 書式
+\fBrepoman\fR [\fIオプション\fR] [\fIモード\fR]
+.SH 説明
+.BR 「質なんてどうだっていい。」
+.br
+.BR repoman
+は Gentoo 開発者向けのプログラムである。
+repoman は CVS リポジトリの品質をチェックするが、
+ebuild 一つ一つについてチェックするわけではないので、
+ebuild の品質を確かめるプログラムがほしいなら、 \fIdev-util/lintool\fR
+を emerge すること。
+.br
+註: \fBrepoman\fR は \fIローカル内部\fR の CVS リポジトリに対してのみ実行される。
+.SH オプション 
+.TP
+.B --pretend
+なにが実行されるかを表示するだけで、コミットも問題の修正も実際には行なわない。
+.TP
+.B --help
+ヘルプ画面を表示する。
+.SH モード
+.TP
+.B scan
+品質保証(QA)のためにカレントディレクトリツリーをスキャンする(デフォルト)。
+詳細は \fBQA キーワード\fR を参照。
+.TP
+.B fix
+直せる QA 問題(ダイジェストに対応する ebuild がない、ebuild に対応する
+ダイジェストがない)を修正する。
+.TP
+.B full
+QA のためにカレントディレクトリツリーをスキャンする(全部挙げる)。
+詳細は \fBQA キーワード\fR を参照。
+.TP
+.B help
+ヘルプ画面を表示する。
+.TP
+.B commit
+QA のためにカレントディレクトリツリーをスキャンする。
+問題がなければ cvs 経由でコミットする。
+.SH QA キーワード
+.TP
+.BR digest.stray
+対応する ebuild がないダイジェストファイルが見つかった。
+.TP
+.BR digest.missing
+対応するダイジェストがない ebuild ファイルが見つかった。
+.TP
+.BR ebuild.invalidname
+ebuild に portage が解析できないファイル名がついている。
+.TP
+.BR ebuild.namenomatch
+ebuild に親ディレクトリと違う名前がついている。
+.TP
+.BR changelog.missing
+ChangeLog ファイルが見つからない。
+.TP
+.BR ebuild.notadded
+ebuild ファイルが見つかったが、まだ cvs に追加されていない。
+.TP
+.BR digest.notadded
+ダイジェストファイルが見つかったが、まだ cvs に追加されていない。
+.TP
+.BR ebuild.disjointed
+対応するダイジェストがすでに追加されていたので、ebuild ファイルは
+cvs に追加されなかった。
+.TP
+.BR digest.disjointed
+対応する ebuild がすでに追加されていたので、ダイジェストファイルは
+cvs に追加されなかった。
+.TP
+.BR DEPEND.bad
+ユーザに見える(mask されていない) ebuild に間違った DEPEND 設定がある
+(*見えている* ebuild に対してのみ調べられる)。
+つまり、ユーザに見える ebuild 内で DEPEND の設定を満たすことができない。
+.TP
+.BR RDEPEND.bad
+ユーザに見える(mask されていない) ebuild に間違った RDEPEND 設定がある
+(*見えている* ebuild に対してのみ調べられる)。
+つまり、ユーザに見える ebuild 内で RDEPEND の設定を満たすことができない。
+.TP
+.BR DEPEND.badmasked
+mask された ebuild に間違った DEPEND 設定がある
+(*全ての* ebuild に対して調べられる)。
+つまり、どの ebuild も DEPEND の設定を満たすことができない。
+.TP
+.BR RDEPEND.badmasked
+mask された ebuild に間違った RDEPEND 設定がある
+(*全ての* ebuild に対して調べられる)。
+つまり、どの ebuild も RDEPEND の設定を満たすことができない。
+.TP
+.BR ebuild.syntax
+キャッシュエントリーを生成している際にエラーが起きた。
+典型的には ebuild に構文エラーがあることを意味する。
+.TP
+.BR ebuild.output
+単に ebuild を source しただけで出力がある。
+これは ebuild ポリシーに反する。
+.TP
+.BR KEYWORDS.missing
+ebuild に KEYWORDS 変数がない。
+.TP
+.BR LICENSE.missing
+ebuild に LICENSE 変数がない。
+.TP
+.BR DESCRIPTION.missing
+ebuild に DESCRIPTION 変数がない。
+.TP
+.BR SLOT.missing
+ebuild に SLOT 変数がない。
+.SH 著者
+Daniel Robbins <drobbins@gentoo.org>
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "関連項目"
+.BR emerge (1)
+.br
+\fIdev-util/lintool\fR パッケージ。
+.SH "CVS ヘッダ"
+$Header$
