@@ -1,0 +1,31 @@
+.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Original version: 1.1
+.\" Translated on 5 Nov 2003 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH ewhich 1 "October 19, 2003" "ewhich"
+
+.SH 名前
+ewhich \- Gentoo: ebuild の名前を解決する
+
+.SH 書式
+.B ewhich
+[ -h | --help ] <package>
+
+.SH 説明
+.B ewhich
+は与えられたパッケージ名から、実際の ebuild ファイルを探すちょっとしたツールであ
+る。<package> には単純にパッケージの名前（xfree 等）や、パッケージ名にカテゴリー
+を含めたり（x11-base/xfree 等）、DEPEND に書かれているように（>=x11-base/xfree-
+4.3.0 等）指定することができる。
+
+.SH バグ
+.B ewhich
+に既知のバグは無い
+
+.SH 関連項目
+emerge(1), make.conf(5), ebuild(5)
+
+.SH 著者
+Marius Mauch <genone@gentoo.org>
