@@ -1,0 +1,42 @@
+.TH "DISTUTILS" "5" "Jun 2003" "Portage 2.0.48" "Portage"
+.SH "名前"
+distutils \- distutils ベースの Python モジュールのインストール補助
+.SH "説明"
+\fBdistutils\fR eclass は distutils ベースの Python
+モジュールのインストールと Gentoo Linux
+システムへの組み込みが簡単になるように設計されている。
+この eclass では \fBsrc_compile\fR と \fBsrc_install\fR
+が定義されている。
+追加変数や追加関数を設定しなくても簡単に ebuild が作成できるはずである。
+.SH "変数"
+.TP
+.B PYTHON_SLOT_VERSION = \fI"[0|2.1]"\fR
+この変数を使うと python-2.1 に依存関係を持つことができる。
+これは通例 -py21- の ebuild でだけ必要である。
+そうでなければこの変数は設定すべきではない。
+.TP
+.B DOCS = \fI"<dodoc に与えるファイル名>"\fR
+この変数を使うと \fBsrc_install\fR で
+通常ではインストールされない文書を追加でインストールできる。
+.SH "関数"
+.TP
+.B distutils_python_version
+この関数は \fBPYVER_MAJOR\fR、\fBPYVER_MINOR\fR そして \fBPYVER\fR
+変数に、それぞれ相当する Python バージョンの値を設定する。
+.TP
+.B distutils_python_tkinter
+パッケージが tkinter サポートを要求していれば、
+この関数を呼ぶと tkinter サポートが存在しなければ ebuild が失敗する。
+そして、ユーザにその ebuild を emerge するためにには tkinter
+サポートつきで Python を再コンパイルする必要があることを、
+具体的に教えるメッセージが表示される。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
+.BR ebuild (5)
+.SH "ファイル"
+.BR /usr/portage/eclass/distutils.eclass
+.SH "著者"
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/distutils.5,v 1.1 2003/06/30 00:18:12 vapier
