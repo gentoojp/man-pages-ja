@@ -4,6 +4,7 @@
 .\" Origial version: 2.0.48
 .\" Translated on 15 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\" Updated to 1.43 on 15 Nov 2003
+.\" Updated to 1.48 on 19 Apr 2004
 .\"
 .TH "EMERGE" "1" "Jun 2003" "Portage 2.0.48" "Portage"
 .SH "名前"
@@ -129,7 +130,7 @@ emerge のヘルプを表示する。
 これはバグ報告に入れるための情報のリストで、
 開発者が報告を受けた問題を解決するために役立つ。
 \fBバグ報告を出すときにはこの情報を入れること。\fR
-\fI--verbose\fR オプションをつけると詳細な出力がえられる。
+\fI\-\-verbose\fR オプションをつけると詳細な出力がえられる。
 .TP
 .BR "inject " (\fB\-i\fR)
 パッケージを注入(inject)し、そのパッケージの「スタブ」を挿入して、
@@ -190,7 +191,15 @@ rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。
 である。\-\- 具体例は上記 \fBclean\fR を参照。
 .SH "オプション"
 .TP
-.BR "--buildpkg " (\fB\-b\fR)
+.BR "\-\-ask " (\fB\-a\fR)
+マージを実行する前に、どの ebuild と tbz2
+ファイルがインストールされるのか、\fB\-\-pretend\fR
+を実行するのと同じ形式で表示したあと、マージするか中止するか尋ねる。
+\fB\-\-ask\fR を使うのは、\fB\-\-pretend\fR を使って確認したのち
+\fB\-\-pretend\fR なしで同じコマンドを実行するのより効率がよい。
+依存関係を計算する必要が一度だけで済むからである。
+.TP
+.BR "\-\-buildpkg " (\fB\-b\fR)
 emerge の際パッケージを実際にインストールすることに加え、
 処理される全 ebuild についてバイナリパッケージもビルドする。
 メンテナーにも便利であるし、複数の Gentoo Linux システムを
@@ -200,46 +209,46 @@ emerge の際パッケージを実際にインストールすることに加え、
 稼働中のファイルシステムから tbz2 を作成する \fBquickpkg\fR
 が使える。
 .TP
-.BR "--buildpkgonly " (\fB\-B\fR)
+.BR "\-\-buildpkgonly " (\fB\-B\fR)
 emerge の際パッケージを実際にインストールすることに加え、
 処理される全 ebuild についてバイナリパッケージもビルドする。
 このオプションには、ビルド時の全依存関係が事前にシステムに
 emerge されていなければならないという落し穴がある。
 .TP
-.BR "--changelog " (\fB\-l\fR)
-\fB--pretend\fR アクションと組み合わせて使う。
+.BR "\-\-changelog " (\fB\-l\fR)
+\fB\-\-pretend\fR アクションと組み合わせて使う。
 このオプションを使うとアップグレードされる全パッケージの
 ChangeLog エントリーが表示される。
 .TP
-.BR "--columns"
+.BR "\-\-columns"
 \fI\-\-pretend\fR といっしょに使い、カット＆ペーストしやすい
 ように整形されたパッケージ名、新バージョン、旧バージョンが表示される。
 .TP
-.BR "--debug " (\fB\-d\fR)
+.BR "\-\-debug " (\fB\-d\fR)
 emerge コマンドをデバッグモードで動かす。
 このモードでは bash のビルド環境は -x オプションつきで動作し、
 標準出力に詳細なデバッグ情報を出力する。
 \-\-debug は bash の構文エラーを探すために役立つ。
 .TP
-.BR "--deep " (\fB\-D\fR)
+.BR "\-\-deep " (\fB\-D\fR)
 \fB\-\-update\fR と組み合わせて使い、\fBemerge\fR にパッケージの
 直接の依存関係だけをチェックするのではなく、パッケージの依存ツリー
 全体を考慮に入れるよう強制する。
 たとえば、このフラグを使うとパッケージの依存関係として直接
 挙げられてはいないライブラリのアップデートを捉えることができる。
 .TP
-.BR "--emptytree " (\fB\-e\fR)
+.BR "\-\-emptytree " (\fB\-e\fR)
 仮想的にインストールされたパッケージのツリーが glibc だけ含むように
-手を加える。このオプションは \-\-pretend といっしょに使うととても便利
+手を加える。このオプションは \fB\-\-pretend\fR といっしょに使うととても便利
 である。このオプションを使うと、開発者はパッケージの全依存関係のツリー
 の概観を知ることができるし、最新のライブラリを使って全ツリーを再ビルド
 することもできる。
 .TP
-.BR "--fetchonly " (\fB\-f\fR)
+.BR "\-\-fetchonly " (\fB\-f\fR)
 パッケージをビルドせず、単に全パッケージの fetch だけを行う
 (メインパッケージに加えて依存するパッケージ全部)。
 .TP
-.BR "--noconfmem "
+.BR "\-\-noconfmem "
 Portage に CONFIG_PROTECT のディレクトリ内の設定ファイルがすでに
 マージされていることを示すマージ記録を無視させる。
 Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
@@ -247,12 +256,12 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 することを防いでいる。このフラグは設定ファイルを常にマージ
 させる。
 .TP
-.BR "--nodeps " (\fB-O\fR)
+.BR "\-\-nodeps " (\fB-O\fR)
 依存するパッケージを全くインストールせず、指定されたパッケージだけを
 インストールする。依存関係が満たされていない場合、ビルドが失敗する
 可能性があることに注意。
 .TP
-.BR "--noreplace " (\fB\-n\fR)
+.BR "\-\-noreplace " (\fB\-n\fR)
 コマンドラインで指定されたパッケージですでにインストールされているものを
 飛ばす。このオプションを指定しなければ、パッケージ、ebuild、そして
 依存パッケージをコマンドラインで指定すると、そのパッケージがすでに
@@ -260,63 +269,68 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 する。デフォルトでは Portage は依存パッケージは再インストールしないこと
 に注意。
 .TP
-.BR "--nospinner"
+.BR "\-\-nospinner"
 そのセッションではバーの回転を無効にする。
 端末デバイスが TTY だと判断されたときにはバーの回転がアクティブになる。
 このフラグはそれに関係なくバーの回転を無効にする。
 .TP
-.BR "--oneshot"
+.BR "\-\-oneshot"
 通常どおり emerge するが、今後アップデートするための world
 プロフィールにはパッケージを追加しない。
 .TP
-.BR "--onlydeps " (\fB\-o\fR)
+.BR "\-\-onlydeps " (\fB\-o\fR)
 指定されたパッケージ自身ではなく、
 そのパッケージに依存するパッケージをインストール
 (もしくはインストールのふりを) する。
 .TP
-.BR "--pretend " (\fB\-p\fR)
-実際にインストールを行わず、\-\-pretend が指定されなかったとすれば
+.BR "\-\-pretend " (\fB\-p\fR)
+実際にインストールを行わず、\fB\-\-pretend\fR が指定されなかったとすれば
 どんなパッケージがインストールされるのかを単に表示する。
-よく知らないパッケージをインストールする前には \-\-pretend
+よく知らないパッケージをインストールする前には \fB\-\-pretend\fR
 を使うことを強く勧める。
-出力は、N = 新規、U = 更新、R = 入れ換え、B = インストール済み
-パッケージによってブロックされている、となっている。
+出力は、
+\fIN\fR = 新規、
+\fIU\fR = 更新、
+\fIR\fR = 入れ換え、
+\fIF\fR = 制限つきパッケージの fetch、
+\fIB\fR = インストール済みパッケージによってブロック、
+となっている。
 .TP
-.BR "--quiet " (\fB-q\fR)
+.BR "\-\-quiet " (\fB-q\fR)
 結果はさまざまだが、全体的に見て Portage が表示する出力を減らしたり
 凝縮したりする。
 .TP
-.BR "--resume"
+.BR "\-\-resume"
 最後のインストール操作を再開する。この操作は失敗したらエラーを
 返すだけだということに注意。Portage になにもすることがなければ、
 メッセージと成功の戻り値を返して終了する。
 .TP
-.BR "--searchdesc " (\fB\-S\fR)
+.BR "\-\-searchdesc " (\fB\-S\fR)
 検索文字列がパッケージ名に加え、説明フィールドにもマッチする。
 説明も正規表現でマッチすることに \fB注意\fR。
 .TP
-.BR "--skipfirst"
-このアクションは \fB--resume\fR といっしょに使ったときだけ有効である。
+.BR "\-\-skipfirst"
+このアクションは \fB\-\-resume\fR といっしょに使ったときだけ有効である。
 これを使うと再開リストにある最初のパッケージを取り除くので、
 修正不能なエラーやあまり重要でないエラーがあってもインストール
 を継続することができる。
 このアクションはパッケージを飛ばしても依存関係を壊さない場合
 にだけ使うべきである。
 .TP
-.BR "--update " (\fB\-u\fR)
+.BR "\-\-update " (\fB\-u\fR)
 パッケージを利用可能な最新バージョンにアップデートする。
-\fB\fR \-\-update \fBはまだ全機能を備えていないことに注意\fR。
+\fB \-\-update はまだ全機能を備えていないことに注意\fR。
 たとえば、\fBworld\fR ファイルに書かれているパッケージに
 依存するパッケージは、そのパッケージと依存するパッケージの
 両方が \fBworld\fR ファイルに書かれていないかぎり、
 自動的にアップデートされることはない。
 .TP
-.BR "--upgradeonly " (\fB-U\fR)
+.BR "\-\-upgradeonly " (\fB-U\fR)
 パッケージをアップデートするが、インストールされている
 パッケージのバージョンを下げるようなアップデートは行わない。
 \fBSLOT\fR は基本的なレベルで対象に含まれる。
 .TP
-.BR "--usepkg " (\fB\-k\fR) 
+.BR "\-\-usepkg " (\fB\-k\fR) 
 バイナリパッケージが使えるのであれば、emerge にバイナリパッケージ
 ($PKGDIR から読み取る)を使い、時間の食うコンパイルを避けることができる。
 このオプションは CD インストールのとき便利である。
@@ -324,45 +338,51 @@ export PKGDIR=/mnt/cdrom/packages し、このオプションを使うことで、
 emerge の際依存関係を満たすために CD からバイナリパッケージを「引っ張って」
 くることができる。
 .TP
-.BR "--verbose " (\fB\-v\fR)
+.BR "\-\-verbose " (\fB\-v\fR)
 詳細モードで emerge を動かす。
 現在のところ、このフラグは emerge の際 GNU info にエラーがあれば
 出力させる。
 .TP
-.BR "--version " (\fB\-V\fR)
+.BR "\-\-version " (\fB\-V\fR)
 \fBemerge\fR のバージョン番号を表示する。
 他のオプションと組み合わせて使うことはできない。
 このアクションの名前とフォーマットは慣習的なものである。
+.SH "環境オプション"
+.TP
+\fBROOT\fR = \fI[path]\fR
+パッケージや ebuild をマージするために使われるターゲットとなる
+ルートファイルシステムを指定するには、\fBROOT\fR を使う。
+デフォルトは / である。
 .SH "出力"
 emerge と pretend/verbose フラグを組み合わせて使う場合、
 出力は一見しただけではちょっと理解しがたいかもしれない。
 このセクションでは簡略化された情報が意味しているのはなにか説明する。
 .TP
-.B [blocks B     ] app-text/dos2unix (from pkg app-text/hd2u-0.8.0)
+.B [blocks B     ] app\-text/dos2unix (from pkg app\-text/hd2u\-0.8.0)
 dos2unix は hd2u がインストールされるのをブロックしている。
 ブロックするパッケージというのは、2つのパッケージが互いのファイルを
 上書きしてしまうか、もしくはシステムの中をなんらかの形で壊してしまう
 パッケージという意味である。しかしながら、ブロックするパッケージは
 通常同じ機能を提供するので、普通同時にインストールする必要はない。
 .TP
-.B [ebuild  N    ] app-games/qstat-25c
+.B [ebuild  N    ] app\-games/qstat\-25c
 qstat は新規インストールパッケージであり、初めてインストールされる。
 .TP
-.B [ebuild   R   ] sys-apps/sed-4.0.5
+.B [ebuild   R   ] sys\-apps/sed\-4.0.5
 sed 4.0.5 はすでにインストールされているが、
 emerge を実行したら Portage は指定されたパッケージを再インストールする
 (この場合は sed である)。
 .TP
-.B [ebuild    F  ] media-video/realplayer-8-r6
+.B [ebuild    F  ] media\-video/realplayer\-8\-r6
 realplayer パッケージは手動でソースをダウンロードする必要がある。
 パッケージを emerge しようとするとき、ソースが見つからなければ、
 Portage は停止し必要なファイルをダウンロードするための手順を提示する。
 .TP
-.B [ebuild     U ] net-fs/samba-2.2.8_pre1 [2.2.7a]
+.B [ebuild     U ] net\-fs/samba\-2.2.8_pre1 [2.2.7a]
 Samba 2.2.7a はすでに emerge されており、
 バージョン 2.2.8_pre1 へとアップデートすることができる。
 .TP
-.B [ebuild     UD] media-libs/libgd-1.8.4 [2.0.11]
+.B [ebuild     UD] media\-libs/libgd\-1.8.4 [2.0.11]
 libgd 2.0.11 はすでに emerge されているが、
 emerge を実行したら Portage は libgd をバージョン 1.8.4
 にダウングレードしてくれる。
@@ -377,7 +397,7 @@ emerge を実行したら Portage は libgd をバージョン 1.8.4
 2.x ではコンパイルできず、emerge する前に libgd をまずダウングレード
 しなければならないという意味である。
 .TP
-.B [ebuild     U-] x11-base/xfree-4.3.0 [4.2.99.902]
+.B [ebuild     U-] x11\-base/xfree\-4.3.0 [4.2.99.902]
 この \- は xfree についての \fBSLOT\fR 情報がないことを表している。
 これは前に emerge されたバージョンが注入されたもの
 (詳しい情報は \fBinject\fR を参照)だったときや、
@@ -385,15 +405,18 @@ emerge を実行したら Portage は libgd をバージョン 1.8.4
 するときに起こる。いずれの場合でも新しいバージョンの xfree 
 がアップデートする楽しみに使える。
 .TP
-.B [ebuild    U ] net-analyzer/nmap-3.15_beta2 [3.15_beta1] -gtk -gnome
+.B [ebuild    U ] net\-analyzer/nmap\-3.15_beta2 [3.15_beta1] \-gtk \-gnome
 \-gtk と \-gnome は nmap を emerge するときの \fBUSE\fR 変数の
 状態を示している。この場合 nmap が \fBUSE\fR 変数の gtk と gnome
 が利用可能だが、現在の設定では gtk と gnome は無効になっていることが
 分かる。そのため、nmap を emerge するとき gtk と gnome のサポートは
 有効にならない。
+.br
+\fB*注:\fR \fBUSE\fR の状態は \fB\-\-pretend\fR と \fB\-\-verbose\fR
+オプションを同時に使ったときだけ表示される。
 .SH "注意"
 ほとんど常に、パッケージをインストールしたりアップデートしたり
-しようとする前は、\fB--pretend\fR install もしくは update 
+しようとする前は、\fB\-\-pretend\fR install もしくは update 
 を実行するべきである。そうすればどこまで実行されるのか分かり、
 修正しなければならないブロックするパッケージを表示させることができる。
 これは Portage ツリーが特に活動的だと多数のパッケージが
@@ -470,7 +493,7 @@ xfree もアップグレード候補として対象に入れる。
 バグ報告を提出するとき、\fBemerge info\fR
 の出力結果を入れるようにしてください。
 .SH "関連項目"
-.BR "emerge --help",
+.BR "emerge \-\-help",
 .BR ebuild (1),
 .BR ebuild (5),
 .BR make.conf (5)
@@ -478,7 +501,7 @@ xfree もアップグレード候補として対象に入れる。
 
 \fI/usr/lib/portage/bin\fR にあるたくさんの補助アプリケーション
 .LP 
-\fBgentoolkit\fR パッケージには \fBqpkg\fR (パッケージ検索ツール)
+\fBapp\-admin/gentoolkit\fR パッケージには \fBqpkg\fR (パッケージ検索ツール)
 のような有用なスクリプトが収められている。
 .SH "ファイル"
 .TP
@@ -492,6 +515,9 @@ xfree もアップグレード候補として対象に入れる。
 ビルドプロセスのための変数が書かれており、
 \fBmake.globals\fR に書かれている変数を上書きする。
 \fB下に挙げられているファイルではなく、このファイルを編集すること\fR。
+.TP
+.B /etc/dispatch\-conf.conf
+自動で設定ファイルの更新/バックアップを操作するための設定が書かれている。
 .TP
 \fB/etc/make.profile/make.defaults\fR
 ビルドプロセスのためのプロファイル特有の変数が書かれている。
@@ -507,13 +533,13 @@ USE フラグのマスターリストが機能の説明と一緒に書かれている。
 \fBこのファイルを編集してはならない\fR。
 .TP
 \fB/etc/make.profile/virtuals\fR 
-virtual 依存性を解決するために使われるデフォルトパッケージのリストが
+virtual 依存関係を解決するために使われるデフォルトパッケージのリストが
 書かれている。
 \fBこのファイルを編集してはならない\fR。
 .TP
 \fB/var/cache/edb/virtuals\fR 
-virtual 依存性を解決するために使われるパッケージのリストが書かれている。
-virtual 依存性の解決に失敗した場合、対応する virtual のエントリーを
+virtual 依存関係を解決するために使われるパッケージのリストが書かれている。
+virtual 依存関係の解決に失敗した場合、対応する virtual のエントリーを
 ここで並び替えるとよい。
 virtual の次に挙げられている最初のパッケージが
 virtual のマッチで使われるエントリーとなる。
@@ -536,7 +562,7 @@ Achim Gottinger <achim@gentoo.org>
 Nicholas Jones <carpaski@gentoo.org>
 .br 
 Phil Bordelon <sunflare@gentoo.org>
-.br
+.br 
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: emerge.1,v 1.43 2003/09/13 18:49:44 vapier
+原文: emerge.1,v 1.48 2004/02/09 16:38:36 vapier
