@@ -1,8 +1,10 @@
-.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Technologies, Inc.
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.48
 .\" Translated on 19 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\"
+.\" Updated to 1.5 on 19 Apr 2004
 .\"
 .TH "GAMES" "5" "Jun 2003" "Portage 2.0.48" "Portage"
 .SH "名前"
@@ -38,7 +40,7 @@ games \- ゲームのインストールの標準化
 全ファイルは \fB${GAMES_STATEDIR}/${PN}\fR
 ディレクトリの中に保存されるようにする。
 そうでなければ、単に \fB${GAMES_STATEDIR}/\fR
-の中ににファイルを1つ作成する。
+の中にファイルを1つ作成する。
 また、この場所に直接ファイルを作成するなら、
 そのファイルにはパッケージ固有の名前を使うよう心がけること。
 .TP
@@ -58,7 +60,7 @@ env.d に登録するとき使うファイル名。
 .TP
 .B "GAMES_GROUP" = \fI"games"\fR
 ゲーム関係の全ファイルを所有するグループ名。
-.SH "関数"
+.SH "関数: 全般"
 .TP
 .B "prepgamesdirs" \fI[ディレクトリ]\fR
 \fBGAMES_*\fR 変数で指定されたディレクトリと、パラメータとして指定された
@@ -85,10 +87,12 @@ ebuild で \fBpkg_setup\fR を定義しているなら、
 に所属する必要があることを簡単に表示する。
 ebuild で \fBpkg_postinst\fR を定義しているなら、
 \fBpkg_postinst\fR 関数の最後でこの関数を呼ぶのを忘れずに。
+.SH "関数: コンパイル"
 .TP
 .B egamesconf
 \fBeconf\fR 関数と同じだが、ゲーム関係の変数(上記参照)を渡す。
 詳しい情報は \fBebuild\fR(5) の \fBeconf\fR を参照。
+.SH "関数: インストール"
 .TP
 .B egamesinstall
 \fBeinstall\fR 関数と同じだが、ゲーム関係の変数(上記参照)を渡す。
@@ -115,6 +119,14 @@ ebuild で \fBpkg_postinst\fR を定義しているなら、
 .B gamesperms \fI<ファイルまたはディレクトリ>\fR
 \fBgamesperms\fR はパーミッションを u+rw,g+r-w,o-rwx
 のマスクで変更する。
+.TP
+.B games_make_wrapper \fI<wrapper>\fR \fI<bin>\fR \fI<chdir>\fR
+簡単なラッパースクリプトを作成する。
+実行前にそのパッケージのデータツリーのルートにディレクトリを変更する
+必要があるパッケージを扱う際に便利である。
+この関数は \fIbin\fR を実行する前に \fIchdir\fR ディレクトリに
+chdir する \fIwrapper\fR という名前のラッパースクリプトを作成する。
+この \fIwrapper\fR ファイルは \fBGAMES_BINDIR\fR に置かれる。
 .SH "バグ報告"
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
 .SH "参照"
@@ -124,4 +136,4 @@ ebuild で \fBpkg_postinst\fR を定義しているなら、
 .SH "著者"
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/games.5,v 1.3 2003/06/26 22:21:51 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/games.eclass.5,v 1.5 2004/01/25 00:37:51 vapier
