@@ -1,0 +1,38 @@
+.TH "STARDICT" "5" "Jun 2003" "Portage 2.0.48" "Portage"
+.SH "名前"
+startdict \- stardict 辞書のインストールに便利なクラス
+.SH "説明"
+\fBstartdict\fR eclass には stardictionary のための ebuild
+を手軽に作るための適切な変数と関数が含まれている。
+この eclass では \fBsrc_compile\fR と \fBsrc_install\fR
+が定義されている。やらなければならないのは、
+このクラスを inherit する前に
+\fBDICT_SUFFIX\fR、\fBDICT_P\fR、\fBFROM_LANG\fR 
+と \fBTO_LANG\fR 変数を設定することだけである。
+.SH "変数"
+.TP
+.B FROM_LANG = \fI"翻訳元の言語"\fR
+その辞書が翻訳しようとしている元の言語は?
+英独辞書を持っているのであれば、
+この変数は「English」に設定される。
+.TP
+.B TO_LANG = \fI"翻訳先の言語"\fR
+その辞書が翻訳しようとしている先の言語は?
+英独辞書を持っているのであれば、 
+この変数は「German」に設定される。
+.TP
+.B DICT_PREFIX = \fI"「dictd_www.mova.org_」のような SRC_URI prefix"\fR
+「dictd_www.mova.org_」のような SRC_URI prefix。
+.TP
+.B DICT_SUFFIX = \fI"prefix に続く SRC_URI"\fR
+prefix に続く SRC_URI。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "参照"
+.BR ebuild (5)
+.SH "ファイル"
+.BR /usr/portage/eclass/stardict.eclass
+.SH "著者"
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/stardict.5,v 1.1 2003/06/30 00:09:54 vapier
