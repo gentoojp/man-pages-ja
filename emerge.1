@@ -3,19 +3,19 @@
 emerge \- Portage システムへのコマンドラインインタフェース
 .SH "書式"
 .TP
-\fBemerge\fR
+.BR emerge
 [\fIオプション\fR] [\fIアクション\fR] [\fIebuild\fR | \fItbz2ファイル\fR | \fIクラス\fR | \fI依存関係\fR] ...
 .TP
-\fBemerge\fR
+.BR emerge
 [\fIオプション\fR] [\fIアクション\fR] \fBebuild ファイル\fR
 .TP
-\fBemerge\fR
+.BR emerge
 \fBsync\fR | \fBrsync\fR
 .TP
-\fBemerge\fR
+.BR emerge
 \fI\-\-help \-h\fR [\fBsystem\fR | \fBconfig\fR | \fBsync\fR]
 .TP
-\fBemerge\fR
+.BR emerge
 \fI\-\-version\fR
 .SH "説明"
 \fBemerge\fR は Portage システムへのもっとも信頼のおける
@@ -35,7 +35,7 @@ emerge \- Portage システムへのコマンドラインインタフェース
 \fIebuild\fR、\fItbz2 ファイル\fR、\fIクラス\fR もしくは \fI依存関係\fR。
 .LP 
 .TP
-\fBebuild\fR
+.BR ebuild
 \fIebuild\fR としては、いちばん短く書けば、バージョンやカテゴリーを
 除いた Portage パッケージのディレクトリ名、たとえば \fBportage\fR や
 \fBpython\fR を指定する。
@@ -47,13 +47,13 @@ emerge \- Portage システムへのコマンドラインインタフェース
 \fB/usr/portage/app\-admin/python/python\-2.2.1\-r2.ebuild\fR
 のような実際のファイル名を使うこともできる。
 .TP
-\fBtbz2 ファイル\fR
+.BR tbz2 ファイル
 A \fItbz2 ファイル\fR は \fBebuild <パッケージ名>\-<バージョン番号>.ebuild
 package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 もしくは \fBquickpkg /var/db/pkg/<カテゴリー>/<パッケージ名>\fR
 で作成された正しい .tbz2 ファイルでなければならない。
 .TP
-\fBクラス\fR
+.BR クラス
 パッケージクラスは巨大なパッケージ群を短く書き表わすのに便利である。
 現在は2つのクラスがサポートされている: \fBsystem\fR と \fBworld\fR である。
 \fBsystem\fR はシステムが正しく動作するために必要と思われるパッケージ
@@ -62,7 +62,7 @@ package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 [詳しい情報は後述する \fBファイル\fR を参照。]  
 これらのコマンドは一般的に \fB\-\-update\fR と組み合わせて使う。
 .TP
-\fB依存関係\fR
+.BR 依存関係
 \fI依存関係\fR はインストールしたいパッケージに依存するパッケージを
 記述している。たとえば、\fB>=dev\-lang/python\-2.2.1\-r2\fR
 は Python の 2.2.1\-r2 以上の最新バージョンにマッチする。
@@ -73,7 +73,7 @@ package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 シングルクォート(')やダブルクォート(")で \fI依存関係\fR を囲む。
 .SH "アクション"
 .TP
-\fBアクション指定なし\fR
+.BR アクション指定なし
 アクションが指定されなければ、指定されたパッケージの依存関係を満たしながら、
 そのパッケージをインストールする、というアクションをする。
 引数には \fIebuild\fR、\fItbz2\fR、\fIクラス\fR もしくは \fI依存関係\fR
@@ -83,7 +83,7 @@ package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 最終的にパッケージは \fBworld\fR ファイルに追加され、
 のちのちの更新対象になる。
 .TP
-\fBclean\fR (\fB\-c\fR)
+.BR "clean " (\fB\-c\fR)
 システムの機能に影響を与えないパッケージを削除し、
 システムをきれいにする。
 引数には \fIebuild\fR、\fIクラス\fR、もしくは\fI依存関係\fR
@@ -94,7 +94,7 @@ package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 一般的に、このオプションは使っても安全である。
 clean \fBではスロットがないパッケージは削除しないことに注意\fR。
 .TP
-\fBdepclean\fR
+.BR depclean
 システムにインストールされているパッケージで、
 はっきりとした理由なしにインストールされているパッケージ全てを
 決定する。
@@ -110,7 +110,7 @@ clean \fBではスロットがないパッケージは削除しないことに注意\fR。
 \fBUSE フラグを変更すると depclean
 の出力に大きな影響を与えることに注意。\fR
 .TP
-\fBhelp\fR (\fB\-h\fR)
+.BR "help " (\fB\-h\fR)
 emerge のヘルプを表示する。
 上に挙げた追加引数をどれか加えると、
 その項目に特化したヘルプを提示する。
@@ -118,13 +118,13 @@ emerge のヘルプを表示する。
 この man ページが解決に役立たない問題があるなら、
 こちらのヘルプを調べること。
 .TP
-\fBinfo\fR
+.BR info
 これはバグ報告に入れるための情報のリストで、
 開発者が報告を受けた問題を解決するために役立つ。
 \fBバグ報告を出すときにはこの情報を入れること。\fR
 \fI--verbose\fR オプションをつけると詳細な出力がえられる。
 .TP
-\fBinject\fR (\fB\-i\fR)
+.BR "inject " (\fB\-i\fR)
 パッケージを注入(inject)し、そのパッケージの「スタブ」を挿入して、
 Portage にそのパッケージがインストールされたと思わせる。
 これが便利なのは、たとえば XFree86 のバイナリバージョンが
@@ -135,7 +135,7 @@ Portage にそのパッケージがインストールされたと思わせる。
 例:
 \fBemerge inject sys\-kernel/gentoo\-sources\-2.4.19\fR
 .TP
-\fBprune\fR (\fB\-P\fR)
+.BR "prune " (\fB\-P\fR)
 \fB警告: このアクションは重要なパッケージを削除する可能性がある!\fR 
 マッチするパッケージの最新版以外のバージョンを全て削除する。
 パッケージに複数の SLOT があるなら、各 SLOT の最新バージョン
@@ -155,7 +155,7 @@ rsync ユーザにはこのコマンドは薦めない。「rsync ユーザ」と他のユーザの
 rsync ユーザはキャッシュを再生成するためには単に \fBemerge sync\fR 
 を実行するだけでよい。
 .TP
-\fBsearch\fR (\fB\-s\fR)
+.BR "search " (\fB\-s\fR)
 Portage ツリーの中を指定された文字列でマッチするものを検索する。
 検索文字列は正規表現である。たとえば、
 \fBemerge search "^kde"\fR
@@ -167,14 +167,14 @@ Portage ツリーの中を指定された文字列でマッチするものを検索する。
 パッケージの説明文も検索したいなら、
 \fB\-\-searchdesc\fR オプションを使う。
 .TP
-\fBsync\fR
+.BR sync
 rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。
 \fBPortage ツリーに対して行った変更は全て消去されることに注意\fR。
 特殊な環境を除いて、このアクションは更新に \fBrsync\fR を用いる。
 変更の削除を防ぐ方法については、make.conf の PORTDIR_OVERLAY
 の記述を参照。
 .TP
-\fBunmerge\fR (\fB\-C\fR)
+.BR "unmerge " (\fB\-C\fR)
 \fB警告: このアクションは重要なパッケージを削除する可能性がある!\fR
 マッチするパッケージ全てを削除する。
 このアクションは依存関係のチェックをしないので、
@@ -183,7 +183,7 @@ rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。
 である。\-\- 具体例は上記 \fBclean\fR を参照。
 .SH "オプション"
 .TP
-\fB\-\-buildpkg\fR (\fB\-b\fR)
+.BR "--buildpkg " (\fB\-b\fR)
 emerge の際パッケージを実際にインストールすることに加え、
 処理される全 ebuild についてバイナリパッケージもビルドする。
 メンテナーにも便利であるし、複数の Gentoo Linux システムを
@@ -205,35 +205,35 @@ emerge の際パッケージを実際にインストールすることに加え、
 このオプションを使うとアップグレードされる全パッケージの
 ChangeLog エントリーが表示される。
 .TP
-\fB\-\-columns\fR
+.BR "--columns"
 \fI\-\-pretend\fR といっしょに使い、カット＆ペーストしやすい
 ように整形されたパッケージ名、新バージョン、旧バージョンが表示される。
 .TP
-\fB\-\-debug\fR (\fB\-d\fR)
+.BR "--debug " (\fB\-d\fR)
 emerge コマンドをデバッグモードで動かす。
 このモードでは bash のビルド環境は -x オプションつきで動作し、
 標準出力に詳細なデバッグ情報を出力する。
 \-\-debug は bash の構文エラーを探すために役立つ。
 .TP
-\fB\-\-deep\fR (\fB\-D\fR)
+.BR "--deep " (\fB\-D\fR)
 \fB\-\-update\fR と組み合わせて使い、\fBemerge\fR にパッケージの
 直接の依存関係だけをチェックするのではなく、パッケージの依存ツリー
 全体を考慮に入れるよう強制する。
 たとえば、このフラグを使うとパッケージの依存関係として直接
 挙げられてはいないライブラリのアップデートを捉えることができる。
 .TP
-\fB\-\-emptytree\fR (\fB\-e\fR)
+.BR "--emptytree " (\fB\-e\fR)
 仮想的にインストールされたパッケージのツリーが glibc だけ含むように
 手を加える。このオプションは \-\-pretend といっしょに使うととても便利
 である。このオプションを使うと、開発者はパッケージの全依存関係のツリー
 の概観を知ることができるし、最新のライブラリを使って全ツリーを再ビルド
 することもできる。
 .TP
-\fB\-\-fetchonly\fR (\fB\-f\fR)
+.BR "--fetchonly " (\fB\-f\fR)
 パッケージをビルドせず、単に全パッケージの fetch だけを行う
 (メインパッケージに加えて依存するパッケージ全部)。
 .TP
-\fB\-\-noconfmem\fR
+.BR "--noconfmem "
 Portage に CONFIG_PROTECT のディレクトリ内の設定ファイルがすでに
 マージされていることを示すマージ記録を無視させる。
 Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
@@ -241,12 +241,12 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 することを防いでいる。このフラグは設定ファイルを常にマージ
 させる。
 .TP
-\fB\-\-nodeps\fR (\fB-O\fR)
+.BR "--nodeps " (\fB-O\fR)
 依存するパッケージを全くインストールせず、指定されたパッケージだけを
 インストールする。依存関係が満たされていない場合、ビルドが失敗する
 可能性があることに注意。
 .TP
-\fB\-\-noreplace\fR (\fB\-n\fR)
+.BR "--noreplace " (\fB\-n\fR)
 コマンドラインで指定されたパッケージですでにインストールされているものを
 飛ばす。このオプションを指定しなければ、パッケージ、ebuild、そして
 依存パッケージをコマンドラインで指定すると、そのパッケージがすでに
@@ -254,21 +254,21 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 する。デフォルトでは Portage は依存パッケージは再インストールしないこと
 に注意。
 .TP
-\fB\-\-nospinner\fR
+.BR "--nospinner"
 そのセッションではバーの回転を無効にする。
 端末デバイスが TTY だと判断されたときにはバーの回転がアクティブになる。
 このフラグはそれに関係なくバーの回転を無効にする。
 .TP
-\fB\-\-oneshot\fR
+.BR "--oneshot"
 通常どおり emerge するが、今後アップデートするための world
 プロフィールにはパッケージを追加しない。
 .TP
-\fB\-\-onlydeps\fR (\fB\-o\fR)
+.BR "--onlydeps " (\fB\-o\fR)
 指定されたパッケージ自身ではなく、
 そのパッケージに依存するパッケージをインストール
 (もしくはインストールのふりを) する。
 .TP
-\fB\-\-pretend\fR (\fB\-p\fR)
+.BR "--pretend " (\fB\-p\fR)
 実際にインストールを行わず、\-\-pretend が指定されなかったとすれば
 どんなパッケージがインストールされるのかを単に表示する。
 よく知らないパッケージをインストールする前には \-\-pretend
@@ -276,7 +276,16 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 出力は、N = 新規、U = 更新、R = 入れ換え、B = インストール済み
 パッケージによってブロックされている、となっている。
 .TP
-\fB\-\-searchdesc\fR (\fB\-S\fR)
+.BR "--quiet " (\fB-q\fR)
+結果はさまざまだが、全体的に見て Portage が表示する出力を減らしたり
+凝縮したりする。
+.TP
+.BR "--resume"
+最後のインストール操作を再開する。この操作は失敗したらエラーを
+返すだけだということに注意。Portage になにもすることがなければ、
+メッセージと成功の戻り値を返して終了する。
+.TP
+.BR "--searchdesc " (\fB\-S\fR)
 検索文字列がパッケージ名に加え、説明フィールドにもマッチする。
 説明も正規表現でマッチすることに \fB注意\fR。
 .TP
@@ -288,7 +297,7 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 このアクションはパッケージを飛ばしても依存関係を壊さない場合
 にだけ使うべきである。
 .TP
-\fB\-\-update\fR (\fB\-u\fR)
+.BR "--update " (\fB\-u\fR)
 パッケージを利用可能な最新バージョンにアップデートする。
 \fB\fR \-\-update \fBはまだ全機能を備えていないことに注意\fR。
 たとえば、\fBworld\fR ファイルに書かれているパッケージに
@@ -301,7 +310,7 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 パッケージのバージョンを下げるようなアップデートは行わない。
 \fBSLOT\fR は基本的なレベルで対象に含まれる。
 .TP
-\fB\-\-usepkg\fR (\fB\-k\fR) 
+.BR "--usepkg " (\fB\-k\fR) 
 バイナリパッケージが使えるのであれば、emerge にバイナリパッケージ
 ($PKGDIR から読み取る)を使い、時間の食うコンパイルを避けることができる。
 このオプションは CD インストールのとき便利である。
@@ -309,12 +318,12 @@ export PKGDIR=/mnt/cdrom/packages し、このオプションを使うことで、
 emerge の際依存関係を満たすために CD からバイナリパッケージを「引っ張って」
 くることができる。
 .TP
-\fB\-\-verbose\fR (\fB\-v\fR)
+.BR "--verbose " (\fB\-v\fR)
 詳細モードで emerge を動かす。
 現在のところ、このフラグは emerge の際 GNU info にエラーがあれば
 出力させる。
 .TP
-\fB\-\-version\fR
+.BR "--version"
 \fBemerge\fR のバージョン番号を表示する。
 他のオプションと組み合わせて使うことはできない。
 このアクションの名前とフォーマットは慣習的なものである。
@@ -373,7 +382,7 @@ emerge を実行したら Portage は libgd をバージョン 1.8.4
 有効にならない。
 .SH "注意"
 ほとんど常に、パッケージをインストールしたりアップデートしたり
-しようとする前は、\fB\-\-pretend\fR install もしくは update 
+しようとする前は、\fB--pretend\fR install もしくは update 
 を実行するべきである。そうすればどこまで実行されるのか分かり、
 修正しなければならないブロックするパッケージを表示させることができる。
 これは Portage ツリーが特に活動的だと多数のパッケージが
