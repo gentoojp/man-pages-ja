@@ -1,0 +1,25 @@
+.TH "ENV-UPDATE" "1" "Feb 2003" "Portage 2.0.47" "Portage"
+.SH 名前
+env-update \- 環境設定を自動で更新する
+.SH 書式
+.B env-update
+.SH 説明
+.I env-update
+\fI/etc/env.d\fR にあるファイルを読み、自動で \fI/etc/profile.env\fR
+と \fI/etc/ld.so.conf\fR を生成する。そして \fBldconfig\fR(8)
+を実行し、\fI/etc/ld.so.cache\fR を更新する。 \fIenv-update\fR は
+各パッケージがインストール/アンインストールされたあと \fBemerge\fR(1)
+によって自動で実行される。また、\fI/etc/env.d\fR に変更を加えた場合、
+すぐに変更を反映するためには自分で \fIenv-update\fR を実行しなければ
+ならない。
+.SH オプション 
+.TP
+なし。
+.SH 著者
+Daniel Robbins <drobbins@gentoo.org>
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "関連項目"
+.BR emerge (1)
+.SH "CVS ヘッダ"
+$Header$
