@@ -1,0 +1,68 @@
+.TH "PERL-MODULE" "5" "Jun 2003" "Portage 2.0.48" "Portage"
+.SH "名前"
+perl-module \- 一般的な Perl モジュールの ebuilds を操作する
+.SH "説明"
+\fBperl-module\fR eclass は Portage システム内で Perl
+モジュールのコンパイル、テスト、そしてインストールを行なうために使われ、
+モジュールを扱うのに
+\fBExtUtils::MakeMaker\fR(3pm) か \fBModule::Builder\fR(3pm)
+のいずれかの手順をそのまま利用する。
+.SH "変数"
+.TP
+.B "style" = \fI"[builder|makemaker]"\fR
+この変数でモジュールをビルドするのに使うデフォルトのパッケージを選択する。
+\fIstyle\fR を指定しなければ、デフォルトでは
+\fBExtUtils::MakeMaker\fR(3pm) が使用される。
+.SH "関数"
+.TP
+.B perl-module_src_prep
+最初の Makefile を作成する。
+.TP
+.B perl-module_src_compile
+まだ呼ばれていなければ \fBperl-module_src_prep\fR を呼び、
+最初の make を実行する。
+.TP
+.B perl-module_src_test
+呼ばれれば、そのモジュールといっしょに配布されている全テストを実行する。
+.TP
+.B perl-module_src_install
+`make install` (もしくは \fBModule::Builder\fR(3pm)
+がビルドモジュールであればそれに相当するもの) を実行する。
+また、pod ファイルのためにビルドパスを消去し、
+perllocal.pod を生成する。
+.TP
+.B perl-module_pkg_setup
+\fBperlinfo\fR を呼ぶ。
+.TP
+.B perl-module_pkg_preinst
+\fBperlinfo\fR を呼ぶ。
+.TP
+.B perl-module_pkg_postinst
+\fBupdatepod\fR を呼ぶ。
+.TP
+.B perl-module_pkg_prerm
+\fBupdatepod\fR を呼ぶ。
+.TP
+.B perl-module_pkg_postrm
+\fBupdatepod\fR を呼ぶ。
+.TP
+.B perlinfo
+Gentoo の pods 文書を更新する。
+.TP
+.B updatepod
+ARCH_LIB と SITE_LIB にある perllocal.pods を消す。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "参照"
+.BR ebuild (5),
+.BR ExtUtils::MakeMaker (3pm),
+.BR Module::Build (3pm),
+.BR perl (1)
+.SH "ファイル"
+.BR /usr/portage/eclass/perl-module.eclass
+.SH "著者"
+Michael Cummings <mcummings@gentoo.org>
+.br
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/perl-module.eclass.5,v 1.1 2003/07/01 13:28:22 vapier
