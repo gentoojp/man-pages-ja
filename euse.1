@@ -1,0 +1,78 @@
+.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Original version: 0.1.0
+.\" Translated on 17 Oct 2003 by Hattya <hattya@inter7.jp>
+.\"
+.TH EUSE 1 2003-05-01 "Gentoo Linux" "Gentoo Toolkit"
+.SH "名前"
+euse \- Gentoo Linux コマンドライン USE フラグエディタ
+.SH "書式"
+.B euse
+[\fIoptions\fP]
+.SH "説明"
+.PP
+\fIeuse\fR は /etc/make.conf を直接編集することなしに、USE フラグを設定(無効/有効)するために使用される。また、USE フラグについての説明や、フラグの状態(無効/有効)、フラグの種類(グローバル/ローカル)などのような詳細な情報を得ることができる。さらに /etc/make.conf、/etc/make.defaults、環境変数に設定されている USE フラグを問い合わせることもできる。
+.SH "オプション"
+.TP
+\fB-c, --conf\fI
+/etc/make.conf に設定されている USE フラグを表示する。
+.TP
+\fB-d, --defaults\fI
+/etc/make.profile/make.defaults に設定されている USE フラグを表示する。
+.TP
+\fB-e, --env\fI
+環境変数に設定されている USE フラグを表示する。
+.TP
+\fB-E, --enable\fI
+make.conf の USE フラグを有効にする。USE フラグをスペースで区切って複数指定することもできる。実際にどのように処理されるかについては README を読んでいただきたい。
+.TP
+\fB-D, --disable\fI
+make.conf の USE フラグを無効にする。各 USE フラグの前に "-" を付加し、make.conf の USE フラグに追加する。USE フラグをスペースで区切って複数指定することもできる。実際にどのように処理されるかについては README を読んでいただきたい。
+.TP
+\fB-i, --info\fI
+USE フラグについての詳細な情報を表示する。引数が与えられない場合は、全ての USE フラグ(グローバルとローカル)の情報を表示する。もし一つ以上の引数(スペースにより区切られる)が与えられた場合は、そのフラグのみの情報を表示する。
+.sp
+.RS
+出力される形式：
+.br
+alpha         [-] [ ] [G] indicates that architecture ...
+.br
+moznocompose  [+] [C] [L] [net-www/mozilla] : If you  ... 
+.br
+各項目の説明：
+.IP フラグ名
+USE フラグの名前
+.IP フラグの状態
+USE フラグが有効か無効か表示する。- は無効、+ は有効。
+.IP フラグの所在
+USE フラグがどこで有効・無効を設定されているか表示する。C は make.conf、D は make.defaults、E は環境変数。
+.IP フラグの種類
+その USE フラグがグローバル USE フラグかローカル USE フラグか表示する。もしその USE フラグがローカル USE フラグである場合、説明の前に関連するパッケージ名が括弧に囲まれて表示される。上記 moznocompose を見よ。
+.IP フラグの説明
+USE フラグについての説明を表示する。
+.TP
+\fB-h, --help\fI
+使いかたと、設定可能な USE フラグとその説明の一覧を表示する。
+.TP
+\fB-v, --version\fI
+バージョンを表示する。
+.SH "ファイル"
+/etc/make.conf
+.br
+/etc/make.profile/make.defaults
+.br
+$PORTDIR/profiles/use.desc
+.br
+$PORTDIR/profiles/use.local.desc
+.br
+/etc/make.profile/use.mask
+.SH "著者"
+Arun Bhanu <codebear@gentoo.org>
+.SH "バグ"
+未だバグ報告を受けたことはない
+.SH "関連項目"
+.BR ufed(8), 
+.BR README
+.TP
+\fI/usr/bin/euse\fR スクリプト
