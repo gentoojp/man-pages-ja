@@ -1,0 +1,80 @@
+.TH "GCC" "5" "Jun 2003" "Portage 2.0.48" "Portage"
+.SH "名前"
+gcc \- gcc についてよく必要とされる情報を得る関数
+.SH "説明"
+\fBgcc\fR eclass はコンパイルに使われるバージョンの gcc
+についての情報を得るために使ういろいろな関数を持っている。
+この eclass を使えば開発者はそもそも gcc
+の仕様を探す方法を考えるのではなく、gcc
+の仕様自体に頭を悩ませればよくなる。
+.SH "変数"
+.TP
+.B WANT_GCC_3 = \fI"[yes|no]"\fR
+複数のバージョンの gcc コンパイラ(たとえば gcc-2.95.3 と gcc-3.2.1)
+がインストールされていたら、
+このクラスでは下記の関数を呼ぶとき gcc-3.x
+についての情報がほしいのだと特定することができる。
+.SH "関数"
+.TP
+.B gcc-getCC
+C コンパイラバイナリの名前を返す。普通は「gcc」。
+.TP
+.B gcc-getCXX
+C++ コンパイラバイナリの名前を返す。普通は「g++」。
+.TP
+.B gcc-fullversion
+`$CC -dumpversion` でバージョンを返す。
+.br
+GCC \fI2.95.3\fR は \fI2.95.3\fR を返し、
+.br
+GCC \fI3.2.1\fR は \fI3.2.1\fR を返す。
+.TP
+.B gcc-version
+バージョンを返すが、<メジャーバージョン>.<マイナーバージョン>だけ返す。
+.br
+GCC \fI2.95\fR.3 は \fI2.95\fR を返し、
+.br
+GCC \fI3.2\fR.1 は \fI3.2\fR を返す。
+.TP
+.B gcc-major-version
+メジャーバージョンを返す。
+.br
+GCC \fI2\fR.95.3 は \fI2\fR を返し、
+.br
+GCC \fI3\fR.2.1 は \fI3\fR を返す。
+.TP
+.B gcc-minor-version
+マイナーバージョンを返す。
+.br
+GCC 2.\fI95\fR.3 は \fI95\fR を返し、
+.br
+GCC 3.\fI2\fR.1 は \fI2\fR を返す。
+.TP
+.B gcc-micro-version
+マイクロバージョンを返す。
+.br
+GCC 2.95.\fI3\fR は \fI3\fR を返し、
+.br
+GCC 3.2.\fI1\fR は \fI1\fR を返す。
+.TP
+.B gcc-libpath
+gcc の内部ライブラリのパスを返す。
+.TP
+.B gcc-libstdcxx-version
+libstdc++.so のフルバージョンを返す。
+.TP
+.B gcc-libstdcxx-major-version
+libstdc++.so のメジャーバージョンを返す。
+.TP
+.B gcc2-flags
+gcc-2.95.3 で使える CFLAGS と CXXFLAGS を export する。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "参照"
+.BR ebuild (5)
+.SH "ファイル"
+.BR /usr/portage/eclass/gcc.eclass
+.SH "著者"
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/gcc.5,v 1.1 2003/06/25 19:38:50 vapier
