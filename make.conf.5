@@ -1,4 +1,4 @@
-.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Foundation
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.48
@@ -6,8 +6,9 @@
 .\"
 .\" Updated to 1.32 on 15 Nov 2003
 .\" Updated to 1.35 on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
+.\" Updated to 1.43 on 29 Sep 2004
 .\"
-.TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.47" "Portage"
+.TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.51" "Portage"
 .SH "名前"
 make.conf \- Portage のカスタム設定
 .SH "書式"
@@ -134,6 +135,9 @@ Portage の ccache パッケージに対するサポートを有効にする。
 はデフォルトで (\fIuserpriv\fR が指定されていれば) ${PORTAGE_TMPDIR}/ccache
 か (\fIuserpriv\fR が指定されていなければ) /root/.ccache を使う。
 .TP
+.B collision\-protect
+QAのための機能で、パッケージが自分のものでないファイルを上書きしないよう保証する。
+.TP 
 .B cvs
 開発者のための機能で、Portage でダイジェストを生成するとき SRC_URI
 にある全 USE フラグを有効にする。
@@ -144,16 +148,34 @@ Portage の ccache パッケージに対するサポートを有効にする。
 .B distcc
 Portage の distcc パッケージに対するサポートを有効にする。
 .TP
+.TP
+.B distlocks
+Portageがロックファイルを用い、競合している操作がお互いのファイルを上書きしてしまわないことを保証する。
+この機能はデフォルトで有効だが、NFSv2のようなあまり賢くないリモートファイルシステムや、変に設定されたSambaサーバ(oplocks off, NFS re-export)では問題があるかもしれない。
+/usr/lib/portage/bin/clean_locks というツールがあり、問題が起きたとき(通常クラッシュもしくは回線切断)のロックファイル問題を扱うのを助けてくれる。
+.TP
 .B fixpackages
 全バイナリパッケージでの依存関係を解決するスクリプトを走らせる。
 これはパッケージが Portage ツリーの中を移動したとき常に実行される。
 この機能を有効にするととても時間を消費することに気をつけてほしい。
+.TP
+.B getbinpkg
+emergeに常に\fIPORTAGE_BINHOST\fRからファイルの取得を試みさせる。
+詳細は\fBmake.conf\fR(5)参照。
+.TP
+.B gpg
+Check the signatures of Manifests and make sure they are correct.
 .TP
 .B keeptemp
 インストールが終わったあとも ${T} ディレクトリを消さない。
 .TP
 .B keepwork
 インストールが終わったあとも ${WORKDIR} ディレクトリを消さない。
+.TP
+.B maketest
+パッケージが正しくコンパイルされたか確認する手助けのため、
+各マージの際にパッケージ固有のテストを実行する。
+\fBebuild\fR(1)の\fItest\fRと\fBebuild\fR(5)の\fIsrc_test()\fRを参照。
 .TP
 .B mirror
 ファイルがすでに \fBDISTDIR\fR に存在しても \fBFETCHCOMMAND\fR
@@ -183,9 +205,30 @@ xterm のタイトルバーの更新を無効にする(ステータス情報が含まれている)。
 .B sandbox
 \fBemerge\fR(1) と \fBebuild(1)\fR を実行するときの sandbox を有効にする。
 .TP
+.B severe
+Manifestをチェックするとき、信頼する鍵で署名されたものだけを受け付ける。
+.TP
+.B sfperms
+賢いファイルシステムパーミッション(Smart Filesystem Permissions)を意味する。
+パッケージを実ファイルシステムにインストールする前、
+setuidまたはsetgidファイルを検索して正しくパーミッションを設定する。
+setuidされたファイルでグループと自分以外に読み込み属性を持ったものは削除され、
+一方、setgidされたファイルは自分以外に読み込み属性を持ったものが削除される。
+下の\fIsuidctl\fRも見ること。
+.TP
+.B sign
+\fBrepoman\fR(1)でCVSに作業をコミットするとき、GPG鍵でManifestを署名する。
+\fBmake.conf\fR(5)の\fIPORTAGE_GPG_KEY\fR変数の項を読むこと。
+.
+.TP
 .B strict
 危険になる可能性がある状況に対し過敏に反応する(たとえば Manifest
 がないだとか不正だとかいう状況)。
+.TP
+.B suidctl
+実ファイルシステムにパッケージをインストールする前に、
+\fI/etc/portage/suidctl.conf\fRに列挙されていないファイルからは
+setuidビットを自動的に落とす。
 .TP
 .B userpriv
 root 権限を落し、パッケージを portage:portage ユーザでコンパイルする。
@@ -224,10 +267,6 @@ root 権限を落し、パッケージを portage:portage ユーザでコンパイルする。
 デフォルトでカラーを無効にするかどうかを定義する。
 .br
 デフォルトは false。
-.TP
-\fBPKG_TMPDIR\fR = \fI[path]\fR
-\fIemerge\fR は .tbz2 パッケージをシステムにインストールする前に
-いったん展開するためにこのディレクトリを使う。
 .TP
 \fBPKGDIR\fR = \fI[path]\fR
 作成された .tbz2 バイナリパッケージが保存される場所を定義する。
@@ -355,8 +394,10 @@ make.conf (conf) が自動生成された値を上書きし、
 を編集すること。
 .TP
 \fB/usr/portage/profiles/use.desc\fR
+全グローバルUSEフラグのリストが書かれている。
+.TP
 \fB/usr/portage/profiles/use.local.desc\fR
-使用できる全 USE 変数の膨大なリストが書かれている。
+全ローカルUSE変数のリストが書かれている。
 .SH "著者"
 Daniel Robbins <drobbins@gentoo.org>
 .br
@@ -364,4 +405,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/make.conf.5,v 1.35 2004/05/28 20:41:58 vapier
+原文: make.conf.5,v 1.43

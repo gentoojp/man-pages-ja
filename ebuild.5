@@ -1,13 +1,14 @@
-.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Foundation
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.47
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
+.\" Updated to 1.71 on 29 Sep 2004
 .\" Updated to 1.61 on 18 Jun 2004
 .\" Updated to 1.57 on 19 Apr 2004
 .\"
-.TH "EBUILD" "5" "Feb 2003" "Portage 2.0.47" "Portage"
+.TH "EBUILD" "5" "Feb 2003" "Portage 2.0.51" "Portage"
 .SH "名前"
 ebuild \- ebuild スクリプトの内部フォーマット・変数・関数
 .SH "説明"
@@ -23,63 +24,40 @@ ebuild \- ebuild スクリプトの内部フォーマット・変数・関数
 簡単な ebuild のサンプルを示す:
 
 .DS
-# Copyright 1999\-2002 Gentoo Technologies, Inc.
-.br
+.nf
+# Copyright 1999\-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-.br
 # $Header:
-$
-.br
 
+inherit some_eclass another_eclass
 DESCRIPTION="Super\-useful stream editor (sed)"
-.br
-SRC_URI="ftp://alpha.gnu.org/pub/gnu/sed/${P}.tar.gz"
-.br
 HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
-.br
+SRC_URI="ftp://alpha.gnu.org/pub/gnu/sed/${P}.tar.gz"
 
-KEYWORDS="~x86"
-.br
-SLOT="0"
-.br
 LICENSE="GPL\-2"
-.br
+SLOT="0"
+KEYWORDS="~x86"
 IUSE=""
-.br
 
-DEPEND="virtual/glibc"
-.br
-RDEPEND="virtual/glibc"
-.br
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 
 src_compile() {
-.br
 	econf || die "could not configure"
-.br
 	emake || die "emake failed"
-.br
 }
-.br
 
 src_install() {
-.br
 	into /usr
-.br
 	doinfo doc/sed.info
-.br
 	doman doc/sed.1
-.br
 	into /
-.br
 	dobin sed/sed
-.br
 	dodir /usr/bin
-.br
 	dosym /bin/sed /usr/bin/sed
-.br
-	dodoc COPYING NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE
-.br
+	dodoc NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE
 }
+.fi
 .SH "変数"
 .TP
 .B 使用方法
@@ -116,7 +94,7 @@ src_install() {
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PVR\fR=='\fI4.2.1-r2\fR'
 .TP
 .B PF
-この変数には完全なパッケージ名 \fI[PN]\-[PV]-[PR]\fR が入っている。
+この変数には完全なパッケージ名 \fI[PN]\-[PVR]\fR が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PF\fR=='\fIxfree-4.2.1-r2\fR'
 .TP
@@ -399,6 +377,19 @@ svga、その次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれ
 例えば、blackdown-jdk と sun-jdk は \fIvirtual/jdk\fR を提供する。
 この機能によってパッケージが blackdown や sun に特化して依存するのでは
 なく、\fIvirtual/jdk\fR に依存することができる。
+.SH "Portage DECLARATIONS"
+.TP
+.B inherit
+inheritはPortageがebuildの外部の追加関数を定義するための特別なクラス
+(eclass)を保守するためのものであり、
+機能やデータを継承することができるようになっている。
+eclassでは、ビルドプロセスの効率を上げるために、
+非常にありふれた作業のために、代替ルーチン、拡張ルーチン、
+そして簡略化ルーチンとして関数が定義され、データの型が設定される。
+inheritはebuildの中で1回だけ呼ぶことができ、いかなる
+\fB条件文の中に入れてもいけない\fR。
+eclassを指定するときは名前だけを指定し、拡張子\fI.eclass\fR
+を含めてはいけない。
 .SH "関数"
 .TP
 .B pkg_nofetch
@@ -427,6 +418,12 @@ svga、その次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれ
 .B src_compile
 ビルド設定とコンパイルのために必要なステップ全ては
 この関数で行なわれなければならない。
+.br
+初期作業ディレクトリは $S。
+.TP
+.B src_test
+パッケージ固有のテストケースを全て実行する。
+デフォルトは 'make test' のあとに 'make check' を実行する。
 .br
 初期作業ディレクトリは $S。
 .TP
@@ -462,20 +459,22 @@ pkg_*inst 関数と同様だが、アンインストール用である。
 \fBuse\fR \fI<USE item>\fR
 もし \fIUSE item\fR が \fBUSE\fR 変数にあれば、\fIUSE item\fR 
 がエコーされて関数は 0 を返す。
-もし \fIUSE item\fR が \fBUSE\fR 変数になければ、
-関数は 1 を返す。
+もし \fIUSE item\fR が \fBUSE\fR 変数になければ、関数は 1 を返す。
+\fBuseq\fR はエコーを返さない \fBuse\fR であり、
+\fBuse\fR の出力を解釈したり扱ったりするのではなく、可能な限り
+\fBuseq\fR を使わなければならない。
 .RS
 .TP
 .I 例:
-if use gnome ; then
+if useq gnome ; then
 .br
 	guiconf="--enable-gui=gnome --with-x"
 .br
-elif use gtk ; then
+elif useq gtk ; then
 .br
 	guiconf="--enable-gui=gtk --with-x"
 .br
-elif use X ; then
+elif useq X ; then
 .br
 	guiconf="--enable-gui=athena --with-x"
 .br
@@ -533,6 +532,10 @@ myconf="$(use_with opengl)`"
 \fIitem\fR が \fIitem list\fR にあった場合、
 \fIitem\fR がエコーされて \fBhas\fR が 0 を返す。
 なかった場合、なにもエコーされず 1 を返す。
+use の項で示されているように、エコーを返さない \fBhasq\fR がある。
+出力を無視してよいところ全てで \fBhasq\fR を使ってほしい。
+出力を計算に使ってはならない。
+
 .br
 \fIitem list\fR は \fIIFS\fR 変数によって区切られている。
 この変数はデフォルトで「 」つまりスペースという値をもっている。
@@ -580,31 +583,22 @@ VERINS は "net-ftp/glftpd-1.27" という値になる)
 .TP
 \fBeconf\fR \fI[configure option]\fR
 この関数は configure の代わりに使われる。以下のオプションが実行される:
-.br
+.nf
 configure \\
-.br
 	--prefix=/usr \\
-.br
 	--host=${CHOST} \\
-.br
 	--mandir=/usr/share/man \\
-.br
 	--infodir=/usr/share/info \\
-.br
 	--datadir=/usr/share \\
-.br
 	--sysconfdir=/etc \\
-.br
 	--localstatedir=/var/lib \\
-.br
 	\fI${EXTRA_ECONF}\fR \\
-.br
 	\fIconfigure optioins\fR
-.br
-\fBeconf\fR にオプションを渡すためにはコマンドライン経由でも 
-\fIEXTRA_ECONF\fR 変数経由でもできる。\fBeconf\fR を手動で呼ぶので
-あれば、\fIEXTRA_ECONF\fR 変数を使うのではなく、\fBeconf\fR に追加の
-引数を渡すべきである。
+.fi
+\fIEXTRA_ECONF\fRはユーザのためだけにあり、ebuild
+書きのためにあるわけではないことに注意せよ。
+configureにもっとオプションを渡したければ、
+\fBeconf\fRに追加の引数を渡すだけでよい。
 \fBemake\fR \fI[make options]\fR
 この関数は make の代わりに使われる。
 'make ${MAKEOPTS} \fImake options\fR'
@@ -621,24 +615,21 @@ configure \\
 .TP
 \fBeinstall\fR \fI[make options]\fR
 この関数は make install の代わりとして使われる。実行されるオプションは:
-.br
-make prefix=${D}/usr \\
-.br
-            mandir=${D}/usr/share/man \\
-.br
-            infodir=${D}/usr/share/info \\
-.br
-            datadir=${D}/usr/share \\
-.br
-            sysconfdir=${D}/etc \\
-.br
-            localstatedir=${D}/var/lib \\
-.br
-            \fImake options\fR install
-
+.nf
+make \\
+       prefix=${D}/usr \\
+       datadir=${D}/usr/share \\
+       infodir=${D}/usr/share/info \\
+       localstatedir=${D}/var/lib \\
+       mandir=${D}/usr/share/man \\
+       sysconfdir=${D}/etc \\
+       \fI${EXTRA_EINSTALL}\fR \\
+       \fImake options\fR install
+.fi
  'make install DESTDIR=${D}' が使える場所で einstall を使わないでほしい。
 make ベースのパッケージをインストールするときは 'make install DESTDIR=${D}'
-とするほうが好まれる。
+とするほうが好まれる。また、\fIEXTRA_EINSTALL\fR変数を使わないこと。
+この変数はユーザのためのものである。
 
 .PD 0
 .TP
@@ -736,7 +727,8 @@ ${D}/usr/bin/some-script に対し sed を実行
 ${D} の中にディレクトリを作成する。
 .br
 .BR 'dodir\ /usr/lib/apache'
-${D}/usr/lib/apache を作成
+${D}/usr/lib/apache を作成。
+他のdo*関数は、明示的に指定しなくても\fBdodir\fRを実行してくれることに注意。
 .TP
 \fBdiropts\fR \fI[options for install(1)]\fR
 \fBdodir\fR で使われる install 関数のオプションを定義するために使われる。
@@ -762,15 +754,18 @@ Portage に伝える。\fBdodir\fR と同じように機能する。
 .TP
 \fBdoinitd\fR \fI<init.d > [list of more init.d scripts]\fR
 Gentoo \fIinit.d スクリプト\fR をインストールする。
-Gentoo init.d スクリプトのための正しい場所にインストールされなければならない(/etc/init.d/)。
+Gentoo init.d スクリプト用の正しい場所にインストールされなければならない(/etc/init.d/)。
+必要なディレクトリは全て作成する。
 .TP
 \fBdoconfd\fR \fI<conf.d file> [list of more conf.d file]\fR
 Gentoo \fIconf.d ファイル\fR をインストールする。
-Gentoo conf.d ファイルのための正しい場所にインストールされなければならない(/etc/conf.d/)。
+Gentoo conf.d ファイル用の正しい場所にインストールされなければならない(/etc/conf.d/)。
+必要なディレクトリは全て作成する。
 .TP
 \fBdoenvd\fR \fI<env.d entry> [list of more env.d entries]\fR
 Gentoo \fIenv.d エントリー\fR をインストールする。
-Gentoo env.d エントリーのための正しい場所にインストールされなければならない(/etc/env.d/)。
+Gentoo env.d エントリー用の正しい場所にインストールされなければならない(/etc/env.d/)。
+必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
@@ -841,6 +836,7 @@ chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
 \fBdoins\fR \fI<file> [list of more files]\fR
 ファイルを \fIINSDESTTREE\fR にインストールする。
 この関数は \fBinstall\fR(1) を使う。
+必要なディレクトリは全て作成する。
 .TP
 \fBexeinto\fR \fI[path]\fR
 \fBdoexe\fR 関数のルート (\fIEXEDESTTREE\fR) を設定する。
@@ -854,6 +850,7 @@ chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
 \fBdoexe\fR \fI<executable> [list of more executables]\fR
 実行バイナリや列挙された実行バイナリを \fIEXEDESTTREE\fR
 にインストールする。この関数は \fBinstall\fR(1) を使う。
+必要なディレクトリは全て作成する。
 .TP
 \fBdocinto\fR \fI[path]\fR
 \fBdodoc\fR が使う相対サブディレクトリ (\fIDOCDESTTREE\fR)
@@ -915,12 +912,11 @@ chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
 変数を変更したい場合はこのファイルではなく
 \fI/etc/make.conf\fR を編集すること。
 .SH "著者"
+.nf
 Achim Gottinger <achim@gentoo.org>
-.br
 Mark Guertin <gerk@gentoo.org>
-.br
 Nicholas Jones <carpaski@gentoo.org>
-.br
 Mike Frysinger <vapier@gentoo.org>
+.fi
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.61 2004/05/21 22:05:35 vapier
+原文: ebuild.5,v 1.71

@@ -1,12 +1,13 @@
-.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Foundation
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Original version: 2.0.50
 .\" Translated on 16 Feb 2004 by TAKEDA hiroyuki <diapar@mizar.freemail.ne.jp>
 .\"
 .\" Updated to 1.6 on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
+.\" Updated to 1.15 on 29 Sep 2004
 .\"
-.TH "PORTAGE" "5" "Jan 2004" "Portage 2.0.50" "Portage"
+.TH "PORTAGE" "5" "Jan 2004" "Portage 2.0.51" "Portage"
 .SH Ì¾Á°
 portage \- Gentoo¤ÎÃæ³Ë
 .SH ÀâÌÀ
@@ -20,58 +21,45 @@ portage \- Gentoo¤ÎÃæ³Ë
 .SH ½ñ¼°
 .TP
 .BR /etc/
+.nf
 make.globals
-.br
+.fi
 .BR make.conf (5)
 .TP
 .BR /etc/make.profile/
+.nf
 deprecated
-.br
 make.defaults
-.br
 packages
-.br
 packages.build
-.br
 use.defaults
-.br
 use.mask
-.br
 virtuals
+.fi
 .TP
 .BR /etc/portage/
+.nf
 bashrc
-.br
 package.mask
-.br
 package.unmask
-.br
 package.keywords
-.br
 package.use
-.br
 mirrors
-.br
 categories
-.br
 use.mask
+.fi
 .TP
 .BR /usr/portage/profiles/
+.nf
 arch.list
-.br
 categories
-.br
 package.mask
-.br
 thirdpartymirrors
-.br
 use.desc
-.br
 use.local.desc
+.fi
 .TP
-.BR /var/cache/edb/
-virtuals
-.br
+.BR /var/lib/portage/
 world
 .SH ÍÑ¸ì²òÀâ
 ¸åÂ³¤Î¾Ï¤Ç¤Ï¡¢¤¤¤¯¤Ä¤«¤ÎÍÑ¸ì¤ÏÊ¹¤­´·¤ì¤Ê¤¤¡¢¤¢¤ë¤¤¤ÏPortageÆÃÍ­¤Î°ÕÌ£¤Ç»ÈÍÑ
@@ -130,8 +118,33 @@ Portage¤ËÂÐ¤¹¤ë¥°¥í¡¼¥Ð¥ë¤Ê¥«¥¹¥¿¥àÀßÄê¡£\fBmake.conf\fR(5)¤ò»²¾È¤Î¤³¤È¡£
 ¥æ¡¼¥¶¡¼¤Î¥¢¥Ã¥×¥°¥ì¡¼¥ÉÂÐ¾Ý¤È¤·¤Æ¿ä¾©¤µ¤ì¤ë¥×¥í¥Õ¥¡¥¤¥ëÌ¾¤ò´Þ¤à¡£
 .TP
 .BR make.defaults
-Portage¤Î¥Ç¥Õ¥©¥ë¥È¤Î¥×¥í¥Õ¥¡¥¤¥ëÀßÄê¡£½ñ¼°¤Ë¤Ä¤¤¤Æ¤Ï
-\fBmake.conf\fR(5)¤Ç½Ò¤Ù¤é¤ì¤Æ¤ë¡£
+Portage¤Î¥Ç¥Õ¥©¥ë¥È¤Î¥×¥í¥Õ¥¡¥¤¥ëÀßÄê¡£°ìÈÌÅª¤Ê½ñ¼°¤Ë¤Ä¤¤¤Æ¤Ï
+\fBmake.conf\fR(5)¤Ç½Ò¤Ù¤é¤ì¤Æ¤ë¡£»ÈÍÑ¤·¤Æ¤¤¤ë¥×¥í¥Õ¥¡¥¤¥ë¤Î
+\fImake.defaults\fR¤Ç¤Ï¤¤¤¯¤Ä¤«¤ÎÆÃ¼ì¤ÊÊÑ¿ô¤âÄêµÁ¤µ¤ì¤Æ¤¤¤ë¡£
+
+.PD 0
+.RS
+.TP
+.BR ARCH
+¥¢¡¼¥­¥Æ¥¯¥Á¥ã¥¿¥¤¥×(x86/ppc/hppa/etc...)¡£
+.TP
+.B USERLAND = \fI"GNU"\fR
+BSD/cygwin/etc... ¥µ¥Ý¡¼¥È
+.TP
+.B PORTAGE_LIBC = \fI"glibc"\fR
+uClibc/BSD libc/etc... ¥µ¥Ý¡¼¥È
+.TP
+.BR PROFILE_ARCH
+Æ±¤¸\fBARCH\fR¤ÎÃæ¤Î¥Þ¥·¥ó¤ò¶èÊÌ¤¹¤ë¡£sparc¥Þ¥·¥ó¤ÏÁ´¤ÆARCH=sparc
+¤Ç¤¢¤ë¤¬¡¢¤³¤ÎÊÑ¿ô¤Ï'sparc32'¤«'sparc64'¤ËÀßÄê¤µ¤ì¤Æ¤¤¤ë¡£
+.TP
+.BR STAGE1_USE
+stage1¤«¤éstage2¤Ø¤È¥Ö¡¼¥È¥¹¥È¥é¥Ã¥×¤¹¤ë¤È¤­¤ËÉ¬Í×¤È¤Ê¤ë²ÄÇ½À­¤¬¤¢¤ëÆÃ¼ì¤ÊUSE¥Õ¥é¥°¡£
+.TP
+.BR GRP_STAGE23_USE
+stage3¤ÈGRP¥»¥Ã¥È¤ò¥Ó¥ë¥É¤¹¤ë¤È¤­¤Ëcatalyst¤¬»È¤¦ÆÃ¼ì¤ÊUSE¥Õ¥é¥°¡£
+.RE
+.PD 1
 .TP
 .BR packages
 ¤³¤Î¥Õ¥¡¥¤¥ë¤Ë¤Ï¡¢2¤Ä¤ÎÌÜÅª¤¬¤¢¤ë¡£1¤Ä¤Ï¡¢ÆÃÄê¤Î¥Ñ¥Ã¥±¡¼¥¸/¥Ð¡¼¥¸¥ç¥ó¤ò
@@ -139,30 +152,26 @@ Portage¤Î¥Ç¥Õ¥©¥ë¥È¤Î¥×¥í¥Õ¥¡¥¤¥ëÀßÄê¡£½ñ¼°¤Ë¤Ä¤¤¤Æ¤Ï
 ¥¯¥é¥¹¤ò¹½À®¤¹¤ë¥Ñ¥Ã¥±¡¼¥¸¤Î¥ê¥¹¥È¤òÄó¶¡¤¹¤ë¤³¤È¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- #¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¡£ 
-.br
 \- 1¹Ô¤Ë1¤Ä¤Î¥Þ¥¹¥¯ÂÐ¾Ý¤ÎDEPEND¥¢¥È¥à¤òµ­½Ò¤¹¤ë¡£
-.br
 \- system¥¯¥é¥¹¤ËÄÉ²Ã¤µ¤ì¤ë¥Ñ¥Ã¥±¡¼¥¸¤Ï¡¢*¤Ç»Ï¤Þ¤ë¡£
+.fi
+.I Ãí:
+¥«¥¹¥±¡¼¥É¥×¥í¥Õ¥¡¥¤¥ëÀßÄê¤Ë¤ª¤¤¤Æ¤Ï¡¢¥Ñ¥Ã¥±¡¼¥¸¥¢¥È¥à¤ÎÀèÆ¬¤Ë '-'
+¤ò¤Ä¤±¤ë¤³¤È¤Ë¤è¤Ã¤Æ¡¢¿Æ¥×¥í¥Õ¥¡¥¤¥ë¤ÇÄÉ²Ã¤µ¤ì¤¿¥Ñ¥Ã¥±¡¼¥¸¤ò»Ò¥×¥í¥Õ¥¡¥¤¥ë¤Çºï½ü¤¹¤ë¤³¤È¤¬¤Ç¤­¤ë¡£
 
 .I Îã:
-.br
+.nf
 # ¤³¤Î¹Ô¤Ï¥³¥á¥ó¥È!
-.br
 # glibc 2.3 °Ê²¼¤Î¥Ð¡¼¥¸¥ç¥ó¤Î¤ß¤òµö²Ä¤¹¤ë¾ì¹ç
-.br
 <sys-libs/glibc-2.3
-.br
 # ¥Ð¡¼¥¸¥ç¥ó¤òÌä¤ï¤º¡¢bash¤òsystem¥¯¥é¥¹¤ËÄÉ²Ã¤¹¤ë¾ì¹ç
-.br
 *app-shells/bash
-.br
 # 4.2°ÊÁ°¤Î¥Ð¡¼¥¸¥ç¥ó¤Îreadline¤Î¤ß¤òµö²Ä¤·¡¢
-.br
 # system¥¯¥é¥¹¤ËÄÉ²Ã¤¹¤ë¾ì¹ç
-.br
 *<sys-libs/readline-4.2
+.fi
 .TP
 .BR packages.build
 stage1 tarball¤ò¹½À®¤¹¤ë¥Ñ¥Ã¥±¡¼¥¸¤Î¥ê¥¹¥È(1¹Ô¤Ë1¤Ä)¡£
@@ -180,33 +189,29 @@ media-libs/libsdl¤Ïemerge¤·¤Æ¤¤¤ë¾ì¹ç¡¢Portage¤Ï¼«Æ°Åª¤Ë"sdl"¤òUSE¥Õ¥é¥°¤Ë
 ÄÉ²Ã¤¹¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- 1¹Ô¤Ë1¤Ä¤ÎUSE¥Õ¥é¥°¤È¡¢DEPEND¥Ù¡¼¥¹¥¢¥È¥à¤Î¥ê¥¹¥È¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
-.br
+.nf
 # media-libs/libsdl¤Ç"sdl"¤òÍ­¸ú¤Ë¤¹¤ë¾ì¹ç
-.br
 sdl        media-libs/libsdl
-.br
 # dev-lang/tcl¤ª¤è¤Ódev-lang/tk¤¬Î¾Êý¤¢¤ë¾ì¹ç¤Î¤ß
-.br
 # tcltk¤òÍ­¸ú¤Ë¤·¤¿¤¤¾ì¹ç
-.br
 tcltk      dev-lang/tcl   dev-lang/tk
+.fi
 .TP
 .BR use.mask
 USE¥Õ¥é¥°¤ÎÃæ¤Ë¤Ï¡¢¥¢¡¼¥­¥Æ¥¯¥Á¥ã¤Ë¤è¤Ã¤Æ¤Ï°ÕÌ£¤òÀ®¤µ¤Ê¤¤¤â¤Î¤â¤¢¤ë
 (Îã¤¨¤Ð¡¢Èóppc´Ä¶­¤Ç¤Îaltivec¤äÈóx86´Ä¶­¤Ç¤Îmmx)¡£¤³¤³¤Ë¤Ï¡¢¥Þ¥¹¥¯¤¹¤ë¤â¤Î¤òÎóµó¤¹¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- 1¹Ô¤Ë1¤Ä¤ÎUSE¥Õ¥é¥°¤òµ­½Ò¤¹¤ë¡£
+.fi
 .TP
 .BR virtuals
 ¤³¤Î¥Õ¥¡¥¤¥ë¤Ç¤Ï¡¢¥Ç¥Õ¥©¥ë¥È¤Çvirtual¤È¤Ê¤ë¥Ñ¥Ã¥±¡¼¥¸¤ò´ÉÍý¤¹¤ë¡£
@@ -218,20 +223,18 @@ net-mail/ssmtp¤¬¥Ç¥Õ¥©¥ë¥È¤ÇÄêµÁ¤µ¤ì¤Æ¤¤¤ë¤Î¤Ï¡¢¤³¤Î¥Ñ¥Ã¥±¡¼¥¸¤¬
 e-mail¤òÁ÷¿®¤¹¤ë¤Ë¤Ï¶Ë¤á¤ÆÃ±½ã¤ÇºÇ¾®¸Â¤Ç¤¢¤ë¤È¸À¤¦ÍýÍ³¤«¤é¤Ç¤¢¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- 1¹Ô¤Ë1¤Ä¤ÎvirtualÌ¾¤ÈDEPEND¥¢¥È¥à¤Î¥Ú¥¢¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 # net-mail/ssmtp¤ò¥Ç¥Õ¥©¥ë¥È¤ÎMTA¤È¤·¤Æ»ÈÍÑ¤¹¤ë¾ì¹ç
-.br
 virtual/mta           net-mail/ssmtp
-.br
 # app-dicts/aspell-en¤ò¥Ç¥Õ¥©¥ë¥È¤Î¼­½ñ¤È¤·¤Æ»ÈÍÑ¤¹¤ë¾ì¹ç
-.br
 virtual/aspell-dict   app-dicts/aspell-en
+.fi
 .RE
 .TP
 .BR /etc/portage/
@@ -247,47 +250,42 @@ virtual/aspell-dict   app-dicts/aspell-en
 »È¤¤¤¿¤¤¡¢¤È¤¤¤¦¾ì¹ç¡£ÌäÂê¤Ê¤·!
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- 1¹Ô¤Ë1¤Ä¤ÎDEPEND¥¢¥È¥à¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 # 1.0.4496°ÊÁ°¤Î¥Ð¡¼¥¸¥ç¥ó¤Î
-.br
 # nvidia¥É¥é¥¤¥Ð¡¼¤ò¥Þ¥¹¥¯¤·¤¿¤¤¾ì¹ç
-.br
 >=media-video/nvidia-kernel-1.0.4496
-.br
 >=media-video/nvidia-glx-1.0.4496
+.fi
 .TP
 .BR package.unmask
 Á°½Ò¤·¤¿package.mask¤Î¤è¤¦¤Ë¡¢¥Þ¥¹¥¯¤ò³°¤·¤¿¤¤¥Ñ¥Ã¥±¡¼¥¸¤òÎóµó¤¹¤ë¡£
-¥°¥í¡¼¥Ð¥ë¤Êprofile.mask¥Õ¥¡¥¤¥ë¤ÎÀßÄê¤ò¾å½ñ¤­¤·¤¿¤¤¾ì¹ç¤Ë»ÈÍÑ¤µ¤ì¤ë(¾ÜºÙ¤Ï¸å½Ò)¡£
+¥°¥í¡¼¥Ð¥ë¤Êpackage.mask¥Õ¥¡¥¤¥ë¤ÎÀßÄê¤ò¾å½ñ¤­¤·¤¿¤¤¾ì¹ç¤Ë»ÈÍÑ¤µ¤ì¤ë(¾ÜºÙ¤Ï¸å½Ò)¡£
 KEYWORDS¤Ë¤è¤Ã¤Æ¥Þ¥¹¥¯¤µ¤ì¤¿¥Ñ¥Ã¥±¡¼¥¸¤Ï¾å½ñ¤­¤·¤Ê¤¤¤³¤È¤ËÃí°Õ¡£
 .TP
 .BR package.keywords
 ¥Ñ¥Ã¥±¡¼¥¸¤´¤È¤ÎKEYWORD¡£ÄÌ¾ï¤Î°ÂÄê¤·¤¿¥Þ¥·¥ó¤Ë¤Þ¤ÀÈó°ÂÄêÈÇ¤Î¥Ñ¥Ã¥±¡¼¥¸¤òº®ºß¤µ¤»¤¿¤¤¾ì¹ç¡¢¤¢¤ë¤¤¤Ï¤½¤ÎµÕ¤Î¾ì¹ç¤Ë»ÈÍÑ¤µ¤ì¤ë¡£¤³¤Î¥Õ¥¡¥¤¥ë¤Ï¡¢1¥Ñ¥Ã¥±¡¼¥¸¤ËÂÐ¤¹¤ëACCEPT_KEYWORDS¤òÄÉ²Ã¤¹¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- 1¹Ô¤Ë1¤Ä¤ÎDEPEND¥¢¥È¥à¤È¡¢¤½¤ì¤ËÂ³¤±¤ÆACCEPT_KEYWORDS¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 # ¾ï¤ËÈó°ÂÄêÈÇ¤Îlibgd¤ò»ÈÍÑ¤·¤¿¤¤¾ì¹ç
-.br
 media-libs/libgd ~x86
-.br
 # °ÂÄêÈÇ¤Împlayer¤Î¤ß¤ò»ÈÍÑ¤¹¤ë¾ì¹ç
-.br
 media-video/mplayer -~x86
-.br
 # -* ¤Ç¥Þ¥¹¥¯¤µ¤ì¤¿¥Ñ¥Ã¥±¡¼¥¸¤ò»È¤¦
 >=sys-kernel/linux-headers-2.6 -*
+.fi
 .TP
 .BR package.use
 ¥Ñ¥Ã¥±¡¼¥¸¤´¤È¤ÎUSE¥Õ¥é¥°¡£¥í¡¼¥«¥ëUSE¥Õ¥é¥°¤òÄÉÀ×¤·¤¿¤ê¡¢ÆÃÄê¤Î¥Ñ¥Ã¥±¡¼¥¸¤Î¤ß¤Ë
@@ -296,20 +294,18 @@ GTKÍÑ¤Î¥É¥­¥å¥á¥ó¥È¤ÏÍß¤·¤¤¤¬¡¢QT¤Î¥É¥­¥å¥á¥ó¥È¤Ï¤¤¤é¤Ê¤¤¤È¤¤¤Ã¤¿¾ì¹ç¤Ë¡¢
 ¶Ë¤á¤Æ´ÊÃ±¤Ë¤½¤ì¤ò¼Â¸½¤¹¤ë¤³¤È¤¬²ÄÇ½¤Ç¤¢¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
-\- 1¹Ô¤Ë1¤Ä¤ÎDEPEND¥¢¥È¥à¤È¡¢¤½¤ì¤ËÂ³¤±¤ÆUSE¥Õ¥é¥°¤Î¥ê¥¹¥È¤òµ­½Ò¤¹¤ë¡£
+\- 1¹Ô¤Ë1¤Ä¤ÎDEPEND¥¢¥È¥à¤È¡¢¤½¤ì¤ËÂ³¤±¤Æ¶õÇò¶èÀÚ¤ê¤ÇUSE¥Õ¥é¥°¤Î¥ê¥¹¥È¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 # GTK 2.x ¤Î¥É¥­¥å¥á¥ó¥È¤òÍ­¸ú¤Ë¤¹¤ë¾ì¹ç
-.br
 =x11-libs/gtk+-2* doc
-.br
 # QT¤Îmysql¥µ¥Ý¡¼¥È¤òÌµ¸ú¤Ë¤¹¤ë¾ì¹ç
-.br
 x11-libs/qt -mysql
+.fi
 .TP
 .BR mirrors
 Portage¤Ï¡¢mirror:// ¤Î·Á¼°¤ÎURL¤ËÁø¶ø¤·¤¿¾ì¹ç¡¢¼ÂºÝ¤Î¥Û¥¹¥È¤ò¤³¤Î¥Õ¥¡¥¤¥ë¤«¤é
@@ -320,24 +316,22 @@ GENTOO_MIRRORS¤è¤êÁ°¤ËÄ´¤Ù¤é¤ì¡¢¥Ñ¥Ã¥±¡¼¥¸¤ËRESTRICT="nomirror"¤¬»ØÄê¤·¤Æ¤¢¤Ã¤Æ¤
 »ÈÍÑ¤µ¤ì¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- ¥ß¥é¡¼¤Î¼ïÎà¤È¡¢¤½¤ì¤ËÂ³¤±¤Æ¥Û¥¹¥È¤Î¥ê¥¹¥È¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 # ¼ÒÆâ¤«¤é¤Î¤ß»ÈÍÑ¤µ¤ì¤ë¡¢¥í¡¼¥«¥ë¤Î¥×¥é¥¤¥Ù¡¼¥È¤Ê¥ß¥é¡¼¤Î¾ì¹ç
-.br
 local ftp://192.168.0.3/mirrors/gentoo http://192.168.0.4/distfiles
 
 # ÆüËÜºß½»¤Ê¤Î¤Ç¡¢ÆüËÜ¤Î¥ß¥é¡¼¤òºÇ½é¤Ë»ÈÍÑ¤·¤¿¤¤¾ì¹ç
-.br
-sourceforge http://keihanna.dl.sourceforge.net/
+sourceforge http://keihanna.dl.sourceforge.net/sourceforge
 
 # ÂæÏÑºß½»¤Ê¤Î¤Ç¡¢GNU¤Î¥í¡¼¥«¥ë¥ß¥é¡¼¤òºÇ½é¤Ë»ÈÍÑ¤·¤¿¤¤¾ì¹ç
-.br
 gnu ftp://ftp.nctu.edu.tw/UNIX/gnu/
+.fi
 .TP
 .BR categories
 /usr/portage¡¢PORTDIR_OVERLAY¡¢PKGDIR¤Ç»ÈÍÑ¤µ¤ì¤ë¡¢Í­¸ú¤Ê¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È
@@ -345,18 +339,15 @@ gnu ftp://ftp.nctu.edu.tw/UNIX/gnu/
 ºîÀ®¤¹¤ë¤³¤È¤¬²ÄÇ½¤Ë¤Ê¤ë¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- 1¹Ô¤Ë1¤Ä¤Î¥«¥Æ¥´¥ê¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 app-hackers
-.br
 media-other
-.TP
-.BR use.mask
-\fB/etc/make.profile/\fR¤Ë¤¢¤ë\fBuse.mask\fR¤ÈÆ±ÍÍ¤Ê¤â¤Î¡£
-¾ÜºÙ¤Ï¡¢Á°½Ò¤·¤¿ÉôÊ¬¤ò»²¾È¤¹¤ë¤³¤È¡£
+.fi
 .RE
 .TP
 .BR /usr/portage/profiles/
@@ -368,34 +359,33 @@ media-other
 ¤¹¤Ù¤Æ¤ÎÍ­¸ú¤ÊKEYWORD¤Î¥ê¥¹¥È¡£¤³¤ì¤Ë¤Ï½¤¾þ»Ò¤Ï´Þ¤Þ¤ì¤Ê¤¤¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- 1¹Ô¤Ë1¤Ä¤ÎKEYWORD¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 x86
-.br
 ppc
-.br
 sparc
+.fi
 .TP
 .BR categories
 /usr/portage¡¢PORTDIR_OVERLAY¡¢PKGDIR¤Ç»ÈÍÑ¤µ¤ì¤ë¡¢Í­¸ú¤Ê¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È
 (\fBmake.conf\fR(5)¤ò»²¾È¤Î¤³¤È)¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- 1¹Ô¤Ë1¤Ä¤Î¥«¥Æ¥´¥ê¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 app-admin
-.br
 dev-lang
-.br
 games-strategy
-.br
 sys-kernel
+.fi
 .TP
 .BR package.mask
 ¤É¤Î¥×¥í¥Õ¥¡¥¤¥ë¤Ë¤ª¤¤¤Æ¤â¥¤¥ó¥¹¥È¡¼¥ë¤µ¤ì¤ë¤Ù¤­¤Ç¤Ê¤¤¥Ñ¥Ã¥±¡¼¥¸¤ËÂÐ¤¹¤ë
@@ -406,102 +396,82 @@ DEPEND¥¢¥È¥à¤Î¥ê¥¹¥È¤¬µ­½Ò¤µ¤ì¤Æ¤¤¤ë¡£ºÇ¿·¤ÎKDE¤Î¥Ù¡¼¥¿ÈÇ¤òPortage¤Ë
 ¥Þ¥¹¥¯¤µ¤ì¤Æ¤¤¤ë¤Î¤«¡¢¤Þ¤¿¡¢Ã¯¤¬¥Þ¥¹¥¯¤·¤¿¤Î¤«¤ò¥³¥á¥ó¥È¤È¤·¤ÆÉ¬¤ºµ­½Ò¤¹¤ë¤³¤È¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \-  1¹Ô¤Ë1¤Ä¤ÎDEPEND¥¢¥È¥à¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 # ¥»¥­¥å¥ê¥Æ¥£ÂÐºö
-.br
 <sys-libs/zlib-1.1.4
-.br
 # <caleb@gentoo.org> (10 Sep 2003)
-.br
 # ¿·¤·¤¤KDE¤Î¥Ù¡¼¥¿ÈÇ
-.br
 =kde-base/kde-3.2.0_beta1
-.br
 =kde-base/kdeaccessibility-3.2.0_beta1
+.fi
 .TP
 .BR thirdpartymirrors
 mirror:// ·Á¼°¤ÎURL¤È¡¢¼ÂºÝ¤Î¥ß¥é¡¼¥ê¥¹¥È¤ÈÂÐ±þ¤Å¤±¤òÀ©¸æ¤¹¤ë¡£
 ¤³¤¦¤¹¤ë¤³¤È¤Ç¡¢1¤Ä¤Î¥µ¡¼¥Ð¡¼¤Ë²áÉé²Ù¤¬¤«¤«¤ë¤³¤È¤òËÉ¤°¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- ¥ß¥é¡¼¼ïÊÌ¤È¡¢¤½¤ì¤ËÂ³¤±¤Æ¥Û¥¹¥È¤Î¥ê¥¹¥È¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 sourceforge http://aleron.dl.sourceforge.net/sourceforge http://unc.dl.sourceforge.net/sourceforge
 
 gentoo http://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/ ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo/distfiles
 
 kernel http://www.kernel.org/pub http://www.us.kernel.org/pub
+.fi
 .TP
 .BR use.desc
 Á´¤Æ¤Î¥°¥í¡¼¥Ð¥ë¤ÊUSE¥Õ¥é¥°¤Ï¡¢¤½¤ì¤¬²¿¤ò¤¹¤ë¤â¤Î¤Ê¤Î¤«¤È¤¤¤¦ÀâÌÀ¤È¶¦¤Ë¡¢
 ¤³¤Î¥Õ¥¡¥¤¥ë¤Ëµ­½Ò¤µ¤ì¤Æ¤¤¤Ê¤±¤ì¤Ð¤Ê¤é¤Ê¤¤¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- USE¥Õ¥é¥° \- ´ÊÃ±¤ÊÀâÌÀ
+.fi
 
 .I Îã:
-.br
+.nf
 3dfx - Adds support for 3dfx video cards
-.br
 acl - Adds support for Access Control Lists
-.br
 doc - Adds extra documentation
+.fi
 .TP
 .BR use.local.desc
 Á´¤Æ¤Î¥í¡¼¥«¥ë¤ÊUSE¥Õ¥é¥°¤Ï¡¢¥Ñ¥Ã¥±¡¼¥¸Ì¾¤È¤½¤ÎÀâÌÀ¤È¶¦¤Ë¡¢
 ¤³¤³¤Ëµ­½Ò¤µ¤ì¤Æ¤¤¤Ê¤±¤ì¤Ð¤Ê¤é¤Ê¤¤¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- # ¤«¤é»Ï¤Þ¤ë¹Ô¤Ï¥³¥á¥ó¥È¤Ç¤¢¤ë¡£
-.br
 \- ¥Ñ¥Ã¥±¡¼¥¸:USE¥Õ¥é¥° \- ÀâÌÀ
+.fi
 
 .I Îã:
-.br
+.nf
 app-editors/nano:justify - Toggle the justify option
-.br
 dev-games/clanlib:clanJavaScript - Enables javascript support
-.br
 dev-libs/DirectFB:fusion - add Multi Application support
-.br
 games-emulation/xmess:net - Add network support
+.fi
+.TP
+.BR use.mask
+\fB/etc/make.profile/\fR¤Ë¤¢¤ë\fBuse.mask\fR¤Î¤è¤¦¤Ê¤â¤Î¡£
+¾ÜºÙ¤Ï¾åµ­»²¾È¡£
 .RE
 .TP
-.BR /var/cache/edb/
+.BR /var/lib/portage/
 .RS
-.TP
-.BR virtuals
-virtual¤È¤·¤ÆÄó¶¡¤µ¤ì¤Æ¤¤¤ë¥Ñ¥Ã¥±¡¼¥¸¤òemerge¤¹¤ë¤´¤È¤Ë¡¢
-¤½¤ÎvirtualÌ¾¤È¥Ñ¥Ã¥±¡¼¥¸¤È¤ÎÂÐ±þ¤Å¤±¤¬¡¢¤³¤³¤Ëµ­Ï¿¤µ¤ì¤ë¡£
-
-.I ½ñ¼°:
-.br
-\- virtualÌ¾¤È¡¢¤½¤ì¤ËÂ³¤±¤Ævirtual¤òÄó¶¡¤¹¤ëDEPEND¥Ù¡¼¥¹¥¢¥È¥à¤òµ­½Ò¤¹¤ë¡£
-
-.I Îã:
-.br
-virtual/inetd sys-apps/xinetd
-.br
-virtual/opengl media-video/nvidia-glx x11-base/xfree
-.br
-virtual/mta net-mail/qmail
-.br
-virtual/editor app-editors/vim app-editors/nano
 .TP
 .BR world
 ¥Ñ¥Ã¥±¡¼¥¸¤òemarge¤¹¤ë»þ¤Ï¤¤¤Ä¤Ç¤â¡¢»ØÄê¤·¤¿¥Ñ¥Ã¥±¡¼¥¸Ì¾¤Ï¤³¤³¤Ëµ­Ï¿¤µ¤ì¤ë¡£
@@ -513,23 +483,23 @@ virtual/editor app-editors/vim app-editors/nano
 µ­Ï¿¤µ¤ì¤Ê¤¤¡£¾ÜºÙ¤Ï¡¢\fBemerge\fR(1)¤ò»²¾È¤Î¤³¤È¡£
 
 .I ½ñ¼°:
-.br
+.nf
 \- 1¹Ô¤Ë1¤Ä¤ÎDEPEND¥Ù¡¼¥¹¥¢¥È¥à¤òµ­½Ò¤¹¤ë¡£
+.fi
 
 .I Îã:
-.br
+.nf
 games-misc/fortune-mod-gentoo-dev
-.br
 dev-libs/uclibc
-.br
 app-cdr/cdemu
+.fi
 .RE
 .SH ºî¼Ô
+.nf
 Marius Mauch <genone@gentoo.org>
-.br
 Mike Frysinger <vapier@gentoo.org>
-.br
 Drake Wyrm <wyrm@haell.com>
+.fi
 .SH "¥Ð¥°¤ÎÊó¹ð"
 ¥Ð¥°¤Ï¡¢http://bugs.gentoo.org/ ¤«¤éÊó¹ð¤¹¤ë¤³¤È¡£
 .SH "»²¾È"
@@ -538,4 +508,4 @@ Drake Wyrm <wyrm@haell.com>
 .BR ebuild (5),
 .BR make.conf (5)
 .SH "CVS ¥Ø¥Ã¥À"
-¸¶Ê¸: /home/cvsroot/gentoo-src/portage/man/portage.5,v 1.6 2004/05/11 05:51:46 vapier
+¸¶Ê¸: portage.5,v 1.15

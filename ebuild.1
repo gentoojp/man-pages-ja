@@ -1,10 +1,11 @@
-.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Foundation
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.48
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\" Updated on 29 Sep 2004 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
-.TH "EBUILD" "1" "Nov 2002" "Portage 2.0.48" "Portage"
+.TH "EBUILD" "1" "Nov 2002" "Portage 2.0.51" "Portage"
 .SH "名前"
 ebuild \- Portage システムへの低レベルインタフェース、ebuild プログラム
 .SH "書式"
@@ -25,13 +26,13 @@ ebuild プログラムは Portage システムへの直接のインタフェースである。
 正しい ebuild スクリプトでなければならない。詳しい情報は
 \fBebuild\fR(5) を参照。
 .SH "コマンド"
-.TP 
+.TP
 .BR help
 パッケージ固有の情報とともにこのマニュアルページの簡略版を表示する。
-.TP 
+.TP
 .BR setup
 パッケージ固有のセットアップとさまざまなシステムチェックを行なう。
-.TP 
+.TP
 .BR clean
 その特定の ebuild ファイルのために作られた Portage の一時ビルド
 ディレクトリを消去する。通常一時ビルドディレクトリは展開された
@@ -48,7 +49,7 @@ ebuild プログラムは Portage システムへの直接のインタフェースである。
 インストール後にソースを使う必要がないのであれば、noclean を指定する
 ことはお奨めしない。一方、手動で \fIrm \-rf /var/tmp/portage\fR として
 一時ビルドディレクトリにあるファイル全てを消すという方法もある。
-.TP 
+.TP
 .BR fetch
 SRC_URI で指定されているソースが全て DISTDIR (詳細は \fBmake.conf\fR(5)
 参照)にあって使える状態になっているか、正しい md5 チェックサムであるか
@@ -61,13 +62,13 @@ SRC_URI で指定されているソースが全て DISTDIR (詳細は \fBmake.conf\fR(5)
 ダイジェストが files/digest\-[パッケージ名]\-[バージョン\-リビジョン] に
 記録されている値と一致しなかった場合、警告が出力され、ebuild はエラー
 コード 1 で終了する。
-.TP 
+.TP
 .BR digest
 /usr/portage/[カテゴリー]/[パッケージ名]/files/ にパッケージのダイジェスト
 ファイルを作成する。このダイジェストファイルには SRC_URI に書いてあるファイル
 全ての md5sum が列挙されている。取得したパッケージのソースファイルが
 壊れている、もしくは変な場合には、md5sum がそれを検出する。
-.TP 
+.TP
 .BR unpack
 ebuild ファイルの \fIsrc_unpack()\fR 関数を実行し、
 \fIビルドディレクトリ\fR (BUILD_PREFIX) のサブディレクトリへと
@@ -84,17 +85,21 @@ ${S} 変数(ソースディレクトリ) が展開されたソースのあるディレクトリを
 と定義されているので、あまり変更する必要はない。 src_unpack() 関数は
 そのままコンパイルに取りかかれるようソースに適切なパッチを当てる
 関数でもある。
-.TP 
+.TP
 .BR compile
 ebuild ファイルの中で指定された \fIsrc_compile()\fR 関数を実行し、
 展開したソースをコンパイルする。src_compile() の開始時には
 カレントディレクトリが ${S} に設定される。 src_compile() の
 終了時にはソースは完全にコンパイルされていなければならない。
-.TP 
+.TP
+.BR test
+全て正しくビルドされたかどうか検証するため、
+パッケージ固有のテストケースを実行する。
+.TP
 .BR preinst
 稼働中のファイルシステムにパッケージをインストールする前に実行
 する必要があるパッケージ固有のアクションを実行する。
-.TP 
+.TP
 .BR install
 \fIsrc_install()\fR 関数を実行し、パッケージを一時 \fIインストール
 ディレクトリ\fR にインストールする。完了すると、
@@ -102,12 +107,12 @@ ebuild ファイルの中で指定された \fIsrc_compile()\fR 関数を実行し、
 (${BUILD_PREFIX}/[パッケージ名]\-[バージョン\-リビジョン]/image)
 にはローカルファイルシステムにインストールされるべきファイルか
 バイナリパッケージに含まれるべきファイル全てがインストールされる。
-.TP 
+.TP
 .BR postinst
 稼働中のファイルシステムにパッケージをインストールしたあと実行
 する必要があるパッケージ固有のアクションを実行する。有益なメッセージが
 表示されることが多い。
-.TP 
+.TP
 .BR qmerge
 この関数は \fIインストールディレクトリ\fR の全てのファイルを稼働中の
 ファイルシステムにインストールする。そのプロセスは、まず(指定されて
@@ -117,14 +122,14 @@ ebuild ファイルの中で指定された \fIsrc_compile()\fR 関数を実行し、
 \fI/var/db/pkg/${CATEOGRY}/${PN}\-[バージョン\-リビジョン]/CONTENTS\fR
 に記録される。全ファイルがインストールされると、\fIpkg_postinst()\fR
 関数が(指定されていれば)実行される。
-.TP 
+.TP
 .BR merge
 通常、ebuild をインストールするには、\fIfetch\fR、\fIunpack\fR、
 \fIcompile\fR、\fIinstall\fR そして \fIqmerge\fR する必要がある。
 単に ebuild をインストールしたいだけならこのコマンドを使ってもよい。
 このコマンドはこれら5つのステップ全てを実行し、ある特定のステップが
 失敗したらそこで止まってくれる。
-.TP 
+.TP
 .BR unmerge
 この関数は(指定されていれば)まず \fIpkg_prerm\fR 関数を実行する。
 次に現在のファイルシステムから、パッケージの内容が書かれているファイル
@@ -134,27 +139,27 @@ ebuild ファイルの中で指定された \fIsrc_compile()\fR 関数を実行し、
 パッケージの新しいバージョンを先にインストールし、それから古い
 バージョンを unmerge するのは安全である。実のところ、そうするのが
 推奨パッケージアップグレード方法である。
-.TP 
+.TP
 .BR prerm
 ファイルシステムからパッケージが削除される前に実行されなければならない
 パッケージ固有のアクションを実行する。\fIunmerge\fR も参照。
-.TP 
+.TP
 .BR postrm
 ファイルシステムからパッケージが削除されたあとに実行されなければならない
 パッケージ固有のアクションを実行する。\fIunmerge\fR も参照。
-.TP 
+.TP
 .BR config
 emerge プロセスが完了したあとに実行が必要なパッケージ固有の設定を実行する。
 設定ファイルのセットアップや、それと同じようにユーザが実行しておきたい
 セットアップなどが多い。
-.TP 
+.TP
 .BR package
 \fImerge\fR コマンドとよく似ているが、ソースを取得、展開、コンパイル、
 そしてインストールしたあと、${PKGDIR}/All (${PKGDIR} はデフォルトでは
 /usr/portage/packages) に .tbz2 バイナリパッケージが作成される。
 ${PKGDIR}/${CATEGORY} には ${PKGDIR}/All にあるパッケージ本体への
 シンボリックリンクが作成される。
-.TP 
+.TP
 .BR rpm
 一時 \fIインストールディレクトリ\fR にあるファイルから RedHat RPM 
 パッケージをビルドする。現時点では ebuild の依存情報は RPM には
@@ -165,12 +170,12 @@ ${PKGDIR}/${CATEGORY} には ${PKGDIR}/All にあるパッケージ本体への
 .BR emerge (1),
 .BR ebuild (5),
 .BR make.conf (5)
-.TP 
+.TP
 \fI/usr/sbin/ebuild.sh\fR スクリプト
-.TP 
+.TP
 \fI/usr/lib/portage/bin\fR にある補助アプリケーション
 .SH "ファイル"
-.TP 
+.TP
 \fB/etc/make.conf\fR 
 ビルドプロセスのための変数が書かれており、make.globals で設定された
 変数を上書きする。
@@ -183,4 +188,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br 
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/ebuild.1,v 1.14 2003/07/07 21:12:05 vapier
+原文: ebuild.1,v 1.16

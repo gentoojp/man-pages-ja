@@ -1,4 +1,4 @@
-.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Foundation
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.48
@@ -7,7 +7,7 @@
 .\" Updated on 15 Nov 2003
 .\" Updated on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
 .\"
-.TH "FLAG-O-MATIC" "5" "Jun 2003" "Portage 2.0.48" "Portage"
+.TH "FLAG-O-MATIC.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
 .SH "名前"
 flag\-o\-matic \- CFLAGS/CXXFLAGS を簡単かつ安全に操作
 .SH "説明"
@@ -22,12 +22,12 @@ flag\-o\-matic \- CFLAGS/CXXFLAGS を簡単かつ安全に操作
 CFLAGS/CXXFLAGS から特定の\fIフラグ\fRを取り除く。
 この関数はフラグに完全マッチする。
 .TP
-.BR "replace-flags " "\fI<旧フラグ>\fR \fI<新フラグ>\fR"
+.BR "replace-flags " "\fI<orig-flag>\fR \fI<new-flag\fR"
 旧フラグを全部新フラグで置き換える。
 .TP
-.BR "replace-cpu-flags " "\fI<新CPU>\fR \fI<旧CPU>\fR"
-\fI旧CPU\fRを含んだ -march と -mcpu フラグの全てを\fI新CPU\fRを含んだ
--march と -mcpu フラグで置き換える。
+.BR "replace-cpu-flags " "\fI<old cpus>\fR \fI<new cpu>\fR"
+\fI旧CPU\fRを含んだ -march と -mcpu と -mtune フラグの全てを
+\fI新CPU\fRを含んだ -march と -mcpu と -mtune フラグで置き換える。
 .TP
 .BR "get-flag " "\fI<フラグ>\fR"
 \fIフラグ\fRが - で始まっていれば、フラグ全体がエコーされる。
@@ -77,4 +77,4 @@ unstable プロフィールのユーザは上のフラグに加えて下記のフラグを
 .SH "著者"
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/flag-o-matic.eclass.5,v 1.2 2004/02/21 07:43:59 vapier
+原文: flag-o-matic.eclass.5,v 1.5
