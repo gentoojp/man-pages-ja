@@ -1,8 +1,10 @@
-.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Technologies, Inc.
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.47
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\"
+.\" Updated to 1.4 on 18 Jun 2004
 .\"
 .TH "ENV-UPDATE" "1" "Feb 2003" "Portage 2.0.47" "Portage"
 .SH 名前
@@ -10,14 +12,16 @@ env-update \- 環境設定を自動で更新する
 .SH 書式
 .B env-update
 .SH 説明
-.I env-update
+.B env-update
 \fI/etc/env.d\fR にあるファイルを読み、自動で \fI/etc/profile.env\fR
 と \fI/etc/ld.so.conf\fR を生成する。そして \fBldconfig\fR(8)
-を実行し、\fI/etc/ld.so.cache\fR を更新する。 \fIenv-update\fR は
+を実行し、\fI/etc/ld.so.cache\fR を更新する。 \fBenv-update\fR は
 各パッケージがインストール/アンインストールされたあと \fBemerge\fR(1)
 によって自動で実行される。また、\fI/etc/env.d\fR に変更を加えた場合、
 すぐに変更を反映するためには自分で \fIenv-update\fR を実行しなければ
-ならない。
+ならない。こうしても新しいプロセスにしか影響しないことに注意すること。
+動作中のシェルにも変更を反映させるためには、まず\fIsource /etc/profile\fR
+を実行しなければならないだろう。
 .SH オプション 
 .TP
 なし。
@@ -26,6 +30,7 @@ Daniel Robbins <drobbins@gentoo.org>
 .SH "バグ報告"
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
 .SH "関連項目"
-.BR emerge (1)
+.BR emerge (1),
+.BR ldconfig (8)
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/env-update.1,v 1.3 2003/02/17 01:55:40 carpaski
+原文: /home/cvsroot/gentoo-src/portage/man/env-update.1,v 1.4 2004/02/28 05:24:24 vapier
