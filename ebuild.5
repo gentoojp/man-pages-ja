@@ -110,10 +110,10 @@ src_install() {
 .B PVR
 この変数にはリビジョン番号つきのバージョン番号が入っている。
 .br
-\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PV\fR=='\fI4.2.1-r2\fR'
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PVR\fR=='\fI4.2.1-r2\fR'
 .TP
 .B PF
-この変数には完全なパッケージ名 \fI[PN]\-[PV]-r[PR]\fR が入っている。
+この変数には完全なパッケージ名 \fI[PN]\-[PV]-[PR]\fR が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PF\fR=='\fIxfree-4.2.1-r2\fR'
 .TP
@@ -290,7 +290,7 @@ Portage ツリーにあるありふれた例をいくつか挙げると:
 Portage はこの依存関係を扱うために選択肢をいくつか用意している。
 後述する構文を使う場合、ここの事例はそれが現れたスコープで1アトムとして
 扱われることに注意。つまり、個々のアトムは条件節を使うことによって複数の
-アトムを含むことができるし、無限の深さまで入れ子にすることができる。
+アトムを含むこともできるし、無限の深さまで入れ子にすることもできる。
 .RS
 .TP
 .B usevar? ( DEPEND アトム )
@@ -902,4 +902,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.54 2003/10/14 17:29:49 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.57 2004/01/13 06:27:31 vapier
