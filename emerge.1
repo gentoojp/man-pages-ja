@@ -3,6 +3,7 @@
 .\"
 .\" Origial version: 2.0.48
 .\" Translated on 15 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\" Updated to 1.43 on 15 Nov 2003
 .\"
 .TH "EMERGE" "1" "Jun 2003" "Portage 2.0.48" "Portage"
 .SH "名前"
@@ -10,10 +11,10 @@ emerge \- Portage システムへのコマンドラインインタフェース
 .SH "書式"
 .TP
 .BR emerge
-[\fIオプション\fR] [\fIアクション\fR] [\fIebuild\fR | \fItbz2ファイル\fR | \fIクラス\fR | \fI依存関係\fR] ...
+[\fIoptions\fR] [\fIaction\fR] [\fIebuild\fR | \fItbz2file\fR | \fIclass\fR | \fIdependency\fR] ...
 .TP
 .BR emerge
-[\fIオプション\fR] [\fIアクション\fR] \fBebuild ファイル\fR
+[\fIoptions\fR] [\fIaction\fR] \fBebuildfile\fR
 .TP
 .BR emerge
 \fBsync\fR | \fBrsync\fR
@@ -54,7 +55,7 @@ emerge \- Portage システムへのコマンドラインインタフェース
 のような実際のファイル名を使うこともできる。
 .TP
 .BR tbz2 ファイル
-A \fItbz2 ファイル\fR は \fBebuild <パッケージ名>\-<バージョン番号>.ebuild
+\fItbz2 ファイル\fR は \fBebuild <パッケージ名>\-<バージョン番号>.ebuild
 package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 もしくは \fBquickpkg /var/db/pkg/<カテゴリー>/<パッケージ名>\fR
 で作成された正しい .tbz2 ファイルでなければならない。
@@ -202,9 +203,8 @@ emerge の際パッケージを実際にインストールすることに加え、
 .BR "--buildpkgonly " (\fB\-B\fR)
 emerge の際パッケージを実際にインストールすることに加え、
 処理される全 ebuild についてバイナリパッケージもビルドする。
-このオプションには、目的のパッケージをビルドするに当たって、
-そのシステムに存在しないものは使えないので、
-解決されていない依存関係があってはいけないという制限がある。
+このオプションには、ビルド時の全依存関係が事前にシステムに
+emerge されていなければならないという落し穴がある。
 .TP
 .BR "--changelog " (\fB\-l\fR)
 \fB--pretend\fR アクションと組み合わせて使う。
@@ -329,7 +329,7 @@ emerge の際依存関係を満たすために CD からバイナリパッケージを「引っ張って」
 現在のところ、このフラグは emerge の際 GNU info にエラーがあれば
 出力させる。
 .TP
-.BR "--version"
+.BR "--version " (\fB\-V\fR)
 \fBemerge\fR のバージョン番号を表示する。
 他のオプションと組み合わせて使うことはできない。
 このアクションの名前とフォーマットは慣習的なものである。
@@ -352,6 +352,11 @@ qstat は新規インストールパッケージであり、初めてインストールされる。
 sed 4.0.5 はすでにインストールされているが、
 emerge を実行したら Portage は指定されたパッケージを再インストールする
 (この場合は sed である)。
+.TP
+.B [ebuild    F  ] media-video/realplayer-8-r6
+realplayer パッケージは手動でソースをダウンロードする必要がある。
+パッケージを emerge しようとするとき、ソースが見つからなければ、
+Portage は停止し必要なファイルをダウンロードするための手順を提示する。
 .TP
 .B [ebuild     U ] net-fs/samba-2.2.8_pre1 [2.2.7a]
 Samba 2.2.7a はすでに emerge されており、
@@ -493,7 +498,8 @@ xfree もアップグレード候補として対象に入れる。
 \fBこのファイルを編集してはならない\fR。
 .TP
 \fB/etc/make.profile/use.defaults\fR
-デフォルトで有効になる USE フラグが書かれている。
+パッケージをインストールするとき、それぞれについてデフォルトで有効になる
+USE フラグが書かれている。
 \fBこのファイルを編集してはならない\fR。
 .TP
 \fB/usr/portage/profiles/use.desc\fR 
@@ -533,4 +539,4 @@ Phil Bordelon <sunflare@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: emerge.1,v 1.39 2003/07/09 19:54:36 vapier
+原文: emerge.1,v 1.43 2003/09/13 18:49:44 vapier
