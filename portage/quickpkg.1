@@ -1,7 +1,6 @@
-.\" Copyright 1999-2004 Gentoo Foundation
-.\" Distributed under the terms of the GNU General Public License v2
 .\"
-.\" Origial version: 2.0.49
+.\" Japanese Version Copyright (c) 2003 Mamoru KOMACHI
+.\"     all rights reserved
 .\" Translated on 15 Nov 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "QUICKPKG" "1" "Jul 2003" "Portage 2.0.51" "Portage"
@@ -36,7 +35,7 @@ quickpkg \- Portage パッケージ作成
 の形式である。このアトムとは、なにかを emerge したいときに
 \fBemerge\fR に与える形式と同じ形式である。完全な定義は
 \fBebuild\fR(5) を参照。
-.SH "例"
+.SH 例
 .B quickpkg
 /var/db/pkg/dev-python/pyogg-1.1
 .br
@@ -48,12 +47,12 @@ planeshift
 .br
 .B quickpkg
 =net-www/apache-2*
-.SH "バグ報告"
+.SH バグ報告
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
-.SH "関連項目"
+.SH 関連項目
 .BR ebuild (5),
 .BR make.conf (5)
-.SH "ファイル"
+.SH ファイル
 .TP
 .B /etc/make.conf
 \fBPKGDIR\fR 変数はここで定義されている。
@@ -61,5 +60,5 @@ planeshift
 Terry Chan (原作者)
 .br
 Mike Frysinger <vapier@gentoo.org> (改良版作者)
-.SH "CVS ヘッダ"
+.SH CVS ヘッダ
 原文: quickpkg.1,v 1.3

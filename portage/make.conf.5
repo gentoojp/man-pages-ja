@@ -1,20 +1,14 @@
-.\" Copyright 1999-2004 Gentoo Foundation
-.\" Distributed under the terms of the GNU General Public License v2
 .\"
-.\" Origial version: 2.0.48
+.\" Japanese Version Copyright (c) 2003-2004 Mamoru KOMACHI
+.\"     all rights reserved
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
-.\" Updated to 1.32 on 15 Nov 2003
-.\" Updated to 1.35 on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
-.\" Updated to 1.43 on 29 Sep 2004
-.\" Updated to 1.45 on 15 Nov 2004
-.\"
 .TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.51" "Portage"
-.SH "名前"
+.SH 名前
 make.conf \- Portage のカスタム設定
-.SH "書式"
+.SH 書式
 .B /etc/make.conf
-.SH "説明"
+.SH 説明
 このファイルには Portage が使うさまざまな変数が書かれている。
 Portage は全ての設定項目に対し、現在定義されている環境変数を
 調べる。環境変数が見つからない場合、Portage は /etc/make.conf
@@ -31,7 +25,7 @@ make.globals、make.conf そして環境設定へと伝わっていく。
 これらの変数をクリアするには
 export USE="\-*"
 のようにして全部消去する必要がある。
-.SH "変数"
+.SH 変数
 .TP
 \fBACCEPT_KEYWORDS\fR = \fI[space delimited list of KEYWORDS]\fR
 「stable」と判断されていない ebuild のテストを有効にする。
@@ -365,16 +359,16 @@ make.conf (conf) が自動生成された値を上書きし、
 .br
 デフォルトは "env:pkg:conf:auto:defaults"。
 
-.SH "バグ報告"
+.SH バグ報告
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
-.SH "関連項目"
+.SH 関連項目
 .BR ebuild (1),
 .BR ebuild (5)
 .TP
 \fI/usr/sbin/ebuild.sh\fR スクリプト。
 .TP
 \fI/usr/lib/portage/bin\fR にある補助プログラム。
-.SH "ファイル"
+.SH ファイル
 .TP
 \fB/etc/make.conf\fR 
 ビルドプロセスのための変数が書かれており、make.defaults の変数を上書きする。
@@ -389,11 +383,11 @@ make.conf (conf) が自動生成された値を上書きし、
 .TP
 \fB/usr/portage/profiles/use.local.desc\fR
 全ローカルUSE変数のリストが書かれている。
-.SH "著者"
+.SH 著者
 Daniel Robbins <drobbins@gentoo.org>
 .br
 Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS ヘッダ"
+.SH CVS ヘッダ
 原文: make.conf.5,v 1.45
