@@ -1,0 +1,801 @@
+.TH "EBUILD" "5" "Feb 2003" "Portage 2.0.47" "portage"
+.SH "名前"
+ebuild \- ebuild スクリプトの内部フォーマット・変数・関数
+.SH "説明"
+.BR ebuild (1)
+プログラムは ebuild スクリプトを1つ引数に取る。
+このスクリプトには変数とコマンドが書かれており、
+オリジナルソースから特定のソフトウェアパッケージを
+ダウンロード、展開、パッチ、コンパイル、インストール
+そしてマージする手順を指定している。
+これらの手順に加え、必要であれば ebuild スクリプトにインストール前後/
+アンインストール前後のコマンドを書くこともできる。
+.SH "サンプル"
+簡単な ebuild のサンプルを示す:
+
+.DS
+# Copyright 1999\-2002 Gentoo Technologies, Inc.
+.br
+# Distributed under the terms of the GNU General Public License v2
+.br
+# $Header:
+$
+.br
+
+DESCRIPTION="Super\-useful stream editor (sed)"
+.br
+SRC_URI="ftp://alpha.gnu.org/pub/gnu/sed/${P}.tar.gz"
+.br
+HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
+.br
+
+KEYWORDS="~x86"
+.br
+SLOT="0"
+.br
+LICENSE="GPL\-2"
+.br
+IUSE=""
+.br
+
+DEPEND="virtual/glibc"
+.br
+RDEPEND="virtual/glibc"
+.br
+
+src_compile() {
+.br
+	econf || die "could not configure"
+.br
+	emake || die "emake failed"
+.br
+}
+.br
+
+src_install() {
+.br
+	into /usr
+.br
+	doinfo doc/sed.info
+.br
+	doman doc/sed.1
+.br
+	into /
+.br
+	dobin sed/sed
+.br
+	dodir /usr/bin
+.br
+	dosym /bin/sed /usr/bin/sed
+.br
+	dodoc COPYING NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE
+.br
+}
+.SH "変数"
+.TP
+.B 使用方法
+- PORTAGE* と PORTDIR* 変数は \fBmake.conf\fR(5) に書かれている。
+.br
+- ebuild で変数に値を割り当てるときは、
+変数名と等号の間に \fBスペースを含めることはできない\fR。
+.TP
+\fBP\fR
+この変数には ebuild のリビジョンを除いたパッケージ名が入っている。
+この変数は \fB絶対に\fR 変更してはいけない。
+.br
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$P\fR=='\fIxfree-4.2.1\fR'
+.TP
+\fBPN\fR
+この変数にはバージョン番号を除いた ebuild スクリプト名が入っている。
+.br
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PN\fR=='\fIxfree\fR'
+.TP
+\fBPV\fR
+この変数にはリビジョンを除いたバージョン番号が入っている。
+.br
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PV\fR=='\fI4.2.1\fR'
+.TP
+\fBPR\fR
+この変数にはリビジョン番号、もしくはリビジョン番号が存在しない場合
+は「r0」が入っている。
+.br
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PR\fR=='\fIr2\fR'
+.TP
+\fBPF\fR
+この変数には完全なパッケージ名 \fI[PN]\-[PV]-r[PR]\fR が入っている。
+.br
+\fBxfree-4.2.1-r2.ebuild\fR --> \fB$PF\fR=='\fIxfree-4.2.1-r2\fR'
+.TP
+\fBA\fR
+この変数にはパッケージに必要なソースファイル名全てが入っている。
+ebuild 内でこの変数を定義してはいけない。この変数は \fISRC_URI\F 
+変数から自動生成される。
+.TP
+\fBWORKDIR\fR = \fI"${PORTAGE_TMPDIR}/portage/${PF}/work"\fR
+この変数にはパッケージビルドルートのパスが入っている。
+この変数を変更しないこと。
+.TP
+\fBFILESDIR\fR = \fI"${PORTDIR}/${CATEGORY}/${PN}/files"\fR
+この変数には portage ツリーの中のパッケージごとの「files」
+サブフォルダへのパスが入っている。
+この変数を変更しないこと。
+.TP
+\fBS\fR = \fI"${WORKDIR}/${P}"\fR
+この変数には一時 \fIビルドディレクトリ\fR のパスが入っている。
+この変数は \fIsrc_compile\fR と \fIsrc_install\fR 関数で使われる。
+いずれの関数も \fIS\fR をカレントディレクトリとして実行される。
+この変数はパッケージの tar アーカイブを展開したときにできる
+ディレクトリ名に合うように変更してもよい。
+.TP
+\fBT\fR = \fI"${PORTAGE_TMPDIR}/portage/${PF}/temp"\fR
+この変数には \fI一時ディレクトリ\fR のパスが入っている。
+この変数は好きなように使ってよい。
+.TP
+\fBD\fR = \fI"${PORTAGE_TMPDIR}/portage/${PF}/image"\fR
+この変数には一時 \fIインストールディレクトリ\fR のパスが入っている。
+補助ツールと補助関数(下で述べる)を使わずに書き込む操作は
+${D} という接頭辞をつけなければならない。
+この変数を変更しないこと。
+.TP
+\fBDESCRIPTION\fR = \fI"A happy little package"\fR
+この変数にはパッケージの簡単な説明が入っていなければならない。
+.TP
+\fBSRC_URI\fR = \fI"http://happy.com/little/${P}.tar.gz"\fR
+この変数には必要なソースファイルへの URI のリストが入っている。
+1つのソースファイルへの複数の URI が入っていてもよい。
+\fIGENTOO_MIRROR\fB\fR にファイルが見つからなかった場合、
+最も速い場所が選ばれる。
+.TP
+\fBHOMEPAGE\fR = \fI"http://happy.com/"\fR
+この変数にはソースのメインサイトと、パッケージについてのもっと詳しい
+情報を得るための URL のリストを入れなければならない。
+.TP
+\fBKEYWORDS\fR = \fI[-~][x86,ppc,sparc,mips,alpha,arm,hppa]\fR
+この変数にはその ebuild が動作する/しないことが分かっている
+アーキテクチャ(arch)の適切なリストを入れなければならない。
+デフォルトでは、特定の arch で ebuild が動作するかどうか
+分からない場合、単にその arch を KEYWORD から除く。
+特定の arch でその ebuild が動作しない場合、
+それをたとえば \-ppc のようにして KEYWORD に含める。
+portage ツリーに取り込むための ebuild が提出されたとき、
+その ebuild が \fB動作することが証明されている \fR 場合、
+証明された arch に対する ~arch セットが KEYWORD
+になければならない。
+(このように KEYWORD がついているパッケージは
+コマンドラインから ACCEPT_KEYWORDS="~arch" と指定したり
+\Bmake.conf\fR(5) の中で設定することによって、
+テストのためにマスクを解除することができる)
+指定するべき arch についての信頼できるリストは
+/usr/potage/profiles/arch.list を見てください。
+.TP
+\fBSLOT\fR
+この変数は共存するために必要なパッケージの SLOT を指定する。
+デフォルトでは、なにをしているのか分かっており、SLOT を
+変更しなければどうにもならない場合を除き、\fBSLOT\fR="0"
+を指定しなければならない。
+この変数は \fI絶対\fR 未定義のままであってはいけない。
+.TP
+\fBLICENSE\fR
+この変数はパッケージが該当するライセンスのスペースで区切られた
+リストを入れなければならない。この変数には /usr/portage/licenses/
+にあるライセンスと \fB_必ず_\fR マッチしなければならない。
+portage にマッチするライセンスが存在しないのだとしても、
+まずそのライセンスを portage に追加しなければならない。
+.TP
+\fBIUSE\fR
+この変数にはそのビルドスクリプトの中で使われている全ての USE フラグの
+リストが入っていなければならない。
+ここの列記してはいけない唯一の USE フラグは arch 関連のフラグである
+(\fBKEYWORDS\fR 参照)。
+.TP
+\fBDEPEND\fR
+この変数にはそのプログラムをコンパイルするために必要な全パッケージ
+のリストが入っていなければならない。
+.RS
+.TP
+.B DEPEND 原子
+DEPEND に含まれるアトム(それぞれのパッケージ名)は単に portage
+がパッケージ同士の関係を計算するときに使う依存性のことである。
+DEPEND 原子がまだ emerge されていない場合、
+最新のバージョンがマッチすることに留意してください。
+.RS
+.TP
+.B アトムベース
+ベースアトムとは完全な カテゴリー/パッケージ名 のことである。
+したがって、以下に挙げるものはベースアトムである:
+
+.I sys-apps/sed
+.br
+.I sys-libs/zlib
+.br
+.I net-misc/dhcp
+.TP
+.B アトムバージョン
+より詳細に特定のバージョンのアトムだけが使用可能であると言うのはいいことだ。
+バージョンは接頭辞(下を参照)と一緒に使わねばならないことに注意。
+よって、バージョン番号は接尾辞としてベースに加えるとよい:
+
+sys-apps/sed\fI-4.0.5\fR
+.br
+sys-libs/zlib\fI-1.1.4-r1\fR
+.br
+net-misc/dhcp\fI-3.0_p2\fR
+.TP
+.B アトム接頭演算子 [> >= = <= =]
+いつも正確なバージョンを特定するのではなく、
+広く使われているバージョンに依存させることができたらと
+思うこともある。
+そのため、普通のブール演算子を用意している:
+
+\fI>\fRmedia-libs/libgd-1.6
+.br
+\fI>=\fRmedia-libs/libgd-1.6
+.br
+\fI=\fRmedia-libs/libgd-1.6
+.br
+\fI<=\fRmedia-libs/libgd-1.6
+.br
+\fI<\fRmedia-libs/libgd-1.6
+.TP
+.B 拡張アトム接頭辞 [!] と接尾辞 [*]
+もっとすごいこともできる。「!」と「*」を使えばパッケージのブロックや、
+ある範囲のバージョンにマッチするパッケージを定義したりすることができる
+のだ。また、これらの拡張された接頭辞/接尾辞は上で定義されているアトム
+クラスとどのようにも組み合わせることができる。
+portage ツリーにあるありふれた例をいくつか挙げると:
+
+\fI!\fRapp-text/dos2unix
+.br
+=dev-libs/glib-2\fI*\fR
+.br
+\fI!\fRnet-fs/samba-2\fI*\fR
+
+\fI!\fR は同時にインストールされるパッケージのブロックを意味する。
+\fI*\fR は指定されたベースがマッチするのであれば、
+パッケージのバージョンは問わないことを意味する。
+したがって、バージョン「2*」と書けば、
+「2.1」「2.2」「2.2.1」などにマッチし、
+「1.0」「3.0」「4.1」などにはマッチしないようにすることができる。
+.RE
+.TP
+.B USE の変動
+プログラムは USE 変数に従って違うものに依存することがあるかもしれない。
+プログラムが依存するパッケージを変えるには、この構文を使う:
+
+DEPEND="media-libs/libsdl
+.br
+	jpeg? ( >=media-libs/jpeg-6b )
+.br
+	tiff? ( >=media-libs/tiff-3.5.5 )
+.br
+	png? ( >=media-libs/libpng-1.2.1 )
+.br
+	X? ( virtual/x11 )"
+.TP
+.RE
+.TP
+\fBRDEPEND\fR
+この変数にはこのプログラムを実行するために必要な全パッケージのリストが
+入っていなければならない (つまり実行時の依存パッケージのリスト)。
+この変数が設定されていなければ、\fBDEPEND\fR の値がデフォルトで設定
+される。
+.br
+依存性を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
+.TP
+\fBPDEPEND\fR
+この変数にはそのプログラムがマージされたあとにインストールされなければ
+ならない全パッケージのリストが入っていなければならない。
+.br
+依存性を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
+.TP
+\fBRESTRICT\fR = \fI[nostrip,nomirror,fetch]\fR
+この変数には portage FEATURE 機能のうち、制限するものをスペースで
+区切って列挙する。
+.PD 0
+.RS
+.TP
+.I nostrip
+最終的なバイナリ/ライブラリからデバッグシンボルを取り除かない。
+.TP
+.I nomirror
+\fBSRC_URI\fR に書かれているファイルを \fBGENTOO_MIRRORS\fR
+からはダウンロードしない。
+.TP
+.I fetch
+\fInomirror\fR と同様だが、ファイルは \fBSRC_URI\fR 経由でも取得されない。
+.RE
+.PD 1
+.TP
+\fBPROVIDE\fR = \fI"virtual/TARGET"\fR
+この変数にはパッケージがバーチャルターゲットを提供するときのみ使う。
+例えば、blackdown-jdk と sun-jdk は \fIvirtual/jdk\fR を提供する。
+この機能によってパッケージが blackdown や sun に特化して依存するのでは
+なく、\fIvirtual/jdk\fR に依存することができる。
+.SH "関数"
+.TP
+.B pkg_nofetch
+
+\fBRESTRICT\fR 変数に \fIfetch\fR を書いた場合、
+\fBSRC_URI\fR にあるファイルを見つけることができなかったとき、
+この関数が実行される。
+ユーザに *どうしたら* 言われたファイルを入手することができるのか
+の情報を表示するのに有用である。
+.TP
+.B pkg_setup
+この関数はなによりも先にパッケージに特定のセットアップアクションや
+チェックが必要な場合に使うことができる。
+.br
+初期作業ディレクトリは ${PORTAGE_TMPDIR}。
+.TP
+.B src_unpack
+この関数は \fIA\fR にある全ソースを \fIWORKDIR\fR に展開するために使う。
+この関数が \fIebuild スクリプト\fR で定義されていなかった場合、
+\fIunpack ${A}\fR が実行される。
+パッチ当てやその他ビルド設定やコンパイルの前に行なっておくべき
+変更はこの関数で行なわなければならない。
+.br
+初期作業ディレクトリは $WORKDIR。
+.TP
+.B src_compile
+ビルド設定とコンパイルのために必要なステップ全ては
+この関数で行なわれなければならない。
+.br
+初期作業ディレクトリは $S。
+.TP
+.B src_install
+一時 \fIインストールディレクトリ\fR にあるパッケージを
+インストールするために必要なこと全てが含まれていなければならない。
+.br
+初期作業ディレクトリは $S。
+.TP
+.B pkg_preinst pkg_postinst
+パッケージがインストールされる前と後で稼働中のファイルシステムに必要な
+全ての変更はこの関数に置かなければならない。ユーザへのコメントも、
+最後に表示されるようにここに列挙すること。
+.br
+初期作業ディレクトリは $PWD。
+.TP
+.B pkg_prerm pkg_postrm
+pkg_*inst 関数と同様だが、アンインストール用である。
+.br
+初期作業ディレクトリは $PWD。
+.TP
+.B config
+この関数は必須ではないがパッケージを使うためには欠かせない
+設定ステップを入れる。
+.br
+初期作業ディレクトリは $PWD。
+.SH "補助関数: 総記"
+.TP
+\fBdie\fR \fI[理由]\fR
+現在の emerge プロセスを中止させる。
+最後の画面には \fI理由\fR が表示される。
+.TP
+\fBuse\fR \fI<USE 項目>\fR
+もし \fIUSE 項目\fR が \fBUSE\fR 変数にあれば、\fIUSE 項目\fR 
+がエコーされて関数は 0 を返す。
+もし \fIUSE 項目\fR が \fBUSE\fR 変数になければ、
+関数は 1 を返す。
+.RS
+.TP
+.I 例:
+if [ `use gnome` ] ; then
+.br
+	guiconf="--enable-gui=gnome --with-x"
+.br
+elif [ `use gtk` ] ; then
+.br
+	guiconf="--enable-gui=gtk --with-x"
+.br
+elif [ `use X` ] ; then
+.br
+	guiconf="--enable-gui=athena --with-x"
+.br
+else
+.br
+	# No gui version will be built
+.br
+	guiconf=""
+.br
+fi
+.RE
+.TP
+\fBuse_with\fR \fI<USE 項目>\fR \fI[configure オプション]\fR
+カスタムオプションを作成し、configure スクリプトに渡すのに便利である。
+\fIUSE 項目\fR が \fBUSE\fR 変数にある場合、
+\fI--with-[configure オプション]\fR という文字列がエコーされる。
+\fIUSE 項目\fR が \fBUSE\fR 変数にない場合、
+\fI--without-[configure オプション]\fR という文字列がエコーされる。
+\fIconfigure オプション\fR が指定されていなければ、
+\fIUSE 項目\fR がその場所で使われる。
+.RS
+.TP
+.I 例:
+USE="jpeg"
+.br
+myconf="`use_with jpeg libjpeg`"
+.br
+(myconf は "--with-libjpeg" という値になる)
+
+USE=""
+.br
+myconf="`use_with jpeg libjpeg`"
+.br
+(myconf は "--without-libjpeg" という値になる)
+
+USE="pic"
+.br
+myconf="`use_with pic`"
+.br
+(myconf は "--with-pic" という値になる)
+.RE
+.TP
+\fBuse_enable\fR \fI<USE 項目>\fR \fI[configure オプション]\fR
+カスタムオプションを作成し、configure スクリプトに渡すのに便利である。
+\fIUSE 項目\fR が \fBUSE\fR 変数にある場合、
+\fI--enable-[configure オプション]\fR という文字列がエコーされる。
+\fIUSE 項目\fR が \fBUSE\fR 変数にない場合、
+\fI--disable-[configure オプション]\fR という文字列がエコーされる。
+\fIconfigure オプション\fR が指定されていなければ、
+\fIUSE 項目\fR がその場所で使われる。
+.br
+例は \fBuse_with\fR を参照。
+.TP
+\fBhas\fR \fI<項目>\fR \fI<項目リスト>\fR
+\fI項目\fR が \fI項目リスト\fR にあった場合、
+\fI項目\fR がエコーされて \fBhas\fR が 0 を返す。
+なかった場合、なにもエコーされず 1 を返す。
+.br
+\fI項目リスト\fR は \fIIFS\fR 変数によって区切られている。
+この変数はデフォルトで「 」つまりスペースという値をもっている。
+これは \fBbash\fR(1) の設定である。
+.TP
+\fBhas_version\fR \fI<カテゴリ/パッケージバージョン>\fR
+\fIカテゴリ/パッケージバージョン\fR がシステムにインストール
+されているかどうか調べる。
+このパラメータは \fBDEPEND\fR 変数で使用可能な全ての値を使うことができる。
+この関数は \fIカテゴリ/パッケージバージョン\fR がインストール
+されていたら 0 を返し、インストールされていないなら 1 を返す。
+.TP
+\fBbest_version\fR \fI<パッケージ名>\fR
+この関数は現在インストールされているプログラムのデータベースの中から
+\fIパッケージ名\fR を探し、現在インストールされているパッケージの
+「いちばんいいバージョン」を返す。
+もし \fIパッケージ名\fR にマッチするパッケージがなければこの関数は
+0 を返す。マッチすれば 1 を返す。
+.RS
+.TP
+.I 例:
+VERINS=`best_version net-ftp/glftpd`
+.br
+(もし glftpd-1.27 がインストールされていれば、
+VERINS は "net-ftp/glftpd-1.27" という値になる)
+.RE
+.SH "補助関数: 展開"
+.TP
+\fBunpack\fR \fI<ソース>\fR \fI[他にソースがあれば列挙]\fR
+この関数は列挙されたソースをカレントディレクトリに解凍/展開する。
+この関数は \fIソース\fR を \fBDISTDIR\fR 変数に追加する。 
+.SH "補助関数: コンパイル"
+.TP
+\fBeconf\fR \fI[configure オプション]\fR
+この関数は configure の代わりに使われる。以下のオプションが実行される:
+.br
+configure \\
+.br
+	--prefix=/usr \\
+.br
+	--host=${CHOST} \\
+.br
+	--mandir=/usr/share/man \\
+.br
+	--infodir=/usr/share/info \\
+.br
+	--datadir=/usr/share \\
+.br
+	--sysconfdir=/etc \\
+.br
+	--localstatedir=/var/lib \\
+.br
+	\fIconfigure オプション\fR
+
+\fB*註:\fR \fBeconf\fR で自動的に付加されるので
+「|| \fBdie\fR」を使う必要はない。
+.TP
+\fBemake\fR \fI[make オプション]\fR
+この関数は make の代わりに使われる。
+'make ${MAKEOPTS} \fImake オプション\fR'
+(${MAKEOPTS} は /etc/make.globals で設定される),
+を実行する。デフォルトは MAKEOPTS="\-j2"。
+
+\fB***警告***\fR
+.br
+\fBemake\fR を使おうとするのであれば、ビルド時に
+並列 make (make \-j2) を使って問題ないことを確認すること。
+並列 make は _ときどき_ 失敗するが毎回失敗しないことで悪名高いので、
+徹底的にテストしなければならない。
+
+\fB*註:\fR \fBemake\fR が成功したことを保証するために必ず
+「|| \fBdie\fR」を使うこと。
+.SH "補助関数: インストール"
+.TP
+\fBeinstall\fR \fI[make オプション]\fR
+この関数は make install の代わりとして使われる。実行されるオプションは:
+.br
+make prefix=${D}/usr \\
+.br
+            mandir=${D}/usr/share/man \\
+.br
+            infodir=${D}/usr/share/info \\
+.br
+            datadir=${D}/usr/share \\
+.br
+            sysconfdir=${D}/etc \\
+.br
+            localstatedir=${D}/var/lib \\
+.br
+            \fImake options\fR install
+
+\fB*註:\fR \fBeinstall\fR で自動的に付加されるので
+「|| \fBdie\fR」を使う必要はない。
+
+.PD 0
+.TP
+.B prepall
+.TP
+.B prepalldocs
+.TP
+.B prepallinfo
+.TP
+.B prepallman
+.TP
+.B prepallstrip
+.PD 1
+これらの関数はスクリプト(つまり Makefile など)経由で \fB${D}\fR 
+にパッケージをインストールするとき有用である。
+もし確実にライブラリが実行可能、aclocal ファイルが適切な場所に
+インストールされていて、ドキュメント/info/man ファイルが
+全部圧縮されており、実行バイナリからデバッグシンボルが全て
+strip されているようにしたければ、これらの関数一式を使う。
+.RS
+.PD 0
+.TP
+.B prepall:
+この関数は \fBprepallman\fR、\fBprepallinfo\fR、\fBprepallstrip\fR
+を実行し、ライブラリを実行可能に設定し、aclocal ディレクトリをチェック
+する。この関数は \fBprepalldocs\fR を実行 \fI*しない*\fR ことに
+注意してください。
+.TP
+.B prepalldocs:
+${D}/usr/share/doc にある全てのドキュメントファイルを圧縮する。
+.TP
+.B prepallinfo:
+${D}/usr/share/info にある全ての info ファイルを圧縮する。
+.TP
+.B prepallman:
+${D}/usr/share/man にある全ての man ファイルを圧縮する。
+.TP
+.B prepallstrip:
+全実行バイナリからデバッグシンボルを strip する。
+ライブラリも対象に含まれる。
+.RE
+
+.TP
+\fBprepinfo\fR \fI[dir]\fR
+.TP
+\fBpreplib\fR \fI[dir]\fR
+.TP
+\fBpreplib.so\fR \fI[dir]\fR
+.TP
+\fBprepman\fR \fI[dir]\fR
+.TP
+\fBprepstrip\fR \fI[dir]\fR
+.PD 1
+これらの関数も \fBprepall\fR 関数と似ており、違いも微妙である。
+.RS
+.PD 0
+.TP
+.B prepinfo:
+\fIdir\fR が指定されなかった場合、\fBprepinfo\fR は dir を
+\fIusr\fR とみなす。そして \fBprepinfo\fR は ${D}/\fIdir\fR/info
+にある全てのファイルを圧縮する。
+.TP
+.B preplib:
+\fIdir\fR が指定されなかった場合、\fBpreplib\fR は dir を
+\fIusr\fR とみなす。そして \fBpreplib\fR は ${D}/\fIdir\fR/lib
+で「ldconfig -n -N」を実行する。
+.TP
+.B preplib.so:
+${D}/\fIdir\fR にあり、ファイル名に「.so」を含むファイル全ての
+デバッグシンボルを strip する。複数のディレクトリを指定する
+こともできる。
+.TP
+.B prepman:
+\fIdir\fR が指定されなかった場合、\fBprepman\fR は dir を
+\fIusr\fR とみなす。そして \fBprepman\fR は ${D}/\fIdir\fR/man/*/
+にある全てのファイルを圧縮する。
+.TP
+.B prepstrip:
+${D}/\fIdir\fR にあるファイル全てを strip する。
+複数のディレクトリを指定することもできる。
+.RE
+.PD 1
+.TP
+\fBdopython\fR \fI<コマンド>\fR
+python で \fIコマンド\fR を実行し、結果を返す。
+.TP
+\fBdosed\fR \fI"s:orig:change:g" <ファイル名>\fR
+\fIファイル名\fR に対し (\fIファイル名\fR の cp/mv を含め) sed
+を実行する。
+.br
+.BR 'dosed\ "s:/usr/local:/usr:g"\ /usr/bin/some-script'
+${D}/usr/bin/some-script に対し sed を実行
+.TP
+\fBdodir\fR \fI<パス>\fR
+${D} の中にディレクトリを作成する。
+.br
+.BR 'dodir\ /usr/lib/apache'
+${D}/usr/lib/apache を作成
+.TP
+\fBinto\fR \fI<パス>\fR
+\fBdobin\fR、\fBdosbin\fR、\fBdoman\fR、\fBdoinfo\fR、\fBdolib\fR
+のような他の関数のためにルート (\fIDESTTREE\fR) を設定する。
+.br
+デフォルトルートは /usr。
+.TP
+\fBkeepdir\fR \fI<パス>\fR
+もし仮に空であってもディレクトリをそのままにしておくよう
+portage に伝える。\fBdodir\fR と同じように機能する。
+.TP
+\fBdobin\fR \fI<バイナリ> [他にもバイナリがあれば列挙]\fR
+\fIバイナリ\fR や列挙されたバイナリを \fIDESTTREE\fR/bin
+にインストールする。必要なディレクトリは全て作成する。
+.TP
+\fBdosbin\fR \fI<バイナリ> [他にもバイナリがあれば列挙]\fR
+\fIバイナリ\fR や列挙されたバイナリを \fIDESTTREE\fR/sbin
+にインストールする。必要なディレクトリは全て作成する。
+
+.PD 0
+.TP
+\fBdolib\fR \fI<ライブラリ>\fR \fI[他にもライブラリがあれば列挙]\fR
+.TP
+\fBdolib.a\fR \fI<ライブラリ>\fR \fI[他にもライブラリがあれば列挙]\fR
+.TP
+\fBdolib.so\fR \fI<ライブラリ>\fR \fI[他にもライブラリがあれば列挙]\fR
+.PD 1
+ライブラリや列挙されたライブラリを \fIDESTTREE\fR/lib
+にインストールする。必要なディレクトリは全て作成する。
+.TP
+\fBdoman\fR \fI<man ページ> [他にも man ページがあれば列挙]\fR
+man ファイルの拡張子に従って man ページを \fIDESTDIR\fR/man/man[1\-8n]
+にインストールする。ファイルが gzip されていなければ gzip する。
+必要なディレクトリは全て作成する。
+
+.PD 0
+.TP
+\fBdohard\fR \fI<ファイル名> <リンク名>\fR
+.TP
+\fBdosym\fR \fI<ファイル名> <リンク名>\fR
+.PD 1
+ln コマンドをハードリンクもしくはシンボリックリンクとして実行する。
+.TP
+\fBdohtml\fR \fI [\-a ファイルタイプ] [\-r] [\-x 無視するディレクトリリスト] [ファイルとディレクトリのリスト]\fR
+ファイルの拡張子が .html、.png、.js、.jpg か .css であった場合、
+ファイルリスト(スペースで区切られたリスト)に挙げられたファイルを
+/usr/share/doc/${PF}/html にインストールする。
+\-a を設定すればでどのタイプのファイルを含めるか制限することができる。
+\-A を設定すればデフォルトのタイプリストに新たなタイプを追加することができる。
+\-x で除外するディレクトリを設定できる(CVS はデフォルトで除外される)。
+\-r を設定すれば再帰的に dohtml を実行できる。
+.TP
+\fBdoinfo\fR \fI<info ファイル> [他にも info ファイルがあれば列挙]\fR
+info ページを \fIDESTDIR\fR/info にインストールする。
+ファイルは自動的に gzip される。必要なディレクトリは全て作成する。
+.TP
+\fBdojar\fR \fI<jar ファイル> [他にも jar ファイルがあれば列挙]\fR
+jar ファイルを /usr/share/${PN}/lib にインストールし、
+/usr/share/${PN}/classpath.env に追加する。
+.TP
+\fBdomo\fR \fI<locale ファイル> [他にも locale ファイルがあれば追加] \fR
+locale ファイルを locale ファイルの拡張子に従って
+\fIDESTDIR\fR/usr/share/locale/[言語] に追加する。
+必要なディレクトリは全て作成する。
+
+.PD 0
+.TP
+\fBfowners\fR \fI<パーミッション> <ファイル> [複数のファイル]\fR
+.TP
+\fBfperms\fR \fI<パーミッション> <ファイル> [複数のファイル]\fR
+.PD 1
+chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
+\fIファイル\fR に \fIパーミッション\fR を適用する。
+.TP
+\fBinsinto\fR \fI[パス]\fR
+\fBdoins\fR 関数のルート (\fIINSDESTTREE\fR) を設定する。
+.br
+デフォルトルートは /。
+.TP
+\fBinsopts\fR \fI[install(1) に対するオプション]\fR
+\fBdoins\fR で使われる install に対するオプションを定義するために
+使うことができる。デフォルトは \fI\-m0644\fR。
+.TP
+\fBdoins\fR \fI<ファイル> [他にファイルがあれば列挙]\fR
+ファイルを \fIINSDESTTREE\fR にインストールする。
+この関数は \fBinstall\fR(1) を使う。
+.TP
+\fBexeinto\fR \fI[パス]\fR
+\fBdoexe\fR 関数のルート (\fIEXEDESTTREE\fR) を設定する。
+.br
+デフォルトルートは /。
+.TP
+\fBexeopts\fR \fI[install(1) に対するオプション]\fR
+\fBdoexe\fR で使われる install に対するオプションを定義するために
+使うことができる。デフォルトは \fI\-m0755\fR。
+.TP
+\fBdoexe\fR \fI<実行バイナリ> [他にも実行バイナリがあれば列挙]\fR
+実行バイナリや列挙された実行バイナリを \fIEXEDESTTREE\fR
+にインストールする。この関数は \fBinstall\fR(1) を使う。
+.TP
+\fBdocinto\fR \fI[パス]\fR
+\fBdodoc\fR が使う相対サブディレクトリ (\fIDOCDESTTREE\fR)
+を設定する。
+.TP
+\fBdodoc\fR \fI<ドキュメント> [他にもドキュメントがあれば列挙]\fR
+ドキュメントや列挙されたドキュメントを /usr/doc/${PV}/\fIDOCDESTTREE\fR
+にインストールする。ファイルは自動的に gzip される。
+必要なディレクトリは全て作成する。
+
+.PD 0
+.TP
+\fBnewbin\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewsbin\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewlib\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewlib.so\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewlib.a\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewman\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewinfo\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewins\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewexe\fR \fI<古いファイル> <新しいファイル名>\fR
+.TP
+\fBnewdoc\fR \fI<古いファイル> <新しいファイル名>\fR
+.PD 1
+これらの関数は全て do* 関数と同じように使えるが、
+これらの関数は1つのファイルだけに使うことができ、
+そのファイルは \fI[新しいファイル名]\fR としてインストールされる。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "関連項目"
+.BR ebuild (1),
+.BR make.conf (5)
+.TP
+\fI/usr/sbin/ebuild.sh\fR スクリプト。
+.TP
+\fI/usr/lib/portage/bin\fR にある補助アプリケーション。
+.SH "ファイル"
+.TP
+\fB/etc/make.conf\fR 
+ビルドプロセスで使う変数が書かれており、make.defaults で設定されている
+変数を上書きする。
+.TP
+\fB/etc/make.globals\fR
+ビルドプロセスで使うデフォルトの変数が書かれているが、
+変数を変更したい場合はこのファイルではなく
+\fI/etc/make.conf\fR を編集すること。
+.SH "著者"
+Achim Gottinger <achim@gentoo.org>
+.br
+Mark Guertin <gerk@gentoo.org>
+.br
+Nicholas Jones <carpaski@gentoo.org>
+.br
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+$Header$
