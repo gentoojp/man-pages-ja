@@ -4,6 +4,8 @@
 .\" Origial version: 2.0.48
 .\" Translated on 19 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
+.\" Updated to 1.2 on 19 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
+.\"
 .TH "EUTILS" "5" "Jun 2003" "Portage 2.0.48" "Portage"
 .SH "名前"
 eutils \- ebuild で使われる追加の(でもよく使われる)いろいろな関数
@@ -13,6 +15,23 @@ eutils \- ebuild で使われる追加の(でもよく使われる)いろいろな関数
 に必須というわけではないが、共通の置き場所を定めるには十分、
 というような関数セットを集めている。
 .SH "関数"
+.TP
+.BR "cdrom_get_cds " "\fI<cd1 file>\fR \fI[cd2 file]\fR \fI[cd n file]\fR"
+CDからファイルを読み取る必要があるebuild作成に便利な関数である。
+gameのパッケージでもっともよく使われる。
+CDごとにCDがマウントされているかどうか検出するために使うファイルのリストを指定するだけである。
+この関数はユーザーとの対話的なごちゃごちゃとしたことを全部受け持ってくれる。
+この関数が終了すれば、\fICDROM_ROOT\fR変数にアクセスすることができる。
+もしなにがしかの方法でCDの名前をユーザーに伝えたければ、この関数を呼ぶ前に\fICDROM_NAME\fR変数をexportしておけばよい。
+1つ以上のCDの名前をそれぞれ違う名前で出したければ、\fICDROM_NAME_1\fR、\fICDROM_NAME_2\fR、といったようにexportすればよい。
+複数CDのサポートについての詳しい情報は、\fBcdrom_load_next_cd\fRを参照。
+.TP
+.BR "cdrom_load_next_cd"
+大き過ぎるため複数のCDで配布されているパッケージもある。
+1つのCDからファイルを読み終え、次のCDにアクセスしたいときには、この関数を呼べばよい。
+ここでも、ユーザーとの対話的なごちゃごちゃしたやりとりはこの関数が代わりにやってくれる。
+この関数が終了したら、マウントされたCDの場所は\fICDROM_ROOT\fRを読めばよい。
+CDリストを次々に読んでいくことしかできないので、現在のCDについての処理が全部終わってからこの関数を呼ぶよう留意すること。
 .TP
 .BR "draw_line"
 $* と同じ長さの「=」からなる線を引く単純な関数。
@@ -85,6 +104,21 @@ http://www.freedesktop.org/standards/menu/draft/menu-spec/menu-spec.html
 参照)。最後に、
 アプリケーションが特別なディレクトリで起動しなければならないなら、
 最後の値をフル \fIパス\fR 名として渡す。
+.TP
+.BR "unpack_makeself "\fI[makeself archive]\fR \fI[byte offset]\fR"
+makeself自身の展開スクリプトに頼らずmakeselfアーカイブを展開する。
+makeselfスクリプトがもう適切にサポートされていない古い構文(POSIX)を使っている場合に便利である。
+展開するファイルを指定しなければ、\fB${A}\fRが代わりに使われる。
+オフセットを指定しなければ、makeselfスクリプトを検索して正しい値を見つける。
+makeselfアーカイブについての詳しい情報は、http://www.megastep.org/makeself/を参照のこと。
+.TP
+.BR "unpack_pdv " "\fI<pdv archive>\fR \fI<sizeof(off_t)>\fR"
+pdv自身の展開バイナリに頼らずpdvアーカイブを展開する。
+スタティックバイナリがときどきクラッシュするシステムや、バイナリが非対話的な展開方法を提供していない場合に便利である。
+off_tサイズを指定しなければならないのは、わたし(vapier@gentoo.org)がバイナリ実行ファイルから自動的にオフセット情報を抽出する方法を知らないからだ。
+渡す値はpdvアーカイブを作成した計算機でのoff_tタイプのサイズ(バイト)である。
+その値が分からないのであれば、2、4、もしくは8を試してみるとよい。
+pdvアーカイブについての詳しい情報は、http://pdv.sourceforge.net/を参照のこと。
 .SH "EPATCH"
 .TP
 .B "epatch について"
@@ -173,4 +207,4 @@ http://www.freedesktop.org/standards/menu/draft/menu-spec/menu-spec.html
 .SH "著者"
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/eutils.eclass.5,v 1.1 2003/10/30 17:58:08 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/eutils.eclass.5,v 1.2 2004/02/21 08:11:01 vapier
