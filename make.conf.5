@@ -1,0 +1,296 @@
+.TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.47" "portage"
+.SH "名前"
+make.conf \- Portage のカスタム設定
+.SH "書式"
+.B /etc/make.conf
+.SH "説明"
+このファイルには Portage が使うさまざまな変数が書かれている。
+Portage は全ての設定項目に対し、現在定義されている環境変数を
+調べる。環境変数が見つからない場合、Portage は /etc/make.conf
+をチェックする。 /etc/make.conf に設定が見つからない場合、Portage
+は /etc/make.globals をチェックする。そこにも設定が見つからない場合、
+/etc/make.profile/make.defaults  から profile のデフォルトの値が使われる。
+ユーザ設定は /etc/make.globals や /etc/make.profile/make.defaults では
+なく、環境変数で設定するか、ユーザがカスタマイズすることを意図している
+/etc/make.conf で設定するよう留意してほしい。
+.BR 
+例外は USE や CONFIG_PROTECT* や ACCEPT_KEYWORDS などの
+インクリメンタル変数で、インクリメンタル変数は make.defaults から
+make.globals、make.conf そして環境設定へと伝わっていく。
+これらの変数をクリアするには
+export USE="\-*"
+のようにして全部消去する必要がある。
+.SH "変数"
+.TP
+\fBACCEPT_KEYWORDS\fR = \fI[スペースで区切られた KEYWORDS のリスト]\fR
+「安定版」と判断されていない ebuild のテストを有効にする。
+「x86」アーキテクチャのユーザはこの変数を「~x86」に設定するだろうし、
+また「ppc」ユーザは「~ppc」を設定するだろう。
+これはインクリメンタル変数なので、~arch だけを定義すること
+(そうすれば arch も定義される)。
+.br
+デフォルトの値は $ARCH である。
+.TP
+\fBAUTOCLEAN\fR = \fI["yes" | "no"]\fR
+動作に支障がなく取り除いても問題のない古いパッケージを削除することで、
+自動的にシステムをきれいにする。重要な ABI の変更の際にはこの機能を
+オフにして、古いライブラリが削除される前に新しいライブラリを使って
+システムが再構築できることを確認する必要がある。
+この機能をオフにしてダウングレードすると、シンボリックリンクが切れて
+システムが操作不能になる恐れがある。
+.br
+デフォルトの値は yes である。
+.TP
+\fBBUILD_PREFIX\fR = \fI[パス]\fR
+パッケージの作業ディレクトリの場所を定義する。
+.br
+デフォルトの値は ${PORTAGE_TMPDIR}/portage である。
+.TP
+\fBCBUILD\fR
+この変数が定義されていた場合にかぎり、この変数の値は
+\fIebuild スクリプト\fR によって \fI\-\-build=${CBUILD}\fR として
+\fIconfigure\fR ステップに渡される。
+現在のところ、この変数を定義する必要があるのは HPPA アーキテクチャ
+だけである。
+.TP
+\fBCFLAGS CXXFLAGS\fR 
+これらの変数は、コンパイルするアプリケーションにしたい最適化や
+CPU 命令の設定のために設定する。
+ほとんど全ての ebuild ファイルがこのカスタム設定を利用するので、
+Gentoo Linux はユーザの指定のままに完全にカスタマイズすることができる。
+最適化がきつすぎる場合コンパイルできなかったり動作しなかったりする
+パッケージもあるので、まともな設定を心がけてください。
+
+より詳しい情報は:
+.br
+http://gcc.gnu.org/onlinedocs/gcc-3.2/gcc/Invoking-GCC.html
+.br
+http://gcc.gnu.org/onlinedocs/gcc-2.95.3/gcc_2.html
+.TP
+\fBCHOST\fR
+この変数は \fIebuild スクリプト\fR によって \fI\-\-host=${CHOST}\fR として
+\fIconfigure\fR ステップに渡される。
+これを使うことによって build\-host を強制指定することができる。
+
+より詳しい情報は:
+.br
+http://gcc.gnu.org/onlinedocs/gcc\-3.2/gcc/Submodel\-Options.html
+.br
+http://gcc.gnu.org/onlinedocs/gcc\-2.95.3/gcc_2.html
+.TP
+\fBCLEAN_DELAY\fR = \fI整数値\fR
+`emerge clean` を実行したあとカウントダウンする長さを決める。
+.br
+デフォルトの値は 5 秒である。
+.TP
+\fBCONFIG_PROTECT\fR = \fI[スペースで区切られたディレクトリのリスト]\fR
+この変数で定義された全ディレクトリに「設定ファイル保護」が有効になる。
+より詳しい情報は、`emerge --help config` を参照してください。
+.TP
+\fBCONFIG_PROTECT_MASK\fR = \fI[スペースで区切られたディレクトリのリスト]\fR
+この変数で定義された全ディレクトリに「設定ファイル保護」が無効になる。
+より詳しい情報は、`emerge --help config` を参照してください。
+.TP
+\fBDEBUGBUILD\fR
+この変数が定義されていると、\fImerge\fR の前にバイナリとライブラリの
+strip が行なわれない。
+.TP
+\fBDISTDIR\fR = \fI[パス]\fR
+ソースファイルリポジトリの場所を定義する。
+.br
+デフォルトの値は ${PORTDIR}/distfiles である。
+.TP
+\fBFEATURES\fR = \fI"buildpkg ccache cvs digest mirror noauto noclean sandbox"\fR
+デフォルトで行なわれる portage のアクションを定義する。
+開発者やメンテナ以外の人はこのオプションを変更しないこと。
+「sandbox」は \fBFEATURES\fR の重要な機能の一つで、デフォルトで
+無効にしてはいけない。
+.br
+ 
+.br
+\fIbuildpkg\fR: バイナリパッケージを常に生成する。
+.br
+\fIccache\fR: ccache パッケージの portage サポートを有効にする。
+.br
+\fIcvs\fR: パッケージを emerge したあとのファイルの自動コミットを有効にする。
+.br
+\fIdigest\fR: パッケージのダイジェストを自動生成する。
+もし \fIcvs\fR 機能が有効な場合、さらにそれをコミットする。
+.br
+\fIdistcc\fR: distcc サポートを有効にする。
+.br
+\fIkeeptemp\fR: clean の実行時に ${T} ディレクトリを削除しない。
+.br
+\fIkeepwork\fR: clean の実行時に $WORKDIR を削除しない。
+.br
+\fImirror\fR:  ファイルが \fBDISTDIR\fR にあるときですら常に
+\fBFETCHCOMMAND\fR を実行する。
+.br
+\fInoauto\fR: \fBebuild\fR(1) を実行するとき、
+要求された関数だけを実行する。
+.br
+\fInoclean\fR: パッケージのマージが終わったあともビルドディレクトリを
+掃除しない。
+.br
+\fInostrip\fR: バイナリの strip をしない。
+.br
+\fInotitles\fR: xterm のタイトルバーの更新(ステータス情報が更新される)
+を無効にする。
+.br
+\fIsandbox\fR: \fBemerge\fR(1) と \fBebuild(1)\fR を実行する際
+sandbox を有効にする。
+.br
+\fIuserpriv\fR: portage を使う際に root 権限を使わず、\fIusersandbox\fR
+も有効になってないかぎり sandbox なしでパッケージを portage:portage
+権限でコンパイルする。
+.br
+\fIusersandbox\fR: コンパイルのとき sandbox を有効にし、root 権限なしで
+実行する(\fIuserpriv\fR)。
+.br
+
+.TP
+\fBFETCHCOMMAND\fR
+この変数にはインターネットからパッケージソースを取得するのに
+使うコマンドが入っている。
+.TP
+\fBGENTOO_MIRRORS\fR = \fI[スペースで区切られた URL のリスト]\fR
+ローカルミラーのリストをスペースで区切ってこの変数に入れること。
+このミラーリストは \fIebuild スクリプト\fR で挙げられている URL
+にファイルをダウンロードしに行く前に使われる。
+「mirrorselect」をインストールするとどのミラーを使えばよいか参考になる。
+.TP
+\fBMAKEOPTS\fR
+この変数は並行 make をしたいときに使う。
+例えば、デュアルプロセッサのシステムを持っていたとすると、
+この変数を "\-j2" や "\-j3" に設定するとたくさんのパッケージを
+作成するときビルドのパフォーマンスが上がる。
+推奨設定は \fICPUの数+1\fR と \fICPUの数*2+1\fR の間。
+より詳しい情報は \fBmake\fR(1) 参照。
+.TP
+\fBNOCOLOR\fR = \fI["true" | "false"]\fR
+デフォルトでカラーを無効にするかどうかを定義する。
+.br
+デフォルトは false。
+.TP
+\fBPORT_LOGDIR\fR
+この変数は ebuild ごとのログが保存されるディレクトリを定義する。
+この変数が設定されており、かつ書き込み可能なときのみログが作成される。
+.TP
+\fBPORTAGE_TMPDIR\fR = \fI[パス]\fR
+一時ビルドディレクトリの場所を定義する。
+.br
+デフォルトは /var/tmp。
+.TP
+\fBPKG_TMPDIR\fR = \fI[パス]\fR
+\fIemerge\fR は稼働中のファイルシステムにファイルをインストールする前、
+このディレクトリを .tbz2 パッケージの展開に使う。
+.TP
+\fBPKGDIR\fR = \fI[パス]\fR
+作成された .tbz2 バイナリパッケージの保存される場所を定義する。
+.br
+デフォルトは ${PORTDIR}/packages.
+.TP 
+\fBPORTDIR\fR = \fI[パス]\fR
+Portage ツリーの場所を定義する。
+.br
+デフォルトは /usr/portage。
+.TP
+\fBPORTDIR_OVERLAY\fR = \fI[path]\fR
+ユーザが作った ebuild を保存し、emerge rsync が実行されたときに
+上書きされないためのディレクトリを定義する。
+.br
+デフォルトは値が入っていない。
+.TP
+\fBPROXY HTTP_PROXY FTP_PROXY\fR = \fI[ホスト名:ポート番号]\fR
+これらの変数は \fBwget\fR(1) でインターネットからソースをダウンロード
+しなければならない場合に使われる。これらの変数を使うのは、
+インターネットアクセスにプロキシサーバを使う場合だけである。
+\fIPROXY\fR か \fIPROXY_FTP\fR と \fIPROXY_HTTP\fR のいずれかを
+定義すること。
+.TP
+\fBRESUMECOMMAND\fR
+この変数には \fBFETCHCOMMAND\fR で部分的にダウンロードされたパッケージ
+ソースのダウンロードを再開するためのコマンドが入っている。
+.TP
+\fBROOT\fR = \fI[パス]\fR
+\fBROOT\fR 変数はパッケージや ebuild をマージするために使う
+ターゲットルートファイルシステムを指定するために使う。
+/etc/make.conf の中ではなく、環境変数としてこの設定を使うのが普通。
+典型的には新しいビルドイメージを作成するために使われる。
+.br
+デフォルトは /。
+.TP
+\fBRSYNC_RETRIES\fR = \fI[回数]\fR
+接続が失敗したら諦める前に何回 rsync を再試行するかの回数。
+.br
+デフォルトは 3。
+.TP
+\fBRSYNC_TIMEOUT\fR = \fI[秒数]\fR
+接続がタイムアウトしたと決定する前にどれだけ rsync の無反応状態が
+継続していなければならないかの秒数。ダイヤルアップユーザはこの値を
+300秒かそれ以上に設定する必要があるかもしれない。
+.br
+デフォルトは 180 秒。
+.TP
+\fBRPMDIR\fR = \fI[パス]\fR
+作成された RPM パッケージが保存される場所を定義する。
+.br
+デフォルトは ${PORTDIR}/rpm。
+.TP
+\fBSYNC\fR = \fI[RSYNC ミラー]\fR
+この変数にはローカルの rsync ミラーのリストを入れる。
+これらの rsync サーバは `emerge rsync` が実行されたときローカルの
+portage ツリーを同期させるために使われる。
+.TP
+\fBUSE\fR = \fI[スペースで区切られた USE オプションのリスト]\fR
+この変数にはあるパッケージのビルド時の挙動をコントロールするオプション
+が入っている。より詳しい情報は \fBebuild\fR(5) にある。
+指定できる USE の値は \fI/usr/portage/profiles/use.desc\fR にある。
+.TP
+.TP
+\fBUSE_ORDER\fR = \fI"env:conf:auto:defaults"\fR
+USE 変数の設定を上書きする優先順序を決定する。
+上記の設定は
+インストールされたパッケージから自動生成された値 (auto) 
+が make.defaults (defaults) を上書きし、
+make.conf (conf) が自動生成された値を上書きし、
+環境変数 (env) が make.conf (conf) を上書きする、
+という設定である。
+.br
+\fB***warning***\fR
+.br
+この値はあなたが開発者でなにをしているか分かってないかぎり変更しては
+ならない。もしこの値を変更してなにかを壊してしまった場合、我々は
+それを直すのにあなたを助けるつもりはない。
+.br
+デフォルトは "env:conf:auto:defaults".
+
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "関連項目"
+.BR ebuild (1),
+.BR ebuild (5)
+.TP
+\fI/usr/sbin/ebuild.sh\fR スクリプト。
+.TP
+\fI/usr/lib/portage/bin\fR にある補助プログラム。
+.SH "ファイル"
+.TP
+\fB/etc/make.conf\fR 
+ビルドプロセスのための変数が書かれており、make.defaults の変数を上書きする。
+.TP
+\fB/etc/make.globals\fR 
+ビルドプロセスのためのデフォルト変数が書かれているが、
+変数の値を変えたい場合はこのファイルではなく \fI/etc/make.conf\fR
+を編集すること。
+.TP
+\fB/usr/portage/profiles/use.desc\fR
+使用できる全 USE 変数の膨大なリストが書かれている。
+.SH "著者"
+Daniel Robbins <drobbins@gentoo.org>
+.br
+Nicholas Jones <carpaski@gentoo.org>
+.br
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+$Header$
