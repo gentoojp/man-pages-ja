@@ -116,7 +116,7 @@ ebuild 内でこの変数を定義してはいけない。この変数は \fISRC_URI\F
 この変数を変更しないこと。
 .TP
 \fBFILESDIR\fR = \fI"${PORTDIR}/${CATEGORY}/${PN}/files"\fR
-この変数には portage ツリーの中のパッケージごとの「files」
+この変数には Portage ツリーの中のパッケージごとの「files」
 サブフォルダへのパスが入っている。
 この変数を変更しないこと。
 .TP
@@ -157,7 +157,7 @@ ${D} という接頭辞をつけなければならない。
 分からない場合、単にその arch を KEYWORD から除く。
 特定の arch でその ebuild が動作しない場合、
 それをたとえば \-ppc のようにして KEYWORD に含める。
-portage ツリーに取り込むための ebuild が提出されたとき、
+Portage ツリーに取り込むための ebuild が提出されたとき、
 その ebuild が \fB動作することが証明されている \fR 場合、
 証明された arch に対する ~arch セットが KEYWORD
 になければならない
@@ -179,8 +179,8 @@ SLOT を指定する。
 この変数はパッケージが該当するライセンスのスペースで区切られた
 リストを入れなければならない。この変数には /usr/portage/licenses/
 にあるライセンスと \fB_必ず_\fR マッチしなければならない。
-portage にマッチするライセンスが存在しないのだとしても、
-まずそのライセンスを portage に追加しなければならない。
+Portage にマッチするライセンスが存在しないのだとしても、
+まずそのライセンスを Portage に追加しなければならない。
 .TP
 \fBIUSE\fR
 この変数にはそのビルドスクリプトの中で使われている全ての USE フラグの
@@ -194,7 +194,7 @@ portage にマッチするライセンスが存在しないのだとしても、
 .RS
 .TP
 .B DEPEND アトム
-DEPEND に含まれるアトム(それぞれのパッケージ名)は単に portage
+DEPEND に含まれるアトム(それぞれのパッケージ名)は単に Portage
 がパッケージ同士の関係を計算するときに使う依存性のことである。
 DEPEND アトムがまだ emerge されていない場合、
 最新のバージョンがマッチすることに留意してください。
@@ -242,7 +242,7 @@ net-misc/dhcp\fI-3.0_p2\fR
 ある範囲のバージョンにマッチするパッケージを定義したりすることができる
 のだ。また、これらの拡張された接頭辞/接尾辞は上で定義されているアトム
 クラスとどのようにも組み合わせることができる。
-portage ツリーにあるありふれた例をいくつか挙げると:
+Portage ツリーにあるありふれた例をいくつか挙げると:
 
 \fI!\fRapp-text/dos2unix
 .br
@@ -289,7 +289,7 @@ DEPEND="media-libs/libsdl
 依存性を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
 .TP
 \fBRESTRICT\fR = \fI[nostrip,nomirror,fetch]\fR
-この変数には portage FEATURE 機能のうち、制限するものをスペースで
+この変数には Portage FEATURE 機能のうち、制限するものをスペースで
 区切って列挙する。
 .PD 0
 .RS
@@ -645,7 +645,7 @@ ${D}/usr/lib/apache を作成
 .TP
 \fBkeepdir\fR \fI<パス>\fR
 もし仮に空であってもディレクトリをそのままにしておくよう
-portage に伝える。\fBdodir\fR と同じように機能する。
+Portage に伝える。\fBdodir\fR と同じように機能する。
 .TP
 \fBdobin\fR \fI<バイナリ> [他にもバイナリがあれば列挙]\fR
 \fIバイナリ\fR や列挙されたバイナリを \fIDESTTREE\fR/bin
