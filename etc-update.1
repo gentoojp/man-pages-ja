@@ -1,0 +1,37 @@
+.TH "ETC-UPDATE" "1" "Feb 2003" "Portage 2.0.47" "Portage"
+.SH 名前
+etc-update \- 設定ファイルの更新を処理する
+.SH 書式
+.B etc-update
+.SH 説明
+.I etc-update
+新しいパッケージをインストールしたあと、設定ファイルに更新があるか
+どうか確認するために実行することになっている。新しい設定ファイルが
+古い設定ファイルを書き換えてしまう場合、
+.I etc-update 
+はユーザに判断を求める。
+.PP
+.I etc-update
+は \fICONFIG_PROTECT\fR 変数に設定されている全ディレクトリを調べる。
+\fICONFIG_PROTECT_MASK\fR 変数の中に見つかった設定ファイルは全て
+\fIetc-update\fR によって自動的に更新される。
+詳細は \fBmake.conf\fR(5) を参照。
+.SH オプション
+.TP
+なし。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "関連項目"
+.BR make.conf (5)
+.SH "ファイル"
+.TP
+.B /etc/etc-update.conf
+\fIetc-update\fR 用の設定はここに保存されている。
+.SH 著者
+Jochem Kossen と Leo Lipelis
+.br
+Karl Trygve Kalleberg <karltk@gentoo.org>
+.br
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+$Header$
