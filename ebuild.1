@@ -10,7 +10,7 @@ ebuild プログラムは Portage システムへの直接のインタフェースである。
 で直接操作し、特定の環境や機能で実行することができる。ebuild プログラム
 は ebuild スクリプトと1つ以上のコマンドを引数として取り、ebuild
 スクリプトを解析して指定されたコマンドを実行する。ソースを取得する、
-ソースを展開する、ソースをコンパイルする、"image" という一時ディレクトリ
+ソースを展開する、ソースをコンパイルする、「image」という一時ディレクトリ
 にオブジェクトファイルをインストールする、一時ディレクトリにインストール
 されたイメージを実際にローカルファイルシステムにインストールする、その
 イメージから bzip 圧縮された tar アーカイブパッケージを作成する、
@@ -35,7 +35,7 @@ ebuild プログラムは Portage システムへの直接のインタフェースである。
 設定される。この変数がなにか知りたい場合は \fIemerge [\-v] info\fR
 を実行する。この変数を上書きしたい場合は \fBmake.conf\fR(5) を参照。
 
-註: FEATURES 変数に 'noclean' が含まれていないかぎり、パッケージが
+註: FEATURES 変数に「noclean」が含まれていないかぎり、パッケージが
 問題なくインストールされると Portage は一時ビルドディレクトリにある
 ものほとんど全てを消去する。FEATURES に noclean を追加するとたくさん
 のファイルが残りすぐに膨大な容量を消費してしまう結果になる。
@@ -156,6 +156,7 @@ ${PKGDIR}/${CATEGORY} には ${PKGDIR}/All にあるパッケージ本体への
 .SH "バグ報告"
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
 .SH "関連項目"
+.BR emerge (1),
 .BR ebuild (5),
 .BR make.conf (5)
 .TP 
@@ -176,4 +177,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br 
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-$Header$"
+原文: /home/cvsroot/gentoo-src/portage/man/ebuild.1,v 1.14 2003/07/07 21:12:05 vapier
