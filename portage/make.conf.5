@@ -7,6 +7,7 @@
 .\" Updated to 1.32 on 15 Nov 2003
 .\" Updated to 1.35 on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
 .\" Updated to 1.43 on 29 Sep 2004
+.\" Updated to 1.45 on 15 Nov 2004
 .\"
 .TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.51" "Portage"
 .SH "名前"
@@ -40,16 +41,6 @@ export USE="\-*"
 (そうすれば arch も定義される)。
 .br
 デフォルトの値は $ARCH である。
-.TP
-\fBAUTOCLEAN\fR = \fI["yes" | "no"]\fR
-動作に支障がなく取り除いても問題のない古いパッケージを削除することで、
-自動的にシステムをきれいにする。重要な ABI の変更の際にはこの機能を
-オフにして、古いライブラリが削除される前に新しいライブラリを使って
-システムが再構築できることを確認する必要がある。
-この機能をオフにしてダウングレードすると、シンボリックリンクが切れて
-システムが操作不能になる恐れがある。
-.br
-デフォルトの値は yes である。
 .TP
 \fBBUILD_PREFIX\fR = \fI[path]\fR
 パッケージの作業ディレクトリの場所を定義する。
@@ -405,4 +396,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: make.conf.5,v 1.43
+原文: make.conf.5,v 1.45

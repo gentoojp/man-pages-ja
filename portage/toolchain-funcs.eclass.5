@@ -4,29 +4,45 @@
 .\" Origial version: 2.0.48
 .\" Translated on 19 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
-.TH "GCC" "5" "Jun 2003" "Portage 2.0.51" "Portage"
+.\" gcc.eclass was deprecated; renamed on 15 Nov 2004, v 1.1
+.\"
+.TH "TOOLCHAIN-FUNCS.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
 .SH "名前"
-gcc \- gcc についてよく必要とされる情報を得る関数
+toolchain-funcs \- ツールチェーン (binutils/gcc/glibcなど)
+についてよく必要とされる情報を得る関数
 .SH "説明"
-\fBgcc\fR eclass はコンパイルに使われるバージョンの gcc
+\fBtoolchain-funcs\fR eclass はコンパイルに使われるツールチェーン
 についての情報を得るために使う関数セットを持っている。
 この eclass を使えば開発者はそもそも gcc
-の仕様を探す方法を考えるのではなく、gcc
-の仕様自体に頭を悩ませればよくなる。
-.SH "変数"
-.TP
-.B WANT_GCC_3 = \fI"[yes|no]"\fR
-複数のバージョンの gcc コンパイラ(たとえば gcc-2.95.3 と gcc-3.2.1)
-がインストールされていたら、
-このクラスでは下記の関数を呼ぶとき gcc-3.x
-についての情報がほしいのだと特定することができる。
+の spec を探す方法を考えるのではなく、gcc
+の spec 自体に頭を悩ませればよくなる。
 .SH "関数"
 .TP
-.B gcc-getCC
+.B tc-getAR
+binutils アーカイバの名前を返す。普通は「ar」。
+.TP
+.B tc-getAS
+アセンブラの名前を返す。普通は「as」。
+.TP
+.B tc-getBUILD_CC
+ビルドシステム用のコンパイラの名前を返す。
+あるパッケージをビルドする最中にそのパッケージに含まれる
+ユーティリティをコンパイルして実行しなければならない場合にのみ有用。
+.TP
+.B tc-getCC
 C コンパイラバイナリの名前を返す。普通は「gcc」。
 .TP
-.B gcc-getCXX
+.B tc-getCXX
 C++ コンパイラバイナリの名前を返す。普通は「g++」。
+.TP
+.B tc-getLD
+リンカの名前を返す。普通は「ld」。
+.TP
+.B tc-getNM
+シンボル/オブジェクト操作プログラムの名前を返す。普通は「nm」。
+.TP
+.B tc-getRANLIB
+アーカイブインデックス生成プログラムの名前を返す。普通は「ranlib」。
 .TP
 .B gcc-fullversion
 `$CC -dumpversion` でバージョンを返す。
@@ -62,25 +78,13 @@ GCC 3.\fI2\fR.1 は \fI2\fR を返す。
 GCC 2.95.\fI3\fR は \fI3\fR を返し、
 .br
 GCC 3.2.\fI1\fR は \fI1\fR を返す。
-.TP
-.B gcc-libpath
-gcc の内部ライブラリのパスを返す。
-.TP
-.B gcc-libstdcxx-version
-libstdc++.so のフルバージョンを返す。
-.TP
-.B gcc-libstdcxx-major-version
-libstdc++.so のメジャーバージョンを返す。
-.TP
-.B gcc2-flags
-gcc-2.95.3 で使える CFLAGS と CXXFLAGS を export する。
 .SH "バグ報告"
 バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
 .SH "参照"
 .BR ebuild (5)
 .SH "ファイル"
-.BR /usr/portage/eclass/gcc.eclass
+.BR /usr/portage/eclass/toolchain-funcs.eclass
 .SH "著者"
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: gcc.eclass.5,v 1.3
+原文: toolchain-funcs.eclass.5,v 1.1

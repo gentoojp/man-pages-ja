@@ -4,6 +4,7 @@
 .\" Origial version: 2.0.47
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
+.\" Updated to 1.73 on 15 Nov 2004
 .\" Updated to 1.71 on 29 Sep 2004
 .\" Updated to 1.61 on 18 Jun 2004
 .\" Updated to 1.57 on 19 Apr 2004
@@ -196,22 +197,22 @@ DEPEND アトムがまだ emerge されていない場合、
 ベースアトムとは完全な カテゴリー/パッケージ名 のことである。
 したがって、以下に挙げるものはベースアトムである:
 
+.nf
 .I sys-apps/sed
-.br
 .I sys-libs/zlib
-.br
 .I net-misc/dhcp
+.fi
 .TP
 .B アトムバージョン
 より詳細に特定のバージョンのアトムだけが使用可能であると言うのはいいことだ。
 バージョンは接頭辞(下を参照)と一緒に使わねばならないことに注意。
 よって、バージョン番号は接尾辞としてベースに加えるとよい:
 
+.nf
 sys-apps/sed\fI-4.0.5\fR
-.br
 sys-libs/zlib\fI-1.1.4-r1\fR
-.br
 net-misc/dhcp\fI-3.0_p2\fR
+.fi
 
 バージョン番号は 1.2 や 4.5.2 のように、通例ピリオドで区切られた2つか3
 つの番号からなっている。この文字列には 1.2a や 4.5.2z のように1文字末
@@ -228,15 +229,13 @@ net-misc/dhcp\fI-3.0_p2\fR
 思うこともある。
 そのため、普通のブール演算子を用意している:
 
+.nf
 \fI>\fRmedia-libs/libgd-1.6
-.br
 \fI>=\fRmedia-libs/libgd-1.6
-.br
 \fI=\fRmedia-libs/libgd-1.6
-.br
 \fI<=\fRmedia-libs/libgd-1.6
-.br
 \fI<\fRmedia-libs/libgd-1.6
+.fi
 .TP
 .B 拡張アトム接頭辞 [!~] と接尾辞 [*]
 もっとすごいこともできる。「!」と「*」を使えばパッケージのブロックや、
@@ -245,13 +244,12 @@ net-misc/dhcp\fI-3.0_p2\fR
 クラスとどのようにも組み合わせることができる。
 Portage ツリーにあるありふれた例をいくつか挙げると:
 
+.nf
 \fI!\fRapp-text/dos2unix
-.br
 =dev-libs/glib-2\fI*\fR
-.br
 \fI!\fRnet-fs/samba-2\fI*\fR
-.br
 \fI~\fRnet-libs/libnet-1.0.2a
+.fi
 
 \fI!\fR は同時にインストールされるパッケージのブロックを意味する。
 .br
@@ -301,15 +299,12 @@ Portage はこの依存関係を扱うために選択肢をいくつか用意している。
 .B || ( アトム アトム ... )
 あるパッケージを複数の異なるパッケージと動かすことができるが、
 バーチャルパッケージは適当でないとき、この構文を手軽に使うことができる。
-.br
+.nf
 .B || (
-.br
 .B     app-games/unreal-tournament
-.br
 .B     app-games/unreal-tournament-goty
-.br
 .B )
-.br
+.fi
 この例では unreal-tournament には通常版と goty 版があることが分かる。
 これらは同じベースファイルを提供するため、これらに依存するパッケージは
 通常版と goty 版のいずれに依存することもできる。バーチャルを追加するのは
@@ -317,21 +312,15 @@ Portage はこの依存関係を扱うために選択肢をいくつか用意している。
 .br
 別の好例は、パッケージが複数のビデオインタフェース向けにビルドできるが、
 同時にはそのうちの1つにだけ対応し、それ以外には対応できない場合がある。
-.br
+.nf
 .B || (
-.br
 .B     sdl? ( media-libs/libsdl )
-.br
 .B     svga? ( media-libs/svgalib )
-.br
 .B     opengl? ( virtual/opengl )
-.br
 .B     ggi? ( media-libs/libggi )
-.br
 .B     virtual/x11
-.br
 .B )
-.br
+.fi
 この例では列挙されたパッケージのうち1つだけが選択され、順番づけは現れる
 順番によって決定される。したがって、sdl が選ばれる機会が最も高く、次に
 svga、その次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれ
@@ -460,31 +449,22 @@ pkg_*inst 関数と同様だが、アンインストール用である。
 もし \fIUSE item\fR が \fBUSE\fR 変数にあれば、\fIUSE item\fR 
 がエコーされて関数は 0 を返す。
 もし \fIUSE item\fR が \fBUSE\fR 変数になければ、関数は 1 を返す。
-\fBuseq\fR はエコーを返さない \fBuse\fR であり、
-\fBuse\fR の出力を解釈したり扱ったりするのではなく、可能な限り
-\fBuseq\fR を使わなければならない。
+\fBuseq\fR はエコーを返さない \fBuse\fR である。
 .RS
 .TP
 .I 例:
+.nf
 if useq gnome ; then
-.br
 	guiconf="--enable-gui=gnome --with-x"
-.br
 elif useq gtk ; then
-.br
 	guiconf="--enable-gui=gtk --with-x"
-.br
 elif useq X ; then
-.br
 	guiconf="--enable-gui=athena --with-x"
-.br
 else
-.br
 	# No gui version will be built
-.br
 	guiconf=""
-.br
 fi
+.fi
 .RE
 .TP
 \fBuse_with\fR \fI<USE item>\fR \fI[configure option]\fR
@@ -498,23 +478,19 @@ fi
 .RS
 .TP
 .I 例:
+.nf
 USE="jpeg"
-.br
 myconf="$(use_with jpeg libjpeg)"
-.br
 (myconf は "--with-libjpeg" という値になる)
 
 USE=""
-.br
 myconf="$(use_with jpeg libjpeg)"
-.br
 (myconf は "--without-libjpeg" という値になる)
 
 USE="opengl"
-.br
 myconf="$(use_with opengl)`"
-.br
 (myconf は "--with-opengl" という値になる)
+.fi
 .RE
 .TP
 \fBuse_enable\fR \fI<USE item>\fR \fI[configure option]\fR
@@ -919,4 +895,4 @@ Nicholas Jones <carpaski@gentoo.org>
 Mike Frysinger <vapier@gentoo.org>
 .fi
 .SH "CVS ヘッダ"
-原文: ebuild.5,v 1.71
+原文: ebuild.5,v 1.73

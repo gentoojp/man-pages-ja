@@ -6,11 +6,12 @@
 .\"
 .\" Updated to 1.6 on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
 .\" Updated to 1.15 on 29 Sep 2004
+.\" Updated to 1.18 on 15 Nov 2004
 .\"
 .TH "PORTAGE" "5" "Jan 2004" "Portage 2.0.51" "Portage"
 .SH 名前
 portage \- Gentooの中核
-.SH 説明
+.SH "説明"
 現在のPortageコードは、多くの異なった設定ファイルを使用する。その多くは、
 ユーザーや通常の開発者には知られていない。ここでは、ユーザーがPortageをより
 効果的に使用できるように、その知られていない部分を明らかにしていく。
@@ -18,7 +19,7 @@ portage \- Gentooの中核
 .IP 注釈:
 もし、何かをemergeする方法についての情報を探しているのなら、
 .BR emerge (1)を参照のこと。
-.SH 書式
+.SH "書式"
 .TP
 .BR /etc/
 .nf
@@ -32,6 +33,7 @@ deprecated
 make.defaults
 packages
 packages.build
+package.provided
 use.defaults
 use.mask
 virtuals
@@ -49,6 +51,9 @@ categories
 use.mask
 .fi
 .TP
+.BR /etc/portage/profile/
+サイト固有の\fB/etc/make.profile/\fR上書き設定
+.TP
 .BR /usr/portage/profiles/
 .nf
 arch.list
@@ -61,7 +66,7 @@ use.local.desc
 .TP
 .BR /var/lib/portage/
 world
-.SH 用語解説
+.SH "用語解説"
 後続の章では、いくつかの用語は聞き慣れない、あるいはPortage特有の意味で使用
 されているかもしれない。詳細な説明は、参照先のmanページを見ること。
 .RS
@@ -86,7 +91,7 @@ world
 さらに詳しくは: 
 .BR ebuild (5)
 .RE
-.SH ファイルの説明
+.SH "ファイルの説明"
 .TP
 .BR /etc/
 .RS
@@ -102,12 +107,12 @@ Portageに対するグローバルなカスタム設定。\fBmake.conf\fR(5)を参照のこと。
 .TP
 .BR /etc/make.profile/
 通常は\fB/usr/portage/profiles/\fR内の正確なプロファイルに対するシンボリック
-リンクになっている。これは、Portageツリーの一部であるため`emerge sync`を
+リンクになっている。これは、Portageツリーの一部であるため`emerge \-\-sync`を
 実行することで簡単にアップデート/再生成することができる。
 このファイルでは、(通常はアーキテクチャ特有の)プロファイルが定義される。
 もし、カスタムプロファイルが必要なら、独自の\fB/etc/make.profile/\fRを作成して、
 そちらに移行すること。しかし、単にいくつかの設定を上書きしたい場合、
-これらのファイルは編集しないように。というのは、次回の`emerge sync`で
+これらのファイルは編集しないように。というのは、次回の`emerge \-\-sync`で
 それらの変更は消失してしまうためである。上書き設定については、後述される章の
 \fB/etc/portage/\fRを参照のこと。
 .RS
@@ -158,24 +163,54 @@ stage3とGRPセットをビルドするときにcatalystが使う特殊なUSEフラグ。
 \- systemクラスに追加されるパッケージは、*で始まる。
 .fi
 .I 注:
-カスケードプロファイル設定においては、パッケージアトムの先頭に '-'
+カスケードプロファイル設定においては、パッケージアトムの先頭に '\-'
 をつけることによって、親プロファイルで追加されたパッケージを子プロファイルで削除することができる。
 
 .I 例:
 .nf
 # この行はコメント!
 # glibc 2.3 以下のバージョンのみを許可する場合
-<sys-libs/glibc-2.3
+<sys\-libs/glibc\-2.3
 # バージョンを問わず、bashをsystemクラスに追加する場合
-*app-shells/bash
+*app\-shells/bash
 # 4.2以前のバージョンのreadlineのみを許可し、
 # systemクラスに追加する場合
-*<sys-libs/readline-4.2
+*<sys\-libs/readline\-4.2
 .fi
 .TP
 .BR packages.build
 stage1 tarballを構成するパッケージのリスト(1行に1つ)。
 実際は、stageを構築する人にしか関係ない。
+.TP
+.BR package.provided
+Portageがインストールされている(provided)とみなすパッケージのリスト
+(1行に1つ)。Linux 以外のシステムに移植するときに便利である。
+Portage はここに挙げられたパッケージは、
+別のパッケージがここに挙げられているバージョンより新しいものを
+明示的に要求しないかぎり、パッケージを更新しようとしない。
+基本的に、これは\fBemerge \-\-inject\fRの文法を置き換えるリストである。
+
+例えば、自分で2.6系列のカーネルを管理しているとすると、
+Portage に「sys-kernel/development-sources-2.6.7」
+がすでにインストールされていると教え、
+この依存関係を外すことができる。
+
+.I 書式:
+.nf
+\- コメントは # で始まる
+\- 1行につき1 DEPEND アトム
+\- 関係演算子は使えない
+\- バージョンは必須
+.fi
+
+.I 例:
+.nf
+# カーネルの面倒は自分で見る
+sys-kernel/development-sources-2.6.7
+
+# 自分お手製の QT をインストール
+x11-libs/qt-3.3.0
+.fi
 .TP
 .BR use.defaults
 ここでは、デフォルトのUSEフラグは定義していないが、auto-USEフラグと
@@ -184,8 +219,8 @@ stage1 tarballを構成するパッケージのリスト(1行に1つ)。
 USEフラグが有効にされる場合がある、というものがある。このファイルは、USEフラグと
 パッケージの関係が記述されており、これに基づいてauto-USE機能が動作することになる。
 
-言い換えると、もし"sdl"あるいは"-sdl"をUSEフラグに指定していなくても、
-media-libs/libsdlはemergeしている場合、Portageは自動的に"sdl"をUSEフラグに
+言い換えると、もし"sdl"あるいは"\-sdl"をUSEフラグに指定していなくても、
+media\-libs/libsdlはemergeしている場合、Portageは自動的に"sdl"をUSEフラグに
 追加する。
 
 .I 書式:
@@ -196,11 +231,11 @@ media-libs/libsdlはemergeしている場合、Portageは自動的に"sdl"をUSEフラグに
 
 .I 例:
 .nf
-# media-libs/libsdlで"sdl"を有効にする場合
-sdl        media-libs/libsdl
-# dev-lang/tclおよびdev-lang/tkが両方ある場合のみ
+# media\-libs/libsdlで"sdl"を有効にする場合
+sdl        media\-libs/libsdl
+# dev\-lang/tclおよびdev\-lang/tkが両方ある場合のみ
 # tcltkを有効にしたい場合
-tcltk      dev-lang/tcl   dev-lang/tk
+tcltk      dev\-lang/tcl   dev\-lang/tk
 .fi
 .TP
 .BR use.mask
@@ -215,12 +250,12 @@ USEフラグの中には、アーキテクチャによっては意味を成さないものもある
 .TP
 .BR virtuals
 このファイルでは、デフォルトでvirtualとなるパッケージを管理する。
-例えば、あるパッケージがe-mailを送信する必要がある場合、virtual/mtaが必要となる。
+例えば、あるパッケージがe\-mailを送信する必要がある場合、virtual/mtaが必要となる。
 virtual/mtaを提供するパッケージ(qmail、sendmail、postfix等)が無い場合、Portageは
 このファイルを見てどのパッケージを使用するかを決定する。この場合、Gentooは
-(virtualファイルで定義されているので)、net-mail/ssmtpをデフォルトで使用する。
-net-mail/ssmtpがデフォルトで定義されているのは、このパッケージが
-e-mailを送信するには極めて単純で最小限であると言う理由からである。
+(virtualファイルで定義されているので)、net\-mail/ssmtpをデフォルトで使用する。
+net\-mail/ssmtpがデフォルトで定義されているのは、このパッケージが
+e\-mailを送信するには極めて単純で最小限であると言う理由からである。
 
 .I 書式:
 .nf
@@ -230,10 +265,10 @@ e-mailを送信するには極めて単純で最小限であると言う理由からである。
 
 .I 例:
 .nf
-# net-mail/ssmtpをデフォルトのMTAとして使用する場合
-virtual/mta           net-mail/ssmtp
-# app-dicts/aspell-enをデフォルトの辞書として使用する場合
-virtual/aspell-dict   app-dicts/aspell-en
+# net\-mail/ssmtpをデフォルトのMTAとして使用する場合
+virtual/mta           net\-mail/ssmtp
+# app\-dicts/aspell\-enをデフォルトの辞書として使用する場合
+virtual/aspell\-dict   app\-dicts/aspell\-en
 .fi
 .RE
 .TP
@@ -241,8 +276,9 @@ virtual/aspell-dict   app-dicts/aspell-en
 .RS
 .TP
 .BR bashrc
-必要な時、このファイルはebuild用のroot環境とは異なった環境を構築するのに
-使用される。構文は、他のbashスクリプトと同じである。
+必要な時、このファイルはebuild用に標準のroot
+環境とは異なる特殊な環境を構築するのに使用される。
+構文は、他のbashスクリプトと同じである。
 .TP
 .BR package.mask
 マスクするDEPENDアトムのリスト。特定のバージョンのパッケージがうまく動作しない
@@ -259,8 +295,8 @@ virtual/aspell-dict   app-dicts/aspell-en
 .nf
 # 1.0.4496以前のバージョンの
 # nvidiaドライバーをマスクしたい場合
->=media-video/nvidia-kernel-1.0.4496
->=media-video/nvidia-glx-1.0.4496
+>=media\-video/nvidia\-kernel\-1.0.4496
+>=media\-video/nvidia\-glx\-1.0.4496
 .fi
 .TP
 .BR package.unmask
@@ -280,11 +316,11 @@ KEYWORDSによってマスクされたパッケージは上書きしないことに注意。
 .I 例:
 .nf
 # 常に非安定版のlibgdを使用したい場合
-media-libs/libgd ~x86
+media\-libs/libgd ~x86
 # 安定版のmplayerのみを使用する場合
-media-video/mplayer -~x86
-# -* でマスクされたパッケージを使う
->=sys-kernel/linux-headers-2.6 -*
+media\-video/mplayer \-~x86
+# \-* でマスクされたパッケージを使う
+>=sys\-kernel/linux\-headers\-2.6 \-*
 .fi
 .TP
 .BR package.use
@@ -302,9 +338,9 @@ GTK用のドキュメントは欲しいが、QTのドキュメントはいらないといった場合に、
 .I 例:
 .nf
 # GTK 2.x のドキュメントを有効にする場合
-=x11-libs/gtk+-2* doc
+=x11\-libs/gtk+\-2* doc
 # QTのmysqlサポートを無効にする場合
-x11-libs/qt -mysql
+x11\-libs/qt \-mysql
 .fi
 .TP
 .BR mirrors
@@ -345,9 +381,35 @@ gnu ftp://ftp.nctu.edu.tw/UNIX/gnu/
 
 .I 例:
 .nf
-app-hackers
-media-other
+app\-hackers
+media\-other
 .fi
+.TP
+.BR virtuals
+このファイルはデフォルトでどのパッケージがvirtualを提供するのか制御する。
+例えば、あるパッケージが e\-mail を送る必要があるのであれば、
+そのパッケージは virtual/mta を必要とする。
+virtual/mta (qmail、sendmail、postfix、など)を提供するパッケージがなければ、
+Portageはこのファイルを見てどのパッケージを使うか知る。
+この例では、Gentoo は net\-mail/ssmtp を (virtualsファイルで定義されている)
+デフォルトとして使う。
+これは、e\-mailを送るのにまさに最小のことだけをするパッケージだからである。
+
+.I 書式:
+.br
+\- コメントは # で始まる
+.br
+\- 1行につき1 virtual と DEPEND アトムベース
+
+.I 例:
+.br
+# net\-mail/ssmtp をデフォルトの mta に
+.br
+virtual/mta           net\-mail/ssmtp
+.br
+# app\-dicts/aspell\-en をデフォルトの辞書に
+.br
+virtual/aspell\-dict   app\-dicts/aspell\-en
 .RE
 .TP
 .BR /usr/portage/profiles/
@@ -381,10 +443,10 @@ sparc
 
 .I 例:
 .nf
-app-admin
-dev-lang
-games-strategy
-sys-kernel
+app\-admin
+dev\-lang
+games\-strategy
+sys\-kernel
 .fi
 .TP
 .BR package.mask
@@ -404,11 +466,11 @@ DEPENDアトムのリストが記述されている。最新のKDEのベータ版をPortageに
 .I 例:
 .nf
 # セキュリティ対策
-<sys-libs/zlib-1.1.4
+<sys\-libs/zlib\-1.1.4
 # <caleb@gentoo.org> (10 Sep 2003)
 # 新しいKDEのベータ版
-=kde-base/kde-3.2.0_beta1
-=kde-base/kdeaccessibility-3.2.0_beta1
+=kde\-base/kde\-3.2.0_beta1
+=kde\-base/kdeaccessibility\-3.2.0_beta1
 .fi
 .TP
 .BR thirdpartymirrors
@@ -442,9 +504,9 @@ kernel http://www.kernel.org/pub http://www.us.kernel.org/pub
 
 .I 例:
 .nf
-3dfx - Adds support for 3dfx video cards
-acl - Adds support for Access Control Lists
-doc - Adds extra documentation
+3dfx \- Adds support for 3dfx video cards
+acl \- Adds support for Access Control Lists
+doc \- Adds extra documentation
 .fi
 .TP
 .BR use.local.desc
@@ -459,10 +521,10 @@ doc - Adds extra documentation
 
 .I 例:
 .nf
-app-editors/nano:justify - Toggle the justify option
-dev-games/clanlib:clanJavaScript - Enables javascript support
-dev-libs/DirectFB:fusion - add Multi Application support
-games-emulation/xmess:net - Add network support
+app\-editors/nano:justify \- Toggle the justify option
+dev\-games/clanlib:clanJavaScript \- Enables javascript support
+dev\-libs/DirectFB:fusion \- add Multi Application support
+games\-emulation/xmess:net \- Add network support
 .fi
 .TP
 .BR use.mask
@@ -475,11 +537,11 @@ games-emulation/xmess:net - Add network support
 .TP
 .BR world
 パッケージをemargeする時はいつでも、指定したパッケージ名はここに記録される。
-そして、`emerge world -up`を実行したときには、パッケージのリストは
+そして、`emerge world \-up`を実行したときには、パッケージのリストは
 このファイルから読み込まれる。依存関係のために、インストールされたパッケージまで
 ここに記述されるという意味ではないことに注意すること。例えば、
 `emerge mod_php`を実行した段階で、まだapacheをインストールしていない場合、
-"dev-php/mod_php"はworldファイルに記録されるが、"net-www/apache"は
+"dev\-php/mod_php"はworldファイルに記録されるが、"net\-www/apache"は
 記録されない。詳細は、\fBemerge\fR(1)を参照のこと。
 
 .I 書式:
@@ -489,12 +551,12 @@ games-emulation/xmess:net - Add network support
 
 .I 例:
 .nf
-games-misc/fortune-mod-gentoo-dev
-dev-libs/uclibc
-app-cdr/cdemu
+games\-misc/fortune\-mod\-gentoo\-dev
+dev\-libs/uclibc
+app\-cdr/cdemu
 .fi
 .RE
-.SH 作者
+.SH "作者"
 .nf
 Marius Mauch <genone@gentoo.org>
 Mike Frysinger <vapier@gentoo.org>
@@ -508,4 +570,4 @@ Drake Wyrm <wyrm@haell.com>
 .BR ebuild (5),
 .BR make.conf (5)
 .SH "CVS ヘッダ"
-原文: portage.5,v 1.15
+原文: portage.5,v 1.18

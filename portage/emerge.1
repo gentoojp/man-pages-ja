@@ -7,6 +7,7 @@
 .\" Updated to 1.48 on 19 Apr 2004
 .\" Updated to 1.51 on 18 Jun 2004
 .\" Updated to 1.61 on 29 Sep 2004
+.\" Updated to 1.71 on 15 Nov 2004
 .\"
 .TH "EMERGE" "1" "Jun 2003" "Portage 2.0.51" "Portage"
 .SH "名前"
@@ -17,16 +18,13 @@ emerge \- Portage システムへのコマンドラインインタフェース
 [\fIoptions\fR] [\fIaction\fR] [\fIebuild\fR | \fItbz2file\fR | \fIclass\fR | \fIdependency\fR] ...
 .TP
 .BR emerge
-[\fIoptions\fR] [\fIaction\fR] \fBebuildfile\fR
+\fB\-\-sync\fR | \fB\-\-info\fR | \fB\-\-search\fR
 .TP
 .BR emerge
-\fBsync\fR | \fBmetadata\fR
+\fI\-\-help\fR [\fBsystem\fR | \fBconfig\fR | \fBsync\fR]
 .TP
 .BR emerge
-\fI\-\-help \-h\fR [\fBsystem\fR | \fBconfig\fR | \fBsync\fR]
-.TP
-.BR emerge
-\fI\-\-version\fR
+\fI\-\-version\fR | \fI\-V\fR
 .SH "説明"
 \fBemerge\fR は Portage システムへのもっとも信頼のおける
 コマンドラインインタフェースである。
@@ -56,6 +54,8 @@ emerge \- Portage システムへのコマンドラインインタフェース
 また、\fIebuild\fR には
 \fB/usr/portage/app\-admin/python/python\-2.2.1\-r2.ebuild\fR
 のような実際のファイル名を使うこともできる。
+警告:\fBemerge /path/to/ebuild\fRの実装は正しく動かないので、
+この構文を使ってはならない。
 .TP
 .BR tbz2 ファイル
 \fItbz2 ファイル\fR は \fBebuild <パッケージ名>\-<バージョン番号>.ebuild
@@ -68,13 +68,14 @@ package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 現在は2つのクラスがサポートされている: \fBsystem\fR と \fBworld\fR である。
 \fBsystem\fR はシステムが正しく動作するために必要と思われるパッケージ
 群を指し、\fBworld\fR は \fBsystem\fR にあるパッケージ全てに加え、
-\fB/var/cache/edb/world\fR に挙げられているパッケージを含む。
+\fB/var/lib/portage/world\fR に挙げられているパッケージを含む。
 [詳しい情報は後述する \fBファイル\fR を参照。]  
 これらのコマンドは一般的に \fB\-\-update\fR と組み合わせて使う。
 .TP
 .BR 依存関係
 \fI依存関係\fR はインストールしたいパッケージに依存するパッケージを
-記述している。たとえば、\fB>=dev\-lang/python\-2.2.1\-r2\fR
+記述している。\fIこれらの「アトム」について詳しくはportage(5)を参照。
+たとえば、\fB>=dev\-lang/python\-2.2.1\-r2\fR
 は Python の 2.2.1\-r2 以上の最新バージョンにマッチする。
 同様に、\fB<dev\-lang/python\-2.0\fR は Python の 2.0
 より前の最新バージョンにマッチする。
@@ -93,18 +94,18 @@ package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
 最終的にパッケージは \fBworld\fR ファイルに追加され、
 のちのちの更新対象になる。
 .TP
-.BR "clean " (\fB\-c\fR)
+.BR "\-\-clean " (\fB\-c\fR)
 システムの機能に影響を与えないパッケージを削除し、
 システムをきれいにする。
 引数には \fIebuild\fR、\fIクラス\fR、もしくは\fI依存関係\fR
-をとることができる。例えば、\fBemerge clean binutils\fR 
+をとることができる。例えば、\fBemerge \-\-clean binutils\fR 
 とすると binutils の古いバージョンを削除し、
 \fBemerge clean net\-www/mozilla\-0.9.9\-r2\fR
 とすると特定のバージョンの Mozilla を削除する。
 一般的に、このオプションは使っても安全である。
-clean \fBではスロットがないパッケージは削除しないことに注意\fR。
+\-\-clean \fBではスロットがないパッケージは削除しないことに注意\fR。
 .TP
-.BR depclean
+.BR \-\-depclean
 システムにインストールされているパッケージで、
 はっきりとした理由なしにインストールされているパッケージ全てを
 決定する。
@@ -117,16 +118,16 @@ clean \fBではスロットがないパッケージは削除しないことに注意\fR。
 リンクするパッケージが動かなくなり、ライブラリが見つからない
 と文句を言うパッケージが出る可能性がある。\fR
 文句を言うパッケージを再 emerge すればこの問題は解決される。
-\fBUSE フラグを変更すると depclean
+\fBUSE フラグを変更すると \-\-depclean
 の出力に大きな影響を与えることに注意。\fR
 .TP
-.BR info
+.BR \-\-info
 これはバグ報告に入れるための情報のリストで、
 開発者が報告を受けた問題を解決するために役立つ。
 \fBバグ報告を出すときにはこの情報を入れること。\fR
 \fI\-\-verbose\fR オプションをつけると詳細な出力がえられる。
 .TP
-.BR "inject " (\fB\-i\fR)
+.BR "\-\-inject " (\fB\-i\fR)
 パッケージを注入(inject)し、そのパッケージの「スタブ」を挿入して、
 Portage にそのパッケージがインストールされたと思わせる。
 これが便利なのは、たとえば XFree86 のバイナリバージョンが
@@ -135,62 +136,64 @@ Portage にそのパッケージがインストールされたと思わせる。
 注入するためにはカテゴリーとパッケージの特定のバージョンを
 指定\fBしなければならない\fR。
 例:
-\fBemerge inject sys\-kernel/gentoo\-sources\-2.4.19\fR
+\fBemerge \-\-inject sys\-kernel/gentoo\-sources\-2.4.19\fR
 .TP
-.BR metadata
-通常は\fBemerge sync\fRを使ってrsyncアップデートを行った時の最後に行われる、
+.BR \-\-metadata
+通常は\fBemerge \-\-sync\fRを使ってrsyncアップデートを行った時の最後に行われる、
 メタキャッシュファイルの処理を行う。この処理で、Portageがパッケージデータを
 解析する前の探索に使うキャッシュデータベースを作成する。
 .TP
-.BR "prune " (\fB\-P\fR)
+.BR "\-\-prune " (\fB\-P\fR)
 \fB警告: このアクションは重要なパッケージを削除する可能性がある!\fR 
-マッチするパッケージの最新版以外のバージョンを全て削除する。
-パッケージに複数の SLOT があるなら、各 SLOT の最新バージョン
-を残す。このアクションは依存関係のチェックをしないので、
+マッチするパッケージの最新版以外のバージョンを全て削除しようとする。
+このコマンドは現在のところ同じパッケージに複数のバージョンがあると
+正しく処理することができないので、注意すること！
+このアクションは依存関係のチェックをしないので、
 システムが正常に稼働するために必要なパッケージまで削除しかねない。
 \fB自分がなにをしているのか本当に分かっていなければ、
-このアクションの代わりに\fR clean \fBを使うこと\fR。
+このアクションの代わりに\fR \-\-clean \fBを使うこと\fR。
 このアクションの引数は \fIebuild\fR、\fIクラス\fRまたは\fI依存関係\fR
-である。\-\- 具体例は上記 \fBclean\fR を参照。
+である。\-\- 具体例は上記 \fB\-\-clean\fR を参照。
+厳重注意！
 .TP
-.BR regen
+.BR \-\-regen
 Portage に Portage ツリーに入っている全 ebuild の依存関係キャッシュを
 チェックし更新させる。キャッシュは検索と依存関係ツリーの構築の速度向上
 に使われる。rsync はサーバ側のキャッシュを使ってキャッシュを更新するので、
 rsync ユーザにはこのコマンドは薦めない。「rsync ユーザ」と他のユーザの
 間の違いを知らないなら、あなたは「rsync ユーザ」だろう :)  
-rsync ユーザはキャッシュを再生成するためには単に \fBemerge sync\fR 
+rsync ユーザはキャッシュを再生成するためには単に \fBemerge \-\-sync\fR 
 を実行するだけでよい。
 Portageが更新されたあと、通常Portageがsync操作の最後に行うように、
-rsyncユーザは\fBemerge metadata\fRを実行してキャッシュを再構築するのが
+rsyncユーザは\fBemerge \-\-metadata\fRを実行してキャッシュを再構築するのが
 簡便かもしれない。
 .TP
-.BR search (\fB\-s\fR)
+.BR \-\-search (\fB\-s\fR)
 Portage ツリーの中を指定された文字列でマッチするものを検索する。
 検索文字列は正規表現である。たとえば、
-\fBemerge search "^kde"\fR
+\fBemerge \-\-search "^kde"\fR
 は「kde」で始まるパッケージ全てを検索し、
-\fBemerge search "gcc$"\fR
+\fBemerge \-\-search "gcc$"\fR
 は「gcc」で終わるパッケージ全てを検索し、
-\fBemerge search "office"\fR
+\fBemerge \-\-search "office"\fR
 は「office」という単語を含むパッケージ全てを検索する。
 パッケージの説明文も検索したいなら、
 \fB\-\-searchdesc\fR オプションを使う。
 .TP
-.BR sync
+.BR \-\-sync
 rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。
 \fBPortage ツリーに対して行った変更は全て消去されることに注意\fR。
 特殊な環境を除いて、このアクションは更新に \fBrsync\fR を用いる。
 変更の削除を防ぐ方法については、make.conf の PORTDIR_OVERLAY
 の記述を参照。
 .TP
-.BR unmerge (\fB\-C\fR)
+.BR \-\-unmerge (\fB\-C\fR)
 \fB警告: このアクションは重要なパッケージを削除する可能性がある!\fR
 マッチするパッケージ全てを削除する。
 このアクションは依存関係のチェックをしないので、
 システムが正常に稼働するために必要なパッケージまで削除しかねない。
 このアクションの引数は \fIebuild\fR、\fIクラス\fRまたは\fI依存関係\fR
-である。\-\- 具体例は上記 \fBclean\fR を参照。
+である。\-\- 具体例は上記 \fB\-\-clean\fR を参照。
 .SH "オプション"
 .TP
 .BR "\-\-ask " (\fB\-a\fR)
@@ -250,14 +253,13 @@ emerge コマンドをデバッグモードで動かす。
 パッケージをビルドせず、単に全パッケージの fetch だけを行う
 (メインパッケージに加えて依存するパッケージ全部)。
 .TP
-.BR "\-\-fetch-all-uri " (\fB\-f\fR)
+.BR "\-\-fetch\-all\-uri " (\fB\-f\fR)
 パッケージをビルドせず、単に全パッケージの fetch だけを行う
 (メインパッケージに加えて依存するパッケージ全部)。
 必要ある可能性のあるファイル全てを取得する。
 .TP 
 .BR "\-\-getbinpkg " (\fB\-g\fR)
 \fIPORTAGE_BINHOST\fR (\fBmake.conf\fR(5)参照)で設定されたサーバーと場所を用い、Portageが見つけた各バイナリパッケージの情報をダウンロードする。Portageはこの情報を使って依存関係リストを構築する。このオプションは\fB\-k\fRを含意する。(バイナリパッケージだけでインストールする場合は\fB\-gK\fRを用いる。)
-)
 .TP
 .BR "\-\-getbinpkgonly " (\fB\-G\fR)
 上で見たように、このオプションは\fB\-g\fRと等価であるが、ローカルの計算機の情報を一切用いない点が異なる。ローカルのパッケージディレクトリにパッケージが存在するかどうか調べることなく、全部のバイナリがリモートサーバーからダウンロードされる。
@@ -315,10 +317,23 @@ Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
 よく知らないパッケージをインストールする前には \fB\-\-pretend\fR
 を使うことを強く勧める。
 出力は、
-\fIN\fR = 新規、
-\fIU\fR = 更新、
-\fIR\fR = 入れ換え、
-\fIF\fR = 制限つきパッケージの fetch、
+.br
+
+.br
+\fIN\fR = 新規、(まだインストールされていない)
+.br
+\fIS\fR = 新規、SLOTインストール(並立するバージョン)
+.br
+\fIU\fR = 更新、(バージョン変更)
+.br
+\fID\fR = ダウングレード、(最新バージョンよ古いものを入れる)
+.br
+\fIR\fR = 入れ換え、(同じバージョンを再度インストール)
+.br
+\fIF\fR = 制限つきパッケージの fetch、(手動でダウンロード)
+.br
+\fIf\fR = 制限つきパッケージの fetch、(すでにダウンロード済)
+.br
 \fIB\fR = インストール済みパッケージによってブロック、
 となっている。
 .TP
@@ -378,7 +393,6 @@ emerge の際依存関係を満たすために CD からバイナリパッケージを「引っ張って」
 .BR "\-\-version " (\fB\-V\fR)
 \fBemerge\fR のバージョン番号を表示する。
 他のオプションと組み合わせて使うことはできない。
-このアクションの名前とフォーマットは慣習的なものである。
 .SH "環境オプション"
 .TP
 \fBROOT\fR = \fI[path]\fR
@@ -386,9 +400,10 @@ emerge の際依存関係を満たすために CD からバイナリパッケージを「引っ張って」
 ルートファイルシステムを指定するには、\fBROOT\fR を使う。
 デフォルトは / である。
 .SH "出力"
-emerge と pretend/verbose フラグを組み合わせて使う場合、
-出力は一見しただけではちょっと理解しがたいかもしれない。
-このセクションでは簡略化された情報が意味しているのはなにか説明する。
+\fBemerge\fR に \fB\-\-pretend\fR と \fB\-\-verbose\fR
+フラグを組み合わせて使う場合、
+その出力は一見しただけではちょっと理解しがたいかもしれない。
+このセクションではここで使われる省略形について説明する。
 .TP
 .B [blocks B     ] app\-text/dos2unix (from pkg app\-text/hd2u\-0.8.0)
 dos2unix は hd2u がインストールされるのをブロックしている。
@@ -400,15 +415,22 @@ dos2unix は hd2u がインストールされるのをブロックしている。
 .B [ebuild  N    ] app\-games/qstat\-25c
 qstat は新規インストールパッケージであり、初めてインストールされる。
 .TP
+.B [ebuild  NS   ] dev-libs/glib-2.4.7
+あるバージョンの glib をすでにインストールしているが、
+違う SLOT の「新しい」バージョンがインストール可能である。
+.TP
 .B [ebuild   R   ] sys\-apps/sed\-4.0.5
 sed 4.0.5 はすでにインストールされているが、
 emerge を実行したら Portage は指定されたパッケージを再インストールする
 (この場合は sed である)。
 .TP
 .B [ebuild    F  ] media\-video/realplayer\-8\-r6
-realplayer パッケージは手動でソースをダウンロードする必要がある。
+realplayer パッケージは手動でソースを fetch する必要がある。
 パッケージを emerge しようとするとき、ソースが見つからなければ、
 Portage は停止し必要なファイルをダウンロードするための手順を提示する。
+.TP
+.B [ebuild    f  ] media\-video/realplayer\-8\-r6
+realplayer パッケージのファイルはすでにダウンロードされている。
 .TP
 .B [ebuild     U ] net\-fs/samba\-2.2.8_pre1 [2.2.7a]
 Samba 2.2.7a はすでに emerge されており、
@@ -437,14 +459,16 @@ emerge を実行したら Portage は libgd をバージョン 1.8.4
 するときに起こる。いずれの場合でも新しいバージョンの xfree 
 がアップデートする楽しみに使える。
 .TP
-.B [ebuild     U ] sys\-devel/distcc\-2.16 [2.13-r1] \-gtk +ipv6* (\-selinux)
-\-gtk と \-gnome は nmap を emerge するときの \fBUSE\fR 変数の
-状態を示している。この場合 nmap が \fBUSE\fR 変数の gtk と gnome
+.B [ebuild     U ] sys\-devel/distcc\-2.16 [2.13\-r1] \-gtk +ipv6* (\-selinux)
+\-gtk と \-gnome は distcc を emerge するときの \fBUSE\fR 変数の
+状態を示している。この場合 distcc が \fBUSE\fR 変数の gtk と gnome
 が利用可能だが、現在の設定では gtk と gnome は無効になっていることが
-分かる。そのため、nmap を emerge するとき gtk と gnome のサポートは
+分かる。そのため、distcc を emerge するとき gtk と gnome のサポートは
 有効にならない。アステリスクはパッケージが最後にインストールされてから
-USEフラグが変わったことを示している。(\-selinux)のように、
-丸括弧に囲まれたUSEフラグは、現在のシステムプロファイルでは常に無効にされ、
+\fBUSE\fR フラグが変わったことを示す。この例では、ipv6
+は現在有効になっているが、以前は無効であったことを示している。
+(\-selinux)のように、丸括弧に囲まれた \fBUSE\fR フラグは、
+現在のシステムプロファイルでは常に無効にされ、
 使うことはできないフラグであることを示している。
 .br
 \fB*注:\fR \fBUSE\fR の状態は \fB\-\-pretend\fR と \fB\-\-verbose\fR
@@ -473,8 +497,10 @@ world ファイルには追加されない。world のアップデートでそういった
 で指定されている値を上書きし、インストールしたくない
 依存パッケージを使うのを避けることができる。
 \fBコマンドラインで指定された USE フラグは記憶されない\fR。
-たとえば、\fBUSE="\-x \-gnome" emerge mc\fR とすると mc
+たとえば、\fBUSE="\-X \-gnome" emerge mc\fR とすると mc
 をこの USE 設定で emerge する。
+もしこの USE フラグの設定を保持したければ、/etc/portage/package.use
+に書けばよい。
 .LP 
 If \fBemerge \-\-update system\fR および \fB emerge \-\-update world\fR
 はがエラーメッセージを出して失敗する場合、ebuild がその時点で使っている
@@ -494,15 +520,14 @@ Gentoo 開発者の時間を浪費させる。もしかりに問題が起きても
 壊れたパッケージやセキュリティホールになりうるパッケージをマスクする。
 マスクは \fBpackage.mask\fR と KEYWORDS という2つの方法で行うことができる。
 .TP
-\fBpackage.mask\fR
+.BR package.mask
 \fBpackage.mask\fR はまず問題を引き起こすパッケージの使用や、
 異なったシステムでは問題があることが知られているパッケージの使用を
-ブロックする。このファイルは \fI${PORTDIR}/profiles\fR にある。
-パッケージは、このファイルでパッケージをマスクしている行の最初に
-コメント文字 (\fB#\fR) を付加することによってマスクを外すことができる。
+ブロックする。このファイルは \fI/usr/portage/profiles\fR にある。
 .TP
-\fBKEYWORDS\fR
-KEYWORDS もテスト中のパッケージをマスクするために使うことができる。
+.BR KEYWORDS
+\fBebuild\fR ファイルの中の \fBKEYWORDS\fR
+変数もテスト中のパッケージをマスクするために使うことができる。
 各パッケージにはアーキテクチャ固有のキーワードがあり、
 \fBPortage\fR にどのシステムがそのパッケージをインストールすることが
 できるか知らせることができる。
@@ -525,13 +550,14 @@ xfree もアップグレード候補として対象に入れる。
 .LP 
 \fBhttp://bugs.gentoo.org/\fR
 .LP 
-バグ報告を提出するとき、\fBemerge info\fR
+バグ報告を提出するとき、\fBemerge \-\-info\fR
 の出力結果を入れるようにしてください。
 .SH "関連項目"
 .BR "emerge \-\-help",
 .BR ebuild (1),
 .BR ebuild (5),
-.BR make.conf (5)
+.BR make.conf (5),
+.BR portage (5)
 .LP 
 
 \fI/usr/lib/portage/bin\fR にあるたくさんの補助アプリケーション
@@ -540,7 +566,7 @@ xfree もアップグレード候補として対象に入れる。
 のような有用なスクリプトが収められている。
 .SH "ファイル"
 .TP
-\fB/var/cache/edb/world\fR 
+\fB/var/lib/portage/world\fR 
 ユーザ指定パッケージの全リストが書かれている。
 このファイルは編集しても問題ない。
 \fBworld\fR クラスのアップデートで更新してほしいパッケージを追加したり、
@@ -572,7 +598,7 @@ virtual 依存関係を解決するために使われるデフォルトパッケージのリストが
 書かれている。
 \fBこのファイルを編集してはならない\fR。
 .TP
-\fB/etc/make.profile/package\fR
+\fB/etc/make.profile/packages\fR
 基本システムとして使われるパッケージのリストが書かれている。
 \fBsystem\fR と \fBworld\fR クラスがこのファイルを参照する。
 \fBこのファイルを編集してはならない\fR。
@@ -592,5 +618,8 @@ Nicholas Jones <carpaski@gentoo.org>
 Phil Bordelon <phil@thenexusproject.org>
 .br 
 Mike Frysinger <vapier@gentoo.org>
+.br
+Marius Mauch <genone@gentoo.org>
+.br
 .SH "CVS ヘッダ"
-原文: emerge.1,v 1.61
+原文: emerge.1,v 1.71
