@@ -83,12 +83,12 @@ http://www.freedesktop.org/standards/menu/draft/menu-spec/menu-spec.html
 .TP
 .B "epatch について"
 \fBepatch\fR はパッチを簡単にするために設計された。
-開発者が \fBpatch\fR(1) コマンドを使ったときにもやる、
+開発者が \fBpatch\fR(1) コマンドを使ったときにもするであろう、
 一般的なチェックを全部やってくれる。
 この関数は、いろいろなオフセット値 (-p0 から -p5 まで、\fBepatch\fR 
 が呼ばれたときの作業ディレクトリに相対的に)でパッチを当てようと試みる。
 パッチを当てるのに(--dry-run でテストすることによって)失敗すれば、
-\fBpatch\fR は \fBdie\fR を呼ぶことによって emerge
+\fBepatch\fR は \fBdie\fR を呼ぶことによって emerge
 プロセスを停止させる。
 デバッグが簡単なように、パッチを試行した出力がログファイルとして残る。
 パッチが成功すれば、
