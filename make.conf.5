@@ -1,4 +1,4 @@
-.TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.47" "portage"
+.TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.47" "Portage"
 .SH "名前"
 make.conf \- Portage のカスタム設定
 .SH "書式"
@@ -101,7 +101,7 @@ strip が行なわれない。
 デフォルトの値は ${PORTDIR}/distfiles である。
 .TP
 \fBFEATURES\fR = \fI"buildpkg ccache cvs digest mirror noauto noclean sandbox"\fR
-デフォルトで行なわれる portage のアクションを定義する。
+デフォルトで行なわれる Portage のアクションを定義する。
 開発者やメンテナ以外の人はこのオプションを変更しないこと。
 「sandbox」は \fBFEATURES\fR の重要な機能の一つで、デフォルトで
 無効にしてはいけない。
@@ -110,7 +110,7 @@ strip が行なわれない。
 .br
 \fIbuildpkg\fR: バイナリパッケージを常に生成する。
 .br
-\fIccache\fR: ccache パッケージの portage サポートを有効にする。
+\fIccache\fR: ccache パッケージの Portage サポートを有効にする。
 .br
 \fIcvs\fR: パッケージを emerge したあとのファイルの自動コミットを有効にする。
 .br
@@ -140,7 +140,7 @@ strip が行なわれない。
 \fIsandbox\fR: \fBemerge\fR(1) と \fBebuild(1)\fR を実行する際
 sandbox を有効にする。
 .br
-\fIuserpriv\fR: portage を使う際に root 権限を使わず、portage:portage
+\fIuserpriv\fR: Portage を使う際に root 権限を使わず、portage:portage
 権限でコンパイルする。\fIusersandbox\fR が有効になっていない場合は
 sandbox なしでパッケージをコンパイルする。
 .br
@@ -240,7 +240,7 @@ Portage ツリーの場所を定義する。
 \fBSYNC\fR = \fI[RSYNC ミラー]\fR
 この変数にはローカルの rsync ミラーのリストを入れる。
 これらの rsync サーバは `emerge rsync` が実行されたときローカルの
-portage ツリーを同期させるために使われる。
+Portage ツリーを同期させるために使われる。
 .TP
 \fBUSE\fR = \fI[スペースで区切られた USE オプションのリスト]\fR
 この変数にはあるパッケージのビルド時の挙動をコントロールするオプション
@@ -293,4 +293,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-$Header$
+原文: /home/cvsroot/gentoo-src/portage/man/make.conf.5,v 1.15 2003/07/09 18:51:43 vapier
