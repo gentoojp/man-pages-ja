@@ -4,6 +4,8 @@
 .\" Original version: 2.0.50
 .\" Translated on 16 Feb 2004 by TAKEDA hiroyuki <diapar@mizar.freemail.ne.jp>
 .\"
+.\" Updated to 1.6 on 18 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
+.\"
 .TH "PORTAGE" "5" "Jan 2004" "Portage 2.0.50" "Portage"
 .SH 名前
 portage \- Gentooの中核
@@ -266,14 +268,13 @@ virtual/aspell-dict   app-dicts/aspell-en
 KEYWORDSによってマスクされたパッケージは上書きしないことに注意。
 .TP
 .BR package.keywords
-パッケージごとのKEYWORD。通常の安定したマシンにまだ非安定版のパッケージを混在させたい場合
-、あるいはその逆の場合に使用される。このファイルは、ACCEPT_KEYWORDSの設定を上書きする。
+パッケージごとのKEYWORD。通常の安定したマシンにまだ非安定版のパッケージを混在させたい場合、あるいはその逆の場合に使用される。このファイルは、1パッケージに対するACCEPT_KEYWORDSを追加する。
 
 .I 書式:
 .br
 \- # から始まる行はコメントである。
 .br
-\- 1行に1つのDEPENDアトムと、それに続けてKEYWORDを記述する。
+\- 1行に1つのDEPENDアトムと、それに続けてACCEPT_KEYWORDSを記述する。
 
 .I 例:
 .br
@@ -283,7 +284,10 @@ media-libs/libgd ~x86
 .br
 # 安定版のmplayerのみを使用する場合
 .br
-media-video/mplayer x86
+media-video/mplayer -~x86
+.br
+# -* でマスクされたパッケージを使う
+>=sys-kernel/linux-headers-2.6 -*
 .TP
 .BR package.use
 パッケージごとのUSEフラグ。ローカルUSEフラグを追跡したり、特定のパッケージのみに
@@ -534,4 +538,4 @@ Drake Wyrm <wyrm@haell.com>
 .BR ebuild (5),
 .BR make.conf (5)
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/portage.5,v 1.4 2004/02/05 04:52:04 vapier Exp
+原文: /home/cvsroot/gentoo-src/portage/man/portage.5,v 1.6 2004/05/11 05:51:46 vapier
