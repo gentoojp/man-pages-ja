@@ -3,14 +3,83 @@
 .\"     all rights reserved.
 .\" Translated on 25 Feb 2004 by Akinori Hattori <hattya@gentoo.org>
 .\"
-.TH ekeyword "1" "Nov 2003" "gentoolkit"
-.SH "名前"
-ekeyword \- Gentoo: ebuild キーワードチェンジャー
-.SH "書式"
-.B ekeyword
-.SH "バグ"
-このツールにはまだ man ページがない。このことについてのバグは 
-http://bugs.gentoo.org に気軽に投稿していただきたい。
-.SH "著者"
-この情報を提供する man ページは Karl Trygve Kalleberg <karltk@gentoo.org> によっ
-て書かれた。
+.TH ekeyword "1" "2004-04-13" "gentoolkit"
+.SH 名前
+ekeyword \- Gentoo: パッケージの KEYWORDS を変更
+.SH 書式
+ekeyword { arch|~arch|\-arch|^arch } ebuild...
+.SH 説明
+このツールは、複数の ebuild への KEYWORDS の追加、更新を簡単にする。コマンドライ
+ン引数として渡されたキーワード、ebuild のリストは渡された順に処理していく。その
+ため、キーワードは一つ前のキーワードから次に表れるまでの間にある ebuild に対して
+処理される。
+.PP
+全ての arch を指定するかわりに "all" という単語を用いることができる。これは、そ
+の ebuild にもともと指定されていたキーワード全て指定したものとして変更が適用され
+る。
+.PP
+先頭にある ^ はその arch を除外する。
+.SH オプション
+現在、 ekeyword はとてもシンプルなため、オプションは何もない。もしかしたら、将来 
+\fB\-\-help\fR と \fB\-\-version\fR を追加するかもしれないが、今のところは 
+gentoolkit のバージョンだけで十分である。
+.SH 例
+一つの arch を安定とマークする。
+
+.RS 2
+.nf
+$ ekeyword alpha metalog-0.7-r1.ebuild
+metalog-0.7-r1.ebuild
+< KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+---
+> KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ~amd64 ~ia64"
+.fi
+.RE
+.PP
+バージョンアップをするときに、全ての arch をテストとマークする:
+
+.RS 2
+.nf
+$ ekeyword ~all metalog-0.7-r2.ebuild
+metalog-0.7-r2.ebuild
+< KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
+---
+> KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+.fi
+.RE
+.PP
+一つの arch を除き、全ての arch で壊れていることを表す:
+
+.RS 2
+.nf
+$ ekeyword ^all -* ~x86 metalog-0.7-r3.ebuild
+metalog-0.7-r3.ebuild
+< KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+---
+> KEYWORDS="-* ~x86"
+.fi
+.RE
+.PP
+一度に多くのことを行う:
+
+.RS 2
+.nf
+$ ekeyword alpha metalog-0.7-r1.ebuild \e
+    ~all metalog-0.7-r2.ebuild ^all -* ~x86 metalog-0.7-r3.ebuild
+metalog-0.7-r1.ebuild
+< KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+---
+> KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ~amd64 ~ia64"
+metalog-0.7-r2.ebuild
+< KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
+---
+> KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+metalog-0.7-r3.ebuild
+< KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+---
+> KEYWORDS="-* ~x86"
+.fi
+.RE
+.SH 注意
+このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見した
+場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。
