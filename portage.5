@@ -1,0 +1,536 @@
+.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Original version: 2.0.50
+.\" Translated on 12 Feb 2004 by takeda horoyuki <diapar@mizar.freemail.ne.jp>
+.\"
+.TH "PORTAGE" "5" "Jan 2004" "Portage 2.0.50" "Portage"
+.SH 名前
+portage \- Gentooの中核
+.SH 説明
+現在のPortageコードは、多くの異なった設定ファイルを使用しています。その多くは、
+ユーザーや通常の開発者には知られていません。ここでは、ユーザーがPortageをより
+効果的に使用できる様に、その知られていない部分を明らかにしていきましょう。
+これは、まだmanページに乗っていないファイルのみに対するリファレンスです。
+.IP 注釈:
+もし、何かをemergeする方法についての情報を探しているのなら、
+.BR emerge (1)を参照してください。
+.SH 概要
+.TP
+.BR /etc/
+make.globals
+.br
+.BR make.conf (5)
+.TP
+.BR /etc/make.profile/
+deprecated
+.br
+make.defaults
+.br
+packages
+.br
+packages.build
+.br
+use.defaults
+.br
+use.mask
+.br
+virtuals
+.TP
+.BR /etc/portage/
+bashrc
+.br
+package.mask
+.br
+package.unmask
+.br
+package.keywords
+.br
+package.use
+.br
+mirrors
+.br
+categories
+.br
+use.mask
+.TP
+.BR /usr/portage/profiles/
+arch.list
+.br
+categories
+.br
+package.mask
+.br
+thirdpartymirrors
+.br
+use.desc
+.br
+use.local.desc
+.TP
+.BR /var/cache/edb/
+virtuals
+.br
+world
+.SH 用語解説
+後続の章では、いくつかの用語は聞き慣れない、あるいはPortage特有の意味で使
+用されているかもしれません。詳細な説明は、参照先のmanページを見てください。
+.RS
+.TP
+.B DEPENDアトム(それぞれのパッケージ名)
+パッケージ名と一致する文字列。カテゴリ名/パッケージ名という形式です。
+オプションで、論理演算子やバージョンを含めることもできます。
+.br
+さらに詳しくは: 
+.BR ebuild (5)
+.TP
+.B KEYWORD
+それぞれのアーキテクチャは、ユニークなKEYWORDを持ちます。
+.br
+さらに詳しくは: 
+.BR ebuild (5)
+.TP
+.B virtual
+"virtual"カテゴリの一部であるDEPENDアトム。異なるパッケージが依存性を満足
+しますが、それらのうち一つしか必要無い様なときに使用されます。
+.br
+さらに詳しくは: 
+.BR ebuild (5)
+.RE
+.SH ファイルの説明
+.TP
+.BR /etc/
+.RS
+.TP
+.BR make.globals
+Portageのグローバルなデフォルト設定。このファイルはportageパッケージに
+含まれてます。\fBmake.conf\fR内の設定は、これを上書きします。書式
+については、\fBmake.conf\fR(5)にて広範に説明されています。
+.TP
+.BR make.conf
+Portageに対するグローバルなカスタム設定。\fBmake.conf\fR(5)を見てください。
+.RE
+.TP
+.BR /etc/make.profile/
+通常は\fB/usr/portage/profiles/\fR内の正確なプロファイルに対するシンボリック
+リンクになっています。これは、Portageツリーの一部であるため`emerge sync`を
+実行することで簡単にアップデート/再生成することができます。
+このファイルでは、(通常はarch特有の)プロファイルが定義されています。
+もし、カスタムプロファイルが必要なら、独自の\fB/etc/make.profile/\fRを作成して、
+そちらに移行してください。しかし、単にいくつかの設定を上書きしたい場合、
+これらのファイルは編集しないでください。というのは、次回の`emerge sync`で
+それらの変更は消失してしまうからです。上書き設定については、後述される章の
+\fB/etc/portage/\fRを見てください。
+.RS
+.TP
+.BR deprecated
+このファイルは、デプリケーテッド、つまり、Gentooによってもはやサポートされない
+プロファイルを記述します。また、ユーザーがアップグレードする際に推奨される
+プロファイル名を含みます。
+.TP
+.BR make.defaults
+Portageのデフォルトのプロファイル設定。書式については
+\fBmake.conf\fR(5)で述べられています。
+.TP
+.BR packages
+このファイルには、２つの目的があります。一つは、特定のパッケージ/バージョンを
+プロファイルに基づいてマスクすることです。二つ目は、\fIsystem\fRという特別な
+クラスを構成するパッケージのリストを提供します。
+
+.I 書式:
+.br
+\- #から始まる行はコメントです。 
+.br
+\- 一行に一つのマスク対象のDEPENDアトムを記述します。
+.br
+\- systemクラスに追加されるパッケージは、*で始まります。
+
+.I 例:
+.br
+# これはコメントです !
+.br
+# glibc 2.3 以下のバージョンのみを許可する場合
+.br
+<sys-libs/glibc-2.3
+.br
+# どのバージョンのbashもsystemクラスに追加する場合
+.br
+*app-shells/bash
+.br
+# 4.2以前のバージョンのreadlineのみを許可し、
+.br
+# systemクラスに追加する場合
+.br
+*<sys-libs/readline-4.2
+.TP
+.BR packages.build
+stage1 tarballを構成するパッケージのリスト(一行に一つ)。実際は、stageを
+構築する人にしか関係ありません。
+.TP
+.BR use.defaults
+ここでは、デフォルトのUSEフラグは定義していませんが、auto-USEフラグ
+と呼ばれているものを定義しています。フラグが明示的には無効にされていない状態で、
+パッケージがインストールされる場合には、USEフラグが有効にされる場合があるという
+Portageの機能は、あまり知られていません。このファイルは、USEフラグとパッケージの
+関係が記述されており、これに基づいてauto-USE機能が動作することになります。
+言い換えると、もし"sdl"あるいは"-sdl"をUSEフラグに指定していないが、
+media-libs/libsdlはemergeしている場合、Portageは自動的に"sdl"をUSEフラグに
+追加します。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのUSEフラグと、DEPENDベースアトムのリストを記述します。
+
+.I 例:
+.br
+.br
+# media-libs/libsdlで"sdl"を有効にする場合
+.br
+sdl        media-libs/libsdl
+.br
+# dev-lang/tclおよびdev-lang/tkが両方ある場合のみ
+.br
+# tcltkを有効にしたい場合
+.br
+tcltk      dev-lang/tcl   dev-lang/tk
+.TP
+.BR use.mask
+あるUSEフラグは、archによっては意味を成さないものもあります
+(例えば、non-ppcやmmxを非x86な環境での有効化)。ここには、マスクするものを列挙します。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのUSEフラグを記述します。
+.TP
+.BR virtuals
+このファイルでは、デフォルトでvirtualとなるパッケージを管理します。
+例えば、あるパッケージがe-mailを送信する必要がある場合、virtual/mtaが必要です。
+virtual/mtaを提供するパッケージ(qmail、sendmail、postfix等)が無い場合、Portageは
+このファイルを見てどのパッケージを使用するかを決めます。この場合、Gentooは
+(virtualファイルで定義されているので)net-mail/ssmtpをデフォルトで使用します
+net-mail/ssmtpがデフォルトで定義されている理由は、このパッケージが
+e-mailを送信するには極めて単純で最小限のものだからです。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのvirtual名とDEPENDアトムのペアを記述します。
+
+.I 例:
+.br
+# net-mail/ssmtpをデフォルトのMTAとして使用する場合
+.br
+virtual/mta           net-mail/ssmtp
+.br
+# app-dicts/aspell-enをデフォルトの辞書として使用する場合
+.br
+virtual/aspell-dict   app-dicts/aspell-en
+.RE
+.TP
+.BR /etc/portage/
+.RS
+.TP
+.BR bashrc
+必要な時、このファイルはebuild用のroot環境とは異なった環境を構築するのに
+使用されます。構文は、他のbashスクリプトと同じです。
+.TP
+.BR package.mask
+マスクするDEPENDアトムのリスト。特定のバージョンのパッケージが上手く動作しない場合に
+役に立ちます。例えば、Nvidiaドライバーを使用していますが、1.0.4496以前のものだけが
+問題ない、という場合。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのDEPENDアトムを記述します。
+
+.I 例:
+.br
+# 1.0.4496以前のバージョンの
+.br
+# nvidiaドライバーをマスクしたい場合
+.br
+>=media-video/nvidia-kernel-1.0.4496
+.br
+>=media-video/nvidia-glx-1.0.4496
+.TP
+.BR package.unmask
+前述したpackage.maskの様に、アンマスクしたパッケージを列挙します。
+グローバルなprofile.maskファイルの設定を上書きしたい場合に使用されます(詳細は後述)。
+KEYWORDSによってマスクされたパッケージは上書きしないことに注意してください。
+.TP
+.BR package.keywords
+パッケージ毎のKEYWORD。通常の安定したマシンにまだ非安定版のパッケージを混在させたい場合
+、あるいはその逆の場合に使用されます。このファイルは、ACCEPT_KEYWORDSの設定を上書きします。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのDEPENDアトムと、それに続けてKEYWORDを記述します。
+
+.I 例:
+.br
+# 常に非安定版のlibgdを使用したい場合
+.br
+media-libs/libgd ~x86
+.br
+# 安定版のmplayerのみを使用する場合
+.br
+media-video/mplayer x86
+.TP
+.BR package.use
+パッケージ毎のUSEフラグ。ローカルUSEフラグを追跡したり、特定のパッケージのみに
+USEフラグを有効にしたい時に使用されます。GTKの開発を行っていて、
+GTK用のドキュメントは欲しいが、QTのドキュメントはいらないといった場合に、
+極めて簡単にそれを実現することが可能です。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのDEPENDアトムと、それに続けてUSEフラグのリストを記述します。
+
+.I 例:
+.br
+# GTK 2.x のドキュメントを有効にする場合
+.br
+=x11-libs/gtk+-2* doc
+.br
+# QTのmysqlサポートを無効にする場合
+.br
+x11-libs/qt -mysql
+.TP
+.BR mirrors
+Portageは、mirror:// の形式のURLに遭遇した場合、実際のホストをここから検索します。
+もしミラーサイトがここに見つからない場合、グローバルなミラーサイトのファイルである
+/usr/portage/profiles/thirdpartymirrorsを調べます。また、"local"と呼ばれる特別な
+ミラー種別も設定しているかもしれません。このミラーリストは、GENTOO_MIRRORSより前に
+調べられ、パッケージにRESTRICT="nomirror"が指定してあっても使用されます。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- ミラーの種類と、それに続けてホストのリストを記述します。
+
+.I 例:
+.br
+# 社内からのみ使用される、ローカルのプライベートなミラーの場合
+.br
+local ftp://192.168.0.3/mirrors/gentoo http://192.168.0.4/distfiles
+
+# 日本在住なので、日本のミラーを最初に使用したい場合
+.br
+sourceforge http://keihanna.dl.sourceforge.net/
+
+# 台湾在住なので、GNUのローカルミラーを最初に使用したい場合
+.br
+gnu ftp://ftp.nctu.edu.tw/UNIX/gnu/
+.TP
+.BR categories
+/usr/portage、PORTDIR_OVERLAY、PKGDIRで使用される、有効なカテゴリのリスト
+(\fBmake.conf\fR(5)を参照してください)。このファイルによって、カスタムカテゴリを
+作成することが可能になります。
+
+.I 書式:
+.br
+\- 一行に一つのカテゴリを記述します。
+
+.I 例:
+.br
+app-hackers
+.br
+media-other
+.TP
+.BR use.mask
+\fB/etc/make.profile/\fRにある\fBuse.mask\fRと同様なものです。
+詳細は、前述した部分を参照してください。
+.RE
+.TP
+.BR /usr/portage/profiles/
+開発者によって管理されるGentooのグローバルな設定。これらの設定を上書きするには
+\fB/etc/portage/\fRにあるファイルを使用してください。
+.RS
+.TP
+.BR arch.list
+すべての有効なKEYWORDのリスト。これには修飾子は含まれません。
+
+.I 書式:
+.br
+\- 一行に一つのKEYWORDを記述します。
+
+.I 例:
+.br
+x86
+.br
+ppc
+.br
+sparc
+.TP
+.BR categories
+/usr/portage、PORTDIR_OVERLAY、PKGDIRで使用される、有効なカテゴリのリスト
+(\fBmake.conf\fR(5)を参照してください)。
+
+.I 書式:
+.br
+\- 一行に一つのカテゴリを記述します。
+
+.I 例:
+.br
+app-admin
+.br
+dev-lang
+.br
+games-strategy
+.br
+sys-kernel
+.TP
+.BR package.mask
+どのプロファイルにおいてもインストールされるべきでないパッケージに対する
+DEPENDアトムのリストが記述されています。最新のKDEのベータ版をPortageに
+追加はしますが、誰かが不本意にそれらにアップグレードしてしまわないようにする
+時に使用されます。また、セキュリティの問題で、特定のバージョンを手早く
+マスクしてしまいたい場合にも使用されます。このファイルには、
+なぜそのパッケージがマスクされているのか、また、誰がマスクしたのかが
+コメントとして常に記述されてます。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- 一行に一つのDEPENDアトムを記述します。
+
+.I 例:
+.br
+# セキュリティ対策
+.br
+<sys-libs/zlib-1.1.4
+.br
+# <caleb@gentoo.org> (10 Sep 2003)
+.br
+# 新しいKDEのベータ版
+.br
+=kde-base/kde-3.2.0_beta1
+.br
+=kde-base/kdeaccessibility-3.2.0_beta1
+.TP
+.BR thirdpartymirrors
+mirror:// 形式のURLと、実際のミラーリストと対応づけを制御します。
+こうすることで、一つのサーバーに過負荷がかかることを防ぎます。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- ミラー種別と、それに続けてホストのリストを記述します。
+
+.I 例:
+.br
+sourceforge http://aleron.dl.sourceforge.net/sourceforge http://unc.dl.sourceforge.net/sourceforge
+
+gentoo http://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/ ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo/distfiles
+
+kernel http://www.kernel.org/pub http://www.us.kernel.org/pub
+.TP
+.BR use.desc
+全てのグローバルなUSEフラグは、それが何をするものなのかという説明と共に、
+このファイルに記述されていなければなりません。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- USEフラグ \- 簡単な説明
+
+.I 例:
+.br
+3dfx - 3dfxビデオカードサポートの追加
+.br
+acl - アクセスコントロールリストサポートの追加
+.br
+doc - ドキュメントの追加
+.TP
+.BR use.local.desc
+全てのローカルなUSEフラグは、パッケージ名とその説明と共に、
+ここに記述されていなければなりません。
+
+.I 書式:
+.br
+\- # から始まる行はコメントです。
+.br
+\- パッケージ:USEフラグ \- 説明
+
+.I 例:
+.br
+app-editors/nano:justify - justifyオプションの有効/無効
+.br
+dev-games/clanlib:clanJavaScript - javascriptサポートの有効化
+.br
+dev-libs/DirectFB:fusion - マルチアプリケーションサポートの追加
+.br
+games-emulation/xmess:net - ネットワークサポートの追加
+.RE
+.TP
+.BR /var/cache/edb/
+.RS
+.TP
+.BR virtuals
+virtualとして提供されているパッケージをemerge時の、
+virtual名とパッケージとの対応づけは、ここに記述されます。
+
+.I 書式:
+.br
+\- virtual名と、それに続けてvirtualを提供するDEPENDベースアトムを記述します。
+
+.I 例:
+.br
+virtual/inetd sys-apps/xinetd
+.br
+virtual/opengl media-video/nvidia-glx x11-base/xfree
+.br
+virtual/mta net-mail/qmail
+.br
+virtual/editor app-editors/vim app-editors/nano
+.TP
+.BR world
+パッケージをemargeする時はいつでも、そのパッケージ名はここに記録されます。
+そして、`emerge world -up`を実行したときには、パッケージのリストはこの
+ファイルから読み込まれます。インストールされたパッケージの依存関係が
+ここに記述されるという意味ではないことに注意してください。例えば、
+`emerge mod_php`を実行した場合で、まだapacheをインストールしていない場合、
+"dev-php/mod_php"はworldファイルに記録されますが、"net-www/apache"は
+記録されません。詳細は、\fBemerge\fR(1)を参照してください。
+
+.I 書式:
+.br
+\- 一行に一つのDEPENDベースアトムを記述します。
+
+.I 例:
+.br
+games-misc/fortune-mod-gentoo-dev
+.br
+dev-libs/uclibc
+.br
+app-cdr/cdemu
+.RE
+.SH 作者
+Marius Mauch <genone@gentoo.org>
+.br
+Mike Frysinger <vapier@gentoo.org>
+.br
+Drake Wyrm <wyrm@haell.com>
+.SH "バグの報告"
+バグは、http://bugs.gentoo.org/ から報告してください。
+.SH "参照"
+.BR emerge (1),
+.BR ebuild (1),
+.BR ebuild (5),
+.BR make.conf (5)
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/portage.5,v 1.4 2004/02/05 04:52:04 vapier Exp
