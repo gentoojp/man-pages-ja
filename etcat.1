@@ -2,25 +2,25 @@
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Original version: 0.1.4
-.\" Translated on 26 Aug 2003 by Hattya <hattya@inter7.jp>
+.\" Translated on 16 Oct 2003 by Hattya <hattya@inter7.jp>
 .\"
 .TH "etcat" "1" "0.1.4" "Alastair Tse <liquidx@gentoo.org>" "Gentoo Administration"
 .SH "名前"
 .LP 
-etcat \- Gentoo Portage インフォメーションエクストラクター
+etcat \- Gentoo Portage 情報抽出ツール
 .SH "書式"
 .LP 
 etcat [\fIoption\fP|command] <\fIquery|package\fP>
 
 .SH "説明"
 .LP 
-etcat は既存の Portage 関連ツールを補完しようとするものだが、どちらかというと上級者向けである。etcat はユーザーや開発者に対し、 Portage ツリーや Portage データベースを自分で探し回らなくとも、特定のパッケージに関する情報を素早く調べだす事を可能にする。
+etcat は既存の Portage 関連ツールを補完しようとするものだが、どちらかというと上級者向けである。etcat はユーザーや開発者に対し、 Portage ツリーや Portage データベースを自分で探し回らなくとも、特定のパッケージに関する情報を素早く調べ出すことを可能にする。
 
 .LP 
-具体的には、あるパッケージに対して利用可能なバージョンを、その状態により (安定/テスト中/マスク/インストール済み) かを強調して表示したり、パッケージごとの USE フラグをそのフラグの説明つきで表示したり、インストール済みのパッケージのサイズを計算したりする。そしてさらに、パッケージのあるバージョンに関する変更履歴を適切に表示する。
+具体的には、あるパッケージに対して利用可能なバージョンを、その状態により (安定/テスト中/マスク/インストール済み) かを強調して表示したり、パッケージごとの USE フラグをそのフラグの説明つきで表示したり、インストール済みのパッケージのサイズを計算したりする。そしてさらに、パッケージの変更履歴の中からあるバージョンに関する部分をを表示する。
 
 .LP 
-またパッケージの問い合わせに、次のような emerge よりも洗練された構文が使用できる。
+またパッケージの問い合わせに、emerge よりも洗練された次のような構文が使用できる。
 .LP .IP 
 mozilla\-1.1
 .br 
@@ -32,7 +32,7 @@ mozilla\-1.*
 .br 
 \fBbelongs\fR <\fI/path/to/file\fR> [\fIcategory\fR]
 .IP 
-ファイルがどのパッケージに属しているかを、選択した一つ以上のカテゴリーに限定して検索する。検索の速度を上げるために、カテゴリー名をワイルドカードで指定する事も出来る。(例. etcat belogns /usr/lib/libmpeg.so "media\-*")
+ファイルがどのパッケージに属しているかを、選択した一つ以上の category に限定して検索する。検索の速度を上げるために、category 名をワイルドカードで指定することもできる。(例. etcat belogns /usr/lib/libmpeg.so "media\-*")
 
 .LP 
 \fB\-c\fR <\fIpackage[\-version]\fR>
