@@ -201,9 +201,10 @@ Portage ツリーの場所を定義する。
 .br
 デフォルトは /usr/portage。
 .TP
-\fBPORTDIR_OVERLAY\fR = \fI[path]\fR
-ユーザが作った ebuild を保存し、emerge sync が実行されたときに
-上書きされないためのディレクトリを定義する。
+\fBPORTDIR_OVERLAY\fR = \fI[path] [different-path] [etc...]\fR
+ユーザが作った ebuild を保存するディレクトリを定義する。
+このディレクトリは `emerge sync` が実行されたときにも上書きされない。
+この値にはスペースで区切られたディレクトリ名が入る。
 .br
 デフォルトは値が入っていない。
 .TP
