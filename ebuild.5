@@ -1,9 +1,10 @@
-.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Copyright 1999-2004 Gentoo Technologies, Inc.
 .\" Distributed under the terms of the GNU General Public License v2
 .\"
 .\" Origial version: 2.0.47
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
+.\" Updated to 1.61 on 18 Jun 2004
 .\" Updated to 1.57 on 19 Apr 2004
 .\"
 .TH "EBUILD" "5" "Feb 2003" "Portage 2.0.47" "Portage"
@@ -301,15 +302,6 @@ Portage はこの依存関係を扱うために選択肢をいくつか用意している。
 .br
 .B jpeg? ( media-libs/jpeg )
 .TP
-.B usevar? ( USE が真の場合のアトム ) : ( USE が偽の場合のアトム )
-これは C 言語での三項演算子と同じように働く。あるパッケージが GTK2
-か GTK1 を使うが、両方同時には使えない場合、このように書けばそれを
-扱うことができる:
-.br
-.B gtk2? ( =x11-libs/gtk+-2* ) : ( =x11-libs/gtk+-1* )
-.br
-こうすることでデフォルトは優れた GTK2 ライブラリになる。
-.TP
 .B !usevar? ( アトム )
 ユーザが \fBUSE\fR 変数にあるオプションを設定していないときにかぎり
 あるパッケージを含めるには、次の構文を使う:
@@ -318,6 +310,15 @@ Portage はこの依存関係を扱うために選択肢をいくつか用意している。
 .br
 この構文はある機能の選択をサポートし、さらにデフォルトではその機能を
 有効にしておきたいときに便利である。
+.TP
+.B usevar? ( USE が真の場合のアトム ) : ( USE が偽の場合のアトム )
+これは C 言語での三項演算子と同じように働く。あるパッケージが GTK2
+か GTK1 を使うが、両方同時には使えない場合、このように書けばそれを
+扱うことができる:
+.br
+.B gtk2? ( =x11-libs/gtk+-2* ) : ( =x11-libs/gtk+-1* )
+.br
+こうすることでデフォルトは優れた GTK2 ライブラリになる。
 .TP
 .B || ( アトム アトム ... )
 あるパッケージを複数の異なるパッケージと動かすことができるが、
@@ -466,15 +467,15 @@ pkg_*inst 関数と同様だが、アンインストール用である。
 .RS
 .TP
 .I 例:
-if [ `use gnome` ] ; then
+if use gnome ; then
 .br
 	guiconf="--enable-gui=gnome --with-x"
 .br
-elif [ `use gtk` ] ; then
+elif use gtk ; then
 .br
 	guiconf="--enable-gui=gtk --with-x"
 .br
-elif [ `use X` ] ; then
+elif use X ; then
 .br
 	guiconf="--enable-gui=athena --with-x"
 .br
@@ -500,21 +501,21 @@ fi
 .I 例:
 USE="jpeg"
 .br
-myconf="`use_with jpeg libjpeg`"
+myconf="$(use_with jpeg libjpeg)"
 .br
 (myconf は "--with-libjpeg" という値になる)
 
 USE=""
 .br
-myconf="`use_with jpeg libjpeg`"
+myconf="$(use_with jpeg libjpeg)"
 .br
 (myconf は "--without-libjpeg" という値になる)
 
-USE="pic"
+USE="opengl"
 .br
-myconf="`use_with pic`"
+myconf="$(use_with opengl)`"
 .br
-(myconf は "--with-pic" という値になる)
+(myconf は "--with-opengl" という値になる)
 .RE
 .TP
 \fBuse_enable\fR \fI<USE item>\fR \fI[configure option]\fR
@@ -553,7 +554,7 @@ myconf="`use_with pic`"
 .RS
 .TP
 .I 例:
-VERINS=`best_version net-ftp/glftpd`
+VERINS="$(best_version net-ftp/glftpd)"
 .br
 (もし glftpd-1.27 がインストールされていれば、
 VERINS は "net-ftp/glftpd-1.27" という値になる)
@@ -758,6 +759,18 @@ Portage に伝える。\fBdodir\fR と同じように機能する。
 \fBdosbin\fR \fI<binary> [list of more binaries]\fR
 \fIbinary\fR や列挙されたバイナリを \fIDESTTREE\fR/sbin
 にインストールする。必要なディレクトリは全て作成する。
+.TP
+\fBdoinitd\fR \fI<init.d > [list of more init.d scripts]\fR
+Gentoo \fIinit.d スクリプト\fR をインストールする。
+Gentoo init.d スクリプトのための正しい場所にインストールされなければならない(/etc/init.d/)。
+.TP
+\fBdoconfd\fR \fI<conf.d file> [list of more conf.d file]\fR
+Gentoo \fIconf.d ファイル\fR をインストールする。
+Gentoo conf.d ファイルのための正しい場所にインストールされなければならない(/etc/conf.d/)。
+.TP
+\fBdoenvd\fR \fI<env.d entry> [list of more env.d entries]\fR
+Gentoo \fIenv.d エントリー\fR をインストールする。
+Gentoo env.d エントリーのための正しい場所にインストールされなければならない(/etc/env.d/)。
 
 .PD 0
 .TP
@@ -775,7 +788,7 @@ Portage に伝える。\fBdodir\fR と同じように機能する。
 デフォルトは \fI-m0644\fR。
 .TP
 \fBdoman\fR \fI<man-page> [list of more man-pages]\fR
-man ファイルの拡張子に従って man ページを \fIDESTDIR\fR/man/man[1\-8n]
+man ファイルの拡張子に従って man ページを /usr/share/man/man[1\-8n]
 にインストールする。ファイルが gzip されていなければ gzip する。
 必要なディレクトリは全て作成する。
 .TP
@@ -857,6 +870,12 @@ chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
 .TP
 \fBnewsbin\fR \fI<old file> <new filename>\fR
 .TP
+\fBnewinitd\fR \fI<old file> <new filename>\fR
+.TP
+\fBnewconfd\fR \fI<old file> <new filename>\fR
+.TP
+\fBnewenvd\fR \fI<old file> <new filename>\fR
+.TP
 \fBnewlib\fR \fI<old file> <new filename>\fR
 .TP
 \fBnewlib.so\fR \fI<old file> <new filename>\fR
@@ -904,4 +923,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.57 2004/01/13 06:27:31 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.61 2004/05/21 22:05:35 vapier
