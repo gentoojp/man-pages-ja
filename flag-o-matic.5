@@ -1,0 +1,46 @@
+.TH "FLAG-O-MATIC" "5" "Jun 2003" "Portage 2.0.48" "Portage"
+.SH "名前"
+flag\-o\-matic \- CFLAGS/CXXFLAGS を簡単かつ安全に操作
+.SH "説明"
+\fBflag\-o\-matic\fR eclass は CFLAGS/CXXFLAGS
+変数を操作するための関数群である。
+.SH "関数"
+.TP
+.BR "append-flags " "\fI<フラグ>\fR"
+現在の CFLAGS/CXXFLAGS に追加のフラグを設定する。
+.TP
+.BR "filter-flags " "\fI<フラグ>\fR"
+CFLAGS/CXXFLAGS から特定のフラグを取り除く。
+この関数は完全なフラグにマッチする。
+.TP
+.BR "get-flag " "\fI<フラグ>\fR"
+指定されたフラグの値を探し、エコーする。
+.TP
+.BR "is-flag " "\fI<フラグ>\fR"
+フラグが CFLAGS か CXXFLAGS にあれば真を返す。
+.TP
+.BR "replace-flags " "\fI<旧フラグ>\fR \fI<新フラグ>\fR"
+旧フラグを全部新フラグで置き換える。
+.TP
+.BR "strip-flags"
+安全なフラグだと知られていないフラグ以外を全て CFLAGS/CXXFLAGS
+から除去する。stable プロフィールのユーザは下記のフラグしか
+使えないよう制限されている:
+.br
+.I "-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
+.br
+unstable プロフィールのユーザは上のフラグに加えて下記のフラグを
+使用することができる:
+.br
+.I "-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH "参照"
+.BR ebuild (5),
+.BR make.conf (5)
+.SH "ファイル"
+.BR /usr/portage/eclass/flag\-o\-matic.eclass
+.SH "著者"
+Mike Frysinger <vapier@gentoo.org>
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/flag-o-matic.5,v 1.1 2003/06/25 14:01:16 vapier
