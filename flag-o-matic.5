@@ -3,6 +3,7 @@
 .\"
 .\" Origial version: 2.0.48
 .\" Translated on 16 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\" Updated on 15 Nov 2003
 .\"
 .TH "FLAG-O-MATIC" "5" "Jun 2003" "Portage 2.0.48" "Portage"
 .SH "名前"
@@ -12,12 +13,17 @@ flag\-o\-matic \- CFLAGS/CXXFLAGS を簡単かつ安全に操作
 変数を操作するための関数セットである。
 .SH "関数"
 .TP
-.BR "append-flags " "\fI<フラグ>\fR"
+.BR "append-flags " "\fI<flag>\fR"
 現在の CFLAGS/CXXFLAGS に追加のフラグを設定する。
 .TP
-.BR "filter-flags " "\fI<フラグ>\fR"
+.BR "filter-flags " "\fI<flag>\fR"
 CFLAGS/CXXFLAGS から特定のフラグを取り除く。
 この関数はフラグに完全マッチする。
+.TP
+.BR "filter-mfpmath " "\fI<math types>\fR"
+指定された math type を fpmath の指定から取り除く。
+ユーザが -mfpmath=sse,386 と指定していれば、`filter-mfpmath sse`
+を実行すると -mfpmath=386 が残る。
 .TP
 .BR "get-flag " "\fI<フラグ>\fR"
 指定されたフラグの値を探し、エコーする。
@@ -49,4 +55,4 @@ unstable プロフィールのユーザは上のフラグに加えて下記のフラグを
 .SH "著者"
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/flag-o-matic.5,v 1.1 2003/06/25 14:01:16 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/flag-o-matic.5,v 1.2 2003/09/15 15:22:18 vapier
