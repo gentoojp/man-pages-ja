@@ -1,0 +1,65 @@
+.\" Copyright 1999-2003 Gentoo Technologies, Inc.
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Origial version: 2.0.49
+.\" Translated on 15 Nov 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\"
+.TH "QUICKPKG" "1" "Jul 2003" "Portage 2.0.49" "Portage"
+.SH 名前
+quickpkg \- Portage パッケージ作成
+.SH 書式
+.B quickpkg <list of pkgs>
+.SH 説明
+.I quickpkg
+はすでにファイルシステムにあるファイルを使うことによって Portage
+用のパッケージをすばやく作るために使うことができる。
+そして、作ったパッケージはどのシステムに置いても emerge
+することができる。バイナリパッケージを emerge するための構文は、
+\fBemerge\fR(1) を参照。これを使う利点は、パッケージを使える
+ようになるまでに、パッケージを展開し、 configure し、コンパイルし、
+そしてインストールするのを待つ必要がないことだ。また、これを使う
+欠点は、そのパッケージが持っているファイルは、最初インストールした
+ときから変更されていたとしても、ファイルシステムに存在しているものが
+含まれる、という点である。
+.br
+パッケージは作成されると \fBPKGDIR\fR に置かれる。
+この変数は \fBmake.conf\fR(5) で定義され、デフォルトは
+/var/tmp/portage-pkg である。
+.SH オプション
+.TP
+.B <list of packages>
+リストに現れる各パッケージは2つの形式をとることができる。
+1つは、仮想データベースの中にある、インストールされたエントリーの
+フルパスを指定することができる。つまり、
+/var/db/pkg/<カテゴリー>/<パッケージ名-バージョン>
+という形式で指定できる。もう1つの形式は、Portage の DEPEND アトム
+の形式である。このアトムとは、なにかを emerge したいときに
+\fBemerge\fR に与える形式と同じ形式である。完全な定義は
+\fBebuild\fR(5) を参照。
+.SH "例"
+.B quickpkg
+/var/db/pkg/dev-python/pyogg-1.1
+.br
+.B quickpkg
+planeshift
+.br
+.B quickpkg
+=apache-1.3.27-r1
+.br
+.B quickpkg
+=net-www/apache-2*
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "関連項目"
+.BR ebuild (5),
+.BR make.conf (5)
+.SH "ファイル"
+.TP
+.B /etc/make.conf
+\fBPKGDIR\fR 変数はここで定義されている。
+.SH 作者
+Terry Chan (原作者)
+.br
+Mike Frysinger <vapier@gentoo.org> (改良版作者)
+.SH "CVS ヘッダ"
+原文: /home/cvsroot/gentoo-src/portage/man/quickpkg.1,v 1.1 2003/07/22 17:08:06 vapier
