@@ -1,0 +1,71 @@
+.\"
+.\" Japanese Version Copyright (c) 2004 Akinori Hattori
+.\"     all rights reserved.
+.\" Translated on 11 Nov 2004 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH gensync 1 "0.1.0" "Gentoolkit" "Gentoo Administration"
+.SH 名前
+.LP 
+gensync \- Gentoo: オーバーレイ同期ツール
+.SH 書式
+.LP 
+gensync [\fIoption\fP] <\fIrepo-id-1 repo-id-2 ...\fP>
+
+.SH 説明
+
+.LP
+
+\fIgensync\fR は同期元と呼ばれる配布元から、あなたのマシンへと ebuild ファイルを同期させる。Portage は通常、Gentoo プロジェクトによって管理されている公式のportage ツリーからしか同期しない。しかしながら、\fIbreakmygentoo.net\fR のような開発ツリーの補助 ebuild の中には、ときどき好奇心旺盛な猛者たちが興味を持つものがあるかもしれない。
+
+このツールは、そのような同期元から同期するために使用することができる。
+
+.SH オプション
+.LP 
+\fB\-l\fR
+.br
+\fB--list-sources\fB
+.IP 
+\fIgensync\fR が利用可能な同期元の一覧。
+
+.LP 
+\fB\-V\fR
+.br
+\fB--version\fB
+.IP 
+バージョンを表示して終了する。
+
+.LP 
+\fB\-C\fR
+.br
+\fB--no-color\fB
+.IP 
+カラー使用しない。
+
+.LP 
+\fB\-h\fR
+.br 
+\fB\--help\fR
+.IP 
+ヘルプを表示する。
+
+.SH 設定ファイル
+.LP
+\fB/etc/gensync/gensync.conf\fR
+.IP
+メインの設定ファイル。コメントに説明がある。
+
+.LP
+\fB/etc/gensync/*.syncsource\fR
+.IP
+同期元ごとの設定ファイル。
+
+.SH 参考
+.LP
+\fIapp-portage/gentoolkit-dev\fR に含まれている、\fIechangelog\fR や \fIego\fR 
+のようなユーティリティー。
+
+.SH 著者
+.LP
+Matthew Schick <matt@breakmygentoo.net> (原著者)
+.br
+Karl Trygve Kalleberg <karltk@gentoo.org>

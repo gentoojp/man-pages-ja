@@ -1,16 +1,177 @@
 .\"
 .\" Japanese Version Copyright (c) 2004 Akinori Hattori
 .\"     all rights reserved.
-.\" Translated on 22 Sep 2004 by Akinori Hattori <hattya@gentoo.org>
+.\" Translated on 19 Dec 2004 by Akinori Hattori <hattya@gentoo.org>
 .\"
 .TH equery "1" "Jan 2004" "gentoolkit"
 .SH 名前
-equery \- Gentoo: パッケージ問い合わせツール
+equery \- Gentoo: パッケージ検索ツール
 .SH 書式
-.B equery
+.B equery  
+.I [global\-opts] command [local\-opts]
+.PP
+
+.SH 説明
+equery は、パッケージに含まれるファイルの一覧や、USE フラグ、指定されたパッケージに含まれるファイルの md5sum の一覧など、パッケージに関する様々な情報を表示できる柔軟なユーティリティーである。
+
+.SH オプション
+equery に対して 'command' が必ず必要なオプションである。多くのコマンドは 'pkgspec' を必要とし、それは <カテゴリー/>パッケージ名<-バージョン> のような形式である。つまり、パッケージ名が必須で、カテゴリー名やバージョンは任意ということである。
+
+[global\-opts] は次のうちのどれか:
+
+.B \-q, \-\-quiet
+最小限の表示だけにする
+.PP
+.B \-C, \-\-nocolor
+カラー表示をしない
+.PP
+.B \-h, \-\-help
+ヘルプを表示する
+.PP
+.B \-V, \-\-version
+equery のバージョンを表示する
+.PP
+
+最大一つのコマンドだけが実際に実行される。有効なコマンドは次の通り:
+.TP
+.B belongs <local\-opts> file
+このコマンドは指定されたファイルが含まれている全てのパッケージを表示する。
+.br
+注意: 通常一つのファイルは、一つのパッケージにのみ含まれている。もし、同じファイルが複数のパッケージに含まれている場合、たいてい問題を起こすことになるので報告すべきである。
+.br
+.IP
+<local\-opts> は次のうちのどちらかか、両方:
+.br
+.B \-c, \-\-category cat
+cat のカテゴリーのみを検索する
+.br
+.B \-e, \-\-earlyout
+見つかった時点で終了する
+
+.PP
+.B check pkgspec
+このコマンドは指定されたパッケージのファイルを、記録されている md5sum、タイムスタンプと比較する。
+.PP
+.TP
+.B depgraph <local\-opts> pkgspec
+このコマンドは pkgspec の依存ツリーを表示する。デフォルトでは、お互いがどんな依存関係であるかを示すためインデントをつけてある。
+.br
+<local\-opts> は次のうちのどちらかか、両方:
+.br
+.B \-U, \-\-no\-useflags
+USE フラグを表示しない。このオプションは実際には何もしない、USE フラグはこのオプションに関係なく表示しない。
+.br
+.B \-l, \-\-linear
+飾りづけをしない
+.PP
+.TP
+.B files <local\-opts> pkgspec
+対象パッケージに含まれているファイルの一覧を <local\-opts> で指定される情報とともに表示する。
+.br
+
+<local\-opts> は次のものの組み合わせ:
+.br
+.B \-\-timestamp
+各ファイルのタイムスタンプを表示する
+.br
+.B \-\-md5sum
+各ファイルの md5sum を表示する
+.br
+.B \-\-type
+各ファイルの種類を表示する
+.br
+.B \-\-filter=<rules>
+ファイルタイプかパスを元に出力を制限する
+.br
+.B \t<rules>
+はコンマ区切りのルールのリスト。利用可能なルール:
+.br
+.B \t\tdir\ 
+ディレクトリー
+.br
+.B \t\tobj\ 
+ファイル
+.br
+.B \t\tsym\ 
+シンボリックリンク
+.br
+.B \t\tdev\ 
+デバイスノード
+.br
+.B \t\tfifo
+名前付きパイプ
+.br
+.B \t\tpath
+ファイルのインストール先の短いパス
+.br
+.B \t\tconf
+設定ファイル ($CONFIG_PROTECT を元にして)
+.br
+.B \t\tcmd\ 
+ユーザーコマンド ($PATH を元にして)
+.br
+.B \t\tdoc\ 
+ドキュメント (/usr/share/doc から)
+.br
+.B \t\tman\ 
+マニュアル (/usr/share/man から)
+.br
+.B \t\tinfo
+info ページ (/usr/share/info から)
+.PP
+.TP
+.B list <local\-opts> pkgspec
+このコマンドはユーザが指定した pkgspec にマッチした、インストール済みパッケージ、インストールされていないパッケージ、portage ツリーにあるパッケージ、そしてオーバーレイにあるパッケージを表示する。
+
+<local\-opts> は \-I だけを指定してはならない。もし \-I を指定する場合は、\-p と/または \-o も指定されなければならない。デフォルトではインストール済みのパッケージのみを検索する。\-o はオーバーレイツリーのみを検索する [そして場合により、インストールされたパッケージも]、"portage ツリーは含まない"。
+
+.B \-i, \-\-installed
+インストール済みパッケージを検索する (標準)
+.br
+.B \-I, \-\-exclude\-installed
+インストール済みパッケージを検索しない
+.br
+.B \-p, \-\-portage\-tree
+portage ツリーも検索する (/usr/portage)
+.br
+.B \-o, \-\-overlay\-tree
+オーバーレイも検索する (/usr/local/portage)
+.PP
+.TP
+.B size <local\-opts> pkgspec
+このコマンドは指定されたパッケージに含まれるファイルの数と、そのサイズを適切な単位で表示する。
+
+唯一指定可能な <local\-opts>、もし指定されていれば:
+.br
+.B \-b, \-\-bytes
+単位をバイトでサイズを表示する
+.PP
+.TP
+.B uses <local\-opts> pkgspec 
+pkgspec の USE フラグを表示する。ローカルオプションは実装されていない。
+.PP
+.B which pkgspec
+pkgspec パッケージの ebuild のフルパスを表示する。
+.PP
+
+.SH 未実装のオプション
+.PP
+.B changes
+.PP
+.B depends
+.PP
+.B glsa \fR \- 当分の間 glsa\-check を使用していただきたい。
+.PP
+.B stats
+
+
+
 .SH バグ
-このつーるにはまだ man ページがない。このことについてのバグは
-http://bugs.gentoo.org に気軽に投稿していただきたい。
+多くのオプションは実装されていない。コマンドライン解析はいくつかの作業に使えた。
+.br
+バグ報告は http://bugs.gentoo.org まで。
 .SH 著者
-この情報を提供する man ページは Karl Trygve Kalleberg <karltk@gentoo.org> によっ
-て書かれた。
+equery のマニュアルページの原著者: Karl Trygve Kalleberg <karltk@gentoo.org>, 2003。
+.br
+大幅なマニュアルページの更新: Katerina Barone\-Adesi <katerinab@gmail.com>, 2004.
+

@@ -1,0 +1,112 @@
+.\"
+.\" Japanese Version Copyright (c) 2004 Akinori Hattori
+.\"     all rights reserved.
+.\" Translated on 23 Sep 2004 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH "ebump" "1" "0.1.0" "Gentoolkit" "Gentoo Administration"
+.SH 名前
+.LP 
+ebump \- Gentoo: Ebuild のリビジョンを上げる
+.SH 書式
+.LP 
+ebump [\fIoption\fP] <\fIpackage-name[-version]\fP>
+
+.SH 説明
+
+.LP
+\fIebump\fR は個々の ebuild ファイルと、files/ ディレクトリにあるファイルのうち
+末尾のバージョンがマッチするもののリビジョンを上げる。
+
+.LP
+標準では、新しいリビジョンのファイルは全て CVS に追加され、ChangeLog にダミーの
+エントリが作成される。
+
+.LP
+これからリビジョンを上げようとしている ebuild のあるディレクトリにいなくてはならない。
+
+.SH オプション
+.LP
+\fB\-C\fR
+.br
+\fB--no-cvs\fB
+.IP
+新しいファイルを CVS に追加しない。
+
+.LP
+\fB\-V\fR
+.br
+\fB--version\fB
+.IP
+バージョンを表示して終了する。
+
+.LP
+\fB\-v\fR
+.br
+\fB--verbose\fB
+.IP
+冗長レベルを増やす。複数回指定してもよい。
+
+.LP
+\fB\-q\fR
+.br
+\fB--quiet\fB
+.IP
+不要な情報を表示しない。
+
+.LP
+\fB\-m\fR <\fIChangeLog text\fR>
+.br
+\fB\--message\fR <\fIChangeLog text\fR>
+.IP
+ChangeLog に記述するメッセージを指定する。
+
+.LP
+\fB\-d\fR
+.br
+\fB\--delete-old\fR
+.IP
+CVS から古いレビジョンの ebuild ファイルと、それに付属するファイルを削除する。これは \fI危険\fR なので、何をしようとしているのかをちゃんと理解している人のみ実行するべきである。なぜなら
+.br
+1) その古いレビジョンが他のアーキテクチャ上では、あなたの作業しているアーキテク
+チャよりも安定しているかもしれない。
+.br
+2) 付属のファイルは他のバージョンの ebuild で必要とされているかもしれない。
+.br
+3) 新しいレビジョンは、通常、安定とマークされる前に、一定期間テストを受けなくて
+はならない。
+
+.SH 設定
+
+.LP
+\fB/etc/gentoolkit/ebump.conf\fR
+.br
+\fB~/.gentoo/ebump.conf\fR
+.IP
+\fIebump\fR はこれらのファイルから設定を読み込む。
+.br
+\fBopt_verbosity\fR (default \fI1\fR) - 冗長レベル 0-10
+.br
+\fBopt_add_changelog\fR (default \fIy\fR) - ChangeLog にエントリを追加する
+.br
+\fBopt_add_cvs\fR (default \fIy\fR) - CVS に新しいファイルを追加する
+.br
+\fBopt_bump_auxfiles\fR (default \fIy\fR) - files/ にあるファイルも上げる
+.br
+\fBopt_delete_old\fR (default \fIn\fR) - 古いレビジョンを削除する (危険！)
+.br
+\fBopt_commitmessage\fR (default \fI""\fR) - ChangeLog に使用するメッセージ
+
+.LP
+\fB~/.gentoo/gentool-env\fR
+.IP
+\fIebump\fR は、環境変数 \fBAUTHORNAME\fR と \fBAUTHOREMAIL\fR をこのファイルか
+ら読み込み、適切な ChangeLog のエントリを生成するために使用する。
+
+.SH 参考
+.LP
+\fIapp-portage/gentoolkit-dev\fR に含まれている、\fIechangelog\fR や \fIego\fR 
+のようなユーティリティー。
+
+.SH 著者
+.LP
+Karl Trygve Kalleberg <karltk@gentoo.org>
