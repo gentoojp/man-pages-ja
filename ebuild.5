@@ -1,4 +1,4 @@
-.TH "EBUILD" "5" "Feb 2003" "Portage 2.0.47" "portage"
+.TH "EBUILD" "5" "Feb 2003" "Portage 2.0.47" "Portage"
 .SH "名前"
 ebuild \- ebuild スクリプトの内部フォーマット・変数・関数
 .SH "説明"
@@ -143,7 +143,7 @@ ${D} という接頭辞をつけなければならない。
 \fBSRC_URI\fR = \fI"http://happy.com/little/${P}.tar.gz"\fR
 この変数には必要なソースファイルへの URI のリストが入っている。
 1つのソースファイルへの複数の URI が入っていてもよい。
-\fIGENTOO_MIRROR\fB\fR にファイルが見つからなかった場合、
+\fIGENTOO_MIRRORS\fB\fR にファイルが見つからなかった場合、
 最も速い場所が選ばれる。
 .TP
 \fBHOMEPAGE\fR = \fI"http://happy.com/"\fR
@@ -160,19 +160,19 @@ ${D} という接頭辞をつけなければならない。
 portage ツリーに取り込むための ebuild が提出されたとき、
 その ebuild が \fB動作することが証明されている \fR 場合、
 証明された arch に対する ~arch セットが KEYWORD
-になければならない。
+になければならない
 (このように KEYWORD がついているパッケージは
 コマンドラインから ACCEPT_KEYWORDS="~arch" と指定したり
 \Bmake.conf\fR(5) の中で設定することによって、
-テストのためにマスクを解除することができる)
+テストのためにマスクを解除することができる)。
 指定するべき arch についての信頼できるリストは
-/usr/potage/profiles/arch.list を見てください。
+/usr/portage/profiles/arch.list を見てください。
 .TP
 \fBSLOT\fR
-この変数は共存するために必要なパッケージの SLOT を指定する。
-デフォルトでは、なにをしているのか分かっており、SLOT を
-変更しなければどうにもならない場合を除き、\fBSLOT\fR="0"
-を指定しなければならない。
+この変数は、複数パージョンのパッケージが共存するために必要な
+SLOT を指定する。
+なにをしているのか分かっており、SLOT を変更しなければどうにもならない
+場合を除き、デフォルトでは、\fBSLOT\fR="0" を指定しなければならない。
 この変数は \fI絶対\fR 未定義のままであってはいけない。
 .TP
 \fBLICENSE\fR
@@ -185,7 +185,7 @@ portage にマッチするライセンスが存在しないのだとしても、
 \fBIUSE\fR
 この変数にはそのビルドスクリプトの中で使われている全ての USE フラグの
 リストが入っていなければならない。
-ここの列記してはいけない唯一の USE フラグは arch 関連のフラグである
+ここに列記してはいけない唯一の USE フラグは arch 関連のフラグである
 (\fBKEYWORDS\fR 参照)。
 .TP
 \fBDEPEND\fR
@@ -193,14 +193,14 @@ portage にマッチするライセンスが存在しないのだとしても、
 のリストが入っていなければならない。
 .RS
 .TP
-.B DEPEND 原子
+.B DEPEND アトム
 DEPEND に含まれるアトム(それぞれのパッケージ名)は単に portage
 がパッケージ同士の関係を計算するときに使う依存性のことである。
-DEPEND 原子がまだ emerge されていない場合、
+DEPEND アトムがまだ emerge されていない場合、
 最新のバージョンがマッチすることに留意してください。
 .RS
 .TP
-.B アトムベース
+.B ベースアトム
 ベースアトムとは完全な カテゴリー/パッケージ名 のことである。
 したがって、以下に挙げるものはベースアトムである:
 
@@ -280,7 +280,7 @@ DEPEND="media-libs/libsdl
 この変数が設定されていなければ、\fBDEPEND\fR の値がデフォルトで設定
 される。
 .br
-依存性を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
+依存関係を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
 .TP
 \fBPDEPEND\fR
 この変数にはそのプログラムがマージされたあとにインストールされなければ
@@ -315,14 +315,14 @@ DEPEND="media-libs/libsdl
 .TP
 .B pkg_nofetch
 
-\fBRESTRICT\fR 変数に \fIfetch\fR を書いた場合、
-\fBSRC_URI\fR にあるファイルを見つけることができなかったとき、
+\fBRESTRICT\fR 変数に \fIfetch\fR を書いたにもかかわらず、
+\fBSRC_URI\fR にあるファイルを見つけることができなかった場合、
 この関数が実行される。
 ユーザに *どうしたら* 言われたファイルを入手することができるのか
 の情報を表示するのに有用である。
 .TP
 .B pkg_setup
-この関数はなによりも先にパッケージに特定のセットアップアクションや
+この関数はなによりも先にパッケージ固有のセットアップアクションや
 チェックが必要な場合に使うことができる。
 .br
 初期作業ディレクトリは ${PORTAGE_TMPDIR}。
@@ -360,12 +360,12 @@ pkg_*inst 関数と同様だが、アンインストール用である。
 .br
 初期作業ディレクトリは $PWD。
 .TP
-.B config
-この関数は必須ではないがパッケージを使うためには欠かせない
+.B pkg_config
+この関数には、必須ではないがパッケージを使うためには欠かせない
 設定ステップを入れる。
 .br
 初期作業ディレクトリは $PWD。
-.SH "補助関数: 総記"
+.SH "補助関数: 汎用"
 .TP
 \fBdie\fR \fI[理由]\fR
 現在の emerge プロセスを中止させる。
@@ -439,7 +439,7 @@ myconf="`use_with pic`"
 \fIconfigure オプション\fR が指定されていなければ、
 \fIUSE 項目\fR がその場所で使われる。
 .br
-例は \fBuse_with\fR を参照。
+使用例は \fBuse_with\fR を参照。
 .TP
 \fBhas\fR \fI<項目>\fR \fI<項目リスト>\fR
 \fI項目\fR が \fI項目リスト\fR にあった場合、
@@ -505,7 +505,7 @@ configure \\
 \fBemake\fR \fI[make オプション]\fR
 この関数は make の代わりに使われる。
 'make ${MAKEOPTS} \fImake オプション\fR'
-(${MAKEOPTS} は /etc/make.globals で設定される),
+(${MAKEOPTS} は /etc/make.globals で設定される)
 を実行する。デフォルトは MAKEOPTS="\-j2"。
 
 \fB***警告***\fR
@@ -564,7 +564,7 @@ strip されているようにしたければ、これらの関数一式を使う。
 この関数は \fBprepallman\fR、\fBprepallinfo\fR、\fBprepallstrip\fR
 を実行し、ライブラリを実行可能に設定し、aclocal ディレクトリをチェック
 する。この関数は \fBprepalldocs\fR を実行 \fI*しない*\fR ことに
-注意してください。
+注意すること。
 .TP
 .B prepalldocs:
 ${D}/usr/share/doc にある全てのドキュメントファイルを圧縮する。
