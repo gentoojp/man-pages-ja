@@ -1,0 +1,129 @@
+.\" Copyright 1999-2004 Gentoo Technologies, Inc.
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Original version: 2004-01-09
+.\" Translated on 21 Feb 2004 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH ECHANGELOG 1 "2004-01-09" "perl v5.8.0" "User Contributed Perl Documentation"
+.SH "名前"
+echangelog \- Gentoo: portage の ChangeLog を更新する
+.SH "書式"
+echangelog [ \fItext\fR ]
+.SH "説明"
+echangelog は Gentoo における Portage の ChangeLog を作成、または更新する負
+担を軽減する。このツールは /usr/portage/app\-editors/vim のようなパッケージ
+ディレクトリにいると仮定し、現在のディレクトリを走査して変更、もしくは追加さ
+れたファイルを見つけ、ChangeLog のエントリに追加する。\fItext\fR がコマンド
+ラインであたえられなかった場合、echangelog はユーザーに入力を促す。
+.PP
+ChangeLog のエントリとして、正確にファイルの情報を追加するために、全ての変更は
+echangelog を実行する前になされるべきである。
+echangelog は、それらのファイルが更新の一部だとは認識しない。
+.PP
+ChangeLog のエントリが 80文字を越えた場合には、ChangeLog の体裁を守るために
+自動的に改行される。ChangeLog において特別な書式を用いたいのなら、(1)
+echangelog をコマンドラインから何の text も渡さずに実行し、text が長くならな
+いことを確実にする。(2) ChangeLog を直接編集する、のどちらでも可能である。
+(2) を選ぶ場合には、"echangelog blah" のように実行し、自動的にヘッダ行が追加
+された後、"blah" を好きな text に編集することを勧める。
+.PP
+ChangeLog の更新について追記。echangelog は ChangeLog に対してのそれであるの
+と同じく、更新対象 ebuild のコピーライトの年を自動的に更新する。更新が行われ
+た後の差分表示には、この変更点も表示される。
+.SH "オプション"
+現在の echangelog はとてもシンプルなためオプションは存在しない。
+もしかしたら、\fB\-\-help\fR と \fB\-\-version\fR を加えるかもしれないが、今は
+gentoolkit のバージョンに追従するだけで十分である。
+.SH "例"
+パッケージに新しく ChangeLog を作成する際には、skel.ebuild からヘッダを得る。
+
+.RS 2
+.nf
+$ cvs add metalog-0.1.ebuild
+cvs server: use 'cvs commit' to add this file permanently
+
+$ echangelog 'New ebuild, thanks to Harvey McGillicuddy'
+--- ChangeLog   1969-12-31 19:00:00.000000000 -0500
++++ ChangeLog.new       2003-02-23 14:04:06.000000000 -0500
+@@ -0,0 +1,9 @@
++# ChangeLog for app-admin/metalog
++# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
++# $Header$
++
++*metalog-0.1 (23 Feb 2003)
++
++  23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1.ebuild :
++  New ebuild, thanks to Harvey McGillicuddy
++
+.fi
+.RE
+.PP
+レビジョンをあげる際には、echangelog が新しいファイルを識別できるように "cvs
+add" しておく必要がある。
+
+.RS 2
+.nf
+$ cvs add metalog-0.1-r1.ebuild
+cvs server: use 'cvs commit' to add this file permanently
+
+$ echangelog 'Bump revision to fix bug #999'
+--- ChangeLog   2003-02-23 14:04:06.000000000 -0500
++++ ChangeLog.new       2003-02-23 14:07:48.000000000 -0500
+@@ -2,6 +2,11 @@
+ # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+ # $Header$
+
++*metalog-0.1-r1 (23 Feb 2003)
++
++  23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1-r1.ebuild :
++  Bump revision to fix bug #999
++
+ *metalog-0.1 (23 Feb 2003)
+
+   23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1.ebuild :
+.fi
+.RE
+.PP
+複数行のエントリを入力する際には、コマンドライン引数を省略すればよい。
+
+.RS 2
+.nf
+$ echangelog
+Please type the log entry, finish with ctrl-d
+Bump revision to fix bug #999.  Necessary to bump the revision because
+the problem appears at run-time, not compile-time.  This should also
+give users the updated default configuration file.
+--- ChangeLog   2003-02-23 14:09:12.000000000 -0500
++++ ChangeLog.new       2003-02-23 14:12:43.000000000 -0500
+@@ -2,6 +2,13 @@
+ # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+ # $Header$
+
++*metalog-0.1-r1 (23 Feb 2003)
++
++  23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1-r1.ebuild :
++  Bump revision to fix bug #999.  Necessary to bump the revision because
++  the problem appears at run-time, not compile-time.  This should also
++  give users the updated default configuration file.
++
+ *metalog-0.1 (23 Feb 2003)
+
+   23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1.ebuild :
+.fi
+.RE
+.SH "環境変数"
+.IP ECHANGELOG_USER 4
+echangelog がエントリを追加する際に、あなたのユーザーネームをうまく取得でき
+ない場合には ECHANGELOG_USER を設定すべきである。例、export
+ECHANGELOG_USER="Aron Griffis <agriffis@gentoo.org>"。
+.SH "注意"
+最近の echangelog （この man ページが収録されるようになってから）は、新しいエン
+トリをバージョンごとにまとめるのではなく、つねにファイルの始めに追加するように
+なった。これは、Gentoo 開発者にごとに新しい ChangeLog の書式が統一されていなかっ
+たからである。両方の書式が存在することにより、混乱させてしまい申し訳ない。
+.PP
+またこれは、昔のメールからコピーしてきた上記の例も間違っているということを意
+味している。しかしながら、まったく違うというわけでも無い。;\-)
+.PP
+このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。
+バグを発見した場合は http://bug.gentoo.org/ にて私に対して報告してほしい。
