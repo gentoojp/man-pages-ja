@@ -11,8 +11,8 @@ Portage は全ての設定項目に対し、現在定義されている環境変数を
 は /etc/make.globals をチェックする。そこにも設定が見つからない場合、
 /etc/make.profile/make.defaults  から profile のデフォルトの値が使われる。
 ユーザ設定は /etc/make.globals や /etc/make.profile/make.defaults では
-なく、環境変数で設定するか、ユーザがカスタマイズすることを意図している
-/etc/make.conf で設定するよう留意してほしい。
+なく、環境変数か設定するか、/etc/make.conf で設定するよう留意してほしい
+(/etc/make.conf はユーザがカスタマイズすることを意図している)。
 .BR 
 例外は USE や CONFIG_PROTECT* や ACCEPT_KEYWORDS などの
 インクリメンタル変数で、インクリメンタル変数は make.defaults から
@@ -23,7 +23,7 @@ export USE="\-*"
 .SH "変数"
 .TP
 \fBACCEPT_KEYWORDS\fR = \fI[スペースで区切られた KEYWORDS のリスト]\fR
-「安定版」と判断されていない ebuild のテストを有効にする。
+「stable」と判断されていない ebuild のテストを有効にする。
 「x86」アーキテクチャのユーザはこの変数を「~x86」に設定するだろうし、
 また「ppc」ユーザは「~ppc」を設定するだろう。
 これはインクリメンタル変数なので、~arch だけを定義すること
@@ -54,12 +54,12 @@ export USE="\-*"
 だけである。
 .TP
 \fBCFLAGS CXXFLAGS\fR 
-これらの変数は、コンパイルするアプリケーションにしたい最適化や
+これらの変数は、コンパイルするアプリケーションに対して行ないたい最適化や
 CPU 命令の設定のために設定する。
 ほとんど全ての ebuild ファイルがこのカスタム設定を利用するので、
 Gentoo Linux はユーザの指定のままに完全にカスタマイズすることができる。
 最適化がきつすぎる場合コンパイルできなかったり動作しなかったりする
-パッケージもあるので、まともな設定を心がけてください。
+パッケージもあるので、まともな設定を心がけること。
 
 より詳しい情報は:
 .br
@@ -85,11 +85,11 @@ http://gcc.gnu.org/onlinedocs/gcc\-2.95.3/gcc_2.html
 .TP
 \fBCONFIG_PROTECT\fR = \fI[スペースで区切られたディレクトリのリスト]\fR
 この変数で定義された全ディレクトリに「設定ファイル保護」が有効になる。
-より詳しい情報は、`emerge --help config` を参照してください。
+より詳しい情報は、`emerge --help config` を参照。
 .TP
 \fBCONFIG_PROTECT_MASK\fR = \fI[スペースで区切られたディレクトリのリスト]\fR
 この変数で定義された全ディレクトリに「設定ファイル保護」が無効になる。
-より詳しい情報は、`emerge --help config` を参照してください。
+より詳しい情報は、`emerge --help config` を参照。
 .TP
 \fBDEBUGBUILD\fR
 この変数が定義されていると、\fImerge\fR の前にバイナリとライブラリの
@@ -140,9 +140,9 @@ strip が行なわれない。
 \fIsandbox\fR: \fBemerge\fR(1) と \fBebuild(1)\fR を実行する際
 sandbox を有効にする。
 .br
-\fIuserpriv\fR: portage を使う際に root 権限を使わず、\fIusersandbox\fR
-も有効になってないかぎり sandbox なしでパッケージを portage:portage
-権限でコンパイルする。
+\fIuserpriv\fR: portage を使う際に root 権限を使わず、portage:portage
+権限でコンパイルする。\fIusersandbox\fR が有効になっていない場合は
+sandbox なしでパッケージをコンパイルする。
 .br
 \fIusersandbox\fR: コンパイルのとき sandbox を有効にし、root 権限なしで
 実行する(\fIuserpriv\fR)。
@@ -205,8 +205,8 @@ Portage ツリーの場所を定義する。
 これらの変数は \fBwget\fR(1) でインターネットからソースをダウンロード
 しなければならない場合に使われる。これらの変数を使うのは、
 インターネットアクセスにプロキシサーバを使う場合だけである。
-\fIPROXY\fR か \fIPROXY_FTP\fR と \fIPROXY_HTTP\fR のいずれかを
-定義すること。
+\fIPROXY\fR のみ、もしくは \fIFTP_PROXY\fR か \fIHTTP_PROXY\fR の、
+いずれかを定義すること。
 .TP
 \fBRESUMECOMMAND\fR
 この変数には \fBFETCHCOMMAND\fR で部分的にダウンロードされたパッケージ
@@ -263,10 +263,10 @@ make.conf (conf) が自動生成された値を上書きし、
 ならない。もしこの値を変更してなにかを壊してしまった場合、我々は
 それを直すのにあなたを助けるつもりはない。
 .br
-デフォルトは "env:conf:auto:defaults".
+デフォルトは "env:conf:auto:defaults"。
 
 .SH "バグ報告"
-バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
 .SH "関連項目"
 .BR ebuild (1),
 .BR ebuild (5)
