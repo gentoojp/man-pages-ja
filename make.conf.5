@@ -3,6 +3,7 @@
 .\"
 .\" Origial version: 2.0.48
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
+.\" Updated on 15 Nov 2003
 .\"
 .TH "MAKE.CONF" "5" "Feb 2003" "Portage 2.0.47" "Portage"
 .SH "名前"
@@ -28,7 +29,7 @@ export USE="\-*"
 のようにして全部消去する必要がある。
 .SH "変数"
 .TP
-\fBACCEPT_KEYWORDS\fR = \fI[スペースで区切られた KEYWORDS のリスト]\fR
+\fBACCEPT_KEYWORDS\fR = \fI[space delimited list of KEYWORDS]\fR
 「stable」と判断されていない ebuild のテストを有効にする。
 「x86」アーキテクチャのユーザはこの変数を「~x86」に設定するだろうし、
 また「ppc」ユーザは「~ppc」を設定するだろう。
@@ -47,7 +48,7 @@ export USE="\-*"
 .br
 デフォルトの値は yes である。
 .TP
-\fBBUILD_PREFIX\fR = \fI[パス]\fR
+\fBBUILD_PREFIX\fR = \fI[path]\fR
 パッケージの作業ディレクトリの場所を定義する。
 .br
 デフォルトの値は ${PORTAGE_TMPDIR}/portage である。
@@ -58,6 +59,10 @@ export USE="\-*"
 \fIconfigure\fR ステップに渡される。
 現在のところ、この変数を定義する必要があるのは HPPA アーキテクチャ
 だけである。
+.TP
+\fBCCACHE_SIZE\fR = \fI"size"\fR
+この変数は ccache で使うことができるスペースを制限する。デフォルトは
+2ギガバイト('2G')である。サイズは 'G', 'M', 'K' と一緒に指定する。
 .TP
 \fBCFLAGS CXXFLAGS\fR 
 これらの変数は、コンパイルするアプリケーションに対して行ないたい最適化や
@@ -71,6 +76,8 @@ Gentoo Linux はユーザの指定のままに完全にカスタマイズすることができる。
 .br
 http://gcc.gnu.org/onlinedocs/gcc-3.2/gcc/Invoking-GCC.html
 .br
+http://gcc.gnu.org/onlinedocs/gcc-3.3/gcc/Invoking-GCC.html
+.br
 http://gcc.gnu.org/onlinedocs/gcc-2.95.3/gcc_2.html
 .TP
 \fBCHOST\fR
@@ -82,18 +89,20 @@ http://gcc.gnu.org/onlinedocs/gcc-2.95.3/gcc_2.html
 .br
 http://gcc.gnu.org/onlinedocs/gcc\-3.2/gcc/Submodel\-Options.html
 .br
+http://gcc.gnu.org/onlinedocs/gcc\-3.3/gcc/Submodel\-Options.html
+.br
 http://gcc.gnu.org/onlinedocs/gcc\-2.95.3/gcc_2.html
 .TP
-\fBCLEAN_DELAY\fR = \fI整数値\fR
+\fBCLEAN_DELAY\fR = \fIinteger\fR
 `emerge clean` を実行したあとカウントダウンする長さを決める。
 .br
 デフォルトの値は 5 秒である。
 .TP
-\fBCONFIG_PROTECT\fR = \fI[スペースで区切られたディレクトリのリスト]\fR
+\fBCONFIG_PROTECT\fR = \fI[space delimited list of dirs]\fR
 この変数で定義された全ディレクトリに「設定ファイル保護」が有効になる。
 より詳しい情報は、`emerge --help config` を参照。
 .TP
-\fBCONFIG_PROTECT_MASK\fR = \fI[スペースで区切られたディレクトリのリスト]\fR
+\fBCONFIG_PROTECT_MASK\fR = \fI[space delimited list of dirs]\fR
 この変数で定義された全ディレクトリに「設定ファイル保護」が無効になる。
 より詳しい情報は、`emerge --help config` を参照。
 .TP
@@ -101,69 +110,100 @@ http://gcc.gnu.org/onlinedocs/gcc\-2.95.3/gcc_2.html
 この変数が定義されていると、\fImerge\fR の前にバイナリとライブラリの
 strip が行なわれない。
 .TP
-\fBDISTDIR\fR = \fI[パス]\fR
+\fBDISTDIR\fR = \fI[path]\fR
 ソースファイルリポジトリの場所を定義する。
 .br
 デフォルトの値は ${PORTDIR}/distfiles である。
 .TP
-\fBFEATURES\fR = \fI"buildpkg ccache cvs digest mirror noauto noclean sandbox"\fR
+\fBFEATURES\fR = \fI"sandbox buildpkg ccache distcc userpriv usersandbox"\fR
 デフォルトで行なわれる Portage のアクションを定義する。
 開発者やメンテナ以外の人はこのオプションを変更しないこと。
 「sandbox」は \fBFEATURES\fR の重要な機能の一つで、デフォルトで
 無効にしてはいけない。
-.br
- 
-.br
-\fIbuildpkg\fR: バイナリパッケージを常に生成する。
-.br
-\fIccache\fR: ccache パッケージの Portage サポートを有効にする。
-.br
-\fIcvs\fR: パッケージを emerge したあとのファイルの自動コミットを有効にする。
-.br
-\fIdigest\fR: パッケージのダイジェストを自動生成する。
-もし \fIcvs\fR 機能が有効な場合、さらにそれをコミットする。
-.br
-\fIdistcc\fR: distcc サポートを有効にする。
-.br
-\fIkeeptemp\fR: clean の実行時に ${T} ディレクトリを削除しない。
-.br
-\fIkeepwork\fR: clean の実行時に $WORKDIR を削除しない。
-.br
-\fImirror\fR:  ファイルが \fBDISTDIR\fR にあるときですら常に
-\fBFETCHCOMMAND\fR を実行する。
-.br
-\fInoauto\fR: \fBebuild\fR(1) を実行するとき、
-要求された関数だけを実行する。
-.br
-\fInoclean\fR: パッケージのマージが終わったあともビルドディレクトリを
-掃除しない。
-.br
-\fInostrip\fR: バイナリの strip をしない。
-.br
-\fInotitles\fR: xterm のタイトルバーの更新(ステータス情報が更新される)
-を無効にする。
-.br
-\fIsandbox\fR: \fBemerge\fR(1) と \fBebuild(1)\fR を実行する際
-sandbox を有効にする。
-.br
-\fIuserpriv\fR: Portage を使う際に root 権限を使わず、portage:portage
-権限でコンパイルする。\fIusersandbox\fR が有効になっていない場合は
-sandbox なしでパッケージをコンパイルする。
-.br
-\fIusersandbox\fR: コンパイルのとき sandbox を有効にし、root 権限なしで
-実行する(\fIuserpriv\fR)。
-.br
-
+.RS
+.TP
+.B autoaddcvs
+Portage にあとで追加しなければならないファイルを cvs に自動的に追加
+させようとする。ファイルが生成されるときに実行され、\fBFEATURES\fR
+に \fIcvs\fR もあるときにのみ働く。
+.TP
+.B buildpkg
+インストールされる全パッケージについてバイナリパッケージを生成する。
+.TP
+.B ccache
+Portage の ccache パッケージに対するサポートを有効にする。
+ユーザの環境に ccache ディレクトリが存在しなければ Portage
+はデフォルトで (\fIuserpriv\fR が指定されていれば) ${PORTAGE_TMPDIR}/ccache
+か (\fIuserpriv\fR が指定されていなければ) /root/.ccache を使う。
+.TP
+.B cvs
+開発者のための機能で、Portage でダイジェストを生成するとき SRC_URI
+にある全 USE フラグを有効にする。
+.TP
+.B digest
+パッケージのダイジェストを自動生成する。
+.TP
+.B distcc
+Portage の distcc パッケージに対するサポートを有効にする。
+.TP
+.B fixpackages
+全バイナリパッケージでの依存関係を解決するスクリプトを走らせる。
+これはパッケージが Portage ツリーの中を移動したとき常に実行される。
+この機能を有効にするととても時間を消費することに気をつけてほしい。
+.TP
+.B keeptemp
+インストールが終わったあとも ${T} ディレクトリを消さない。
+.TP
+.B keepwork
+インストールが終わったあとも ${WORKDIR} ディレクトリを消さない。
+.TP
+.B mirror
+ファイルがすでに \fBDISTDIR\fR に存在しても \fBFETCHCOMMAND\fR
+を常に実行する。
+.TP
+.B noauto
+\fBebuild\fR(1) を使うとき、要求された関数だけを実行する。
+.TP
+.B noclean
+インストール後もソースファイルと一時ファイルを消さない。
+.TP
+.B nostrip
+インストールされるバイナリの strip を止める。
+.TP
+.B notitles
+xterm のタイトルバーの更新を無効にする(ステータス情報が含まれている)。
+.TP
+.B sandbox
+\fBemerge\fR(1) と \fBebuild(1)\fR を実行するときの sandbox を有効にする。
+.TP
+.B strict
+危険になる可能性がある状況に対し過敏に反応する(たとえば Manifest
+がないだとか不正だとかいう状況)。
+.TP
+.B userpriv
+root 権限を落し、パッケージを portage:portage ユーザでコンパイルする。
+\fIusersandbox\fR が設定されていないかぎり、sandbox を使わない。
+.TP
+.B usersandbox
+\fIuserprif\fR が設定されているとき、コンパイル段階で sandbox
+を有効にする。
+.RE
 .TP
 \fBFETCHCOMMAND\fR
 この変数にはインターネットからパッケージソースを取得するのに
 使うコマンドが入っている。
 .TP
-\fBGENTOO_MIRRORS\fR = \fI[スペースで区切られた URL のリスト]\fR
+\fBGENTOO_MIRRORS\fR = \fI[URLs]\fR
 ローカルミラーのリストをスペースで区切ってこの変数に入れること。
 このミラーリストは \fIebuild スクリプト\fR で挙げられている URL
 にファイルをダウンロードしに行く前に使われる。
 「mirrorselect」をインストールするとどのミラーを使えばよいか参考になる。
+.TP
+\fBHTTP_PROXY FTP_PROXY\fR = \fI[host:port]\fR
+これらの変数はインターネットから \fBwget\fR(1) でソースをダウンロード
+するときに使われる。これらはインターネットアクセスにプロキシサーバを
+使うときだけ必要である。\fIPROXY\fR だけを設定するか、もしくは
+\fIFTP_PROXY\fR と \fIHTTP_PROXY\fR を同時に設定すること。
 .TP
 \fBMAKEOPTS\fR
 この変数は並行 make をしたいときに使う。
@@ -178,25 +218,38 @@ sandbox なしでパッケージをコンパイルする。
 .br
 デフォルトは false。
 .TP
-\fBPORT_LOGDIR\fR
+\fBPKG_TMPDIR\fR = \fI[path]\fR
+\fIemerge\fR は .tbz2 パッケージをシステムにインストールする前に
+いったん展開するためにこのディレクトリを使う。
+.TP
+\fBPKGDIR\fR = \fI[path]\fR
+作成された .tbz2 バイナリパッケージが保存される場所を定義する。
+.br
+デフォルトは ${PORTDIR}/packages。
+.TP
+.B PORT_LOGDIR
 この変数は ebuild ごとのログが保存されるディレクトリを定義する。
 この変数が設定されており、かつ書き込み可能なときのみログが作成される。
 .TP
-\fBPORTAGE_TMPDIR\fR = \fI[パス]\fR
+\fBPORTAGE_BINHOST\fR = \fI"ftp://login:pass@grp.mirror.site/pub/grp/i686/athlon-xp/"\fR
+この変数はビルド済みバイナリパッケージを取得するホストを設定する。
+このリストには現システム用の tbz2 ファイルが含まれているディレクトリの
+フルアドレスを1つ指定する。この変数は \fBemerge\fR にバイナリパッケージ
+取得のオプションをつけて実行したときにのみ使われる。詳しい情報は
+\fBemerge\fR(1) を参照のこと。この変数は取得元のホストの 'All'
+ディレクトリを指さねばならず、\fBPKGDIR\fR ではないことに注意。
+.TP
+\fBPORTAGE_NICENESS\fR = \fI[number]\fR
+この変数の値は emerge が実行されるカレント nice レベルに付加される。
+つまり、この変数は nice レベルを設定するのではなく、増やすだけである。
+nice レベルと指定可能な範囲についての詳しい情報は \fBnice\fR(1) 参照。
+.TP
+\fBPORTAGE_TMPDIR\fR = \fI[path]\fR
 一時ビルドディレクトリの場所を定義する。
 .br
 デフォルトは /var/tmp。
 .TP
-\fBPKG_TMPDIR\fR = \fI[パス]\fR
-\fIemerge\fR は稼働中のファイルシステムにファイルをインストールする前、
-このディレクトリを .tbz2 パッケージの展開に使う。
-.TP
-\fBPKGDIR\fR = \fI[パス]\fR
-作成された .tbz2 バイナリパッケージの保存される場所を定義する。
-.br
-デフォルトは ${PORTDIR}/packages.
-.TP 
-\fBPORTDIR\fR = \fI[パス]\fR
+\fBPORTDIR\fR = \fI[path]\fR
 Portage ツリーの場所を定義する。
 .br
 デフォルトは /usr/portage。
@@ -208,18 +261,11 @@ Portage ツリーの場所を定義する。
 .br
 デフォルトは値が入っていない。
 .TP
-\fBPROXY HTTP_PROXY FTP_PROXY\fR = \fI[ホスト名:ポート番号]\fR
-これらの変数は \fBwget\fR(1) でインターネットからソースをダウンロード
-しなければならない場合に使われる。これらの変数を使うのは、
-インターネットアクセスにプロキシサーバを使う場合だけである。
-\fIPROXY\fR のみ、もしくは \fIFTP_PROXY\fR か \fIHTTP_PROXY\fR の、
-いずれかを定義すること。
-.TP
 \fBRESUMECOMMAND\fR
 この変数には \fBFETCHCOMMAND\fR で部分的にダウンロードされたパッケージ
 ソースのダウンロードを再開するためのコマンドが入っている。
 .TP
-\fBROOT\fR = \fI[パス]\fR
+\fBROOT\fR = \fI[path]\fR
 \fBROOT\fR 変数はパッケージや ebuild をマージするために使う
 ターゲットルートファイルシステムを指定するために使う。
 /etc/make.conf の中ではなく、環境変数としてこの設定を使うのが普通。
@@ -227,33 +273,40 @@ Portage ツリーの場所を定義する。
 .br
 デフォルトは /。
 .TP
-\fBRSYNC_RETRIES\fR = \fI[回数]\fR
+\fBRSYNC_EXCLUDEFROM\fR = \fI"/etc/portage/rsync_excludes"\fR
+この変数は Portage が Portage ツリーをアップデートするときに
+rsync に渡すファイルを設定し、ツリーの特定の部分を sync プロセスから
+除外することができる。注意深く使わなければ依存関係の解決に問題が出る
+可能性がある。ファイルの形式は、1行につき1パターンで、空白と ';'
+もしくは '#' で始まる行はコメントである。詳しくは \fBrsync\fR(1) 
+を参照。
+.TP
+\fBRSYNC_RETRIES\fR = \fI[NUMBER]\fR
 接続が失敗したら諦める前に何回 rsync を再試行するかの回数。
 .br
 デフォルトは 3。
 .TP
-\fBRSYNC_TIMEOUT\fR = \fI[秒数]\fR
+\fBRSYNC_TIMEOUT\fR = \fI[SECONDS]\fR
 接続がタイムアウトしたと決定する前にどれだけ rsync の無反応状態が
 継続していなければならないかの秒数。ダイヤルアップユーザはこの値を
 300秒かそれ以上に設定する必要があるかもしれない。
 .br
 デフォルトは 180 秒。
 .TP
-\fBRPMDIR\fR = \fI[パス]\fR
+\fBRPMDIR\fR = \fI[path]\fR
 作成された RPM パッケージが保存される場所を定義する。
 .br
 デフォルトは ${PORTDIR}/rpm。
 .TP
-\fBSYNC\fR = \fI[RSYNC ミラー]\fR
+\fBSYNC\fR = \fI[RSYNC]\fR
 この変数にはローカルの rsync ミラーのリストを入れる。
 これらの rsync サーバは `emerge sync` が実行されたときローカルの
 Portage ツリーを同期させるために使われる。
 .TP
-\fBUSE\fR = \fI[スペースで区切られた USE オプションのリスト]\fR
+\fBUSE\fR = \fI[space delimited list of USE items]\fR
 この変数にはあるパッケージのビルド時の挙動をコントロールするオプション
 が入っている。より詳しい情報は \fBebuild\fR(5) にある。
 指定できる USE の値は \fI/usr/portage/profiles/use.desc\fR にある。
-.TP
 .TP
 \fBUSE_ORDER\fR = \fI"env:conf:auto:defaults"\fR
 USE 変数の設定を上書きする優先順序を決定する。
@@ -300,4 +353,4 @@ Nicholas Jones <carpaski@gentoo.org>
 .br
 Mike Frysinger <vapier@gentoo.org>
 .SH "CVS ヘッダ"
-原文: /home/cvsroot/gentoo-src/portage/man/make.conf.5,v 1.15 2003/07/09 18:51:43 vapier
+原文: /home/cvsroot/gentoo-src/portage/man/make.conf.5,v 1.28 2003/09/24 03:46:38 vapier
