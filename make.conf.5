@@ -202,7 +202,7 @@ Portage ツリーの場所を定義する。
 デフォルトは /usr/portage。
 .TP
 \fBPORTDIR_OVERLAY\fR = \fI[path]\fR
-ユーザが作った ebuild を保存し、emerge rsync が実行されたときに
+ユーザが作った ebuild を保存し、emerge sync が実行されたときに
 上書きされないためのディレクトリを定義する。
 .br
 デフォルトは値が入っていない。
@@ -245,7 +245,7 @@ Portage ツリーの場所を定義する。
 .TP
 \fBSYNC\fR = \fI[RSYNC ミラー]\fR
 この変数にはローカルの rsync ミラーのリストを入れる。
-これらの rsync サーバは `emerge rsync` が実行されたときローカルの
+これらの rsync サーバは `emerge sync` が実行されたときローカルの
 Portage ツリーを同期させるために使われる。
 .TP
 \fBUSE\fR = \fI[スペースで区切られた USE オプションのリスト]\fR
