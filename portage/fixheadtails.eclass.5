@@ -1,0 +1,37 @@
+.\" Copyright 1999-2004 Gentoo Foundation
+.\" Distributed under the terms of the GNU General Public License v2
+.\"
+.\" Origninal version: 1.3
+.\" Translated on 21 Oct 2004 by Shigehiro IDANI <datam@anet.ne.jp>
+.\"
+.TH "FIXHEADTAILS.ECLASS" "5" "Aug 2004" "Portage 2.0.51" "portage"
+.SH "名前"
+fixheadtails \- 古い形式の head/tail 呼び出しを新しい POSIX 準拠の呼び出し方法に置き換える機能を提供する。
+.SH "説明"
+\fBfixheadtails\fR eclass は、ファイルを解析して、古い形式の head/tail 呼び出し方法:
+.TP
+head -# <file>
+.TP
+を新しいPOSIX 準拠の呼び出し方法:
+.TP
+head -n# <file>
+に置き換える機能を提供する。
+.SH "関数"
+\fBNOTE\fR: これらの関数はたいてい \fIsrc_unpack\fR 関数で使われている。
+.TP
+.BR "ht_fix_file " "\fI<file1> [file2] [file3] [...]\fR"
+特定のファイルの head/tail 形式の呼び出し方法を修正する。
+.TP
+.BR "ht_fix_all"
+(再帰的に)現在のディレクトリを検索し、古い head/tail 形式の呼び出し方法を含むファイルに
+たいして、それぞれ  \fBht_fix_file\fR を呼び出す。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
+.BR ebuild (5)
+.SH "ファイル"
+.BR /usr/portage/eclass/fixheadtails.eclass
+.SH "著者"
+Aaron Walker <ka0ttic@gentoo.org>
+.SH "CVS ヘッダ"
+原文: fixheadtails.eclass.5,v 1.3
