@@ -1,0 +1,182 @@
+.\"
+.\" Japanese Version Copyright (c) 2006 Akinori Hattori
+.\"     all rights reserved.
+.\" Translated on 29 Mar 2006 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH "eclean" "1" "0.4.1" "gentoolkit"
+.SH 名前
+eclean \- Gentoo 用 distfiles とバイナリパッケージの掃除ツール
+.SH 書式
+.LP
+.B eclean \fR[\fIglobal\-options\fR] ... <\fIactions\fR> \fR[\fIaction\-options\fR] ...
+.LP
+.B eclean\-dist \fR[\fIglobal\-options, distfiles\-options\fR] ...
+.LP
+.B eclean\-pkg \fR[\fIglobal\-options, packages\-options\fR] ...
+.LP
+.B eclean(-dist,-pkg) \fR[\fI\-\-help, \-\-version\fR]
+.SH 説明
+\fBeclean\fP は利用されることのない distfiles やバイナリパッケージを削除するため
+の小粒なツールである。必要かどうかわからないファイルにより、DISTDIR や PKGDIR ディ
+レクトリが際限なく肥大化するのを防ぐために定期的に使用する。
+.PP
+標準で eclean は Portage ツリーに ebuild が存在する distfiles やバイナリパッケー
+ジには全く手を付けない。このモードは、パッケージをダウングレードする際にパッケー
+ジのソースをダウンロードし直す必要がなく、また、誤って unmerge してしまったパッ
+ケージの再インストールの際にコンパイルし直す必要がないため、とても安全である。確
+かに、これでもまだ DISTDIR や PKGDIR は大きいままである (しかし際限なく増大する
+ことは防げる)。また、このモードでは Portage ツリー全体へのアクセスが必要になるた
+め、'distfiles' に関してはかなり遅くなる。
+.PP
+\-\-destructive オプションを使用すると、eclean は現在インストールされているパッ
+ケージのファイルしか保護しない (バージョンの完全一致による)。するとさらなる容量
+の節約が可能だが依然として、レビジョン更新に使用されたファイルや、破損したパッケー
+ジの再インストール用バイナリなどは保存される。しかし、ダウングレードや、unmerge 
+したパッケージの再インストールなど、あまり行われない操作のためにファイルを保持す
+ることはなくなる。また、これが最も速く実行されるモードであり (distfiles における
+大きな違い)、yacleaner (バージョン 0.3 においては) などその他の削除用スクリプト
+でよく用いられる。
+.PP
+その中間として、\-\-destructive を使用する時に \-\-package\-names オプションを追
+加することで、インストール済みパッケージの全てのバージョンのファイルが保護される
+ようになる。すると、コンパイルし直すことなくダウングレードしたり、障害発生時にダ
+ウンロードし直したりせずに済むだろうが、パッケージのアンインストールからは守られ
+なくなる。
+.PP
+これらに加え、特殊なファイル保護規則を宣言するためのオプションがある。
+.IP o
+\-\-time-limit は指定された期間よりも新しいファイルを保護する。
+.IP o
+\-\-size-limit (distfiles のみ) は指定されたサイズよりも大きいファイルを保護する。
+.IP o
+\-\-fetch-restricted (distfiles のみ) は手動でダウンロードしたファイルを保護する。
+しかし、とても遅い (これも同じく、Portage ツリー全体のデータを読み込む)...
+.IP o
+最後に、除外ファイルに保護するカテゴリや、パッケージの名前を記載することができる 
+(以下の \fBEXCLUSION FILES\fP を参照)。
+.SH 引数
+.SS グローバルオプション
+.TP
+\fB\-C, \-\-nocolor\fP				カラー表示をしない
+.TP
+\fB\-d, \-\-destructive\fP			再インストール用に最小限しか保持しない
+.TP
+\fB\-e, \-\-exclude\-file=<path>\fP	除外ファイルへのパス
+\fB<path>\fP は使用したい除外ファイルへの絶対パス。
+このオプションが使用されない場合のデフォルトパスは 
+/etc/eclean/{packages,distfiles}.exclude である (存在すれば)。もしその場所にファ
+イルが存在するものの一時的にそれを無視したい場合には、/dev/null を使用していただ
+きたい。
+.TP
+\fB\-i, \-\-interactive\fP          削除する前に確認する
+.TP
+\fB\-n, \-\-package\-names\fP       全てのバージョンを保護する (\-\-destructive のみ)
+.TP
+\fB\-p, \-\-pretend\fP              何が掃除されるかを表示するだけ
+.TP
+\fB\-q, \-\-quiet\fP                エラー以外の出力をできるだけ抑制する
+.TP
+\fB\-t, \-\-time-limit=<time>\fP    <time> 以後に更新されたファイルを削除しない
+\fB<time>\fP は期間: "1y" は "1年"、"2w" は "2週間"、など。
+.br
+単位: y (年)、m (月)、w (週)、d (日) そして h (時間)。
+.TP
+\fB\-h, \-\-help\fP                 ヘルプを表示する
+.TP
+\fB\-V, \-\-version\fP              バージョン情報を表示する
+.SS アクション
+.TP
+\fBdistfiles\fR
+/usr/portage/distfiles を掃除する (それか /etc/make.conf にある DISTDIR)。
+このアクションはほとんどの Gentoo ユーザーにとって有用であるだろう、私たちはだれ
+しもがいつか巨大な DISTDIR を持つことになるのだから...
+.br
+\fBeclean\-dist\fP は eclean を "distfiles" アクションで実行する、コマンドライン
+入力をかんたんにするためのショートカットである。
+.TP
+\fBpackages\fR
+/usr/portage/packages を掃除する (それか /etc/make.conf にある PKGDIR)。
+FEATURES フラグに "buildpkg" や "buildsyspkg" を使用する人にとくに有用である。
+.br
+\fBeclean\-pkg\fP は eclean を "packages" アクションで実行する、コマンドライン入
+力をかんたんにするためのショートカットである。
+.SS 'distfiles' アクションのオプション
+.TP
+\fB\-f, \-\-fetch-restricted\fP		手動でダウンロードしたファイルを保護する (\-\-destructive のみ)
+.TP
+\fB\-s, \-\-size-limit=<size>\fP	<size> より大きいものは削除しない
+<size> はサイズ指定: "10M" は "10メガバイト"、"200K" は "200キロバイト"、など。
+.br
+単位: G, M, K そして B.
+.SS 'packages' アクションのオプション
+.TP
+オプションなし。
+.SH 除外ファイル
+除外ファイルは特に保護したいパッケージの名前や、カテゴリーを列挙したものである。
+これは例えばシステム関連のバイナリパッケージをより多く保護したい場合などに便利で
+ある。文法は以下の通り:
+.IP o
+空行や、"#" (コメント) で始まる行は無視される。
+.IP o
+1行には1項目のみ。
+.IP o
+"sys\-apps" のようなカテゴリの名前が指定されている場合、そのカテゴリの全てのパッ
+ケージが保護される。"sys\-apps/*" もまた許容されるが、これはどのような場合でもワ
+イルドカードがサポートされていることを意味するものではない。
+.IP o
+"app\-shells/bash" のようなパッケージの名前が指定されている場合、そのパッケージ
+が保護される。">=app\-shells/bash\-3" のようなバージョンアトムはサポートされてい
+ない。また、完全なパッケージの名前 (カテゴリを含む) である必要がある。
+.IP o
+"!sys\-apps/portage" のように先頭にエクスクラメーション・マークがある場合、その
+パッケージは保護対象から除外される。これはそのカテゴリが保護されている場合にのみ
+有用である。
+.IP o
+distfiles 保護の場合、保護したいファイル名を指定する。これは OpenOffice.org i18n 
+ファイル (例えば "helpcontent_33_unix.tgz") のような、ebuild に記載されていない
+ファイルが存在する場合に便利である。
+.LP
+アクションが "packages" (または "distfiles") の時、/etc/eclean/packages.exclude
+(または distfiles.exclude) が存在すればそれが使用される。これは 
+\-\-exclude\-file オプションで置き換えることができる。
+.SH 例
+.LP
+distfiles のみを掃除し、各ファイルごとに確認する:
+.br
+.B # eclean \-i distfiles
+.LP
+カラー表示をせずに、削除可能なバイナリパッケージを確認する:
+.br
+.B # eclean \-Cp packages
+.LP
+未インストールパッケージのバイナリパッケージを削除し、インストール済みのものは保持する:
+.br
+.B # eclean-pkg \-d \-n
+.LP
+インストール済みパッケージ以外 (バージョンの完全一致) の distfiles のうち、1ヶ月未満、
+50MB 以上、自動ダウンロード禁止のもの以外を削除する:
+.br
+.B # eclean-dist \-d \-t1m -s50M -f
+.LP
+crontab より、毎週日曜午前1時に、出力を抑制して安全にパッケージを削除し、1週間上
+経った distfiles を破壊的に削除する:
+.br
+.B 0 1 * * sun \ \ eclean \-C \-q packages ; eclean \-C \-q \-d \-t1w distfiles
+.".SH "BUGS"
+.".TP
+."The policy used to decide wether a distfile can be removed or not relies on the SRC_URI variables ."of ebuilds.  It means that if an ebuild uses files that are not part of its SRC_URI, eclean will ."probably remove them.  This are ebuilds bugs, please report them as such on ."http://bugs.gentoo.org. 
+.".TP
+."In safest mode (default, without the \-\-destructive option), this script can be very slow.  There
+."is not much to do about it without hacking outside of the portage API.
+.SH 関連項目
+.TP
+eclean 誕生のきっかけを与えた Gentoo フォーラムのスレッド
+.B http://forums.gentoo.org/viewtopic.php?t=3011
+.TP
+eclean を gentoolkit に取り込むよう要求するバグ報告:
+.B http://bugs.gentoo.org/show_bug.cgi?id=33877
+.TP
+Yacleaner, その他の同様なツールのひとつ:
+.B http://blog.tacvbo.net/data/files/yacleaner/
+.SH 著者
+Thomas de Grenier de Latour (tgl) <degrenier@easyconnect.fr>

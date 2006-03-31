@@ -1,0 +1,59 @@
+.\"
+.\" Japanese Version Copyright (c) 2006 Akinori Hattori
+.\"     all rights reserved.
+.\" Translated on 26 Mar 2006 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH "glsa-check" "1" "0.6" "Marius Mauch" "gentoolkit"
+.SH 名前
+.LP 
+glsa\-check \- Gentoo: GLSA (Gentoo Linux セキュリティ勧告) を監視、処理するツール
+.SH 書式
+.LP 
+glsa\-check <\fIoption\fP> [\fIglsa\-list\fP]
+
+[\fIglsa\-list\fR] には任意の番号の GLSA id、GLSA に含まれているファイル名、もしくは、特別な識別子 'all' か 'new' を指定することができる
+.SH 説明
+.LP 
+これは Gentoo Linux セキュリティ勧告を監視し、処理するためのツールである。
+バグを報告する前に、
+.br 
+http://www.gentoo.org/proj/en/portage/glsa\-integration.xml
+.br 
+を読んでいただきたい。
+.LP
+注意: このツールを有効に使うためには、常日頃から Portage ツリーを最新の状態に同期していなくてはならない。
+.SH オプション
+.LP 
+.TP 
+.B \-l, \-\-list
+適用されていない全ての GLSA を列挙する
+.TP 
+.B \-d, \-\-dump, \-\-print
+指定された GLSA の詳細を表示する
+.TP 
+.B \-t, \-\-test
+指定された GLSA が現在のシステムに影響を与え得るかを確認する
+.TP 
+.B \-p, \-\-pretend
+現在の GLSA を適用するために実行すべきコマンドを表示する
+.TP 
+.B \-f, \-\-fix
+現在の GLSA を自動的に適用しようとする (試験中)
+.TP 
+.B \-i, \-\-inject
+指定された GLSA を適用したことにする
+.TP 
+.B \-n, \-\-nocolor
+カラー表示をしない (オプション)
+.TP 
+.B \-h, \-\-help
+ヘルプを表示する
+.TP 
+.B \-V, \-\-version
+glsa-check のバージョンを表示する
+.TP 
+.B \-v, \-\-verbose
+詳細表示をする (オプション)
+.TP
+.B \-c, \-\-cve
+列挙表示において CAN id を表示する (オプション)
