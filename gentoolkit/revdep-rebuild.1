@@ -1,16 +1,100 @@
 .\"
-.\" Japanese Version Copyright (c) 2003 Akinori Hattori
+.\" Japanese Version Copyright (c) 2006 Akinori Hattori
 .\"     all rights reserved.
-.\" Translated on 20 Nov 2003 by Akinori Hattori <hattya@gentoo.org>
+.\" Translated on 27 Mar 2006 by Akinori Hattori <hattya@gentoo.org>
 .\"
-.TH revdep-rebuild "1" "Nov 2003" "gentoolkit"
+.TH "revdep\-rebuild" "1" "" "gentoolkit" ""
 .SH 名前
-revdep-rebuild \- Gentoo: 依存をさかのぼってリビルド
+revdep\-rebuild \- Gentoo: Reverse Dependency Rebuilder
 .SH 書式
-.B revdep-rebuild
+.B revdep\-rebuild
+[OPTIONS] [\-\-] [EMERGE OPTIONS]
+.SH 説明
+revdep\-rebuild は存在しない共有ライブラリに依存しているライブラリ、実行ファイル
+を検索し、それら依存関係の壊れた実行ファイル、ライブラリを emerge し直すことで修
+復する。パッケージの更新により、そのパッケージに依存しているパッケージの依存関係
+が壊れてしまったときに有用である。
+.SH オプション
+.TP 
+.B \-X | \-\-package\-names
+インストール済みのバージョンを指定せずに、利用可能なパッケージから最適なものを 
+emerge する。
+.TP      
+.B \-\-library=NAME
+そのライブラリを使用しているパッケージを emerge する。名前はライブラリのフルパス
+か、基本的な正規表現 (基本的な正規表現の定義は grep のマニュアル参照)。
+.TP 
+.B \-nc | \-\-no\-color
+カラー表示をしない (emerge コマンドにも渡される)
+.TP 
+.B \-i | \-\-ignore
+前回実行時の一時ファイルを無視する
+.TP 
+.B \-q | \-\-quiet
+最小限の表示にする (emerge コマンドにも渡される)
+.TP 
+.B \-vv | \-\-extra\-verbose
+さらに詳細に表示する (現在は revdep-rebuild の検索環境が表示される)
+
+その他のオプションは emerge コマンドへ渡される
+.SH 設定
+revdep\-rebuild はもう決め打ちされたパスを使用しない。標準の動作を変えるにはユー
+ザーにより以下の変数が変更されればよい。
+
+LD_LIBRARY_MASK \- 特別なライブラリとみなすマスク
+.LP 
+SEARCH_DIRS \- 実行ファイルとライブラリを検索するディレクトリのパスの一覧
+.LP 
+SEARCH_DIRS_MASK \- 検索しないディレクトリの一覧
+
+これらの変数は実行する前に環境変数として設定するか、/etc/make.conf にあらかじめ
+追加しておくことができる。
+
+"\-*" はこれまでの変数設定を消去することを意味する。
+例: SEARCH_DIRS="/usr/bin \-*" は SEARCH_DIRS を /usr/bin のみに設定する。
+
+revdep\-rebuild は /etc/make.conf にある NOCOLOR と PORTAGE_NICENESS 変数に従う。
+.SH 例
+revdep\-rebuild を実行する際、まずはじめに以下のようにコマンドを実行することを勧
+める:
+.br 
+\fBrevdep\-rebuild \-\-ignore \-\-pretend\fR
+
+/mnt と /home を除外してシステム全体を検索する:
+.br 
+\fBenv SEARCH_DIRS="/ \-*" SEARCH_DIRS_MASK="/mnt /home" revdep\-rebuild\fR
+
+KDE 3.3 の libkdecore.so.4 に依存しているパッケージを再構築する:
+.br 
+\fBrevdep\-rebuild \-\-library /usr/kde/3.3/lib/libkdecore.so.4\fR
+
+libImlib.so と libImllib2.so に依存しているパッケージを再構築する:
+.br 
+\fBrevdep\-rebuild \-\-library libImlib[2]*.so.*\fR
+
+.SH 返り値
+revdep\-rebuild は成功した場合にはゼロを、そうでない場合にはゼロ以外の値を返す。
 .SH バグ
-このツールにはまだ man ページがない。このことについてのバグは 
-http://bugs.gentoo.org に気軽に投稿していただきたい。
-.SH 著者
-この情報を提供する man ページは Karl Trygve Kalleberg <karltk@gentoo.org> によっ
-て書かれた。
+.LP
+バージョンを指定するモードで、正しい順序にも関わらず revdep\-rebuild が失敗する
+のは、そのパッケージが最新ではないからである。
+.br 
+http://bugs.gentoo.org/show_bug.cgi?id=23018
+.LP 
+\-\-package\-names モードを利用した再構築を標準にすべきだが、定義されたスロット
+を最新バージョンへと更新する機能が emerge には存在しない。
+.br 
+http://bugs.gentoo.org/show_bug.cgi?id=4698
+
+\fB注意:\fR スロット化されたパッケージを最新バージョンへと更新をする機能は 
+revdep\-rebuild に追加されてはいるが、それが 100% 正確に機能することは期待できな
+い。
+.LP 
+入力を必要とする emerge のコマンドが正しく扱えない。
+.br 
+http://bugs.gentoo.org/show_bug.cgi?id=37485
+
+バグ報告は <http://bugs.gentoo.org> まで。
+.SH 関連項目
+emerge(1), portage(5), grep(1)
+
