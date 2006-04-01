@@ -1,0 +1,96 @@
+.\"
+.\" Japanese Version Copyright (c) 2003,2006 Akinori Hattori
+.\"     all rights reserved.
+.\" Translated on 17 Oct 2003 by Akinori Hattori <hattya@gentoo.org>
+.\"
+.TH "EUSE" "1" "2004-10-17" "Gentoo Linux" "Gentoo Toolkit"
+.SH 名前
+euse \- Gentoo: コマンドライン USE フラグエディタ
+.SH 書式
+.B euse
+\fI<option> [suboption] [useflaglist]\fB
+.SH 説明
+.PP 
+.I euse
+は /etc/make.conf を直接編集することなく、USE フラグを設定 (無効/有効) するため
+に使用される。 またそれ以外にも、USE フラグの説明や、状態 (有効/無効)、フラグの
+種類 (global/local) などを取得するためにも使用される。
+.SH オプション
+.TP 
+\fB\-E, \-\-enable\fR
+make.conf の USE フラグを有効にする。引数として、スペースで区切られたひとつ以上
+の USE フラグを指定することができる。
+.TP 
+\fB\-D, \-\-disable\fR
+make.conf の USE フラグを無効にする。USE フラグの前に '\-' を付けて、make.conf 
+の USE 設定に追加する。引数として、スペースで区切られたひとつ以上の USE フラグを
+指定することができる。
+.TP 
+\fB\-P, \-\-prune\fR
+make.conf から USE フラグを削除する。指定された全ての USE フラグを、その状態如何
+に関わらず make.conf から削除する。
+.TP 
+\fB\-i, \-\-info\fR
+USE フラグの詳細を表示する。引数が指定されない場合には、全ての USE フラグの情報
+が表示され、ひとつ以上の引数 (スペース区切り) が指定された場合には、それらのフラ
+グについての情報が表示される。
+.sp
+.RS
+出力される形式は以下の通り:
+.br 
+\fB[\- cD ]\fR alpha \- indicates that architecture ...
+.br 
+\fB[\-   ]\fR moznocompose (net\-www/mozilla):.br 
+Disable building of mozilla's web page composer 
+.br 
+最初の列に表示されるのは:
+.IP is_active
++ はそのフラグが Portage により有効にされている場合、\- はそうでない場合
+.IP is_in_env
+E はそのフラグが環境変数により有効になっている場合、e はそれが環境変数により無効
+にされている場合、何も表示されなければ環境変数による影響はないということである
+.IP is_in_make_conf
+C はそのフラグが make.conf において有効になっている場合、c はそれが make.conf に
+おいて無効になっている場合、何も表示されなければ make.conf による影響はないとい
+うことである。
+.IP is_in_make_defaults
+D はそのフラグが make.defaults において有効になっている場合、d はそれが 
+make.defaults において無効になっている場合、何も表示されなければ make.defaults 
+による影響はないということである。
+.IP is_in_make_globals
+G はそのフラグが make.globals において有効になっている場合、g はそれが 
+make.globals において無効になっている場合、何も表示されなければ make.globals に
+よる影響はないということである。
+.br 
+それ以降はフラグの名前、ローカルフラグとして使用しているパッケージ名、そしてその説明 (ローカルフラグでは改行が入る) である。
+.TP 
+\fB\-a, \-\-active\fR
+現在有効になっている全ての USE フラグを、それがどこで有効になっているか (\fB\-\-info\fR) とともに表示する。
+.TP 
+\fB\-h, \-\-help\fR
+ヘルプを利用可能な全てのフラグとその簡単な説明とともに表示する。
+.TP 
+\fB\-v, \-\-version\fR
+バージョン情報を表示する
+.SH ファイル
+/etc/make.conf
+.br 
+/etc/make.profile/make.defaults
+.br 
+/etc/make.globals
+.br 
+$PORTDIR/profiles/use.desc
+.br 
+$PORTDIR/profiles/use.local.desc
+.br 
+
+.SH 著者
+Original version by Arun Bhanu <codebear@gentoo.org>
+.br 
+Updated for rewritten euse by Marius Mauch <genone@gentoo.org>
+.SH バグ
+euse は未だ use.defaultsや、use.mask、package.use により有効、無効にされている USE フラグを扱えない。また、\-* フラグも正しく解釈できない。
+.SH 関連項目
+.BR ufed(8), 
+.TP 
+\fI/usr/bin/euse\fR スクリプト
