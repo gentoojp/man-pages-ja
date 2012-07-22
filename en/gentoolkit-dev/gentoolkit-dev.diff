@@ -1,0 +1,11 @@
+--- a/en/gentoolkit-dev/ebump.1
++++ b/en/gentoolkit-dev/ebump.1
+@@ -95,7 +95,7 @@ From these files, \fIebump\fR will load the settings
+ 
+ .LP
+ \fB~/.gentoo/gentool-env\fR
+-.IR
++.IP
+ From this file, \fIebump\fR will load the env vars \fBAUTHORNAME\fR and 
+ \fBAUTHOREMAIL\fR, which are used to generate proper ChangeLog entries.
+ 

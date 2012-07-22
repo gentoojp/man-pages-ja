@@ -63,8 +63,31 @@ gentoolkit_SOURCES := gentoolkit/eclean.1 \
                       gentoolkit/gentoolkit.cfg
 gentoolkit_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(gentoolkit_SOURCES)))
 
+gentoolkit_dev_NAME    := gentoolkit-dev
+gentoolkit_dev_VERSION := 0.2.5
+gentoolkit_dev_DATE    := 2005-07-12
+gentoolkit_dev_SOURCES := gentoolkit-dev/ebump.1 \
+                          gentoolkit-dev/ebump.1.ja.po \
+                          gentoolkit-dev/ebump.1.txt \
+                          gentoolkit-dev/gensync.1 \
+                          gentoolkit-dev/gensync.1.ja.po \
+                          gentoolkit-dev/gensync.1.txt \
+                          gentoolkit-dev/echangelog.pod \
+                          gentoolkit-dev/echangelog.pod.ja.po \
+                          gentoolkit-dev/echangelog.1.txt \
+                          gentoolkit-dev/ekeyword.pod \
+                          gentoolkit-dev/ekeyword.pod.ja.po \
+                          gentoolkit-dev/ekeyword.1.txt \
+                          gentoolkit-dev/eviewcvs.pod \
+                          gentoolkit-dev/eviewcvs.pod.ja.po \
+                          gentoolkit-dev/eviewcvs.1.txt \
+                          gentoolkit-dev/gentoolkit-dev.cfg
+gentoolkit_dev_PODS    := $(addprefix $(builddir)/,$(filter %.pod,$(gentoolkit_dev_SOURCES)))
+gentoolkit_dev_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(gentoolkit_dev_SOURCES))) \
+                          $(patsubst %.pod,%.1,$(gentoolkit_dev_PODS))
 
-.PHONY: all clean pod epm esearch gentoolkit
+
+.PHONY: all clean pod epm esearch gentoolkit gentoolkit-dev
 .SECONDEXPANSION:
 
 %.1: %.in
@@ -78,7 +101,7 @@ gentoolkit_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(gentoolkit_SOURCES
 %.in: %.pod
 	$(POD2MAN) $(PODFLAGS) $< >$@
 
-all: epm esearch gentoolkit
+all: epm esearch gentoolkit gentoolkit-dev
 
 clean:
 	rm -rf $(builddir)
@@ -107,4 +130,12 @@ gentoolkit: $(gentoolkit_MANS)
 $(gentoolkit_MANS): .po4a-gentoolkit-stamp
 .po4a-gentoolkit-stamp: $(gentoolkit_SOURCES)
 	$(call po4a,gentoolkit)
+	touch $@
+
+gentoolkit-dev:
+	$(MAKE) P=$@ pod
+$(gentoolkit_dev_MANS): $(gentoolkit_dev_PODS)
+$(gentoolkit_dev_PODS): .po4a-gentoolkit-dev-stamp
+.po4a-gentoolkit-dev-stamp: $(gentoolkit_dev_SOURCES)
+	$(call po4a,gentoolkit-dev)
 	touch $@

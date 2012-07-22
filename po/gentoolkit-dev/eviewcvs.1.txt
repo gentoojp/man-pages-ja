@@ -1,0 +1,5 @@
+.\"
+.\" Japanese Version Copyright (c) 2005 Akinori Hattori
+.\"     all rights reserved.
+.\" Translated on 4 Oct 2005 by Akinori Hattori <hattya@gentoo.org>
+.\"
