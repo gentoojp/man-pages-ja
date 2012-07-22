@@ -4,180 +4,180 @@
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "EBUILD" "1" "Nov 2002" "Portage 2.0.51" "Portage"
-.SH "̾��"
-ebuild \- Portage �����ƥ�ؤ����٥륤�󥿥ե�������ebuild �ץ������
-.SH "��"
+.SH "名前"
+ebuild \- Portage システムへの低レベルインタフェース、ebuild プログラム
+.SH "書式"
 .B ebuild
 .I file command [command]\fR...
-.SH "����"
-ebuild �ץ������� Portage �����ƥ�ؤ�ľ�ܤΥ��󥿥ե������Ǥ��롣
-���Υץ������ˤ�äơ�ebuild ������Υ��֥��ޥ�ɤ䥰�롼�ץ��ޥ��
-��ľ����������δĶ��䵡ǽ�Ǽ¹Ԥ��뤳�Ȥ��Ǥ��롣ebuild �ץ������
-�� ebuild ������ץȤ�1�İʾ�Υ��ޥ�ɤ�����Ȥ��Ƽ�ꡢebuild
-������ץȤ���Ϥ��ƻ��ꤵ�줿���ޥ�ɤ�¹Ԥ��롣��������������롢
-��������Ÿ�����롢�������򥳥�ѥ��뤹�롢��image�פȤ�������ǥ��쥯�ȥ�
-�˥��֥������ȥե�����򥤥󥹥ȡ��뤹�롢����ǥ��쥯�ȥ�˥��󥹥ȡ���
-���줿���᡼����ºݤ˥�������ե����륷���ƥ�˥��󥹥ȡ��뤹�롢����
-���᡼������ bzip ���̤��줿 tar ���������֥ѥå�������������롢
-�ʤɤΥ��ޥ�ɤ����롣
-.SH "�ե�����"
-������ ebuild ������ץȤǤʤ���Фʤ�ʤ����ܤ��������
-\fBebuild\fR(5) �򻲾ȡ�
-.SH "���ޥ��"
+.SH "説明"
+ebuild プログラムは Portage システムへの直接のインタフェースである。
+このプログラムによって、ebuild を特定のサブコマンドやグループコマンド
+で直接操作し、特定の環境や機能で実行することができる。ebuild プログラム
+は ebuild スクリプトと1つ以上のコマンドを引数として取り、ebuild
+スクリプトを解析して指定されたコマンドを実行する。ソースを取得する、
+ソースを展開する、ソースをコンパイルする、「image」という一時ディレクトリ
+にオブジェクトファイルをインストールする、一時ディレクトリにインストール
+されたイメージを実際にローカルファイルシステムにインストールする、その
+イメージから bzip 圧縮された tar アーカイブパッケージを作成する、
+などのコマンドがある。
+.SH "ファイル"
+正しい ebuild スクリプトでなければならない。詳しい情報は
+\fBebuild\fR(5) を参照。
+.SH "コマンド"
 .TP
 .BR help
-�ѥå�������ͭ�ξ���ȤȤ�ˤ��Υޥ˥奢��ڡ����δ�ά�Ǥ�ɽ�����롣
+パッケージ固有の情報とともにこのマニュアルページの簡略版を表示する。
 .TP
 .BR setup
-�ѥå�������ͭ�Υ��åȥ��åפȤ��ޤ��ޤʥ����ƥ�����å���Ԥʤ���
+パッケージ固有のセットアップとさまざまなシステムチェックを行なう。
 .TP
 .BR clean
-��������� ebuild �ե�����Τ���˺��줿 Portage �ΰ���ӥ��
-�ǥ��쥯�ȥ��õ�롣�̾����ӥ�ɥǥ��쥯�ȥ��Ÿ�����줿
-�����������ɤ� "���󥹥ȡ��륤�᡼��" (��������ե����륷���ƥ��
-���󥹥ȡ��뤵���ե����롢�⤷���ϥХ��ʥ�ѥå���������¸�����
-�ե���������)��ޤࡣ�ӥ�ɥǥ��쥯�ȥ�� BUILD_PREFIX �ѿ��ˤ�ä�
-���ꤵ��롣�����ѿ����ʤˤ��Τꤿ������ \fIemerge [\-v] info\fR
-��¹Ԥ��롣�����ѿ����񤭤��������� \fBmake.conf\fR(5) �򻲾ȡ�
+その特定の ebuild ファイルのために作られた Portage の一時ビルド
+ディレクトリを消去する。通常一時ビルドディレクトリは展開された
+ソースコードと "インストールイメージ" (ローカルファイルシステムに
+インストールされるファイル、もしくはバイナリパッケージに保存される
+ファイル全て)を含む。ビルドディレクトリは BUILD_PREFIX 変数によって
+設定される。この変数がなにか知りたい場合は \fIemerge [\-v] info\fR
+を実行する。この変数を上書きしたい場合は \fBmake.conf\fR(5) を参照。
 
-��: FEATURES �ѿ��ˡ�noclean�פ��ޤޤ�Ƥ��ʤ������ꡢ�ѥå�������
-����ʤ����󥹥ȡ��뤵���� Portage �ϰ���ӥ�ɥǥ��쥯�ȥ�ˤ���
-��ΤۤȤ�����Ƥ�õ�롣FEATURES �� noclean ���ɲä���Ȥ�������
-�Υե����뤬�Ĥꤹ������������̤���񤷤Ƥ��ޤ���̤ˤʤ롣
-���󥹥ȡ����˥�������Ȥ�ɬ�פ��ʤ��ΤǤ���С�noclean ����ꤹ��
-���ȤϤ����ᤷ�ʤ�����������ư�� \fIrm \-rf /var/tmp/portage\fR �Ȥ���
-����ӥ�ɥǥ��쥯�ȥ�ˤ���ե��������Ƥ�ä��Ȥ�����ˡ�⤢�롣
+註: FEATURES 変数に「noclean」が含まれていないかぎり、パッケージが
+問題なくインストールされると Portage は一時ビルドディレクトリにある
+ものほとんど全てを消去する。FEATURES に noclean を追加するとたくさん
+のファイルが残りすぐに膨大な容量を消費してしまう結果になる。
+インストール後にソースを使う必要がないのであれば、noclean を指定する
+ことはお奨めしない。一方、手動で \fIrm \-rf /var/tmp/portage\fR として
+一時ビルドディレクトリにあるファイル全てを消すという方法もある。
 .TP
 .BR fetch
-SRC_URI �ǻ��ꤵ��Ƥ��륽���������� DISTDIR (�ܺ٤� \fBmake.conf\fR(5)
-����)�ˤ��äƻȤ�����֤ˤʤäƤ��뤫�������� md5 �����å�����Ǥ��뤫
-�ɤ�����Ĵ�٤롣���������Ȥ��ʤ����֤ʤ� SRC_URI �ǻ��ꤵ�줿��꤫��
-����������ɤ��褦�Ȥ��롣1�ĤΥե�������Ф�ʣ���Υ���������ɾ�꤬
-�󤲤��Ƥ�����硢Portage �ϳơ��ξ��Τ����ɤ������ᤤ�� ping ��
-�Ǥä�Ĵ�٤�(���ߤϴְ�äƤ��뤫�⤷��ʤ���)��Gentoo Linux �Υߥ顼
-�����Ȥ� GENTOO_MIRRORS ���������Ƥ��ꡢ��ˤ��ξ�꤬�ǽ��Ĵ�٤��롣
-�⤷�ʤ�餫����ͳ�Ǹ��ߤΥ����������������ɤ����Ф���Υ������� md5
-�����������Ȥ� files/digest\-[�ѥå�����̾]\-[�С������\-��ӥ����] ��
-��Ͽ����Ƥ����ͤȰ��פ��ʤ��ä���硢�ٹ𤬽��Ϥ��졢ebuild �ϥ��顼
-������ 1 �ǽ�λ���롣
+SRC_URI で指定されているソースが全て DISTDIR (詳細は \fBmake.conf\fR(5)
+参照)にあって使える状態になっているか、正しい md5 チェックサムであるか
+どうかを調べる。ソースが使えない状態なら SRC_URI で指定された場所から
+ダウンロードしようとする。1つのファイルに対し複数のダウンロード場所が
+挙げられていた場合、Portage は各々の場所のうちどこがより近いか ping を
+打って調べる(現在は間違っているかもしれないが)。Gentoo Linux のミラー
+サイトは GENTOO_MIRRORS で定義されており、常にこの場所が最初に調べられる。
+もしなんらかの理由で現在のソースやダウンロードしたばかりのソースの md5
+ダイジェストが files/digest\-[パッケージ名]\-[バージョン\-リビジョン] に
+記録されている値と一致しなかった場合、警告が出力され、ebuild はエラー
+コード 1 で終了する。
 .TP
 .BR digest
-/usr/portage/[���ƥ��꡼]/[�ѥå�����̾]/files/ �˥ѥå������Υ�����������
-�ե������������롣���Υ����������ȥե�����ˤ� SRC_URI �˽񤤤Ƥ���ե�����
-���Ƥ� md5sum ����󤵤�Ƥ��롣���������ѥå������Υ������ե����뤬
-����Ƥ��롢�⤷�����Ѥʾ��ˤϡ�md5sum ������򸡽Ф��롣
+/usr/portage/[カテゴリー]/[パッケージ名]/files/ にパッケージのダイジェスト
+ファイルを作成する。このダイジェストファイルには SRC_URI に書いてあるファイル
+全ての md5sum が列挙されている。取得したパッケージのソースファイルが
+壊れている、もしくは変な場合には、md5sum がそれを検出する。
 .TP
 .BR unpack
-ebuild �ե������ \fIsrc_unpack()\fR �ؿ���¹Ԥ���
-\fI�ӥ�ɥǥ��쥯�ȥ�\fR (BUILD_PREFIX) �Υ��֥ǥ��쥯�ȥ�ؤ�
-��������Ÿ�����롣 src_unpack() �ؿ������ꤵ��Ƥ��ʤ���硢
-�ǥե���Ȥ� src_unpack() �ؿ������Ѥ��졢SRC_URI �ǻ��ꤵ��Ƥ���
-���ե������Ÿ�����롣������������
-${BUILD_PREFIX}/[�ѥå�����̾]\-[�С������\-��ӥ����]/work
-��Ÿ������롣���Υǥ��쥯�ȥ�� ${WORKDIR} �ѿ��ǻ��Ȥ��뤳�Ȥ�
-�Ǥ��롣
+ebuild ファイルの \fIsrc_unpack()\fR 関数を実行し、
+\fIビルドディレクトリ\fR (BUILD_PREFIX) のサブディレクトリへと
+ソースを展開する。 src_unpack() 関数が指定されていない場合、
+デフォルトの src_unpack() 関数が使用され、SRC_URI で指定されている
+全ファイルを展開する。ソースは普通
+${BUILD_PREFIX}/[パッケージ名]\-[バージョン\-リビジョン]/work
+に展開される。このディレクトリは ${WORKDIR} 変数で参照することが
+できる。
 
-ebuild ��������Ƥ���ʤ顢ebuild ������ץȤ���Ƭ���������Ƥ���
-${S} �ѿ�(�������ǥ��쥯�ȥ�) ��Ÿ�����줿�������Τ���ǥ��쥯�ȥ��
-�ؤ��Ƥ��뤳�Ȥ��ǧ���褦��${S} �ϥǥե���ȤǤ� ${WORKDIR}/${P}
-���������Ƥ���Τǡ����ޤ��ѹ�����ɬ�פϤʤ��� src_unpack() �ؿ���
-���Τޤޥ���ѥ���˼�꤫�����褦��������Ŭ�ڤʥѥå������Ƥ�
-�ؿ��Ǥ⤢�롣
+ebuild を作成しているなら、ebuild スクリプトの先頭で定義されている
+${S} 変数(ソースディレクトリ) が展開されたソースのあるディレクトリを
+指していることを確認しよう。${S} はデフォルトでは ${WORKDIR}/${P}
+と定義されているので、あまり変更する必要はない。 src_unpack() 関数は
+そのままコンパイルに取りかかれるようソースに適切なパッチを当てる
+関数でもある。
 .TP
 .BR compile
-ebuild �ե��������ǻ��ꤵ�줿 \fIsrc_compile()\fR �ؿ���¹Ԥ���
-Ÿ�������������򥳥�ѥ��뤹�롣src_compile() �γ��ϻ��ˤ�
-�����ȥǥ��쥯�ȥ꤬ ${S} �����ꤵ��롣 src_compile() ��
-��λ���ˤϥ������ϴ����˥���ѥ��뤵��Ƥ��ʤ���Фʤ�ʤ���
+ebuild ファイルの中で指定された \fIsrc_compile()\fR 関数を実行し、
+展開したソースをコンパイルする。src_compile() の開始時には
+カレントディレクトリが ${S} に設定される。 src_compile() の
+終了時にはソースは完全にコンパイルされていなければならない。
 .TP
 .BR test
-�����������ӥ�ɤ��줿���ɤ������ڤ��뤿�ᡢ
-�ѥå�������ͭ�Υƥ��ȥ�������¹Ԥ��롣
+全て正しくビルドされたかどうか検証するため、
+パッケージ固有のテストケースを実行する。
 .TP
 .BR preinst
-��Ư��Υե����륷���ƥ�˥ѥå������򥤥󥹥ȡ��뤹�����˼¹�
-����ɬ�פ�����ѥå�������ͭ�Υ���������¹Ԥ��롣
+稼働中のファイルシステムにパッケージをインストールする前に実行
+する必要があるパッケージ固有のアクションを実行する。
 .TP
 .BR install
-\fIsrc_install()\fR �ؿ���¹Ԥ����ѥå��������� \fI���󥹥ȡ���
-�ǥ��쥯�ȥ�\fR �˥��󥹥ȡ��뤹�롣��λ����ȡ�
-\fI���󥹥ȡ���ǥ��쥯�ȥ�\fR
-(${BUILD_PREFIX}/[�ѥå�����̾]\-[�С������\-��ӥ����]/image)
-�ˤϥ�������ե����륷���ƥ�˥��󥹥ȡ��뤵���٤��ե����뤫
-�Х��ʥ�ѥå������˴ޤޤ��٤��ե��������Ƥ����󥹥ȡ��뤵��롣
+\fIsrc_install()\fR 関数を実行し、パッケージを一時 \fIインストール
+ディレクトリ\fR にインストールする。完了すると、
+\fIインストールディレクトリ\fR
+(${BUILD_PREFIX}/[パッケージ名]\-[バージョン\-リビジョン]/image)
+にはローカルファイルシステムにインストールされるべきファイルか
+バイナリパッケージに含まれるべきファイル全てがインストールされる。
 .TP
 .BR postinst
-��Ư��Υե����륷���ƥ�˥ѥå������򥤥󥹥ȡ��뤷�����ȼ¹�
-����ɬ�פ�����ѥå�������ͭ�Υ���������¹Ԥ��롣ͭ�פʥ�å�������
-ɽ������뤳�Ȥ�¿����
+稼働中のファイルシステムにパッケージをインストールしたあと実行
+する必要があるパッケージ固有のアクションを実行する。有益なメッセージが
+表示されることが多い。
 .TP
 .BR qmerge
-���δؿ��� \fI���󥹥ȡ���ǥ��쥯�ȥ�\fR �����ƤΥե�������Ư���
-�ե����륷���ƥ�˥��󥹥ȡ��뤹�롣���Υץ������ϡ��ޤ�(���ꤵ���
-�����) \fIpkg_preinst()\fR �ؿ����¹Ԥ��졢�����ƥե����뤬��Ư���
-�ե����륷���ƥ�˥��󥹥ȡ��뤵�졢���󥹥ȡ��뤵�줿�ե������ md5
-�����������Ȥ�
-\fI/var/db/pkg/${CATEOGRY}/${PN}\-[�С������\-��ӥ����]/CONTENTS\fR
-�˵�Ͽ����롣���ե����뤬���󥹥ȡ��뤵���ȡ�\fIpkg_postinst()\fR
-�ؿ���(���ꤵ��Ƥ����)�¹Ԥ���롣
+この関数は \fIインストールディレクトリ\fR の全てのファイルを稼働中の
+ファイルシステムにインストールする。そのプロセスは、まず(指定されて
+いれば) \fIpkg_preinst()\fR 関数が実行され、そしてファイルが稼働中の
+ファイルシステムにインストールされ、インストールされたファイルの md5
+ダイジェストが
+\fI/var/db/pkg/${CATEOGRY}/${PN}\-[バージョン\-リビジョン]/CONTENTS\fR
+に記録される。全ファイルがインストールされると、\fIpkg_postinst()\fR
+関数が(指定されていれば)実行される。
 .TP
 .BR merge
-�̾ebuild �򥤥󥹥ȡ��뤹��ˤϡ�\fIfetch\fR��\fIunpack\fR��
-\fIcompile\fR��\fIinstall\fR ������ \fIqmerge\fR ����ɬ�פ����롣
-ñ�� ebuild �򥤥󥹥ȡ��뤷���������ʤ餳�Υ��ޥ�ɤ�ȤäƤ�褤��
-���Υ��ޥ�ɤϤ����5�ĤΥ��ƥå����Ƥ�¹Ԥ�����������Υ��ƥåפ�
-���Ԥ����餽���ǻߤޤäƤ���롣
+通常、ebuild をインストールするには、\fIfetch\fR、\fIunpack\fR、
+\fIcompile\fR、\fIinstall\fR そして \fIqmerge\fR する必要がある。
+単に ebuild をインストールしたいだけならこのコマンドを使ってもよい。
+このコマンドはこれら5つのステップ全てを実行し、ある特定のステップが
+失敗したらそこで止まってくれる。
 .TP
 .BR unmerge
-���δؿ���(���ꤵ��Ƥ����)�ޤ� \fIpkg_prerm\fR �ؿ���¹Ԥ��롣
-���˸��ߤΥե����륷���ƥफ�顢�ѥå����������Ƥ��񤫤�Ƥ���ե�����
-�˵󤲤��Ƥ����ΤΤ�����md5 �����å�����ȹ������郎��Ͽ�Ȱ��פ���
-�ե��������Ƥ������롣���Υǥ��쥯�ȥ�����ƺƵ�Ū�˺������롣
-�Ǹ��(���ꤵ��Ƥ����) \fIpkg_postrm\fR �ؿ����¹Ԥ���롣
-�ѥå������ο������С���������˥��󥹥ȡ��뤷�����줫��Ť�
-�С������� unmerge ����Τϰ����Ǥ��롣�¤ΤȤ�������������Τ�
-�侩�ѥå��������åץ��졼����ˡ�Ǥ��롣
+この関数は(指定されていれば)まず \fIpkg_prerm\fR 関数を実行する。
+次に現在のファイルシステムから、パッケージの内容が書かれているファイル
+に挙げられているもののうち、md5 チェックサムと更新時刻が記録と一致する
+ファイル全てを削除する。空のディレクトリは全て再帰的に削除される。
+最後に(指定されていれば) \fIpkg_postrm\fR 関数が実行される。
+パッケージの新しいバージョンを先にインストールし、それから古い
+バージョンを unmerge するのは安全である。実のところ、そうするのが
+推奨パッケージアップグレード方法である。
 .TP
 .BR prerm
-�ե����륷���ƥफ��ѥå������������������˼¹Ԥ���ʤ���Фʤ�ʤ�
-�ѥå�������ͭ�Υ���������¹Ԥ��롣\fIunmerge\fR �⻲�ȡ�
+ファイルシステムからパッケージが削除される前に実行されなければならない
+パッケージ固有のアクションを実行する。\fIunmerge\fR も参照。
 .TP
 .BR postrm
-�ե����륷���ƥफ��ѥå�������������줿���Ȥ˼¹Ԥ���ʤ���Фʤ�ʤ�
-�ѥå�������ͭ�Υ���������¹Ԥ��롣\fIunmerge\fR �⻲�ȡ�
+ファイルシステムからパッケージが削除されたあとに実行されなければならない
+パッケージ固有のアクションを実行する。\fIunmerge\fR も参照。
 .TP
 .BR config
-emerge �ץ���������λ�������Ȥ˼¹Ԥ�ɬ�פʥѥå�������ͭ�������¹Ԥ��롣
-����ե�����Υ��åȥ��åפ䡢�����Ʊ���褦�˥桼�����¹Ԥ��Ƥ�������
-���åȥ��åפʤɤ�¿����
+emerge プロセスが完了したあとに実行が必要なパッケージ固有の設定を実行する。
+設定ファイルのセットアップや、それと同じようにユーザが実行しておきたい
+セットアップなどが多い。
 .TP
 .BR package
-\fImerge\fR ���ޥ�ɤȤ褯���Ƥ��뤬���������������Ÿ��������ѥ��롢
-�����ƥ��󥹥ȡ��뤷�����ȡ�${PKGDIR}/All (${PKGDIR} �ϥǥե���ȤǤ�
-/usr/portage/packages) �� .tbz2 �Х��ʥ�ѥå���������������롣
-${PKGDIR}/${CATEGORY} �ˤ� ${PKGDIR}/All �ˤ���ѥå��������Τؤ�
-����ܥ�å���󥯤���������롣
+\fImerge\fR コマンドとよく似ているが、ソースを取得、展開、コンパイル、
+そしてインストールしたあと、${PKGDIR}/All (${PKGDIR} はデフォルトでは
+/usr/portage/packages) に .tbz2 バイナリパッケージが作成される。
+${PKGDIR}/${CATEGORY} には ${PKGDIR}/All にあるパッケージ本体への
+シンボリックリンクが作成される。
 .TP
 .BR rpm
-��� \fI���󥹥ȡ���ǥ��쥯�ȥ�\fR �ˤ���ե����뤫�� RedHat RPM 
-�ѥå�������ӥ�ɤ��롣�������Ǥ� ebuild �ΰ�¸����� RPM �ˤ�
-ȿ�Ǥ���ʤ���
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "��Ϣ����"
+一時 \fIインストールディレクトリ\fR にあるファイルから RedHat RPM 
+パッケージをビルドする。現時点では ebuild の依存情報は RPM には
+反映されない。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "関連項目"
 .BR emerge (1),
 .BR ebuild (5),
 .BR make.conf (5)
 .TP
-\fI/usr/sbin/ebuild.sh\fR ������ץ�
+\fI/usr/sbin/ebuild.sh\fR スクリプト
 .TP
-\fI/usr/lib/portage/bin\fR �ˤ���������ץꥱ�������
-.SH "�ե�����"
+\fI/usr/lib/portage/bin\fR にある補助アプリケーション
+.SH "ファイル"
 .TP
 \fB/etc/make.conf\fR 
-�ӥ�ɥץ������Τ�����ѿ����񤫤�Ƥ��ꡢmake.globals �����ꤵ�줿
-�ѿ����񤭤��롣
-.SH "����"
+ビルドプロセスのための変数が書かれており、make.globals で設定された
+変数を上書きする。
+.SH "著者"
 Achim Gottinger <achim@gentoo.org>
 .br 
 Daniel Robbins <drobbins@gentoo.org>
@@ -185,5 +185,5 @@ Daniel Robbins <drobbins@gentoo.org>
 Nicholas Jones <carpaski@gentoo.org>
 .br 
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: ebuild.1,v 1.16
+.SH "CVS ヘッダ"
+原文: ebuild.1,v 1.16

@@ -4,19 +4,19 @@
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "EBUILD" "5" "Feb 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-ebuild \- ebuild ������ץȤ������ե����ޥåȡ��ѿ����ؿ�
-.SH "����"
+.SH "名前"
+ebuild \- ebuild スクリプトの内部フォーマット・変数・関数
+.SH "説明"
 .BR ebuild (1)
-�ץ������� ebuild ������ץȤ�1�İ����˼�롣
-���Υ�����ץȤˤ��ѿ��ȥ��ޥ�ɤ��񤫤�Ƥ��ꡢ
-���ꥸ�ʥ륽������������Υ��եȥ������ѥå�������
-����������ɡ�Ÿ�����ѥå�������ѥ��롢���󥹥ȡ���
-�����ƥޡ������������ꤷ�Ƥ��롣
-�����μ��˲ä���ɬ�פǤ���� ebuild ������ץȤ˥��󥹥ȡ�������/
-���󥤥󥹥ȡ�������Υ��ޥ�ɤ�񤯤��Ȥ�Ǥ��롣
-.SH "����ץ�"
-��ñ�� ebuild �Υ���ץ�򼨤�:
+プログラムは ebuild スクリプトを1つ引数に取る。
+このスクリプトには変数とコマンドが書かれており、
+オリジナルソースから特定のソフトウェアパッケージを
+ダウンロード、展開、パッチ、コンパイル、インストール
+そしてマージする手順を指定している。
+これらの手順に加え、必要であれば ebuild スクリプトにインストール前後/
+アンインストール前後のコマンドを書くこともできる。
+.SH "サンプル"
+簡単な ebuild のサンプルを示す:
 
 .DS
 .nf
@@ -53,143 +53,143 @@ src_install() {
 	dodoc NEWS README* THANKS TODO AUTHORS BUGS ANNOUNCE
 }
 .fi
-.SH "�ѿ�"
+.SH "変数"
 .TP
-.B ������ˡ
-- PORTAGE* �� PORTDIR* �ѿ��� \fBmake.conf\fR(5) �˽񤫤�Ƥ��롣
+.B 使用方法
+- PORTAGE* と PORTDIR* 変数は \fBmake.conf\fR(5) に書かれている。
 .br
-- ebuild ���ѿ����ͤ������Ƥ�Ȥ��ϡ�
-�ѿ�̾������δ֤� \fB���ڡ�����ޤ�뤳�ȤϤǤ��ʤ�\fR��
+- ebuild で変数に値を割り当てるときは、
+変数名と等号の間に \fBスペースを含めることはできない\fR。
 .TP
 .B P
-�����ѿ��ˤ� ebuild �Υ�ӥ�����������ѥå�����̾�����äƤ��롣
-�����ѿ��� \fB���Ф�\fR �ѹ����ƤϤ����ʤ���
+この変数には ebuild のリビジョンを除いたパッケージ名が入っている。
+この変数は \fB絶対に\fR 変更してはいけない。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$P\fR=='\fIxfree-4.2.1\fR'
 .TP
 .B PN
-�����ѿ��ˤϥС�������ֹ������� ebuild ������ץ�̾�����äƤ��롣
+この変数にはバージョン番号を除いた ebuild スクリプト名が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PN\fR=='\fIxfree\fR'
 .TP
 .B PV
-�����ѿ��ˤϥ�ӥ�����������С�������ֹ椬���äƤ��롣
+この変数にはリビジョンを除いたバージョン番号が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PV\fR=='\fI4.2.1\fR'
 .TP
 .B PR
-�����ѿ��ˤϥ�ӥ�����ֹ桢�⤷���ϥ�ӥ�����ֹ椬¸�ߤ��ʤ����
-�ϡ�r0�פ����äƤ��롣
+この変数にはリビジョン番号、もしくはリビジョン番号が存在しない場合
+は「r0」が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PR\fR=='\fIr2\fR'
 .TP
 .B PVR
-�����ѿ��ˤϥ�ӥ�����ֹ�Ĥ��ΥС�������ֹ椬���äƤ��롣
+この変数にはリビジョン番号つきのバージョン番号が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PVR\fR=='\fI4.2.1-r2\fR'
 .TP
 .B PF
-�����ѿ��ˤϴ����ʥѥå�����̾ \fI[PN]\-[PVR]\fR �����äƤ��롣
+この変数には完全なパッケージ名 \fI[PN]\-[PVR]\fR が入っている。
 .br
 \fBxfree-4.2.1-r2.ebuild\fR --> \fB$PF\fR=='\fIxfree-4.2.1-r2\fR'
 .TP
 .B A
-�����ѿ��ˤϥѥå�������ɬ�פʥ������ե�����̾���Ƥ����äƤ��롣
-ebuild ��Ǥ����ѿ���������ƤϤ����ʤ��������ѿ��� \fISRC_URI\F 
-�ѿ����鼫ư��������롣
+この変数にはパッケージに必要なソースファイル名全てが入っている。
+ebuild 内でこの変数を定義してはいけない。この変数は \fISRC_URI\F 
+変数から自動生成される。
 .TP
 \fBWORKDIR\fR = \fI"${PORTAGE_TMPDIR}/portage/${PF}/work"\fR
-�����ѿ��ˤϥѥå������ӥ�ɥ롼�ȤΥѥ������äƤ��롣
-�����ѿ����ѹ����ʤ����ȡ�
+この変数にはパッケージビルドルートのパスが入っている。
+この変数を変更しないこと。
 .TP
 \fBFILESDIR\fR = \fI"${PORTDIR}/${CATEGORY}/${PN}/files"\fR
-�����ѿ��ˤ� Portage �ĥ꡼����Υѥå��������ȤΡ�files��
-���֥ե�����ؤΥѥ������äƤ��롣
-�����ѿ����ѹ����ʤ����ȡ�
+この変数には Portage ツリーの中のパッケージごとの「files」
+サブフォルダへのパスが入っている。
+この変数を変更しないこと。
 .TP
 \fBS\fR = \fI"${WORKDIR}/${P}"\fR
-�����ѿ��ˤϰ�� \fI�ӥ�ɥǥ��쥯�ȥ�\fR �Υѥ������äƤ��롣
-�����ѿ��� \fIsrc_compile\fR �� \fIsrc_install\fR �ؿ��ǻȤ��롣
-������δؿ��� \fIS\fR �򥫥��ȥǥ��쥯�ȥ�Ȥ��Ƽ¹Ԥ���롣
-�����ѿ��ϥѥå������� tar ���������֤�Ÿ�������Ȥ��ˤǤ���
-�ǥ��쥯�ȥ�̾�˹礦�褦���ѹ����Ƥ�褤��
+この変数には一時 \fIビルドディレクトリ\fR のパスが入っている。
+この変数は \fIsrc_compile\fR と \fIsrc_install\fR 関数で使われる。
+いずれの関数も \fIS\fR をカレントディレクトリとして実行される。
+この変数はパッケージの tar アーカイブを展開したときにできる
+ディレクトリ名に合うように変更してもよい。
 .TP
 \fBT\fR = \fI"${PORTAGE_TMPDIR}/portage/${PF}/temp"\fR
-�����ѿ��ˤ� \fI����ǥ��쥯�ȥ�\fR �Υѥ������äƤ��롣
-�����ѿ��Ϲ����ʤ褦�˻ȤäƤ褤��
+この変数には \fI一時ディレクトリ\fR のパスが入っている。
+この変数は好きなように使ってよい。
 .TP
 \fBD\fR = \fI"${PORTAGE_TMPDIR}/portage/${PF}/image"\fR
-�����ѿ��ˤϰ�� \fI���󥹥ȡ���ǥ��쥯�ȥ�\fR �Υѥ������äƤ��롣
-����ġ��������ؿ�(���ǽҤ٤�)��Ȥ鷺�˽񤭹�������
-${D} �Ȥ�����Ƭ����Ĥ��ʤ���Фʤ�ʤ���
-�����ѿ����ѹ����ʤ����ȡ�
+この変数には一時 \fIインストールディレクトリ\fR のパスが入っている。
+補助ツールと補助関数(下で述べる)を使わずに書き込む操作は
+${D} という接頭辞をつけなければならない。
+この変数を変更しないこと。
 .TP
 \fBDESCRIPTION\fR = \fI"A happy little package"\fR
-�����ѿ��ˤϥѥå������δ�ñ�����������äƤ��ʤ���Фʤ�ʤ���
+この変数にはパッケージの簡単な説明が入っていなければならない。
 .TP
 \fBSRC_URI\fR = \fI"http://happy.com/little/${P}.tar.gz"\fR
-�����ѿ��ˤ�ɬ�פʥ������ե�����ؤ� URI �Υꥹ�Ȥ����äƤ��롣
-1�ĤΥ������ե�����ؤ�ʣ���� URI �����äƤ��Ƥ�褤��
-\fIGENTOO_MIRRORS\fB\fR �˥ե����뤬���Ĥ���ʤ��ä���硢
-�Ǥ�®����꤬���Ф�롣
+この変数には必要なソースファイルへの URI のリストが入っている。
+1つのソースファイルへの複数の URI が入っていてもよい。
+\fIGENTOO_MIRRORS\fB\fR にファイルが見つからなかった場合、
+最も速い場所が選ばれる。
 .TP
 \fBHOMEPAGE\fR = \fI"http://happy.com/"\fR
-�����ѿ��ˤϥ������Υᥤ�󥵥��Ȥȡ��ѥå������ˤĤ��ƤΤ�äȾܤ���
-��������뤿��� URL �Υꥹ�Ȥ�����ʤ���Фʤ�ʤ���
+この変数にはソースのメインサイトと、パッケージについてのもっと詳しい
+情報を得るための URL のリストを入れなければならない。
 .TP
 \fBKEYWORDS\fR = \fI[-~][x86,ppc,sparc,mips,alpha,arm,hppa]\fR
-�����ѿ��ˤϤ��� ebuild ��ư���/���ʤ����Ȥ�ʬ���äƤ���
-�������ƥ�����(arch)��Ŭ�ڤʥꥹ�Ȥ�����ʤ���Фʤ�ʤ���
-�ǥե���ȤǤϡ������ arch �� ebuild ��ư��뤫�ɤ���
-ʬ����ʤ���硢ñ�ˤ��� arch �� KEYWORD ���������
-����� arch �Ǥ��� ebuild ��ư��ʤ���硢
-����򤿤Ȥ��� \-ppc �Τ褦�ˤ��� KEYWORD �˴ޤ�롣
-Portage �ĥ꡼�˼����ि��� ebuild ����Ф��줿�Ȥ���
-���� ebuild �� \fBư��뤳�Ȥ���������Ƥ��� \fR ��硢
-�������줿 arch ���Ф��� ~arch ���åȤ� KEYWORD
-�ˤʤ���Фʤ�ʤ�
-(���Τ褦�� KEYWORD ���Ĥ��Ƥ���ѥå�������
-���ޥ�ɥ饤�󤫤� ACCEPT_KEYWORDS="~arch" �Ȼ��ꤷ����
-\fBmake.conf\fR(5) ��������ꤹ�뤳�Ȥˤ�äơ�
-�ƥ��ȤΤ���˥ޥ����������뤳�Ȥ��Ǥ���)��
-���ꤹ��٤� arch �ˤĤ��Ƥο���Ǥ���ꥹ�Ȥ�
-/usr/portage/profiles/arch.list �򸫤Ƥ���������
+この変数にはその ebuild が動作する/しないことが分かっている
+アーキテクチャ(arch)の適切なリストを入れなければならない。
+デフォルトでは、特定の arch で ebuild が動作するかどうか
+分からない場合、単にその arch を KEYWORD から除く。
+特定の arch でその ebuild が動作しない場合、
+それをたとえば \-ppc のようにして KEYWORD に含める。
+Portage ツリーに取り込むための ebuild が提出されたとき、
+その ebuild が \fB動作することが証明されている \fR 場合、
+証明された arch に対する ~arch セットが KEYWORD
+になければならない
+(このように KEYWORD がついているパッケージは
+コマンドラインから ACCEPT_KEYWORDS="~arch" と指定したり
+\fBmake.conf\fR(5) の中で設定することによって、
+テストのためにマスクを解除することができる)。
+指定するべき arch についての信頼できるリストは
+/usr/portage/profiles/arch.list を見てください。
 .TP
 \fBSLOT\fR
-�����ѿ��ϡ�ʣ���ѡ������Υѥå���������¸���뤿���ɬ�פ�
-SLOT ����ꤹ�롣
-�ʤˤ򤷤Ƥ���Τ�ʬ���äƤ��ꡢSLOT ���ѹ����ʤ���Фɤ��ˤ�ʤ�ʤ�
-����������ǥե���ȤǤϡ�\fBSLOT\fR="0" ����ꤷ�ʤ���Фʤ�ʤ���
-�����ѿ��� \fI����\fR ̤����ΤޤޤǤ��äƤϤ����ʤ���
+この変数は、複数パージョンのパッケージが共存するために必要な
+SLOT を指定する。
+なにをしているのか分かっており、SLOT を変更しなければどうにもならない
+場合を除き、デフォルトでは、\fBSLOT\fR="0" を指定しなければならない。
+この変数は \fI絶対\fR 未定義のままであってはいけない。
 .TP
 \fBLICENSE\fR
-�����ѿ��ϥѥå���������������饤���󥹤Υ��ڡ����Ƕ��ڤ�줿
-�ꥹ�Ȥ�����ʤ���Фʤ�ʤ��������ѿ��ˤ� /usr/portage/licenses/
-�ˤ���饤���󥹤� \fB_ɬ��_\fR �ޥå����ʤ���Фʤ�ʤ���
-Portage �˥ޥå�����饤���󥹤�¸�ߤ��ʤ��Τ��Ȥ��Ƥ⡢
-�ޤ����Υ饤���󥹤� Portage ���ɲä��ʤ���Фʤ�ʤ���
+この変数はパッケージが該当するライセンスのスペースで区切られた
+リストを入れなければならない。この変数には /usr/portage/licenses/
+にあるライセンスと \fB_必ず_\fR マッチしなければならない。
+Portage にマッチするライセンスが存在しないのだとしても、
+まずそのライセンスを Portage に追加しなければならない。
 .TP
 \fBIUSE\fR
-�����ѿ��ˤϤ��Υӥ�ɥ�����ץȤ���ǻȤ��Ƥ������Ƥ� USE �ե饰��
-�ꥹ�Ȥ����äƤ��ʤ���Фʤ�ʤ���
-�������󵭤��ƤϤ����ʤ�ͣ��� USE �ե饰�� arch ��Ϣ�Υե饰�Ǥ���
-(\fBKEYWORDS\fR ����)��
+この変数にはそのビルドスクリプトの中で使われている全ての USE フラグの
+リストが入っていなければならない。
+ここに列記してはいけない唯一の USE フラグは arch 関連のフラグである
+(\fBKEYWORDS\fR 参照)。
 .TP
 \fBDEPEND\fR
-�����ѿ��ˤϤ��Υץ������򥳥�ѥ��뤹�뤿���ɬ�פ����ѥå�����
-�Υꥹ�Ȥ����äƤ��ʤ���Фʤ�ʤ���
+この変数にはそのプログラムをコンパイルするために必要な全パッケージ
+のリストが入っていなければならない。
 .RS
 .TP
-.B DEPEND ���ȥ�
-DEPEND �˴ޤޤ�륢�ȥ�(���줾��Υѥå�����̾)��ñ�� Portage
-���ѥå�����Ʊ�Τδط���׻�����Ȥ��˻Ȥ���¸���Τ��ȤǤ��롣
-DEPEND ���ȥब�ޤ� emerge ����Ƥ��ʤ���硢
-�ǿ��ΥС�����󤬥ޥå����뤳�Ȥ�α�դ��Ƥ���������
+.B DEPEND アトム
+DEPEND に含まれるアトム(それぞれのパッケージ名)は単に Portage
+がパッケージ同士の関係を計算するときに使う依存性のことである。
+DEPEND アトムがまだ emerge されていない場合、
+最新のバージョンがマッチすることに留意してください。
 .RS
 .TP
-.B �١������ȥ�
-�١������ȥ�Ȥϴ����� ���ƥ��꡼/�ѥå�����̾ �Τ��ȤǤ��롣
-�������äơ��ʲ��˵󤲤��Τϥ١������ȥ�Ǥ���:
+.B ベースアトム
+ベースアトムとは完全な カテゴリー/パッケージ名 のことである。
+したがって、以下に挙げるものはベースアトムである:
 
 .nf
 .I sys-apps/sed
@@ -197,10 +197,10 @@ DEPEND ���ȥब�ޤ� emerge ����Ƥ��ʤ���硢
 .I net-misc/dhcp
 .fi
 .TP
-.B ���ȥ�С������
-���ܺ٤�����ΥС������Υ��ȥ���������Ѳ�ǽ�Ǥ���ȸ����ΤϤ������Ȥ���
-�С���������Ƭ��(���򻲾�)�Ȱ��˻Ȥ�ͤФʤ�ʤ����Ȥ����ա�
-��äơ��С�������ֹ���������Ȥ��ƥ١����˲ä���Ȥ褤:
+.B アトムバージョン
+より詳細に特定のバージョンのアトムだけが使用可能であると言うのはいいことだ。
+バージョンは接頭辞(下を参照)と一緒に使わねばならないことに注意。
+よって、バージョン番号は接尾辞としてベースに加えるとよい:
 
 .nf
 sys-apps/sed\fI-4.0.5\fR
@@ -208,20 +208,20 @@ sys-libs/zlib\fI-1.1.4-r1\fR
 net-misc/dhcp\fI-3.0_p2\fR
 .fi
 
-�С�������ֹ�� 1.2 �� 4.5.2 �Τ褦�ˡ�����ԥꥪ�ɤǶ��ڤ�줿2�Ĥ�3
-�Ĥ��ֹ椫��ʤäƤ��롣����ʸ����ˤ� 1.2a �� 4.5.2z �Τ褦��1ʸ����
-���ˤĤ��뤳�Ȥ�Ǥ��롣����ʸ���� alpha �� beta �ʤɤʤɤΥ�꡼�����֤�
-��������˻ȤäƤ� \fB�ʤ�ʤ�\fR ���Ȥ����ա���꡼�����֤򼨤�����ˤϡ�
-���Ū����Ƭ�� _alpha, _beta, _pre (�ץ��꡼����pre-release), _rc
-(��꡼������ξ��֡�release candidate) �⤷���� _p (�ѥå� patch)
-��Ȥ����ȡ��Ĥޤꡢ����ѥå�������3���ܤ�ץ��꡼���ˤϡ�1.2_pre3
-�Τ褦�ʥС�������Ȥ����Ȥ������ȤǤ��롣
+バージョン番号は 1.2 や 4.5.2 のように、通例ピリオドで区切られた2つか3
+つの番号からなっている。この文字列には 1.2a や 4.5.2z のように1文字末
+尾につけることもできる。この文字は alpha や beta などなどのリリース状態を
+示すために使っては \fBならない\fR ことに注意。リリース状態を示すためには、
+補助的な接頭辞 _alpha, _beta, _pre (プリリリース、pre-release), _rc
+(リリース候補の状態、release candidate) もしくは _p (パッチ patch)
+を使うこと。つまり、あるパッケージの3度目もプリリリースには、1.2_pre3
+のようなバージョンを使う、ということである。
 .TP
-.B ���ȥ���Ƭ�黻�� [> >= = <= <]
-���Ĥ����ΤʥС����������ꤹ��ΤǤϤʤ���
-�����Ȥ��Ƥ���С������˰�¸�����뤳�Ȥ��Ǥ������
-�פ����Ȥ⤢�롣
-���Τ��ᡢ���̤Υ֡���黻�Ҥ��Ѱդ��Ƥ���:
+.B アトム接頭演算子 [> >= = <= <]
+いつも正確なバージョンを特定するのではなく、
+広く使われているバージョンに依存させることができたらと
+思うこともある。
+そのため、普通のブール演算子を用意している:
 
 .nf
 \fI>\fRmedia-libs/libgd-1.6
@@ -231,12 +231,12 @@ net-misc/dhcp\fI-3.0_p2\fR
 \fI<\fRmedia-libs/libgd-1.6
 .fi
 .TP
-.B ��ĥ���ȥ���Ƭ�� [!~] �������� [*]
-��äȤ��������Ȥ�Ǥ��롣��!�פȡ�*�פ�Ȥ��Хѥå������Υ֥��å��䡢
-�����ϰϤΥС������˥ޥå�����ѥå���������������ꤹ�뤳�Ȥ��Ǥ���
-�Τ����ޤ��������γ�ĥ���줿��Ƭ��/�������Ͼ���������Ƥ��륢�ȥ�
-���饹�ȤɤΤ褦�ˤ��Ȥ߹�碌�뤳�Ȥ��Ǥ��롣
-Portage �ĥ꡼�ˤ��뤢��դ줿��򤤤��Ĥ��󤲤��:
+.B 拡張アトム接頭辞 [!~] と接尾辞 [*]
+もっとすごいこともできる。「!」と「*」を使えばパッケージのブロックや、
+ある範囲のバージョンにマッチするパッケージを定義したりすることができる
+のだ。また、これらの拡張された接頭辞/接尾辞は上で定義されているアトム
+クラスとどのようにも組み合わせることができる。
+Portage ツリーにあるありふれた例をいくつか挙げると:
 
 .nf
 \fI!\fRapp-text/dos2unix
@@ -245,67 +245,67 @@ Portage �ĥ꡼�ˤ��뤢��դ줿��򤤤��Ĥ��󤲤��:
 \fI~\fRnet-libs/libnet-1.0.2a
 .fi
 
-\fI!\fR ��Ʊ���˥��󥹥ȡ��뤵���ѥå������Υ֥��å����̣���롣
+\fI!\fR は同時にインストールされるパッケージのブロックを意味する。
 .br
-\fI*\fR �ϻ��ꤵ�줿�١������ޥå�����ΤǤ���С�
-�ѥå������ΥС����������ʤ����Ȥ��̣���롣
-�������äơ��С�������2*�פȽ񤱤С�
-��2.1�ס�2.2�ס�2.2.1�פʤɤ˥ޥå�����
-��1.0�ס�3.0�ס�4.1�פʤɤˤϥޥå����ʤ��褦�ˤ��뤳�Ȥ��Ǥ��롣
+\fI*\fR は指定されたベースがマッチするのであれば、
+パッケージのバージョンは問わないことを意味する。
+したがって、バージョン「2*」と書けば、
+「2.1」「2.2」「2.2.1」などにマッチし、
+「1.0」「3.0」「4.1」などにはマッチしないようにすることができる。
 .br
-\fI~\fR �ϻ��ꤵ�줿�١����Ȥʤ�С������ΤɤΥ�ӥ����ˤ�ޥå�
-���뤳�Ȥ��̣���롣��äơ������Ǥϡ���1.0.2a�ס�1.0.2a-r1��
-��1.0.2a-r2�פʤɤ˥ޥå����롣
+\fI~\fR は指定されたベースとなるバージョンのどのリビジョンにもマッチ
+することを意味する。よって、上の例では、「1.0.2a」「1.0.2a-r1」
+「1.0.2a-r2」などにマッチする。
 .RE
 .TP
-.B ưŪ�� DEPEND
-�ץ������� USE �ѿ��˽��äư㤦��Τ˰�¸���뤳�Ȥ����뤫�⤷��ʤ���
-Portage �Ϥ��ΰ�¸�ط��򰷤�����������򤤤��Ĥ��Ѱդ��Ƥ��롣
-��Ҥ��빽ʸ��Ȥ���硢�����λ���Ϥ��줬���줿�������פ�1���ȥ�Ȥ���
-�����뤳�Ȥ����ա��Ĥޤꡢ�ġ��Υ��ȥ�Ͼ�����Ȥ����Ȥˤ�ä�ʣ����
-���ȥ��ޤळ�Ȥ�Ǥ��뤷��̵�¤ο����ޤ�����Ҥˤ��뤳�Ȥ�Ǥ��롣
+.B 動的な DEPEND
+プログラムは USE 変数に従って違うものに依存することがあるかもしれない。
+Portage はこの依存関係を扱うために選択肢をいくつか用意している。
+後述する構文を使う場合、ここの事例はそれが現れたスコープで1アトムとして
+扱われることに注意。つまり、個々のアトムは条件節を使うことによって複数の
+アトムを含むこともできるし、無限の深さまで入れ子にすることもできる。
 .RS
 .TP
-.B usevar? ( DEPEND ���ȥ� )
-�桼���� \fBUSE\fR �� jpeg ����ꤷ�Ƥ���Ȥ��� jpeg �Υ饤�֥���
-�ޤ��ˤϡ�ñ�˲����ι�ʸ��Ȥ��Ф褤:
+.B usevar? ( DEPEND アトム )
+ユーザが \fBUSE\fR に jpeg を指定しているときに jpeg のライブラリを
+含めるには、単に下記の構文を使えばよい:
 .br
 .B jpeg? ( media-libs/jpeg )
 .TP
-.B !usevar? ( ���ȥ� )
-�桼���� \fBUSE\fR �ѿ��ˤ��륪�ץ��������ꤷ�Ƥ��ʤ��Ȥ��ˤ�����
-����ѥå�������ޤ��ˤϡ����ι�ʸ��Ȥ�:
+.B !usevar? ( アトム )
+ユーザが \fBUSE\fR 変数にあるオプションを設定していないときにかぎり
+あるパッケージを含めるには、次の構文を使う:
 .br
 .B !nophysfs? ( dev-games/physfs )
 .br
-���ι�ʸ�Ϥ��뵡ǽ������򥵥ݡ��Ȥ�������˥ǥե���ȤǤϤ��ε�ǽ��
-ͭ���ˤ��Ƥ��������Ȥ��������Ǥ��롣
+この構文はある機能の選択をサポートし、さらにデフォルトではその機能を
+有効にしておきたいときに便利である。
 .TP
-.B usevar? ( USE �����ξ��Υ��ȥ� ) : ( USE �����ξ��Υ��ȥ� )
-����� C ����Ǥλ���黻�Ҥ�Ʊ���褦��Ư��������ѥå������� GTK2
-�� GTK1 ��Ȥ�����ξ��Ʊ���ˤϻȤ��ʤ���硢���Τ褦�˽񤱤Ф����
-�������Ȥ��Ǥ���:
+.B usevar? ( USE が真の場合のアトム ) : ( USE が偽の場合のアトム )
+これは C 言語での三項演算子と同じように働く。あるパッケージが GTK2
+か GTK1 を使うが、両方同時には使えない場合、このように書けばそれを
+扱うことができる:
 .br
 .B gtk2? ( =x11-libs/gtk+-2* ) : ( =x11-libs/gtk+-1* )
 .br
-�������뤳�Ȥǥǥե���Ȥ�ͥ�줿 GTK2 �饤�֥��ˤʤ롣
+こうすることでデフォルトは優れた GTK2 ライブラリになる。
 .TP
-.B || ( ���ȥ� ���ȥ� ... )
-����ѥå�������ʣ���ΰۤʤ�ѥå�������ư�������Ȥ��Ǥ��뤬��
-�С������ѥå�������Ŭ���Ǥʤ��Ȥ������ι�ʸ���ڤ˻Ȥ����Ȥ��Ǥ��롣
+.B || ( アトム アトム ... )
+あるパッケージを複数の異なるパッケージと動かすことができるが、
+バーチャルパッケージは適当でないとき、この構文を手軽に使うことができる。
 .nf
 .B || (
 .B     app-games/unreal-tournament
 .B     app-games/unreal-tournament-goty
 .B )
 .fi
-������Ǥ� unreal-tournament �ˤ��̾��Ǥ� goty �Ǥ����뤳�Ȥ�ʬ���롣
-������Ʊ���١����ե�������󶡤��뤿�ᡢ�����˰�¸����ѥå�������
-�̾��Ǥ� goty �ǤΤ�����˰�¸���뤳�Ȥ�Ǥ��롣�С��������ɲä���Τ�
-�Ϥ��������Ŭ���ϰϤ������Τ���Ŭ�ڤǤ��롣
+この例では unreal-tournament には通常版と goty 版があることが分かる。
+これらは同じベースファイルを提供するため、これらに依存するパッケージは
+通常版と goty 版のいずれに依存することもできる。バーチャルを追加するのは
+はこの例だと適用範囲が狭いので不適切である。
 .br
-�̤ι���ϡ��ѥå�������ʣ���Υӥǥ����󥿥ե����������˥ӥ�ɤǤ��뤬��
-Ʊ���ˤϤ��Τ�����1�Ĥˤ����б���������ʳ��ˤ��б��Ǥ��ʤ���礬���롣
+別の好例は、パッケージが複数のビデオインタフェース向けにビルドできるが、
+同時にはそのうちの1つにだけ対応し、それ以外には対応できない場合がある。
 .nf
 .B || (
 .B     sdl? ( media-libs/libsdl )
@@ -315,138 +315,138 @@ Portage �Ϥ��ΰ�¸�ط��򰷤�����������򤤤��Ĥ��Ѱդ��Ƥ��롣
 .B     virtual/x11
 .B )
 .fi
-������Ǥ���󤵤줿�ѥå������Τ���1�Ĥ��������򤵤졢���֤Ť��ϸ����
-���֤ˤ�äƷ��ꤵ��롣�������äơ�sdl �����Ф�뵡�񤬺Ǥ�⤯������
-svga�����μ��� opengl������� ggi�������ƥ桼���������������Τ�����
-����ꤷ�ʤ��ä����ˤ� X ���ǥե���ȤǻȤ��롣
+この例では列挙されたパッケージのうち1つだけが選択され、順番づけは現れる
+順番によって決定される。したがって、sdl が選ばれる機会が最も高く、次に
+svga、その次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれ
+も指定しなかった場合には X がデフォルトで使われる。
 .RE
 
 .RE
 .TP
 \fBRDEPEND\fR
-�����ѿ��ˤϤ��Υץ�������¹Ԥ��뤿���ɬ�פ����ѥå������Υꥹ�Ȥ�
-���äƤ��ʤ���Фʤ�ʤ� (�Ĥޤ�¹Ի��ΰ�¸�ѥå������Υꥹ��)��
-�����ѿ������ꤵ��Ƥ��ʤ���С�\fBDEPEND\fR ���ͤ��ǥե���Ȥ�����
-����롣
+この変数にはこのプログラムを実行するために必要な全パッケージのリストが
+入っていなければならない (つまり実行時の依存パッケージのリスト)。
+この変数が設定されていなければ、\fBDEPEND\fR の値がデフォルトで設定
+される。
 .br
-��¸�ط����Ѥ���ˤϾ�� \fBDEPEND\fR �Ǽ������Τ�Ʊ����ʸ���Ȥ��롣
+依存関係を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
 .TP
 \fBPDEPEND\fR
-�����ѿ��ˤϤ��Υץ�����ब�ޡ������줿���Ȥ˥��󥹥ȡ��뤵��ʤ����
-�ʤ�ʤ����ѥå������Υꥹ�Ȥ����äƤ��ʤ���Фʤ�ʤ���
+この変数にはそのプログラムがマージされたあとにインストールされなければ
+ならない全パッケージのリストが入っていなければならない。
 .br
-��¸�����Ѥ���ˤϾ�� \fBDEPEND\fR �Ǽ������Τ�Ʊ����ʸ���Ȥ��롣
+依存性を変えるには上の \fBDEPEND\fR で示したのと同じ構文が使える。
 .TP
 \fBRESTRICT\fR = \fI[nostrip,nomirror,fetch]\fR
-�����ѿ��ˤ� Portage FEATURE ��ǽ�Τ��������¤����Τ򥹥ڡ�����
-���ڤä���󤹤롣
+この変数には Portage FEATURE 機能のうち、制限するものをスペースで
+区切って列挙する。
 .PD 0
 .RS
 .TP
 .I nostrip
-�ǽ�Ū�ʥХ��ʥ�/�饤�֥�꤫��ǥХå�����ܥ��������ʤ���
+最終的なバイナリ/ライブラリからデバッグシンボルを取り除かない。
 .TP
 .I nomirror
-\fBSRC_URI\fR �˽񤫤�Ƥ���ե������ \fBGENTOO_MIRRORS\fR
-����ϥ���������ɤ��ʤ���
+\fBSRC_URI\fR に書かれているファイルを \fBGENTOO_MIRRORS\fR
+からはダウンロードしない。
 .TP
 .I fetch
-\fInomirror\fR ��Ʊ�ͤ������ե������ \fBSRC_URI\fR ��ͳ�Ǥ��������ʤ���
+\fInomirror\fR と同様だが、ファイルは \fBSRC_URI\fR 経由でも取得されない。
 .RE
 .PD 1
 .TP
 \fBPROVIDE\fR = \fI"virtual/TARGET"\fR
-�����ѿ��ˤϥѥå��������С�����륿�����åȤ��󶡤���Ȥ��Τ߻Ȥ���
-�㤨�С�blackdown-jdk �� sun-jdk �� \fIvirtual/jdk\fR ���󶡤��롣
-���ε�ǽ�ˤ�äƥѥå������� blackdown �� sun ���ò����ư�¸����ΤǤ�
-�ʤ���\fIvirtual/jdk\fR �˰�¸���뤳�Ȥ��Ǥ��롣
+この変数にはパッケージがバーチャルターゲットを提供するときのみ使う。
+例えば、blackdown-jdk と sun-jdk は \fIvirtual/jdk\fR を提供する。
+この機能によってパッケージが blackdown や sun に特化して依存するのでは
+なく、\fIvirtual/jdk\fR に依存することができる。
 .SH "Portage DECLARATIONS"
 .TP
 .B inherit
-inherit��Portage��ebuild�γ������ɲôؿ���������뤿������̤ʥ��饹
-(eclass)���ݼ餹�뤿��Τ�ΤǤ��ꡢ
-��ǽ��ǡ�����Ѿ����뤳�Ȥ��Ǥ���褦�ˤʤäƤ��롣
-eclass�Ǥϡ��ӥ�ɥץ������θ�Ψ��夲�뤿��ˡ�
-���ˤ���դ줿��ȤΤ���ˡ����إ롼���󡢳�ĥ�롼����
-�����ƴ�ά���롼����Ȥ��ƴؿ���������졢�ǡ����η������ꤵ��롣
-inherit��ebuild�����1������Ƥ֤��Ȥ��Ǥ��������ʤ�
-\fB���ʸ���������Ƥ⤤���ʤ�\fR��
-eclass����ꤹ��Ȥ���̾����������ꤷ����ĥ��\fI.eclass\fR
-��ޤ�ƤϤ����ʤ���
-.SH "�ؿ�"
+inheritはPortageがebuildの外部の追加関数を定義するための特別なクラス
+(eclass)を保守するためのものであり、
+機能やデータを継承することができるようになっている。
+eclassでは、ビルドプロセスの効率を上げるために、
+非常にありふれた作業のために、代替ルーチン、拡張ルーチン、
+そして簡略化ルーチンとして関数が定義され、データの型が設定される。
+inheritはebuildの中で1回だけ呼ぶことができ、いかなる
+\fB条件文の中に入れてもいけない\fR。
+eclassを指定するときは名前だけを指定し、拡張子\fI.eclass\fR
+を含めてはいけない。
+.SH "関数"
 .TP
 .B pkg_nofetch
 
-\fBRESTRICT\fR �ѿ��� \fIfetch\fR ��񤤤��ˤ⤫����餺��
-\fBSRC_URI\fR �ˤ���ե�����򸫤Ĥ��뤳�Ȥ��Ǥ��ʤ��ä���硢
-���δؿ����¹Ԥ���롣
-�桼���� *�ɤ�������* ����줿�ե���������ꤹ�뤳�Ȥ��Ǥ���Τ�
-�ξ����ɽ������Τ�ͭ�ѤǤ��롣
+\fBRESTRICT\fR 変数に \fIfetch\fR を書いたにもかかわらず、
+\fBSRC_URI\fR にあるファイルを見つけることができなかった場合、
+この関数が実行される。
+ユーザに *どうしたら* 言われたファイルを入手することができるのか
+の情報を表示するのに有用である。
 .TP
 .B pkg_setup
-���δؿ��Ϥʤˤ�����˥ѥå�������ͭ�Υ��åȥ��åץ���������
-�����å���ɬ�פʾ��˻Ȥ����Ȥ��Ǥ��롣
+この関数はなによりも先にパッケージ固有のセットアップアクションや
+チェックが必要な場合に使うことができる。
 .br
-�����ȥǥ��쥯�ȥ�� ${PORTAGE_TMPDIR}��
+初期作業ディレクトリは ${PORTAGE_TMPDIR}。
 .TP
 .B src_unpack
-���δؿ��� \fIA\fR �ˤ������������� \fIWORKDIR\fR ��Ÿ�����뤿��˻Ȥ���
-���δؿ��� \fIebuild ������ץ�\fR ���������Ƥ��ʤ��ä���硢
-\fIunpack ${A}\fR ���¹Ԥ���롣
-�ѥå����Ƥ䤽��¾�ӥ������䥳��ѥ�������˹ԤʤäƤ����٤�
-�ѹ��Ϥ��δؿ��ǹԤʤ�ʤ���Фʤ�ʤ���
+この関数は \fIA\fR にある全ソースを \fIWORKDIR\fR に展開するために使う。
+この関数が \fIebuild スクリプト\fR で定義されていなかった場合、
+\fIunpack ${A}\fR が実行される。
+パッチ当てやその他ビルド設定やコンパイルの前に行なっておくべき
+変更はこの関数で行なわなければならない。
 .br
-�����ȥǥ��쥯�ȥ�� $WORKDIR��
+初期作業ディレクトリは $WORKDIR。
 .TP
 .B src_compile
-�ӥ������ȥ���ѥ���Τ����ɬ�פʥ��ƥå����Ƥ�
-���δؿ��ǹԤʤ��ʤ���Фʤ�ʤ���
+ビルド設定とコンパイルのために必要なステップ全ては
+この関数で行なわれなければならない。
 .br
-�����ȥǥ��쥯�ȥ�� $S��
+初期作業ディレクトリは $S。
 .TP
 .B src_test
-�ѥå�������ͭ�Υƥ��ȥ����������Ƽ¹Ԥ��롣
-�ǥե���Ȥ� 'make test' �Τ��Ȥ� 'make check' ��¹Ԥ��롣
+パッケージ固有のテストケースを全て実行する。
+デフォルトは 'make test' のあとに 'make check' を実行する。
 .br
-�����ȥǥ��쥯�ȥ�� $S��
+初期作業ディレクトリは $S。
 .TP
 .B src_install
-��� \fI���󥹥ȡ���ǥ��쥯�ȥ�\fR �ˤ���ѥå�������
-���󥹥ȡ��뤹�뤿���ɬ�פʤ������Ƥ��ޤޤ�Ƥ��ʤ���Фʤ�ʤ���
+一時 \fIインストールディレクトリ\fR にあるパッケージを
+インストールするために必要なこと全てが含まれていなければならない。
 .br
-�����ȥǥ��쥯�ȥ�� $S��
+初期作業ディレクトリは $S。
 .TP
 .B pkg_preinst pkg_postinst
-�ѥå����������󥹥ȡ��뤵������ȸ�ǲ�Ư��Υե����륷���ƥ��ɬ�פ�
-���Ƥ��ѹ��Ϥ��δؿ����֤��ʤ���Фʤ�ʤ����桼���ؤΥ����Ȥ⡢
-�Ǹ��ɽ�������褦�ˤ�������󤹤뤳�ȡ�
+パッケージがインストールされる前と後で稼働中のファイルシステムに必要な
+全ての変更はこの関数に置かなければならない。ユーザへのコメントも、
+最後に表示されるようにここに列挙すること。
 .br
-�����ȥǥ��쥯�ȥ�� $PWD��
+初期作業ディレクトリは $PWD。
 .TP
 .B pkg_prerm pkg_postrm
-pkg_*inst �ؿ���Ʊ�ͤ��������󥤥󥹥ȡ����ѤǤ��롣
+pkg_*inst 関数と同様だが、アンインストール用である。
 .br
-�����ȥǥ��쥯�ȥ�� $PWD��
+初期作業ディレクトリは $PWD。
 .TP
 .B pkg_config
-���δؿ��ˤϡ�ɬ�ܤǤϤʤ����ѥå�������Ȥ�����ˤϷ礫���ʤ�
-���ꥹ�ƥåפ�����롣
+この関数には、必須ではないがパッケージを使うためには欠かせない
+設定ステップを入れる。
 .br
-�����ȥǥ��쥯�ȥ�� $PWD��
-.SH "����ؿ�: ����"
+初期作業ディレクトリは $PWD。
+.SH "補助関数: 汎用"
 .TP
 \fBdie\fR \fI[reason]\fR
-���ߤ� emerge �ץ���������ߤ����롣
-�Ǹ�β��̤ˤ� \fIreason\fR ��ɽ������롣
+現在の emerge プロセスを中止させる。
+最後の画面には \fIreason\fR が表示される。
 .TP
 \fBuse\fR \fI<USE item>\fR
-�⤷ \fIUSE item\fR �� \fBUSE\fR �ѿ��ˤ���С�\fIUSE item\fR 
-������������ƴؿ��� 0 ���֤���
-�⤷ \fIUSE item\fR �� \fBUSE\fR �ѿ��ˤʤ���С��ؿ��� 1 ���֤���
-\fBuseq\fR �ϥ��������֤��ʤ� \fBuse\fR �Ǥ��롣
+もし \fIUSE item\fR が \fBUSE\fR 変数にあれば、\fIUSE item\fR 
+がエコーされて関数は 0 を返す。
+もし \fIUSE item\fR が \fBUSE\fR 変数になければ、関数は 1 を返す。
+\fBuseq\fR はエコーを返さない \fBuse\fR である。
 .RS
 .TP
-.I ��:
+.I 例:
 .nf
 if useq gnome ; then
 	guiconf="--enable-gui=gnome --with-x"
@@ -462,97 +462,97 @@ fi
 .RE
 .TP
 \fBuse_with\fR \fI<USE item>\fR \fI[configure option]\fR
-�������४�ץ������������configure ������ץȤ��Ϥ��Τ������Ǥ��롣
-\fIUSE item\fR �� \fBUSE\fR �ѿ��ˤ����硢
-\fI--with-[configure option]\fR �Ȥ���ʸ���󤬥���������롣
-\fIUSE item\fR �� \fBUSE\fR �ѿ��ˤʤ���硢
-\fI--without-[configure option]\fR �Ȥ���ʸ���󤬥���������롣
-\fIconfigure option\fR �����ꤵ��Ƥ��ʤ���С�
-\fIUSE item\fR �����ξ��ǻȤ��롣
+カスタムオプションを作成し、configure スクリプトに渡すのに便利である。
+\fIUSE item\fR が \fBUSE\fR 変数にある場合、
+\fI--with-[configure option]\fR という文字列がエコーされる。
+\fIUSE item\fR が \fBUSE\fR 変数にない場合、
+\fI--without-[configure option]\fR という文字列がエコーされる。
+\fIconfigure option\fR が指定されていなければ、
+\fIUSE item\fR がその場所で使われる。
 .RS
 .TP
-.I ��:
+.I 例:
 .nf
 USE="jpeg"
 myconf="$(use_with jpeg libjpeg)"
-(myconf �� "--with-libjpeg" �Ȥ����ͤˤʤ�)
+(myconf は "--with-libjpeg" という値になる)
 
 USE=""
 myconf="$(use_with jpeg libjpeg)"
-(myconf �� "--without-libjpeg" �Ȥ����ͤˤʤ�)
+(myconf は "--without-libjpeg" という値になる)
 
 USE="opengl"
 myconf="$(use_with opengl)`"
-(myconf �� "--with-opengl" �Ȥ����ͤˤʤ�)
+(myconf は "--with-opengl" という値になる)
 .fi
 .RE
 .TP
 \fBuse_enable\fR \fI<USE item>\fR \fI[configure option]\fR
-�������४�ץ������������configure ������ץȤ��Ϥ��Τ������Ǥ��롣
-\fIUSE item\fR �� \fBUSE\fR �ѿ��ˤ����硢
-\fI--enable-[configure option]\fR �Ȥ���ʸ���󤬥���������롣
-\fIUSE item\fR �� \fBUSE\fR �ѿ��ˤʤ���硢
-\fI--disable-[configure option]\fR �Ȥ���ʸ���󤬥���������롣
-\fIconfigure option\fR �����ꤵ��Ƥ��ʤ���С�
-\fIUSE item\fR �����ξ��ǻȤ��롣
+カスタムオプションを作成し、configure スクリプトに渡すのに便利である。
+\fIUSE item\fR が \fBUSE\fR 変数にある場合、
+\fI--enable-[configure option]\fR という文字列がエコーされる。
+\fIUSE item\fR が \fBUSE\fR 変数にない場合、
+\fI--disable-[configure option]\fR という文字列がエコーされる。
+\fIconfigure option\fR が指定されていなければ、
+\fIUSE item\fR がその場所で使われる。
 .br
-������� \fBuse_with\fR �򻲾ȡ�
+使用例は \fBuse_with\fR を参照。
 .TP
 \fBhas\fR \fI<item>\fR \fI<item list>\fR
-\fIitem\fR �� \fIitem list\fR �ˤ��ä���硢
-\fIitem\fR ������������� \fBhas\fR �� 0 ���֤���
-�ʤ��ä���硢�ʤˤ⥨�������줺 1 ���֤���
-use �ι�Ǽ�����Ƥ���褦�ˡ����������֤��ʤ� \fBhasq\fR �����롣
-���Ϥ�̵�뤷�Ƥ褤�Ȥ������Ƥ� \fBhasq\fR ��ȤäƤۤ�����
-���Ϥ�׻��˻ȤäƤϤʤ�ʤ���
+\fIitem\fR が \fIitem list\fR にあった場合、
+\fIitem\fR がエコーされて \fBhas\fR が 0 を返す。
+なかった場合、なにもエコーされず 1 を返す。
+use の項で示されているように、エコーを返さない \fBhasq\fR がある。
+出力を無視してよいところ全てで \fBhasq\fR を使ってほしい。
+出力を計算に使ってはならない。
 
 .br
-\fIitem list\fR �� \fIIFS\fR �ѿ��ˤ�äƶ��ڤ��Ƥ��롣
-�����ѿ��ϥǥե���Ȥǡ� �פĤޤꥹ�ڡ����Ȥ����ͤ��äƤ��롣
-����� \fBbash\fR(1) ������Ǥ��롣
+\fIitem list\fR は \fIIFS\fR 変数によって区切られている。
+この変数はデフォルトで「 」つまりスペースという値をもっている。
+これは \fBbash\fR(1) の設定である。
 .TP
 \fBhas_version\fR \fI<category/package-version>\fR
-\fIcategory/package-version\fR �������ƥ�˥��󥹥ȡ���
-����Ƥ��뤫�ɤ���Ĵ�٤롣
-���Υѥ�᡼���� \fBDEPEND\fR �ѿ��ǻ��Ѳ�ǽ�����Ƥ��ͤ�Ȥ����Ȥ��Ǥ��롣
-���δؿ��� \fIcategory/package-version\fR �����󥹥ȡ���
-����Ƥ����� 0 ���֤������󥹥ȡ��뤵��Ƥ��ʤ��ʤ� 1 ���֤���
+\fIcategory/package-version\fR がシステムにインストール
+されているかどうか調べる。
+このパラメータは \fBDEPEND\fR 変数で使用可能な全ての値を使うことができる。
+この関数は \fIcategory/package-version\fR がインストール
+されていたら 0 を返し、インストールされていないなら 1 を返す。
 .TP
 \fBbest_version\fR \fI<package name>\fR
-���δؿ��ϸ��ߥ��󥹥ȡ��뤵��Ƥ���ץ������Υǡ����١������椫��
-\fIpackage name\fR ��õ�������ߥ��󥹥ȡ��뤵��Ƥ���ѥå�������
-�֤����Ф󤤤��С������פ��֤���
-�⤷ \fIpackage name\fR �˥ޥå�����ѥå��������ʤ���Ф��δؿ���
-0 ���֤����ޥå������ 1 ���֤���
+この関数は現在インストールされているプログラムのデータベースの中から
+\fIpackage name\fR を探し、現在インストールされているパッケージの
+「いちばんいいバージョン」を返す。
+もし \fIpackage name\fR にマッチするパッケージがなければこの関数は
+0 を返す。マッチすれば 1 を返す。
 .RS
 .TP
-.I ��:
+.I 例:
 VERINS="$(best_version net-ftp/glftpd)"
 .br
-(�⤷ glftpd-1.27 �����󥹥ȡ��뤵��Ƥ���С�
-VERINS �� "net-ftp/glftpd-1.27" �Ȥ����ͤˤʤ�)
+(もし glftpd-1.27 がインストールされていれば、
+VERINS は "net-ftp/glftpd-1.27" という値になる)
 .RE
-.SH "����ؿ�: ����"
+.SH "補助関数: 出力"
 .TP
 \fBeinfo\fR \fI"informative message"\fR
-�⤷��å���������Ϥ��ƥ桼�����ɤ�Ǥ��ä����դ򴭵����������ϡ�
-\fBeinfo\fR ��Ȥ�����r�� \fBecho\fR(1) ������Ʊ����Ư���������Ϥˤ⤦
-�������ä��ƥ桼�����ܤ�����褦�ˤ��롣
+もしメッセージを出力してユーザに読んでもらって注意を喚起したい場合は、
+\fBeinfo\fR を使う。こrは \fBecho\fR(1) と全く同じに働くが、出力にもう
+少し手を加えてユーザの目を引くようにする。
 .TP
 \fBewarn\fR \fI"warning message"\fR
-\fBeinfo\fR ��Ʊ�ͤ������桼���˷ٹ�򼨤������Ȥ��˻Ȥ���
+\fBeinfo\fR と同様だが、ユーザに警告を示したいときに使う。
 .TP
 .fBeerror\fR \fI"error message"\fR
-\fBeinfo\fR ��Ʊ�ͤ������桼���˥��顼�򼨤������Ȥ��˻Ȥ���
-.SH "����ؿ�: Ÿ��"
+\fBeinfo\fR と同様だが、ユーザにエラーを示したいときに使う。
+.SH "補助関数: 展開"
 .TP
 \fBunpack\fR \fI<source>\fR \fI[list of more sources]\fR
-���δؿ�����󤵤줿�������򥫥��ȥǥ��쥯�ȥ�˲���/Ÿ�����롣
-���δؿ��� \fI������\fR �� \fBDISTDIR\fR �ѿ����ɲä��롣 
-.SH "����ؿ�: ����ѥ���"
+この関数は列挙されたソースをカレントディレクトリに解凍/展開する。
+この関数は \fIソース\fR を \fBDISTDIR\fR 変数に追加する。 
+.SH "補助関数: コンパイル"
 .TP
 \fBeconf\fR \fI[configure option]\fR
-���δؿ��� configure ������˻Ȥ��롣�ʲ��Υ��ץ���󤬼¹Ԥ����:
+この関数は configure の代わりに使われる。以下のオプションが実行される:
 .nf
 configure \\
 	--prefix=/usr \\
@@ -565,26 +565,26 @@ configure \\
 	\fI${EXTRA_ECONF}\fR \\
 	\fIconfigure optioins\fR
 .fi
-\fIEXTRA_ECONF\fR�ϥ桼���Τ�������ˤ��ꡢebuild
-�񤭤Τ���ˤ���櫓�ǤϤʤ����Ȥ����դ��衣
-configure�ˤ�äȥ��ץ������Ϥ�������С�
-\fBeconf\fR���ɲäΰ������Ϥ������Ǥ褤��
+\fIEXTRA_ECONF\fRはユーザのためだけにあり、ebuild
+書きのためにあるわけではないことに注意せよ。
+configureにもっとオプションを渡したければ、
+\fBeconf\fRに追加の引数を渡すだけでよい。
 \fBemake\fR \fI[make options]\fR
-���δؿ��� make ������˻Ȥ��롣
+この関数は make の代わりに使われる。
 'make ${MAKEOPTS} \fImake options\fR'
-(${MAKEOPTS} �� /etc/make.globals �����ꤵ���)
-��¹Ԥ��롣�ǥե���Ȥ� MAKEOPTS="\-j2"��
+(${MAKEOPTS} は /etc/make.globals で設定される)
+を実行する。デフォルトは MAKEOPTS="\-j2"。
 
-\fB***�ٹ�***\fR
+\fB***警告***\fR
 .br
-\fBemake\fR ��Ȥ����Ȥ���ΤǤ���С��ӥ�ɻ���
-���� make (make \-j2) ��Ȥä�����ʤ����Ȥ��ǧ���뤳�ȡ�
-���� make �� _�Ȥ��ɤ�_ ���Ԥ��뤬����Ԥ��ʤ����Ȥǰ�̾�⤤�Τǡ�
-Ű��Ū�˥ƥ��Ȥ��ʤ���Фʤ�ʤ���
-.SH "����ؿ�: ���󥹥ȡ���"
+\fBemake\fR を使おうとするのであれば、ビルド時に
+並列 make (make \-j2) を使って問題ないことを確認すること。
+並列 make は _ときどき_ 失敗するが毎回失敗しないことで悪名高いので、
+徹底的にテストしなければならない。
+.SH "補助関数: インストール"
 .TP
 \fBeinstall\fR \fI[make options]\fR
-���δؿ��� make install ������Ȥ��ƻȤ��롣�¹Ԥ���륪�ץ�����:
+この関数は make install の代わりとして使われる。実行されるオプションは:
 .nf
 make \\
        prefix=${D}/usr \\
@@ -596,10 +596,10 @@ make \\
        \fI${EXTRA_EINSTALL}\fR \\
        \fImake options\fR install
 .fi
- 'make install DESTDIR=${D}' ���Ȥ������ einstall ��Ȥ�ʤ��Ǥۤ�����
-make �١����Υѥå������򥤥󥹥ȡ��뤹��Ȥ��� 'make install DESTDIR=${D}'
-�Ȥ���ۤ������ޤ�롣�ޤ���\fIEXTRA_EINSTALL\fR�ѿ���Ȥ�ʤ����ȡ�
-�����ѿ��ϥ桼���Τ���Τ�ΤǤ��롣
+ 'make install DESTDIR=${D}' が使える場所で einstall を使わないでほしい。
+make ベースのパッケージをインストールするときは 'make install DESTDIR=${D}'
+とするほうが好まれる。また、\fIEXTRA_EINSTALL\fR変数を使わないこと。
+この変数はユーザのためのものである。
 
 .PD 0
 .TP
@@ -613,33 +613,33 @@ make �١����Υѥå������򥤥󥹥ȡ��뤹��Ȥ��� 'make install DESTDIR=${D}'
 .TP
 .B prepallstrip
 .PD 1
-�����δؿ��ϥ�����ץ�(�Ĥޤ� Makefile �ʤ�)��ͳ�� \fB${D}\fR 
-�˥ѥå������򥤥󥹥ȡ��뤹��Ȥ�ͭ�ѤǤ��롣
-�⤷�μ¤˥饤�֥�꤬�¹Բ�ǽ��aclocal �ե����뤬Ŭ�ڤʾ���
-���󥹥ȡ��뤵��Ƥ��ơ��ɥ������/info/man �ե����뤬
-�������̤���Ƥ��ꡢ�¹ԥХ��ʥ꤫��ǥХå�����ܥ뤬����
-strip ����Ƥ���褦�ˤ�������С������δؿ��켰��Ȥ���
+これらの関数はスクリプト(つまり Makefile など)経由で \fB${D}\fR 
+にパッケージをインストールするとき有用である。
+もし確実にライブラリが実行可能、aclocal ファイルが適切な場所に
+インストールされていて、ドキュメント/info/man ファイルが
+全部圧縮されており、実行バイナリからデバッグシンボルが全て
+strip されているようにしたければ、これらの関数一式を使う。
 .RS
 .PD 0
 .TP
 .B prepall:
-���δؿ��� \fBprepallman\fR��\fBprepallinfo\fR��\fBprepallstrip\fR
-��¹Ԥ����饤�֥���¹Բ�ǽ�����ꤷ��aclocal �ǥ��쥯�ȥ������å�
-���롣���δؿ��� \fBprepalldocs\fR ��¹� \fI*���ʤ�*\fR ���Ȥ�
-���դ��뤳�ȡ�
+この関数は \fBprepallman\fR、\fBprepallinfo\fR、\fBprepallstrip\fR
+を実行し、ライブラリを実行可能に設定し、aclocal ディレクトリをチェック
+する。この関数は \fBprepalldocs\fR を実行 \fI*しない*\fR ことに
+注意すること。
 .TP
 .B prepalldocs:
-${D}/usr/share/doc �ˤ������ƤΥɥ�����ȥե�����򰵽̤��롣
+${D}/usr/share/doc にある全てのドキュメントファイルを圧縮する。
 .TP
 .B prepallinfo:
-${D}/usr/share/info �ˤ������Ƥ� info �ե�����򰵽̤��롣
+${D}/usr/share/info にある全ての info ファイルを圧縮する。
 .TP
 .B prepallman:
-${D}/usr/share/man �ˤ������Ƥ� man �ե�����򰵽̤��롣
+${D}/usr/share/man にある全ての man ファイルを圧縮する。
 .TP
 .B prepallstrip:
-���¹ԥХ��ʥ꤫��ǥХå�����ܥ�� strip ���롣
-�饤�֥����оݤ˴ޤޤ�롣
+全実行バイナリからデバッグシンボルを strip する。
+ライブラリも対象に含まれる。
 .RE
 
 .TP
@@ -653,89 +653,89 @@ ${D}/usr/share/man �ˤ������Ƥ� man �ե�����򰵽̤��롣
 .TP
 \fBprepstrip\fR \fI[dir]\fR
 .PD 1
-�����δؿ��� \fBprepall\fR �ؿ��Ȼ��Ƥ��ꡢ�㤤����̯�Ǥ��롣
+これらの関数も \fBprepall\fR 関数と似ており、違いも微妙である。
 .RS
 .PD 0
 .TP
 .B prepinfo:
-\fIdir\fR �����ꤵ��ʤ��ä���硢\fBprepinfo\fR �� dir ��
-\fIusr\fR �Ȥߤʤ��������� \fBprepinfo\fR �� ${D}/\fIdir\fR/info
-�ˤ������ƤΥե�����򰵽̤��롣
+\fIdir\fR が指定されなかった場合、\fBprepinfo\fR は dir を
+\fIusr\fR とみなす。そして \fBprepinfo\fR は ${D}/\fIdir\fR/info
+にある全てのファイルを圧縮する。
 .TP
 .B preplib:
-\fIdir\fR �����ꤵ��ʤ��ä���硢\fBpreplib\fR �� dir ��
-\fIusr\fR �Ȥߤʤ��������� \fBpreplib\fR �� ${D}/\fIdir\fR/lib
-�ǡ�ldconfig -n -N�פ�¹Ԥ��롣
+\fIdir\fR が指定されなかった場合、\fBpreplib\fR は dir を
+\fIusr\fR とみなす。そして \fBpreplib\fR は ${D}/\fIdir\fR/lib
+で「ldconfig -n -N」を実行する。
 .TP
 .B preplib.so:
-${D}/\fIdir\fR �ˤ��ꡢ�ե�����̾�ˡ�.so�פ�ޤ�ե��������Ƥ�
-�ǥХå�����ܥ�� strip ���롣ʣ���Υǥ��쥯�ȥ����ꤹ��
-���Ȥ�Ǥ��롣
+${D}/\fIdir\fR にあり、ファイル名に「.so」を含むファイル全ての
+デバッグシンボルを strip する。複数のディレクトリを指定する
+こともできる。
 .TP
 .B prepman:
-\fIdir\fR �����ꤵ��ʤ��ä���硢\fBprepman\fR �� dir ��
-\fIusr\fR �Ȥߤʤ��������� \fBprepman\fR �� ${D}/\fIdir\fR/man/*/
-�ˤ������ƤΥե�����򰵽̤��롣
+\fIdir\fR が指定されなかった場合、\fBprepman\fR は dir を
+\fIusr\fR とみなす。そして \fBprepman\fR は ${D}/\fIdir\fR/man/*/
+にある全てのファイルを圧縮する。
 .TP
 .B prepstrip:
-${D}/\fIdir\fR �ˤ���ե��������Ƥ� strip ���롣
-ʣ���Υǥ��쥯�ȥ����ꤹ�뤳�Ȥ�Ǥ��롣
+${D}/\fIdir\fR にあるファイル全てを strip する。
+複数のディレクトリを指定することもできる。
 .RE
 .PD 1
 .TP
 \fBdopython\fR \fI<commands>\fR
-python �� \fIcommands\fR ��¹Ԥ�����̤��֤���
+python で \fIcommands\fR を実行し、結果を返す。
 .TP
 \fBdosed\fR \fI"s:orig:change:g" <filename>\fR
-\fIfilename̾\fR ���Ф� (\fIfilename̾\fR �� cp/mv ��ޤ�) sed
-��¹Ԥ��롣
+\fIfilename名\fR に対し (\fIfilename名\fR の cp/mv を含め) sed
+を実行する。
 .br
 .BR 'dosed\ "s:/usr/local:/usr:g"\ /usr/bin/some-script'
-${D}/usr/bin/some-script ���Ф� sed ��¹�
+${D}/usr/bin/some-script に対し sed を実行
 .TP
 \fBdodir\fR \fI<path>\fR
-${D} ����˥ǥ��쥯�ȥ��������롣
+${D} の中にディレクトリを作成する。
 .br
 .BR 'dodir\ /usr/lib/apache'
-${D}/usr/lib/apache �������
-¾��do*�ؿ��ϡ�����Ū�˻��ꤷ�ʤ��Ƥ�\fBdodir\fR��¹Ԥ��Ƥ���뤳�Ȥ����ա�
+${D}/usr/lib/apache を作成。
+他のdo*関数は、明示的に指定しなくても\fBdodir\fRを実行してくれることに注意。
 .TP
 \fBdiropts\fR \fI[options for install(1)]\fR
-\fBdodir\fR �ǻȤ��� install �ؿ��Υ��ץ�����������뤿��˻Ȥ��롣
-�ǥե���Ȥ� \fI-m0755\fR��
+\fBdodir\fR で使われる install 関数のオプションを定義するために使われる。
+デフォルトは \fI-m0755\fR。
 .TP
 \fBinto\fR \fI<path>\fR
-\fBdobin\fR��\fBdosbin\fR��\fBdoman\fR��\fBdoinfo\fR��\fBdolib\fR
-�Τ褦��¾�δؿ��Τ���˥롼�� (\fIDESTTREE\fR) �����ꤹ�롣
+\fBdobin\fR、\fBdosbin\fR、\fBdoman\fR、\fBdoinfo\fR、\fBdolib\fR
+のような他の関数のためにルート (\fIDESTTREE\fR) を設定する。
 .br
-�ǥե���ȥ롼�Ȥ� /usr��
+デフォルトルートは /usr。
 .TP
 \fBkeepdir\fR \fI<path>\fR
-�⤷���˶��Ǥ��äƤ�ǥ��쥯�ȥ�򤽤Τޤޤˤ��Ƥ����褦
-Portage �������롣\fBdodir\fR ��Ʊ���褦�˵�ǽ���롣
+もし仮に空であってもディレクトリをそのままにしておくよう
+Portage に伝える。\fBdodir\fR と同じように機能する。
 .TP
 \fBdobin\fR \fI<binary> [list of more binaries]\fR
-\fIbinary\fR ����󤵤줿�Х��ʥ�� \fIDESTTREE\fR/bin
-�˥��󥹥ȡ��뤹�롣ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+\fIbinary\fR や列挙されたバイナリを \fIDESTTREE\fR/bin
+にインストールする。必要なディレクトリは全て作成する。
 .TP
 \fBdosbin\fR \fI<binary> [list of more binaries]\fR
-\fIbinary\fR ����󤵤줿�Х��ʥ�� \fIDESTTREE\fR/sbin
-�˥��󥹥ȡ��뤹�롣ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+\fIbinary\fR や列挙されたバイナリを \fIDESTTREE\fR/sbin
+にインストールする。必要なディレクトリは全て作成する。
 .TP
 \fBdoinitd\fR \fI<init.d > [list of more init.d scripts]\fR
-Gentoo \fIinit.d ������ץ�\fR �򥤥󥹥ȡ��뤹�롣
-Gentoo init.d ������ץ��Ѥ����������˥��󥹥ȡ��뤵��ʤ���Фʤ�ʤ�(/etc/init.d/)��
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+Gentoo \fIinit.d スクリプト\fR をインストールする。
+Gentoo init.d スクリプト用の正しい場所にインストールされなければならない(/etc/init.d/)。
+必要なディレクトリは全て作成する。
 .TP
 \fBdoconfd\fR \fI<conf.d file> [list of more conf.d file]\fR
-Gentoo \fIconf.d �ե�����\fR �򥤥󥹥ȡ��뤹�롣
-Gentoo conf.d �ե������Ѥ����������˥��󥹥ȡ��뤵��ʤ���Фʤ�ʤ�(/etc/conf.d/)��
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+Gentoo \fIconf.d ファイル\fR をインストールする。
+Gentoo conf.d ファイル用の正しい場所にインストールされなければならない(/etc/conf.d/)。
+必要なディレクトリは全て作成する。
 .TP
 \fBdoenvd\fR \fI<env.d entry> [list of more env.d entries]\fR
-Gentoo \fIenv.d ����ȥ꡼\fR �򥤥󥹥ȡ��뤹�롣
-Gentoo env.d ����ȥ꡼�Ѥ����������˥��󥹥ȡ��뤵��ʤ���Фʤ�ʤ�(/etc/env.d/)��
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+Gentoo \fIenv.d エントリー\fR をインストールする。
+Gentoo env.d エントリー用の正しい場所にインストールされなければならない(/etc/env.d/)。
+必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
@@ -745,45 +745,45 @@ Gentoo env.d ����ȥ꡼�Ѥ����������˥��󥹥ȡ��뤵��ʤ���Фʤ�ʤ�(/etc/env
 .TP
 \fBdolib.so\fR \fI<library>\fR \fI[list of more libraries]\fR
 .PD 1
-�饤�֥�����󤵤줿�饤�֥��� \fIDESTTREE\fR/lib
-�˥��󥹥ȡ��뤹�롣ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+ライブラリや列挙されたライブラリを \fIDESTTREE\fR/lib
+にインストールする。必要なディレクトリは全て作成する。
 .TP
 \fBlibopts\fR \fI[options for install(1)]\fR
-\fBdolib\fR �ǻȤ��� install �ؿ��Υ��ץ�����������뤿��˻Ȥ��롣
-�ǥե���Ȥ� \fI-m0644\fR��
+\fBdolib\fR で使われる install 関数のオプションを定義するために使われる。
+デフォルトは \fI-m0644\fR。
 .TP
 \fBdoman\fR \fI<man-page> [list of more man-pages]\fR
-man �ե�����γ�ĥ�Ҥ˽��ä� man �ڡ����� /usr/share/man/man[1\-8n]
-�˥��󥹥ȡ��뤹�롣�ե����뤬 gzip ����Ƥ��ʤ���� gzip ���롣
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+man ファイルの拡張子に従って man ページを /usr/share/man/man[1\-8n]
+にインストールする。ファイルが gzip されていなければ gzip する。
+必要なディレクトリは全て作成する。
 .TP
 \fBdohard\fR \fI<filename> <linkname>\fR
 .TP
 \fBdosym\fR \fI<filename> <linkname>\fR
 .PD 1
-ln ���ޥ�ɤ�ϡ��ɥ�󥯤⤷���ϥ���ܥ�å���󥯤Ȥ��Ƽ¹Ԥ��롣
+ln コマンドをハードリンクもしくはシンボリックリンクとして実行する。
 .TP
 \fBdohtml\fR \fI [\-a filetypes] [\-r] [\-x list-of-dirs-to-ignore] [list-of-files-and-dirs]\fR
-�ե�����γ�ĥ�Ҥ� .html��.png��.js��.jpg �� .css �Ǥ��ä���硢
-�ե�����ꥹ��(���ڡ����Ƕ��ڤ�줿�ꥹ��)�˵󤲤�줿�ե������
-/usr/share/doc/${PF}/html �˥��󥹥ȡ��뤹�롣
-\-a �����ꤹ��ФǤɤΥ����פΥե������ޤ�뤫���¤��뤳�Ȥ��Ǥ��롣
-\-A �����ꤹ��Хǥե���ȤΥ����ץꥹ�Ȥ˿����ʥ����פ��ɲä��뤳�Ȥ��Ǥ��롣
-\-x �ǽ�������ǥ��쥯�ȥ������Ǥ���(CVS �ϥǥե���Ȥǽ��������)��
-\-r �����ꤹ��кƵ�Ū�� dohtml ��¹ԤǤ��롣
+ファイルの拡張子が .html、.png、.js、.jpg か .css であった場合、
+ファイルリスト(スペースで区切られたリスト)に挙げられたファイルを
+/usr/share/doc/${PF}/html にインストールする。
+\-a を設定すればでどのタイプのファイルを含めるか制限することができる。
+\-A を設定すればデフォルトのタイプリストに新たなタイプを追加することができる。
+\-x で除外するディレクトリを設定できる(CVS はデフォルトで除外される)。
+\-r を設定すれば再帰的に dohtml を実行できる。
 .TP
 \fBdoinfo\fR \fI<info-file> [list of more info-files]\fR
-info �ڡ����� \fIDESTDIR\fR/info �˥��󥹥ȡ��뤹�롣
-�ե�����ϼ�ưŪ�� gzip ����롣ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+info ページを \fIDESTDIR\fR/info にインストールする。
+ファイルは自動的に gzip される。必要なディレクトリは全て作成する。
 .TP
 \fBdojar\fR \fI<jar file> [list of more jar files]\fR
-jar �ե������ /usr/share/${PN}/lib �˥��󥹥ȡ��뤷��
-/usr/share/${PN}/classpath.env ���ɲä��롣
+jar ファイルを /usr/share/${PN}/lib にインストールし、
+/usr/share/${PN}/classpath.env に追加する。
 .TP
 \fBdomo\fR \fI<locale file> [list of more locale-files] \fR
-locale �ե������ locale �ե�����γ�ĥ�Ҥ˽��ä�
-\fIDESTDIR\fR/usr/share/locale/[����] ���ɲä��롣
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+locale ファイルを locale ファイルの拡張子に従って
+\fIDESTDIR\fR/usr/share/locale/[言語] に追加する。
+必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
@@ -791,45 +791,45 @@ locale �ե������ locale �ե�����γ�ĥ�Ҥ˽��ä�
 .TP
 \fBfperms\fR \fI<permissions> <file> [files]\fR
 .PD 1
-chown (\fBfowners\fR) �� chmod (\fBfperms\fR) ��¹Ԥ���
-\fIfile\fR �� \fIpermissions\fR ��Ŭ�Ѥ��롣
+chown (\fBfowners\fR) か chmod (\fBfperms\fR) を実行し、
+\fIfile\fR に \fIpermissions\fR を適用する。
 .TP
 \fBinsinto\fR \fI[path]\fR
-\fBdoins\fR �ؿ��Υ롼�� (\fIINSDESTTREE\fR) �����ꤹ�롣
+\fBdoins\fR 関数のルート (\fIINSDESTTREE\fR) を設定する。
 .br
-�ǥե���ȥ롼�Ȥ� /��
+デフォルトルートは /。
 .TP
 \fBinsopts\fR \fI[options for install(1)]\fR
-\fBdoins\fR �ǻȤ��� install ���Ф��륪�ץ�����������뤿���
-�Ȥ����Ȥ��Ǥ��롣�ǥե���Ȥ� \fI\-m0644\fR��
+\fBdoins\fR で使われる install に対するオプションを定義するために
+使うことができる。デフォルトは \fI\-m0644\fR。
 .TP
 \fBdoins\fR \fI<file> [list of more files]\fR
-�ե������ \fIINSDESTTREE\fR �˥��󥹥ȡ��뤹�롣
-���δؿ��� \fBinstall\fR(1) ��Ȥ���
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+ファイルを \fIINSDESTTREE\fR にインストールする。
+この関数は \fBinstall\fR(1) を使う。
+必要なディレクトリは全て作成する。
 .TP
 \fBexeinto\fR \fI[path]\fR
-\fBdoexe\fR �ؿ��Υ롼�� (\fIEXEDESTTREE\fR) �����ꤹ�롣
+\fBdoexe\fR 関数のルート (\fIEXEDESTTREE\fR) を設定する。
 .br
-�ǥե���ȥ롼�Ȥ� /��
+デフォルトルートは /。
 .TP
 \fBexeopts\fR \fI[options for install(1)]\fR
-\fBdoexe\fR �ǻȤ��� install ���Ф��륪�ץ�����������뤿���
-�Ȥ����Ȥ��Ǥ��롣�ǥե���Ȥ� \fI\-m0755\fR��
+\fBdoexe\fR で使われる install に対するオプションを定義するために
+使うことができる。デフォルトは \fI\-m0755\fR。
 .TP
 \fBdoexe\fR \fI<executable> [list of more executables]\fR
-�¹ԥХ��ʥ����󤵤줿�¹ԥХ��ʥ�� \fIEXEDESTTREE\fR
-�˥��󥹥ȡ��뤹�롣���δؿ��� \fBinstall\fR(1) ��Ȥ���
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+実行バイナリや列挙された実行バイナリを \fIEXEDESTTREE\fR
+にインストールする。この関数は \fBinstall\fR(1) を使う。
+必要なディレクトリは全て作成する。
 .TP
 \fBdocinto\fR \fI[path]\fR
-\fBdodoc\fR ���Ȥ����Х��֥ǥ��쥯�ȥ� (\fIDOCDESTTREE\fR)
-�����ꤹ�롣
+\fBdodoc\fR が使う相対サブディレクトリ (\fIDOCDESTTREE\fR)
+を設定する。
 .TP
 \fBdodoc\fR \fI<document> [list of more documents]\fR
-�ɥ�����Ȥ���󤵤줿�ɥ�����Ȥ� /usr/share/doc/${PV}/\fIDOCDESTTREE\fR
-�˥��󥹥ȡ��뤹�롣�ե�����ϼ�ưŪ�� gzip ����롣
-ɬ�פʥǥ��쥯�ȥ�����ƺ������롣
+ドキュメントや列挙されたドキュメントを /usr/share/doc/${PV}/\fIDOCDESTTREE\fR
+にインストールする。ファイルは自動的に gzip される。
+必要なディレクトリは全て作成する。
 
 .PD 0
 .TP
@@ -859,34 +859,34 @@ chown (\fBfowners\fR) �� chmod (\fBfperms\fR) ��¹Ԥ���
 .TP
 \fBnewdoc\fR \fI<old file> <new filename>\fR
 .PD 1
-�����δؿ������� do* �ؿ���Ʊ���褦�˻Ȥ��뤬��
-�����δؿ���1�ĤΥե���������˻Ȥ����Ȥ��Ǥ���
-���Υե������ \fI[new filename]\fR �Ȥ��ƥ��󥹥ȡ��뤵��롣
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "��Ϣ����"
+これらの関数は全て do* 関数と同じように使えるが、
+これらの関数は1つのファイルだけに使うことができ、
+そのファイルは \fI[new filename]\fR としてインストールされる。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "関連項目"
 .BR ebuild (1),
 .BR make.conf (5)
 .TP
-\fI/usr/sbin/ebuild.sh\fR ������ץȡ�
+\fI/usr/sbin/ebuild.sh\fR スクリプト。
 .TP
-\fI/usr/lib/portage/bin\fR �ˤ���������ץꥱ�������
-.SH "�ե�����"
+\fI/usr/lib/portage/bin\fR にある補助アプリケーション。
+.SH "ファイル"
 .TP
 \fB/etc/make.conf\fR 
-�ӥ�ɥץ������ǻȤ��ѿ����񤫤�Ƥ��ꡢmake.defaults �����ꤵ��Ƥ���
-�ѿ����񤭤��롣
+ビルドプロセスで使う変数が書かれており、make.defaults で設定されている
+変数を上書きする。
 .TP
 \fB/etc/make.globals\fR
-�ӥ�ɥץ������ǻȤ��ǥե���Ȥ��ѿ����񤫤�Ƥ��뤬��
-�ѿ����ѹ����������Ϥ��Υե�����ǤϤʤ�
-\fI/etc/make.conf\fR ���Խ����뤳�ȡ�
-.SH "����"
+ビルドプロセスで使うデフォルトの変数が書かれているが、
+変数を変更したい場合はこのファイルではなく
+\fI/etc/make.conf\fR を編集すること。
+.SH "著者"
 .nf
 Achim Gottinger <achim@gentoo.org>
 Mark Guertin <gerk@gentoo.org>
 Nicholas Jones <carpaski@gentoo.org>
 Mike Frysinger <vapier@gentoo.org>
 .fi
-.SH "CVS �إå�"
-��ʸ: ebuild.5,v 1.73
+.SH "CVS ヘッダ"
+原文: ebuild.5,v 1.73

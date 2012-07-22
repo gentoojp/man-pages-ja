@@ -4,25 +4,25 @@
 .\" Translated on 16 Jun 2004 by Mamoru KOMACHI <usata@gentoo.gr.jp>
 .\"
 .TH "G-CPAN.PL" "1" "Feb 2004" "Portage 2.0.51" "Portage"
-.SH ̾��
-g-cpan.pl \- CPAN �󶡤� Perl �⥸�塼��� Gentoo �� Portage �ǥ��󥹥ȡ���
-.SH ��
+.SH 名前
+g-cpan.pl \- CPAN 提供の Perl モジュールを Gentoo の Portage でインストール
+.SH 書式
 \fBg-cpan.pl\fR <\fImodule-name\fR>
-.SH ����
+.SH 説明
 .B g-cpan.pl
-��(��¸�ط���ޤ᤿)CPAN�⥸�塼���Gentoo��Portage���Ѥ��ƥ��󥹥ȡ��뤹�뤿���Perl������ץȤǤ��롣g-cpan.pl�ϰ�¸����ȥ��󥹥ȡ��뤵�줿�ե�����򤢤��������̤�ebuild���饤�󥹥ȡ��뤷�����Τ褦�˵�Ͽ���롣
+は(依存関係も含めた)CPANモジュールをGentooのPortageを用いてインストールするためのPerlスクリプトである。g-cpan.plは依存情報とインストールされたファイルをあたかも普通のebuildからインストールしたかのように記録する。
 
-����\fBg-cpan.pl\fR��ư����ȡ�CPAN�Ķ�������򤹤�褦�֤���롣
-�ۤȤ�ɤΥ桼�����ϿҤͤ�줿�ǥե���ȤΤޤ�Ʊ�դ���Ф褤��
-.SH �¹���
-Jabber::RPC �򥤥󥹥ȡ��뤹��
+初めて\fBg-cpan.pl\fRを起動すると、CPAN環境の設定をするよう訊かれる。
+ほとんどのユーザーは尋ねられたデフォルトのまま同意すればよい。
+.SH 実行例
+Jabber::RPC をインストールする
 
 # \fBg-cpan.pl Jabber::RPC\fR
-.SH ���
+.SH 作者
 J Robert Ray <jrray@gentoo.org> (g-cpan.pl)
 .br
-Sven Vermeulen <swift@gentoo.org> (man�ڡ���)
-.SH �Х����
-�Х����� http://bugs.gentoo.org/ ��ͳ�Ǥ��Ƥ���������
-.SH CVS�إå���
-��ʸ: g-cpan.pl.1,v 1.3
+Sven Vermeulen <swift@gentoo.org> (manページ)
+.SH バグ報告
+バグ報告は http://bugs.gentoo.org/ 経由でしてください。
+.SH CVSヘッダー
+原文: g-cpan.pl.1,v 1.3

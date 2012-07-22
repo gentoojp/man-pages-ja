@@ -4,257 +4,257 @@
 .\" Translated on 19 Dec 2004 by Akinori Hattori <hattya@gentoo.org>
 .\"
 .TH "equery" "1" "Oct 2005" "gentoolkit" ""
-.SH ̾��
-equery \- Gentoo: �ѥå����������ġ���
-.SH ��
+.SH 名前
+equery \- Gentoo: パッケージ検索ツール
+.SH 書式
 .B equery  
 .I [global\-opts] command [local\-opts]
 .PP 
 
-.SH ����
-equery �ϡ��ѥå������˴ޤޤ��ե�����ΰ����䡢USE �ե饰�����ꤵ�줿�ѥå���
-���˴ޤޤ��ե������ md5sum �ΰ����ʤɡ��ѥå������˴ؤ��뤵�ޤ��ޤʾ����ɽ��
-�Ǥ������ʥ桼�ƥ���ƥ��Ǥ��롣
+.SH 説明
+equery は、パッケージに含まれるファイルの一覧や、USE フラグ、指定されたパッケー
+ジに含まれるファイルの md5sum の一覧など、パッケージに関するさまざまな情報を表示
+できる柔軟なユーティリティである。
 
-.SH ���ץ����
-equery ���Ф��� 'command' ��ɬ��ɬ�פʥ��ץ����Ǥ��롣¿���Υ��ޥ�ɤ� 
-\'pkgspec' ��ɬ�פȤ�������� <���ƥ���/>�ѥå�����̾<-�С������> �Τ褦�ʷ���
-�Ǥ��롣�Ĥޤꡢ�ѥå�����̾��ɬ�ܤǡ����ƥ���̾��С�������Ǥ�դȤ������ȤǤ�
-�롣
+.SH オプション
+equery に対して 'command' が必ず必要なオプションである。多くのコマンドは 
+\'pkgspec' を必要とし、それは <カテゴリ/>パッケージ名<-バージョン> のような形式
+である。つまり、パッケージ名が必須で、カテゴリ名やバージョンは任意ということであ
+る。
 
-[global\-opts] �ϼ��Τ����Τɤ줫:
+[global\-opts] は次のうちのどれか:
 
 .B \-q, \-\-quiet   
-�Ǿ��¤�ɽ�������ˤ���
+最小限の表示だけにする
 .PP 
 .B \-C, \-\-nocolor 
-���顼ɽ���򤷤ʤ�
+カラー表示をしない
 .PP 
 .B \-h, \-\-help
-�إ�פ�ɽ������
+ヘルプを表示する
 .PP 
 .B \-V, \-\-version
-equery �ΥС�������ɽ������
+equery のバージョンを表示する
 .PP 
 .B \-N, \-\-no\-pipe
-�ѥ���Ƚ���̵���ˤ���
+パイプ判定を無効にする
 .PP 
 
-�ҤȤĤΥ��ޥ�ɤΤߤ��ºݤ˼¹Ԥ���롣ͭ���ʥ��ޥ�ɤϼ����̤�:
+ひとつのコマンドのみが実際に実行される。有効なコマンドは次の通り:
 .TP 
 .B belongs <local\-opts> file
-���Υ��ޥ�ɤϻ��ꤵ�줿�ե����뤬�ޤޤ�Ƥ������ƤΥѥå�������ɽ�����롣
+このコマンドは指定されたファイルが含まれている全てのパッケージを表示する。
 .br 
-����: �̾�ҤȤĤΥե�����ϡ��ҤȤĤΥѥå������ˤΤߴޤޤ�Ƥ��롣�⤷��Ʊ��
-�Υե����뤬ʣ���Υѥå������˴ޤޤ�Ƥ����硢���������򵯤������Ȥˤʤ�Τ�
-��� (http://bugs.gentoo.org) ���٤��Ǥ��롣
+注意: 通常、ひとつのファイルは、ひとつのパッケージにのみ含まれている。もし、同一
+のファイルが複数のパッケージに含まれている場合、大抵は問題を起こすことになるので
+報告 (http://bugs.gentoo.org) すべきである。
 .br 
 .IP 
-<local\-opts> �ϼ��Τ����Τɤ줫���ޤ������Ƥ����Ǥ���:
+<local\-opts> は次のうちのどれか、または全てを指定できる:
 .br 
 .B \-c, \-\-category cat 
-���ꤵ�줿 cat ���ƥ���Τߤ򸡺�����
+指定された cat カテゴリのみを検索する
 .br 
 .B \-f, \-\-full\-regex
-���ꤵ�줿�䤤��碌������ɽ���Ȥ��ƹԤ�
+指定された問い合わせを正規表現として行う
 .br 
 .B \-e, \-\-earlyout 
-���Ĥ��ä������ǽ�λ����
+見つかった時点で終了する
 
 .PP 
 .TP
 .B check pkgspec
-���Υ��ޥ�ɤϻ��ꤵ�줿�ѥå������Υե�����򡢵�Ͽ����Ƥ��� MD5 ���ࡢ������
-������פ���Ӥ��롣
+このコマンドは指定されたパッケージのファイルを、記録されている MD5 サム、タイム
+スタンプと比較する。
 .PP 
 .TP 
 .B depends <local\-opts> pkgspec
-���Υ��ޥ�ɤϻ��ꤵ�줿 pkgspec �˰��פ������Ƥΰ�¸�ط���ɽ������
+このコマンドは指定された pkgspec に一致する全ての依存関係を表示する
 .br 
-<local\-opts> �μ��Τ����Τɤ줫���ޤ������Ƥ����Ǥ���:
+<local\-opts> の次のうちのどれか、または全てを指定できる:
 .br 
 .B \-a, \-\-all\-packages
-���Ƥ����Ѳ�ǽ�ʥѥå������򸡺����� (�٤�)
+全ての利用可能なパッケージを検索する (遅い)
 .br 
 .B \-d, \-\-direct
-ľ�ܤΰ�¸�ط��Τߤ򸡺����� (ɸ��)
+直接の依存関係のみを検索する (標準)
 .br 
 .B \-D, \-\-indirect
-����Ū�ʰ�¸�ط��⸡������ (�ȤƤ��٤�)
+間接的な依存関係も検索する (とても遅い)
 .PP 
 .TP 
 .B depgraph <local\-opts> pkgspec
-���Υ��ޥ�ɤ� pkgspec �ΰ�¸�ط��ĥ꡼��ɽ�����롣�ǥե���ȤǤϡ����ߤ����ɤ�
-�ʰ�¸�ط��Ǥ��뤫�򼨤����ᥤ��ǥ�Ȥ��դ��Ƥ��롣
+このコマンドは pkgspec の依存関係ツリーを表示する。デフォルトでは、お互いがどん
+な依存関係であるかを示すためインデントを付けてある。
 .br 
 .IP 
-<local\-opts> �ϼ��Τ����Τɤ줫���ޤ������Ƥ����Ǥ���:
+<local\-opts> は次のうちのどれか、または全てを指定できる:
 .br 
 .B \-U, \-\-no\-useflags 
-USE �ե饰��ɽ�����ʤ�
+USE フラグを表示しない
 .br 
 .B \-l, \-\-linear    
-����Ť��򤷤ʤ�
+飾りづけをしない
 .PP 
 .TP 
 .B files <local\-opts> pkgspec
-�оݥѥå������˴ޤޤ�Ƥ���ե�����ΰ����� <local\-opts> �ǻ��ꤵ������Ȥ�
-���ɽ�����롣
+対象パッケージに含まれているファイルの一覧を <local\-opts> で指定される情報とと
+もに表示する。
 .br 
 
-<local\-opts> �ϼ��Τ�Τ��Ȥ߹�碌:
+<local\-opts> は次のものの組み合わせ:
 .br 
 .B \-\-timestamp
-�ƥե�����Υ����ॹ����פ�ɽ�����롣
+各ファイルのタイムスタンプを表示する。
 .br 
 .B \-\-md5sum
-�ƥե������ md5sum ��ɽ�����롣
+各ファイルの md5sum を表示する。
 .br 
 .B \-\-type
-�ƥե�����μ����ɽ������
+各ファイルの種類を表示する
 .br 
 .B \-\-filter=<rules>
-�ե�����μ��फ�ѥ��򸵤˽��Ϥ����¤���
+ファイルの種類かパスを元に出力を制限する
 .br 
 .B \t<rules>
-�ϥ���޶��ڤ�Υե��륿��󥰥롼��Υꥹ�ȡ����Ѳ�ǽ�ʥ롼��ϰʲ����̤�:
+はカンマ区切りのフィルタリングルールのリスト。利用可能なルールは以下の通り:
 .br 
 .B \t\tdir\ 
-�ǥ��쥯�ȥ�
+ディレクトリ
 .br 
 .B \t\tobj\ 
-�ե�����
+ファイル
 .br 
 .B \t\tsym\ 
-����ܥ�å����
+シンボリックリンク
 .br 
 .B \t\tdev\ 
-�ǥХ����Ρ���
+デバイスノード
 .br 
 .B \t\tfifo
-̾���դ��ѥ���
+名前付きパイプ
 .br 
 .B \t\tpath
-�ե�����Υ��󥹥ȡ�����κ�û�ѥ�
+ファイルのインストール先の最短パス
 .br 
 .B \t\tconf
-����ե����� ($CONFIG_PROTECT �򸵤�)
+設定ファイル ($CONFIG_PROTECT を元に)
 .br 
 .B \t\tcmd\ 
-�桼�����ޥ�� ($PATH �򸵤�)
+ユーザコマンド ($PATH を元に)
 .br 
 .B \t\tdoc\ 
-�ɥ������ (/usr/share/doc ����)
+ドキュメント (/usr/share/doc から)
 .br 
 .B \t\tman\ 
-�ޥ˥奢�� (/usr/share/man ����)
+マニュアル (/usr/share/man から)
 .br 
 .B \t\tinfo
-info �ڡ��� (/usr/share/info ����)
+info ページ (/usr/share/info から)
 .PP 
 .TP 
 .B hasuse <local\-opts> useflag
-���Υ��ޥ�ɤϻ��ꤵ�줿 USE �ե饰���Ȥ߹�碌�˰��פ����Τ򡢥��󥹥ȡ����
-�ߥѥå�������̤���󥹥ȡ���ѥå�������Portage �ĥ꡼�������� Portage �����С�
-�쥤�ĥ꡼������󤹤롣
+このコマンドは指定された USE フラグの組み合わせに一致するものを、インストール済
+みパッケージ、未インストールパッケージ、Portage ツリー、そして Portage オーバー
+レイツリーから列挙する。
 
-<local\-opts> \-I �Τߤλ���ϤǤ�����\-I �� \-p �� \-o���⤷���� \-p �� \-o ��
-���˻��ꤷ�ʤ���Фʤ�ʤ���ɸ��Ǥϡ����󥹥ȡ���Ѥߥѥå������Τ߸�������롣
-\-o �ϥ����С��쥤�ĥ꡼�Τ� (���󥹥ȡ���Ѥߥѥå�������ޤ�) �������졢
-Portage �ĥ꡼�ϸ���\fI����ʤ�\fR��
+<local\-opts> \-I のみの指定はできず、\-I は \-p と \-o、もしくは \-p か \-o を
+一緒に指定しなければならない。標準では、インストール済みパッケージのみ検索される。
+\-o はオーバーレイツリーのみ (インストール済みパッケージを含む) 検索され、
+Portage ツリーは検索\fIされない\fR。
 
 .B \-i, \-\-installed
-���󥹥ȡ���Ѥߥѥå������򸡺����� (ɸ��)
+インストール済みパッケージを検索する (標準)
 .br 
 .B \-I, \-\-exclude\-installed
-���󥹥ȡ���Ѥߥѥå������򸡺����ʤ�
+インストール済みパッケージを検索しない
 .br 
 .B \-p, \-\-portage\-tree
-Portage �ĥ꡼ (/usr/portage) �⸡������
+Portage ツリー (/usr/portage) も検索する
 .br 
 .B \-o, \-\-overlay\-tree
-�����С��쥤�ĥ꡼ (/usr/local/portage) �⸡������
+オーバーレイツリー (/usr/local/portage) も検索する
 .PP 
 .TP 
 .B list <local\-opts> pkgspec
-���Υ��ޥ�ɤϡ����ꤵ�줿 pkgspec �˰��פ���ѥå������򡢥��󥹥ȡ���Ѥߥѥå�������̤���󥹥ȡ���ѥå�������Portage �ĥ꡼�������� Portage �����С��쥤�ĥ꡼������󤹤롣ɸ��Ǥϡ���ʬ���פǸ����򤹤롣
+このコマンドは、指定された pkgspec に一致するパッケージを、インストール済みパッケージ、未インストールパッケージ、Portage ツリー、そして Portage オーバーレイツリーから列挙する。標準では、部分一致で検索をする。
 
-<local\-opts> \-I �Τߤλ���ϤǤ�����\-I �� \-p �� \-o���⤷���� \-p �� \-o ��
-���˻��ꤷ�ʤ���Фʤ�ʤ���ɸ��Ǥϡ����󥹥ȡ���Ѥߥѥå������Τ߸�������롣
-\-o �ϥ����С��쥤�ĥ꡼�Τ� (���󥹥ȡ���Ѥߥѥå�������ޤ�) �򸡺����졢
-Portage �ĥ꡼�ϸ���\fI����ʤ�\fR��
+<local\-opts> \-I のみの指定はできず、\-I は \-p と \-o、もしくは \-p か \-o を
+一緒に指定しなければならない。標準では、インストール済みパッケージのみ検索される。
+\-o はオーバーレイツリーのみ (インストール済みパッケージを含む) を検索され、
+Portage ツリーは検索\fIされない\fR。
 
 .B \-i, \-\-installed
-���󥹥ȡ���Ѥߥѥå������򸡺����� (ɸ��)
+インストール済みパッケージを検索する (標準)
 .br 
 .B \-I, \-\-exclude\-installed
-���󥹥ȡ���Ѥߥѥå������򸡺����ʤ�
+インストール済みパッケージを検索しない
 .br 
 .B \-p, \-\-portage\-tree
-Portage �ĥ꡼ (/usr/portage) �⸡������
+Portage ツリー (/usr/portage) も検索する
 .br 
 .B \-o, \-\-overlay\-tree
-�����С��쥤�ĥ꡼ (/usr/local/portage) �⸡������
+オーバーレイツリー (/usr/local/portage) も検索する
 .br 
 .B \-f, \-\-full\-regex
-���ꤵ�줿�䤤��碌������ɽ���Ȥ��ƹԤ�
+指定された問い合わせを正規表現として行う
 .br 
 .B \-e, \-\-exact\-name
-�������פ����ѥå������Τߤ���󤹤�
+完全一致したパッケージのみを列挙する
 .br 
 .B \-d, \-\-duplicates
-ʣ��¸�ߤ���ѥå������Τߤ���󤹤�
+複数存在するパッケージのみを列挙する
 .br 
 
-\fB��:\fR
+\fB例:\fR
 
-equery list zilla \- 'zilla' �Ȥ���ʸ�����ޤ�ѥå������Ρ����󥹥ȡ���Ѥߤ����С���������󤹤�
+equery list zilla \- 'zilla' という文字列を含むパッケージの、インストール済みの全バージョンを列挙する
 
-equery list \-\-exact\-name x11\-libs/gtk+  \- x11\-libs/gtk+ �Υ��󥹥ȡ���Ѥߤ����С���������󤹤�
+equery list \-\-exact\-name x11\-libs/gtk+  \- x11\-libs/gtk+ のインストール済みの全バージョンを列挙する
 
-equery list \-\-full\-regex '(mozilla\-firefox|mozilla\-thunderbird)' \- mozilla\-firefox �� mozilla\-thunderbird �Υ��󥹥ȡ���Ѥߤ����С���������󤹤�
+equery list \-\-full\-regex '(mozilla\-firefox|mozilla\-thunderbird)' \- mozilla\-firefox と mozilla\-thunderbird のインストール済みの全バージョンを列挙する
 
-equery list \-\-duplicates \- ���󥹥ȡ���ѤߤΥ����åȲ����줿�ѥå�������������󤹤�
+equery list \-\-duplicates \- インストール済みのスロット化されたパッケージを全て列挙する
 .PP 
 .TP
 .B size <local\-opts> pkgspec
-���Υ��ޥ�ɤϻ��ꤵ�줿�ѥå������˴ޤޤ��ե�����ο��ȡ����Υ�������Ŭ�ڤ�ñ
-�̤ǽ��Ϥ��롣
+このコマンドは指定されたパッケージに含まれるファイルの数と、そのサイズを適切な単
+位で出力する。
 
-ͣ�� <local\-opts> �˻����ǽ�ʰ���:
+唯一 <local\-opts> に指定可能な引数:
 .br 
 .B \-b, \-\-bytes 
-�Х���ñ�̤ǥ�������ɽ������
+バイト単位でサイズを表示する
 .PP 
 .TP 
 .B uses <local\-opts> pkgspec 
-pkgspec �� USE �ե饰��ɽ�����롣
+pkgspec の USE フラグを表示する。
 
-ͣ�� <local\-opts> �˻����ǽ�ʰ���:
+唯一 <local\-opts> に指定可能な引数:
 .br 
 .B \-a, \-\-all
-̤���󥹥ȡ���ѥå�������ޤ��
+未インストールパッケージを含める
 .PP 
 .TP
 .B which pkgspec 
-�ѥå����� pkgspec �� ebuild �ؤΥե�ѥ���ɽ������
+パッケージ pkgspec の ebuild へのフルパスを表示する
 .PP 
 
-.SH ̤�������ץ����
+.SH 未実装オプション
 .PP 
 .B changes
 .PP 
-.B glsa \fR \- ��ʬ�δ� glsa\-check ����Ѥ��Ƥ�������������
+.B glsa \fR \- 当分の間 glsa\-check を使用していただきたい。
 .PP 
 .B stats
 
 
 
-.SH �Х�
-¿���Υ��ץ���󤬼�������Ƥ��ʤ������ޥ�ɥ饤����ϤϤ����Ĥ��κ�Ȥ˻Ȥ�����
+.SH バグ
+多くのオプションが実装されていない。コマンドライン解析はいくつかの作業に使えた。
 .br 
-�Х����� http://bugs.gentoo.org �ޤǡ�
-.SH ����
+バグ報告は http://bugs.gentoo.org まで。
+.SH 著者
 equery, original man page: Karl Trygve Kalleberg <karltk@gentoo.org>, 2003.
 .br 
 Massive man page updates: Katerina Barone\-Adesi <katerinab@gmail.com>, 2004.

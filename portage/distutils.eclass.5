@@ -4,44 +4,44 @@
 .\" Translated on 19 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "DISTUTILS.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-distutils \- distutils �١����� Python �⥸�塼��Υ��󥹥ȡ������
-.SH "����"
-\fBdistutils\fR eclass �� distutils �١����� Python
-�⥸�塼��Υ��󥹥ȡ���� Gentoo Linux
-�����ƥ�ؤ��Ȥ߹��ߤ���ñ�ˤʤ�褦���߷פ���Ƥ��롣
-���� eclass �Ǥ� \fBsrc_compile\fR �� \fBsrc_install\fR
-���������Ƥ��롣
-�ɲ��ѿ����ɲôؿ������ꤷ�ʤ��Ƥ��ñ�� ebuild �������Ǥ���Ϥ��Ǥ��롣
-.SH "�ѿ�"
+.SH "名前"
+distutils \- distutils ベースの Python モジュールのインストール補助
+.SH "説明"
+\fBdistutils\fR eclass は distutils ベースの Python
+モジュールのインストールと Gentoo Linux
+システムへの組み込みが簡単になるように設計されている。
+この eclass では \fBsrc_compile\fR と \fBsrc_install\fR
+が定義されている。
+追加変数や追加関数を設定しなくても簡単に ebuild が作成できるはずである。
+.SH "変数"
 .TP
 .B PYTHON_SLOT_VERSION = \fI"[0|2.1]"\fR
-�����ѿ���Ȥ��� python-2.1 �˰�¸�ط�����Ĥ��Ȥ��Ǥ��롣
-��������� -py21- �� ebuild �Ǥ���ɬ�פǤ��롣
-�����Ǥʤ���Ф����ѿ������ꤹ�٤��ǤϤʤ���
+この変数を使うと python-2.1 に依存関係を持つことができる。
+これは通例 -py21- の ebuild でだけ必要である。
+そうでなければこの変数は設定すべきではない。
 .TP
-.B DOCS = \fI"<dodoc ��Ϳ����ե�����̾>"\fR
-�����ѿ���Ȥ��� \fBsrc_install\fR ��
-�̾�Ǥϥ��󥹥ȡ��뤵��ʤ�ʸ����ɲäǥ��󥹥ȡ���Ǥ��롣
-.SH "�ؿ�"
+.B DOCS = \fI"<dodoc に与えるファイル名>"\fR
+この変数を使うと \fBsrc_install\fR で
+通常ではインストールされない文書を追加でインストールできる。
+.SH "関数"
 .TP
 .B distutils_python_version
-���δؿ��� \fBPYVER_MAJOR\fR��\fBPYVER_MINOR\fR ������ \fBPYVER\fR
-�ѿ��ˡ����줾���������� Python �С��������ͤ����ꤹ�롣
+この関数は \fBPYVER_MAJOR\fR、\fBPYVER_MINOR\fR そして \fBPYVER\fR
+変数に、それぞれ相当する Python バージョンの値を設定する。
 .TP
 .B distutils_python_tkinter
-�ѥå������� tkinter ���ݡ��Ȥ��׵ᤷ�Ƥ���С�
-���δؿ���Ƥ֤� tkinter ���ݡ��Ȥ�¸�ߤ��ʤ���� ebuild �����Ԥ��롣
-�����ơ��桼���ˤ��� ebuild �� emerge ���뤿��ˤˤ� tkinter
-���ݡ��ȤĤ��� Python ��ƥ���ѥ��뤹��ɬ�פ����뤳�Ȥ�
-����Ū�˶������å�������ɽ������롣
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "����"
+パッケージが tkinter サポートを要求していれば、
+この関数を呼ぶと tkinter サポートが存在しなければ ebuild が失敗する。
+そして、ユーザにその ebuild を emerge するためにには tkinter
+サポートつきで Python を再コンパイルする必要があることを、
+具体的に教えるメッセージが表示される。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/distutils.eclass
-.SH "����"
+.SH "著者"
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: distutils.eclass.5,v 1.3
+.SH "CVS ヘッダ"
+原文: distutils.eclass.5,v 1.3

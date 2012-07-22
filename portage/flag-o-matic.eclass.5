@@ -4,32 +4,32 @@
 .\" Translated on 16 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "FLAG-O-MATIC.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-flag\-o\-matic \- CFLAGS/CXXFLAGS ���ñ���İ��������
-.SH "����"
-\fBflag\-o\-matic\fR eclass �� CFLAGS/CXXFLAGS
-�ѿ������뤿��δؿ����åȤǤ��롣
-.SH "�ؿ�"
+.SH "名前"
+flag\-o\-matic \- CFLAGS/CXXFLAGS を簡単かつ安全に操作
+.SH "説明"
+\fBflag\-o\-matic\fR eclass は CFLAGS/CXXFLAGS
+変数を操作するための関数セットである。
+.SH "関数"
 .TP
 .BR "append-flags " "\fI<flag>\fR"
-���ߤ� CFLAGS/CXXFLAGS ���ɲä�\fI�ե饰\fR�����ꤹ�롣
+現在の CFLAGS/CXXFLAGS に追加の\fIフラグ\fRを設定する。
 .TP
 .BR "filter-flags " "\fI<flag>\fR"
-CFLAGS/CXXFLAGS ���������\fI�ե饰\fR���������
-���δؿ��ϥե饰�˴����ޥå����롣
+CFLAGS/CXXFLAGS から特定の\fIフラグ\fRを取り除く。
+この関数はフラグに完全マッチする。
 .TP
 .BR "replace-flags " "\fI<orig-flag>\fR \fI<new-flag\fR"
-��ե饰���������ե饰���֤������롣
+旧フラグを全部新フラグで置き換える。
 .TP
 .BR "replace-cpu-flags " "\fI<old cpus>\fR \fI<new cpu>\fR"
-\fI��CPU\fR��ޤ�� -march �� -mcpu �� -mtune �ե饰�����Ƥ�
-\fI��CPU\fR��ޤ�� -march �� -mcpu �� -mtune �ե饰���֤������롣
+\fI旧CPU\fRを含んだ -march と -mcpu と -mtune フラグの全てを
+\fI新CPU\fRを含んだ -march と -mcpu と -mtune フラグで置き換える。
 .TP
-.BR "get-flag " "\fI<�ե饰>\fR"
-\fI�ե饰\fR�� - �ǻϤޤäƤ���С��ե饰���Τ�����������롣
-�ե饰̾���������ꤵ��Ƥ��ꡢ���Ĥ��Υե饰�����ꤵ��Ƥ���С�����ˤ��Υե饰���ͤ�����������롣
+.BR "get-flag " "\fI<フラグ>\fR"
+\fIフラグ\fRが - で始まっていれば、フラグ全体がエコーされる。
+フラグ名だけが指定されており、かつそのフラグが設定されていれば、代わりにそのフラグの値がエコーされる。
 
-.I ��:
+.I 例:
 .br
 CFLAGS="-march=i586 -ffast-math"
 .br
@@ -41,36 +41,36 @@ CFLAGS="-march=i586 -ffast-math"
 .br
 `get-flag ffast-math`  == "-ffast-math"
 .TP
-.BR "is-flag " "\fI<�ե饰>\fR"
-\fI�ե饰\fR�� CFLAGS �� CXXFLAGS �ˤ���п����֤���
+.BR "is-flag " "\fI<フラグ>\fR"
+\fIフラグ\fRが CFLAGS か CXXFLAGS にあれば真を返す。
 .TP
-.BR "filter-mfpmath " "\fI<math ������>\fR"
-���ꤵ�줿 math type �� fpmath �λ��꤫���������
-�桼���� -mfpmath=sse,386 �Ȼ��ꤷ�Ƥ���С�`filter-mfpmath sse`
-��¹Ԥ���� -mfpmath=386 ���Ĥ롣
+.BR "filter-mfpmath " "\fI<math タイプ>\fR"
+指定された math type を fpmath の指定から取り除く。
+ユーザが -mfpmath=sse,386 と指定していれば、`filter-mfpmath sse`
+を実行すると -mfpmath=386 が残る。
 .TP
-.BR "append-ldflags " "\fI<�ե饰>\fR"
-���ߤ�LDFLAGS���ɲä�\fI�ե饰\fR��­����
+.BR "append-ldflags " "\fI<フラグ>\fR"
+現在のLDFLAGSに追加の\fIフラグ\fRを足す。
 .TP
 .BR "strip-flags"
-�����ʥե饰�����Τ��Ƥ��ʤ��ե饰�ʳ������� CFLAGS/CXXFLAGS
-�������롣stable �ץ��ե�����Υ桼���ϲ����Υե饰����
-�Ȥ��ʤ��褦���¤���Ƥ���:
+安全なフラグだと知られていないフラグ以外を全て CFLAGS/CXXFLAGS
+から除去する。stable プロフィールのユーザは下記のフラグしか
+使えないよう制限されている:
 .br
 .I "-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
 .br
-unstable �ץ��ե�����Υ桼���Ͼ�Υե饰�˲ä��Ʋ����Υե饰��
-���Ѥ��뤳�Ȥ��Ǥ���:
+unstable プロフィールのユーザは上のフラグに加えて下記のフラグを
+使用することができる:
 .br
 .I "-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "����"
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
 .BR ebuild (5),
 .BR make.conf (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/flag\-o\-matic.eclass
-.SH "����"
+.SH "著者"
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: flag-o-matic.eclass.5,v 1.5
+.SH "CVS ヘッダ"
+原文: flag-o-matic.eclass.5,v 1.5

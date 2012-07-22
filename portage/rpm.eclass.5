@@ -4,40 +4,40 @@
 .\" Translated on 15 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "RPM.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-rpm \- RPM ��Ÿ������Τ������ʥ��饹
-.SH "����"
-\fBrpm\fR eclass �� RPM ��Ÿ�����Ƥ���뤿��ˤ��롣
-�����Ȥ��г�ȯ�Ԥ� RPM ���饽�������������֤�Ÿ�����뤿��ˡ�
-���줾���ȼ��Υ��Ĥ�Ȥ�ʤ��ƺѤࡣ���� eclass �Ǥ�
-\fBsrc_unpack\fR �ؿ����������Ƥ��ꡢŸ�����������ݸ��Ƥ���롣
-unpack �ؿ��� \fBrpmoffset\fR �� \fBrpm2cpio\fR �Τ����줫���Ѥ���
-RPM ��Ÿ�����롣�����ƥ�ˤɤ����¸�ߤ����硢\fBrpm2cpio\fR
-�����Ѥ���롣
-.SH "�ѿ�"
+.SH "名前"
+rpm \- RPM を展開するのに便利なクラス
+.SH "説明"
+\fBrpm\fR eclass は RPM を展開してくれるためにある。
+これを使えば開発者は RPM からソースアーカイブを展開するために、
+それぞれ独自のコツを使わなくて済む。この eclass では
+\fBsrc_unpack\fR 関数が定義されており、展開を全部面倒見てくれる。
+unpack 関数は \fBrpmoffset\fR か \fBrpm2cpio\fR のいずれかを用い、
+RPM を展開する。システムにどちらも存在する場合、\fBrpm2cpio\fR
+が使用される。
+.SH "変数"
 .TP
 .B USE_RPMOFFSET_ONLY = \fI"[0|1]"\fR
-\fBrpm2cpio\fR �����Ĥ��ä��Ȥ��Ƥ� RPM Ÿ���� \fBrpmoffset\fR
-����Ū�˻Ȥ碌������硢�����ѿ���1�����ꤹ�롣
-.SH "�ؿ�"
+\fBrpm2cpio\fR が見つかったとしても RPM 展開に \fBrpmoffset\fR
+を強制的に使わせたい場合、この変数を1に設定する。
+.SH "関数"
 .TP
-.B rpm_unpack \fI"<Ÿ������ե�����>"\fR
-\fBunpack\fR ��¾�Υ��������֤�Ÿ������Τ�Ʊ���褦�� RPM
-�ե������Ÿ�����롣RPM �ե��������Ȥ�
-\fB${WORKDIR}\fR ��Ÿ������롣
+.B rpm_unpack \fI"<展開するファイル>"\fR
+\fBunpack\fR が他のアーカイブを展開するのと同じように RPM
+ファイルを展開する。RPM ファイルの中身は
+\fB${WORKDIR}\fR に展開される。
 .TP
 .B rpm_src_unpack
-���δؿ��� \fBsrc_unpack\fR ���֤�������\fB${A}\fR
-���̤������ե������Ÿ�����롣���Υե����뤬 RPM
-�Ǥ���� \fBrpm_unpack\fR ���ƤФ졢RPM
-�Ǥʤ���Хǥե���Ȥ� \fBunpack\fR �ؿ������Ѥ���롣
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "����"
+この関数は \fBsrc_unpack\fR を置き換え、\fB${A}\fR
+を通して全ファイルを展開する。そのファイルが RPM
+であれば \fBrpm_unpack\fR が呼ばれ、RPM
+でなければデフォルトの \fBunpack\fR 関数が使用される。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/rpm.eclass
-.SH "����"
+.SH "著者"
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: rpm.eclass.5,v 1.3
+.SH "CVS ヘッダ"
+原文: rpm.eclass.5,v 1.3

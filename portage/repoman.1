@@ -4,137 +4,137 @@
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "REPOMAN" "1" "Nov 2002" "Portage 2.0.51" "Portage"
-.SH ̾��
-repoman \- Gentoo �� Portage �ĥ꡼���ɲä��줿�ѥå������κ����٥���ʼ����ݾڤ�Ű�줵����ץ������
-.SH ��
-\fBrepoman\fR [\fI���ץ����\fR] [\fI�⡼��\fR]
-.SH ����
-.BR �ּ��ʤ�Ƥɤ����äƤ�������
+.SH 名前
+repoman \- Gentoo の Portage ツリーに追加されたパッケージの最低レベルの品質の保証を徹底させるプログラム
+.SH 書式
+\fBrepoman\fR [\fIオプション\fR] [\fIモード\fR]
+.SH 説明
+.BR 「質なんてどうだっていい。」
 .br
 .BR repoman
-�� Gentoo ��ȯ�Ը����Υץ������Ǥ��롣
-repoman �� CVS ��ݥ��ȥ���ʼ�������å����뤬��
-ebuild ��İ�ĤˤĤ��ƥ����å�����櫓�ǤϤʤ��Τǡ�
+は Gentoo 開発者向けのプログラムである。
+repoman は CVS リポジトリの品質をチェックするが、
+ebuild 一つ一つについてチェックするわけではないので、
 .br
-��: \fBrepoman\fR �� \fI������������\fR �� CVS ��ݥ��ȥ���Ф��ƤΤ߼¹Ԥ���롣
-.SH ���ץ����
+註: \fBrepoman\fR は \fIローカル内部\fR の CVS リポジトリに対してのみ実行される。
+.SH オプション
 .TP
 .B --pretend
-�ʤˤ��¹Ԥ���뤫��ɽ����������ǡ����ߥåȤ�����ν�����ºݤˤϹԤʤ�ʤ���
+なにが実行されるかを表示するだけで、コミットも問題の修正も実際には行なわない。
 .TP
 .B --help
-�إ�ײ��̤�ɽ�����롣
-.SH �⡼��
+ヘルプ画面を表示する。
+.SH モード
 .TP
 .B scan
-�ʼ��ݾ�(QA)�Τ���˥����ȥǥ��쥯�ȥ�ĥ꡼�򥹥���󤹤�(�ǥե����)��
-�ܺ٤� \fBQA �������\fR �򻲾ȡ�
+品質保証(QA)のためにカレントディレクトリツリーをスキャンする(デフォルト)。
+詳細は \fBQA キーワード\fR を参照。
 .TP
 .B fix
-ľ���� QA ����(�����������Ȥ��б����� ebuild ���ʤ���ebuild ���б�����
-�����������Ȥ��ʤ�)�������롣
+直せる QA 問題(ダイジェストに対応する ebuild がない、ebuild に対応する
+ダイジェストがない)を修正する。
 .TP
 .B full
-QA �Τ���˥����ȥǥ��쥯�ȥ�ĥ꡼�򥹥���󤹤�(���٤ƥꥹ�Ȥ���)��
-�ܺ٤� \fBQA �������\fR �򻲾ȡ�
+QA のためにカレントディレクトリツリーをスキャンする(すべてリストする)。
+詳細は \fBQA キーワード\fR を参照。
 .TP
 .B help
-�إ�ײ��̤�ɽ�����롣
+ヘルプ画面を表示する。
 .TP
 .B commit
-QA �Τ���˥����ȥǥ��쥯�ȥ�ĥ꡼�򥹥���󤹤롣
-���꤬�ʤ���� cvs ��ͳ�ǥ��ߥåȤ��롣
-.SH QA �������
+QA のためにカレントディレクトリツリーをスキャンする。
+問題がなければ cvs 経由でコミットする。
+.SH QA キーワード
 .TP
 .BR CVS/Entries.IO_error
-���ߥåȤ��褦�Ȥ���Ȥ���CVS/Entries�ǥ��쥯�ȥ꤬���Ĥ���ʤ��ä���
-cvs co���Ƿ��������Τ����⤷���ϥѡ��ߥå����Τ����repoman
-���ե�������ɤ߼�뤳�Ȥ��Ǥ��ʤ��ä���
+コミットしようとするとき、CVS/Entriesディレクトリが見つからなかった。
+cvs coが打撃を受けたのか、もしくはパーミッションのためにrepoman
+がファイルを読み取ることができなかった。
 .TP
 .BR digest.stray
-�б����� ebuild ���ʤ������������ȥե����뤬���Ĥ��ä���
+対応する ebuild がないダイジェストファイルが見つかった。
 .TP
 .BR digest.missing
-�б���������������Ȥ��ʤ� ebuild �ե����뤬���Ĥ��ä���
+対応するダイジェストがない ebuild ファイルが見つかった。
 .TP
 .BR ebuild.invalidname
-ebuild �� Portage �����ϤǤ��ʤ��ե�����̾���Ĥ��Ƥ��롣
+ebuild に Portage が解析できないファイル名がついている。
 .TP
 .BR ebuild.namenomatch
-ebuild �˿ƥǥ��쥯�ȥ�Ȱ㤦̾�����Ĥ��Ƥ��롣
+ebuild に親ディレクトリと違う名前がついている。
 .TP
 .BR changelog.missing
-ChangeLog �ե����뤬���Ĥ���ʤ���
+ChangeLog ファイルが見つからない。
 .TP
 .BR ebuild.notadded
-ebuild �ե����뤬���Ĥ��ä������ޤ� cvs ���ɲä���Ƥ��ʤ���
+ebuild ファイルが見つかったが、まだ cvs に追加されていない。
 .TP
 .BR digest.notadded
-�����������ȥե����뤬���Ĥ��ä������ޤ� cvs ���ɲä���Ƥ��ʤ���
+ダイジェストファイルが見つかったが、まだ cvs に追加されていない。
 .TP
 .BR ebuild.disjointed
-�б���������������Ȥ����Ǥ��ɲä���Ƥ����Τǡ�ebuild �ե������
-cvs ���ɲä���ʤ��ä���
+対応するダイジェストがすでに追加されていたので、ebuild ファイルは
+cvs に追加されなかった。
 .TP
 .BR filedir.missing
-�ѥå�������files�ǥ��쥯�ȥ꤬�ʤ���
+パッケージにfilesディレクトリがない。
 .TP
 .BR file.size
-�ե����륵������20k��ۤ��Ƥ��롣���ߤΥݥꥷ���ϡ�20k
-��ۤ���ե�����ϥѥå�������files�ǥ��쥯�ȥ���֤��ƤϤ����ʤ���
+ファイルサイズが20kを越えている。現在のポリシーは、20k
+を越えるファイルはパッケージのfilesディレクトリに置いてはいけない。
 .TP
 .BR file.executable
-ɬ�פ��ʤ��Τ˥ե�����˼¹ԥӥåȤ�Ω�äƤ��롣
-�����å��оݤ�ebuild��digest��Manifest��ChangeLog��metadata.xml�˸¤��롣
+必要がないのにファイルに実行ビットが立っている。
+チェック対象はebuild、digest、Manifest、ChangeLog、metadata.xmlに限られる。
 .TP
 .BR digest.disjointed
-�б����� ebuild �����Ǥ��ɲä���Ƥ����Τǡ������������ȥե������
-cvs ���ɲä���ʤ��ä���
+対応する ebuild がすでに追加されていたので、ダイジェストファイルは
+cvs に追加されなかった。
 .TP
 .BR DEPEND.bad
-�桼���˸�����(mask ����Ƥ��ʤ�) ebuild �˴ְ�ä� DEPEND ���꤬����
-(*�����Ƥ���* ebuild ���Ф��ƤΤ�Ĵ�٤���)��
-�Ĥޤꡢ�桼���˸����� ebuild ��� DEPEND ����������������Ȥ��Ǥ��ʤ���
+ユーザに見える(mask されていない) ebuild に間違った DEPEND 設定がある
+(*見えている* ebuild に対してのみ調べられる)。
+つまり、ユーザに見える ebuild 内で DEPEND の設定を満たすことができない。
 .TP
 .BR RDEPEND.bad
-�桼���˸�����(mask ����Ƥ��ʤ�) ebuild �˴ְ�ä� RDEPEND ���꤬����
-(*�����Ƥ���* ebuild ���Ф��ƤΤ�Ĵ�٤���)��
-�Ĥޤꡢ�桼���˸����� ebuild ��� RDEPEND ����������������Ȥ��Ǥ��ʤ���
+ユーザに見える(mask されていない) ebuild に間違った RDEPEND 設定がある
+(*見えている* ebuild に対してのみ調べられる)。
+つまり、ユーザに見える ebuild 内で RDEPEND の設定を満たすことができない。
 .TP
 .BR DEPEND.badmasked
-mask ���줿 ebuild �˴ְ�ä� DEPEND ���꤬����
-(*���Ƥ�* ebuild ���Ф���Ĵ�٤���)��
-�Ĥޤꡢ�ɤ� ebuild �� DEPEND ����������������Ȥ��Ǥ��ʤ���
+mask された ebuild に間違った DEPEND 設定がある
+(*全ての* ebuild に対して調べられる)。
+つまり、どの ebuild も DEPEND の設定を満たすことができない。
 .TP
 .BR RDEPEND.badmasked
-mask ���줿 ebuild �˴ְ�ä� RDEPEND ���꤬����
-(*���Ƥ�* ebuild ���Ф���Ĵ�٤���)��
-�Ĥޤꡢ�ɤ� ebuild �� RDEPEND ����������������Ȥ��Ǥ��ʤ���
+mask された ebuild に間違った RDEPEND 設定がある
+(*全ての* ebuild に対して調べられる)。
+つまり、どの ebuild も RDEPEND の設定を満たすことができない。
 .TP
 .BR ebuild.syntax
-����å��奨��ȥ꡼���������Ƥ���ݤ˥��顼����������
-ŵ��Ū�ˤ� ebuild �˹�ʸ���顼�����뤳�Ȥ��̣���롣
+キャッシュエントリーを生成している際にエラーが起きた。
+典型的には ebuild に構文エラーがあることを意味する。
 .TP
 .BR ebuild.output
-ñ�� ebuild �� source ���������ǽ��Ϥ����롣
-����� ebuild �ݥꥷ����ȿ���롣
+単に ebuild を source しただけで出力がある。
+これは ebuild ポリシーに反する。
 .TP
 .BR KEYWORDS.missing
-ebuild �� KEYWORDS �ѿ����ʤ���
+ebuild に KEYWORDS 変数がない。
 .TP
 .BR LICENSE.missing
-ebuild �� LICENSE �ѿ����ʤ���
+ebuild に LICENSE 変数がない。
 .TP
 .BR DESCRIPTION.missing
-ebuild �� DESCRIPTION �ѿ����ʤ���
+ebuild に DESCRIPTION 変数がない。
 .TP
 .BR SLOT.missing
-ebuild �� SLOT �ѿ����ʤ���
-.SH ����
+ebuild に SLOT 変数がない。
+.SH 著者
 Daniel Robbins <drobbins@gentoo.org>
-.SH �Х����
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH ��Ϣ����
+.SH バグ報告
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH 関連項目
 .BR emerge (1)
-.SH CVS �إå�
-��ʸ: repoman.1,v 1.7
+.SH CVS ヘッダ
+原文: repoman.1,v 1.7

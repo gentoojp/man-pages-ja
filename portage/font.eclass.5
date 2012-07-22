@@ -4,13 +4,13 @@
 .\" Translated on 21 Oct 2004 by Shigehiro IDANI <datam@anet.ne.jp>
 .\"
 .TH "FONT.ECLASS" "5" "Aug 2004" "Portage 2.0.51" "portage"
-.SH "̾��"
-font \- �ưפ��ĶѰ�˥ե���Ȥ򥤥󥹥ȡ��뤹��
-.SH "����"
-\fBfont\fR eclass �ϤǤ�������ưפ˥ե���Ȥ򥤥󥹥ȡ��뤷�褦�Ȼ�ߤ롣
-�����Ƥ��ե���Ȥ򥤥󥹥ȡ��뤹��Τ�ɬ�פ����ƤΤ���(��������֥�ե���ȤΥ���ǥå����κ�����ե���ȥ���å���ι����ʤ�)�� \fBfont\fR eclass �ˤ�ä�Ʃ��Ū�˰������Ȥ��ǽ�Ȥ��롣
-.SH "��"
-�ʲ��˴�ñ��ebuild����򼨤�:
+.SH "名前"
+font \- 容易かつ均一にフォントをインストールする
+.SH "説明"
+\fBfont\fR eclass はできるだけ容易にフォントをインストールしようと試みる。
+たいていフォントをインストールするのに必要な全てのこと(スケーラブルフォントのインデックスの作成やフォントキャッシュの更新など)を \fBfont\fR eclass によって透過的に扱うことを可能とする。
+.SH "例"
+以下に簡単なebuildの例を示す:
 .nf
 inherit font
 
@@ -29,40 +29,40 @@ S="${WORKDIR}/${PN}"
 FONT_S=${S}
 FONT_SUFFIX="ttf"
 .fi
-.SH "�ѿ�"
+.SH "変数"
 .TP
 .B "FONT_SUFFIX"
-���󥹥ȡ��뤹��ե���Ȥ�ź�����򡢶�����ڤ�Υꥹ�Ȥǻ��ꤹ�롣
+インストールするフォントの添え字を、空白区切りのリストで指定する。
 .TP
 .B "FONT_S"
-�ե���Ȥ򥤥󥹥ȡ��뤹��ǥ��쥯�ȥ����ꤹ�롣
-�⤷���ꤷ�Ƥ��ʤ����ϡ�\fB${S}\fR �����Ѥ��롣
+フォントをインストールするディレクトリを指定する。
+もし指定していない場合は、\fB${S}\fR を代用する。
 .TP
 .B "DOCS"
-���󥹥ȡ��뤹��ɥ�����Ȥ������ڤ�Υꥹ�Ȥǻ��ꤹ�롣
-.SH "�ؿ�"
+インストールするドキュメントを空白区切りのリストで指定する。
+.SH "関数"
 .TP
 .B "font_xfont_config"
-X�ѤΥե���ȥե������Ѥ˥ե���ȤΥ���ǥå������������
-�ޤ����⤷fonts.alias�ե����뤬¸�ߤ���С�����⥤�󥹥ȡ��뤹�롣
-���δؿ��ϡ� \fIfont_src_install\fR ����ƤӤ�����롣
+X用のフォントファイル用にフォントのインデックスを作成し、
+また、もしfonts.aliasファイルが存在すれば、それもインストールする。
+この関数は、 \fIfont_src_install\fR から呼びだされる。
 .TP
 .B "font_xft_config"
-fontconfig����å����������롣
-���δؿ��� \fIfont_src_install\fR ���ƤӤ�����롣
+fontconfigキャッシュを作成する。
+この関数も \fIfont_src_install\fR より呼びだされる。
 .TP
 .B "font_src_install"
-\fB${FONT_SUFFIX}\fR �ǻ��ꤵ�줿ź�����ꥹ�Ȥˤ���ź�����ǽ�λ�������ƤΥե���Ȥ򥤥󥹥ȡ��뤹�롣Ʊ�ͤ� \fB${DOCS}\fR �˻��ꤵ�줿�ɥ�����Ȥ⥤�󥹥ȡ��뤹�롣ebuild �� \fIsrc_install\fR �ؿ����ά���Ƥ����硢ɸ��δؿ��Ȥ��Ƽ¹Ԥ���롣
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤäƤ���������
-.SH "����"
+\fB${FONT_SUFFIX}\fR で指定された添え字リストにある添え字で終了する全てのフォントをインストールする。同様に \fB${DOCS}\fR に指定されたドキュメントもインストールする。ebuild が \fIsrc_install\fR 関数を省略している場合、標準の関数として実行される。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行ってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/font.eclass
-.SH "����"
+.SH "著者"
 .nf
 Aaron Walker <ka0ttic@gentoo.org>
 Mike Frysinger <vapier@gentoo.org>
 .fi
-.SH "CVS �إå�"
-��ʸ: font.eclass.5,v 1.2
+.SH "CVS ヘッダ"
+原文: font.eclass.5,v 1.2

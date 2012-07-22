@@ -4,30 +4,30 @@
 .\" Translated on 8 Jul 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "ENV-UPDATE" "1" "Feb 2003" "Portage 2.0.51" "Portage"
-.SH ̾��
-env-update \- �Ķ������ư�ǹ�������
-.SH ��
+.SH 名前
+env-update \- 環境設定を自動で更新する
+.SH 書式
 .B env-update
-.SH ����
+.SH 説明
 .B env-update
-\fI/etc/env.d\fR �ˤ���ե�������ɤߡ���ư�� \fI/etc/profile.env\fR
-�� \fI/etc/ld.so.conf\fR ���������롣������ \fBldconfig\fR(8)
-��¹Ԥ���\fI/etc/ld.so.cache\fR �򹹿����롣 \fBenv-update\fR ��
-�ƥѥå����������󥹥ȡ���/���󥤥󥹥ȡ��뤵�줿���� \fBemerge\fR(1)
-�ˤ�äƼ�ư�Ǽ¹Ԥ���롣�ޤ���\fI/etc/env.d\fR ���ѹ���ä�����硢
-�������ѹ���ȿ�Ǥ��뤿��ˤϼ�ʬ�� \fIenv-update\fR ��¹Ԥ��ʤ����
-�ʤ�ʤ����������Ƥ⿷�����ץ������ˤ����ƶ����ʤ����Ȥ����դ��뤳�ȡ�
-ư����Υ�����ˤ��ѹ���ȿ�Ǥ����뤿��ˤϡ��ޤ�\fIsource /etc/profile\fR
-��¹Ԥ��ʤ���Фʤ�ʤ���������
-.SH ���ץ����
+\fI/etc/env.d\fR にあるファイルを読み、自動で \fI/etc/profile.env\fR
+と \fI/etc/ld.so.conf\fR を生成する。そして \fBldconfig\fR(8)
+を実行し、\fI/etc/ld.so.cache\fR を更新する。 \fBenv-update\fR は
+各パッケージがインストール/アンインストールされたあと \fBemerge\fR(1)
+によって自動で実行される。また、\fI/etc/env.d\fR に変更を加えた場合、
+すぐに変更を反映するためには自分で \fIenv-update\fR を実行しなければ
+ならない。こうしても新しいプロセスにしか影響しないことに注意すること。
+動作中のシェルにも変更を反映させるためには、まず\fIsource /etc/profile\fR
+を実行しなければならないだろう。
+.SH オプション
 .TP
-�ʤ���
-.SH ����
+なし。
+.SH 著者
 Daniel Robbins <drobbins@gentoo.org>
-.SH �Х����
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH ��Ϣ����
+.SH バグ報告
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH 関連項目
 .BR emerge (1),
 .BR ldconfig (8)
-.SH CVS �إå�
-��ʸ: env-update.1,v 1.6
+.SH CVS ヘッダ
+原文: env-update.1,v 1.6

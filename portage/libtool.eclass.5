@@ -4,49 +4,49 @@
 .\" Translated on 21 Oct 2004 by Shigehiro IDANI <datam@anet.ne.jp>
 .\"
 .TH "LIBTOOL.ECLASS" "5" "Aug 2004" "Portage 2.0.51" "portage"
-.SH "̾��"
-libtool \- �ѥå������Ȱ������ۤ����libtool�ե������������
-.SH "����"
-\fBlibtool\fR eclass �ϥѥå�������Ʊ������Ƥ���libtool�ե������
-�ѥå������Ƥ��ñ����ˡ���󶡤��롣���Ф��С������Υե�����ϻ����٤�ˤʤä�
-Portage�ӥ�ɴĶ����������������򵯤������Ȥ�¿����
-.SH "�ѿ�"
+.SH "名前"
+libtool \- パッケージと一緒に配布されるlibtoolファイルを修正する
+.SH "説明"
+\fBlibtool\fR eclass はパッケージに同梱されているlibtoolファイルに
+パッチを当てる簡単な方法を提供する。しばしば、これらのファイルは時代遅れになって
+Portageビルド環境内部で不正処理を起こすことが多い。
+.SH "変数"
 .BR "ELT_APPLIED_PATCHES"
-�����ѿ��ˤϡ����������������ѥå��ζ�����ڤ�Υꥹ�Ȥ�
- \fBlibtool\fR eclass �ˤ�����ꤵ��롣
-.SH "�ؿ�"
+この変数には、修正が成功したパッチの空白区切りのリストが
+ \fBlibtool\fR eclass により設定される。
+.SH "関数"
 .TP
 .B "elibtoolize " "\fI[--portage] [--reverse-deps] [--patch-only] [--remove-internal-dep=DEP_TO_REMOVE] [--shallow]\fR"
-���δؿ��ϡ�\fIsrc_unpack\fR ���ƤӤ�����롣
-�����ʤ��ǸƤӤ����줿���ˤϡ����Ĥ��ä� ltmain.sh���Ƥ��Ф��ƥǥե���ȤΥѥå����åȤ����Ƥ�졢���� libtoolize ���¹Ԥ���롣
-�ǥե���ȤΥѥå����åȤϡ� \fB${PORTDIR}\fR/eclass/ELT-patches �ʲ���¸�ߤ��롣
+この関数は、\fIsrc_unpack\fR より呼びだされる。
+引数なしで呼びだされた場合には、見つかった ltmain.sh全てに対してデフォルトのパッチセットがあてられ、次に libtoolize が実行される。
+デフォルトのパッチセットは、 \fB${PORTDIR}\fR/eclass/ELT-patches 以下に存在する。
 .RS
 .TP
 .BR "--portage"
-Portage�ѥå��򤢤Ƥ�
+Portageパッチをあてる
 .TP
 .BR "--reverse-deps"
-��¸�ط�ȿž�ѥå��򤢤Ƥ롣�ܺ٤ϡ�
+依存関係反転パッチをあてる。詳細は、
 http://bugzilla.gnome.org/show_bug.cgi?id=75635
-�򻲾ȤΤ��ȡ�
+を参照のこと。
 .TP
 .BR "--patch-only"
-���ΰ�������ꤷ����硢�⤷������ѥå���1�Ĥ�̵�����(�Ĥޤꡢ�ºݤ˥ѥå������Ƥ��Ȥ�¹Ԥ��������ɤΥѥå���������ʤ��ä����)�ˤϡ�libtoolize �μ¹Ԥ�Ԥ�ʤ���
+この引数を指定した場合、もしあたるパッチが1つも無い場合(つまり、実際にパッチを当てる作業を実行したが、どのパッチも当たらなかった場合)には、libtoolize の実行を行わない。
 .TP
 .BR "--remove-internal-deps=DEP_TO_REMOVE"
-@REM_INT_DEP@ �� DEP_TO_REMOVE ���֤������롣
+@REM_INT_DEP@ を DEP_TO_REMOVE に置き換える。
 .TP
 .BR "--shallow"
-���Ĥ��ä�ltmain.sh���Ƥ��Ф��ƺƵ�Ū�˥ѥå��򤢤ƤƤ�������ˡ�
-\fB${S}\fR ��� ltmain.sh �����˥ѥå��򤢤Ƥ롣
+見つかったltmain.sh全てに対して再帰的にパッチをあてていく代わりに、
+\fB${S}\fR 内の ltmain.sh だけにパッチをあてる。
 .RE
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤäƤ���������
-.SH "����"
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行ってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/libtool.eclass
-.SH "����"
+.SH "著者"
 Aaron Walker <ka0ttic@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: libtool.eclass.5,v 1.3
+.SH "CVS ヘッダ"
+原文: libtool.eclass.5,v 1.3

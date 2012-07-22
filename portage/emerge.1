@@ -5,9 +5,9 @@
 .\" Updated to 1.71 on 15 Nov 2004
 .\"
 .TH "EMERGE" "1" "Jun 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-emerge \- Portage �����ƥ�ؤΥ��ޥ�ɥ饤�󥤥󥿥ե�����
-.SH "��"
+.SH "名前"
+emerge \- Portage システムへのコマンドラインインタフェース
+.SH "書式"
 .TP
 .BR emerge
 [\fIoptions\fR] [\fIaction\fR] [\fIebuild\fR | \fItbz2file\fR | \fIclass\fR | \fIdependency\fR] ...
@@ -20,534 +20,534 @@ emerge \- Portage �����ƥ�ؤΥ��ޥ�ɥ饤�󥤥󥿥ե�����
 .TP
 .BR emerge
 \fI\-\-version\fR | \fI\-V\fR
-.SH "����"
-\fBemerge\fR �� Portage �����ƥ�ؤΤ�äȤ⿮��Τ�����
-���ޥ�ɥ饤�󥤥󥿥ե������Ǥ��롣
-\fBemerge\fR �μ��פ����Ӥϥѥå������Υ��󥹥ȡ���Ǥ��ꡢ
-���󥹥ȡ��뤷�����ѥå������ΰ�¸�ط���ưŪ�˲�褹�뤳�Ȥ��Ǥ��롣
-����˲ä���\fBemerge\fR �� \fBPortage �ĥ꡼\fR �򥢥åץǡ��Ȥ���
-�������������줿�ѥå�������Ȥ���褦�ˤ�Ǥ��롣
-\fBemerge\fR �ϥ��󥹥ȡ��뤵��Ƥ���ѥå������򿷤�����꡼����
-�������뤳�Ȥ⹪�ߤˤ�äƤΤ��롣
-�������ѥå�������Х��ʥ�ѥå������ⰷ�����Ȥ��Ǥ���
-���ۤ��뤿��ΥХ��ʥ�ѥå�������������뤳�Ȥ�Ǥ��롣
-.SH "EBUILD��TBZ2�����饹�Ȱ�¸�ط�"
-\fBemerge\fR �ϼ�˥ѥå������Υ��󥹥ȡ���˻��Ѥ���롣
-�ѥå������򥤥󥹥ȡ��뤹��������äƤϡ�
-�礭��ʬ����4�Ĥ���ˡ�Τ����������֤��Ȥ��Ǥ���:
-\fIebuild\fR��\fItbz2 �ե�����\fR��\fI���饹\fR �⤷���� \fI��¸�ط�\fR��
+.SH "説明"
+\fBemerge\fR は Portage システムへのもっとも信頼のおける
+コマンドラインインタフェースである。
+\fBemerge\fR の主要な用途はパッケージのインストールであり、
+インストールしたいパッケージの依存関係を自動的に解決することができる。
+それに加え、\fBemerge\fR は \fBPortage ツリー\fR をアップデートし、
+新しく更新されたパッケージを使えるようにもできる。
+\fBemerge\fR はインストールされているパッケージを新しいリリースに
+更新することも巧みにやってのける。
+ソースパッケージもバイナリパッケージも扱うことができ、
+配布するためのバイナリパッケージを作成することもできる。
+.SH "EBUILD、TBZ2、クラスと依存関係"
+\fBemerge\fR は主にパッケージのインストールに使用される。
+パッケージをインストールするに当たっては、
+大きく分けて4つの方法のうちから選ぶことができる:
+\fIebuild\fR、\fItbz2 ファイル\fR、\fIクラス\fR もしくは \fI依存関係\fR。
 .LP 
 .TP
 .BR ebuild
-\fIebuild\fR �Ȥ��Ƥϡ������Ф�û���񤱤С��С������䥫�ƥ��꡼��
-������ Portage �ѥå������Υǥ��쥯�ȥ�̾�����Ȥ��� \fBportage\fR ��
-\fBpython\fR ����ꤹ�롣
-���ƥ��꡼��С�������ֹ�� \fBsys\-apps/portage\fR ��
-\fB=python\-2.2.1\-r2\fR �Τ褦���ղ�Ū�˻Ȥ����Ȥ��Ǥ��롣
-\fBemerge\fR �������Υ���å����̵�뤹��Τǡ�
-�ե�����̾���䴰��Ȥ����Ȥ�Ǥ��롣
-�ޤ���\fIebuild\fR �ˤ�
+\fIebuild\fR としては、いちばん短く書けば、バージョンやカテゴリーを
+除いた Portage パッケージのディレクトリ名、たとえば \fBportage\fR や
+\fBpython\fR を指定する。
+カテゴリーやバージョン番号を \fBsys\-apps/portage\fR や
+\fB=python\-2.2.1\-r2\fR のように付加的に使うことができる。
+\fBemerge\fR は末尾のスラッシュを無視するので、
+ファイル名の補完を使うこともできる。
+また、\fIebuild\fR には
 \fB/usr/portage/app\-admin/python/python\-2.2.1\-r2.ebuild\fR
-�Τ褦�ʼºݤΥե�����̾��Ȥ����Ȥ�Ǥ��롣
-�ٹ�:\fBemerge /path/to/ebuild\fR�μ�����������ư���ʤ��Τǡ�
-���ι�ʸ��ȤäƤϤʤ�ʤ���
+のような実際のファイル名を使うこともできる。
+警告:\fBemerge /path/to/ebuild\fRの実装は正しく動かないので、
+この構文を使ってはならない。
 .TP
-.BR tbz2 �ե�����
-\fItbz2 �ե�����\fR �� \fBebuild <�ѥå�����̾>\-<�С�������ֹ�>.ebuild
-package\fR �⤷���� \fBemerge \-\-buildpkg [���ƥ��꡼/]<�ѥå�����̾>\fR
-�⤷���� \fBquickpkg /var/db/pkg/<���ƥ��꡼>/<�ѥå�����̾>\fR
-�Ǻ������줿������ .tbz2 �ե�����Ǥʤ���Фʤ�ʤ���
+.BR tbz2 ファイル
+\fItbz2 ファイル\fR は \fBebuild <パッケージ名>\-<バージョン番号>.ebuild
+package\fR もしくは \fBemerge \-\-buildpkg [カテゴリー/]<パッケージ名>\fR
+もしくは \fBquickpkg /var/db/pkg/<カテゴリー>/<パッケージ名>\fR
+で作成された正しい .tbz2 ファイルでなければならない。
 .TP
-.BR ���饹
-�ѥå��������饹�ϵ���ʥѥå���������û����ɽ�魯�Τ������Ǥ��롣
-���ߤ�2�ĤΥ��饹�����ݡ��Ȥ���Ƥ���: \fBsystem\fR �� \fBworld\fR �Ǥ��롣
-\fBsystem\fR �ϥ����ƥब������ư��뤿���ɬ�פȻפ���ѥå�����
-����ؤ���\fBworld\fR �� \fBsystem\fR �ˤ���ѥå��������Ƥ˲ä���
-\fB/var/lib/portage/world\fR �˵󤲤��Ƥ���ѥå�������ޤࡣ
-[�ܤ�������ϸ�Ҥ��� \fB�ե�����\fR �򻲾ȡ�]  
-�����Υ��ޥ�ɤϰ���Ū�� \fB\-\-update\fR ���Ȥ߹�碌�ƻȤ���
+.BR クラス
+パッケージクラスは巨大なパッケージ群を短く書き表わすのに便利である。
+現在は2つのクラスがサポートされている: \fBsystem\fR と \fBworld\fR である。
+\fBsystem\fR はシステムが正しく動作するために必要と思われるパッケージ
+群を指し、\fBworld\fR は \fBsystem\fR にあるパッケージ全てに加え、
+\fB/var/lib/portage/world\fR に挙げられているパッケージを含む。
+[詳しい情報は後述する \fBファイル\fR を参照。]  
+これらのコマンドは一般的に \fB\-\-update\fR と組み合わせて使う。
 .TP
-.BR ��¸�ط�
-\fI��¸�ط�\fR �ϥ��󥹥ȡ��뤷�����ѥå������˰�¸����ѥå�������
-���Ҥ��Ƥ��롣\fI�����Ρ֥��ȥ�פˤĤ��ƾܤ�����portage(5)�򻲾ȡ�
-���Ȥ��С�\fB>=dev\-lang/python\-2.2.1\-r2\fR
-�� Python �� 2.2.1\-r2 �ʾ�κǿ��С������˥ޥå����롣
-Ʊ�ͤˡ�\fB<dev\-lang/python\-2.0\fR �� Python �� 2.0
-������κǿ��С������˥ޥå����롣
-¿���Υ�����Ǥϡ�<�פ��=�פȤ��ä�ʸ���򥨥������פ���ɬ�פ����뤳�Ȥ�
-���ա�����������������褹��ˤϡ�
-���󥰥륯������(')����֥륯������(")�� \fI��¸�ط�\fR ��Ϥࡣ
-.SH "���������"
+.BR 依存関係
+\fI依存関係\fR はインストールしたいパッケージに依存するパッケージを
+記述している。\fIこれらの「アトム」について詳しくはportage(5)を参照。
+たとえば、\fB>=dev\-lang/python\-2.2.1\-r2\fR
+は Python の 2.2.1\-r2 以上の最新バージョンにマッチする。
+同様に、\fB<dev\-lang/python\-2.0\fR は Python の 2.0
+より前の最新バージョンにマッチする。
+多くのシェルでは「<」や「=」といった文字をエスケープする必要があることに
+注意。エスケープ問題を解決するには、
+シングルクォート(')やダブルクォート(")で \fI依存関係\fR を囲む。
+.SH "アクション"
 .TP
-.BR ������������ʤ�
-��������󤬻��ꤵ��ʤ���С����ꤵ�줿�ѥå������ΰ�¸�ط����������ʤ��顢
-���Υѥå������򥤥󥹥ȡ��뤹�롢�Ȥ������������򤹤롣
-�����ˤ� \fIebuild\fR��\fItbz2\fR��\fI���饹\fR �⤷���� \fI��¸�ط�\fR
-��Ȥ뤳�Ȥ��Ǥ��롣
-\fBtbz2 �򥤥󥹥ȡ��뤷�����ʤ顢\-\-usepkg
-���ץ�����Ȥ�ɬ�פ����뤳�Ȥ�����\fR��
-�ǽ�Ū�˥ѥå������� \fBworld\fR �ե�������ɲä��졢
-�Τ��Τ��ι����оݤˤʤ롣
+.BR アクション指定なし
+アクションが指定されなければ、指定されたパッケージの依存関係を満たしながら、
+そのパッケージをインストールする、というアクションをする。
+引数には \fIebuild\fR、\fItbz2\fR、\fIクラス\fR もしくは \fI依存関係\fR
+をとることができる。
+\fBtbz2 をインストールしたいなら、\-\-usepkg
+オプションを使う必要があることに注意\fR。
+最終的にパッケージは \fBworld\fR ファイルに追加され、
+のちのちの更新対象になる。
 .TP
 .BR "\-\-clean " (\fB\-c\fR)
-�����ƥ�ε�ǽ�˱ƶ���Ϳ���ʤ��ѥå�������������
-�����ƥ�򤭤줤�ˤ��롣
-�����ˤ� \fIebuild\fR��\fI���饹\fR���⤷����\fI��¸�ط�\fR
-��Ȥ뤳�Ȥ��Ǥ��롣�㤨�С�\fBemerge \-\-clean binutils\fR 
-�Ȥ���� binutils �θŤ��С�������������
+システムの機能に影響を与えないパッケージを削除し、
+システムをきれいにする。
+引数には \fIebuild\fR、\fIクラス\fR、もしくは\fI依存関係\fR
+をとることができる。例えば、\fBemerge \-\-clean binutils\fR 
+とすると binutils の古いバージョンを削除し、
 \fBemerge clean net\-www/mozilla\-0.9.9\-r2\fR
-�Ȥ��������ΥС������� Mozilla �������롣
-����Ū�ˡ����Υ��ץ����ϻȤäƤ�����Ǥ��롣
-\-\-clean \fB�Ǥϥ����åȤ��ʤ��ѥå������Ϻ�����ʤ����Ȥ�����\fR��
+とすると特定のバージョンの Mozilla を削除する。
+一般的に、このオプションは使っても安全である。
+\-\-clean \fBではスロットがないパッケージは削除しないことに注意\fR。
 .TP
 .BR \-\-depclean
-�����ƥ�˥��󥹥ȡ��뤵��Ƥ���ѥå������ǡ�
-�Ϥä���Ȥ�����ͳ�ʤ��˥��󥹥ȡ��뤵��Ƥ���ѥå��������Ƥ�
-���ꤹ�롣
-\fBemerge\fR �� \fBsystem\fR �ѥå������Υꥹ�Ȥ� \fBworld\fR
-�ե����������å�����
-���󥹥ȡ��뤵��Ƥ���٤��ѥå������Υꥹ�Ȥ��������롣
-�����Ƥ��Υꥹ�Ȥȼºݥ��󥹥ȡ��뤵��Ƥ���ѥå������Υꥹ�Ȥ�
-��Ӥ����󤲤�줿�㤤�����פʥѥå������Ȥ��ƺ�����оݤȤʤ롣
-\fB�ٹ�: �ѥå�������������ȡ�������줿�ѥå�������
-��󥯤���ѥå�������ư���ʤ��ʤꡢ�饤�֥�꤬���Ĥ���ʤ�
-��ʸ�������ѥå��������Ф��ǽ�������롣\fR
-ʸ�������ѥå�������� emerge ����Ф�������ϲ�褵��롣
-\fBUSE �ե饰���ѹ������ \-\-depclean
-�ν��Ϥ��礭�ʱƶ���Ϳ���뤳�Ȥ����ա�\fR
+システムにインストールされているパッケージで、
+はっきりとした理由なしにインストールされているパッケージ全てを
+決定する。
+\fBemerge\fR は \fBsystem\fR パッケージのリストと \fBworld\fR
+ファイルをチェックし、
+インストールされているべきパッケージのリストを生成する。
+そしてそのリストと実際インストールされているパッケージのリストを
+比較し、挙げられた違いが不要なパッケージとして削除の対象となる。
+\fB警告: パッケージを削除すると、削除されたパッケージに
+リンクするパッケージが動かなくなり、ライブラリが見つからない
+と文句を言うパッケージが出る可能性がある。\fR
+文句を言うパッケージを再 emerge すればこの問題は解決される。
+\fBUSE フラグを変更すると \-\-depclean
+の出力に大きな影響を与えることに注意。\fR
 .TP
 .BR \-\-info
-����ϥХ���������뤿��ξ���Υꥹ�Ȥǡ�
-��ȯ�Ԥ����������������褹�뤿�����Ω�ġ�
-\fB�Х�����Ф��Ȥ��ˤϤ��ξ��������뤳�ȡ�\fR
-\fI\-\-verbose\fR ���ץ�����Ĥ���Ⱦܺ٤ʽ��Ϥ������롣
+これはバグ報告に入れるための情報のリストで、
+開発者が報告を受けた問題を解決するために役立つ。
+\fBバグ報告を出すときにはこの情報を入れること。\fR
+\fI\-\-verbose\fR オプションをつけると詳細な出力がえられる。
 .TP
 .BR "\-\-inject " (\fB\-i\fR)
-�ѥå�����������(inject)�������Υѥå������Ρ֥����֡פ��������ơ�
-Portage �ˤ��Υѥå����������󥹥ȡ��뤵�줿�Ȼפ碌�롣
-���줬�����ʤΤϡ����Ȥ��� XFree86 �ΥХ��ʥ�С������
-����ʥϡ��ɥ������Τ����ɬ�פ��ä��ꡢ�⤷����ñ��
-��ʬ�Ǻ�ä��ѥå�������Ȥ������ä��ꤹ��Ȥ��Ǥ��롣
-�������뤿��ˤϥ��ƥ��꡼�ȥѥå�����������ΥС�������
-����\fB���ʤ���Фʤ�ʤ�\fR��
-��:
+パッケージを注入(inject)し、そのパッケージの「スタブ」を挿入して、
+Portage にそのパッケージがインストールされたと思わせる。
+これが便利なのは、たとえば XFree86 のバイナリバージョンが
+深遠なハードウェアのために必要だったり、もしくは単に
+自分で作ったパッケージを使いたかったりするときである。
+注入するためにはカテゴリーとパッケージの特定のバージョンを
+指定\fBしなければならない\fR。
+例:
 \fBemerge \-\-inject sys\-kernel/gentoo\-sources\-2.4.19\fR
 .TP
 .BR \-\-metadata
-�̾��\fBemerge \-\-sync\fR��Ȥä�rsync���åץǡ��Ȥ�Ԥä����κǸ�˹Ԥ��롢
-�᥿����å���ե�����ν�����Ԥ������ν����ǡ�Portage���ѥå������ǡ�����
-���Ϥ�������õ���˻Ȥ�����å���ǡ����١�����������롣
+通常は\fBemerge \-\-sync\fRを使ってrsyncアップデートを行った時の最後に行われる、
+メタキャッシュファイルの処理を行う。この処理で、Portageがパッケージデータを
+解析する前の探索に使うキャッシュデータベースを作成する。
 .TP
 .BR "\-\-prune " (\fB\-P\fR)
-\fB�ٹ�: ���Υ��������Ͻ��פʥѥå��������������ǽ��������!\fR 
-�ޥå�����ѥå������κǿ��ǰʳ��ΥС����������ƺ�����褦�Ȥ��롣
-���Υ��ޥ�ɤϸ��ߤΤȤ���Ʊ���ѥå�������ʣ���ΥС�����󤬤����
-�������������뤳�Ȥ��Ǥ��ʤ��Τǡ����դ��뤳�ȡ�
-���Υ��������ϰ�¸�ط��Υ����å��򤷤ʤ��Τǡ�
-�����ƥब����˲�Ư���뤿���ɬ�פʥѥå������ޤǺ�������ͤʤ���
-\fB��ʬ���ʤˤ򤷤Ƥ���Τ�������ʬ���äƤ��ʤ���С�
-���Υ��������������\fR \-\-clean \fB��Ȥ�����\fR��
-���Υ��������ΰ����� \fIebuild\fR��\fI���饹\fR�ޤ���\fI��¸�ط�\fR
-�Ǥ��롣\-\- ������Ͼ嵭 \fB\-\-clean\fR �򻲾ȡ�
-�������ա�
+\fB警告: このアクションは重要なパッケージを削除する可能性がある!\fR 
+マッチするパッケージの最新版以外のバージョンを全て削除しようとする。
+このコマンドは現在のところ同じパッケージに複数のバージョンがあると
+正しく処理することができないので、注意すること！
+このアクションは依存関係のチェックをしないので、
+システムが正常に稼働するために必要なパッケージまで削除しかねない。
+\fB自分がなにをしているのか本当に分かっていなければ、
+このアクションの代わりに\fR \-\-clean \fBを使うこと\fR。
+このアクションの引数は \fIebuild\fR、\fIクラス\fRまたは\fI依存関係\fR
+である。\-\- 具体例は上記 \fB\-\-clean\fR を参照。
+厳重注意！
 .TP
 .BR \-\-regen
-Portage �� Portage �ĥ꡼�����äƤ����� ebuild �ΰ�¸�ط�����å����
-�����å������������롣����å���ϸ����Ȱ�¸�ط��ĥ꡼�ι��ۤ�®�ٸ���
-�˻Ȥ��롣rsync �ϥ�����¦�Υ���å����Ȥäƥ���å���򹹿�����Τǡ�
-rsync �桼���ˤϤ��Υ��ޥ�ɤ�����ʤ�����rsync �桼���פ�¾�Υ桼����
-�֤ΰ㤤���Τ�ʤ��ʤ顢���ʤ��ϡ�rsync �桼���פ����� :)  
-rsync �桼���ϥ���å������������뤿��ˤ�ñ�� \fBemerge \-\-sync\fR 
-��¹Ԥ�������Ǥ褤��
-Portage���������줿���ȡ��̾�Portage��sync���κǸ�˹Ԥ��褦�ˡ�
-rsync�桼����\fBemerge \-\-metadata\fR��¹Ԥ��ƥ���å����ƹ��ۤ���Τ�
-���ؤ��⤷��ʤ���
+Portage に Portage ツリーに入っている全 ebuild の依存関係キャッシュを
+チェックし更新させる。キャッシュは検索と依存関係ツリーの構築の速度向上
+に使われる。rsync はサーバ側のキャッシュを使ってキャッシュを更新するので、
+rsync ユーザにはこのコマンドは薦めない。「rsync ユーザ」と他のユーザの
+間の違いを知らないなら、あなたは「rsync ユーザ」だろう :)  
+rsync ユーザはキャッシュを再生成するためには単に \fBemerge \-\-sync\fR 
+を実行するだけでよい。
+Portageが更新されたあと、通常Portageがsync操作の最後に行うように、
+rsyncユーザは\fBemerge \-\-metadata\fRを実行してキャッシュを再構築するのが
+簡便かもしれない。
 .TP
 .BR \-\-search (\fB\-s\fR)
-Portage �ĥ꡼�������ꤵ�줿ʸ����ǥޥå������Τ򸡺����롣
-����ʸ���������ɽ���Ǥ��롣���Ȥ��С�
+Portage ツリーの中を指定された文字列でマッチするものを検索する。
+検索文字列は正規表現である。たとえば、
 \fBemerge \-\-search "^kde"\fR
-�ϡ�kde�פǻϤޤ�ѥå��������Ƥ򸡺�����
+は「kde」で始まるパッケージ全てを検索し、
 \fBemerge \-\-search "gcc$"\fR
-�ϡ�gcc�פǽ����ѥå��������Ƥ򸡺�����
+は「gcc」で終わるパッケージ全てを検索し、
 \fBemerge \-\-search "office"\fR
-�ϡ�office�פȤ���ñ���ޤ�ѥå��������Ƥ򸡺����롣
-�ѥå�����������ʸ�⸡���������ʤ顢
-\fB\-\-searchdesc\fR ���ץ�����Ȥ���
+は「office」という単語を含むパッケージ全てを検索する。
+パッケージの説明文も検索したいなら、
+\fB\-\-searchdesc\fR オプションを使う。
 .TP
 .BR \-\-sync
-rsync.gentoo.org �ߥ顼�Τ����줫�� Portage �ĥ꡼�ι�����Ϥ�롣
-\fBPortage �ĥ꡼���Ф��ƹԤä��ѹ������ƾõ��뤳�Ȥ�����\fR��
-�ü�ʴĶ�������ơ����Υ��������Ϲ����� \fBrsync\fR ���Ѥ��롣
-�ѹ��κ�����ɤ���ˡ�ˤĤ��Ƥϡ�make.conf �� PORTDIR_OVERLAY
-�ε��Ҥ򻲾ȡ�
+rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。
+\fBPortage ツリーに対して行った変更は全て消去されることに注意\fR。
+特殊な環境を除いて、このアクションは更新に \fBrsync\fR を用いる。
+変更の削除を防ぐ方法については、make.conf の PORTDIR_OVERLAY
+の記述を参照。
 .TP
 .BR \-\-unmerge (\fB\-C\fR)
-\fB�ٹ�: ���Υ��������Ͻ��פʥѥå��������������ǽ��������!\fR
-�ޥå�����ѥå��������Ƥ������롣
-���Υ��������ϰ�¸�ط��Υ����å��򤷤ʤ��Τǡ�
-�����ƥब����˲�Ư���뤿���ɬ�פʥѥå������ޤǺ�������ͤʤ���
-���Υ��������ΰ����� \fIebuild\fR��\fI���饹\fR�ޤ���\fI��¸�ط�\fR
-�Ǥ��롣\-\- ������Ͼ嵭 \fB\-\-clean\fR �򻲾ȡ�
-.SH "���ץ����"
+\fB警告: このアクションは重要なパッケージを削除する可能性がある!\fR
+マッチするパッケージ全てを削除する。
+このアクションは依存関係のチェックをしないので、
+システムが正常に稼働するために必要なパッケージまで削除しかねない。
+このアクションの引数は \fIebuild\fR、\fIクラス\fRまたは\fI依存関係\fR
+である。\-\- 具体例は上記 \fB\-\-clean\fR を参照。
+.SH "オプション"
 .TP
 .BR "\-\-ask " (\fB\-a\fR)
-�ޡ�����¹Ԥ������ˡ��ɤ� ebuild �� tbz2
-�ե����뤬���󥹥ȡ��뤵���Τ���\fB\-\-pretend\fR
-��¹Ԥ���Τ�Ʊ��������ɽ���������ȡ��ޡ������뤫��ߤ��뤫�Ҥͤ롣
-\fB\-\-ask\fR ��Ȥ��Τϡ�\fB\-\-pretend\fR ��ȤäƳ�ǧ�����Τ�
-\fB\-\-pretend\fR �ʤ���Ʊ�����ޥ�ɤ�¹Ԥ���Τ���Ψ���褤��
-��¸�ط���׻�����ɬ�פ����٤����ǺѤफ��Ǥ��롣
+マージを実行する前に、どの ebuild と tbz2
+ファイルがインストールされるのか、\fB\-\-pretend\fR
+を実行するのと同じ形式で表示したあと、マージするか中止するか尋ねる。
+\fB\-\-ask\fR を使うのは、\fB\-\-pretend\fR を使って確認したのち
+\fB\-\-pretend\fR なしで同じコマンドを実行するのより効率がよい。
+依存関係を計算する必要が一度だけで済むからである。
 .TP
 .BR "\-\-buildpkg " (\fB\-b\fR)
-emerge �κݥѥå�������ºݤ˥��󥹥ȡ��뤹�뤳�Ȥ˲ä���
-����������� ebuild �ˤĤ��ƥХ��ʥ�ѥå�������ӥ�ɤ��롣
-���ƥʡ��ˤ������Ǥ��뤷��ʣ���� Gentoo Linux �����ƥ��
-�������Ƥ��Ƥ������Ǥ���(�ӥ�ɰ�ȯ�ɤ��Ǥ� emerge tbz2)��
-�ѥå������� \fI${PKGDIR}\fR/All �ǥ��쥯�ȥ�˺�������롣
-���Ǥ˥��󥹥ȡ��뤵��Ƥ���ѥå��������Ф��Ƥϡ�
-��Ư��Υե����륷���ƥफ�� tbz2 ��������� \fBquickpkg\fR
-���Ȥ��롣
+emerge の際パッケージを実際にインストールすることに加え、
+処理される全 ebuild についてバイナリパッケージもビルドする。
+メンテナーにも便利であるし、複数の Gentoo Linux システムを
+管理していても便利である(ビルド一発どこでも emerge tbz2)。
+パッケージは \fI${PKGDIR}\fR/All ディレクトリに作成される。
+すでにインストールされているパッケージに対しては、
+稼働中のファイルシステムから tbz2 を作成する \fBquickpkg\fR
+が使える。
 .TP
 .BR "\-\-buildpkgonly " (\fB\-B\fR)
-emerge �κݥѥå�������ºݤ˥��󥹥ȡ��뤹�뤳�Ȥ˲ä���
-����������� ebuild �ˤĤ��ƥХ��ʥ�ѥå�������ӥ�ɤ��롣
-���Υ��ץ����ˤϡ��ӥ�ɻ�������¸�ط��������˥����ƥ��
-emerge ����Ƥ��ʤ���Фʤ�ʤ��Ȥ�����꤬���롣
+emerge の際パッケージを実際にインストールすることに加え、
+処理される全 ebuild についてバイナリパッケージもビルドする。
+このオプションには、ビルド時の全依存関係が事前にシステムに
+emerge されていなければならないという落し穴がある。
 .TP
 .BR "\-\-changelog " (\fB\-l\fR)
-\fB\-\-pretend\fR �����������Ȥ߹�碌�ƻȤ���
-���Υ��ץ�����Ȥ��ȥ��åץ��졼�ɤ�������ѥå�������
-ChangeLog ����ȥ꡼��ɽ������롣
+\fB\-\-pretend\fR アクションと組み合わせて使う。
+このオプションを使うとアップグレードされる全パッケージの
+ChangeLog エントリーが表示される。
 .TP
 .BR "\-\-columns"
-\fI\-\-pretend\fR �Ȥ��ä���˻Ȥ������åȡ��ڡ����Ȥ��䤹��
-�褦���������줿�ѥå�����̾�����С�����󡢵�С������ɽ������롣
+\fI\-\-pretend\fR といっしょに使い、カット＆ペーストしやすい
+ように整形されたパッケージ名、新バージョン、旧バージョンが表示される。
 .TP
 .BR "\-\-debug " (\fB\-d\fR)
-emerge ���ޥ�ɤ�ǥХå��⡼�ɤ�ư������
-���Υ⡼�ɤǤ� bash �Υӥ�ɴĶ��� -x ���ץ����Ĥ���ư���
-ɸ����Ϥ˾ܺ٤ʥǥХå��������Ϥ��롣
-\-\-debug �� bash �ι�ʸ���顼��õ���������Ω�ġ�
+emerge コマンドをデバッグモードで動かす。
+このモードでは bash のビルド環境は -x オプションつきで動作し、
+標準出力に詳細なデバッグ情報を出力する。
+\-\-debug は bash の構文エラーを探すために役立つ。
 .TP
 .BR "\-\-deep " (\fB\-D\fR)
-\fB\-\-update\fR ���Ȥ߹�碌�ƻȤ���\fBemerge\fR �˥ѥå�������
-ľ�ܤΰ�¸�ط�����������å�����ΤǤϤʤ����ѥå������ΰ�¸�ĥ꡼
-���Τ��θ�������褦�������롣
-���Ȥ��С����Υե饰��Ȥ��ȥѥå������ΰ�¸�ط��Ȥ���ľ��
-�󤲤��ƤϤ��ʤ��饤�֥��Υ��åץǡ��Ȥ�ª���뤳�Ȥ��Ǥ��롣
+\fB\-\-update\fR と組み合わせて使い、\fBemerge\fR にパッケージの
+直接の依存関係だけをチェックするのではなく、パッケージの依存ツリー
+全体を考慮に入れるよう強制する。
+たとえば、このフラグを使うとパッケージの依存関係として直接
+挙げられてはいないライブラリのアップデートを捉えることができる。
 .TP
 .BR "\-\-emptytree " (\fB\-e\fR)
-����Ū�˥��󥹥ȡ��뤵�줿�ѥå������Υĥ꡼�� libc �����ޤ�褦��
-���ä��롣���Υ��ץ����� \fB\-\-pretend\fR �Ȥ��ä���˻Ȥ��ȤȤƤ�����
-�Ǥ��롣���Υ��ץ�����Ȥ��ȡ���ȯ�Ԥϥѥå�����������¸�ط��Υĥ꡼
-�γ��Ѥ��Τ뤳�Ȥ��Ǥ��뤷���ǿ��Υ饤�֥���Ȥä����ĥ꡼��ƥӥ��
-���뤳�Ȥ�Ǥ��롣
+仮想的にインストールされたパッケージのツリーが libc だけ含むように
+手を加える。このオプションは \fB\-\-pretend\fR といっしょに使うととても便利
+である。このオプションを使うと、開発者はパッケージの全依存関係のツリー
+の概観を知ることができるし、最新のライブラリを使って全ツリーを再ビルド
+することもできる。
 .TP
 .BR "\-\-fetchonly " (\fB\-f\fR)
-�ѥå�������ӥ�ɤ�����ñ�����ѥå������� fetch ������Ԥ�
-(�ᥤ��ѥå������˲ä��ư�¸����ѥå���������)��
+パッケージをビルドせず、単に全パッケージの fetch だけを行う
+(メインパッケージに加えて依存するパッケージ全部)。
 .TP
 .BR "\-\-fetch\-all\-uri " (\fB\-f\fR)
-�ѥå�������ӥ�ɤ�����ñ�����ѥå������� fetch ������Ԥ�
-(�ᥤ��ѥå������˲ä��ư�¸����ѥå���������)��
-ɬ�פ����ǽ���Τ���ե��������Ƥ�������롣
+パッケージをビルドせず、単に全パッケージの fetch だけを行う
+(メインパッケージに加えて依存するパッケージ全部)。
+必要ある可能性のあるファイル全てを取得する。
 .TP 
 .BR "\-\-getbinpkg " (\fB\-g\fR)
-\fIPORTAGE_BINHOST\fR (\fBmake.conf\fR(5)����)�����ꤵ�줿�����С��Ⱦ����Ѥ���Portage�����Ĥ����ƥХ��ʥ�ѥå������ξ�������������ɤ��롣Portage�Ϥ��ξ����Ȥäư�¸�ط��ꥹ�Ȥ��ۤ��롣���Υ��ץ�����\fB\-k\fR��ްդ��롣(�Х��ʥ�ѥå����������ǥ��󥹥ȡ��뤹�����\fB\-gK\fR���Ѥ��롣)
+\fIPORTAGE_BINHOST\fR (\fBmake.conf\fR(5)参照)で設定されたサーバーと場所を用い、Portageが見つけた各バイナリパッケージの情報をダウンロードする。Portageはこの情報を使って依存関係リストを構築する。このオプションは\fB\-k\fRを含意する。(バイナリパッケージだけでインストールする場合は\fB\-gK\fRを用いる。)
 .TP
 .BR "\-\-getbinpkgonly " (\fB\-G\fR)
-��Ǹ����褦�ˡ����Υ��ץ�����\fB\-g\fR�������Ǥ��뤬����������η׻����ξ��������Ѥ��ʤ������ۤʤ롣��������Υѥå������ǥ��쥯�ȥ�˥ѥå�������¸�ߤ��뤫�ɤ���Ĵ�٤뤳�Ȥʤ��������ΥХ��ʥ꤬��⡼�ȥ����С��������������ɤ���롣
+上で見たように、このオプションは\fB\-g\fRと等価であるが、ローカルの計算機の情報を一切用いない点が異なる。ローカルのパッケージディレクトリにパッケージが存在するかどうか調べることなく、全部のバイナリがリモートサーバーからダウンロードされる。
 .TP
 .BR "\-\-help " (\fB\-h\fR)
-emerge �Υإ�פ�ɽ�����롣
-��˵󤲤��ɲð�����ɤ줫�ä���ȡ�
-���ι��ܤ��ò������إ�פ��󼨤��롣
-\fBemerge\fR �����Υإ��ʸ��Ϥ��� man �ڡ������⹹�����٤��⤤�Τǡ�
-���� man �ڡ�����������Ω���ʤ����꤬����ʤ顢
-������Υإ�פ�Ĵ�٤뤳�ȡ�
+emerge のヘルプを表示する。
+上に挙げた追加引数をどれか加えると、
+その項目に特化したヘルプを提示する。
+\fBemerge\fR 内部のヘルプ文書はこの man ページよりも更新頻度が高いので、
+この man ページが解決に役立たない問題があるなら、
+こちらのヘルプを調べること。
 .TP
 .BR "\-\-newuse"
-Portage�˥���ѥ��뤷������USE�ե饰���Ѳ������ѥå������򹹿��оݤ˴ޤ��褦�ˤ��롣
-�ѥå�����������ѥ��뤵��Ƥ����Ѳ�����USE�ե饰�ˤϥ����ƥꥹ���ޡ������Ĥ��Ƥ��롣
+PortageにコンパイルしたあとUSEフラグが変化したパッケージを更新対象に含めるようにする。
+パッケージがコンパイルされてから変化したUSEフラグにはアステリスクマークがついている。
 .TP
 .BR "\-\-noconfmem "
-Portage �� CONFIG_PROTECT �Υǥ��쥯�ȥ��������ե����뤬���Ǥ�
-�ޡ�������Ƥ��뤳�Ȥ򼨤��ޡ�����Ͽ��̵�뤵���롣
-Portage ���̾� CONFIG_PROTECT �Υǥ��쥯�ȥ�ˤ���ե������
-1����������ޡ����������桼����Ʊ������ե�����򲿲��ޡ���
-���뤳�Ȥ��ɤ��Ǥ��롣���Υե饰������ե�������˥ޡ���
-�����롣
+Portage に CONFIG_PROTECT のディレクトリ内の設定ファイルがすでに
+マージされていることを示すマージ記録を無視させる。
+Portage は通常 CONFIG_PROTECT のディレクトリにあるファイルは
+1回だけしかマージせず、ユーザが同じ設定ファイルを何回もマージ
+することを防いでいる。このフラグは設定ファイルを常にマージ
+させる。
 .TP
 .BR "\-\-nodeps " (\fB-O\fR)
-��¸����ѥå��������������󥹥ȡ��뤻�������ꤵ�줿�ѥå�����������
-���󥹥ȡ��뤹�롣��¸�ط�����������Ƥ��ʤ���硢�ӥ�ɤ����Ԥ���
-��ǽ�������뤳�Ȥ����ա�
+依存するパッケージを全くインストールせず、指定されたパッケージだけを
+インストールする。依存関係が満たされていない場合、ビルドが失敗する
+可能性があることに注意。
 .TP
 .BR "\-\-noreplace " (\fB\-n\fR)
-���ޥ�ɥ饤��ǻ��ꤵ�줿�ѥå������Ǥ��Ǥ˥��󥹥ȡ��뤵��Ƥ����Τ�
-���Ф������Υ��ץ�������ꤷ�ʤ���С��ѥå�������ebuild��������
-��¸�ѥå������򥳥ޥ�ɥ饤��ǻ��ꤹ��ȡ����Υѥå����������Ǥ�
-���󥹥ȡ��뤵��Ƥ����Ȥ��Ƥ⡢Portage �Ϥ��Υѥå�������ƥ��󥹥ȡ���
-���롣�ǥե���ȤǤ� Portage �ϰ�¸�ѥå������Ϻƥ��󥹥ȡ��뤷�ʤ�����
-�����ա�
+コマンドラインで指定されたパッケージですでにインストールされているものを
+飛ばす。このオプションを指定しなければ、パッケージ、ebuild、そして
+依存パッケージをコマンドラインで指定すると、そのパッケージがすでに
+インストールされていたとしても、Portage はそのパッケージを再インストール
+する。デフォルトでは Portage は依存パッケージは再インストールしないこと
+に注意。
 .TP
 .BR "\-\-nospinner"
-���Υ��å����ǤϥС��β�ž��̵���ˤ��롣
-ü���ǥХ����� TTY ����Ƚ�Ǥ��줿�Ȥ��ˤϥС��β�ž�������ƥ��֤ˤʤ롣
-���Υե饰�Ϥ���˴ط��ʤ��С��β�ž��̵���ˤ��롣
+そのセッションではバーの回転を無効にする。
+端末デバイスが TTY だと判断されたときにはバーの回転がアクティブになる。
+このフラグはそれに関係なくバーの回転を無効にする。
 .TP
 .BR "\-\-oneshot"
-�̾�ɤ��� emerge ���뤬�����奢�åץǡ��Ȥ��뤿��� world
-�ץ��ե�����ˤϥѥå��������ɲä��ʤ���
+通常どおり emerge するが、今後アップデートするための world
+プロフィールにはパッケージを追加しない。
 .TP
 .BR "\-\-onlydeps " (\fB\-o\fR)
-���ꤵ�줿�ѥå��������ȤǤϤʤ���
-���Υѥå������˰�¸����ѥå������򥤥󥹥ȡ���
-(�⤷���ϥ��󥹥ȡ���Τդ��) ���롣
+指定されたパッケージ自身ではなく、
+そのパッケージに依存するパッケージをインストール
+(もしくはインストールのふりを) する。
 .TP
 .BR "\-\-pretend " (\fB\-p\fR)
-�ºݤ˥��󥹥ȡ����Ԥ鷺��\fB\-\-pretend\fR �����ꤵ��ʤ��ä��Ȥ����
-�ɤ�ʥѥå����������󥹥ȡ��뤵���Τ���ñ��ɽ�����롣
-�褯�Τ�ʤ��ѥå������򥤥󥹥ȡ��뤹�����ˤ� \fB\-\-pretend\fR
-��Ȥ����Ȥ򶯤�����롣
-���Ϥϡ�
+実際にインストールを行わず、\fB\-\-pretend\fR が指定されなかったとすれば
+どんなパッケージがインストールされるのかを単に表示する。
+よく知らないパッケージをインストールする前には \fB\-\-pretend\fR
+を使うことを強く勧める。
+出力は、
 .br
 
 .br
-\fIN\fR = ������(�ޤ����󥹥ȡ��뤵��Ƥ��ʤ�)
+\fIN\fR = 新規、(まだインストールされていない)
 .br
-\fIS\fR = ������SLOT���󥹥ȡ���(��Ω����С������)
+\fIS\fR = 新規、SLOTインストール(並立するバージョン)
 .br
-\fIU\fR = ������(�С�������ѹ�)
+\fIU\fR = 更新、(バージョン変更)
 .br
-\fID\fR = �����󥰥졼�ɡ�(�ǿ��С�������Ť���Τ������)
+\fID\fR = ダウングレード、(最新バージョンよ古いものを入れる)
 .br
-\fIR\fR = ���촹����(Ʊ���С���������٥��󥹥ȡ���)
+\fIR\fR = 入れ換え、(同じバージョンを再度インストール)
 .br
-\fIF\fR = ���¤Ĥ��ѥå������� fetch��(��ư�ǥ����������)
+\fIF\fR = 制限つきパッケージの fetch、(手動でダウンロード)
 .br
-\fIf\fR = ���¤Ĥ��ѥå������� fetch��(���Ǥ˥���������ɺ�)
+\fIf\fR = 制限つきパッケージの fetch、(すでにダウンロード済)
 .br
-\fIB\fR = ���󥹥ȡ���Ѥߥѥå������ˤ�äƥ֥��å���
-�ȤʤäƤ��롣
+\fIB\fR = インストール済みパッケージによってブロック、
+となっている。
 .TP
 .BR "\-\-quiet " (\fB-q\fR)
-��̤Ϥ��ޤ��ޤ���������Ū�˸��� Portage ��ɽ��������Ϥ򸺤餷����
-�Ž̤����ꤹ�롣
+結果はさまざまだが、全体的に見て Portage が表示する出力を減らしたり
+凝縮したりする。
 .TP
 .BR "\-\-resume"
-�Ǹ�Υ��󥹥ȡ�������Ƴ����롣�������ϼ��Ԥ����饨�顼��
-�֤��������Ȥ������Ȥ����ա�Portage �ˤʤˤ⤹�뤳�Ȥ��ʤ���С�
-��å�����������������ͤ��֤��ƽ�λ���롣
+最後のインストール操作を再開する。この操作は失敗したらエラーを
+返すだけだということに注意。Portage になにもすることがなければ、
+メッセージと成功の戻り値を返して終了する。
 .TP
 .BR "\-\-searchdesc " (\fB\-S\fR)
-����ʸ���󤬥ѥå�����̾�˲ä��������ե�����ɤˤ�ޥå����롣
-����������ɽ���ǥޥå����뤳�Ȥ� \fB����\fR��
+検索文字列がパッケージ名に加え、説明フィールドにもマッチする。
+説明も正規表現でマッチすることに \fB注意\fR。
 .TP
 .BR "\-\-skipfirst"
-���Υ��������� \fB\-\-resume\fR �Ȥ��ä���˻Ȥä��Ȥ�����ͭ���Ǥ��롣
-�����Ȥ��ȺƳ��ꥹ�Ȥˤ���ǽ�Υѥå�������������Τǡ�
-������ǽ�ʥ��顼�䤢�ޤ���פǤʤ����顼�����äƤ⥤�󥹥ȡ���
-���³���뤳�Ȥ��Ǥ��롣
-���Υ��������ϥѥå����������Ф��Ƥ��¸�ط�������ʤ����
-�ˤ����Ȥ��٤��Ǥ��롣
+このアクションは \fB\-\-resume\fR といっしょに使ったときだけ有効である。
+これを使うと再開リストにある最初のパッケージを取り除くので、
+修正不能なエラーやあまり重要でないエラーがあってもインストール
+を継続することができる。
+このアクションはパッケージを飛ばしても依存関係を壊さない場合
+にだけ使うべきである。
 .TP
 .BR "\-\-tree " (\fB\-t\fR)
-���ꤷ���������åȤˤĤ��Ƥΰ�¸�ط��Υĥ꡼�򥤥�ǥ�Ȥ��Ѥ���ɽ�����롣
-�ºݤΤȤ�����"\fB\-\-emptytree\fR"��"\fB\-\-update\fR"�⤷����"\fB\-\-deep\fR"
-���Ȥ߹�碌�ƻȤä��Ȥ����������Ǥ��롣
+指定したターゲットについての依存関係のツリーをインデントを用いて表示する。
+実際のところは"\fB\-\-emptytree\fR"、"\fB\-\-update\fR"もしくは"\fB\-\-deep\fR"
+と組み合わせて使ったときだけ便利である。
 .TP
 .BR "\-\-update " (\fB\-u\fR)
-�ѥå����������Ѳ�ǽ�ʺǿ��С������˥��åץǡ��Ȥ��롣
-�ƥ��Ȥ䳫ȯ�Τ���˥ޥ�������Ƥ����ꤹ���̡���äȤ�С�������ֹ椬�⤤��Τ�����оݤȤʤ�櫓�ǤϤʤ���
-���Υ��ץ�����Ȥ��Ȱտޤ��ʤ�ľ�ܤΰ�¸�ѥå���������������뤳�Ȥ⤢�롣
-����Ū�ˡ����Υ��ץ����� world �⤷���� system �������åȤȤΤ��Ȥ߹�碌�ƻȤ����ȡ�
+パッケージを利用可能な最新バージョンにアップデートする。
+テストや開発のためにマスクされていたりする結果、もっともバージョン番号が高いものが常に対象となるわけではない。
+このオプションを使うと意図しない直接の依存パッケージが更新されることもある。
+一般的に、このオプションは world もしくは system ターゲットとのみ組み合わせて使うこと。
 .TP
 .BR "\-\-upgradeonly " (\fB-U\fR)
-�ѥå������򥢥åץǡ��Ȥ��뤬�����󥹥ȡ��뤵��Ƥ���
-�ѥå������ΥС������򲼤���褦�ʥ��åץǡ��ȤϹԤ�ʤ���
-\fBSLOT\fR �ϴ���Ū�ʥ�٥���оݤ˴ޤޤ�롣
+パッケージをアップデートするが、インストールされている
+パッケージのバージョンを下げるようなアップデートは行わない。
+\fBSLOT\fR は基本的なレベルで対象に含まれる。
 .br
-���Υ��ץ�������侩�Ǻ���Ȥ��٤��ǤϤʤ���
-����������/etc/portage/package.*�ե������ȤäƤۤ�����
+このオプションは非推奨で今後使うべきではない。
+今後は代わりに/etc/portage/package.*ファイルを使ってほしい。
 .TP
 .BR "\-\-usepkg " (\fB\-k\fR) 
-�Х��ʥ�ѥå��������Ȥ���ΤǤ���С�emerge �˥Х��ʥ�ѥå�����
-($PKGDIR �����ɤ߼��)��Ȥ������֤ο�������ѥ�����򤱤뤳�Ȥ��Ǥ��롣
-���Υ��ץ����� CD ���󥹥ȡ���ΤȤ������Ǥ��롣
-export PKGDIR=/mnt/cdrom/packages �������Υ��ץ�����Ȥ����Ȥǡ�
-emerge �κݰ�¸�ط�������������� CD ����Х��ʥ�ѥå�������ְ���ĥ�äơ�
-���뤳�Ȥ��Ǥ��롣
+バイナリパッケージが使えるのであれば、emerge にバイナリパッケージ
+($PKGDIR から読み取る)を使い、時間の食うコンパイルを避けることができる。
+このオプションは CD インストールのとき便利である。
+export PKGDIR=/mnt/cdrom/packages し、このオプションを使うことで、
+emerge の際依存関係を満たすために CD からバイナリパッケージを「引っ張って」
+くることができる。
 .TP
 .BR "\-\-verbose " (\fB\-v\fR)
-�ܺ٥⡼�ɤ� emerge ��ư������
-���ߤΤȤ��������Υե饰�� emerge �κ� GNU info �˥��顼�������
-���Ϥ����롣
+詳細モードで emerge を動かす。
+現在のところ、このフラグは emerge の際 GNU info にエラーがあれば
+出力させる。
 .TP
 .BR "\-\-version " (\fB\-V\fR)
-\fBemerge\fR �ΥС�������ֹ��ɽ�����롣
-¾�Υ��ץ������Ȥ߹�碌�ƻȤ����ȤϤǤ��ʤ���
-.SH "�Ķ����ץ����"
+\fBemerge\fR のバージョン番号を表示する。
+他のオプションと組み合わせて使うことはできない。
+.SH "環境オプション"
 .TP
 \fBROOT\fR = \fI[path]\fR
-�ѥå������� ebuild ��ޡ������뤿��˻Ȥ��륿�����åȤȤʤ�
-�롼�ȥե����륷���ƥ����ꤹ��ˤϡ�\fBROOT\fR ��Ȥ���
-�ǥե���Ȥ� / �Ǥ��롣
-.SH "����"
-\fBemerge\fR �� \fB\-\-pretend\fR �� \fB\-\-verbose\fR
-�ե饰���Ȥ߹�碌�ƻȤ���硢
-���ν��Ϥϰ츫���������ǤϤ���ä����򤷤��������⤷��ʤ���
-���Υ��������ǤϤ����ǻȤ����ά���ˤĤ����������롣
+パッケージや ebuild をマージするために使われるターゲットとなる
+ルートファイルシステムを指定するには、\fBROOT\fR を使う。
+デフォルトは / である。
+.SH "出力"
+\fBemerge\fR に \fB\-\-pretend\fR と \fB\-\-verbose\fR
+フラグを組み合わせて使う場合、
+その出力は一見しただけではちょっと理解しがたいかもしれない。
+このセクションではここで使われる省略形について説明する。
 .TP
 .B [blocks B     ] app\-text/dos2unix (from pkg app\-text/hd2u\-0.8.0)
-dos2unix �� hd2u �����󥹥ȡ��뤵���Τ�֥��å����Ƥ��롣
-�֥��å�����ѥå������Ȥ����Τϡ�2�ĤΥѥå��������ߤ��Υե������
-��񤭤��Ƥ��ޤ������⤷���ϥ����ƥ�����ʤ�餫�η��ǲ����Ƥ��ޤ�
-�ѥå������Ȥ�����̣�Ǥ��롣�������ʤ��顢�֥��å�����ѥå�������
-�̾�Ʊ����ǽ���󶡤���Τǡ�����Ʊ���˥��󥹥ȡ��뤹��ɬ�פϤʤ���
+dos2unix は hd2u がインストールされるのをブロックしている。
+ブロックするパッケージというのは、2つのパッケージが互いのファイルを
+上書きしてしまうか、もしくはシステムの中をなんらかの形で壊してしまう
+パッケージという意味である。しかしながら、ブロックするパッケージは
+通常同じ機能を提供するので、普通同時にインストールする必要はない。
 .TP
 .B [ebuild  N    ] app\-games/qstat\-25c
-qstat �Ͽ������󥹥ȡ���ѥå������Ǥ��ꡢ���ƥ��󥹥ȡ��뤵��롣
+qstat は新規インストールパッケージであり、初めてインストールされる。
 .TP
 .B [ebuild  NS   ] dev-libs/glib-2.4.7
-����С������� glib �򤹤Ǥ˥��󥹥ȡ��뤷�Ƥ��뤬��
-�㤦 SLOT �Ρֿ������ץС�����󤬥��󥹥ȡ����ǽ�Ǥ��롣
+あるバージョンの glib をすでにインストールしているが、
+違う SLOT の「新しい」バージョンがインストール可能である。
 .TP
 .B [ebuild   R   ] sys\-apps/sed\-4.0.5
-sed 4.0.5 �Ϥ��Ǥ˥��󥹥ȡ��뤵��Ƥ��뤬��
-emerge ��¹Ԥ����� Portage �ϻ��ꤵ�줿�ѥå�������ƥ��󥹥ȡ��뤹��
-(���ξ��� sed �Ǥ���)��
+sed 4.0.5 はすでにインストールされているが、
+emerge を実行したら Portage は指定されたパッケージを再インストールする
+(この場合は sed である)。
 .TP
 .B [ebuild    F  ] media\-video/realplayer\-8\-r6
-realplayer �ѥå������ϼ�ư�ǥ������� fetch ����ɬ�פ����롣
-�ѥå������� emerge ���褦�Ȥ���Ȥ��������������Ĥ���ʤ���С�
-Portage ����ߤ�ɬ�פʥե���������������ɤ��뤿��μ����󼨤��롣
+realplayer パッケージは手動でソースを fetch する必要がある。
+パッケージを emerge しようとするとき、ソースが見つからなければ、
+Portage は停止し必要なファイルをダウンロードするための手順を提示する。
 .TP
 .B [ebuild    f  ] media\-video/realplayer\-8\-r6
-realplayer �ѥå������Υե�����Ϥ��Ǥ˥���������ɤ���Ƥ��롣
+realplayer パッケージのファイルはすでにダウンロードされている。
 .TP
 .B [ebuild     U ] net\-fs/samba\-2.2.8_pre1 [2.2.7a]
-Samba 2.2.7a �Ϥ��Ǥ� emerge ����Ƥ��ꡢ
-�С������ 2.2.8_pre1 �ؤȥ��åץǡ��Ȥ��뤳�Ȥ��Ǥ��롣
+Samba 2.2.7a はすでに emerge されており、
+バージョン 2.2.8_pre1 へとアップデートすることができる。
 .TP
 .B [ebuild     UD] media\-libs/libgd\-1.8.4 [2.0.11]
-libgd 2.0.11 �Ϥ��Ǥ� emerge ����Ƥ��뤬��
-emerge ��¹Ԥ����� Portage �� libgd ��С������ 1.8.4
-�˥����󥰥졼�ɤ��Ƥ���롣
+libgd 2.0.11 はすでに emerge されているが、
+emerge を実行したら Portage は libgd をバージョン 1.8.4
+にダウングレードしてくれる。
 .br
-����Ͽ������С������Υѥå�����������Ƥ����ꡢ�������ƥ��ۡ���
-���뤬�к����ޤ��Ф���Ƥ��ʤ��ʤɤ���ͳ�ǥޥ������줿����
-�����뤳�Ȥ����롣
+これは新しいバージョンのパッケージが壊れていたり、セキュリティホール
+を作るが対策がまだ出されていないなどの理由でマスクされた場合に
+起きることがある。
 .br
-���줬�����뤽��¾����ͳ�Ȥ��Ƥϡ�emerge ���褦�Ȥ��Ƥ���ѥå�������
-���ޤ� emerge ���뤿��˸Ť��С������Υѥå��������׵ᤷ�Ƥ�����
-��ͤ����롣����� libgd 1.x �ȤȤ�˺������줿�ѥå������� libgd
-2.x �Ǥϥ���ѥ���Ǥ�����emerge �������� libgd ��ޤ������󥰥졼��
-���ʤ���Фʤ�ʤ��Ȥ�����̣�Ǥ��롣
+これが起きるその他の理由としては、emerge しようとしているパッケージが
+うまく emerge するために古いバージョンのパッケージを要求している場合
+も考えられる。これは libgd 1.x とともに作成されたパッケージが libgd
+2.x ではコンパイルできず、emerge する前に libgd をまずダウングレード
+しなければならないという意味である。
 .TP
 .B [ebuild     U-] x11\-base/xfree\-4.3.0 [4.2.99.902]
-���� \- �� xfree �ˤĤ��Ƥ� \fBSLOT\fR ���󤬤ʤ����Ȥ�ɽ���Ƥ��롣
-��������� emerge ���줿�С�������������줿���
-(�ܤ�������� \fBinject\fR �򻲾�)���ä��Ȥ��䡢
-�ȤƤ�Ť����(�ʤΤ� SLOT ��¸�ߤ��Ƥ��ʤ����)���ä���
-����Ȥ��˵����롣������ξ��Ǥ⿷�����С������� xfree 
-�����åץǡ��Ȥ���ڤ��ߤ˻Ȥ��롣
+この \- は xfree についての \fBSLOT\fR 情報がないことを表している。
+これは前に emerge されたバージョンが注入されたもの
+(詳しい情報は \fBinject\fR を参照)だったときや、
+とても古いもの(なので SLOT が存在していない場合)だったり
+するときに起こる。いずれの場合でも新しいバージョンの xfree 
+がアップデートする楽しみに使える。
 .TP
 .B [ebuild     U ] sys\-devel/distcc\-2.16 [2.13\-r1] \-gtk +ipv6* (\-selinux)
-\-gtk �� \-gnome �� distcc �� emerge ����Ȥ��� \fBUSE\fR �ѿ���
-���֤򼨤��Ƥ��롣���ξ�� distcc �� \fBUSE\fR �ѿ��� gtk �� gnome
-�����Ѳ�ǽ���������ߤ�����Ǥ� gtk �� gnome ��̵���ˤʤäƤ��뤳�Ȥ�
-ʬ���롣���Τ��ᡢdistcc �� emerge ����Ȥ� gtk �� gnome �Υ��ݡ��Ȥ�
-ͭ���ˤʤ�ʤ��������ƥꥹ���ϥѥå��������Ǹ�˥��󥹥ȡ��뤵��Ƥ���
-\fBUSE\fR �ե饰���Ѥ�ä����Ȥ򼨤���������Ǥϡ�ipv6
-�ϸ���ͭ���ˤʤäƤ��뤬��������̵���Ǥ��ä����Ȥ򼨤��Ƥ��롣
-(\-selinux)�Τ褦�ˡ��ݳ�̤˰Ϥޤ줿 \fBUSE\fR �ե饰�ϡ�
-���ߤΥ����ƥ�ץ��ե�����ǤϾ��̵���ˤ��졢
-�Ȥ����ȤϤǤ��ʤ��ե饰�Ǥ��뤳�Ȥ򼨤��Ƥ��롣
+\-gtk と \-gnome は distcc を emerge するときの \fBUSE\fR 変数の
+状態を示している。この場合 distcc が \fBUSE\fR 変数の gtk と gnome
+が利用可能だが、現在の設定では gtk と gnome は無効になっていることが
+分かる。そのため、distcc を emerge するとき gtk と gnome のサポートは
+有効にならない。アステリスクはパッケージが最後にインストールされてから
+\fBUSE\fR フラグが変わったことを示す。この例では、ipv6
+は現在有効になっているが、以前は無効であったことを示している。
+(\-selinux)のように、丸括弧に囲まれた \fBUSE\fR フラグは、
+現在のシステムプロファイルでは常に無効にされ、
+使うことはできないフラグであることを示している。
 .br
-\fB*��:\fR \fBUSE\fR �ξ��֤� \fB\-\-pretend\fR �� \fB\-\-verbose\fR
-���ץ�����Ʊ���˻Ȥä��Ȥ�����ɽ������롣
-.SH "����"
-�ۤȤ�ɾ�ˡ��ѥå������򥤥󥹥ȡ��뤷���ꥢ�åץǡ��Ȥ�����
-���褦�Ȥ������ϡ�\fB\-\-pretend\fR install �⤷���� update 
-��¹Ԥ���٤��Ǥ��롣��������Фɤ��ޤǼ¹Ԥ����Τ�ʬ���ꡢ
-�������ʤ���Фʤ�ʤ��֥��å�����ѥå�������ɽ�������뤳�Ȥ��Ǥ��롣
-����� Portage �ĥ꡼���ä˳�ưŪ����¿���Υѥå�������
-���åץǡ��Ȥ�����ǽ���Τ��� \fBsystem\fR �� \fBworld\fR
-���饹���Ф��Ƥ�Ʊ�ͤǤ��롣
+\fB*注:\fR \fBUSE\fR の状態は \fB\-\-pretend\fR と \fB\-\-verbose\fR
+オプションを同時に使ったときだけ表示される。
+.SH "注意"
+ほとんど常に、パッケージをインストールしたりアップデートしたり
+しようとする前は、\fB\-\-pretend\fR install もしくは update 
+を実行するべきである。そうすればどこまで実行されるのか分かり、
+修正しなければならないブロックするパッケージを表示させることができる。
+これは Portage ツリーが特に活動的だと多数のパッケージが
+アップデートされる可能性のある \fBsystem\fR と \fBworld\fR
+クラスに対しても同様である。
 .LP 
-�ޤ���ŵ��Ū�ˤ� \fB\-\-update\fR ��Ȥ���
-���Ǥ˴����˹������줿�ѥå�������̵�뤹�뤬��
-�ޤ���������Ƥ��ʤ��ѥå������򥢥åץ��졼�ɤ�������������
+また、典型的には \fB\-\-update\fR を使い、
+すでに完全に更新されたパッケージは無視するが、
+まだ更新されていないパッケージをアップグレードしたいだろう。
 .LP 
-�ޤ����󥹥ȡ��뤵��Ƥ��ʤ��ѥå������˰�¸�ط�������ѥå������ǡ�
-�ѥ�᡼���Ǥ��ΰ�¸�ط�������Ū�˻��ꤷ�ʤ��Ǥ��Υѥå�������
-���󥹥ȡ��뤹��Ȥ�����¸�ط��ǥ��󥹥ȡ��뤵���ѥå�������
-world �ե�����ˤ��ɲä���ʤ���world �Υ��åץǡ��ȤǤ������ä�
-�ѥå������⸡�Ф������ʤ顢��¸�ط��Υѥå������� \fBemerge\fR
-�Υѥ�᡼���Ȥ���ɬ������Ū����󤹤뤳�ȡ�
+まだインストールされていないパッケージに依存関係があるパッケージで、
+パラメータでその依存関係を明示的に指定しないでそのパッケージを
+インストールするとき、依存関係でインストールされるパッケージは
+world ファイルには追加されない。world のアップデートでそういった
+パッケージも検出したいなら、依存関係のパッケージも \fBemerge\fR
+のパラメータとして必ず明示的に列挙すること。
 .LP 
-\fBUSE �ѿ�\fR �ϡ����ޥ�ɥ饤��ǻ��ꤷ�ƥǥե���Ȥξ��
-�ǻ��ꤵ��Ƥ����ͤ��񤭤������󥹥ȡ��뤷�����ʤ�
-��¸�ѥå�������Ȥ��Τ��򤱤뤳�Ȥ��Ǥ��롣
-\fB���ޥ�ɥ饤��ǻ��ꤵ�줿 USE �ե饰�ϵ�������ʤ�\fR��
-���Ȥ��С�\fBUSE="\-X \-gnome" emerge mc\fR �Ȥ���� mc
-�򤳤� USE ����� emerge ���롣
-�⤷���� USE �ե饰��������ݻ���������С�/etc/portage/package.use
-�˽񤱤Ф褤��
+\fBUSE 変数\fR は、コマンドラインで指定してデフォルトの場所
+で指定されている値を上書きし、インストールしたくない
+依存パッケージを使うのを避けることができる。
+\fBコマンドラインで指定された USE フラグは記憶されない\fR。
+たとえば、\fBUSE="\-X \-gnome" emerge mc\fR とすると mc
+をこの USE 設定で emerge する。
+もしこの USE フラグの設定を保持したければ、/etc/portage/package.use
+に書けばよい。
 .LP 
-If \fBemerge \-\-update system\fR ����� \fB emerge \-\-update world\fR
-�Ϥ����顼��å�������Ф��Ƽ��Ԥ����硢ebuild �����λ����ǻȤäƤ���
-�С������� \fBemerge\fR �ˤϤʤ���������ǽ��ȤäƤ����ǽ�������롣
-���ξ��ϡ�\fBemerge \-\-update portage\fR ��Ȥä� Portage 
-��ɬ�פʿ���ǽ�򥵥ݡ��Ȥ���ǿ��С������˥��åץ��졼�ɤ��뤳�Ȥ�
-�Ǥ��롣
-.SH "�ޥ������줿�ѥå�����"
-\fI����: ��ȯ��Υѥå�������Ȥ��Ȥ����ѿ����ʤ�����
-�ޥ������줿�ѥå�������ְ�äƻȤ����Ȥ˵������������Х���
-Gentoo ��ȯ�Ԥλ��֤�ϲ�񤵤��롣�⤷��������꤬�����Ƥ�
-��ʬ���н�Ǥ���Τ��ǧ���뤳�ȡ�\fR
+If \fBemerge \-\-update system\fR および \fB emerge \-\-update world\fR
+はがエラーメッセージを出して失敗する場合、ebuild がその時点で使っている
+バージョンの \fBemerge\fR にはない新しい機能を使っている可能性がある。
+その場合は、\fBemerge \-\-update portage\fR を使って Portage 
+を必要な新機能をサポートする最新バージョンにアップグレードすることが
+できる。
+.SH "マスクされたパッケージ"
+\fI注意: 開発中のパッケージを使うときは用心しなさい。
+マスクされたパッケージを間違って使うことに起因する問題やバグは
+Gentoo 開発者の時間を浪費させる。もしかりに問題が起きても
+自分で対処できるのを確認すること。\fR
 .LP 
-\fBPortage\fR �ˤ�����ޥ����Ȥ�3�Ĥν��פʵ�ǽ���󶡤���:
-�ºݤ˷׻����ǻȤ��ѥå������Υƥ��ȴ��֤��ߤ���
-���Ԥ���Ǥ������ѥå�������Ȥ����Ȥ��ɤ���
-���줿�ѥå������䥻�����ƥ��ۡ���ˤʤꤦ��ѥå�������ޥ������롣
-�ޥ����� \fBpackage.mask\fR �� KEYWORDS �Ȥ���2�Ĥ���ˡ�ǹԤ����Ȥ��Ǥ��롣
+\fBPortage\fR におけるマスクとは3つの重要な機能を提供する:
+実際に計算機で使うパッケージのテスト期間を設け、
+失敗するであろうパッケージを使うことを防ぎ、
+壊れたパッケージやセキュリティホールになりうるパッケージをマスクする。
+マスクは \fBpackage.mask\fR と KEYWORDS という2つの方法で行うことができる。
 .TP
 .BR package.mask
-\fBpackage.mask\fR �Ϥޤ����������������ѥå������λ��Ѥ䡢
-�ۤʤä������ƥ�Ǥ����꤬���뤳�Ȥ��Τ��Ƥ���ѥå������λ��Ѥ�
-�֥��å����롣���Υե������ \fI/usr/portage/profiles\fR �ˤ��롣
+\fBpackage.mask\fR はまず問題を引き起こすパッケージの使用や、
+異なったシステムでは問題があることが知られているパッケージの使用を
+ブロックする。このファイルは \fI/usr/portage/profiles\fR にある。
 .TP
 .BR KEYWORDS
-\fBebuild\fR �ե��������� \fBKEYWORDS\fR
-�ѿ���ƥ�����Υѥå�������ޥ������뤿��˻Ȥ����Ȥ��Ǥ��롣
-�ƥѥå������ˤϥ������ƥ������ͭ�Υ�����ɤ����ꡢ
-\fBPortage\fR �ˤɤΥ����ƥब���Υѥå������򥤥󥹥ȡ��뤹�뤳�Ȥ�
-�Ǥ��뤫�Τ餻�뤳�Ȥ��Ǥ��롣
-���륢�����ƥ�����ǥ���ѥ���Ǥ��뤬���ޤ����Υ������ƥ�����Ǥ�
-��stable�פ���ʬ���äƤ��ʤ��ѥå������ϡ��������ƥ�����̾������
-����� (\fB~\fR) ��Ĥ��뤳�Ȥǥޥ������롣
-\fBemerge\fR �� \fBACCEPT_KEYWORDS\fR �Ķ��ѿ���Ĵ�١�KEYWORD
-�ǥޥ�������Ƥ���ѥå������� emerge ����Ĥ�����ػߤ����ꤹ�롣
-\fBemerge\fR �ˤ����Ρ�testing�ץС�������ӥ�ɤ���褦������ˤϡ�
-\fBACCEPT_KEYWORDS\fR �ˡ�\fB~arch\fR�פ����ꤹ��Ф褤��
-\fBarch\fR �� \fIx86 ppc sparc mips alpha arm hppa\fR
-�Τ����줫�Ǥ��롣���Ȥ��С�
+\fBebuild\fR ファイルの中の \fBKEYWORDS\fR
+変数もテスト中のパッケージをマスクするために使うことができる。
+各パッケージにはアーキテクチャ固有のキーワードがあり、
+\fBPortage\fR にどのシステムがそのパッケージをインストールすることが
+できるか知らせることができる。
+あるアーキテクチャでコンパイルできるが、まだそのアーキテクチャでは
+「stable」だと分かっていないパッケージは、アーキテクチャ名の前に
+チルダ (\fB~\fR) をつけることでマスクする。
+\fBemerge\fR は \fBACCEPT_KEYWORDS\fR 環境変数を調べ、KEYWORD
+でマスクされているパッケージの emerge を許可したり禁止したりする。
+\fBemerge\fR にこれらの「testing」バージョンをビルドするよう伝えるには、
+\fBACCEPT_KEYWORDS\fR に「\fB~arch\fR」を設定すればよい。
+\fBarch\fR は \fIx86 ppc sparc mips alpha arm hppa\fR
+のいずれかである。たとえば、
 \fBACCEPT_KEYWORDS="~x86" emerge xfree\fR
-�Ȥ���� \fBemerge\fR �� KEYWORDS �ǥޥ������줿�С�������
-xfree �⥢�åץ��졼�ɸ���Ȥ����оݤ�����롣
-\fB�ٹ�:\fR ��ʬ�Υ������ƥ���������������Ͱʳ��Τ�Τ򤳤�
-�ѿ������� \fI���ƤϤ����ʤ�\fR��
-.SH "�Х����"
-�Х��˽в�ä��� web �����ȷ�ͳ����𤷤Ƥ�������:
+とすれば \fBemerge\fR は KEYWORDS でマスクされたバージョンの
+xfree もアップグレード候補として対象に入れる。
+\fB警告:\fR 自分のアーキテクチャに相当する値以外のものをこの
+変数に設定 \fIしてはいけない\fR。
+.SH "バグ報告"
+バグに出会ったら web サイト経由で報告してください:
 .LP 
 \fBhttp://bugs.gentoo.org/\fR
 .LP 
-�Х�������Ф���Ȥ���\fBemerge \-\-info\fR
-�ν��Ϸ�̤������褦�ˤ��Ƥ���������
-.SH "��Ϣ����"
+バグ報告を提出するとき、\fBemerge \-\-info\fR
+の出力結果を入れるようにしてください。
+.SH "関連項目"
 .BR "emerge \-\-help",
 .BR ebuild (1),
 .BR ebuild (5),
@@ -555,53 +555,53 @@ xfree �⥢�åץ��졼�ɸ���Ȥ����оݤ�����롣
 .BR portage (5)
 .LP 
 
-\fI/usr/lib/portage/bin\fR �ˤ��뤿�������������ץꥱ�������
+\fI/usr/lib/portage/bin\fR にあるたくさんの補助アプリケーション
 .LP 
-\fBapp\-admin/gentoolkit\fR �ѥå������ˤ� \fBqpkg\fR (�ѥå����������ġ���)
-�Τ褦��ͭ�Ѥʥ�����ץȤ�������Ƥ��롣
-.SH "�ե�����"
+\fBapp\-admin/gentoolkit\fR パッケージには \fBqpkg\fR (パッケージ検索ツール)
+のような有用なスクリプトが収められている。
+.SH "ファイル"
 .TP
 \fB/var/lib/portage/world\fR 
-�桼������ѥå����������ꥹ�Ȥ��񤫤�Ƥ��롣
-���Υե�������Խ����Ƥ�����ʤ���
-\fBworld\fR ���饹�Υ��åץǡ��Ȥǹ������Ƥۤ����ѥå��������ɲä����ꡢ
-�������Ƥۤ����ʤ��ѥå��������ä��ꤷ�Ƥ��ޤ�ʤ���
+ユーザ指定パッケージの全リストが書かれている。
+このファイルは編集しても問題ない。
+\fBworld\fR クラスのアップデートで更新してほしいパッケージを追加したり、
+更新してほしくないパッケージを削ったりしてかまわない。
 .TP
 \fB/etc/make.conf\fR 
-�ӥ�ɥץ������Τ�����ѿ����񤫤�Ƥ��ꡢ
-\fBmake.globals\fR �˽񤫤�Ƥ����ѿ����񤭤��롣
-\fB���˵󤲤��Ƥ���ե�����ǤϤʤ������Υե�������Խ����뤳��\fR��
+ビルドプロセスのための変数が書かれており、
+\fBmake.globals\fR に書かれている変数を上書きする。
+\fB下に挙げられているファイルではなく、このファイルを編集すること\fR。
 .TP
 .B /etc/dispatch\-conf.conf
-��ư������ե�����ι���/�Хå����åפ����뤿������꤬�񤫤�Ƥ��롣
+自動で設定ファイルの更新/バックアップを操作するための設定が書かれている。
 .TP
 \fB/etc/make.profile/make.defaults\fR
-�ӥ�ɥץ������Τ���Υץ��ե�������ͭ���ѿ����񤫤�Ƥ��롣
-\fB���Υե�������Խ����ƤϤʤ�ʤ�\fR��
+ビルドプロセスのためのプロファイル特有の変数が書かれている。
+\fBこのファイルを編集してはならない\fR。
 .TP
 \fB/etc/make.profile/use.defaults\fR
-�ѥå������򥤥󥹥ȡ��뤹��Ȥ������줾��ˤĤ��ƥǥե���Ȥ�ͭ���ˤʤ�
-USE �ե饰���񤫤�Ƥ��롣
-\fB���Υե�������Խ����ƤϤʤ�ʤ�\fR��
+パッケージをインストールするとき、それぞれについてデフォルトで有効になる
+USE フラグが書かれている。
+\fBこのファイルを編集してはならない\fR。
 .TP
 \fB/usr/portage/profiles/use.desc\fR 
-USE �ե饰�Υޥ������ꥹ�Ȥ���ǽ�������Ȱ��˽񤫤�Ƥ��롣
-\fB���Υե�������Խ����ƤϤʤ�ʤ�\fR��
+USE フラグのマスターリストが機能の説明と一緒に書かれている。
+\fBこのファイルを編集してはならない\fR。
 .TP
 \fB/etc/make.profile/virtuals\fR 
-virtual ��¸�ط����褹�뤿��˻Ȥ���ǥե���ȥѥå������Υꥹ�Ȥ�
-�񤫤�Ƥ��롣
-\fB���Υե�������Խ����ƤϤʤ�ʤ�\fR��
+virtual 依存関係を解決するために使われるデフォルトパッケージのリストが
+書かれている。
+\fBこのファイルを編集してはならない\fR。
 .TP
 \fB/etc/make.profile/packages\fR
-���ܥ����ƥ�Ȥ��ƻȤ���ѥå������Υꥹ�Ȥ��񤫤�Ƥ��롣
-\fBsystem\fR �� \fBworld\fR ���饹�����Υե�����򻲾Ȥ��롣
-\fB���Υե�������Խ����ƤϤʤ�ʤ�\fR��
+基本システムとして使われるパッケージのリストが書かれている。
+\fBsystem\fR と \fBworld\fR クラスがこのファイルを参照する。
+\fBこのファイルを編集してはならない\fR。
 .TP
 \fB/etc/make.globals\fR 
-�ӥ�ɥץ������Τ���Υǥե�����ѿ����񤫤�Ƥ��롣
-\fB���Υե�������Խ����ƤϤʤ�ʤ�\fR��
-.SH "����"
+ビルドプロセスのためのデフォルト変数が書かれている。
+\fBこのファイルを編集してはならない\fR。
+.SH "著者"
 Daniel Robbins <drobbins@gentoo.org>
 .br 
 Geert Bevin <gbevin@gentoo.org>
@@ -616,5 +616,5 @@ Mike Frysinger <vapier@gentoo.org>
 .br
 Marius Mauch <genone@gentoo.org>
 .br
-.SH "CVS �إå�"
-��ʸ: emerge.1,v 1.71
+.SH "CVS ヘッダ"
+原文: emerge.1,v 1.71

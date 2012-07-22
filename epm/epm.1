@@ -135,62 +135,62 @@
 .\"
 .IX Title "EPM 1"
 .TH EPM 1 "2004-01-12" "perl v5.8.2" "User Contributed Perl Documentation"
-.SH "̾��"
-.IX Header "̾��"
-epm \- Gentoo �� rpm Ʊ����
-.SH "��"
-.IX Header "��"
-epm { \-eqVy | \-\-erase | \-\-help | \-\-query | \-\-verify } ���ץ����...
-.SH "����"
-.IX Header "����"
-���Υġ���� Red Hat �� \*(L"rpm\*(R" �ѥå������������եȤ˴���Ƥ�����桼����
-Gentoo �Υѥå�������Ĵ�٤�ġ�����󶡤��롣����Ū�ˤϡ��ѥå�������Ĵ����
-�����ƥѥå������θ��ڡ��ޤ��������ƥफ��ѥå������������뤳�Ȥ��Ǥ��롣
-�錄���ϲ�ǽ�ʤ����� rpm �Τ褦��ư���褦���Ϥ�������Red Hat �� Gentoo
-�Υǥ����ȥ�ӥ塼�����ΰ㤤�ˤ�ä�ɬ�פȤʤä�������⤢�롣
+.SH "名前"
+.IX Header "名前"
+epm \- Gentoo 用 rpm 同等品
+.SH "書式"
+.IX Header "書式"
+epm { \-eqVy | \-\-erase | \-\-help | \-\-query | \-\-verify } オプション...
+.SH "説明"
+.IX Header "説明"
+このツールは Red Hat の \*(L"rpm\*(R" パッケージ管理ソフトに慣れ親しんだユーザに
+Gentoo のパッケージを調べるツールを提供する。具体的には、パッケージの調査、
+そしてパッケージの検証、また、システムからパッケージを削除することができる。
+わたしは可能なかぎり rpm のように動くよう努力したが、Red Hat と Gentoo
+のディストリビューションの違いによって必要となった相異点もある。
 .PP
-Ĵ���ȸ��ڤ� epm �Τ�äȤ����դȤ��뵡ǽ�Ǥ��롣����⡼�ɤϼ¤�ñ��
-\&\*(L"emerge \-C\*(R" ��Ƥ֤���������ˤ����ʤ������������ϤȤ϶���������Τǡ�
-�錄���� \*(L"epm \-e\*(R" �ȥ����פ���Τ���ñ�ʤΤ���
-.SH "�⡼��"
-.IX Header "�⡼��"
+調査と検証は epm のもっとも得意とする機能である。削除モードは実は単に
+\&\*(L"emerge \-C\*(R" を呼ぶための入口にすぎないが、習慣の力とは恐ろしいもので、
+わたしは \*(L"epm \-e\*(R" とタイプするのが簡単なのだ。
+.SH "モード"
+.IX Header "モード"
 .IP "\fB\-q \-\-query\fR" 4
 .IX Item "-q --query"
-Ĵ���⡼�ɡ����󥹥ȡ��뤵��Ƥ���ѥå������Υꥹ�Ȥ�Ĵ�٤뤫��
-�ѥå���������ͭ���Ƥ���ե������Ĵ�٤뤿��˻Ȥ��롣
+調査モード。インストールされているパッケージのリストを調べるか、
+パッケージが所有しているファイルを調べるために使われる。
 .IP "\fB\-V \-y \-\-verify\fR" 4
 .IX Item "-V -y --verify"
-���ڥ⡼�ɡ������ॹ����פ� \s-1MD5\s0 ������Ѥ��ƥ��󥹥ȡ��뤵��Ƥ���
-�ѥå������δ������򸡾ڤ��롣���������ǥХ������桼�������롼�ס�
-�����ƥ⡼�ɤϸ��ߤΤȤ����ϥ����å�����Ƥ��ʤ���
+検証モード。タイムスタンプと \s-1MD5\s0 サムを用いてインストールされている
+パッケージの完全性を検証する。サイズ、デバイス、ユーザ、グループ、
+そしてモードは現在のところはチェックされていない。
 .IP "\fB\-e \-\-erase\fR" 4
 .IX Item "-e --erase"
-����⡼�ɡ������ƥफ��ѥå������������롣�ѥå�������С������
-�ޤǴޤ�ƻ��ꤹ�������Υѥå������������롣ñ�˥ѥå�����̾��
-���ꤹ������С������������� (�Ĥޤꡢepm �Ǥ� \-\-allmatches 
-���ǥե���ȤǤ��ꡢ����� rpm �ȤϰۤʤäƤ���)��
+削除モード。システムからパッケージを削除する。パッケージをバージョン
+まで含めて指定すると特定のパッケージを削除する。単にパッケージ名を
+指定すると全バージョンを削除する (つまり、epm では \-\-allmatches 
+がデフォルトであり、これは rpm とは異なっている)。
 .IP "\fB\-\-help\fR" 4
 .IX Item "--help"
-����ϼ¤ΤȤ����⡼�ɤǤϤʤ������������⡼�ɤ����ꤷ�ʤ��Ǽ¹ԤǤ���Τ�
-��������Ǥ��롣\*(L"epm \-\-help\*(R" ��¹Ԥ���ȳƥ⡼�ɤ����ѤǤ��륪�ץ�����
-����Ū�ʰ����������롣
-.SH "��"
-.IX Header "��"
-vim �����󥹥ȡ��뤵��Ƥ��뤫�ɤ���Ĵ�٤�ˤ�:
+これは実のところモードではない。しかし、モードを特定しないで実行できるのは
+これだけである。\*(L"epm \-\-help\*(R" を実行すると各モードで利用できるオプションの
+総合的な一覧が見られる。
+.SH "例"
+.IX Header "例"
+vim がインストールされているかどうか調べるには:
 .Sp
 .Vb 2
 \&  $ epm -q vim
 \&  vim-6.2_pre2
 .Ve
 .Sp
-���Ϥ˥��롼�פ�ޤ��ˤ�:
+出力にグループを含めるには:
 .Sp
 .Vb 2
 \&  $ epm -qG vim
 \&  app-editors/vim-6.2_pre2
 .Ve
 .Sp
-vim ���ɤ�ʥХ��ʥ�򥤥󥹥ȡ��뤹�뤫�Τ�ˤ�:
+vim がどんなバイナリをインストールするか知るには:
 .Sp
 .Vb 7
 \&  $ epm -ql vim | grep bin
@@ -202,25 +202,25 @@ vim ���ɤ�ʥХ��ʥ�򥤥󥹥ȡ��뤹�뤫�Τ�ˤ�:
 \&  /usr/bin/vimdiff
 .Ve
 .Sp
-/usr/bin/vim ���ͭ���Ƥ���ΤϤɤΥѥå�������Ĵ�٤�:
+/usr/bin/vim を所有しているのはどのパッケージか調べる:
 .Sp
 .Vb 2
 \&  $ epm -qf /usr/bin/vim
 \&  vim-6.2_pre2
 .Ve
 .Sp
-vim �Υ��󥹥ȡ���򸡾ڤ���ˤ�:
+vim のインストールを検証するには:
 .Sp
 .Vb 1
 \&  $ epm -V vim
 .Ve
 .Sp
-���Ϥ��ʤ���Х��󥹥ȡ��������Ϥʤ����Ȥ򼨤���
-�ѥå������Υ��󥹥ȡ���򸡾ڤ����Ȥ�����ʳ��ν��Ϥ��֤äƤ����ʤ顢
-�����ϰʲ��Υ�󥯤򸫤Ƥ�餤������
+出力がなければインストールに問題はないことを示す。
+パッケージのインストールを検証したときそれ以外の出力が返ってきたなら、
+説明は以下のリンクを見てもらいたい。
 http://www.rpm.org/max\-rpm/s1\-rpm\-verify\-output.html
 .Sp
-�����ƥ�ˤ��� vim �˴ط�����ѥå�����������ɽ������ˤ�:
+システムにある vim に関係するパッケージを全て表示するには:
 .Sp
 .Vb 4
 \&  $ epm -qa | grep vim
@@ -228,11 +228,11 @@ http://www.rpm.org/max\-rpm/s1\-rpm\-verify\-output.html
 \&  vim-6.2_pre2
 \&  gvim-6.2_pre2
 .Ve
-.SH "��"
-.IX Header "��"
-���Υġ���� Aron Griffis <agriffis@gentoo.org> �ˤ�äƽ񤫤줿��
-�⤷������Ȥ��Υġ���ˤ�äƤ��ʤ��Υ���ԥ塼�����˲�����뤫�⤷��ʤ����� 
-�錄���ˤȤäƤϤޤȤ��ư���Ƥ��롣�Х����� http://bugs.gentoo.org/
-�ˤ��Ƥ錄���˳�����Ƥ�С����Τ���ľ�����⤷��ʤ���
-�錄�����Х���ľ����ǽ���ϡ�Wayne Davison �����Ĥ⤷�Ƥ���褦�ˡ�
-���ʤ��������ѥå���Ĥ��Ƥ���������Ū�����礹�롣
+.SH "注"
+.IX Header "注"
+このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。
+もしかするとこのツールによってあなたのコンピュータが破壊されるかもしれないが、 
+わたしにとってはまともに動いている。バグ報告を http://bugs.gentoo.org/
+にしてわたしに割り当てれば、そのうち直すかもしれない。
+わたしがバグを直す可能性は、Wayne Davison がいつもしているように、
+あなたがいいパッチをつけてくれれば飛躍的に増大する。

@@ -4,51 +4,51 @@
 .\" Translated on 21 Oct 2004 by Shigehiro IDANI <datam@anet.ne.jp>
 .\"
 .TH "HORDE.ECLASS" "5" "Aug 2004" "Portage 2.0.51" "portage"
-.SH "̾��"
-horde \- horde�ѥå�����������Ū��Ƴ����ˡ
-.SH "����"
-\fBhorde\fR eclass �ϡ�horde ebuilds ��񤯤Τ��ñ�ˤ��롣
-\fBhorde\fR eclass �ϡ�(\fB${PN}\fR �� "-cvs" ���ޤޤ�����)��ưŪ�� \fBcvs.eclass\fR(5) ���ͳ����CVS ebuild���Ф������⥵�ݡ��Ȥ��롣
-.SH "�ѿ�"
+.SH "名前"
+horde \- hordeパッケージの統一的な導入方法
+.SH "説明"
+\fBhorde\fR eclass は、horde ebuilds を書くのを簡単にする。
+\fBhorde\fR eclass は、(\fB${PN}\fR に "-cvs" が含まれる場合に)自動的に \fBcvs.eclass\fR(5) を経由してCVS ebuildに対する操作もサポートする。
+.SH "変数"
 .BR "HORDE_PHP_FEATURES"
-�����ѿ��ϡ�mod_php��USE�ե饰�ζ�����ڤ�ꥹ�Ȥ����ꤵ��롣
-�⤷���ꤵ��Ƥ����硢 \fIhorde_pkg_setup\fR ��mod_php�������USE�ե饰��
-����ѥ��뤵��Ƥ��뤫���ǧ���롣�⤷mod_php ��HORDE_PHP_FEATURES�ǻ��ꤷ��
-USE�ե饰�ǥ���ѥ��뤵��Ƥ��ʤ��ʤ�С��ӥ�ɤϼ��Ԥ���
-�桼���� mod_php ����ꤷ��USE�ե饰�Ǻƥӥ�ɤ���ɬ�פ����뤳�Ȥ���𤹤롣
-.SH "�ؿ�"
+この変数は、mod_phpのUSEフラグの空白区切りリストが設定される。
+もし設定されている場合、 \fIhorde_pkg_setup\fR はmod_phpが特定のUSEフラグで
+コンパイルされているかを確認する。もしmod_php がHORDE_PHP_FEATURESで指定した
+USEフラグでコンパイルされていないならば、ビルドは失敗し、
+ユーザに mod_php を指定したUSEフラグで再ビルドする必要があることを報告する。
+.SH "関数"
 .TP
 .BR "horde_pkg_setup"
-���δؿ���¹Ԥ���ȡ�
-���Ť餤 \fBwebapp.eclass\fR(5) �����Ƥ�����
-������ \fIHORDE_PHP_FEATURES\fR �Υ����å���Ԥ���
+この関数を実行すると、
+操作しづらい \fBwebapp.eclass\fR(5) の内容を操作し、
+そして \fIHORDE_PHP_FEATURES\fR のチェックを行う。
 .TP
 .BR "horde_src_unpack"
-ľ�� CVS ebuild��������ˡ����δؿ��ϡ�\fBcvs\fR eclass ���� \fIcvs_src_unpack\fR ��ƤӤ�����
-�⤷ \fIcvs_src_unpack\fR ��̵����С������ \fIunpack\fR ��ƤӤ�����
+直接 CVS ebuildを操作する場合に、この関数は、\fBcvs\fR eclass から \fIcvs_src_unpack\fR を呼びだす。
+もし \fIcvs_src_unpack\fR が無ければ、代わりに \fIunpack\fR を呼びだす。
 .TP
 .BR "horde_src_install"
-���δؿ��ϡ� \fB${S}\fR �ˤ������ƤΥե������ \fBwebapp\fR eclass�� \fB${MY_HTDOCSDIR}\fR �ǥ��쥯�ȥ�˥��󥹥ȡ��뤹�롣���δؿ��ϡ��ɥ������(README�� \fB${S}/docs/\fR �ʲ������ƤΥե�����)�Υ��󥹥ȡ����Ԥ���
-�����ơ���갷�����񤷤� \fBwebapp.eclass\fR(5) ��¾�����ƤϽ�������롣
+この関数は、 \fB${S}\fR にある全てのファイルを \fBwebapp\fR eclassの \fB${MY_HTDOCSDIR}\fR ディレクトリにインストールする。この関数は、ドキュメント(READMEと \fB${S}/docs/\fR 以下の全てのファイル)のインストールも行う。
+そして、取り扱いが難しい \fBwebapp.eclass\fR(5) の他の内容は処理される。
 .TP
 .BR "horde_pkg_postinst"
-���ޤ��ޤʾ����ٹ��å�������ɽ������褦�ˤ��롣
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤäƤ���������
-.SH "����"
+さまざまな情報や警告メッセージを表示するようにする。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行ってください。
+.SH "参照"
 .BR ebuild (5),
 .BR cvs.eclass (5),
 .BR webapp.eclass (5)
-.SH "�ե�����"
+.SH "ファイル"
 .nf
 .BR /usr/portage/eclass/horde.eclass
 .BR /usr/portage/eclass/webapp.eclass
 .BR /usr/portage/eclass/cvs.eclass
 .fi
-.SH "����"
+.SH "著者"
 .nf
 Aaron Walker <ka0ttic@gentoo.org>
 Mike Frysinger <vapier@gentoo.org>
 .fi
-.SH "CVS �إå�"
-��ʸ: horde.eclass.5,v 1.3
+.SH "CVS ヘッダ"
+原文: horde.eclass.5,v 1.3

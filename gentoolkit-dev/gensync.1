@@ -4,68 +4,68 @@
 .\" Translated on 11 Nov 2004 by Akinori Hattori <hattya@gentoo.org>
 .\"
 .TH gensync 1 "0.1.0" "Gentoolkit" "Gentoo Administration"
-.SH ̾��
+.SH 名前
 .LP 
-gensync \- Gentoo: �����С��쥤Ʊ���ġ���
-.SH ��
+gensync \- Gentoo: オーバーレイ同期ツール
+.SH 書式
 .LP 
 gensync [\fIoption\fP] <\fIrepo-id-1 repo-id-2 ...\fP>
 
-.SH ����
+.SH 説明
 
 .LP
 
-\fIgensync\fR ��Ʊ�����ȸƤФ�����۸����顢���ʤ��Υޥ���ؤ� ebuild �ե������Ʊ�������롣Portage ���̾Gentoo �ץ��������Ȥˤ�äƴ�������Ƥ��������portage �ĥ꡼���餷��Ʊ�����ʤ����������ʤ��顢\fIbreakmygentoo.net\fR �Τ褦�ʳ�ȯ�ĥ꡼����� ebuild ����ˤϡ��Ȥ��ɤ����񿴲������ԼԤ�������̣����Ĥ�Τ����뤫�⤷��ʤ���
+\fIgensync\fR は同期元と呼ばれる配布元から、あなたのマシンへと ebuild ファイルを同期させる。Portage は通常、Gentoo プロジェクトによって管理されている公式のportage ツリーからしか同期しない。しかしながら、\fIbreakmygentoo.net\fR のような開発ツリーの補助 ebuild の中には、ときどき好奇心旺盛な猛者たちが興味を持つものがあるかもしれない。
 
-���Υġ���ϡ����Τ褦��Ʊ��������Ʊ�����뤿��˻��Ѥ��뤳�Ȥ��Ǥ��롣
+このツールは、そのような同期元から同期するために使用することができる。
 
-.SH ���ץ����
+.SH オプション
 .LP 
 \fB\-l\fR
 .br
 \fB--list-sources\fB
 .IP 
-\fIgensync\fR �����Ѳ�ǽ��Ʊ�����ΰ�����
+\fIgensync\fR が利用可能な同期元の一覧。
 
 .LP 
 \fB\-V\fR
 .br
 \fB--version\fB
 .IP 
-�С�������ɽ�����ƽ�λ���롣
+バージョンを表示して終了する。
 
 .LP 
 \fB\-C\fR
 .br
 \fB--no-color\fB
 .IP 
-���顼���Ѥ��ʤ���
+カラー使用しない。
 
 .LP 
 \fB\-h\fR
 .br 
 \fB\--help\fR
 .IP 
-�إ�פ�ɽ�����롣
+ヘルプを表示する。
 
-.SH ����ե�����
+.SH 設定ファイル
 .LP
 \fB/etc/gensync/gensync.conf\fR
 .IP
-�ᥤ�������ե����롣�����Ȥ����������롣
+メインの設定ファイル。コメントに説明がある。
 
 .LP
 \fB/etc/gensync/*.syncsource\fR
 .IP
-Ʊ�������Ȥ�����ե����롣
+同期元ごとの設定ファイル。
 
-.SH ����
+.SH 参考
 .LP
-\fIapp-portage/gentoolkit-dev\fR �˴ޤޤ�Ƥ��롢\fIechangelog\fR �� \fIego\fR 
-�Τ褦�ʥ桼�ƥ���ƥ�����
+\fIapp-portage/gentoolkit-dev\fR に含まれている、\fIechangelog\fR や \fIego\fR 
+のようなユーティリティー。
 
-.SH ����
+.SH 著者
 .LP
-Matthew Schick <matt@breakmygentoo.net> (������)
+Matthew Schick <matt@breakmygentoo.net> (原著者)
 .br
 Karl Trygve Kalleberg <karltk@gentoo.org>

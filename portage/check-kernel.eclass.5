@@ -4,55 +4,55 @@
 .\" Translated on 21 Oct 2004 by Shigehiro IDANI <datam@anet.ne.jp>
 .\"
 .TH "CHECK-KERNEL.ECLASS" "5" "Aug 2004" "Portage 2.0.51" "portage"
-.SH "̾��"
-check-kernel \- �����ͥ륽�����Υ����å�
-.SH "����"
-\fBcheck-kernel\fR eclass �ϡ������ͥ륽�����θ��Ф��͡��ʾ����������뤿��δ�ñ�ʥ��󥿥ե��������󶡤��롣
-.SH "�ѿ�"
-�����ѿ���\fBcheck-kernel\fR eclass �ˤ�ä��Ѱդ���Ƥ���:
+.SH "名前"
+check-kernel \- カーネルソースのチェック
+.SH "説明"
+\fBcheck-kernel\fR eclass は、カーネルソースの検出と様々な情報を取得するための簡単なインタフェースを提供する。
+.SH "変数"
+次の変数が\fBcheck-kernel\fR eclass によって用意されている:
 .TP
 .BR KV_full
-�����ʥ����ͥ�С������(��. 2.4.27-gentoo-r1)
+完全なカーネルバージョン(例. 2.4.27-gentoo-r1)
 .TP
 .BR KV_major
-�����ͥ�С������Υ᥸�㡼�ֹ�(��. 2)
+カーネルバージョンのメジャー番号(例. 2)
 .TP
 .BR KV_minor
-�����ͥ�С������Υޥ��ʡ��ֹ�(��. 4)
+カーネルバージョンのマイナー番号(例. 4)
 .TP
 .BR KV_micro
-�����ͥ�С������Υޥ������ֹ�(��. 27)
-.SH "�ؿ�"
+カーネルバージョンのマイクロ番号(例. 27)
+.SH "関数"
 .TP
 .BR check_version_h
-/usr/src/linux�ؤΥ���ܥ�å���󥯤����������ꥻ�åȥ��åפ���Ƥ��뤫��μ¤˳�ǧ���롣�⤷�ʤ���С����δؿ������ˤ�������Υ��顼��å���������Ϥ���������emerge�ץ���������ߤ��롣
+/usr/src/linuxへのシンボリックリンクが正しく設定セットアップされているかを確実に確認する。もしなければ、この関数は非常にたくさんのエラーメッセージを出力し、そしてemergeプロセスを停止する。
 .TP
 .BR get_KV_info
-�����ͥ�� version.h ����Ϥ���\fB${KV_full}\fR, \fB${KV_major}\fR,
-\fB${KV_minor}\fR, and \fB${KV_micro}\fR �ѿ��˾����Ϳ���롣
+カーネルの version.h を解析し、\fB${KV_full}\fR, \fB${KV_major}\fR,
+\fB${KV_minor}\fR, and \fB${KV_micro}\fR 変数に情報を与える。
 .TP
-\fINOTE:\fR �ʲ��δؿ��ϡ�����true�ޤ���false���֤���
+\fINOTE:\fR 以下の関数は、全てtrueまたはfalseを返す。
 
 .TP
 .BR is_2_4_kernel
-�����ͥ�ΥС������2.4�Ϥ��ɤ���������å����롣
+カーネルのバージョンが2.4系かどうかをチェックする。
 .TP
 .BR is_2_5_kernel
-�����ͥ�ΥС������2.5�Ϥ�������å����롣
+カーネルのバージョンが2.5系かをチェックする。
 .TP
 .BR is_2_6_kernel
-�����ͥ�ΥС������2.6�Ϥ�������å����롣
+カーネルのバージョンが2.6系かをチェックする。
 .TP
 .BR kernel_supports_modules
-�����ͥ뤬�⥸�塼��򥵥ݡ��Ȥ��Ƥ��뤫������å�����(CONFIG_MODULES)��
+カーネルがモジュールをサポートしているかをチェックする(CONFIG_MODULES)。
 
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤäƤ���������
-.SH "����"
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行ってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/check-kernel.eclass
-.SH "����"
+.SH "著者"
 Aaron Walker <ka0ttic@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: check-kernel.eclass.5,v 1.3
+.SH "CVS ヘッダ"
+原文: check-kernel.eclass.5,v 1.3

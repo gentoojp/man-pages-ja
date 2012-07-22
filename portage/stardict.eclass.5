@@ -4,40 +4,40 @@
 .\" Translated on 16 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "STARDICT.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-startdict \- stardict ����Υ��󥹥ȡ���������ʥ��饹
-.SH "����"
-\fBstartdict\fR eclass �ˤ� stardictionary �Τ���� ebuild
-���ڤ˺�뤿���Ŭ�ڤ��ѿ��ȴؿ����ޤޤ�Ƥ��롣
-���� eclass �Ǥ� \fBsrc_compile\fR �� \fBsrc_install\fR
-���������Ƥ��롣���ʤ���Фʤ�ʤ��Τϡ�
-���Υ��饹�� inherit ��������
-\fBDICT_SUFFIX\fR��\fBDICT_P\fR��\fBFROM_LANG\fR 
-�� \fBTO_LANG\fR �ѿ������ꤹ�뤳�Ȥ����Ǥ��롣
-.SH "�ѿ�"
+.SH "名前"
+startdict \- stardict 辞書のインストールに便利なクラス
+.SH "説明"
+\fBstartdict\fR eclass には stardictionary のための ebuild
+を手軽に作るための適切な変数と関数が含まれている。
+この eclass では \fBsrc_compile\fR と \fBsrc_install\fR
+が定義されている。やらなければならないのは、
+このクラスを inherit する前に
+\fBDICT_SUFFIX\fR、\fBDICT_P\fR、\fBFROM_LANG\fR 
+と \fBTO_LANG\fR 変数を設定することだけである。
+.SH "変数"
 .TP
-.B FROM_LANG = \fI"�������θ���"\fR
-���μ����������褦�Ȥ��Ƥ��븵�θ����?
-���ȼ������äƤ���ΤǤ���С�
-�����ѿ��ϡ�English�פ����ꤵ��롣
+.B FROM_LANG = \fI"翻訳元の言語"\fR
+その辞書が翻訳しようとしている元の言語は?
+英独辞書を持っているのであれば、
+この変数は「English」に設定される。
 .TP
-.B TO_LANG = \fI"������θ���"\fR
-���μ����������褦�Ȥ��Ƥ�����θ����?
-���ȼ������äƤ���ΤǤ���С� 
-�����ѿ��ϡ�German�פ����ꤵ��롣
+.B TO_LANG = \fI"翻訳先の言語"\fR
+その辞書が翻訳しようとしている先の言語は?
+英独辞書を持っているのであれば、 
+この変数は「German」に設定される。
 .TP
-.B DICT_PREFIX = \fI"��dictd_www.mova.org_�פΤ褦�� SRC_URI prefix"\fR
-��dictd_www.mova.org_�פΤ褦�� SRC_URI prefix��
+.B DICT_PREFIX = \fI"「dictd_www.mova.org_」のような SRC_URI prefix"\fR
+「dictd_www.mova.org_」のような SRC_URI prefix。
 .TP
-.B DICT_SUFFIX = \fI"prefix ��³�� SRC_URI"\fR
-prefix ��³�� SRC_URI��
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "����"
+.B DICT_SUFFIX = \fI"prefix に続く SRC_URI"\fR
+prefix に続く SRC_URI。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/stardict.eclass
-.SH "����"
+.SH "著者"
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: stardict.eclass.5,v 1.3
+.SH "CVS ヘッダ"
+原文: stardict.eclass.5,v 1.3

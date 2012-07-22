@@ -4,133 +4,133 @@
 .\" Translated on 19 Aug 2003 by Mamoru KOMACHI <usata@gentoo.org>
 .\"
 .TH "GAMES.ECLASS" "5" "Jun 2003" "Portage 2.0.51" "Portage"
-.SH "̾��"
-games \- ������Υ��󥹥ȡ����ɸ�ಽ
-.SH "����"
-\fBgames\fR eclass �ϥ����ƥ�˥������ emerge
-������ˡ���楳��ȥ����뤹�뤿��˻Ȥ��롣
-����Ū�ˤϤ��� eclass �����ƤΥե����뤬���󥹥ȡ��뤵������
-��ͭ�Ԥ򥳥�ȥ����뤹�롣��ʬ�� game �����󥹥ȡ��뤵�����ˡ��
-�Ѥ������ʤ顢����ä� \fBgames\fI eclass ���Խ����Ƥߤ褦! :)
+.SH "名前"
+games \- ゲームのインストールの標準化
+.SH "説明"
+\fBgames\fR eclass はシステムにゲームを emerge
+する方法を集中コントロールするために使われる。
+基本的にはこの eclass で全てのファイルがインストールされる場所と
+所有者をコントロールする。自分の game がインストールされる方法を
+変えたいなら、ちょっと \fBgames\fI eclass を編集してみよう! :)
 .SH "VARIABLES"
 .TP
 .B "GAMES_PREFIX" = \fI"/usr/games"\fR
-������򥤥󥹥ȡ��뤹����� prefix��
+ゲームをインストールする場所の prefix。
 .TP
 .B "GAMES_PREFIX_OPT" = \fI"/opt"\fR
-�Х��ʥ����ۤ���Ƥ��륲����򥤥󥹥ȡ��뤹����� prefix��
+バイナリ配布されているゲームをインストールする場所の prefix。
 .TP
 .B "GAMES_DATADIR" = \fI"/usr/share/games"\fR
-���̥ǡ����ե�����򥤥󥹥ȡ��뤹����� prefix��
+共通データファイルをインストールする場所の prefix。
 .TP
 .B "GAMES_DATADIR_BASE" = \fI"/usr/share"\fR
-���Ʊ��������������ˤ�äƤϥǡ����ǥ��쥯�ȥ�Υѥ��˼�ư��
-��/games/�פ�ä����Τ����롣
+上と同じだが、ゲームによってはデータディレクトリのパスに自動で
+「/games/」を加えるものがある。
 .TP
 .B "GAMES_SYSCONFDIR" = \fI"/etc/games"\fR
-�����ब����ե��������¸�����ꡣ
+ゲームが設定ファイルを保存する場所。
 .TP
 .B "GAMES_STATEDIR" = \fI"/var/games"\fR
-�¹Ի������ब���֤���¸�����ꡣ
-����ˤϥϥ��������ե�����Τ褦�ʤ�Τ�ޤࡣ
-�����ब2�İʾ�ե�������������ʤ顢
-���ե������ \fB${GAMES_STATEDIR}/${PN}\fR
-�ǥ��쥯�ȥ�������¸�����褦�ˤ��롣
-�����Ǥʤ���С�ñ�� \fB${GAMES_STATEDIR}/\fR
-����˥ե������1�ĺ������롣
-�ޤ������ξ���ľ�ܥե�������������ʤ顢
-���Υե�����ˤϥѥå�������ͭ��̾����Ȥ��褦�������뤳�ȡ�
+実行時ゲームが状態を保存する場所。
+これにはハイスコアファイルのようなものも含む。
+ゲームが2つ以上ファイルを作成するなら、
+全ファイルは \fB${GAMES_STATEDIR}/${PN}\fR
+ディレクトリの中に保存されるようにする。
+そうでなければ、単に \fB${GAMES_STATEDIR}/\fR
+の中にファイルを1つ作成する。
+また、この場所に直接ファイルを作成するなら、
+そのファイルにはパッケージ固有の名前を使うよう心がけること。
 .TP
 .B "GAMES_LIBDIR" = \fI"/usr/games/lib"\fR
-�����ब�饤�֥�����¸�����ꡣ
+ゲームがライブラリを保存する場所。
 .TP
 .B "GAMES_BINDIR" = \fI"/usr/games/bin"\fR
-�����ब�¹ԥХ��ʥ����¸�⤷���ϥ�󥯤����ꡣ
-������ΥХ��ʥ�򤳤����֤����Ȥǡ�$PATH
-����ĥ���ɤ����Ȥ��Ǥ��롣
+ゲームが実行バイナリを保存もしくはリンクする場所。
+ゲームのバイナリをここに置くことで、$PATH
+の膨張を防ぐことができる。
 .TP
 .B "GAMES_ENVD" = \fI"90games"\fR
-env.d ����Ͽ����Ȥ��Ȥ��ե�����̾��
+env.d に登録するとき使うファイル名。
 .TP
 .B "GAMES_USER" = \fI"games"\fR
-������ط������ե�������ͭ����桼��̾��
+ゲーム関係の全ファイルを所有するユーザ名。
 .TP
 .B "GAMES_GROUP" = \fI"games"\fR
-������ط������ե�������ͭ���륰�롼��̾��
-.SH "�ؿ�: ����"
+ゲーム関係の全ファイルを所有するグループ名。
+.SH "関数: 全般"
 .TP
-.B "prepgamesdirs" \fI[�ǥ��쥯�ȥ�]\fR
-\fBGAMES_*\fR �ѿ��ǻ��ꤵ�줿�ǥ��쥯�ȥ�ȡ��ѥ�᡼���Ȥ��ƻ��ꤵ�줿
-�ɲåǥ��쥯�ȥ����Ǹ��Ĥ��ä����ե�����/�ǥ��쥯�ȥ�ν�ͭ�����ѹ����롣
-���δؿ��ϡ����ǥ��쥯�ȥ�Υѡ��ߥå����� 750 (u+rwx,g+rx-w,u-rwx)
-���ѹ��������������ե�����Υѡ��ߥå����� g+r,o-rwx
-�Υޥ����򤫤��롣
+.B "prepgamesdirs" \fI[ディレクトリ]\fR
+\fBGAMES_*\fR 変数で指定されたディレクトリと、パラメータとして指定された
+追加ディレクトリの中で見つかった全ファイル/ディレクトリの所有権を変更する。
+この関数は、全ディレクトリのパーミッションを 750 (u+rwx,g+rx-w,u-rwx)
+に変更し、そして全ファイルのパーミッションに g+r,o-rwx
+のマスクをかける。
 .br
-\fB*����\fR: ���δؿ��� *ɬ��* \fBsrc_install\fR
-�ؿ�����ǺǸ�˸ƤФ���ΤǤʤ���Фʤ�ʤ���
-�⤷���� Portage �Ǥ��δؿ�������¾�δؿ���Ƥ֤ʤ餳�δؿ���
-\fBsrc_install\fR �κǸ�ޤ��Ԥ����뤳�Ȥ��Ǥ��뤬��
-�Ǹ�����ޤǤˤ��δؿ���Ƥ֤Τ�˺��ʤ�����!
+\fB*注意\fR: この関数は *必ず* \fBsrc_install\fR
+関数の中で最後に呼ばれるものでなければならない。
+もし仮に Portage でこの関数の前に他の関数を呼ぶならこの関数は
+\fBsrc_install\fR の最後まで待たせることができるが、
+最後に来るまでにこの関数を呼ぶのを忘れないこと!
 .TP
 .B games_pkg_setup
-���δؿ��ϼ�ư�� \fBGAMES_USER\fR �� \fBGAMES_GROUP\fR
-�򥷥��ƥ���ɲä��롣
-ebuild �� \fBpkg_setup\fR ��������Ƥ���ʤ顢
-\fBpkg_setup\fR �ؿ��κǸ�Ǥ��δؿ���Ƥ֤Τ�˺�줺�ˡ�
+この関数は自動で \fBGAMES_USER\fR と \fBGAMES_GROUP\fR
+をシステムに追加する。
+ebuild で \fBpkg_setup\fR を定義しているなら、
+\fBpkg_setup\fR 関数の最後でこの関数を呼ぶのを忘れずに。
 .TP
 .B games_pkg_postinst
-���δؿ��ϼ�ư�� \fBGAMES_ENVD\fR �ե��������������
-�������ͷ�֤���ˤ� \fBGAMES_GROUP\fR
-�˽�°����ɬ�פ����뤳�Ȥ��ñ��ɽ�����롣
-ebuild �� \fBpkg_postinst\fR ��������Ƥ���ʤ顢
-\fBpkg_postinst\fR �ؿ��κǸ�Ǥ��δؿ���Ƥ֤Τ�˺�줺�ˡ�
-.SH "�ؿ�: ����ѥ���"
+この関数は自動で \fBGAMES_ENVD\fR ファイルを生成し、
+ゲームを遊ぶためには \fBGAMES_GROUP\fR
+に所属する必要があることを簡単に表示する。
+ebuild で \fBpkg_postinst\fR を定義しているなら、
+\fBpkg_postinst\fR 関数の最後でこの関数を呼ぶのを忘れずに。
+.SH "関数: コンパイル"
 .TP
 .B egamesconf
-\fBeconf\fR �ؿ���Ʊ��������������ط����ѿ�(�嵭����)���Ϥ���
-�ܤ�������� \fBebuild\fR(5) �� \fBeconf\fR �򻲾ȡ�
-.SH "�ؿ�: ���󥹥ȡ���"
+\fBeconf\fR 関数と同じだが、ゲーム関係の変数(上記参照)を渡す。
+詳しい情報は \fBebuild\fR(5) の \fBeconf\fR を参照。
+.SH "関数: インストール"
 .TP
 .B egamesinstall
-\fBeinstall\fR �ؿ���Ʊ��������������ط����ѿ�(�嵭����)���Ϥ���
-�ܤ�������� \fBebuild\fR(5) �� \fBeinstall\fR �򻲾ȡ�
+\fBeinstall\fR 関数と同じだが、ゲーム関係の変数(上記参照)を渡す。
+詳しい情報は \fBebuild\fR(5) の \fBeinstall\fR を参照。
 .TP
 .B dogamesbin dogamessbin
-\fBdobin\fR ��\fBdosbin\fR �Ȥ��줾��Ʊ��������\fBGAMES_PREFIX\fR
-�˥Х��ʥ�򥤥󥹥ȡ��뤹�롣�ܤ�������� \fBebuild\fR(5) �򻲾ȡ�
+\fBdobin\fR や\fBdosbin\fR とそれぞれ同じだが、\fBGAMES_PREFIX\fR
+にバイナリをインストールする。詳しい情報は \fBebuild\fR(5) を参照。
 .TP
 .B dogameslib dogameslib.a dogameslib.so
-\fBdolib\fR��\fBdolib.a\fR ������ \fBdolib.so\fR �Ȥ��줾��Ʊ��������
-\fBGAMES_PREFIX\fR �˥Х��ʥ�򥤥󥹥ȡ��뤹�롣
-�ܤ�������� \fBebuild\fR(5) �򻲾ȡ�
+\fBdolib\fR、\fBdolib.a\fR そして \fBdolib.so\fR とそれぞれ同じだが、
+\fBGAMES_PREFIX\fR にバイナリをインストールする。
+詳しい情報は \fBebuild\fR(5) を参照。
 .TP
 .B newgamesbin newgamessbin
-\fBnewbin\fR �� \fBnewsbin\fR �Ȥ��줾��Ʊ��������
-\fBGAMES_PREFIX\fR �˥Х��ʥ�򥤥󥹥ȡ��뤹�롣
-�ܤ�������� \fBebuild\fR(5) �򻲾ȡ�
+\fBnewbin\fR や \fBnewsbin\fR とそれぞれ同じだが、
+\fBGAMES_PREFIX\fR にバイナリをインストールする。
+詳しい情報は \fBebuild\fR(5) を参照。
 .TP
-.B gamesowners \fI<�ե�����ޤ��ϥǥ��쥯�ȥ�>\fR
-\fBgamesowners\fR �Ͻ�ͭ�ԤȽ�ͭ���롼�פ򤽤줾�� \fBGAMES_USER\fR
-�� \fBGAMES_GROUP\fR ���ѹ����롣
+.B gamesowners \fI<ファイルまたはディレクトリ>\fR
+\fBgamesowners\fR は所有者と所有グループをそれぞれ \fBGAMES_USER\fR
+と \fBGAMES_GROUP\fR に変更する。
 .TP
-.B gamesperms \fI<�ե�����ޤ��ϥǥ��쥯�ȥ�>\fR
-\fBgamesperms\fR �ϥѡ��ߥå����� u+rw,g+r-w,o-rwx
-�Υޥ������ѹ����롣
+.B gamesperms \fI<ファイルまたはディレクトリ>\fR
+\fBgamesperms\fR はパーミッションを u+rw,g+r-w,o-rwx
+のマスクで変更する。
 .TP
 .B games_make_wrapper \fI<wrapper>\fR \fI<bin>\fR \fI<chdir>\fR
-��ñ�ʥ�åѡ�������ץȤ�������롣
-�¹����ˤ��Υѥå������Υǡ����ĥ꡼�Υ롼�Ȥ˥ǥ��쥯�ȥ���ѹ�����
-ɬ�פ�����ѥå������򰷤��ݤ������Ǥ��롣
-���δؿ��� \fIbin\fR ��¹Ԥ������� \fIchdir\fR �ǥ��쥯�ȥ��
-chdir ���� \fIwrapper\fR �Ȥ���̾���Υ�åѡ�������ץȤ�������롣
-���� \fIwrapper\fR �ե������ \fBGAMES_BINDIR\fR ���֤���롣
-.SH "�Х����"
-�Х����� http://bugs.gentoo.org/ ��ͳ�ǹԤʤäƤ���������
-.SH "����"
+簡単なラッパースクリプトを作成する。
+実行前にそのパッケージのデータツリーのルートにディレクトリを変更する
+必要があるパッケージを扱う際に便利である。
+この関数は \fIbin\fR を実行する前に \fIchdir\fR ディレクトリに
+chdir する \fIwrapper\fR という名前のラッパースクリプトを作成する。
+この \fIwrapper\fR ファイルは \fBGAMES_BINDIR\fR に置かれる。
+.SH "バグ報告"
+バグ報告は http://bugs.gentoo.org/ 経由で行なってください。
+.SH "参照"
 .BR ebuild (5)
-.SH "�ե�����"
+.SH "ファイル"
 .BR /usr/portage/eclass/games.eclass
-.SH "����"
+.SH "著者"
 Mike Frysinger <vapier@gentoo.org>
-.SH "CVS �إå�"
-��ʸ: games.eclass.5,v 1.7
+.SH "CVS ヘッダ"
+原文: games.eclass.5,v 1.7

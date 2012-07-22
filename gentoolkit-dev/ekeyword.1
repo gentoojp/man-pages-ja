@@ -4,27 +4,27 @@
 .\" Translated on 25 Feb 2004 by Akinori Hattori <hattya@gentoo.org>
 .\"
 .TH ekeyword "1" "2004-04-13" "gentoolkit"
-.SH ̾��
-ekeyword \- Gentoo: �ѥå������� KEYWORDS ���ѹ�
-.SH ��
+.SH 名前
+ekeyword \- Gentoo: パッケージの KEYWORDS を変更
+.SH 書式
 ekeyword { arch|~arch|\-arch|^arch } ebuild...
-.SH ����
-���Υġ���ϡ�ʣ���� ebuild �ؤ� KEYWORDS ���ɲá��������ñ�ˤ��롣���ޥ�ɥ饤
-������Ȥ����Ϥ��줿������ɡ�ebuild �Υꥹ�Ȥ��Ϥ��줿��˽������Ƥ���������
-���ᡢ������ɤϰ�����Υ�����ɤ��鼡��ɽ���ޤǤδ֤ˤ��� ebuild ���Ф���
-��������롣
+.SH 説明
+このツールは、複数の ebuild への KEYWORDS の追加、更新を簡単にする。コマンドライ
+ン引数として渡されたキーワード、ebuild のリストは渡された順に処理していく。その
+ため、キーワードは一つ前のキーワードから次に表れるまでの間にある ebuild に対して
+処理される。
 .PP
-���Ƥ� arch ����ꤹ�뤫���� "all" �Ȥ���ñ����Ѥ��뤳�Ȥ��Ǥ��롣����ϡ���
-�� ebuild �ˤ�Ȥ�Ȼ��ꤵ��Ƥ�������������ƻ��ꤷ����ΤȤ����ѹ���Ŭ�Ѥ���
-�롣
+全ての arch を指定するかわりに "all" という単語を用いることができる。これは、そ
+の ebuild にもともと指定されていたキーワード全て指定したものとして変更が適用され
+る。
 .PP
-��Ƭ�ˤ��� ^ �Ϥ��� arch ��������롣
-.SH ���ץ����
-���ߤ� ekeyword �ˤϲ��ҤȤĥ��ץ����Ϥʤ���
-�����餯��\fB\-\-help\fR �� \fB\-\-version\fR �Ͼ����ɲä����������������ΤȤ�
-���� gentoolkit �ΥС�������Ȥ���
-.SH ��
-��Ĥ� arch �����ȥޡ������롣
+先頭にある ^ はその arch を除外する。
+.SH オプション
+現在の ekeyword には何ひとつオプションはない。
+おそらく、\fB\-\-help\fR と \fB\-\-version\fR は将来追加されるだろうが、今のとこ
+ろは gentoolkit のバージョンを使う。
+.SH 例
+一つの arch を安定とマークする。
 
 .RS 2
 .nf
@@ -36,7 +36,7 @@ metalog-0.7-r1.ebuild
 .fi
 .RE
 .PP
-�С�����󥢥åפ򤹤�Ȥ��ˡ����Ƥ� arch ��ƥ��Ȥȥޡ�������:
+バージョンアップをするときに、全ての arch をテストとマークする:
 
 .RS 2
 .nf
@@ -48,7 +48,7 @@ metalog-0.7-r2.ebuild
 .fi
 .RE
 .PP
-��Ĥ� arch ����������Ƥ� arch �ǲ���Ƥ��뤳�Ȥ�ɽ��:
+一つの arch を除き、全ての arch で壊れていることを表す:
 
 .RS 2
 .nf
@@ -60,7 +60,7 @@ metalog-0.7-r3.ebuild
 .fi
 .RE
 .PP
-���٤�¿���Τ��Ȥ�Ԥ�:
+一度に多くのことを行う:
 
 .RS 2
 .nf
@@ -80,6 +80,6 @@ metalog-0.7-r3.ebuild
 > KEYWORDS="-* ~x86"
 .fi
 .RE
-.SH ����
-���Υġ���� Aron Griffis <agriffis@gentoo.org> �ˤ�äƽ񤫤줿���Х���ȯ������
-���� http://bugs.gentoo.org/ �ˤƻ���Ф�����𤷤��ߤ�����
+.SH 注意
+このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見した
+場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。

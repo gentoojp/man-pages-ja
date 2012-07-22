@@ -4,37 +4,37 @@
 .\" Translated on 21 Feb 2004 by Akinori Hattori <hattya@gentoo.org>
 .\"
 .TH ECHANGELOG 1 "2004-04-02" "perl v5.8.2" "User Contributed Perl Documentation"
-.SH ̾��
-echangelog \- Gentoo: portage �� ChangeLog �򹹿�����
-.SH ��
+.SH 名前
+echangelog \- Gentoo: portage の ChangeLog を更新する
+.SH 書式
 echangelog [ \fItext\fR ]
-.SH ����
-echangelog �� Gentoo �ˤ����� Portage �� ChangeLog ��������ޤ��Ϲ���������ô��
-�ڸ����롣���Υġ���� /usr/portage/app\-editors/vim �Τ褦�ʥѥå������ǥ��쥯
-�ȥ�ˤ���Ȳ��ꤷ�����ߤΥǥ��쥯�ȥ�����������ѹ����⤷�����ɲä��줿�ե�����
-�򸫤Ĥ���ChangeLog �Υ���ȥ���ɲä��롣\fItext\fR �����ޥ�ɥ饤��Ǥ�������
-��ʤ��ä���硢echangelog �ϥ桼���������Ϥ�¥����
+.SH 説明
+echangelog は Gentoo における Portage の ChangeLog を作成、または更新する負担を
+軽減する。このツールは /usr/portage/app\-editors/vim のようなパッケージディレク
+トリにいると仮定し、現在のディレクトリを走査して変更、もしくは追加されたファイル
+を見つけ、ChangeLog のエントリに追加する。\fItext\fR がコマンドラインであたえら
+れなかった場合、echangelog はユーザーに入力を促す。
 .PP
-ChangeLog �Υ���ȥ�Ȥ��ơ����Τ˥ե�����ξ�����ɲä��뤿��ˡ����Ƥ��ѹ���
-echangelog ��¹Ԥ������ˤʤ����٤��Ǥ��롣���Ȥ��С��ɲä���ե������ "cvs
-add" ���Ƥ����ʤ��ȡ�echangelog �ϡ������Υե����뤬�����ΰ������Ȥ�ǧ�����ʤ���
+ChangeLog のエントリとして、正確にファイルの情報を追加するために、全ての変更は
+echangelog を実行する前になされるべきである。たとえば、追加するファイルを "cvs
+add" しておかないと、echangelog は、それらのファイルが更新の一部だとは認識しない。
 .PP
-ChangeLog �Υ���ȥ꤬ 80ʸ����ۤ������ˤϡ�ChangeLog ���κۤ��뤿��˼�ư
-Ū�˲��Ԥ���롣ChangeLog �ˤ��������̤ʽ񼰤��Ѥ������Τʤ顢(1) echangelog ��
-���ޥ�ɥ饤�󤫤鲿�� text ���Ϥ����˼¹Ԥ���text ��Ĺ���ʤ�ʤ����Ȥ�μ¤ˤ�
-�롣(2) ChangeLog ��ľ���Խ����롢�Τɤ���Ǥ��ǽ�Ǥ��롣(2) �����־��ˤϡ�
-"echangelog blah" �Τ褦�˼¹Ԥ�����ưŪ�˥إå��Ԥ��ɲä��줿�塢"blah" �򹥤�
-�� text ���Խ����뤳�Ȥ򴫤�롣
+ChangeLog のエントリが 80文字を越えた場合には、ChangeLog の体裁を守るために自動
+的に改行される。ChangeLog において特別な書式を用いたいのなら、(1) echangelog を
+コマンドラインから何の text も渡さずに実行し、text が長くならないことを確実にす
+る。(2) ChangeLog を直接編集する、のどちらでも可能である。(2) を選ぶ場合には、
+"echangelog blah" のように実行し、自動的にヘッダ行が追加された後、"blah" を好き
+な text に編集することを勧める。
 .PP
-ChangeLog �ι����ˤĤ����ɵ���echangelog �� ChangeLog �����ɽ�������Ǥʤ����� 
-ebuild �����ɽ���⼫ưŪ�˹������롣�������Ԥ�줿��κ�ʬɽ���ˤϡ������ѹ�
-����ɽ������롣
-.SH ���ץ����
-���ߤ� echangelog �ϲ��ҤȤĥ��ץ����Ϥʤ���
-�����餯��\fB\-\-help\fR �� \fB\-\-version\fR �Ͼ����ɲä����������������ΤȤ�
-���� gentoolkit �ΥС�������Ȥ���
-.SH ��
-�ѥå������˿����� ChangeLog ���������ݤˤϡ�skel.ebuild ����إå������롣
+ChangeLog の更新について追記。echangelog は ChangeLog の著作権表示だけでなく、全 
+ebuild の著作権表示も自動的に更新する。更新が行われた後の差分表示には、この変更
+点も表示される。
+.SH オプション
+現在の echangelog は何ひとつオプションはない。
+おそらく、\fB\-\-help\fR と \fB\-\-version\fR は将来追加されるだろうが、今のとこ
+ろは gentoolkit のバージョンを使う。
+.SH 例
+パッケージに新しく ChangeLog を作成する際には、skel.ebuild からヘッダを得る。
 
 .RS 2
 .nf
@@ -57,8 +57,8 @@ $ echangelog 'New ebuild, thanks to Harvey McGillicuddy'
 .fi
 .RE
 .PP
-��ӥ����򤢤���ݤˤϡ�echangelog ���������ե�������̤Ǥ���褦�� "cvs
-add" ���Ƥ���ɬ�פ����롣
+レビジョンをあげる際には、echangelog が新しいファイルを識別できるように "cvs
+add" しておく必要がある。
 
 .RS 2
 .nf
@@ -83,7 +83,7 @@ $ echangelog 'Bump revision to fix bug #999'
 .fi
 .RE
 .PP
-ʣ���ԤΥ���ȥ�����Ϥ���ݤˤϡ����ޥ�ɥ饤��������ά����Ф褤��
+複数行のエントリを入力する際には、コマンドライン引数を省略すればよい。
 
 .RS 2
 .nf
@@ -110,19 +110,19 @@ give users the updated default configuration file.
    23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1.ebuild :
 .fi
 .RE
-.SH �Ķ��ѿ�
+.SH 環境変数
 .IP ECHANGELOG_USER 4
-echangelog ������ȥ���ɲä���ݤˡ����ʤ��Υ桼�����͡���򤦤ޤ������Ǥ��ʤ�
-���ˤ� ECHANGELOG_USER �����ꤹ�٤��Ǥ��롣�㡢export ECHANGELOG_USER="Aron
-Griffis <agriffis@gentoo.org>"��
-.SH ����
-�Ƕ�� echangelog (���� man �ڡ�������Ͽ�����褦�ˤʤäƤ���)�ϡ������������
-���С�����󤴤ȤˤޤȤ��ΤǤϤʤ����Ĥͤ˥ե�����λϤ���ɲä���褦�ˤʤ�
-��������ϡ�Gentoo ��ȯ�Ԥˤ��Ȥ˿����� ChangeLog �ν񼰤����줵��Ƥ��ʤ��ä���
-��Ǥ��롣ξ���ν񼰤�¸�ߤ��뤳�Ȥˤ�ꡢ���𤵤��Ƥ��ޤ��������ʤ���
+echangelog がエントリを追加する際に、あなたのユーザーネームをうまく取得できない
+場合には ECHANGELOG_USER を設定すべきである。例、export ECHANGELOG_USER="Aron
+Griffis <agriffis@gentoo.org>"。
+.SH 注意
+最近の echangelog (この man ページが収録されるようになってから)は、新しいエント
+リをバージョンごとにまとめるのではなく、つねにファイルの始めに追加するようになっ
+た。これは、Gentoo 開発者にごとに新しい ChangeLog の書式が統一されていなかったか
+らである。両方の書式が存在することにより、混乱させてしまい申し訳ない。
 .PP
-�ޤ�����ϡ��ΤΥ᡼�뤫�饳�ԡ����Ƥ����嵭�����ְ�äƤ���Ȥ������Ȥ��̣��
-�Ƥ��롣�������ʤ��顢�ޤä����㤦�Ȥ����櫓�Ǥ�̵����;\-)
+またこれは、昔のメールからコピーしてきた上記の例も間違っているということを意味し
+ている。しかしながら、まったく違うというわけでも無い。;\-)
 .PP
-���Υġ���� Aron Griffis <agriffis@gentoo.org> �ˤ�äƽ񤫤줿���Х���ȯ������
-���� http://bug.gentoo.org/ �ˤƻ���Ф�����𤷤Ƥۤ�����
+このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見した
+場合は http://bug.gentoo.org/ にて私に対して報告してほしい。
