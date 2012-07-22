@@ -1,0 +1,1113 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the Portage package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Portage 2.0.51-r3\n"
+"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: en/portage/dispatch-conf.1:1 en/portage/ebuild.1:1 en/portage/emerge.1:1
+#: en/portage/env-update.1:1 en/portage/etc-update.1:1
+#: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
+#: en/portage/check-kernel.eclass.5:1 en/portage/cvs.eclass.5:1
+#: en/portage/distutils.eclass.5:1 en/portage/ebook.eclass.5:1
+#: en/portage/ebuild.5:1 en/portage/eutils.eclass.5:1
+#: en/portage/flag-o-matic.eclass.5:1 en/portage/font.eclass.5:1
+#: en/portage/games.eclass.5:1 en/portage/horde.eclass.5:1
+#: en/portage/libtool.eclass.5:1 en/portage/make.conf.5:1
+#: en/portage/perl-module.eclass.5:1 en/portage/portage.5:1
+#: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
+#: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
+#: en/portage/vim.eclass.5:1
+#, fuzzy, no-wrap
+msgid "Portage 2.0.51"
+msgstr "Portage 2.0.51"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:2 en/portage/ebuild.1:2 en/portage/emerge.1:2
+#: en/portage/env-update.1:2 en/portage/etc-update.1:2
+#: en/portage/g-cpan.pl.1:2 en/portage/quickpkg.1:2 en/portage/repoman.1:2
+#: en/portage/check-kernel.eclass.5:2 en/portage/cvs.eclass.5:2
+#: en/portage/distutils.eclass.5:2 en/portage/ebook.eclass.5:2
+#: en/portage/ebuild.5:2 en/portage/eutils.eclass.5:2
+#: en/portage/flag-o-matic.eclass.5:2 en/portage/font.eclass.5:2
+#: en/portage/games.eclass.5:2 en/portage/horde.eclass.5:2
+#: en/portage/libtool.eclass.5:2 en/portage/make.conf.5:2
+#: en/portage/perl-module.eclass.5:2 en/portage/portage.5:2
+#: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
+#: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
+#: en/portage/vim.eclass.5:2
+#, fuzzy, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:6 en/portage/ebuild.1:8 en/portage/emerge.1:17
+#: en/portage/env-update.1:6 en/portage/etc-update.1:6
+#: en/portage/g-cpan.pl.1:6 en/portage/quickpkg.1:6 en/portage/repoman.1:6
+#: en/portage/check-kernel.eclass.5:4 en/portage/cvs.eclass.5:4
+#: en/portage/distutils.eclass.5:4 en/portage/ebook.eclass.5:4
+#: en/portage/ebuild.5:4 en/portage/eutils.eclass.5:4
+#: en/portage/flag-o-matic.eclass.5:4 en/portage/font.eclass.5:4
+#: en/portage/games.eclass.5:4 en/portage/horde.eclass.5:4
+#: en/portage/libtool.eclass.5:4 en/portage/make.conf.5:6
+#: en/portage/perl-module.eclass.5:4 en/portage/portage.5:4
+#: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
+#: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
+#: en/portage/vim.eclass.5:4
+#, fuzzy, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:76 en/portage/ebuild.1:160
+#: en/portage/emerge.1:501 en/portage/env-update.1:22
+#: en/portage/etc-update.1:22 en/portage/g-cpan.pl.1:22
+#: en/portage/quickpkg.1:42 en/portage/repoman.1:115
+#: en/portage/check-kernel.eclass.5:44 en/portage/cvs.eclass.5:72
+#: en/portage/distutils.eclass.5:30 en/portage/ebook.eclass.5:66
+#: en/portage/ebuild.5:799 en/portage/eutils.eclass.5:167
+#: en/portage/flag-o-matic.eclass.5:60 en/portage/font.eclass.5:52
+#: en/portage/games.eclass.5:110 en/portage/horde.eclass.5:33
+#: en/portage/libtool.eclass.5:38 en/portage/make.conf.5:342
+#: en/portage/perl-module.eclass.5:52 en/portage/portage.5:554
+#: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
+#: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
+#: en/portage/vim.eclass.5:42
+#, fuzzy, no-wrap
+msgid "REPORTING BUGS"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグの報告\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告"
+
+#. type: Plain text
+#: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
+#: en/portage/env-update.1:24 en/portage/etc-update.1:24
+#: en/portage/g-cpan.pl.1:24 en/portage/quickpkg.1:44 en/portage/repoman.1:117
+#: en/portage/check-kernel.eclass.5:46 en/portage/cvs.eclass.5:74
+#: en/portage/distutils.eclass.5:32 en/portage/ebook.eclass.5:68
+#: en/portage/ebuild.5:801 en/portage/eutils.eclass.5:169
+#: en/portage/flag-o-matic.eclass.5:62 en/portage/font.eclass.5:54
+#: en/portage/games.eclass.5:112 en/portage/horde.eclass.5:35
+#: en/portage/libtool.eclass.5:40 en/portage/make.conf.5:344
+#: en/portage/perl-module.eclass.5:54 en/portage/portage.5:556
+#: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
+#: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
+#: en/portage/vim.eclass.5:44
+#, fuzzy
+msgid "Please report bugs via http://bugs.gentoo.org/"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグは、http://bugs.gentoo.org/ から報告すること。\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
+#: en/portage/emerge.1:508 en/portage/env-update.1:24
+#: en/portage/etc-update.1:24 en/portage/quickpkg.1:44
+#: en/portage/repoman.1:117 en/portage/check-kernel.eclass.5:46
+#: en/portage/cvs.eclass.5:74 en/portage/distutils.eclass.5:32
+#: en/portage/ebook.eclass.5:68 en/portage/ebuild.5:801
+#: en/portage/eutils.eclass.5:169 en/portage/flag-o-matic.eclass.5:62
+#: en/portage/font.eclass.5:54 en/portage/games.eclass.5:112
+#: en/portage/horde.eclass.5:35 en/portage/libtool.eclass.5:40
+#: en/portage/make.conf.5:344 en/portage/perl-module.eclass.5:54
+#: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
+#: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
+#: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
+#, fuzzy, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:80 en/portage/ebuild.1:170
+#: en/portage/emerge.1:519 en/portage/etc-update.1:26 en/portage/quickpkg.1:47
+#: en/portage/check-kernel.eclass.5:48 en/portage/cvs.eclass.5:76
+#: en/portage/distutils.eclass.5:34 en/portage/ebook.eclass.5:70
+#: en/portage/ebuild.5:808 en/portage/eutils.eclass.5:171
+#: en/portage/flag-o-matic.eclass.5:65 en/portage/font.eclass.5:56
+#: en/portage/games.eclass.5:114 en/portage/horde.eclass.5:39
+#: en/portage/libtool.eclass.5:42 en/portage/make.conf.5:353
+#: en/portage/perl-module.eclass.5:59 en/portage/rpm.eclass.5:32
+#: en/portage/ssl-cert.eclass.5:49 en/portage/stardict.eclass.5:29
+#: en/portage/toolchain-funcs.eclass.5:76 en/portage/vim.eclass.5:47
+#, fuzzy, no-wrap
+msgid "FILES"
+msgstr "ファイル"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:84 en/portage/ebuild.1:175
+#: en/portage/emerge.1:558 en/portage/env-update.1:20
+#: en/portage/etc-update.1:33 en/portage/g-cpan.pl.1:18
+#: en/portage/quickpkg.1:51 en/portage/repoman.1:113
+#: en/portage/check-kernel.eclass.5:50 en/portage/cvs.eclass.5:78
+#: en/portage/distutils.eclass.5:36 en/portage/ebook.eclass.5:72
+#: en/portage/ebuild.5:816 en/portage/eutils.eclass.5:173
+#: en/portage/flag-o-matic.eclass.5:67 en/portage/font.eclass.5:58
+#: en/portage/games.eclass.5:116 en/portage/horde.eclass.5:45
+#: en/portage/libtool.eclass.5:44 en/portage/make.conf.5:366
+#: en/portage/perl-module.eclass.5:61 en/portage/portage.5:548
+#: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
+#: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
+#: en/portage/vim.eclass.5:49
+#, fuzzy, no-wrap
+msgid "AUTHORS"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者"
+
+#. type: Plain text
+#: en/portage/dispatch-conf.1:90 en/portage/ebuild.1:183
+#: en/portage/emerge.1:570 en/portage/etc-update.1:39
+#: en/portage/cvs.eclass.5:80 en/portage/distutils.eclass.5:38
+#: en/portage/eutils.eclass.5:175 en/portage/flag-o-matic.eclass.5:69
+#: en/portage/games.eclass.5:118 en/portage/make.conf.5:372
+#: en/portage/perl-module.eclass.5:65 en/portage/rpm.eclass.5:36
+#: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
+#, fuzzy
+msgid "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
+msgstr "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:92 en/portage/ebuild.1:183
+#: en/portage/emerge.1:573 en/portage/env-update.1:27
+#: en/portage/etc-update.1:39 en/portage/g-cpan.pl.1:24
+#: en/portage/quickpkg.1:55 en/portage/repoman.1:119
+#: en/portage/check-kernel.eclass.5:52 en/portage/cvs.eclass.5:80
+#: en/portage/distutils.eclass.5:38 en/portage/ebook.eclass.5:74
+#: en/portage/ebuild.5:823 en/portage/eutils.eclass.5:175
+#: en/portage/flag-o-matic.eclass.5:69 en/portage/font.eclass.5:63
+#: en/portage/games.eclass.5:118 en/portage/horde.eclass.5:50
+#: en/portage/libtool.eclass.5:46 en/portage/make.conf.5:372
+#: en/portage/perl-module.eclass.5:65 en/portage/portage.5:561
+#: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
+#: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
+#: en/portage/vim.eclass.5:55
+#, fuzzy, no-wrap
+msgid "CVS HEADER"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVSヘッダー\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ"
+
+#. type: TH
+#: en/portage/emerge.1:1 en/portage/cvs.eclass.5:1
+#: en/portage/distutils.eclass.5:1 en/portage/eutils.eclass.5:1
+#: en/portage/flag-o-matic.eclass.5:1 en/portage/games.eclass.5:1
+#: en/portage/perl-module.eclass.5:1 en/portage/rpm.eclass.5:1
+#: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
+#: en/portage/vim.eclass.5:1
+#, fuzzy, no-wrap
+msgid "Jun 2003"
+msgstr "Jun 2003"
+
+#. type: TH
+#: en/portage/check-kernel.eclass.5:1 en/portage/cvs.eclass.5:1
+#: en/portage/distutils.eclass.5:1 en/portage/ebook.eclass.5:1
+#: en/portage/ebuild.5:1 en/portage/eutils.eclass.5:1
+#: en/portage/flag-o-matic.eclass.5:1 en/portage/font.eclass.5:1
+#: en/portage/games.eclass.5:1 en/portage/horde.eclass.5:1
+#: en/portage/libtool.eclass.5:1 en/portage/make.conf.5:1
+#: en/portage/perl-module.eclass.5:1 en/portage/rpm.eclass.5:1
+#: en/portage/ssl-cert.eclass.5:1 en/portage/stardict.eclass.5:1
+#: en/portage/toolchain-funcs.eclass.5:1 en/portage/vim.eclass.5:1
+#, fuzzy, no-wrap
+msgid "portage"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"portage\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"portage\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"portage\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"portage\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"portage\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"Portage"
+
+#. type: SH
+#: en/portage/check-kernel.eclass.5:21 en/portage/cvs.eclass.5:59
+#: en/portage/distutils.eclass.5:19 en/portage/ebook.eclass.5:60
+#: en/portage/ebuild.5:339 en/portage/eutils.eclass.5:9
+#: en/portage/flag-o-matic.eclass.5:7 en/portage/font.eclass.5:39
+#: en/portage/horde.eclass.5:15 en/portage/libtool.eclass.5:12
+#: en/portage/perl-module.eclass.5:15 en/portage/rpm.eclass.5:17
+#: en/portage/ssl-cert.eclass.5:36 en/portage/toolchain-funcs.eclass.5:10
+#, fuzzy, no-wrap
+msgid "FUNCTIONS"
+msgstr "関数"
+
+#. type: Plain text
+#: en/portage/check-kernel.eclass.5:48 en/portage/cvs.eclass.5:76
+#: en/portage/distutils.eclass.5:34 en/portage/ebook.eclass.5:70
+#: en/portage/eutils.eclass.5:171 en/portage/font.eclass.5:56
+#: en/portage/games.eclass.5:114 en/portage/libtool.eclass.5:42
+#: en/portage/rpm.eclass.5:32 en/portage/ssl-cert.eclass.5:49
+#: en/portage/stardict.eclass.5:29 en/portage/toolchain-funcs.eclass.5:76
+#, fuzzy
+msgid "B<ebuild>(5)"
+msgstr "B<ebuild>(5)"
+
+#. type: TH
+#: en/portage/eutils.eclass.5:1
+#, fuzzy, no-wrap
+msgid "EUTILS.ECLASS"
+msgstr "EUTILS.ECLASS"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:4
+#, fuzzy
+msgid "eutils - many extra (but common) functions that are used in ebuilds"
+msgstr "eutils - ebuild で使われる追加の(でもよく使われる)いろいろな関数"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:9
+#, fuzzy
+msgid ""
+"The B<eutils> eclass contains a suite of functions that complement the ones "
+"that ebuild.sh already contain.  The idea is that the functions are not "
+"required in all ebuilds but enough utilize them to have a common home."
+msgstr ""
+"B<eutils> eclass は ebuild.sh にすでに含まれている関数を補助する 関数セットを"
+"持っている。考え方としては、全 ebuild に必須というわけではないが、共通の置き"
+"場所を定めるには十分、 というような関数セットを集めている。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:10
+#, fuzzy, no-wrap
+msgid "B<cdrom_get_cds >I<E<lt>cd1 fileE<gt>> I<[cd2 file]> I<[cd n file]>"
+msgstr "B<cdrom_get_cds >I<E<lt>cd1 fileE<gt>> I<[cd2 file]> I<[cd n file]>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:22
+#, fuzzy
+msgid ""
+"Useful function to help ebuilds that need to read files off of a CD.  This "
+"is most commonly used with games.  Just specify a list of files, one per cd, "
+"that will be used to detect whether the cd is mounted or not.  This function "
+"handles all the messy details of interaction with the user.  Once this "
+"function returns, you will have access to the I<CDROM_ROOT> variable.  If "
+"you want the message to the user to name the CD in a particular way, then "
+"export the variable I<CDROM_NAME> before calling this function.  If you want "
+"to name more than one cd, and you want them to each have a different name, "
+"then export the variables I<CDROM_NAME_1>, I<CDROM_NAME_2>, etc...  For more "
+"information on multi-cd support, see B<cdrom_load_next_cd>."
+msgstr ""
+"CDからファイルを読み取る必要があるebuild作成に便利な関数である。 gameのパッ"
+"ケージでもっともよく使われる。 CDごとにCDがマウントされているかどうか検出する"
+"ために使うファイルのリストを指定するだけである。 この関数はユーザーとの対話的"
+"なごちゃごちゃとしたことを全部受け持ってくれる。 この関数が終了すれば、"
+"I<CDROM_ROOT>変数にアクセスすることができる。 もしなにがしかの方法でCDの名前"
+"をユーザーに伝えたければ、この関数を呼ぶ前にI<CDROM_NAME>変数をexportしておけ"
+"ばよい。 1つ以上のCDの名前をそれぞれ違う名前で出したければ、I<CDROM_NAME_1>、"
+"I<CDROM_NAME_2>、といったようにexportすればよい。 複数CDのサポートについての"
+"詳しい情報は、B<cdrom_load_next_cd>を参照。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:22
+#, fuzzy, no-wrap
+msgid "B<cdrom_load_next_cd>"
+msgstr "B<cdrom_load_next_cd>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:30
+#, fuzzy
+msgid ""
+"Some packages are so big they come on multiple CDs.  When you're done "
+"reading files off a CD and want access to the next one, just call this "
+"function.  Again, all the messy details of user interaction are taken care "
+"of for you.  Once this returns, just read the variable I<CDROM_ROOT> for the "
+"location of the mounted CD.  Note that you can only go forward in the CD "
+"list, so make sure you only call this function when you're done using the "
+"current CD."
+msgstr ""
+"大き過ぎるため複数のCDで配布されているパッケージもある。 1つのCDからファイル"
+"を読み終え、次のCDにアクセスしたいときには、この関数を呼べばよい。 ここでも、"
+"ユーザーとの対話的なごちゃごちゃしたやりとりはこの関数が代わりにやってくれ"
+"る。 この関数が終了したら、マウントされたCDの場所はI<CDROM_ROOT>を読めばよ"
+"い。 CDリストを次々に読んでいくことしかできないので、現在のCDについての処理が"
+"全部終わってからこの関数を呼ぶよう留意すること。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:30
+#, fuzzy, no-wrap
+msgid "B<draw_line>"
+msgstr "B<draw_line>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:34
+#, fuzzy
+msgid ""
+"Simple function to draw a line consisting of '=' the same length as $*.  So "
+"if you run `draw_line 1234 5678` you will get back 9 '=' characters in a "
+"line."
+msgstr ""
+"$* と同じ長さの「=」からなる線を引く単純な関数。 `draw_line 1234 5678` を実行"
+"すれば、1行に9文字の「=」が得られる。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:34
+#, fuzzy, no-wrap
+msgid "B<edos2unix >I<E<lt>filesE<gt>>"
+msgstr "B<edos2unix >I<E<lt>ファイルE<gt>>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:40
+#, fuzzy
+msgid ""
+"A handy replacement for dos2unix, recode, fixdos, etc...  This allows you to "
+"remove all of these text utilities from DEPEND variables because this is a "
+"script based solution.  Just give it a list of files to convert and they "
+"will all be changed from the DOS CRLF format to the UNIX LF format."
+msgstr ""
+"dos2unix、recode、fixdos などなどを手軽に置き換える。 この関数はスクリプト"
+"ベースのものなので、これを使えば DEPEND 変数からこれらのテキストユーティリ"
+"ティを全部取り除くことができる。 変換するファイル名を与えるだけで、 DOS の "
+"CRLF 形式から UNIX の LF 形式に変換することができる。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:40
+#, fuzzy, no-wrap
+msgid "B<enewgroup >I<E<lt>groupE<gt>> I<[gid]>"
+msgstr "B<enewgroup >I<E<lt>グループ名E<gt>> I<[gid]>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:46
+#, fuzzy
+msgid ""
+"This function does not require you to understand how to properly add a group "
+"to the system.  Just give it a I<group name> to add and B<enewgroup> will do "
+"the rest.  You may specify the I<gid> for the group or allow the group to "
+"allocate the next available one."
+msgstr ""
+"この関数を使えば、 グループをシステムに追加する正しい方法を知らなくてもよくな"
+"る。 追加する I<グループ名> を与えれば、B<enewgroup> が残りをやってくれる。そ"
+"のグループに I<gid> を指定することもできるし、次に使用できる I<gid> を自動で"
+"確保して割り当てることもできる。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:46
+#, fuzzy, no-wrap
+msgid "B<enewuser >I<E<lt>userE<gt>> I<[uid]> I<[shell]> I<[homedir]> I<[groups]> I<[params]>"
+msgstr "B<enewuser >I<E<lt>ユーザ名E<gt>> I<[uid]> I<[シェル]> I<[ホームディレクトリ]> I<[グループ名]> I<[パラメータ]>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:50
+#, fuzzy
+msgid ""
+"Same as B<enewgroup>, you are not required to understand how to properly add "
+"a user to the system.  The only required parameter is the I<username>."
+msgstr ""
+"B<enewgroup> と同じで、 ユーザをシステムに追加する正しい方法を知らなくてよく"
+"なる。 必須のパラメータは I<ユーザ名> だけである。"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:52
+#, fuzzy
+msgid "B<Default Values>"
+msgstr "B<デフォルト値>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:54
+#, fuzzy
+msgid "I<uid>: next available (pass -1 to get default behavior)"
+msgstr ""
+"I<uid>: 次に使用できる値 (デフォルトのふるまいをさせたければ -1 を渡す)"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:56
+#, fuzzy
+msgid "I<shell>: /bin/false"
+msgstr "I<シェル>: /bin/false"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:58
+#, fuzzy
+msgid "I<homedir>: /dev/null"
+msgstr "I<ホームディレクトリ>: /dev/null"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:60
+#, fuzzy
+msgid "I<groups>: no groups"
+msgstr "I<グループ名>: グループなし"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:62
+#, fuzzy
+msgid ""
+"I<params>: any other parameters B<useradd>(8) accepts; see the manpage for "
+"more details"
+msgstr ""
+"I<パラメータ>: B<useradd>(8) が受け取れるその他のパラメータ全部。 詳しくは "
+"man ページ参照"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:62
+#, fuzzy, no-wrap
+msgid "B<epatch>"
+msgstr "B<epatch>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:65
+#, fuzzy
+msgid "See the section on B<epatch> below."
+msgstr "下記 B<epatch> セクション参照。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:65
+#, fuzzy, no-wrap
+msgid "B<gen_usr_ldscript>"
+msgstr "B<gen_usr_ldscript>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:71
+#, fuzzy
+msgid ""
+"Generate linker scripts in /usr/lib for dynamic libs in /lib.  This is to "
+"fix linking problems when you have the .so in /lib, and the .a in /usr/lib.  "
+"What happens is that in some cases when linking dynamic, the .a in /usr/lib "
+"is used instead of the .so in /lib due to gcc/libtool tweaking ld's library "
+"search path."
+msgstr ""
+"/lib にあるダイナミックライブラリのためのリンカースクリプトを /usr/lib に生成"
+"する。 これは /lib に .so、そして /usr/lib に .a があるときのリンク問題を解決"
+"するためのものである。 ときどき、gcc や libtool のライブラリ検索パスを変更し"
+"ていると、 ダイナミックリンクのとき /lib にある .so ではなく /usr/lib にあ"
+"る .a が使われる、ということが起きるのである。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:71
+#, fuzzy, no-wrap
+msgid "B<get_number_of_jobs>"
+msgstr "B<get_number_of_jobs>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:74
+#, fuzzy
+msgid ""
+"Checks how many cpu's are present in the system and then sets -j in MAKEOPTS "
+"accordingly."
+msgstr ""
+"システムに存在する CPU の数を調べ、得られた結果それに従って MAKEOPTS に -j を"
+"設定する。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:74
+#, fuzzy, no-wrap
+msgid "B<have_NPTL>"
+msgstr "B<have_NPTL>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:77
+#, fuzzy
+msgid ""
+"This function return true if we are using the NPTL pthreads implementation "
+"of glibc."
+msgstr "この関数は glibc の NPTL pthread の実装を使っていると真を返す。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:77
+#, fuzzy, no-wrap
+msgid "B<make_desktop_entry >I<E<lt>binaryE<gt>> I<[name]> I<[icon]> I<[type]> I<[path]>"
+msgstr "B<make_desktop_entry >I<E<lt>バイナリE<gt>> I<[名前]> I<[アイコン]> I<[種類]> I<[パス]>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:88
+#, fuzzy
+msgid ""
+"Make a little shortcut in GNOME/KDE menus for your application.  Just pass "
+"the name of the binary to execute and the rest will be done for you.  If you "
+"want to change the name that will show up in the menu, pass the function a "
+"I<name> parameter.  If you want to specify an I<icon> (default is B<${PN}>."
+"png) then pass a name of a graphic file relative to /usr/share/pixmaps/ or "
+"the full path to a file.  If you want to specify the section of the menu "
+"that the icon will install to (rather than the default determined by B<"
+"${CATEGORY}>) then pass a I<type> value (see http://www.freedesktop.org/"
+"standards/menu-spec/ for valid values).  Finally, if the application needs "
+"to start up in a special directory, pass the last value as the full I<path> "
+"name."
+msgstr ""
+"GNOME や KDE のメニューにアプリケーションへの小さなショートカットを作る。 実"
+"行するバイナリの名前を渡すだけで、残りは全部やってくれる。 メニューに表れる名"
+"前を変えたければ、この関数に I<名前> のパラメータを渡す。I<アイコン> (デフォ"
+"ルトは B<${PN}>.png)  を指定したければ、/usr/share/pixmaps/ からの相対パス、 "
+"もしくはファイルへの絶対パスで画像ファイルの名前を渡す。 アイコンがインストー"
+"ルされるメニューのセクションを (B<${CATEGORY}> で決定されるデフォルトの場所で"
+"はなく)  指定したければ、I<種類> の値を指定する (取りうる値については http://"
+"www.freedesktop.org/standards/menu-spec/ 参照)。最後に、 アプリケーションが特"
+"別なディレクトリで起動しなければならないなら、 最後の値をフル I<パス> 名とし"
+"て渡す。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:88
+#, fuzzy, no-wrap
+msgid "B<unpack_makeself >I<[makeself>B<archive]>I<[byte>B<offset]>\""
+msgstr "B<unpack_makeself >I<[makeself>B<archive]>I<[byte>B<offset]>\""
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:95
+#, fuzzy
+msgid ""
+"Unpack a makeself archive rather than relying on the script to unpack "
+"itself.  Useful for when the scripts use old (POSIX) syntax that is no "
+"longer supported properly.  If you don't specify a file to unpack, then B<"
+"${A}> is used instead.  If you don't specify the offset, then the proper "
+"value will be located by searching the makeself script.  For more "
+"information on makeself archives, please visit: http://www.megastep.org/"
+"makeself/"
+msgstr ""
+"makeself自身の展開スクリプトに頼らずmakeselfアーカイブを展開する。 makeselfス"
+"クリプトがもう適切にサポートされていない古い構文(POSIX)を使っている場合に便利"
+"である。 展開するファイルを指定しなければ、B<${A}>が代わりに使われる。 オフ"
+"セットを指定しなければ、makeselfスクリプトを検索して正しい値を見つける。 "
+"makeselfアーカイブについての詳しい情報は、http://www.megastep.org/makeself/を"
+"参照のこと。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:95
+#, fuzzy, no-wrap
+msgid "B<unpack_pdv >I<E<lt>pdv archiveE<gt>> I<E<lt>sizeof(off_t)E<gt>>"
+msgstr "B<unpack_pdv >I<E<lt>pdv archiveE<gt>> I<E<lt>sizeof(off_t)E<gt>>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:104
+#, fuzzy
+msgid ""
+"Unpack a pdv archive rather than relying on the binary to unpack itself.  "
+"Useful for when the static binary crashes randomly on systems and for when "
+"the binary doesn't provide a non-interactive extraction process.  You have "
+"to specify the off_t size since I (vapier@gentoo.org)  am unaware of a way "
+"to extract that information out of the binary executable automatically.  The "
+"value you pass is the size of the off_t type (in bytes) on the machine that "
+"built the pdv archive.  If you don't know the value yourself, try guessing "
+"the values 2, 4, or 8.  For more information on pdv archives, please visit: "
+"http://pdv.sourceforge.net/"
+msgstr ""
+"pdv自身の展開バイナリに頼らずpdvアーカイブを展開する。 スタティックバイナリが"
+"ときどきクラッシュするシステムや、バイナリが非対話的な展開方法を提供していな"
+"い場合に便利である。 off_tサイズを指定しなければならないのは、わたし"
+"(vapier@gentoo.org)がバイナリ実行ファイルから自動的にオフセット情報を抽出する"
+"方法を知らないからだ。 渡す値はpdvアーカイブを作成した計算機でのoff_tタイプの"
+"サイズ(バイト)である。 その値が分からないのであれば、2、4、もしくは8を試して"
+"みるとよい。 pdvアーカイブについての詳しい情報は、http://pdv.sourceforge.net/"
+"を参照のこと。"
+
+#. type: SH
+#: en/portage/eutils.eclass.5:104
+#, fuzzy, no-wrap
+msgid "EPATCH"
+msgstr "EPATCH"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:105
+#, fuzzy, no-wrap
+msgid "B<ABOUT>"
+msgstr "B<epatch について>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:116
+#, fuzzy
+msgid ""
+"B<epatch> is designed to make patching easy.  It does all the common checks "
+"that a developer would do with the B<patch>(1) command and then some.  It "
+"will attempt to apply the patch for a range of offset values (-p0 to -p5, "
+"all relative to the working directory when B<epatch> was called).  If the "
+"patch fails to apply (by testing via dryruns), then B<patch> will stop the "
+"emerge process by calling B<die>.  You will be given a log file of the "
+"output of the patch attempt so as to ease debugging.  The output of a "
+"successful patch is a pretty formatted message showing what patches were "
+"applied.  B<epatch> can be used for bulk patching or for just one or two "
+"patches.  Additionally, it can handle patches in bzip2, gzip, compress (Z), "
+"and zip formats."
+msgstr ""
+"B<epatch> はパッチを簡単にするために設計された。 開発者が B<patch>(1) コマン"
+"ドを使ったときにもするであろう、 一般的なチェックを全部やってくれる。 この関"
+"数は、いろいろなオフセット値 (-p0 から -p5 まで、B<epatch> が呼ばれたときの作"
+"業ディレクトリに相対的に)でパッチを当てようと試みる。 パッチを当てるのに(--"
+"dry-run でテストすることによって)失敗すれば、 B<epatch> は B<die> を呼ぶこと"
+"によって emerge プロセスを停止させる。 デバッグが簡単なように、パッチを試行し"
+"た出力がログファイルとして残る。 パッチが成功すれば、 どのパッチが当たったの"
+"かを示すきれいに整形されたメッセージが出力される。 B<epatch> は山のようなパッ"
+"チを当てるのにも、 ほんの1つや2つのパッチを当てるのにも使うことができる。 そ"
+"れに加え、この関数は bzip2、gzip、compress (Z) そして zip 形式で圧縮された"
+"パッチファイルを扱うこともできる。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:116
+#, fuzzy, no-wrap
+msgid "B<USAGE>"
+msgstr "B<使用方法>"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:119
+#, fuzzy, no-wrap
+msgid "B<epatch  >I<E<lt>patch fileE<gt>>"
+msgstr "B<epatch  >I<E<lt>パッチファイルE<gt>>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:123
+#, fuzzy
+msgid ""
+"The most common and easiest way to use B<epatch> is by just giving it the "
+"full path to a patch file."
+msgstr ""
+"B<epatch> を使うもっとも簡単で一般的な方法は、 単にパッチファイルへのフルパス"
+"を与えるだけである。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:123
+#, fuzzy, no-wrap
+msgid "B<epatch  >I<E<lt>directoryE<gt>>"
+msgstr "B<epatch  >I<E<lt>ディレクトリE<gt>>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:128
+#, fuzzy
+msgid ""
+"A more powerful use is to fill a directory with patches and then let "
+"B<epatch> apply all the patches inside it.  The patches must be in the "
+"format ??_${B<ARCH>}_foo.${B<EPATCH_SUFFIX>}.  This ensures that there are a "
+"set order, and you can have B<ARCH> specific patches."
+msgstr ""
+"さらに強力な使い方は、ディレクトリにパッチをたくさん入れ、 そして B<epatch> "
+"にそのディレクトリにあるパッチ全部を当てさせる、 というものである。パッチ"
+"は ??_${B<ARCH>}_foo.${B<EPATCH_SUFFIX>} という形式でなければならない。 こう"
+"するときちんとパッチが順序づけられていることが保証され、 B<ARCH> 固有のパッチ"
+"を当てることもできる。"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:131
+#, fuzzy
+msgid "01_all_misc-fix.patch.bz2"
+msgstr "01_all_misc-fix.patch.bz2"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:133
+#, fuzzy, no-wrap
+msgid "   apply the misc-fix patch first for all arches\n"
+msgstr "   全アーキテクチャ向けに最初人 misc-fix のパッチを当てる\n"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:135
+#, fuzzy
+msgid "02_sparc_another-fix.patch.bz2"
+msgstr "02_sparc_another-fix.patch.bz2"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:137
+#, fuzzy, no-wrap
+msgid "   apply the another-fix patch second but only on sparc\n"
+msgstr "   SPARC のときだけ another-fix パッチを2番目に当てる\n"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:138
+#, fuzzy, no-wrap
+msgid "B<VARIABLES>"
+msgstr "B<変数>"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:141
+#, fuzzy, no-wrap
+msgid "B<EPATCH_SOURCE = >I<\"${WORKDIR}/patch\">"
+msgstr "B<EPATCH_SOURCE = >I<\"${WORKDIR}/patch\">"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:145
+#, fuzzy
+msgid ""
+"The patch or directory of patches for B<epatch> to apply.  This is set "
+"automatically if you call B<epatch> with a parameter."
+msgstr ""
+"B<epatch> が当てるパッチやパッチのディレクトリの名前。 この変数は B<epatch> "
+"をパラメータつきで呼べば自動で設定される。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:145
+#, fuzzy, no-wrap
+msgid "B<EPATCH_SUFFIX = >I<\"patch.bz2\">"
+msgstr "B<EPATCH_SUFFIX = >I<\"patch.bz2\">"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:148
+#, fuzzy
+msgid ""
+"When applying bulk patches this is the suffix that all patches will have."
+msgstr ""
+"たくさんのパッチを当てるとき、 この値が全てのパッチの持つ suffix になる。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:148
+#, fuzzy, no-wrap
+msgid "B<EPATCH_OPTS = >I<\"\">"
+msgstr "B<EPATCH_OPTS = >I<\"\">"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:152
+#, fuzzy
+msgid ""
+"Any extra options you may want to pass to B<patch>(1).  We can't think of "
+"everything so why restrict you :).  The default is \"\" of course."
+msgstr ""
+"B<patch>(1) に渡す追加オプション。 我々も全てお見通しという訳ではないので、制"
+"限する理由もない :)  デフォルトはもちろん \"\" である。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:152
+#, fuzzy, no-wrap
+msgid "B<EPATCH_EXCLUDE = >I<\"\">"
+msgstr "B<EPATCH_EXCLUDE = >I<\"\">"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:156
+#, fuzzy
+msgid ""
+"A space delimited list (well, actually B<$IFS> delimited ...) of patch files "
+"to skip while bulk patching.  Use only file names, not full paths."
+msgstr ""
+"スペースで区切られた (いや、本当のところは B<IFS> で区切られた……)  ファイル名"
+"のリストで、 たくさんのパッチを当てるとき飛ばすパッチのファイル名を列挙す"
+"る。 ファイル名だけ書き、フルパスは使わないこと。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:156
+#, fuzzy, no-wrap
+msgid "B<EPATCH_SINGLE_MSG = >I<\"Applying E<lt>patch nameE<gt>\">"
+msgstr "B<EPATCH_SINGLE_MSG = >I<\"Applying E<lt>パッチ名E<gt>\">"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:161
+#, fuzzy
+msgid ""
+"If you only apply a single patch, then instead of displaying the default "
+"message you can change it to say anything you want, even 'Dont call me Radio "
+"Unit 51', if you are so inclined of course."
+msgstr ""
+"たった1つのパッチをあてるのだとすれば、 デフォルトのメッセージを表示するので"
+"はなく、 なんでも言いたいことを言うよう変更できる。 もしやりたければ、もちろ"
+"ん「わたしを無線装置 51 と呼ばないで」 と表示させることだってできる。"
+
+#. type: TP
+#: en/portage/eutils.eclass.5:161
+#, fuzzy, no-wrap
+msgid "B<EPATCH_FORCE = >I<\"[yes|no]\">"
+msgstr "B<EPATCH_FORCE = >I<\"[yes|no]\">"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:166
+#, fuzzy
+msgid ""
+"This allows you to apply all patches in B<EPATCH_SOURCE> even if they dont "
+"match the ??_${B<ARCH>}_foo.${B<EPATCH_SUFFIX>} file naming convention.  By "
+"default we want you to use the above convention."
+msgstr ""
+"この変数では B<EPATCH_SOURCE> にあるパッチが ??_${B<ARCH>}_foo."
+"${B<EPATCH_SUFFIX>} というファイル名のルールに則っていなくても全て当てるかど"
+"うか決める。 デフォルトでは上記のルールを使ってもらいたい。"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:173
+#, fuzzy
+msgid "B</usr/portage/eclass/eutils.eclass>"
+msgstr "B</usr/portage/eclass/eutils.eclass>"
+
+#. type: Plain text
+#: en/portage/eutils.eclass.5:176
+#, fuzzy
+msgid ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/eutils.eclass.5,v 1.5 "
+"2004/09/17 00:17:10 vapier Exp $"
+msgstr "原文: eutils.eclass.5,v 1.5"

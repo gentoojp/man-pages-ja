@@ -1,0 +1,531 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the Portage package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Portage 2.0.51-r3\n"
+"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: en/portage/dispatch-conf.1:1 en/portage/ebuild.1:1 en/portage/emerge.1:1
+#: en/portage/env-update.1:1 en/portage/etc-update.1:1
+#: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
+#: en/portage/check-kernel.eclass.5:1 en/portage/cvs.eclass.5:1
+#: en/portage/distutils.eclass.5:1 en/portage/ebook.eclass.5:1
+#: en/portage/ebuild.5:1 en/portage/eutils.eclass.5:1
+#: en/portage/flag-o-matic.eclass.5:1 en/portage/font.eclass.5:1
+#: en/portage/games.eclass.5:1 en/portage/horde.eclass.5:1
+#: en/portage/libtool.eclass.5:1 en/portage/make.conf.5:1
+#: en/portage/perl-module.eclass.5:1 en/portage/portage.5:1
+#: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
+#: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
+#: en/portage/vim.eclass.5:1
+#, fuzzy, no-wrap
+msgid "Portage 2.0.51"
+msgstr "Portage 2.0.51"
+
+#. type: TH
+#: en/portage/dispatch-conf.1:1 en/portage/ebuild.1:1 en/portage/emerge.1:1
+#: en/portage/env-update.1:1 en/portage/etc-update.1:1
+#: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
+#: en/portage/portage.5:1
+#, fuzzy, no-wrap
+msgid "Portage"
+msgstr "Portage"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:2 en/portage/ebuild.1:2 en/portage/emerge.1:2
+#: en/portage/env-update.1:2 en/portage/etc-update.1:2
+#: en/portage/g-cpan.pl.1:2 en/portage/quickpkg.1:2 en/portage/repoman.1:2
+#: en/portage/check-kernel.eclass.5:2 en/portage/cvs.eclass.5:2
+#: en/portage/distutils.eclass.5:2 en/portage/ebook.eclass.5:2
+#: en/portage/ebuild.5:2 en/portage/eutils.eclass.5:2
+#: en/portage/flag-o-matic.eclass.5:2 en/portage/font.eclass.5:2
+#: en/portage/games.eclass.5:2 en/portage/horde.eclass.5:2
+#: en/portage/libtool.eclass.5:2 en/portage/make.conf.5:2
+#: en/portage/perl-module.eclass.5:2 en/portage/portage.5:2
+#: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
+#: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
+#: en/portage/vim.eclass.5:2
+#, fuzzy, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:4 en/portage/ebuild.1:5 en/portage/emerge.1:4
+#: en/portage/env-update.1:4 en/portage/etc-update.1:4
+#: en/portage/g-cpan.pl.1:4 en/portage/quickpkg.1:4 en/portage/repoman.1:4
+#: en/portage/make.conf.5:4 en/portage/portage.5:12
+#, fuzzy, no-wrap
+msgid "SYNOPSIS"
+msgstr "書式"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:6 en/portage/ebuild.1:8 en/portage/emerge.1:17
+#: en/portage/env-update.1:6 en/portage/etc-update.1:6
+#: en/portage/g-cpan.pl.1:6 en/portage/quickpkg.1:6 en/portage/repoman.1:6
+#: en/portage/check-kernel.eclass.5:4 en/portage/cvs.eclass.5:4
+#: en/portage/distutils.eclass.5:4 en/portage/ebook.eclass.5:4
+#: en/portage/ebuild.5:4 en/portage/eutils.eclass.5:4
+#: en/portage/flag-o-matic.eclass.5:4 en/portage/font.eclass.5:4
+#: en/portage/games.eclass.5:4 en/portage/horde.eclass.5:4
+#: en/portage/libtool.eclass.5:4 en/portage/make.conf.5:6
+#: en/portage/perl-module.eclass.5:4 en/portage/portage.5:4
+#: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
+#: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
+#: en/portage/vim.eclass.5:4
+#, fuzzy, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:26 en/portage/emerge.1:167
+#: en/portage/env-update.1:17 en/portage/etc-update.1:19
+#: en/portage/quickpkg.1:21 en/portage/repoman.1:14
+#, fuzzy, no-wrap
+msgid "OPTIONS"
+msgstr "オプション"
+
+#. type: TP
+#: en/portage/dispatch-conf.1:27 en/portage/env-update.1:18
+#: en/portage/etc-update.1:20
+#, fuzzy, no-wrap
+msgid "None."
+msgstr "なし。"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:76 en/portage/ebuild.1:160
+#: en/portage/emerge.1:501 en/portage/env-update.1:22
+#: en/portage/etc-update.1:22 en/portage/g-cpan.pl.1:22
+#: en/portage/quickpkg.1:42 en/portage/repoman.1:115
+#: en/portage/check-kernel.eclass.5:44 en/portage/cvs.eclass.5:72
+#: en/portage/distutils.eclass.5:30 en/portage/ebook.eclass.5:66
+#: en/portage/ebuild.5:799 en/portage/eutils.eclass.5:167
+#: en/portage/flag-o-matic.eclass.5:60 en/portage/font.eclass.5:52
+#: en/portage/games.eclass.5:110 en/portage/horde.eclass.5:33
+#: en/portage/libtool.eclass.5:38 en/portage/make.conf.5:342
+#: en/portage/perl-module.eclass.5:52 en/portage/portage.5:554
+#: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
+#: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
+#: en/portage/vim.eclass.5:42
+#, fuzzy, no-wrap
+msgid "REPORTING BUGS"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグの報告\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告"
+
+#. type: Plain text
+#: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
+#: en/portage/env-update.1:24 en/portage/etc-update.1:24
+#: en/portage/g-cpan.pl.1:24 en/portage/quickpkg.1:44 en/portage/repoman.1:117
+#: en/portage/check-kernel.eclass.5:46 en/portage/cvs.eclass.5:74
+#: en/portage/distutils.eclass.5:32 en/portage/ebook.eclass.5:68
+#: en/portage/ebuild.5:801 en/portage/eutils.eclass.5:169
+#: en/portage/flag-o-matic.eclass.5:62 en/portage/font.eclass.5:54
+#: en/portage/games.eclass.5:112 en/portage/horde.eclass.5:35
+#: en/portage/libtool.eclass.5:40 en/portage/make.conf.5:344
+#: en/portage/perl-module.eclass.5:54 en/portage/portage.5:556
+#: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
+#: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
+#: en/portage/vim.eclass.5:44
+#, fuzzy
+msgid "Please report bugs via http://bugs.gentoo.org/"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグは、http://bugs.gentoo.org/ から報告すること。\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
+#: en/portage/emerge.1:508 en/portage/env-update.1:24
+#: en/portage/etc-update.1:24 en/portage/quickpkg.1:44
+#: en/portage/repoman.1:117 en/portage/check-kernel.eclass.5:46
+#: en/portage/cvs.eclass.5:74 en/portage/distutils.eclass.5:32
+#: en/portage/ebook.eclass.5:68 en/portage/ebuild.5:801
+#: en/portage/eutils.eclass.5:169 en/portage/flag-o-matic.eclass.5:62
+#: en/portage/font.eclass.5:54 en/portage/games.eclass.5:112
+#: en/portage/horde.eclass.5:35 en/portage/libtool.eclass.5:40
+#: en/portage/make.conf.5:344 en/portage/perl-module.eclass.5:54
+#: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
+#: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
+#: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
+#, fuzzy, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"関連項目\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"参照"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:84 en/portage/ebuild.1:175
+#: en/portage/emerge.1:558 en/portage/env-update.1:20
+#: en/portage/etc-update.1:33 en/portage/g-cpan.pl.1:18
+#: en/portage/quickpkg.1:51 en/portage/repoman.1:113
+#: en/portage/check-kernel.eclass.5:50 en/portage/cvs.eclass.5:78
+#: en/portage/distutils.eclass.5:36 en/portage/ebook.eclass.5:72
+#: en/portage/ebuild.5:816 en/portage/eutils.eclass.5:173
+#: en/portage/flag-o-matic.eclass.5:67 en/portage/font.eclass.5:58
+#: en/portage/games.eclass.5:116 en/portage/horde.eclass.5:45
+#: en/portage/libtool.eclass.5:44 en/portage/make.conf.5:366
+#: en/portage/perl-module.eclass.5:61 en/portage/portage.5:548
+#: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
+#: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
+#: en/portage/vim.eclass.5:49
+#, fuzzy, no-wrap
+msgid "AUTHORS"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"作者\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"著者"
+
+#. type: SH
+#: en/portage/dispatch-conf.1:92 en/portage/ebuild.1:183
+#: en/portage/emerge.1:573 en/portage/env-update.1:27
+#: en/portage/etc-update.1:39 en/portage/g-cpan.pl.1:24
+#: en/portage/quickpkg.1:55 en/portage/repoman.1:119
+#: en/portage/check-kernel.eclass.5:52 en/portage/cvs.eclass.5:80
+#: en/portage/distutils.eclass.5:38 en/portage/ebook.eclass.5:74
+#: en/portage/ebuild.5:823 en/portage/eutils.eclass.5:175
+#: en/portage/flag-o-matic.eclass.5:69 en/portage/font.eclass.5:63
+#: en/portage/games.eclass.5:118 en/portage/horde.eclass.5:50
+#: en/portage/libtool.eclass.5:46 en/portage/make.conf.5:372
+#: en/portage/perl-module.eclass.5:65 en/portage/portage.5:561
+#: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
+#: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
+#: en/portage/vim.eclass.5:55
+#, fuzzy, no-wrap
+msgid "CVS HEADER"
+msgstr ""
+"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVSヘッダー\n"
+"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ\n"
+"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
+"CVS ヘッダ"
+
+#. type: Plain text
+#: en/portage/ebuild.1:179 en/portage/emerge.1:560 en/portage/env-update.1:22
+#: en/portage/repoman.1:115 en/portage/make.conf.5:368
+#, fuzzy
+msgid "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
+msgstr "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
+
+#. type: TH
+#: en/portage/env-update.1:1
+#, fuzzy, no-wrap
+msgid "ENV-UPDATE"
+msgstr "ENV-UPDATE"
+
+#. type: TH
+#: en/portage/env-update.1:1 en/portage/etc-update.1:1 en/portage/ebuild.5:1
+#: en/portage/make.conf.5:1
+#, fuzzy, no-wrap
+msgid "Feb 2003"
+msgstr "Feb 2003"
+
+#. type: Plain text
+#: en/portage/env-update.1:4
+#, fuzzy
+msgid "env-update - updates environment settings automatically"
+msgstr "env-update - 環境設定を自動で更新する"
+
+#. type: Plain text
+#: en/portage/env-update.1:6
+#, fuzzy
+msgid "B<env-update>"
+msgstr "B<env-update>"
+
+#. type: Plain text
+#: en/portage/env-update.1:17
+#, fuzzy
+msgid ""
+"B<env-update> reads the files in I</etc/env.d> and automatically generates "
+"I</etc/profile.env> and I</etc/ld.so.conf>.  Then B<ldconfig>(8)  is run to "
+"update I</etc/ld.so.cache>.  B<env-update> is run by B<emerge>(1) "
+"automatically after each package merge.  Also, if you make changes to I</etc/"
+"env.d>, you should run I<env-update> yourself for changes to take effect "
+"immediately.  Note that this would only affect new processes.  In order for "
+"the changes to affect your active shell, you will probably have to run "
+"I<source /etc/profile> first."
+msgstr ""
+"B<env-update> I</etc/env.d> にあるファイルを読み、自動で I</etc/profile.env> "
+"と I</etc/ld.so.conf> を生成する。そして B<ldconfig>(8)  を実行し、I</etc/ld."
+"so.cache> を更新する。 B<env-update> は 各パッケージがインストール/アンインス"
+"トールされたあと B<emerge>(1)  によって自動で実行される。また、I</etc/env.d> "
+"に変更を加えた場合、 すぐに変更を反映するためには自分で I<env-update> を実行"
+"しなければ ならない。こうしても新しいプロセスにしか影響しないことに注意するこ"
+"と。 動作中のシェルにも変更を反映させるためには、まずI<source /etc/profile> "
+"を実行しなければならないだろう。"
+
+#. type: Plain text
+#: en/portage/env-update.1:27
+#, fuzzy
+msgid "B<emerge>(1), B<ldconfig>(8)"
+msgstr "B<emerge>(1), B<ldconfig>(8)"
+
+#. type: Plain text
+#: en/portage/env-update.1:28
+#, fuzzy
+msgid ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/env-update.1,v 1.6 2004/09/17 "
+"00:17:10 vapier Exp $"
+msgstr "原文: env-update.1,v 1.6"

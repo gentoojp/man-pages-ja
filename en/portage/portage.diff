@@ -1,0 +1,52 @@
+--- a/en/portage/dispatch-conf.1
++++ b/en/portage/dispatch-conf.1
+@@ -1,4 +1,4 @@
+-.TH "DISPATCH-CONF "1" "May 2004" "Portage 2.0.51" "Portage"
++.TH "DISPATCH-CONF" "1" "May 2004" "Portage 2.0.51" "Portage"
+ .SH NAME
+ dispatch-conf \- Sanely update configuration files after emerging new packages
+ .SH SYNOPSIS
+@@ -64,7 +64,7 @@ Look at the differences between the pre-merged and merged config files.
+ .B t
+ Toggle between the merged and pre-merged config files (in terms of which
+ should be installed using the 
+-.Qt u
++.B u
+ command).
+ .TP
+ .B h
+--- a/en/portage/ebuild.5
++++ b/en/portage/ebuild.5
+@@ -217,8 +217,8 @@ examples you may find in the portage tree:
+ \fI!\fR means block packages from being installed at the same time.
+ .br
+ \fI*\fR means match any version of the package so long as the specified 
+-base is matched.  So with a version of '2*', we can match '2.1', '2.2', 
+-'2.2.1', etc... and not match version '1.0', '3.0', '4.1', etc...
++base is matched.  So with a version of '2*', we can match '2.1', '2.2', '2.2.1', 
++etc... and not match version '1.0', '3.0', '4.1', etc...
+ .br
+ \fI~\fR means match any revision of the base version specified.  So in the 
+ above example, we would match versions '1.0.2a', '1.0.2a-r1', '1.0.2a-r2', 
+@@ -520,8 +520,8 @@ writers.  If you wish to pass more options to configure, just pass the
+ extra arguements to \fBeconf\fR.
+ .TP
+ \fBemake\fR \fI[make options]\fR
+-This is used as a replacement for make.  Performs
+-'make ${MAKEOPTS} \fImake options\fR' (as set in /etc/make.globals),
++This is used as a replacement for make.  Performs 'make ${MAKEOPTS} 
++\fImake options\fR' (as set in /etc/make.globals),
+ default is MAKEOPTS="\-j2".
+ 
+ \fB***warning***\fR
+@@ -707,8 +707,8 @@ Performs the ln command as either a hard link or symlink.
+ .TP
+ \fBdohtml\fR \fI [\-a filetypes] [\-r] [\-x list\-of\-dirs\-to\-ignore] [list\-of\-files\-and\-dirs]\fR
+ Installs the files in the list of files (space\-separated list) into
+-/usr/share/doc/${PF}/html provided the file ends in .html, .png, .js,
+-.jpg or .css.  Setting \-a limits what types of files will be included,
++/usr/share/doc/${PF}/html provided the file ends in .html, .png, .js, .jpg 
++or .css.  Setting \-a limits what types of files will be included,
+ \-A appends to the default list, setting \-x sets which dirs to exclude
+ (CVS excluded by default), \-r sets recursive.
+ .TP

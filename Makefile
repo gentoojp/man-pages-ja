@@ -86,8 +86,96 @@ gentoolkit_dev_PODS    := $(addprefix $(builddir)/,$(filter %.pod,$(gentoolkit_d
 gentoolkit_dev_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(gentoolkit_dev_SOURCES))) \
                           $(patsubst %.pod,%.1,$(gentoolkit_dev_PODS))
 
+portage_NAME    := Portage
+portage_VERSION := 2.0.51-r3
+portage_DATE    := 2004-11-05
+portage_SOURCES := portage/dispatch-conf.1 \
+                   portage/dispatch-conf.1.ja.po \
+                   portage/dispatch-conf.1.txt \
+                   portage/ebuild.1 \
+                   portage/ebuild.1.ja.po \
+                   portage/ebuild.1.txt \
+                   portage/emerge.1 \
+                   portage/emerge.1.ja.po \
+                   portage/emerge.1.txt \
+                   portage/env-update.1 \
+                   portage/env-update.1.ja.po \
+                   portage/env-update.1.txt \
+                   portage/etc-update.1 \
+                   portage/etc-update.1.ja.po \
+                   portage/etc-update.1.txt \
+                   portage/g-cpan.pl.1 \
+                   portage/g-cpan.pl.1.ja.po \
+                   portage/g-cpan.pl.1.txt \
+                   portage/quickpkg.1 \
+                   portage/quickpkg.1.ja.po \
+                   portage/quickpkg.1.txt \
+                   portage/repoman.1 \
+                   portage/repoman.1.ja.po \
+                   portage/repoman.1.txt \
+                   portage/check-kernel.eclass.5 \
+                   portage/check-kernel.eclass.5.ja.po \
+                   portage/check-kernel.eclass.5.txt \
+                   portage/cvs.eclass.5 \
+                   portage/cvs.eclass.5.ja.po \
+                   portage/cvs.eclass.5.txt \
+                   portage/distutils.eclass.5 \
+                   portage/distutils.eclass.5.ja.po \
+                   portage/distutils.eclass.5.txt \
+                   portage/ebook.eclass.5 \
+                   portage/ebook.eclass.5.ja.po \
+                   portage/ebook.eclass.5.txt \
+                   portage/ebuild.5 \
+                   portage/ebuild.5.ja.po \
+                   portage/ebuild.5.txt \
+                   portage/eutils.eclass.5 \
+                   portage/eutils.eclass.5.ja.po \
+                   portage/eutils.eclass.5.txt \
+                   portage/fixheadtails.eclass.5 \
+                   portage/flag-o-matic.eclass.5 \
+                   portage/flag-o-matic.eclass.5.ja.po \
+                   portage/flag-o-matic.eclass.5.txt \
+                   portage/font.eclass.5 \
+                   portage/font.eclass.5.ja.po \
+                   portage/font.eclass.5.txt \
+                   portage/games.eclass.5 \
+                   portage/games.eclass.5.ja.po \
+                   portage/games.eclass.5.txt \
+                   portage/horde.eclass.5 \
+                   portage/horde.eclass.5.ja.po \
+                   portage/horde.eclass.5.txt \
+                   portage/libtool.eclass.5 \
+                   portage/libtool.eclass.5.ja.po \
+                   portage/libtool.eclass.5.txt \
+                   portage/make.conf.5 \
+                   portage/make.conf.5.ja.po \
+                   portage/make.conf.5.txt \
+                   portage/perl-module.eclass.5 \
+                   portage/perl-module.eclass.5.ja.po \
+                   portage/perl-module.eclass.5.txt \
+                   portage/portage.5 \
+                   portage/portage.5.ja.po \
+                   portage/portage.5.txt \
+                   portage/rpm.eclass.5 \
+                   portage/rpm.eclass.5.ja.po \
+                   portage/rpm.eclass.5.txt \
+                   portage/ssl-cert.eclass.5 \
+                   portage/ssl-cert.eclass.5.ja.po \
+                   portage/ssl-cert.eclass.5.txt \
+                   portage/stardict.eclass.5 \
+                   portage/stardict.eclass.5.ja.po \
+                   portage/stardict.eclass.5.txt \
+                   portage/toolchain-funcs.eclass.5 \
+                   portage/toolchain-funcs.eclass.5.ja.po \
+                   portage/toolchain-funcs.eclass.5.txt \
+                   portage/vim.eclass.5 \
+                   portage/vim.eclass.5.ja.po \
+                   portage/vim.eclass.5.txt \
+                   portage/portage.cfg
+portage_MANS    := $(addprefix $(builddir)/,$(filter %.1 %.5,$(portage_SOURCES)))
 
-.PHONY: all clean pod epm esearch gentoolkit gentoolkit-dev
+
+.PHONY: all clean pod epm esearch gentoolkit gentoolkit-dev portage
 .SECONDEXPANSION:
 
 %.1: %.in
@@ -101,7 +189,7 @@ gentoolkit_dev_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(gentoolkit_dev
 %.in: %.pod
 	$(POD2MAN) $(PODFLAGS) $< >$@
 
-all: epm esearch gentoolkit gentoolkit-dev
+all: epm esearch gentoolkit gentoolkit-dev portage
 
 clean:
 	rm -rf $(builddir)
@@ -138,4 +226,10 @@ $(gentoolkit_dev_MANS): $(gentoolkit_dev_PODS)
 $(gentoolkit_dev_PODS): .po4a-gentoolkit-dev-stamp
 .po4a-gentoolkit-dev-stamp: $(gentoolkit_dev_SOURCES)
 	$(call po4a,gentoolkit-dev)
+	touch $@
+
+portage: $(portage_MANS)
+$(portage_MANS): .po4a-portage-stamp
+.po4a-portage-stamp: $(portage_SOURCES)
+	$(call po4a,portage)
 	touch $@
