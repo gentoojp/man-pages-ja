@@ -1,0 +1,6 @@
+*.pot
+*.sw?
+*~
+.*-stamp
+gettextization.failed.po
+build/
