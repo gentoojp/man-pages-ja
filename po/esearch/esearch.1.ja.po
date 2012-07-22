@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the esearch package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: esearch 0.5.3\n"
+"POT-Creation-Date: 2012-07-22 18:27+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: en/esearch/esearch.1:1
+#, fuzzy, no-wrap
+msgid "esearch"
+msgstr "esearch"
+
+#. type: TH
+#: en/esearch/esearch.1:1
+#, fuzzy, no-wrap
+msgid "Januar 11, 2004"
+msgstr "Januar 11, 2004"
+
+#. type: SH
+#: en/esearch/esearch.1:3
+#, fuzzy, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: Plain text
+#: en/esearch/esearch.1:5
+#, fuzzy
+msgid "esearch - replacement for 'emerge search' with search-index"
+msgstr "esearch - 検索インデックスで 'emerge search' を置換"
+
+#. type: SH
+#: en/esearch/esearch.1:6
+#, fuzzy, no-wrap
+msgid "SYNOPSIS"
+msgstr "書式"
+
+#. type: Plain text
+#: en/esearch/esearch.1:9
+#, fuzzy
+msgid "B<esearch> [ options ] E<lt>patternE<gt>"
+msgstr "B<esearch> [ オプション ] E<lt>パターンE<gt>"
+
+#. type: SH
+#: en/esearch/esearch.1:10
+#, fuzzy, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: Plain text
+#: en/esearch/esearch.1:14
+#, fuzzy
+msgid ""
+"esearch is a small script which behaves exactly like emerge -s resp.  emerge "
+"-S. The advantage of esearch over emerge is the search index it uses. It is "
+"a lot faster than emerge -s/-S."
+msgstr ""
+"esearch は小さなスクリプトで、まさしく emerge -s や emerge -S に それぞれ似せ"
+"て動作する。emerge に対する esearch の長所は esearch が使う検索インデックスで"
+"ある。esearch は emerge -s/-S よりはるかに 高速である。"
+
+#. type: SH
+#: en/esearch/esearch.1:15
+#, fuzzy, no-wrap
+msgid "OPTIONS"
+msgstr "オプション"
+
+#. type: TP
+#: en/esearch/esearch.1:16
+#, fuzzy, no-wrap
+msgid "B<--help, -h>"
+msgstr "B<--help, -h>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:19
+#, fuzzy
+msgid "Print help message"
+msgstr "ヘルプメッセージを表示"
+
+#. type: TP
+#: en/esearch/esearch.1:19
+#, fuzzy, no-wrap
+msgid "B<--searchdesc, -S>"
+msgstr "B<--searchdesc, -S>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:22
+#, fuzzy
+msgid "Search package descriptions as well"
+msgstr "パッケージの説明も検索"
+
+#. type: TP
+#: en/esearch/esearch.1:22
+#, fuzzy, no-wrap
+msgid "B<--fullname, -F>"
+msgstr "B<--fullname, -F>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:25
+#, fuzzy
+msgid "Search packages full name (includes category)"
+msgstr "パッケージのフルネーム(カテゴリーを含む)を検索"
+
+#. type: TP
+#: en/esearch/esearch.1:25
+#, fuzzy, no-wrap
+msgid "B<--compact, -c>"
+msgstr "B<--compact, -c>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:28
+#, fuzzy
+msgid "More compact output format"
+msgstr "出力形式をもっとコンパクトにする"
+
+#. type: TP
+#: en/esearch/esearch.1:28
+#, fuzzy, no-wrap
+msgid "B<--ebuild, -e>"
+msgstr "B<--ebuild, -e>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:31
+#, fuzzy
+msgid "View ebuilds of found packages"
+msgstr "見つかったパッケージの ebuild を見る"
+
+#. type: TP
+#: en/esearch/esearch.1:31
+#, fuzzy, no-wrap
+msgid "B<--output=format, -o format>"
+msgstr "B<--output=format, -o format>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:37
+#, fuzzy
+msgid ""
+"Use user-defined output format, B<format> is a string with may contain "
+"special characters, see FORMAT section for details"
+msgstr ""
+"ユーザ定義の出力形式を使う B<format> は特殊文字を含みうる文字列である。 詳し"
+"くは「形式」のセクションを参照"
+
+#. type: TP
+#: en/esearch/esearch.1:37
+#, fuzzy, no-wrap
+msgid "B<--nocolor, -n>"
+msgstr "B<--nocolor, -n>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:40
+#, fuzzy
+msgid "Don't use ANSI codes for colored output"
+msgstr "色つき出力に ANSI コードを使わない"
+
+#. type: SH
+#: en/esearch/esearch.1:41
+#, fuzzy, no-wrap
+msgid "FORMAT"
+msgstr "形式"
+
+#. type: TP
+#: en/esearch/esearch.1:42
+#, fuzzy, no-wrap
+msgid "B<%c>"
+msgstr "B<%c>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:45
+#, fuzzy
+msgid "category"
+msgstr "カテゴリー"
+
+#. type: TP
+#: en/esearch/esearch.1:45
+#, fuzzy, no-wrap
+msgid "B<%n>"
+msgstr "B<%n>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:48
+#, fuzzy
+msgid "package name"
+msgstr "パッケージ名"
+
+#. type: TP
+#: en/esearch/esearch.1:48
+#, fuzzy, no-wrap
+msgid "B<%p>"
+msgstr "B<%p>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:51
+#, fuzzy
+msgid "same as \"%c/%n\""
+msgstr "\"%c/%n\" と同じ"
+
+#. type: TP
+#: en/esearch/esearch.1:51
+#, fuzzy, no-wrap
+msgid "B<%m>"
+msgstr "B<%m>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:54
+#, fuzzy
+msgid "\"masked\" if package is masked, otherwise \"\""
+msgstr "パッケージがマスクされていれば \"masked\" されていなければ \"\""
+
+#. type: TP
+#: en/esearch/esearch.1:54
+#, fuzzy, no-wrap
+msgid "B<%va>"
+msgstr "B<%va>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:57
+#, fuzzy
+msgid "latest version available"
+msgstr "利用可能な最新バージョン"
+
+#. type: TP
+#: en/esearch/esearch.1:57
+#, fuzzy, no-wrap
+msgid "B<%vi>"
+msgstr "B<%vi>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:60
+#, fuzzy
+msgid "latest version installed, or \"\""
+msgstr ""
+"インストールされている最新バージョン、インストールされていなければ \"\""
+
+#. type: TP
+#: en/esearch/esearch.1:60
+#, fuzzy, no-wrap
+msgid "B<%s>"
+msgstr "B<%s>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:63
+#, fuzzy
+msgid "size of downloaded files"
+msgstr "ダウンロードされたファイルのサイズ"
+
+#. type: TP
+#: en/esearch/esearch.1:63
+#, fuzzy, no-wrap
+msgid "B<%h>"
+msgstr "B<%h>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:66
+#, fuzzy
+msgid "Homepage"
+msgstr "ホームページ"
+
+#. type: TP
+#: en/esearch/esearch.1:66
+#, fuzzy, no-wrap
+msgid "B<%d>"
+msgstr "B<%d>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:69
+#, fuzzy
+msgid "Description"
+msgstr "説明"
+
+#. type: SH
+#: en/esearch/esearch.1:70
+#, fuzzy, no-wrap
+msgid "EXAMPLES"
+msgstr "例"
+
+#. type: TP
+#: en/esearch/esearch.1:71
+#, fuzzy, no-wrap
+msgid "CW<esearch -o \"/usr/portage/%p/ChangeLog\\en\" ^package$>"
+msgstr "CW<esearch -o \"/usr/portage/%p/ChangeLog\\en\" ^package$>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:74
+#, fuzzy
+msgid "Print the correct path to the ChangeLog file of 'package'."
+msgstr "'package' の ChangeLog への正しいパスを表示する。"
+
+#. type: TP
+#: en/esearch/esearch.1:74
+#, fuzzy, no-wrap
+msgid "CW<esearch -o \"%n-%va.ebuild\\en\" pattern>"
+msgstr "CW<esearch -o \"%n-%va.ebuild\\en\" pattern>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:77
+#, fuzzy
+msgid "Print the names of the current ebuild files."
+msgstr "現在の ebuild ファイルの名前を表示する。"
+
+#. type: TP
+#: en/esearch/esearch.1:77
+#, fuzzy, no-wrap
+msgid "CW<esearch -o \"%p\\en\" ^ E<gt> package-list>"
+msgstr "CW<esearch -o \"%p\\en\" ^ E<gt> package-list>"
+
+#. type: Plain text
+#: en/esearch/esearch.1:80
+#, fuzzy
+msgid "Generate a list of all available packages."
+msgstr "利用可能な全パッケージ一覧を生成する。"
+
+#. type: SH
+#: en/esearch/esearch.1:81
+#, fuzzy, no-wrap
+msgid "SEE ALSO"
+msgstr "参照"
+
+#. type: Plain text
+#: en/esearch/esearch.1:83
+#, fuzzy
+msgid "emerge(1)"
+msgstr "emerge(1)"
+
+#. type: SH
+#: en/esearch/esearch.1:84
+#, fuzzy, no-wrap
+msgid "BUGS"
+msgstr "バグ"
+
+#. type: Plain text
+#: en/esearch/esearch.1:86
+#, fuzzy
+msgid "No known bugs"
+msgstr "まだ既知のバグはない"
+
+#. type: SH
+#: en/esearch/esearch.1:87
+#, fuzzy, no-wrap
+msgid "AUTHOR"
+msgstr "作者"
+
+#. type: Plain text
+#: en/esearch/esearch.1:88
+#, fuzzy
+msgid "David Peter E<lt>davidpeter@web.deE<gt>"
+msgstr "David Peter E<lt>davidpeter@web.deE<gt>"

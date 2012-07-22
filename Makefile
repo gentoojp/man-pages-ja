@@ -33,8 +33,17 @@ epm_SOURCES := epm/epm \
 epm_PODS    := $(builddir)/epm/epm.pod
 epm_MANS    := $(patsubst %.pod,%.1,$(epm_PODS))
 
+esearch_NAME    := esearch
+esearch_VERSION := 0.5.3
+esearch_DATE    := 2004-01-11
+esearch_SOURCES := esearch/esearch.1 \
+                   esearch/esearch.1.ja.po \
+                   esearch/esearch.1.txt \
+                   esearch/esearch.cfg
+esearch_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(esearch_SOURCES)))
 
-.PHONY: all clean pod epm
+
+.PHONY: all clean pod epm esearch
 .SECONDEXPANSION:
 
 %.1: %.in
@@ -48,7 +57,7 @@ epm_MANS    := $(patsubst %.pod,%.1,$(epm_PODS))
 %.in: %.pod
 	$(POD2MAN) $(PODFLAGS) $< >$@
 
-all: epm
+all: epm esearch
 
 clean:
 	rm -rf $(builddir)
@@ -65,4 +74,10 @@ $(epm_MANS): $(epm_PODS)
 $(epm_PODS): .po4a-epm-stamp
 .po4a-epm-stamp: $(epm_SOURCES)
 	$(call po4a,epm)
+	touch $@
+
+esearch: $(esearch_MANS)
+$(esearch_MANS): .po4a-esearch-stamp
+.po4a-esearch-stamp: $(esearch_SOURCES)
+	$(call po4a,esearch)
 	touch $@
