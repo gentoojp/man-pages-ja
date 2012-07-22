@@ -1,0 +1,5 @@
+.\"
+.\" Japanese Version Copyright (c) 2004 Mamoru KOMACHI
+.\"     all rights reserved.
+.\" Translated on 12 Jan 2004 by Mamoru KOMACHI <usata@gentoo.org>
+.\"
