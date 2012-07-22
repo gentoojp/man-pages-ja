@@ -42,8 +42,29 @@ esearch_SOURCES := esearch/esearch.1 \
                    esearch/esearch.cfg
 esearch_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(esearch_SOURCES)))
 
+gentoolkit_NAME    := gentoolkit
+gentoolkit_VERSION := 0.2.1
+gentoolkit_DATE    := 2005-12-29
+gentoolkit_SOURCES := gentoolkit/eclean.1 \
+                      gentoolkit/eclean.1.ja.po \
+                      gentoolkit/eclean.1.txt \
+                      gentoolkit/equery.1 \
+                      gentoolkit/equery.1.ja.po \
+                      gentoolkit/equery.1.txt \
+                      gentoolkit/euse.1 \
+                      gentoolkit/euse.1.ja.po \
+                      gentoolkit/euse.1.txt \
+                      gentoolkit/glsa-check.1 \
+                      gentoolkit/glsa-check.1.ja.po \
+                      gentoolkit/glsa-check.1.txt \
+                      gentoolkit/revdep-rebuild.1 \
+                      gentoolkit/revdep-rebuild.1.ja.po \
+                      gentoolkit/revdep-rebuild.1.txt \
+                      gentoolkit/gentoolkit.cfg
+gentoolkit_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(gentoolkit_SOURCES)))
 
-.PHONY: all clean pod epm esearch
+
+.PHONY: all clean pod epm esearch gentoolkit
 .SECONDEXPANSION:
 
 %.1: %.in
@@ -57,7 +78,7 @@ esearch_MANS    := $(addprefix $(builddir)/,$(filter %.1,$(esearch_SOURCES)))
 %.in: %.pod
 	$(POD2MAN) $(PODFLAGS) $< >$@
 
-all: epm esearch
+all: epm esearch gentoolkit
 
 clean:
 	rm -rf $(builddir)
@@ -80,4 +101,10 @@ esearch: $(esearch_MANS)
 $(esearch_MANS): .po4a-esearch-stamp
 .po4a-esearch-stamp: $(esearch_SOURCES)
 	$(call po4a,esearch)
+	touch $@
+
+gentoolkit: $(gentoolkit_MANS)
+$(gentoolkit_MANS): .po4a-gentoolkit-stamp
+.po4a-gentoolkit-stamp: $(gentoolkit_SOURCES)
+	$(call po4a,gentoolkit)
 	touch $@

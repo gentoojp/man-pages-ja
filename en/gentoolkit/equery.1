@@ -56,6 +56,7 @@ supplied query is a regex
 stop when first match found
 
 .PP 
+.TP
 .B check pkgspec
 This command checks the files of the specified package against recorded MD5 
 sums and timestamps.
@@ -214,6 +215,7 @@ equery list \-\-full\-regex '(mozilla\-firefox|mozilla\-thunderbird)' \- list al
 
 equery list \-\-duplicates \- list all installed slotted packages
 .PP 
+.TP
 .B size <local\-opts> pkgspec
 This command outputs the number of files in the specified package, as well as
 their total size in an appropriate unit.
@@ -232,6 +234,7 @@ The only possible value for <local\-opts>, if specified, is:
 .B \-a, \-\-all
 include non\-installed packages
 .PP 
+.TP
 .B which pkgspec 
 print full path to ebuild for package pkgspec
 .PP 

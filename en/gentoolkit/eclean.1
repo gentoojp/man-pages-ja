@@ -156,12 +156,12 @@ From a crontab, silently clean packages in the safest mode, and then distfiles i
 mode but protecting files less than a week old, every sunday at 1am:
 .br
 .B 0 1 * * sun \ \ eclean \-C \-q packages ; eclean \-C \-q \-d \-t1w distfiles
-.".SH "BUGS"
-.".TP
-."The policy used to decide wether a distfile can be removed or not relies on the SRC_URI variables ."of ebuilds.  It means that if an ebuild uses files that are not part of its SRC_URI, eclean will ."probably remove them.  This are ebuilds bugs, please report them as such on ."http://bugs.gentoo.org. 
-.".TP
-."In safest mode (default, without the \-\-destructive option), this script can be very slow.  There
-."is not much to do about it without hacking outside of the portage API.
+.\".SH "BUGS"
+.\".TP
+.\"The policy used to decide wether a distfile can be removed or not relies on the SRC_URI variables ."of ebuilds.  It means that if an ebuild uses files that are not part of its SRC_URI, eclean will ."probably remove them.  This are ebuilds bugs, please report them as such on ."http://bugs.gentoo.org. 
+.\".TP
+.\"In safest mode (default, without the \-\-destructive option), this script can be very slow.  There
+.\"is not much to do about it without hacking outside of the portage API.
 .SH "SEE ALSO"
 .TP
 The Gentoo forum thread that gave birth to eclean:

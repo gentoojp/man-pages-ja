@@ -1,0 +1,47 @@
+--- a/en/gentoolkit/eclean.1
++++ b/en/gentoolkit/eclean.1
+@@ -156,12 +156,12 @@ From a crontab, silently clean packages in the safest mode, and then distfiles i
+ mode but protecting files less than a week old, every sunday at 1am:
+ .br
+ .B 0 1 * * sun \ \ eclean \-C \-q packages ; eclean \-C \-q \-d \-t1w distfiles
+-.".SH "BUGS"
+-.".TP
+-."The policy used to decide wether a distfile can be removed or not relies on the SRC_URI variables ."of ebuilds.  It means that if an ebuild uses files that are not part of its SRC_URI, eclean will ."probably remove them.  This are ebuilds bugs, please report them as such on ."http://bugs.gentoo.org. 
+-.".TP
+-."In safest mode (default, without the \-\-destructive option), this script can be very slow.  There
+-."is not much to do about it without hacking outside of the portage API.
++.\".SH "BUGS"
++.\".TP
++.\"The policy used to decide wether a distfile can be removed or not relies on the SRC_URI variables ."of ebuilds.  It means that if an ebuild uses files that are not part of its SRC_URI, eclean will ."probably remove them.  This are ebuilds bugs, please report them as such on ."http://bugs.gentoo.org. 
++.\".TP
++.\"In safest mode (default, without the \-\-destructive option), this script can be very slow.  There
++.\"is not much to do about it without hacking outside of the portage API.
+ .SH "SEE ALSO"
+ .TP
+ The Gentoo forum thread that gave birth to eclean:
+--- a/en/gentoolkit/equery.1
++++ b/en/gentoolkit/equery.1
+@@ -56,6 +56,7 @@ supplied query is a regex
+ stop when first match found
+ 
+ .PP 
++.TP
+ .B check pkgspec
+ This command checks the files of the specified package against recorded MD5 
+ sums and timestamps.
+@@ -214,6 +215,7 @@ equery list \-\-full\-regex '(mozilla\-firefox|mozilla\-thunderbird)' \- list al
+ 
+ equery list \-\-duplicates \- list all installed slotted packages
+ .PP 
++.TP
+ .B size <local\-opts> pkgspec
+ This command outputs the number of files in the specified package, as well as
+ their total size in an appropriate unit.
+@@ -232,6 +234,7 @@ The only possible value for <local\-opts>, if specified, is:
+ .B \-a, \-\-all
+ include non\-installed packages
+ .PP 
++.TP
+ .B which pkgspec 
+ print full path to ebuild for package pkgspec
+ .PP 

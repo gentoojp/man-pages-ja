@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the gentoolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gentoolkit 0.2.1\n"
+"POT-Creation-Date: 2012-07-22 18:38+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: en/gentoolkit/eclean.1:1 en/gentoolkit/equery.1:1
+#: en/gentoolkit/glsa-check.1:1 en/gentoolkit/revdep-rebuild.1:1
+#, fuzzy, no-wrap
+msgid "gentoolkit"
+msgstr "gentoolkit"
+
+#. type: SH
+#: en/gentoolkit/eclean.1:2 en/gentoolkit/equery.1:2 en/gentoolkit/euse.1:2
+#: en/gentoolkit/glsa-check.1:2 en/gentoolkit/revdep-rebuild.1:2
+#, fuzzy, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: SH
+#: en/gentoolkit/eclean.1:13 en/gentoolkit/equery.1:9 en/gentoolkit/euse.1:7
+#: en/gentoolkit/glsa-check.1:10 en/gentoolkit/revdep-rebuild.1:7
+#, fuzzy, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: SH
+#: en/gentoolkit/equery.1:14 en/gentoolkit/glsa-check.1:20
+#: en/gentoolkit/revdep-rebuild.1:9
+#, fuzzy, no-wrap
+msgid "OPTIONS"
+msgstr "オプション"
+
+#. type: TP
+#: en/gentoolkit/euse.1:70 en/gentoolkit/glsa-check.1:43
+#, fuzzy, no-wrap
+msgid "B<-h, --help>"
+msgstr "B<-h, --help>"
+
+#. type: TH
+#: en/gentoolkit/glsa-check.1:1
+#, fuzzy, no-wrap
+msgid "glsa-check"
+msgstr "glsa-check"
+
+#. type: TH
+#: en/gentoolkit/glsa-check.1:1
+#, fuzzy, no-wrap
+msgid "0.6"
+msgstr "0.6"
+
+#. type: TH
+#: en/gentoolkit/glsa-check.1:1
+#, fuzzy, no-wrap
+msgid "Marius Mauch"
+msgstr "Marius Mauch"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:5
+#, fuzzy
+msgid "glsa-check - Gentoo: Tool to locally monitor and manage GLSA's"
+msgstr ""
+"glsa-check - Gentoo: GLSA (Gentoo Linux セキュリティ勧告) を監視、処理する"
+"ツール"
+
+#. type: SH
+#: en/gentoolkit/glsa-check.1:5
+#, fuzzy, no-wrap
+msgid "SYNTAX"
+msgstr "書式"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:8
+#, fuzzy
+msgid "glsa-check E<lt>I<option>E<gt> [I<glsa-list>]"
+msgstr "glsa-check E<lt>I<option>E<gt> [I<glsa-list>]"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:10
+#, fuzzy
+msgid ""
+"[I<glsa-list>] can contain an arbitrary number of GLSA ids, filenames "
+"containing GLSAs or the special identifiers 'all' and 'new'"
+msgstr ""
+"[I<glsa-list>] には任意の番号の GLSA id、GLSA に含まれているファイル名、もし"
+"くは、特別な識別子 'all' か 'new' を指定することができる"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:14
+#, fuzzy
+msgid ""
+"This tool is used to locally monitor and manage Gentoo Linux Security "
+"Advisories.  Please read:"
+msgstr ""
+"これは Gentoo Linux セキュリティ勧告を監視し、処理するためのツールである。 バ"
+"グを報告する前に、"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:16
+#, fuzzy
+msgid "http://www.gentoo.org/proj/en/portage/glsa-integration.xml"
+msgstr "http://www.gentoo.org/proj/en/portage/glsa-integration.xml"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:18
+#, fuzzy
+msgid "before reporting a bug."
+msgstr "を読んでいただきたい。"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:20
+#, fuzzy
+msgid ""
+"Note: In order for this tool to be effective, you must regularly sync your "
+"local portage tree."
+msgstr ""
+"注意: このツールを有効に使うためには、常日頃から Portage ツリーを最新の状態に"
+"同期していなくてはならない。"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:22
+#, fuzzy, no-wrap
+msgid "B<-l, --list>"
+msgstr "B<-l, --list>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:25
+#, fuzzy
+msgid "list all unapplied GLSA"
+msgstr "適用されていない全ての GLSA を列挙する"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:25
+#, fuzzy, no-wrap
+msgid "B<-d, --dump, --print>"
+msgstr "B<-d, --dump, --print>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:28
+#, fuzzy
+msgid "show all information about the given GLSA"
+msgstr "指定された GLSA の詳細を表示する"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:28
+#, fuzzy, no-wrap
+msgid "B<-t, --test>"
+msgstr "B<-t, --test>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:31
+#, fuzzy
+msgid "test if this system is affected by the given GLSA"
+msgstr "指定された GLSA が現在のシステムに影響を与え得るかを確認する"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:31
+#, fuzzy, no-wrap
+msgid "B<-p, --pretend>"
+msgstr "B<-p, --pretend>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:34
+#, fuzzy
+msgid "show the necessary commands to apply this GLSA"
+msgstr "現在の GLSA を適用するために実行すべきコマンドを表示する"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:34
+#, fuzzy, no-wrap
+msgid "B<-f, --fix>"
+msgstr "B<-f, --fix>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:37
+#, fuzzy
+msgid "try to auto-apply this GLSA (experimental)"
+msgstr "現在の GLSA を自動的に適用しようとする (試験中)"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:37
+#, fuzzy, no-wrap
+msgid "B<-i, --inject>"
+msgstr "B<-i, --inject>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:40
+#, fuzzy
+msgid "inject the given GLSA into the checkfile"
+msgstr "指定された GLSA を適用したことにする"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:40
+#, fuzzy, no-wrap
+msgid "B<-n, --nocolor>"
+msgstr "B<-n, --nocolor>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:43
+#, fuzzy
+msgid "disable colors (option)"
+msgstr "カラー表示をしない (オプション)"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:46
+#, fuzzy
+msgid "show this help message"
+msgstr "ヘルプを表示する"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:46
+#, fuzzy, no-wrap
+msgid "B<-V, --version>"
+msgstr "B<-V, --version>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:49
+#, fuzzy
+msgid "some information about this tool"
+msgstr "glsa-check のバージョンを表示する"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:49
+#, fuzzy, no-wrap
+msgid "B<-v, --verbose>"
+msgstr "B<-v, --verbose>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:52
+#, fuzzy
+msgid "print more messages (option)"
+msgstr "詳細表示をする (オプション)"
+
+#. type: TP
+#: en/gentoolkit/glsa-check.1:52
+#, fuzzy, no-wrap
+msgid "B<-c, --cve>"
+msgstr "B<-c, --cve>"
+
+#. type: Plain text
+#: en/gentoolkit/glsa-check.1:54
+#, fuzzy
+msgid "show CAN ids in listing mode (option)"
+msgstr "列挙表示において CAN id を表示する (オプション)"

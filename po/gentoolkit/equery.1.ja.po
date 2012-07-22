@@ -1,0 +1,679 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the gentoolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gentoolkit 0.2.1\n"
+"POT-Creation-Date: 2012-07-22 18:38+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: en/gentoolkit/eclean.1:1 en/gentoolkit/equery.1:1
+#: en/gentoolkit/glsa-check.1:1 en/gentoolkit/revdep-rebuild.1:1
+#, fuzzy, no-wrap
+msgid "gentoolkit"
+msgstr "gentoolkit"
+
+#. type: SH
+#: en/gentoolkit/eclean.1:2 en/gentoolkit/equery.1:2 en/gentoolkit/euse.1:2
+#: en/gentoolkit/glsa-check.1:2 en/gentoolkit/revdep-rebuild.1:2
+#, fuzzy, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: SH
+#: en/gentoolkit/eclean.1:4 en/gentoolkit/equery.1:4 en/gentoolkit/euse.1:4
+#: en/gentoolkit/revdep-rebuild.1:4
+#, fuzzy, no-wrap
+msgid "SYNOPSIS"
+msgstr "書式"
+
+#. type: SH
+#: en/gentoolkit/eclean.1:13 en/gentoolkit/equery.1:9 en/gentoolkit/euse.1:7
+#: en/gentoolkit/glsa-check.1:10 en/gentoolkit/revdep-rebuild.1:7
+#, fuzzy, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: SH
+#: en/gentoolkit/eclean.1:175 en/gentoolkit/equery.1:256
+#, fuzzy, no-wrap
+msgid "AUTHORS"
+msgstr "著者"
+
+#. type: TH
+#: en/gentoolkit/equery.1:1
+#, fuzzy, no-wrap
+msgid "equery"
+msgstr "equery"
+
+#. type: TH
+#: en/gentoolkit/equery.1:1
+#, fuzzy, no-wrap
+msgid "Oct 2005"
+msgstr "Oct 2005"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:4
+#, fuzzy
+msgid "equery - Gentoo: Package Query Tool"
+msgstr "equery - Gentoo: パッケージ検索ツール"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:7
+#, fuzzy
+msgid "B<equery> I<[global-opts] command [local-opts]>"
+msgstr "B<equery> I<[global-opts] command [local-opts]>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:13
+#, fuzzy
+msgid ""
+"equery is a flexible utility which may display various information about "
+"packages, such as the files they own, their USE flags, the md5sum of each "
+"file owned by a given package, and many other things."
+msgstr ""
+"equery は、パッケージに含まれるファイルの一覧や、USE フラグ、指定されたパッ"
+"ケー ジに含まれるファイルの md5sum の一覧など、パッケージに関するさまざまな情"
+"報を表示 できる柔軟なユーティリティである。"
+
+#. type: SH
+#: en/gentoolkit/equery.1:14 en/gentoolkit/glsa-check.1:20
+#: en/gentoolkit/revdep-rebuild.1:9
+#, fuzzy, no-wrap
+msgid "OPTIONS"
+msgstr "オプション"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:19
+#, fuzzy
+msgid ""
+"The 'command' is the only mandatory option to equery.  Most commands require "
+"a 'pkgspec' option, which is described by E<lt>cat/E<gt>packagenameE<lt>-"
+"versionE<gt>; namely, the package name is mandatory, while the category and "
+"version are optional."
+msgstr ""
+"equery に対して 'command' が必ず必要なオプションである。多くのコマンドは "
+"\\'pkgspec' を必要とし、それは E<lt>カテゴリ/E<gt>パッケージ名E<lt>-バージョ"
+"ンE<gt> のような形式 である。つまり、パッケージ名が必須で、カテゴリ名やバー"
+"ジョンは任意ということであ る。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:21
+#, fuzzy
+msgid "[global-opts] may be one of:"
+msgstr "[global-opts] は次のうちのどれか:"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:24
+#, fuzzy
+msgid "B<-q, --quiet> causes minimal output to be emitted"
+msgstr "B<-q, --quiet> 最小限の表示だけにする"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:27
+#, fuzzy
+msgid "B<-C, --nocolor> turns off colours"
+msgstr "B<-C, --nocolor> カラー表示をしない"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:30
+#, fuzzy
+msgid "B<-h, --help> displays a help summary"
+msgstr "B<-h, --help> ヘルプを表示する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:33
+#, fuzzy
+msgid "B<-V, --version> displays the equery version"
+msgstr "B<-V, --version> equery のバージョンを表示する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:36
+#, fuzzy
+msgid "B<-N, --no-pipe> turns off pipe detection"
+msgstr "B<-N, --no-pipe> パイプ判定を無効にする"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:39
+#, fuzzy
+msgid ""
+"Only one command will actually be run, at most.  The possible commands are:"
+msgstr "ひとつのコマンドのみが実際に実行される。有効なコマンドは次の通り:"
+
+#. type: TP
+#: en/gentoolkit/equery.1:39
+#, fuzzy, no-wrap
+msgid "B<belongs E<lt>local-optsE<gt> file>"
+msgstr "B<belongs E<lt>local-optsE<gt> file>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:42
+#, fuzzy
+msgid "This command lists all packages owning the specified file."
+msgstr ""
+"このコマンドは指定されたファイルが含まれている全てのパッケージを表示する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:45
+#, fuzzy
+msgid ""
+"Note: Normally, only one package will own a file. If multiple packages own "
+"the same file, it usually consitutes a problem, and should be reported "
+"(http://bugs.gentoo.org)."
+msgstr ""
+"注意: 通常、ひとつのファイルは、ひとつのパッケージにのみ含まれている。もし、"
+"同一 のファイルが複数のパッケージに含まれている場合、大抵は問題を起こすことに"
+"なるので 報告 (http://bugs.gentoo.org) すべきである。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:48 en/gentoolkit/equery.1:69
+#: en/gentoolkit/equery.1:86
+#, fuzzy
+msgid "E<lt>local-optsE<gt> is either or both of:"
+msgstr ""
+"#-#-#-#-#  ja/gentoolkit/equery.1:54 ja/gentoolkit/equery.1:92  #-#-#-#-#\n"
+"E<lt>local-optsE<gt> は次のうちのどれか、または全てを指定できる:\n"
+"#-#-#-#-#  ja/gentoolkit/equery.1:75  #-#-#-#-#\n"
+"E<lt>local-optsE<gt> の次のうちのどれか、または全てを指定できる:\n"
+"#-#-#-#-#  ja/gentoolkit/equery.1:54 ja/gentoolkit/equery.1:92  #-#-#-#-#\n"
+"E<lt>local-optsE<gt> は次のうちのどれか、または全てを指定できる:"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:51
+#, fuzzy
+msgid "B<-c, --category cat> only search in category cat"
+msgstr "B<-c, --category cat> 指定された cat カテゴリのみを検索する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:54
+#, fuzzy
+msgid "B<-f, --full-regex> supplied query is a regex"
+msgstr "B<-f, --full-regex> 指定された問い合わせを正規表現として行う"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:57
+#, fuzzy
+msgid "B<-e, --earlyout> stop when first match found"
+msgstr "B<-e, --earlyout> 見つかった時点で終了する"
+
+#. type: TP
+#: en/gentoolkit/equery.1:59
+#, fuzzy, no-wrap
+msgid "B<check pkgspec>"
+msgstr "B<check pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:63
+#, fuzzy
+msgid ""
+"This command checks the files of the specified package against recorded MD5 "
+"sums and timestamps."
+msgstr ""
+"このコマンドは指定されたパッケージのファイルを、記録されている MD5 サム、タイ"
+"ム スタンプと比較する。"
+
+#. type: TP
+#: en/gentoolkit/equery.1:64
+#, fuzzy, no-wrap
+msgid "B<depends E<lt>local-optsE<gt> pkgspec>"
+msgstr "B<depends E<lt>local-optsE<gt> pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:67
+#, fuzzy
+msgid "This command displays all dependencies matching pkgspec."
+msgstr "このコマンドは指定された pkgspec に一致する全ての依存関係を表示する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:72
+#, fuzzy
+msgid "B<-a, --all-packages> search in all available packages (slow)"
+msgstr "B<-a, --all-packages> 全ての利用可能なパッケージを検索する (遅い)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:75
+#, fuzzy
+msgid "B<-d, --direct> search direct dependencies only (default)"
+msgstr "B<-d, --direct> 直接の依存関係のみを検索する (標準)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:78
+#, fuzzy
+msgid "B<-D, --indirect> search indirect dependencies (very slow)"
+msgstr "B<-D, --indirect> 間接的な依存関係も検索する (とても遅い)"
+
+#. type: TP
+#: en/gentoolkit/equery.1:79
+#, fuzzy, no-wrap
+msgid "B<depgraph E<lt>local-optsE<gt> pkgspec>"
+msgstr "B<depgraph E<lt>local-optsE<gt> pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:83
+#, fuzzy
+msgid ""
+"This command display a dependency tree for pkgspec, by default indented to "
+"reflect how dependancies relate to each other."
+msgstr ""
+"このコマンドは pkgspec の依存関係ツリーを表示する。デフォルトでは、お互いがど"
+"ん な依存関係であるかを示すためインデントを付けてある。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:89
+#, fuzzy
+msgid "B<-U, --no-useflags> do not show USE flags."
+msgstr "B<-U, --no-useflags> USE フラグを表示しない"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:92
+#, fuzzy
+msgid "B<-l, --linear> do not use fancy formatting"
+msgstr "B<-l, --linear> 飾りづけをしない"
+
+#. type: TP
+#: en/gentoolkit/equery.1:93
+#, fuzzy, no-wrap
+msgid "B<files E<lt>local-optsE<gt> pkgspec>"
+msgstr "B<files E<lt>local-optsE<gt> pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:97
+#, fuzzy
+msgid ""
+"This lists files owned by a particular package, optionally with extra "
+"information specified by E<lt>local-optsE<gt>"
+msgstr ""
+"対象パッケージに含まれているファイルの一覧を E<lt>local-optsE<gt> で指定され"
+"る情報とと もに表示する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:100
+#, fuzzy
+msgid "E<lt>local-optsE<gt> is any combination of:"
+msgstr "E<lt>local-optsE<gt> は次のものの組み合わせ:"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:103
+#, fuzzy
+msgid "B<--timestamp> output the timestamp of each file"
+msgstr "B<--timestamp> 各ファイルのタイムスタンプを表示する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:106
+#, fuzzy
+msgid "B<--md5sum> output the md5sum of each file"
+msgstr "B<--md5sum> 各ファイルの md5sum を表示する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:109
+#, fuzzy
+msgid "B<--type> output the type of each file"
+msgstr "B<--type> 各ファイルの種類を表示する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:112
+#, fuzzy
+msgid "B<--filter=E<lt>rulesE<gt>> filter output based on files type or path"
+msgstr "B<--filter=E<lt>rulesE<gt>> ファイルの種類かパスを元に出力を制限する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:115
+#, fuzzy
+msgid ""
+"B<\\tE<lt>rulesE<gt>> is a comma separated list of filtering rules. "
+"Available rules are:"
+msgstr ""
+"B<\\tE<lt>rulesE<gt>> はカンマ区切りのフィルタリングルールのリスト。利用可能"
+"なルールは以下の通り:"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:118
+#, fuzzy
+msgid "B<\\t\\tdir\\ > regular directories"
+msgstr "B<\\t\\tdir\\ > ディレクトリ"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:121
+#, fuzzy
+msgid "B<\\t\\tobj\\ > regular files"
+msgstr "B<\\t\\tobj\\ > ファイル"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:124
+#, fuzzy
+msgid "B<\\t\\tsym\\ > symbolic links"
+msgstr "B<\\t\\tsym\\ > シンボリックリンク"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:127
+#, fuzzy
+msgid "B<\\t\\tdev\\ > device nodes"
+msgstr "B<\\t\\tdev\\ > デバイスノード"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:130
+#, fuzzy
+msgid "B<\\t\\tfifo> named pipes"
+msgstr "B<\\t\\tfifo> 名前付きパイプ"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:133
+#, fuzzy
+msgid "B<\\t\\tpath> shortest paths where some files where installed"
+msgstr "B<\\t\\tpath> ファイルのインストール先の最短パス"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:136
+#, fuzzy
+msgid "B<\\t\\tconf> configuration files (based on $CONFIG_PROTECT)"
+msgstr "B<\\t\\tconf> 設定ファイル ($CONFIG_PROTECT を元に)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:139
+#, fuzzy
+msgid "B<\\t\\tcmd\\ > user commands (based on $PATH)"
+msgstr "B<\\t\\tcmd\\ > ユーザコマンド ($PATH を元に)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:142
+#, fuzzy
+msgid "B<\\t\\tdoc\\ > documentation files (from /usr/share/doc)"
+msgstr "B<\\t\\tdoc\\ > ドキュメント (/usr/share/doc から)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:145
+#, fuzzy
+msgid "B<\\t\\tman\\ > manpages (from /usr/share/man)"
+msgstr "B<\\t\\tman\\ > マニュアル (/usr/share/man から)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:148
+#, fuzzy
+msgid "B<\\t\\tinfo> info pages (from /usr/share/info)"
+msgstr "B<\\t\\tinfo> info ページ (/usr/share/info から)"
+
+#. type: TP
+#: en/gentoolkit/equery.1:149
+#, fuzzy, no-wrap
+msgid "B<hasuse E<lt>local-optsE<gt> useflag>"
+msgstr "B<hasuse E<lt>local-optsE<gt> useflag>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:154
+#, fuzzy
+msgid ""
+"This command lists packages matching a particular USE flag in a user-"
+"specified combination of installed packages, packages which are not "
+"installed, the portage tree, and the portage overlay tree."
+msgstr ""
+"このコマンドは指定された USE フラグの組み合わせに一致するものを、インストール"
+"済 みパッケージ、未インストールパッケージ、Portage ツリー、そして Portage "
+"オーバー レイツリーから列挙する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:161
+#, fuzzy
+msgid ""
+"E<lt>local-optsE<gt> must not include only -I; if -I is used, -p and/or -o "
+"must be also be present.  By default, only installed packages are searched.  "
+"-o searches only the overlay tree [and possibly installed packages], I<not> "
+"the main portage tree."
+msgstr ""
+"E<lt>local-optsE<gt> -I のみの指定はできず、-I は -p と -o、もしくは -p か -"
+"o を 一緒に指定しなければならない。標準では、インストール済みパッケージのみ検"
+"索される。 -o はオーバーレイツリーのみ (インストール済みパッケージを含む) 検"
+"索され、 Portage ツリーは検索I<されない>。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:164 en/gentoolkit/equery.1:188
+#, fuzzy
+msgid "B<-i, --installed> search installed packages (default)"
+msgstr "B<-i, --installed> インストール済みパッケージを検索する (標準)"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:167 en/gentoolkit/equery.1:191
+#, fuzzy
+msgid "B<-I, --exclude-installed> do not search installed packages"
+msgstr "B<-I, --exclude-installed> インストール済みパッケージを検索しない"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:170 en/gentoolkit/equery.1:194
+#, fuzzy
+msgid "B<-p, --portage-tree> also search in portage tree (/usr/portage)"
+msgstr "B<-p, --portage-tree> Portage ツリー (/usr/portage) も検索する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:173 en/gentoolkit/equery.1:197
+#, fuzzy
+msgid "B<-o, --overlay-tree> also search in overlay tree (/usr/local/portage)"
+msgstr ""
+"B<-o, --overlay-tree> オーバーレイツリー (/usr/local/portage) も検索する"
+
+#. type: TP
+#: en/gentoolkit/equery.1:174
+#, fuzzy, no-wrap
+msgid "B<list E<lt>local-optsE<gt> pkgspec>"
+msgstr "B<list E<lt>local-optsE<gt> pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:179
+#, fuzzy
+msgid ""
+"This command lists packages matching pkgspec in a user-specified combination "
+"of installed packages, packages which are not installed, the portage tree, "
+"and the portage overlay tree. By default the list command searches for "
+"partial name matches."
+msgstr ""
+"このコマンドは、指定された pkgspec に一致するパッケージを、インストール済み"
+"パッケージ、未インストールパッケージ、Portage ツリー、そして Portage オーバー"
+"レイツリーから列挙する。標準では、部分一致で検索をする。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:185
+#, fuzzy
+msgid ""
+"E<lt>local-optsE<gt> -I cannot be used by itself; if -I is used, -p and/or -"
+"o must be also be present.  By default, only installed packages are "
+"searched.  -o searches only the overlay tree [and possibly installed "
+"packages], I<not> the main portage tree."
+msgstr ""
+"E<lt>local-optsE<gt> -I のみの指定はできず、-I は -p と -o、もしくは -p か -"
+"o を 一緒に指定しなければならない。標準では、インストール済みパッケージのみ検"
+"索される。 -o はオーバーレイツリーのみ (インストール済みパッケージを含む) を"
+"検索され、 Portage ツリーは検索I<されない>。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:200
+#, fuzzy
+msgid "B<-f, --full-regex> query is a regular expression"
+msgstr "B<-f, --full-regex> 指定された問い合わせを正規表現として行う"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:203
+#, fuzzy
+msgid "B<-e, --exact-name> list only those packages that exactly match"
+msgstr "B<-e, --exact-name> 完全一致したパッケージのみを列挙する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:206
+#, fuzzy
+msgid "B<-d, --duplicates> only list installed duplicate packages"
+msgstr "B<-d, --duplicates> 複数存在するパッケージのみを列挙する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:209
+#, fuzzy
+msgid "B<Examples:>"
+msgstr "B<例:>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:211
+#, fuzzy
+msgid ""
+"equery list zilla - list all installed versions of packages containing the "
+"string 'zilla'"
+msgstr ""
+"equery list zilla - 'zilla' という文字列を含むパッケージの、インストール済み"
+"の全バージョンを列挙する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:213
+#, fuzzy
+msgid ""
+"equery list --exact-name x11-libs/gtk+ - list all installed versions of x11-"
+"libs/gtk+"
+msgstr ""
+"equery list --exact-name x11-libs/gtk+ - x11-libs/gtk+ のインストール済みの全"
+"バージョンを列挙する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:215
+#, fuzzy
+msgid ""
+"equery list --full-regex '(mozilla-firefox|mozilla-thunderbird)' - list all "
+"installed versions of mozilla-firefox and mozilla-thunderbird"
+msgstr ""
+"equery list --full-regex '(mozilla-firefox|mozilla-thunderbird)' - mozilla-"
+"firefox と mozilla-thunderbird のインストール済みの全バージョンを列挙する"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:217
+#, fuzzy
+msgid "equery list --duplicates - list all installed slotted packages"
+msgstr ""
+"equery list --duplicates - インストール済みのスロット化されたパッケージを全て"
+"列挙する"
+
+#. type: TP
+#: en/gentoolkit/equery.1:218
+#, fuzzy, no-wrap
+msgid "B<size E<lt>local-optsE<gt> pkgspec>"
+msgstr "B<size E<lt>local-optsE<gt> pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:222
+#, fuzzy
+msgid ""
+"This command outputs the number of files in the specified package, as well "
+"as their total size in an appropriate unit."
+msgstr ""
+"このコマンドは指定されたパッケージに含まれるファイルの数と、そのサイズを適切"
+"な単 位で出力する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:224 en/gentoolkit/equery.1:233
+#, fuzzy
+msgid "The only possible value for E<lt>local-optsE<gt>, if specified, is:"
+msgstr "唯一 E<lt>local-optsE<gt> に指定可能な引数:"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:227
+#, fuzzy
+msgid "B<-b, --bytes> report size in bytes"
+msgstr "B<-b, --bytes> バイト単位でサイズを表示する"
+
+#. type: TP
+#: en/gentoolkit/equery.1:228
+#, fuzzy, no-wrap
+msgid "B<uses E<lt>local-optsE<gt> pkgspec>"
+msgstr "B<uses E<lt>local-optsE<gt> pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:231
+#, fuzzy
+msgid "display USE flags for pkgspec."
+msgstr "pkgspec の USE フラグを表示する。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:236
+#, fuzzy
+msgid "B<-a, --all> include non-installed packages"
+msgstr "B<-a, --all> 未インストールパッケージを含める"
+
+#. type: TP
+#: en/gentoolkit/equery.1:237
+#, fuzzy, no-wrap
+msgid "B<which pkgspec>"
+msgstr "B<which pkgspec>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:240
+#, fuzzy
+msgid "print full path to ebuild for package pkgspec"
+msgstr "パッケージ pkgspec の ebuild へのフルパスを表示する"
+
+#. type: SH
+#: en/gentoolkit/equery.1:242
+#, fuzzy, no-wrap
+msgid "Unimplemented Options"
+msgstr "未実装オプション"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:245
+#, fuzzy
+msgid "B<changes>"
+msgstr "B<changes>"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:247
+#, fuzzy
+msgid "B<glsa > - use glsa-check for the time being."
+msgstr "B<glsa > - 当分の間 glsa-check を使用していただきたい。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:249
+#, fuzzy
+msgid "B<stats>"
+msgstr "B<stats>"
+
+#. type: SH
+#: en/gentoolkit/equery.1:252 en/gentoolkit/euse.1:92
+#: en/gentoolkit/revdep-rebuild.1:65
+#, fuzzy, no-wrap
+msgid "BUGS"
+msgstr "バグ"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:254
+#, fuzzy
+msgid ""
+"Many options aren't implemented.  Command-line parsing could use some work."
+msgstr ""
+"多くのオプションが実装されていない。コマンドライン解析はいくつかの作業に使え"
+"た。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:256
+#, fuzzy
+msgid "Submit bug reports to http://bugs.gentoo.org"
+msgstr "バグ報告は http://bugs.gentoo.org まで。"
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:258
+#, fuzzy
+msgid ""
+"equery, original man page: Karl Trygve Kalleberg E<lt>karltk@gentoo."
+"orgE<gt>, 2003."
+msgstr ""
+"equery, original man page: Karl Trygve Kalleberg E<lt>karltk@gentoo."
+"orgE<gt>, 2003."
+
+#. type: Plain text
+#: en/gentoolkit/equery.1:260
+#, fuzzy
+msgid ""
+"Massive man page updates: Katerina Barone-Adesi E<lt>katerinab@gmail."
+"comE<gt>, 2004."
+msgstr ""
+"Massive man page updates: Katerina Barone-Adesi E<lt>katerinab@gmail."
+"comE<gt>, 2004."
