@@ -20,6 +20,7 @@ define po4a
     --variable podir=$(podir)/$(1) \
     --package-name $($(subst -,_,$(1))_NAME) \
     --package-version $($(subst -,_,$(1))_VERSION) \
+    $(POFLAGS) \
     $(podir)/$(1)/$(1).cfg
 endef
 
@@ -131,7 +132,6 @@ portage_SOURCES := portage/dispatch-conf.1 \
                    portage/eutils.eclass.5 \
                    portage/eutils.eclass.5.ja.po \
                    portage/eutils.eclass.5.txt \
-                   portage/fixheadtails.eclass.5 \
                    portage/flag-o-matic.eclass.5 \
                    portage/flag-o-matic.eclass.5.ja.po \
                    portage/flag-o-matic.eclass.5.txt \
@@ -194,7 +194,7 @@ all: epm esearch gentoolkit gentoolkit-dev portage
 clean:
 	rm -rf $(builddir)
 	rm -f  $(podir)/*/*.pot
-	rm -f  .*-stamp
+	rm -f  .*.po4a-stamp
 
 pod: override P := $(subst -,_,$(P))
 pod: PODFLAGS   := --center=$($(P)_NAME) --date=$($(P)_DATE) --release="$($(P)_NAME) $($(P)_VERSION)"
@@ -203,33 +203,33 @@ pod: $$($$(P)_MANS)
 epm:
 	$(MAKE) P=$@ pod
 $(epm_MANS): $(epm_PODS)
-$(epm_PODS): .po4a-epm-stamp
-.po4a-epm-stamp: $(epm_SOURCES)
+$(epm_PODS): .epm.po4a-stamp
+.epm.po4a-stamp: $(epm_SOURCES)
 	$(call po4a,epm)
 	touch $@
 
 esearch: $(esearch_MANS)
-$(esearch_MANS): .po4a-esearch-stamp
-.po4a-esearch-stamp: $(esearch_SOURCES)
+$(esearch_MANS): .esearch.po4a-stamp
+.esearch.po4a-stamp: $(esearch_SOURCES)
 	$(call po4a,esearch)
 	touch $@
 
 gentoolkit: $(gentoolkit_MANS)
-$(gentoolkit_MANS): .po4a-gentoolkit-stamp
-.po4a-gentoolkit-stamp: $(gentoolkit_SOURCES)
+$(gentoolkit_MANS): .gentoolkit.po4a-stamp
+.gentoolkit.po4a-stamp: $(gentoolkit_SOURCES)
 	$(call po4a,gentoolkit)
 	touch $@
 
 gentoolkit-dev:
 	$(MAKE) P=$@ pod
 $(gentoolkit_dev_MANS): $(gentoolkit_dev_PODS)
-$(gentoolkit_dev_PODS): .po4a-gentoolkit-dev-stamp
-.po4a-gentoolkit-dev-stamp: $(gentoolkit_dev_SOURCES)
+$(gentoolkit_dev_PODS): .gentoolkit-dev.po4a-stamp
+.gentoolkit-dev.po4a-stamp: $(gentoolkit_dev_SOURCES)
 	$(call po4a,gentoolkit-dev)
 	touch $@
 
 portage: $(portage_MANS)
-$(portage_MANS): .po4a-portage-stamp
-.po4a-portage-stamp: $(portage_SOURCES)
+$(portage_MANS): .portage.po4a-stamp
+.portage.po4a-stamp: $(portage_SOURCES)
 	$(call po4a,portage)
 	touch $@

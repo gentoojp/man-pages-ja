@@ -1,6 +1,6 @@
+*.po4a-stamp
 *.pot
 *.sw?
 *~
-.*-stamp
 gettextization.failed.po
 build/
