@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the epm package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: epm 0.8.4\n"
-"POT-Creation-Date: 2012-07-22 18:19+0900\n"
+"POT-Creation-Date: 2012-07-23 22:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +17,31 @@ msgstr ""
 
 #. type: =head1
 #: en/epm/epm:686
-#, fuzzy
 msgid "NAME"
 msgstr "名前"
 
 #. type: textblock
 #: en/epm/epm:688
-#, fuzzy
 msgid "epm - rpm workalike for Gentoo"
 msgstr "epm - Gentoo 用 rpm 同等品"
 
 #. type: =head1
 #: en/epm/epm:690
-#, fuzzy
 msgid "SYNOPSIS"
 msgstr "書式"
 
 #. type: textblock
 #: en/epm/epm:692
-#, fuzzy
 msgid "epm { -eqVy | --erase | --help | --query | --verify } options..."
-msgstr "epm { -eqVy | --erase | --help | --query | --verify } オプション..."
+msgstr "epm { -eqVy | --erase | --help | --query | --verify } options..."
 
 #. type: =head1
 #: en/epm/epm:694
-#, fuzzy
 msgid "DESCRIPTION"
 msgstr "説明"
 
 #. type: textblock
 #: en/epm/epm:696
-#, fuzzy
 msgid ""
 "This tool provides a Gentoo query tool for users familiar with Red Hat's "
 "\"rpm\" package manager.  In particular, it can query, verify, and erase "
@@ -57,116 +50,104 @@ msgid ""
 "in the distributions."
 msgstr ""
 "このツールは Red Hat の \"rpm\" パッケージ管理ソフトに慣れ親しんだユーザに "
-"Gentoo のパッケージを調べるツールを提供する。具体的には、パッケージの調査、 "
-"そしてパッケージの検証、また、システムからパッケージを削除することができる。 "
-"わたしは可能なかぎり rpm のように動くよう努力したが、Red Hat と Gentoo のディ"
-"ストリビューションの違いによって必要となった相異点もある。"
+"Gentoo のパッケージを調べるツールを提供する。具体的には、パッケージの調査、そ"
+"してパッケージの検証、また、システムからパッケージを削除することができる。わ"
+"たしは可能なかぎり rpm のように動くよう努力したが、Red Hat と Gentoo のディス"
+"トリビューションの違いによって必要となった相異点もある。"
 
 #. type: textblock
 #: en/epm/epm:702
-#, fuzzy
 msgid ""
 "Querying and verifying are the most powerful features of epm.  Erase mode is "
 "really just a gate to \"emerge -C\", but force of habit makes it easier for "
 "me to type \"epm -e\"."
 msgstr ""
 "調査と検証は epm のもっとも得意とする機能である。削除モードは実は単に "
-"\"emerge -C\" を呼ぶための入口にすぎないが、習慣の力とは恐ろしいもので、 わた"
+"\"emerge -C\" を呼ぶための入口にすぎないが、習慣の力とは恐ろしいもので、わた"
 "しは \"epm -e\" とタイプするのが簡単なのだ。"
 
 #. type: =head1
 #: en/epm/epm:706
-#, fuzzy
 msgid "MODES"
 msgstr "モード"
 
 #. type: =item
 #: en/epm/epm:710
-#, fuzzy
 msgid "B<-q --query>"
 msgstr "B<-q --query>"
 
 #. type: textblock
 #: en/epm/epm:712
-#, fuzzy
 msgid ""
 "Query mode, for querying either the list of installed packages or the files "
 "owned by a package."
 msgstr ""
-"調査モード。インストールされているパッケージのリストを調べるか、 パッケージが"
+"調査モード。インストールされているパッケージのリストを調べるか、パッケージが"
 "所有しているファイルを調べるために使われる。"
 
 #. type: =item
 #: en/epm/epm:715
-#, fuzzy
 msgid "B<-V -y --verify>"
 msgstr "B<-V -y --verify>"
 
 #. type: textblock
 #: en/epm/epm:717
-#, fuzzy
 msgid ""
 "Verify mode, for determining the integrity of an installed package using "
 "timestamps and md5 sums.  Size, device, user, group, and mode are not "
 "presently checked."
 msgstr ""
-"検証モード。タイムスタンプと MD5 サムを用いてインストールされている パッケー"
-"ジの完全性を検証する。サイズ、デバイス、ユーザ、グループ、 そしてモードは現在"
-"のところはチェックされていない。"
+"検証モード。タイムスタンプと MD5 サムを用いてインストールされているパッケージ"
+"の完全性を検証する。サイズ、デバイス、ユーザ、グループ、そしてモードは現在の"
+"ところはチェックされていない。"
 
 #. type: =item
 #: en/epm/epm:721
-#, fuzzy
 msgid "B<-e --erase>"
 msgstr "B<-e --erase>"
 
 #. type: textblock
 #: en/epm/epm:723
-#, fuzzy
 msgid ""
 "Erase mode, for removing packages from the system.  Specify a package by "
 "version to remove a specific package.  Specify a package by name to remove "
 "all versions (i.e. --allmatches is the default for epm, this is a difference "
 "from rpm)."
 msgstr ""
-"削除モード。システムからパッケージを削除する。パッケージをバージョン まで含め"
-"て指定すると特定のパッケージを削除する。単にパッケージ名を 指定すると全バー"
+"削除モード。システムからパッケージを削除する。パッケージをバージョンまで含め"
+"て指定すると特定のパッケージを削除する。単にパッケージ名を指定すると全バー"
 "ジョンを削除する (つまり、epm では --allmatches がデフォルトであり、これは "
 "rpm とは異なっている)。"
 
 #. type: =item
 #: en/epm/epm:728
-#, fuzzy
 msgid "B<--help>"
 msgstr "B<--help>"
 
 #. type: textblock
 #: en/epm/epm:730
-#, fuzzy
 msgid ""
 "This isn't really a mode, but it's the only thing you can do without "
 "otherwise specifying a mode.  Run \"epm --help\" to see the comprehensive "
 "list of options available for each mode."
 msgstr ""
-"これは実のところモードではない。しかし、モードを特定しないで実行できるのは こ"
-"れだけである。\"epm --help\" を実行すると各モードで利用できるオプションの 総"
-"合的な一覧が見られる。"
+"これは実のところモードではない。しかし、モードを特定しないで実行できるのはこ"
+"れだけである。\"epm --help\" を実行すると各モードで利用できるオプションの総合"
+"的な一覧が見られる。"
 
 #. type: =head1
 #: en/epm/epm:734
-#, fuzzy
 msgid "EXAMPLES"
 msgstr "例"
 
 #. type: textblock
 #: en/epm/epm:736
-#, fuzzy
 msgid "To find out if vim is installed:"
 msgstr "vim がインストールされているかどうか調べるには:"
 
 #. type: verbatim
 #: en/epm/epm:738
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ epm -q vim\n"
 "  vim-6.2_pre2\n"
@@ -178,13 +159,12 @@ msgstr ""
 
 #. type: textblock
 #: en/epm/epm:741
-#, fuzzy
 msgid "To include the group in the output:"
 msgstr "出力にグループを含めるには:"
 
 #. type: verbatim
 #: en/epm/epm:743
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ epm -qG vim\n"
 "  app-editors/vim-6.2_pre2\n"
@@ -196,13 +176,12 @@ msgstr ""
 
 #. type: textblock
 #: en/epm/epm:746
-#, fuzzy
 msgid "To see what binaries vim installs:"
 msgstr "vim がどんなバイナリをインストールするか知るには:"
 
 #. type: verbatim
 #: en/epm/epm:748
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ epm -ql vim | grep bin\n"
 "  /usr/bin/ex\n"
@@ -224,13 +203,12 @@ msgstr ""
 
 #. type: textblock
 #: en/epm/epm:756
-#, fuzzy
 msgid "To find what package owns /usr/bin/vim"
 msgstr "/usr/bin/vim を所有しているのはどのパッケージか調べる:"
 
 #. type: verbatim
 #: en/epm/epm:758
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ epm -qf /usr/bin/vim\n"
 "  vim-6.2_pre2\n"
@@ -242,13 +220,12 @@ msgstr ""
 
 #. type: textblock
 #: en/epm/epm:761
-#, fuzzy
 msgid "To verify your installation of vim:"
 msgstr "vim のインストールを検証するには:"
 
 #. type: verbatim
 #: en/epm/epm:763
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ epm -V vim\n"
 "\n"
@@ -258,25 +235,23 @@ msgstr ""
 
 #. type: textblock
 #: en/epm/epm:765
-#, fuzzy
 msgid ""
 "No output indicates the installation is fine.  If you get some other output "
 "when you verify a package installation, try the following link for an "
 "explanation.  http://www.rpm.org/max-rpm/s1-rpm-verify-output.html"
 msgstr ""
-"出力がなければインストールに問題はないことを示す。 パッケージのインストールを"
-"検証したときそれ以外の出力が返ってきたなら、 説明は以下のリンクを見てもらいた"
-"い。 http://www.rpm.org/max-rpm/s1-rpm-verify-output.html"
+"出力がなければインストールに問題はないことを示す。パッケージのインストールを"
+"検証したときそれ以外の出力が返ってきたなら、説明は以下のリンクを見てもらいた"
+"い。http://www.rpm.org/max-rpm/s1-rpm-verify-output.html"
 
 #. type: textblock
 #: en/epm/epm:769
-#, fuzzy
 msgid "To show all vim related packages on the system:"
 msgstr "システムにある vim に関係するパッケージを全て表示するには:"
 
 #. type: verbatim
 #: en/epm/epm:771
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ epm -qa | grep vim\n"
 "  vim-core-6.2_pre2\n"
@@ -292,13 +267,11 @@ msgstr ""
 
 #. type: =head1
 #: en/epm/epm:778
-#, fuzzy
 msgid "NOTES"
-msgstr "注"
+msgstr "注意"
 
 #. type: textblock
 #: en/epm/epm:780
-#, fuzzy
 msgid ""
 "This tool was written by Aron Griffis <agriffis@gentoo.org>.  It will "
 "probably blow up your computer, but it works well enough for me.  If you "
@@ -306,9 +279,9 @@ msgid ""
 "eventually.  Your chances skyrocket if you include a good patch, like Wayne "
 "Davison always does."
 msgstr ""
-"このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。 もしかする"
-"とこのツールによってあなたのコンピュータが破壊されるかもしれないが、 わたしに"
+"このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。もしかする"
+"とこのツールによってあなたのコンピュータが破壊されるかもしれないが、わたしに"
 "とってはまともに動いている。バグ報告を http://bugs.gentoo.org/ にしてわたしに"
-"割り当てれば、そのうち直すかもしれない。 わたしがバグを直す可能性は、Wayne "
-"Davison がいつもしているように、 あなたがいいパッチをつけてくれれば飛躍的に増"
+"割り当てれば、そのうち直すかもしれない。わたしがバグを直す可能性は、Wayne "
+"Davison がいつもしているように、あなたがいいパッチをつけてくれれば飛躍的に増"
 "大する。"
