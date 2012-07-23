@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit 0.2.1\n"
-"POT-Creation-Date: 2012-07-22 18:38+0900\n"
+"POT-Creation-Date: 2012-07-23 22:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,46 +17,44 @@ msgstr ""
 
 #. type: TH
 #: en/gentoolkit/eclean.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "eclean"
 msgstr "eclean"
 
 #. type: TH
 #: en/gentoolkit/eclean.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "0.4.1"
 msgstr "0.4.1"
 
 #. type: TH
 #: en/gentoolkit/eclean.1:1 en/gentoolkit/equery.1:1
 #: en/gentoolkit/glsa-check.1:1 en/gentoolkit/revdep-rebuild.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "gentoolkit"
 msgstr "gentoolkit"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:2 en/gentoolkit/equery.1:2 en/gentoolkit/euse.1:2
 #: en/gentoolkit/glsa-check.1:2 en/gentoolkit/revdep-rebuild.1:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:4
-#, fuzzy
 msgid "eclean - A cleaning tool for Gentoo distfiles and binary packages."
 msgstr "eclean - Gentoo 用 distfiles とバイナリパッケージの掃除ツール"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:4 en/gentoolkit/equery.1:4 en/gentoolkit/euse.1:4
 #: en/gentoolkit/revdep-rebuild.1:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:7
-#, fuzzy
 msgid ""
 "B<eclean >[I<global-options>] ... E<lt>I<actions>E<gt> [I<action-"
 "options>] ..."
@@ -67,45 +64,40 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:9
-#, fuzzy
 msgid "B<eclean-dist >[I<global-options, distfiles-options>] ..."
 msgstr "B<eclean-dist >[I<global-options, distfiles-options>] ..."
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:11
-#, fuzzy
 msgid "B<eclean-pkg >[I<global-options, packages-options>] ..."
 msgstr "B<eclean-pkg >[I<global-options, packages-options>] ..."
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:13
-#, fuzzy
 msgid "B<eclean(-dist,-pkg) >[I<--help, --version>]"
 msgstr "B<eclean(-dist,-pkg) >[I<--help, --version>]"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:13 en/gentoolkit/equery.1:9 en/gentoolkit/euse.1:7
 #: en/gentoolkit/glsa-check.1:10 en/gentoolkit/revdep-rebuild.1:7
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:17
-#, fuzzy
 msgid ""
 "B<eclean> is small tool to remove obsolete portage sources files and binary "
 "packages.  Used on a regular basis, it prevents your DISTDIR and PKGDIR "
 "directories to infinitely grow, while not deleting files which may still be "
 "useful."
 msgstr ""
-"B<eclean> は利用されることのない distfiles やバイナリパッケージを削除するた"
-"め の小粒なツールである。必要かどうかわからないファイルにより、DISTDIR や "
-"PKGDIR ディ レクトリが際限なく肥大化するのを防ぐために定期的に使用する。"
+"B<eclean> は利用されることのない distfiles やバイナリパッケージを削除するため"
+"の小粒なツールである。必要かどうかわからないファイルにより、DISTDIR や "
+"PKGDIR ディレクトリが際限なく肥大化するのを防ぐために定期的に使用する。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:25
-#, fuzzy
 msgid ""
 "By default, eclean will protect all distfiles or binary packages "
 "corresponding to some ebuilds available in the Portage tree.  This is the "
@@ -118,16 +110,15 @@ msgid ""
 "access to the whole Portage tree."
 msgstr ""
 "標準で eclean は Portage ツリーに ebuild が存在する distfiles やバイナリパッ"
-"ケー ジには全く手を付けない。このモードは、パッケージをダウングレードする際に"
-"パッケー ジのソースをダウンロードし直す必要がなく、また、誤って unmerge して"
-"しまったパッ ケージの再インストールの際にコンパイルし直す必要がないため、とて"
-"も安全である。確 かに、これでもまだ DISTDIR や PKGDIR は大きいままである (し"
-"かし際限なく増大する ことは防げる)。また、このモードでは Portage ツリー全体へ"
-"のアクセスが必要になるた め、'distfiles' に関してはかなり遅くなる。"
+"ケージには全く手を付けない。このモードは、パッケージをダウングレードする際に"
+"パッケージのソースをダウンロードし直す必要がなく、また、誤って unmerge してし"
+"まったパッケージの再インストールの際にコンパイルし直す必要がないため、とても"
+"安全である。確かに、これでもまだ DISTDIR や PKGDIR は大きいままである (しかし"
+"際限なく増大することは防げる)。また、このモードでは Portage ツリー全体へのア"
+"クセスが必要になるため、'distfiles' に関してはかなり遅くなる。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:33
-#, fuzzy
 msgid ""
 "If you use the --destructive option, eclean will only protect files "
 "corresponding to some currently installed package (taking their exact "
@@ -139,18 +130,17 @@ msgid ""
 "one used by most other cleaning scripts around like yacleaner (at least in "
 "its version 0.3)."
 msgstr ""
-"--destructive オプションを使用すると、eclean は現在インストールされている"
-"パッ ケージのファイルしか保護しない (バージョンの完全一致による)。するとさら"
-"なる容量 の節約が可能だが依然として、レビジョン更新に使用されたファイルや、破"
-"損したパッケー ジの再インストール用バイナリなどは保存される。しかし、ダウング"
-"レードや、unmerge したパッケージの再インストールなど、あまり行われない操作の"
-"ためにファイルを保持す ることはなくなる。また、これが最も速く実行されるモード"
-"であり (distfiles における 大きな違い)、yacleaner (バージョン 0.3 において"
-"は) などその他の削除用スクリプト でよく用いられる。"
+"--destructive オプションを使用すると、eclean は現在インストールされているパッ"
+"ケージのファイルしか保護しない (バージョンの完全一致による)。するとさらなる容"
+"量の節約が可能だが依然として、リビジョン更新に使用されたファイルや、破損した"
+"パッケージの再インストール用バイナリなどは保存される。しかし、ダウングレード"
+"や、unmerge したパッケージの再インストールなど、あまり行われない操作のために"
+"ファイルを保持することはなくなる。また、これが最も速く実行されるモードであり "
+"(distfiles における大きな違い)、yacleaner (バージョン 0.3 においては) などそ"
+"の他の削除用スクリプトでよく用いられる。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:38
-#, fuzzy
 msgid ""
 "Somewhere in the middle, adding the --package-names option when using --"
 "destructive will protect files corresponding to all existing versions of "
@@ -158,15 +148,14 @@ msgid ""
 "redownloading in case of trouble, but won't protect you against package "
 "uninstallation."
 msgstr ""
-"その中間として、--destructive を使用する時に --package-names オプションを追 "
-"加することで、インストール済みパッケージの全てのバージョンのファイルが保護さ"
-"れる ようになる。すると、コンパイルし直すことなくダウングレードしたり、障害発"
-"生時にダ ウンロードし直したりせずに済むだろうが、パッケージのアンインストール"
-"からは守られ なくなる。"
+"その中間として、--destructive を使用する時に --package-names オプションを追加"
+"することで、インストール済みパッケージの全てのバージョンのファイルが保護され"
+"るようになる。すると、コンパイルし直すことなくダウングレードしたり、障害発生"
+"時にダウンロードし直したりせずに済むだろうが、パッケージのアンインストールか"
+"らは守られなくなる。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:41
-#, fuzzy
 msgid ""
 "In addition to this main modes, some options allow to declare a few special "
 "cases file protection rules:"
@@ -178,13 +167,12 @@ msgstr "これらに加え、特殊なファイル保護規則を宣言するた
 #: en/gentoolkit/eclean.1:112 en/gentoolkit/eclean.1:114
 #: en/gentoolkit/eclean.1:116 en/gentoolkit/eclean.1:120
 #: en/gentoolkit/eclean.1:124 en/gentoolkit/eclean.1:128
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "o"
 msgstr "o"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:43
-#, fuzzy
 msgid ""
 "--time-limit is useful to protect files which are more recent than a given "
 "amount of time."
@@ -192,7 +180,6 @@ msgstr "--time-limit は指定された期間よりも新しいファイルを�
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:45
-#, fuzzy
 msgid ""
 "--size-limit (for distfiles only) is useful if you want to protect files "
 "bigger than a given size."
@@ -202,19 +189,17 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:48
-#, fuzzy
 msgid ""
 "--fetch-restricted (for distfiles only) is useful to protect manually "
 "downloaded files.  But it's also very slow (again, it's a reading of the "
 "whole Portage tree data)..."
 msgstr ""
 "--fetch-restricted (distfiles のみ) は手動でダウンロードしたファイルを保護す"
-"る。 しかし、とても遅い (これも同じく、Portage ツリー全体のデータを読み込"
+"る。しかし、とても遅い (これも同じく、Portage ツリー全体のデータを読み込"
 "む)..."
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:51
-#, fuzzy
 msgid ""
 "Finally, you can list some categories or package names to protect in "
 "exclusion files (see B<EXCLUSION FILES> below)."
@@ -224,81 +209,79 @@ msgstr ""
 
 #. type: SH
 #: en/gentoolkit/eclean.1:51
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "PARAMETERS"
 msgstr "引数"
 
 #. type: SS
 #: en/gentoolkit/eclean.1:52
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Global options"
 msgstr "グローバルオプション"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:53
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-C, --nocolor>\t\t\t\tturn off colors on output"
 msgstr "B<-C, --nocolor>\t\t\t\tカラー表示をしない"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-d, --destructive>\t\t\tonly keep the minimum for a reinstallation"
 msgstr "B<-d, --destructive>\t\t\t再インストール用に最小限しか保持しない"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:57
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-e, --exclude-file=E<lt>pathE<gt>>\tpath to the exclusion file"
 msgstr "B<-e, --exclude-file=E<lt>pathE<gt>>\t除外ファイルへのパス"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:63
-#, fuzzy
 msgid ""
 "B<E<lt>pathE<gt>> is the absolute path to the exclusion file you want to "
 "use.  When this option is not used, default paths are /etc/eclean/{packages,"
 "distfiles}.exclude (if they exist).  Use /dev/null if you have such a file "
 "at it standard location and you want to temporary ignore it."
 msgstr ""
-"B<E<lt>pathE<gt>> は使用したい除外ファイルへの絶対パス。 このオプションが使用"
+"B<E<lt>pathE<gt>> は使用したい除外ファイルへの絶対パス。このオプションが使用"
 "されない場合のデフォルトパスは /etc/eclean/{packages,distfiles}.exclude であ"
-"る (存在すれば)。もしその場所にファ イルが存在するものの一時的にそれを無視し"
-"たい場合には、/dev/null を使用していただ きたい。"
+"る (存在すれば)。もしその場所にファイルが存在するものの一時的にそれを無視した"
+"い場合には、/dev/null を使用していただきたい。"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:63
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-i, --interactive>          ask confirmation before deleting"
 msgstr "B<-i, --interactive>          削除する前に確認する"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:65
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-n, --package-names>       protect all versions (--destructive only)"
 msgstr "B<-n, --package-names>       全てのバージョンを保護する (--destructive のみ)"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:67
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-p, --pretend>              only display what would be cleaned"
 msgstr "B<-p, --pretend>              何が掃除されるかを表示するだけ"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:69
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-q, --quiet>                be as quiet as possible, only display errors"
 msgstr "B<-q, --quiet>                エラー以外の出力をできるだけ抑制する"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:71
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-t, --time-limit=E<lt>timeE<gt>>    don't delete files modified since E<lt>timeE<gt>"
 msgstr "B<-t, --time-limit=E<lt>timeE<gt>>    E<lt>timeE<gt> 以後に更新されたファイルを削除しない"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:74
-#, fuzzy
 msgid ""
 "B<E<lt>timeE<gt>> is an amount of time: \"1y\" is \"one year\", \"2w\" is "
 "\"two weeks\", etc."
@@ -307,105 +290,99 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:76
-#, fuzzy
 msgid "Units are: y (years), m (months), w (weeks), d (days) and h (hours)."
 msgstr "単位: y (年)、m (月)、w (週)、d (日) そして h (時間)。"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:76
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-h, --help>                 display the help screen"
 msgstr "B<-h, --help>                 ヘルプを表示する"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:78
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-V, --version>              display version informations"
 msgstr "B<-V, --version>              バージョン情報を表示する"
 
 #. type: SS
 #: en/gentoolkit/eclean.1:80
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Actions"
 msgstr "アクション"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:81
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<distfiles>"
 msgstr "B<distfiles>"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:85
-#, fuzzy
 msgid ""
 "Clean files from /usr/portage/distfiles (or whatever else is your DISTDIR "
 "in /etc/make.conf).  This action should be useful to almost any Gentoo user, "
 "we all have to big DISTDIRs sometime..."
 msgstr ""
-"/usr/portage/distfiles を掃除する (それか /etc/make.conf にある DISTDIR)。 こ"
+"/usr/portage/distfiles を掃除する (それか /etc/make.conf にある DISTDIR)。こ"
 "のアクションはほとんどの Gentoo ユーザーにとって有用であるだろう、私たちはだ"
-"れ しもがいつか巨大な DISTDIR を持つことになるのだから..."
+"れしもがいつか巨大な DISTDIR を持つことになるのだから..."
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:88
-#, fuzzy
 msgid ""
 "B<eclean-dist> is a shortcut to call eclean with the \"distfiles\" action, "
 "for simplified command-line."
 msgstr ""
 "B<eclean-dist> は eclean を \"distfiles\" アクションで実行する、コマンドライ"
-"ン 入力をかんたんにするためのショートカットである。"
+"ン入力をかんたんにするためのショートカットである。"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:88
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<packages>"
 msgstr "B<packages>"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:93
-#, fuzzy
 msgid ""
 "Clean files from /usr/portage/packages (or whatever else is your PKGDIR in /"
 "etc/make.conf).  This action is in particular useful for people who use the "
 "\"buildpkg\" or \"buildsyspkg\" FEATURES flags."
 msgstr ""
-"/usr/portage/packages を掃除する (それか /etc/make.conf にある PKGDIR)。 "
+"/usr/portage/packages を掃除する (それか /etc/make.conf にある PKGDIR)。"
 "FEATURES フラグに \"buildpkg\" や \"buildsyspkg\" を使用する人にとくに有用で"
 "ある。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:96
-#, fuzzy
 msgid ""
 "B<eclean-pkg> is a shortcut to call eclean with the \"packages\" action, for "
 "simplified command-line."
 msgstr ""
 "B<eclean-pkg> は eclean を \"packages\" アクションで実行する、コマンドライン"
-"入 力をかんたんにするためのショートカットである。"
+"入力をかんたんにするためのショートカットである。"
 
 #. type: SS
 #: en/gentoolkit/eclean.1:96
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Options for the 'distfiles' action"
 msgstr "'distfiles' アクションのオプション"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:97
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-f, --fetch-restricted>\t\tprotect fetch-restricted files (--destructive only)"
 msgstr "B<-f, --fetch-restricted>\t\t手動でダウンロードしたファイルを保護する (--destructive のみ)"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:99
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-s, --size-limit=E<lt>sizeE<gt>>\tdon't delete disfiles bigger than E<lt>sizeE<gt>"
 msgstr "B<-s, --size-limit=E<lt>sizeE<gt>>\tE<lt>sizeE<gt> より大きいものは削除しない"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:103
-#, fuzzy
 msgid ""
 "E<lt>sizeE<gt> is a size specification: \"10M\" is \"ten megabytes\", \"200K"
 "\" is \"two hundreds kilobytes\", etc."
@@ -415,55 +392,50 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:105
-#, fuzzy
 msgid "Units are: G, M, K and B."
-msgstr "単位: G, M, K そして B."
+msgstr "単位: G、M、K そして B。"
 
 #. type: SS
 #: en/gentoolkit/eclean.1:105
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Options for the 'packages' action"
 msgstr "'packages' アクションのオプション"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:106
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "There is no specific option for this action."
 msgstr "オプションなし。"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:108
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EXCLUSION FILES"
 msgstr "除外ファイル"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:112
-#, fuzzy
 msgid ""
 "Exclusions files are lists of packages names or categories you want to "
 "protect in particular.  This may be useful to protect more binary packages "
 "for some system related packages for instance.  Syntax is the following:"
 msgstr ""
 "除外ファイルは特に保護したいパッケージの名前や、カテゴリーを列挙したものであ"
-"る。 これは例えばシステム関連のバイナリパッケージをより多く保護したい場合など"
-"に便利で ある。文法は以下の通り:"
+"る。これは例えばシステム関連のバイナリパッケージをより多く保護したい場合など"
+"に便利である。文法は以下の通り:"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:114
-#, fuzzy
 msgid "blank lines and lines starting with a \"#\" (comments) are ignored."
 msgstr "空行や、\"#\" (コメント) で始まる行は無視される。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:116
-#, fuzzy
 msgid "only one entry per line is allowed."
-msgstr "1行には1項目のみ。"
+msgstr "1 行には 1 項目のみ。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:120
-#, fuzzy
 msgid ""
 "if a line contains a category name, like \"sys-apps\", then all packages "
 "from this category will be protected.  \"sys-apps/*\" is also allowed for "
@@ -471,37 +443,34 @@ msgid ""
 "way for any other usage."
 msgstr ""
 "\"sys-apps\" のようなカテゴリの名前が指定されている場合、そのカテゴリの全ての"
-"パッ ケージが保護される。\"sys-apps/*\" もまた許容されるが、これはどのような"
-"場合でもワ イルドカードがサポートされていることを意味するものではない。"
+"パッケージが保護される。\"sys-apps/*\" もまた許容されるが、これはどのような場"
+"合でもワイルドカードがサポートされていることを意味するものではない。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:124
-#, fuzzy
 msgid ""
 "if a line contains a package name (\"app-shells/bash\"), then this package "
 "will be protected.  Versioned atoms like \"E<gt>=app-shells/bash-3\" are NOT "
 "supported.  Also, the full package name (with category) is mandatory."
 msgstr ""
 "\"app-shells/bash\" のようなパッケージの名前が指定されている場合、そのパッ"
-"ケージ が保護される。\"E<gt>=app-shells/bash-3\" のようなバージョンアトムはサ"
-"ポートされてい ない。また、完全なパッケージの名前 (カテゴリを含む) である必要"
+"ケージが保護される。\"E<gt>=app-shells/bash-3\" のようなバージョンアトムはサ"
+"ポートされていない。また、完全なパッケージの名前 (カテゴリを含む) である必要"
 "がある。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:128
-#, fuzzy
 msgid ""
 "if a line contains a package name with an exclamation mark in front (\"!sys-"
 "apps/portage\"), then this package will be excluded from protection.  This "
 "is only useful if the category itself was protected."
 msgstr ""
 "\"!sys-apps/portage\" のように先頭にエクスクラメーション・マークがある場合、"
-"その パッケージは保護対象から除外される。これはそのカテゴリが保護されている場"
-"合にのみ 有用である。"
+"そのパッケージは保護対象から除外される。これはそのカテゴリが保護されている場"
+"合にのみ有用である。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:132
-#, fuzzy
 msgid ""
 "for distfiles protection, a line can also a filename to protect. This is "
 "useful if you have there some files which are not registered by the ebuilds, "
@@ -509,11 +478,10 @@ msgid ""
 msgstr ""
 "distfiles 保護の場合、保護したいファイル名を指定する。これは OpenOffice.org "
 "i18n ファイル (例えば \"helpcontent_33_unix.tgz\") のような、ebuild に記載さ"
-"れていない ファイルが存在する場合に便利である。"
+"れていないファイルが存在する場合に便利である。"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:136
-#, fuzzy
 msgid ""
 "By default, if it exists, /etc/eclean/packages.exclude (resp. distfiles."
 "exclude) will be use when action is \"packages\" (resp. \"distfiles\").  "
@@ -525,37 +493,32 @@ msgstr ""
 
 #. type: SH
 #: en/gentoolkit/eclean.1:136 en/gentoolkit/revdep-rebuild.1:45
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EXAMPLES"
 msgstr "例"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:139
-#, fuzzy
 msgid "Clean distfiles only, with per file confirmation prompt:"
 msgstr "distfiles のみを掃除し、各ファイルごとに確認する:"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:141
-#, fuzzy
 msgid "B<# eclean -i distfiles>"
 msgstr "B<# eclean -i distfiles>"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:143
-#, fuzzy
 msgid "Check which binary packages could be removed, with a no-color display:"
 msgstr "カラー表示をせずに、削除可能なバイナリパッケージを確認する:"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:145
-#, fuzzy
 msgid "B<# eclean -Cp packages>"
 msgstr "B<# eclean -Cp packages>"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:147
-#, fuzzy
 msgid ""
 "Clean binary packages of uninstalled packages, but keep all versions of "
 "installed ones:"
@@ -565,36 +528,32 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:149
-#, fuzzy
 msgid "B<# eclean-pkg -d -n>"
 msgstr "B<# eclean-pkg -d -n>"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:152
-#, fuzzy
 msgid ""
 "Clean all distfiles except for installed packages (exact version), those "
 "which are less than one month old, bigger than 50MB, or fetch-restricted:"
 msgstr ""
-"インストール済みパッケージ以外 (バージョンの完全一致) の distfiles のうち、"
-"1ヶ月未満、 50MB 以上、自動ダウンロード禁止のもの以外を削除する:"
+"インストール済みパッケージ以外 (バージョンの完全一致) の distfiles のうち、1 "
+"ヶ月未満、50MB 以上、自動ダウンロード禁止のもの以外を削除する:"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:154
-#, fuzzy
 msgid "B<# eclean-dist -d -t1m -s50M -f>"
 msgstr "B<# eclean-dist -d -t1m -s50M -f>"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:157
-#, fuzzy
 msgid ""
 "From a crontab, silently clean packages in the safest mode, and then "
 "distfiles in destructive mode but protecting files less than a week old, "
 "every sunday at 1am:"
 msgstr ""
-"crontab より、毎週日曜午前1時に、出力を抑制して安全にパッケージを削除し、1週"
-"間上 経った distfiles を破壊的に削除する:"
+"crontab より、毎週日曜午前 1 時に、出力を抑制して安全にパッケージを削除し、1 "
+"週間上経った distfiles を破壊的に削除する:"
 
 #. .SH "BUGS"
 #. .TP
@@ -604,63 +563,58 @@ msgstr ""
 #. is not much to do about it without hacking outside of the portage API.
 #. type: Plain text
 #: en/gentoolkit/eclean.1:165
-#, fuzzy
 msgid ""
 "B<0 1 * * sun \\ \\ eclean -C -q packages ; eclean -C -q -d -t1w distfiles>"
 msgstr ""
 "B<0 1 * * sun \\ \\ eclean -C -q packages ; eclean -C -q -d -t1w distfiles>"
 
 #. type: SH
-#: en/gentoolkit/eclean.1:165 en/gentoolkit/euse.1:95
+#: en/gentoolkit/eclean.1:165 en/gentoolkit/euse.1:96
 #: en/gentoolkit/revdep-rebuild.1:82
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
 msgstr "関連項目"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:166
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "The Gentoo forum thread that gave birth to eclean:"
 msgstr "eclean 誕生のきっかけを与えた Gentoo フォーラムのスレッド"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:169
-#, fuzzy
 msgid "B<http://forums.gentoo.org/viewtopic.php?t=3011>"
 msgstr "B<http://forums.gentoo.org/viewtopic.php?t=3011>"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:169
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "The bug report requesting eclean inclusion in gentoolkit:"
 msgstr "eclean を gentoolkit に取り込むよう要求するバグ報告:"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:172
-#, fuzzy
 msgid "B<http://bugs.gentoo.org/show_bug.cgi?id=33877>"
 msgstr "B<http://bugs.gentoo.org/show_bug.cgi?id=33877>"
 
 #. type: TP
 #: en/gentoolkit/eclean.1:172
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Yacleaner, one of the other similar tools:"
-msgstr "Yacleaner, その他の同様なツールのひとつ:"
+msgstr "Yacleaner、その他の同様なツールのひとつ:"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:175
-#, fuzzy
 msgid "B<http://blog.tacvbo.net/data/files/yacleaner/>"
 msgstr "B<http://blog.tacvbo.net/data/files/yacleaner/>"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:175 en/gentoolkit/equery.1:256
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
 msgstr "著者"
 
 #. type: Plain text
 #: en/gentoolkit/eclean.1:176
-#, fuzzy
 msgid "Thomas de Grenier de Latour (tgl) E<lt>degrenier@easyconnect.frE<gt>"
 msgstr "Thomas de Grenier de Latour (tgl) E<lt>degrenier@easyconnect.frE<gt>"

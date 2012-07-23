@@ -45,3 +45,24 @@
  .B which pkgspec 
  print full path to ebuild for package pkgspec
  .PP 
+--- a/en/gentoolkit/euse.1
++++ b/en/gentoolkit/euse.1
+@@ -11,7 +11,7 @@ is used to set(disable/enable) USE flags in /etc/make.conf without having to edi
+ the file directly. It is also used to get detail information about use flags
+ like description, status of flags(enabled/disabled), type of flag(global/local)
+ etc.
+-.SH "OPTIONS "
++.SH "OPTIONS"
+ .TP 
+ \fB\-E, \-\-enable\fI
+ Enables USE flag(s) in make.conf. It accepts one or more space seperated 
+@@ -37,7 +37,8 @@ The output is in the following format:
+ .br 
+ \fB[\- cD ]\fI alpha \- indicates that architecture ...
+ .br 
+-\fB[\-   ]\fI moznocompose (net\-www/mozilla):.br 
++\fB[\-   ]\fI moznocompose (net\-www/mozilla):
++.br 
+ Disable building of mozilla's web page composer 
+ .br 
+ The the indicators in the first column are:

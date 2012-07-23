@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit 0.2.1\n"
-"POT-Creation-Date: 2012-07-22 18:38+0900\n"
+"POT-Creation-Date: 2012-07-23 22:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,77 +18,81 @@ msgstr ""
 #. type: SH
 #: en/gentoolkit/eclean.1:2 en/gentoolkit/equery.1:2 en/gentoolkit/euse.1:2
 #: en/gentoolkit/glsa-check.1:2 en/gentoolkit/revdep-rebuild.1:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:4 en/gentoolkit/equery.1:4 en/gentoolkit/euse.1:4
 #: en/gentoolkit/revdep-rebuild.1:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:13 en/gentoolkit/equery.1:9 en/gentoolkit/euse.1:7
 #: en/gentoolkit/glsa-check.1:10 en/gentoolkit/revdep-rebuild.1:7
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
 #. type: SH
-#: en/gentoolkit/eclean.1:165 en/gentoolkit/euse.1:95
+#: en/gentoolkit/eclean.1:165 en/gentoolkit/euse.1:96
 #: en/gentoolkit/revdep-rebuild.1:82
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
 msgstr "関連項目"
 
 #. type: SH
-#: en/gentoolkit/equery.1:252 en/gentoolkit/euse.1:92
+#: en/gentoolkit/equery.1:14 en/gentoolkit/euse.1:14
+#: en/gentoolkit/glsa-check.1:20 en/gentoolkit/revdep-rebuild.1:9
+#, no-wrap
+msgid "OPTIONS"
+msgstr "オプション"
+
+#. type: SH
+#: en/gentoolkit/equery.1:252 en/gentoolkit/euse.1:93
 #: en/gentoolkit/revdep-rebuild.1:65
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "BUGS"
 msgstr "バグ"
 
 #. type: TH
 #: en/gentoolkit/euse.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EUSE"
 msgstr "EUSE"
 
 #. type: TH
 #: en/gentoolkit/euse.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "2004-10-17"
 msgstr "2004-10-17"
 
 #. type: TH
 #: en/gentoolkit/euse.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Gentoo Linux"
 msgstr "Gentoo Linux"
 
 #. type: TH
 #: en/gentoolkit/euse.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Gentoo Toolkit"
 msgstr "Gentoo Toolkit"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:4
-#, fuzzy
 msgid "euse - Gentoo: command line USE flag editor"
 msgstr "euse - Gentoo: コマンドライン USE フラグエディタ"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:7
-#, fuzzy
 msgid "B<euse> I<E<lt>optionE<gt> [suboption] [useflaglist]>"
 msgstr "B<euse> I<E<lt>optionE<gt> [suboption] [useflaglist]>"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:14
-#, fuzzy
 msgid ""
 "I<euse> is used to set(disable/enable) USE flags in /etc/make.conf without "
 "having to edit the file directly. It is also used to get detail information "
@@ -97,40 +100,32 @@ msgid ""
 "flag(global/local)  etc."
 msgstr ""
 "I<euse> は /etc/make.conf を直接編集することなく、USE フラグを設定 (無効/有"
-"効) するため に使用される。 またそれ以外にも、USE フラグの説明や、状態 (有効/"
-"無効)、フラグの 種類 (global/local) などを取得するためにも使用される。"
-
-#. type: SH
-#: en/gentoolkit/euse.1:14
-#, fuzzy, no-wrap
-msgid "OPTIONS "
-msgstr "オプション"
+"効) するために使用される。またそれ以外にも、USE フラグの説明や、状態 (有効/無"
+"効)、フラグの種類 (グローバル/ローカル) などを取得するためにも使用される。"
 
 #. type: TP
 #: en/gentoolkit/euse.1:15
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-E, --enable>"
 msgstr "B<-E, --enable>"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:19
-#, fuzzy
 msgid ""
 "Enables USE flag(s) in make.conf. It accepts one or more space seperated USE "
 "flags as parameters."
 msgstr ""
 "make.conf の USE フラグを有効にする。引数として、スペースで区切られたひとつ以"
-"上 の USE フラグを指定することができる。"
+"上の USE フラグを指定することができる。"
 
 #. type: TP
 #: en/gentoolkit/euse.1:19
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-D, --disable>"
 msgstr "B<-D, --disable>"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:24
-#, fuzzy
 msgid ""
 "Disables USE flag(s) in make.conf. Puts a '-' sign in front of the USE flag "
 "and appends it to the USE setting in make.conf. It accepts one or more space "
@@ -138,33 +133,31 @@ msgid ""
 msgstr ""
 "make.conf の USE フラグを無効にする。USE フラグの前に '-' を付けて、make."
 "conf の USE 設定に追加する。引数として、スペースで区切られたひとつ以上の USE "
-"フラグを 指定することができる。"
+"フラグを指定することができる。"
 
 #. type: TP
 #: en/gentoolkit/euse.1:24
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-P, --prune>"
 msgstr "B<-P, --prune>"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:28
-#, fuzzy
 msgid ""
 "Removes USE flag(s) in make.conf. Removes all positive and negative "
 "references to the given USE flags from make.conf."
 msgstr ""
 "make.conf から USE フラグを削除する。指定された全ての USE フラグを、その状態"
-"如何 に関わらず make.conf から削除する。"
+"如何に関わらず make.conf から削除する。"
 
 #. type: TP
 #: en/gentoolkit/euse.1:28
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-i, --info>"
 msgstr "B<-i, --info>"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:34
-#, fuzzy
 msgid ""
 "Prints detail information about the USE flag(s). If no arguments are given "
 "then it assumes you want information for all USE flags. If one or more "
@@ -172,93 +165,86 @@ msgid ""
 "is printed."
 msgstr ""
 "USE フラグの詳細を表示する。引数が指定されない場合には、全ての USE フラグの情"
-"報 が表示され、ひとつ以上の引数 (スペース区切り) が指定された場合には、それら"
-"のフラ グについての情報が表示される。"
+"報が表示され、ひとつ以上の引数 (スペース区切り) が指定された場合には、それら"
+"のフラグについての情報が表示される。"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:37
-#, fuzzy
 msgid "The output is in the following format:"
 msgstr "出力される形式は以下の通り:"
 
 #. type: Plain text
 #: en/gentoolkit/euse.1:39
-#, fuzzy
 msgid "B<[- cD ]>I< alpha - indicates that architecture ...>"
 msgstr "B<[- cD ]> alpha - indicates that architecture ..."
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:42
-#, fuzzy
-msgid ""
-"B<[- ]>I< moznocompose (net-www/mozilla):.br Disable building of mozilla's "
-"web page composer >"
-msgstr ""
-"B<[- ]> moznocompose (net-www/mozilla):.br Disable building of mozilla's web "
-"page composer"
+#: en/gentoolkit/euse.1:41
+msgid "B<[- ]>I< moznocompose (net-www/mozilla):>"
+msgstr "B<[-    ]> moznocompose (net-www/mozilla):"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:44
-#, fuzzy
+#: en/gentoolkit/euse.1:43
+msgid "I<Disable building of mozilla's web page composer >"
+msgstr "Disable building of mozilla's web page composer"
+
+#. type: Plain text
+#: en/gentoolkit/euse.1:45
 msgid "I<The the indicators in the first column are:>"
 msgstr "最初の列に表示されるのは:"
 
 #. type: IP
-#: en/gentoolkit/euse.1:44
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:45
+#, no-wrap
 msgid "I<is_active>"
 msgstr "is_active"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:46
-#, fuzzy
+#: en/gentoolkit/euse.1:47
 msgid "+ if the flag is seen as active by portage, - if not"
 msgstr ""
 "+ はそのフラグが Portage により有効にされている場合、- はそうでない場合"
 
 #. type: IP
-#: en/gentoolkit/euse.1:46
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:47
+#, no-wrap
 msgid "is_in_env"
 msgstr "is_in_env"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:50
-#, fuzzy
+#: en/gentoolkit/euse.1:51
 msgid ""
 "E if the flag is enabled in the environment, e if it is disabled in the "
 "environment, nothing if it's not affected by the environment"
 msgstr ""
 "E はそのフラグが環境変数により有効になっている場合、e はそれが環境変数により"
-"無効 にされている場合、何も表示されなければ環境変数による影響はないということ"
+"無効にされている場合、何も表示されなければ環境変数による影響はないということ"
 "である"
 
 #. type: IP
-#: en/gentoolkit/euse.1:50
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:51
+#, no-wrap
 msgid "is_in_make_conf"
 msgstr "is_in_make_conf"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:54
-#, fuzzy
+#: en/gentoolkit/euse.1:55
 msgid ""
 "C if the flag is enabled in make.conf, c if it is disabled in make.conf, "
 "nothing if it's not affected by make.conf"
 msgstr ""
 "C はそのフラグが make.conf において有効になっている場合、c はそれが make."
-"conf に おいて無効になっている場合、何も表示されなければ make.conf による影響"
-"はないとい うことである。"
+"conf において無効になっている場合、何も表示されなければ make.conf による影響"
+"はないということである。"
 
 #. type: IP
-#: en/gentoolkit/euse.1:54
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:55
+#, no-wrap
 msgid "is_in_make_defaults"
 msgstr "is_in_make_defaults"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:58
-#, fuzzy
+#: en/gentoolkit/euse.1:59
 msgid ""
 "D if the flag is enabled in make.defaults, d if it is disabled in make."
 "defaults, nothing if it's not affected by make.defaults"
@@ -268,25 +254,23 @@ msgstr ""
 "よる影響はないということである。"
 
 #. type: IP
-#: en/gentoolkit/euse.1:58
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:59
+#, no-wrap
 msgid "is_in_make_globals"
 msgstr "is_in_make_globals"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:62
-#, fuzzy
+#: en/gentoolkit/euse.1:63
 msgid ""
 "G if the flag is enabled in make.globals, g if it is disabled in make."
 "globals, nothing if it's not affected by make.globals"
 msgstr ""
 "G はそのフラグが make.globals において有効になっている場合、g はそれが make."
-"globals において無効になっている場合、何も表示されなければ make.globals に よ"
+"globals において無効になっている場合、何も表示されなければ make.globals によ"
 "る影響はないということである。"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:66
-#, fuzzy
+#: en/gentoolkit/euse.1:67
 msgid ""
 "Then follows the name of the flag, for local flags the package name and then "
 "the description (on a new line for local flags)."
@@ -295,14 +279,13 @@ msgstr ""
 "その説明 (ローカルフラグでは改行が入る) である。"
 
 #. type: TP
-#: en/gentoolkit/euse.1:66
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:67
+#, no-wrap
 msgid "B<-a, --active>"
 msgstr "B<-a, --active>"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:70
-#, fuzzy
+#: en/gentoolkit/euse.1:71
 msgid ""
 "Shows all currently active USE flags and where they are activated (see "
 "description for B<--info>I<).>"
@@ -311,102 +294,91 @@ msgstr ""
 "info>) とともに表示する。"
 
 #. type: TP
-#: en/gentoolkit/euse.1:70 en/gentoolkit/glsa-check.1:43
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:71 en/gentoolkit/glsa-check.1:43
+#, no-wrap
 msgid "B<-h, --help>"
 msgstr "B<-h, --help>"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:73
-#, fuzzy
+#: en/gentoolkit/euse.1:74
 msgid ""
 "Show the help message listing all the available flags and a short description"
 msgstr "ヘルプを利用可能な全てのフラグとその簡単な説明とともに表示する。"
 
 #. type: TP
-#: en/gentoolkit/euse.1:73
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:74
+#, no-wrap
 msgid "B<-v, --version>"
 msgstr "B<-v, --version>"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:76
-#, fuzzy
+#: en/gentoolkit/euse.1:77
 msgid "Show the version information"
 msgstr "バージョン情報を表示する"
 
 #. type: SH
-#: en/gentoolkit/euse.1:76
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:77
+#, no-wrap
 msgid "FILES"
 msgstr "ファイル"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:78
-#, fuzzy
+#: en/gentoolkit/euse.1:79
 msgid "/etc/make.conf"
 msgstr "/etc/make.conf"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:80
-#, fuzzy
+#: en/gentoolkit/euse.1:81
 msgid "/etc/make.profile/make.defaults"
 msgstr "/etc/make.profile/make.defaults"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:82
-#, fuzzy
+#: en/gentoolkit/euse.1:83
 msgid "/etc/make.globals"
 msgstr "/etc/make.globals"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:84
-#, fuzzy
+#: en/gentoolkit/euse.1:85
 msgid "$PORTDIR/profiles/use.desc"
 msgstr "$PORTDIR/profiles/use.desc"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:86
-#, fuzzy
+#: en/gentoolkit/euse.1:87
 msgid "$PORTDIR/profiles/use.local.desc"
 msgstr "$PORTDIR/profiles/use.local.desc"
 
 #. type: SH
-#: en/gentoolkit/euse.1:88
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:89
+#, no-wrap
 msgid "AUTHOR"
 msgstr "著者"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:90
-#, fuzzy
+#: en/gentoolkit/euse.1:91
 msgid "Original version by Arun Bhanu E<lt>codebear@gentoo.orgE<gt>"
 msgstr "Original version by Arun Bhanu E<lt>codebear@gentoo.orgE<gt>"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:92
-#, fuzzy
+#: en/gentoolkit/euse.1:93
 msgid "Updated for rewritten euse by Marius Mauch E<lt>genone@gentoo.orgE<gt>"
 msgstr "Updated for rewritten euse by Marius Mauch E<lt>genone@gentoo.orgE<gt>"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:95
-#, fuzzy
+#: en/gentoolkit/euse.1:96
 msgid ""
 "euse doesn't handle USE flags enabled or disabled by use.defaults, use.mask "
 "or package.use yet. It also doesn't completely understand the -* flag."
 msgstr ""
-"euse は未だ use.defaultsや、use.mask、package.use により有効、無効にされてい"
+"euse は未だ use.defaults や、use.mask、package.use により有効、無効にされてい"
 "る USE フラグを扱えない。また、-* フラグも正しく解釈できない。"
 
 #. type: Plain text
-#: en/gentoolkit/euse.1:97
-#, fuzzy
+#: en/gentoolkit/euse.1:98
 msgid "B<ufed(8),>"
 msgstr "B<ufed(8),>"
 
 #. type: TP
-#: en/gentoolkit/euse.1:97
-#, fuzzy, no-wrap
+#: en/gentoolkit/euse.1:98
+#, no-wrap
 msgid "The I</usr/bin/euse> script. "
 msgstr "I</usr/bin/euse> スクリプト"

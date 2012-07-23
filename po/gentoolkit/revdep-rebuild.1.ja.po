@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit 0.2.1\n"
-"POT-Creation-Date: 2012-07-22 18:38+0900\n"
+"POT-Creation-Date: 2012-07-23 22:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,79 +18,76 @@ msgstr ""
 #. type: TH
 #: en/gentoolkit/eclean.1:1 en/gentoolkit/equery.1:1
 #: en/gentoolkit/glsa-check.1:1 en/gentoolkit/revdep-rebuild.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "gentoolkit"
 msgstr "gentoolkit"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:2 en/gentoolkit/equery.1:2 en/gentoolkit/euse.1:2
 #: en/gentoolkit/glsa-check.1:2 en/gentoolkit/revdep-rebuild.1:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:4 en/gentoolkit/equery.1:4 en/gentoolkit/euse.1:4
 #: en/gentoolkit/revdep-rebuild.1:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:13 en/gentoolkit/equery.1:9 en/gentoolkit/euse.1:7
 #: en/gentoolkit/glsa-check.1:10 en/gentoolkit/revdep-rebuild.1:7
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
 #. type: SH
 #: en/gentoolkit/eclean.1:136 en/gentoolkit/revdep-rebuild.1:45
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EXAMPLES"
 msgstr "例"
 
 #. type: SH
-#: en/gentoolkit/eclean.1:165 en/gentoolkit/euse.1:95
+#: en/gentoolkit/eclean.1:165 en/gentoolkit/euse.1:96
 #: en/gentoolkit/revdep-rebuild.1:82
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
 msgstr "関連項目"
 
 #. type: SH
-#: en/gentoolkit/equery.1:14 en/gentoolkit/glsa-check.1:20
-#: en/gentoolkit/revdep-rebuild.1:9
-#, fuzzy, no-wrap
+#: en/gentoolkit/equery.1:14 en/gentoolkit/euse.1:14
+#: en/gentoolkit/glsa-check.1:20 en/gentoolkit/revdep-rebuild.1:9
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
 #. type: SH
-#: en/gentoolkit/equery.1:252 en/gentoolkit/euse.1:92
+#: en/gentoolkit/equery.1:252 en/gentoolkit/euse.1:93
 #: en/gentoolkit/revdep-rebuild.1:65
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "BUGS"
 msgstr "バグ"
 
 #. type: TH
 #: en/gentoolkit/revdep-rebuild.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "revdep-rebuild"
 msgstr "revdep-rebuild"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:4
-#, fuzzy
 msgid "revdep-rebuild - Gentoo: Reverse Dependency Rebuilder"
 msgstr "revdep-rebuild - Gentoo: Reverse Dependency Rebuilder"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:7
-#, fuzzy
 msgid "B<revdep-rebuild> [OPTIONS] [--] [EMERGE OPTIONS]"
 msgstr "B<revdep-rebuild> [OPTIONS] [--] [EMERGE OPTIONS]"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:9
-#, fuzzy
 msgid ""
 "revdep-rebuild scans libraries and binaries for missing shared library "
 "dependencies and fixes them by re-emerging those broken binaries and shared "
@@ -99,19 +95,18 @@ msgid ""
 "packages that are dependent upon the upgraded package."
 msgstr ""
 "revdep-rebuild は存在しない共有ライブラリに依存しているライブラリ、実行ファイ"
-"ル を検索し、それら依存関係の壊れた実行ファイル、ライブラリを emerge し直すこ"
-"とで修 復する。パッケージの更新により、そのパッケージに依存しているパッケージ"
-"の依存関係 が壊れてしまったときに有用である。"
+"ルを検索し、それら依存関係の壊れた実行ファイル、ライブラリを emerge し直すこ"
+"とで修復する。パッケージの更新により、そのパッケージに依存しているパッケージ"
+"の依存関係が壊れてしまったときに有用である。"
 
 #. type: TP
 #: en/gentoolkit/revdep-rebuild.1:10
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-X | --package-names>"
 msgstr "B<-X | --package-names>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:13
-#, fuzzy
 msgid ""
 "emerge the best packages available, not neccessarily the exact version of "
 "the installed package"
@@ -121,102 +116,93 @@ msgstr ""
 
 #. type: TP
 #: en/gentoolkit/revdep-rebuild.1:13
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--library=NAME>"
 msgstr "B<--library=NAME>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:16
-#, fuzzy
 msgid ""
 "emerge packages that use the named library. Name can be a full path to a "
 "library or basic regular expression. (See man grep for the definition of "
 "basic regular expressions)"
 msgstr ""
 "そのライブラリを使用しているパッケージを emerge する。名前はライブラリのフル"
-"パス か、基本的な正規表現 (基本的な正規表現の定義は grep のマニュアル参照)。"
+"パスか、基本的な正規表現 (基本的な正規表現の定義は grep のマニュアル参照)。"
 
 #. type: TP
 #: en/gentoolkit/revdep-rebuild.1:16
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-nc | --no-color>"
 msgstr "B<-nc | --no-color>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:19
-#, fuzzy
 msgid ""
 "turn off colored output (This option is also passed to the emerge command)"
 msgstr "カラー表示をしない (emerge コマンドにも渡される)"
 
 #. type: TP
 #: en/gentoolkit/revdep-rebuild.1:19
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-i | --ignore>"
 msgstr "B<-i | --ignore>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:22
-#, fuzzy
 msgid "ignore temporary files from previous runs"
 msgstr "前回実行時の一時ファイルを無視する"
 
 #. type: TP
 #: en/gentoolkit/revdep-rebuild.1:22
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-q | --quiet>"
 msgstr "B<-q | --quiet>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:25
-#, fuzzy
 msgid "be less verbose (This option is also passed to the emerge command)"
 msgstr "最小限の表示にする (emerge コマンドにも渡される)"
 
 #. type: TP
 #: en/gentoolkit/revdep-rebuild.1:25
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<-vv | --extra-verbose>"
 msgstr "B<-vv | --extra-verbose>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:28
-#, fuzzy
 msgid ""
 "be extra verbose (currently prints the revdep-rebuild search environment)"
 msgstr "さらに詳細に表示する (現在は revdep-rebuild の検索環境が表示される)"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:30
-#, fuzzy
 msgid "All other options are passed to the emerge command"
 msgstr "その他のオプションは emerge コマンドへ渡される"
 
 #. type: SH
 #: en/gentoolkit/revdep-rebuild.1:30
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CONFIGURATION"
 msgstr "設定"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:32
-#, fuzzy
 msgid ""
 "revdep-rebuild no longer uses hardcoded paths. To change the default "
 "behavior the following variables can be changed by the user."
 msgstr ""
 "revdep-rebuild はもう決め打ちされたパスを使用しない。標準の動作を変えるには"
-"ユー ザーにより以下の変数が変更されればよい。"
+"ユーザーにより以下の変数が変更されればよい。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:34
-#, fuzzy
 msgid "LD_LIBRARY_MASK - Mask of specially evaluated libraries"
 msgstr "LD_LIBRARY_MASK - 特別なライブラリとみなすマスク"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:36
-#, fuzzy
 msgid ""
 "SEARCH_DIRS - List of directories to search for executables and libraries"
 msgstr ""
@@ -224,34 +210,30 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:38
-#, fuzzy
 msgid "SEARCH_DIRS_MASK - List of directories to not search"
 msgstr "SEARCH_DIRS_MASK - 検索しないディレクトリの一覧"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:40
-#, fuzzy
 msgid ""
 "These variables can be prepended to either by setting the variable in your "
 "environment prior to execution, or by placing an entry in /etc/make.conf."
 msgstr ""
 "これらの変数は実行する前に環境変数として設定するか、/etc/make.conf にあらかじ"
-"め 追加しておくことができる。"
+"め追加しておくことができる。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:43
-#, fuzzy
 msgid ""
 "An entry of \"-*\" means to clear the variable from that point forward.  "
 "Example: SEARCH_DIRS=\"/usr/bin -*\" will set SEARCH_DIRS to contain only /"
 "usr/bin"
 msgstr ""
-"\"-*\" はこれまでの変数設定を消去することを意味する。 例: SEARCH_DIRS=\"/usr/"
+"\"-*\" はこれまでの変数設定を消去することを意味する。例: SEARCH_DIRS=\"/usr/"
 "bin -*\" は SEARCH_DIRS を /usr/bin のみに設定する。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:45
-#, fuzzy
 msgid ""
 "revdep-rebuild honors the NOCOLOR and PORTAGE_NICENESS variables from /etc/"
 "make.conf"
@@ -261,29 +243,25 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:47
-#, fuzzy
 msgid ""
 "It is recommended that when running revdep-rebuild that the following "
 "command be used initially:"
 msgstr ""
 "revdep-rebuild を実行する際、まずはじめに以下のようにコマンドを実行することを"
-"勧 める:"
+"勧める:"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:49
-#, fuzzy
 msgid "B<revdep-rebuild --ignore --pretend>"
 msgstr "B<revdep-rebuild --ignore --pretend>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:51
-#, fuzzy
 msgid "To search the entire system, while excluding /mnt and /home:"
 msgstr "/mnt と /home を除外してシステム全体を検索する:"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:53
-#, fuzzy
 msgid ""
 "B<env SEARCH_DIRS=\"/ -*\" SEARCH_DIRS_MASK=\"/mnt /home\" revdep-rebuild>"
 msgstr ""
@@ -291,37 +269,32 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:55
-#, fuzzy
 msgid "To rebuild packages that depend on libkdecore.so.4 from KDE 3.3:"
 msgstr "KDE 3.3 の libkdecore.so.4 に依存しているパッケージを再構築する:"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:57
-#, fuzzy
 msgid "B<revdep-rebuild --library /usr/kde/3.3/lib/libkdecore.so.4>"
 msgstr "B<revdep-rebuild --library /usr/kde/3.3/lib/libkdecore.so.4>"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:59
-#, fuzzy
 msgid "To rebuild packages that depend upon libImlib.so and libImlib2.so:"
 msgstr "libImlib.so と libImllib2.so に依存しているパッケージを再構築する:"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:61
-#, fuzzy
 msgid "B<revdep-rebuild --library libImlib[2]*.so.*>"
 msgstr "B<revdep-rebuild --library libImlib[2]*.so.*>"
 
 #. type: SH
 #: en/gentoolkit/revdep-rebuild.1:62
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EXIT STATUS"
-msgstr "返り値"
+msgstr "戻り値"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:65
-#, fuzzy
 msgid ""
 "revdep-rebuild returns a zero exit status if it succeeds.  Non zero is "
 "returned in case of failure."
@@ -331,68 +304,58 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:68
-#, fuzzy
 msgid ""
 "In exact ebuild mode revdep-rebuild can fail to properly order packages, "
 "which are not up to date."
 msgstr ""
 "バージョンを指定するモードで、正しい順序にも関わらず revdep-rebuild が失敗す"
-"る のは、そのパッケージが最新ではないからである。"
+"るのは、そのパッケージが最新ではないからである。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:70
-#, fuzzy
 msgid "http://bugs.gentoo.org/show_bug.cgi?id=23018"
 msgstr "http://bugs.gentoo.org/show_bug.cgi?id=23018"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:72
-#, fuzzy
 msgid ""
 "Rebuilding using --package-names mode should be default, but emerge has no "
 "feature to update to latest version of a defined SLOT."
 msgstr ""
-"--package-names モードを利用した再構築を標準にすべきだが、定義されたスロット "
-"を最新バージョンへと更新する機能が emerge には存在しない。"
+"--package-names モードを利用した再構築を標準にすべきだが、定義された SLOT を"
+"最新バージョンへと更新する機能が emerge には存在しない。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:74
-#, fuzzy
 msgid "http://bugs.gentoo.org/show_bug.cgi?id=4698"
 msgstr "http://bugs.gentoo.org/show_bug.cgi?id=4698"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:76
-#, fuzzy
 msgid ""
 "B<Note:> The ability to update to the latest version of a slotted package "
 "has been added to revdep-rebuild.  However, it is possible for this feature "
 "to still not work 100% correctly"
 msgstr ""
-"B<注意:> スロット化されたパッケージを最新バージョンへと更新をする機能は "
-"revdep-rebuild に追加されてはいるが、それが 100% 正確に機能することは期待でき"
-"な い。"
+"B<注意:> SLOT 化されたパッケージを最新バージョンへと更新をする機能は revdep-"
+"rebuild に追加されてはいるが、それが 100% 正確に機能することは期待できない。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:78
-#, fuzzy
 msgid "Does not correctly handle interactive emerge commands."
 msgstr "入力を必要とする emerge のコマンドが正しく扱えない。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:80
-#, fuzzy
 msgid "http://bugs.gentoo.org/show_bug.cgi?id=37485"
 msgstr "http://bugs.gentoo.org/show_bug.cgi?id=37485"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:82
-#, fuzzy
 msgid "Report bugs to E<lt>http://bugs.gentoo.orgE<gt>"
 msgstr "バグ報告は E<lt>http://bugs.gentoo.orgE<gt> まで。"
 
 #. type: Plain text
 #: en/gentoolkit/revdep-rebuild.1:84
-#, fuzzy
 msgid "emerge(1), portage(5), grep(1)"
 msgstr "emerge(1), portage(5), grep(1)"
