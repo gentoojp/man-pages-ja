@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit-dev package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit-dev 0.2.5\n"
-"POT-Creation-Date: 2012-07-22 20:16+0900\n"
+"POT-Creation-Date: 2012-07-26 20:48+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +17,25 @@ msgstr ""
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "ebump"
 msgstr "ebump"
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1 en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "0.1.0"
 msgstr "0.1.0"
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1 en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Gentoolkit"
 msgstr "Gentoolkit"
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1 en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Gentoo Administration"
 msgstr "Gentoo Administration"
 
@@ -44,25 +43,23 @@ msgstr "Gentoo Administration"
 #: en/gentoolkit-dev/ebump.1:2 en/gentoolkit-dev/gensync.1:2
 #: en/gentoolkit-dev/echangelog.pod:1 en/gentoolkit-dev/ekeyword.pod:1
 #: en/gentoolkit-dev/eviewcvs.pod:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:5
-#, fuzzy
 msgid "ebump - Gentoo: Ebuild revision bumper"
 msgstr "ebump - Gentoo: Ebuild のリビジョンを上げる"
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:5 en/gentoolkit-dev/gensync.1:5
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNTAX"
 msgstr "書式"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:8
-#, fuzzy
 msgid "ebump [I<option>] E<lt>I<package-name[-version]>E<gt>"
 msgstr "ebump [I<option>] E<lt>I<package-name[-version]>E<gt>"
 
@@ -70,133 +67,115 @@ msgstr "ebump [I<option>] E<lt>I<package-name[-version]>E<gt>"
 #: en/gentoolkit-dev/ebump.1:9 en/gentoolkit-dev/gensync.1:9
 #: en/gentoolkit-dev/echangelog.pod:9 en/gentoolkit-dev/ekeyword.pod:9
 #: en/gentoolkit-dev/eviewcvs.pod:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:14
-#, fuzzy
 msgid ""
 "I<ebump> bumps the revision of a particular ebuild, and all auxiliary files "
 "in the files/ directory that have a matching version suffix."
 msgstr ""
-"I<ebump> は個々の ebuild ファイルと、files/ ディレクトリにあるファイルのうち "
+"I<ebump> は個々の ebuild ファイルと、files/ ディレクトリにあるファイルのうち"
 "末尾のバージョンがマッチするもののリビジョンを上げる。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:18
-#, fuzzy
 msgid ""
 "By default, the all new revision files will be added to CVS, and a dummy "
 "ChangeLog entry will be made."
 msgstr ""
 "標準では、新しいリビジョンのファイルは全て CVS に追加され、ChangeLog にダミー"
-"の エントリが作成される。"
+"のエントリが作成される。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:21
-#, fuzzy
 msgid "You must stand in the directory of the ebuild to be bumped."
 msgstr ""
 "これからリビジョンを上げようとしている ebuild のあるディレクトリにいなくては"
-"なら ない。"
+"ならない。"
 
 #. type: =head1
 #: en/gentoolkit-dev/ebump.1:22 en/gentoolkit-dev/gensync.1:23
 #: en/gentoolkit-dev/echangelog.pod:37 en/gentoolkit-dev/ekeyword.pod:22
 #: en/gentoolkit-dev/eviewcvs.pod:17
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:25 en/gentoolkit-dev/gensync.1:40
-#, fuzzy
 msgid "B<-C>"
 msgstr "B<-C>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:27
-#, fuzzy
 msgid "B<--no-cvs>"
 msgstr "B<--no-cvs>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:29
-#, fuzzy
 msgid "Do not add new files to CVS."
 msgstr "新しいファイルを CVS に追加しない。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:32 en/gentoolkit-dev/gensync.1:33
-#, fuzzy
 msgid "B<-V>"
 msgstr "B<-V>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:34 en/gentoolkit-dev/gensync.1:35
-#, fuzzy
 msgid "B<--version>"
 msgstr "B<--version>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:36 en/gentoolkit-dev/gensync.1:37
-#, fuzzy
 msgid "Display version information and exit."
 msgstr "バージョンを表示して終了する。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:39
-#, fuzzy
 msgid "B<-v>"
 msgstr "B<-v>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:41
-#, fuzzy
 msgid "B<--verbose>"
 msgstr "B<--verbose>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:43
-#, fuzzy
 msgid "Increase verbosity level. May be used more than once."
 msgstr "冗長レベルを増やす。複数回指定してもよい。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:46
-#, fuzzy
 msgid "B<-q>"
 msgstr "B<-q>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:48
-#, fuzzy
 msgid "B<--quiet>"
 msgstr "B<--quiet>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:50
-#, fuzzy
 msgid "Do not output any non-essential information."
 msgstr "不要な情報を表示しない。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:53
-#, fuzzy
 msgid "B<-m> E<lt>I<ChangeLog text>E<gt>"
 msgstr "B<-m> E<lt>I<ChangeLog text>E<gt>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:55
-#, fuzzy
 msgid "B<--message> E<lt>I<ChangeLog text>E<gt>"
 msgstr "B<--message> E<lt>I<ChangeLog text>E<gt>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:58
-#, fuzzy
 msgid ""
 "Specifies the message to add to the ChangeLog, instead of the standard "
 "placeholder."
@@ -204,140 +183,122 @@ msgstr "ChangeLog に記述するメッセージを指定する。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:61
-#, fuzzy
 msgid "B<-d>"
 msgstr "B<-d>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:63
-#, fuzzy
 msgid "B<--delete-old>"
 msgstr "B<--delete-old>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:67
-#, fuzzy
 msgid ""
 "Delete old revision and old auxiliary files from CVS. This is I<dangerous> "
 "and should only be used if you know exactly what you are doing, because"
 msgstr ""
 "CVS から古いリビジョンの ebuild ファイルと、それに付属するファイルを削除す"
-"る。こ れは I<危険> なので、何をしようとしているのかをちゃんと理解している人"
-"のみ実行 するべきである。なぜなら"
+"る。これは I<危険> なので、何をしようとしているのかをちゃんと理解している人の"
+"み実行するべきである。なぜなら"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:70
-#, fuzzy
 msgid ""
 "1) the old revision may be stable on a different architecture than the one "
 "you are working on."
 msgstr ""
 "1) その古いリビジョンが他のアーキテクチャ上では、あなたの作業しているアーキテ"
-"ク チャよりも安定しているかもしれない。"
+"クチャよりも安定しているかもしれない。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:72
-#, fuzzy
 msgid "2) the auxiliary files may be required by other versions of the ebuild."
 msgstr ""
 "2) 付属のファイルは他のバージョンの ebuild で必要とされているかもしれない。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:74
-#, fuzzy
 msgid ""
 "3) the new revision should usually undergo a period of testing before being "
 "marked stable."
 msgstr ""
 "3) 新しいリビジョンは、通常、安定とマークされる前に、一定期間テストを受けなく"
-"て はならない。"
+"てはならない。"
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:75
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CONFIGURATION"
 msgstr "設定"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:79
-#, fuzzy
 msgid "B</etc/gentoolkit/ebump.conf>"
 msgstr "B</etc/gentoolkit/ebump.conf>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:81
-#, fuzzy
 msgid "B<~/.gentoo/ebump.conf>"
 msgstr "B<~/.gentoo/ebump.conf>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:83
-#, fuzzy
 msgid "From these files, I<ebump> will load the settings"
 msgstr "I<ebump> はこれらのファイルから設定を読み込む。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:85
-#, fuzzy
 msgid "B<opt_verbosity> (default I<1>) - verbosity level 0-10"
 msgstr "B<opt_verbosity> (default I<1>) - 冗長レベル 0-10"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:87
-#, fuzzy
 msgid "B<opt_add_changelog> (default I<y>) - add entry in ChangeLog"
 msgstr "B<opt_add_changelog> (default I<y>) - ChangeLog にエントリを追加する"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:89
-#, fuzzy
 msgid "B<opt_add_cvs> (default I<y>) - add new files to CVS"
 msgstr "B<opt_add_cvs> (default I<y>) - CVS に新しいファイルを追加する"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:91
-#, fuzzy
 msgid "B<opt_bump_auxfiles> (default I<y>) - bump auxiliary files in files/"
 msgstr "B<opt_bump_auxfiles> (default I<y>) - files/ にあるファイルも上げる"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:93
-#, fuzzy
 msgid "B<opt_delete_old> (default I<n>) - delete old revision (DANGEROUS!)"
 msgstr "B<opt_delete_old> (default I<n>) - 古いリビジョンを削除する (危険！)"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:95
-#, fuzzy
 msgid "B<opt_commitmessage> (default I<\"\">) - default ChangeLog message"
 msgstr ""
 "B<opt_commitmessage> (default I<\"\">) - ChangeLog に使用するメッセージ"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:98
-#, fuzzy
 msgid "B<~/.gentoo/gentool-env>"
 msgstr "B<~/.gentoo/gentool-env>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:101
-#, fuzzy
 msgid ""
 "From this file, I<ebump> will load the env vars B<AUTHORNAME> and "
 "B<AUTHOREMAIL>, which are used to generate proper ChangeLog entries."
 msgstr ""
-"I<ebump> は、環境変数 B<AUTHORNAME> と B<AUTHOREMAIL> をこのファイルか ら読み"
+"I<ebump> は、環境変数 B<AUTHORNAME> と B<AUTHOREMAIL> をこのファイルから読み"
 "込み、適切な ChangeLog のエントリを生成するために使用する。"
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:102 en/gentoolkit-dev/gensync.1:65
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr "参考"
+msgstr "関連項目"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:106
-#, fuzzy
 msgid ""
 "The rest of the utilities in I<app-portage/gentoolkit-dev>, such as "
 "I<echangelog> and I<ego>."
@@ -347,12 +308,11 @@ msgstr ""
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:107 en/gentoolkit-dev/gensync.1:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
 msgstr "著者"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:110 en/gentoolkit-dev/gensync.1:75
-#, fuzzy
 msgid "Karl Trygve Kalleberg E<lt>karltk@gentoo.orgE<gt>"
 msgstr "Karl Trygve Kalleberg E<lt>karltk@gentoo.orgE<gt>"

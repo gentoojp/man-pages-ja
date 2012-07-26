@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit-dev package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit-dev 0.2.5\n"
-"POT-Creation-Date: 2012-07-22 20:16+0900\n"
+"POT-Creation-Date: 2012-07-26 20:48+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +19,7 @@ msgstr ""
 #: en/gentoolkit-dev/ebump.1:2 en/gentoolkit-dev/gensync.1:2
 #: en/gentoolkit-dev/echangelog.pod:1 en/gentoolkit-dev/ekeyword.pod:1
 #: en/gentoolkit-dev/eviewcvs.pod:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -28,7 +27,7 @@ msgstr "名前"
 #: en/gentoolkit-dev/ebump.1:9 en/gentoolkit-dev/gensync.1:9
 #: en/gentoolkit-dev/echangelog.pod:9 en/gentoolkit-dev/ekeyword.pod:9
 #: en/gentoolkit-dev/eviewcvs.pod:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -36,63 +35,49 @@ msgstr "説明"
 #: en/gentoolkit-dev/ebump.1:22 en/gentoolkit-dev/gensync.1:23
 #: en/gentoolkit-dev/echangelog.pod:37 en/gentoolkit-dev/ekeyword.pod:22
 #: en/gentoolkit-dev/eviewcvs.pod:17
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:5 en/gentoolkit-dev/ekeyword.pod:5
 #: en/gentoolkit-dev/eviewcvs.pod:5
-#, fuzzy
 msgid "SYNOPSIS"
 msgstr "書式"
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:43 en/gentoolkit-dev/ekeyword.pod:28
 #: en/gentoolkit-dev/eviewcvs.pod:23
-#, fuzzy
 msgid "EXAMPLES"
 msgstr "例"
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:123 en/gentoolkit-dev/ekeyword.pod:71
-#, fuzzy
 msgid "NOTES"
 msgstr "注意"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:135 en/gentoolkit-dev/ekeyword.pod:73
 #: en/gentoolkit-dev/eviewcvs.pod:47
-#, fuzzy
 msgid ""
 "This tool was written by Aron Griffis <agriffis@gentoo.org>.  Bugs found "
 "should be filed against me at http://bugs.gentoo.org/"
 msgstr ""
-"#-#-#-#-#  echangelog.pod.ja.po (gentoolkit-dev 0.2.5)  #-#-#-#-#\n"
 "このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見"
-"した 場合は http://bug.gentoo.org/ にて私に対して報告してほしい。\n"
-"#-#-#-#-#  ekeyword.pod.ja.po (gentoolkit-dev 0.2.5)  #-#-#-#-#\n"
-"このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見"
-"した 場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。\n"
-"#-#-#-#-#  eviewcvs.pod.ja.po (gentoolkit-dev 0.2.5)  #-#-#-#-#\n"
-"このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見"
-"した 場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。"
+"した場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。"
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:3
-#, fuzzy
 msgid "ekeyword - Gentoo: modify package KEYWORDS"
 msgstr "ekeyword - Gentoo: パッケージの KEYWORDS を変更"
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:7
-#, fuzzy
 msgid "ekeyword { arch|~arch|-arch|^arch } ebuild..."
 msgstr "ekeyword { arch|~arch|-arch|^arch } ebuild..."
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:11
-#, fuzzy
 msgid ""
 "This tool provides a simple way to add or update KEYWORDS in a set of "
 "ebuilds.  Each command-line argument is processed in order, so that keywords "
@@ -100,49 +85,45 @@ msgid ""
 "they appear."
 msgstr ""
 "このツールは、複数の ebuild への KEYWORDS の追加、更新を簡単にする。コマンド"
-"ライ ン引数として渡されたキーワード、ebuild のリストは渡された順に処理してい"
-"く。その ため、キーワードは一つ前のキーワードから次に表れるまでの間にある "
-"ebuild に対して 処理される。"
+"ライン引数として渡されたキーワード、ebuild のリストは渡された順に処理してい"
+"く。そのため、キーワードは一つ前のキーワードから次に表れるまでの間にある "
+"ebuild に対して処理される。"
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:16
-#, fuzzy
 msgid ""
 "Instead of specifying a specific arch, it's possible to use the word \"all"
 "\".  This causes the change to apply to all keywords presently specified in "
 "the ebuild."
 msgstr ""
 "全ての arch を指定するかわりに \"all\" という単語を用いることができる。これ"
-"は、そ の ebuild にもともと指定されていたキーワード全て指定したものとして変更"
-"が適用され る。"
+"は、その ebuild にもともと指定されていたキーワード全て指定したものとして変更"
+"が適用される。"
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:20
-#, fuzzy
 msgid "The ^ leader instructs ekeyword to remove the specified arch."
 msgstr "先頭にある ^ はその arch を除外する。"
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:24
-#, fuzzy
 msgid ""
 "Presently ekeyword is simple enough that it supplies no options.  Probably "
 "I'll add B<--help> and B<--version> in the future, but for now it's enough "
 "to track the gentoolkit version."
 msgstr ""
-"現在の ekeyword には何ひとつオプションはない。 おそらく、B<--help> と B<--"
-"version> は将来追加されるだろうが、今のとこ ろは gentoolkit のバージョンを使"
+"現在の ekeyword には何ひとつオプションはない。おそらく、B<--help> と B<--"
+"version> は将来追加されるだろうが、今のところは gentoolkit のバージョンを使"
 "う。"
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:30
-#, fuzzy
 msgid "To mark a single arch stable:"
 msgstr "一つの arch を安定とマークする。"
 
 #. type: verbatim
 #: en/gentoolkit-dev/ekeyword.pod:32
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ ekeyword alpha metalog-0.7-r1.ebuild\n"
 "  metalog-0.7-r1.ebuild\n"
@@ -160,13 +141,12 @@ msgstr ""
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:38
-#, fuzzy
 msgid "When bumping a package, to mark all arches for testing:"
 msgstr "バージョンアップをするときに、全ての arch をテストとマークする:"
 
 #. type: verbatim
 #: en/gentoolkit-dev/ekeyword.pod:40
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ ekeyword ~all metalog-0.7-r2.ebuild\n"
 "  metalog-0.7-r2.ebuild\n"
@@ -184,13 +164,12 @@ msgstr ""
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:46
-#, fuzzy
 msgid "To signify that a package is broken for all arches except one:"
 msgstr "一つの arch を除き、全ての arch で壊れていることを表す:"
 
 #. type: verbatim
 #: en/gentoolkit-dev/ekeyword.pod:48
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ ekeyword ^all -* ~x86 metalog-0.7-r3.ebuild\n"
 "  metalog-0.7-r3.ebuild\n"
@@ -208,13 +187,12 @@ msgstr ""
 
 #. type: textblock
 #: en/gentoolkit-dev/ekeyword.pod:54
-#, fuzzy
 msgid "To do lots of things at once:"
 msgstr "一度に多くのことを行う:"
 
 #. type: verbatim
 #: en/gentoolkit-dev/ekeyword.pod:56
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ ekeyword alpha metalog-0.7-r1.ebuild \\\n"
 "      ~all metalog-0.7-r2.ebuild ^all -* ~x86 metalog-0.7-r3.ebuild\n"

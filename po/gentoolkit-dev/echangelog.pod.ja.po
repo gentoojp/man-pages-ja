@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit-dev package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit-dev 0.2.5\n"
-"POT-Creation-Date: 2012-07-22 20:16+0900\n"
+"POT-Creation-Date: 2012-07-26 20:48+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +19,7 @@ msgstr ""
 #: en/gentoolkit-dev/ebump.1:2 en/gentoolkit-dev/gensync.1:2
 #: en/gentoolkit-dev/echangelog.pod:1 en/gentoolkit-dev/ekeyword.pod:1
 #: en/gentoolkit-dev/eviewcvs.pod:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -28,7 +27,7 @@ msgstr "名前"
 #: en/gentoolkit-dev/ebump.1:9 en/gentoolkit-dev/gensync.1:9
 #: en/gentoolkit-dev/echangelog.pod:9 en/gentoolkit-dev/ekeyword.pod:9
 #: en/gentoolkit-dev/eviewcvs.pod:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -36,32 +35,28 @@ msgstr "説明"
 #: en/gentoolkit-dev/ebump.1:22 en/gentoolkit-dev/gensync.1:23
 #: en/gentoolkit-dev/echangelog.pod:37 en/gentoolkit-dev/ekeyword.pod:22
 #: en/gentoolkit-dev/eviewcvs.pod:17
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:3
-#, fuzzy
 msgid "echangelog - Gentoo: update portage ChangeLogs"
-msgstr "echangelog - Gentoo: portage の ChangeLog を更新する"
+msgstr "echangelog - Gentoo: Portage の ChangeLog を更新する"
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:5 en/gentoolkit-dev/ekeyword.pod:5
 #: en/gentoolkit-dev/eviewcvs.pod:5
-#, fuzzy
 msgid "SYNOPSIS"
 msgstr "書式"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:7
-#, fuzzy
 msgid "echangelog [ I<text> ]"
 msgstr "echangelog [ I<text> ]"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:11
-#, fuzzy
 msgid ""
 "This tool provides an easy way to create or update portage ChangeLogs in "
 "Gentoo.  The tool scans the current directory, which is assumed to be a "
@@ -70,14 +65,13 @@ msgid ""
 "If I<text> is not provided on the command-line, echangelog prompts for it."
 msgstr ""
 "echangelog は Gentoo における Portage の ChangeLog を作成、または更新する負担"
-"を 軽減する。このツールは /usr/portage/app-editors/vim のようなパッケージディ"
-"レク トリにいると仮定し、現在のディレクトリを走査して変更、もしくは追加された"
-"ファイル を見つけ、ChangeLog のエントリに追加する。I<text> がコマンドラインで"
-"あたえら れなかった場合、echangelog はユーザーに入力を促す。"
+"を軽減する。このツールは /usr/portage/app-editors/vim のようなパッケージディ"
+"レクトリにいると仮定し、現在のディレクトリを走査して変更、もしくは追加された"
+"ファイルを見つけ、ChangeLog にエントリを追加する。I<text> がコマンドラインで"
+"あたえられなかった場合、echangelog はユーザーに入力を促す。"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:18
-#, fuzzy
 msgid ""
 "All modifications should occur before running echangelog so that it can "
 "include the appropriate file information in the ChangeLog entry.  For "
@@ -91,7 +85,6 @@ msgstr ""
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:23
-#, fuzzy
 msgid ""
 "If your text would cause the ChangeLog entry to exceed 80 columns, it will "
 "be rewrapped to keep the ChangeLog neat.  If you need special formatting in "
@@ -101,16 +94,15 @@ msgid ""
 "\"echangelog blah\" so that the header lines are computed correctly, then "
 "edit and change \"blah\" to your preferred text."
 msgstr ""
-"ChangeLog のエントリが 80文字を越えた場合には、ChangeLog の体裁を守るために自"
-"動 的に改行される。ChangeLog において特別な書式を用いたいのなら、(1) "
-"echangelog を コマンドラインから何の text も渡さずに実行し、text が長くならな"
-"いことを確実にす る。(2) ChangeLog を直接編集する、のどちらでも可能である。"
-"(2) を選ぶ場合には、 \"echangelog blah\" のように実行し、自動的にヘッダ行が追"
-"加された後、\"blah\" を好き な text に編集することを勧める。"
+"ChangeLog のエントリが 80 文字を越えた場合には、ChangeLog の体裁を守るために"
+"自動的に改行される。ChangeLog において特別な書式を用いたいのなら、(1) "
+"echangelog をコマンドラインから何の text も渡さずに実行し、text が長くならな"
+"いことを確実にする。(2) ChangeLog を直接編集する、のどちらでも可能である。"
+"(2) を選ぶ場合には、\"echangelog blah\" のように実行し、自動的にヘッダ行が追"
+"加された後、\"blah\" を好きな text に編集することを勧める。"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:32
-#, fuzzy
 msgid ""
 "In addition to updating the ChangeLog, echangelog will automatically update "
 "the copyright year of all out-of-date ebuilds, as well as the ChangeLog "
@@ -119,30 +111,27 @@ msgid ""
 msgstr ""
 "ChangeLog の更新について追記。echangelog は ChangeLog の著作権表示だけでな"
 "く、全 ebuild の著作権表示も自動的に更新する。更新が行われた後の差分表示に"
-"は、この変更 点も表示される。"
+"は、この変更点も表示される。"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:39
-#, fuzzy
 msgid ""
 "Presently echangelog is simple enough that it supplies no options.  Probably "
 "I'll add B<--help> and B<--version> in the future, but for now it's enough "
 "to track the gentoolkit version."
 msgstr ""
-"現在の echangelog は何ひとつオプションはない。 おそらく、B<--help> と B<--"
-"version> は将来追加されるだろうが、今のとこ ろは gentoolkit のバージョンを使"
+"現在の echangelog は何ひとつオプションはない。おそらく、B<--help> と B<--"
+"version> は将来追加されるだろうが、今のところは gentoolkit のバージョンを使"
 "う。"
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:43 en/gentoolkit-dev/ekeyword.pod:28
 #: en/gentoolkit-dev/eviewcvs.pod:23
-#, fuzzy
 msgid "EXAMPLES"
 msgstr "例"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:45
-#, fuzzy
 msgid ""
 "To create a ChangeLog for a completely new package.  The header is parsed "
 "from skel.ebuild."
@@ -151,7 +140,7 @@ msgstr ""
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:48
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ cvs add metalog-0.1.ebuild\n"
 "  cvs server: use 'cvs commit' to add this file permanently\n"
@@ -163,7 +152,7 @@ msgstr ""
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:51
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ echangelog 'New ebuild, thanks to Harvey McGillicuddy'\n"
 "  --- ChangeLog   1969-12-31 19:00:00.000000000 -0500\n"
@@ -197,17 +186,16 @@ msgstr ""
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:65
-#, fuzzy
 msgid ""
 "To bump a revision.  Note you need to \"cvs add\" so that echangelog will "
 "notice the new file."
 msgstr ""
-"レビジョンをあげる際には、echangelog が新しいファイルを識別できるように "
+"リビジョンをあげる際には、echangelog が新しいファイルを識別できるように "
 "\"cvs add\" しておく必要がある。"
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:68
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ cvs add metalog-0.1-r1.ebuild\n"
 "  cvs server: use 'cvs commit' to add this file permanently\n"
@@ -219,7 +207,7 @@ msgstr ""
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:71
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ echangelog 'Bump revision to fix bug #999'\n"
 "  --- ChangeLog   2003-02-23 14:04:06.000000000 -0500\n"
@@ -239,7 +227,7 @@ msgstr ""
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:78
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  +*metalog-0.1-r1 (23 Feb 2003)\n"
 "  +\n"
@@ -259,7 +247,7 @@ msgstr ""
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:85 en/gentoolkit-dev/echangelog.pod:109
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "     23 Feb 2003; Aron Griffis <agriffis@gentoo.org> metalog-0.1.ebuild :\n"
 "\n"
@@ -269,13 +257,12 @@ msgstr ""
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:87
-#, fuzzy
 msgid "For a multi-line entry, omit the command-line arg."
 msgstr "複数行のエントリを入力する際には、コマンドライン引数を省略すればよい。"
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:89
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  $ echangelog\n"
 "  Please type the log entry, finish with ctrl-d\n"
@@ -303,7 +290,7 @@ msgstr ""
 
 #. type: verbatim
 #: en/gentoolkit-dev/echangelog.pod:100
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "  +*metalog-0.1-r1 (23 Feb 2003)\n"
 "  +\n"
@@ -327,37 +314,32 @@ msgstr ""
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:111
-#, fuzzy
 msgid "ENVIRONMENT VARIABLES"
 msgstr "環境変数"
 
 #. type: =item
 #: en/gentoolkit-dev/echangelog.pod:115
-#, fuzzy
 msgid "ECHANGELOG_USER"
 msgstr "ECHANGELOG_USER"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:117
-#, fuzzy
 msgid ""
 "If echangelog can't figure out your username for the entry, you should set "
 "ECHANGELOG_USER.  For example, export ECHANGELOG_USER=\"Aron Griffis "
 "<agriffis@gentoo.org>\""
 msgstr ""
 "echangelog がエントリを追加する際に、あなたのユーザーネームをうまく取得できな"
-"い 場合には ECHANGELOG_USER を設定すべきである。例、export ECHANGELOG_USER="
-"\"Aron Griffis <agriffis@gentoo.org>\"。"
+"い場合には ECHANGELOG_USER を設定すべきである。例、export ECHANGELOG_USER="
+"\"Aron Griffis <agriffis@gentoo.org>\""
 
 #. type: =head1
 #: en/gentoolkit-dev/echangelog.pod:123 en/gentoolkit-dev/ekeyword.pod:71
-#, fuzzy
 msgid "NOTES"
 msgstr "注意"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:125
-#, fuzzy
 msgid ""
 "As of the most recent version of echangelog (when this man-page appeared), "
 "echangelog puts all new entries at the top of the file instead of finding "
@@ -366,36 +348,27 @@ msgid ""
 "Unfortunately the existence of both formats will undoubtedly cause much "
 "confusion."
 msgstr ""
-"最近の echangelog (この man ページが収録されるようになってから)は、新しいエン"
-"ト リをバージョンごとにまとめるのではなく、つねにファイルの始めに追加するよう"
-"になっ た。これは、Gentoo 開発者にごとに新しい ChangeLog の書式が統一されてい"
-"なかったか らである。両方の書式が存在することにより、混乱させてしまい申し訳な"
+"最近の echangelog (この man ページが収録されるようになってから) は、新しいエ"
+"ントリをバージョンごとにまとめるのではなく、つねにファイルの始めに追加するよ"
+"うになった。これは、Gentoo 開発者ごとに新しい ChangeLog の書式が統一されてい"
+"なかったからである。両方の書式が存在することにより、混乱させてしまい申し訳な"
 "い。"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:132
-#, fuzzy
 msgid ""
 "This also means that the examples above are wrong, since I just copied them "
 "from some old email.  However they're not much wrong. ;-)"
 msgstr ""
 "またこれは、昔のメールからコピーしてきた上記の例も間違っているということを意"
-"味し ている。しかしながら、まったく違うというわけでも無い。;-)"
+"味している。しかしながら、まったく違うというわけでも無い。;-)"
 
 #. type: textblock
 #: en/gentoolkit-dev/echangelog.pod:135 en/gentoolkit-dev/ekeyword.pod:73
 #: en/gentoolkit-dev/eviewcvs.pod:47
-#, fuzzy
 msgid ""
 "This tool was written by Aron Griffis <agriffis@gentoo.org>.  Bugs found "
 "should be filed against me at http://bugs.gentoo.org/"
 msgstr ""
-"#-#-#-#-#  echangelog.pod.ja.po (gentoolkit-dev 0.2.5)  #-#-#-#-#\n"
 "このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見"
-"した 場合は http://bug.gentoo.org/ にて私に対して報告してほしい。\n"
-"#-#-#-#-#  ekeyword.pod.ja.po (gentoolkit-dev 0.2.5)  #-#-#-#-#\n"
-"このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見"
-"した 場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。\n"
-"#-#-#-#-#  eviewcvs.pod.ja.po (gentoolkit-dev 0.2.5)  #-#-#-#-#\n"
-"このツールは Aron Griffis <agriffis@gentoo.org> によって書かれた。バグを発見"
-"した 場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。"
+"した場合は http://bugs.gentoo.org/ にて私に対して報告して欲しい。"

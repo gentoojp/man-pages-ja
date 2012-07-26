@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the gentoolkit-dev package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gentoolkit-dev 0.2.5\n"
-"POT-Creation-Date: 2012-07-22 20:16+0900\n"
+"POT-Creation-Date: 2012-07-26 20:48+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +17,19 @@ msgstr ""
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1 en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "0.1.0"
 msgstr "0.1.0"
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1 en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Gentoolkit"
 msgstr "Gentoolkit"
 
 #. type: TH
 #: en/gentoolkit-dev/ebump.1:1 en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Gentoo Administration"
 msgstr "Gentoo Administration"
 
@@ -38,13 +37,13 @@ msgstr "Gentoo Administration"
 #: en/gentoolkit-dev/ebump.1:2 en/gentoolkit-dev/gensync.1:2
 #: en/gentoolkit-dev/echangelog.pod:1 en/gentoolkit-dev/ekeyword.pod:1
 #: en/gentoolkit-dev/eviewcvs.pod:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:5 en/gentoolkit-dev/gensync.1:5
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNTAX"
 msgstr "書式"
 
@@ -52,7 +51,7 @@ msgstr "書式"
 #: en/gentoolkit-dev/ebump.1:9 en/gentoolkit-dev/gensync.1:9
 #: en/gentoolkit-dev/echangelog.pod:9 en/gentoolkit-dev/ekeyword.pod:9
 #: en/gentoolkit-dev/eviewcvs.pod:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -60,73 +59,65 @@ msgstr "説明"
 #: en/gentoolkit-dev/ebump.1:22 en/gentoolkit-dev/gensync.1:23
 #: en/gentoolkit-dev/echangelog.pod:37 en/gentoolkit-dev/ekeyword.pod:22
 #: en/gentoolkit-dev/eviewcvs.pod:17
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:25 en/gentoolkit-dev/gensync.1:40
-#, fuzzy
 msgid "B<-C>"
 msgstr "B<-C>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:32 en/gentoolkit-dev/gensync.1:33
-#, fuzzy
 msgid "B<-V>"
 msgstr "B<-V>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:34 en/gentoolkit-dev/gensync.1:35
-#, fuzzy
 msgid "B<--version>"
 msgstr "B<--version>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:36 en/gentoolkit-dev/gensync.1:37
-#, fuzzy
 msgid "Display version information and exit."
 msgstr "バージョンを表示して終了する。"
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:102 en/gentoolkit-dev/gensync.1:65
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr "参考"
+msgstr "関連項目"
 
 #. type: SH
 #: en/gentoolkit-dev/ebump.1:107 en/gentoolkit-dev/gensync.1:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
 msgstr "著者"
 
 #. type: Plain text
 #: en/gentoolkit-dev/ebump.1:110 en/gentoolkit-dev/gensync.1:75
-#, fuzzy
 msgid "Karl Trygve Kalleberg E<lt>karltk@gentoo.orgE<gt>"
 msgstr "Karl Trygve Kalleberg E<lt>karltk@gentoo.orgE<gt>"
 
 #. type: TH
 #: en/gentoolkit-dev/gensync.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "gensync"
 msgstr "gensync"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:5
-#, fuzzy
 msgid "gensync - Gentoo: Overlay Sync Tool"
 msgstr "gensync - Gentoo: オーバーレイ同期ツール"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:8
-#, fuzzy
 msgid "gensync [I<option>] E<lt>I<repo-id-1 repo-id-2 ...>E<gt>"
 msgstr "gensync [I<option>] E<lt>I<repo-id-1 repo-id-2 ...>E<gt>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:19
-#, fuzzy
 msgid ""
 "I<gensync> synchronises your machine against an upstream repository of "
 "ebuild files, called a sync source. Normally, Portage will only synchronise "
@@ -136,93 +127,80 @@ msgid ""
 "I<breakmygentoo.net> sync source."
 msgstr ""
 "I<gensync> は同期元と呼ばれる配布元から、あなたのマシンへと ebuild ファイルを"
-"同期させる。Portage は通常、Gentoo プロジェクトによって管理されている公式の"
-"portage ツリーからしか同期しない。しかしながら、I<breakmygentoo.net> のような"
+"同期させる。Portage は通常、Gentoo プロジェクトによって管理されている公式の "
+"Portage ツリーからしか同期しない。しかしながら、I<breakmygentoo.net> のような"
 "開発ツリーの補助 ebuild の中には、ときどき好奇心旺盛な猛者たちが興味を持つも"
 "のがあるかもしれない。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:22
-#, fuzzy
 msgid ""
 "This tool can be used to synchronise against these alternative sync sources."
 msgstr "このツールは、そのような同期元から同期するために使用することができる。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:26
-#, fuzzy
 msgid "B<-l>"
 msgstr "B<-l>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:28
-#, fuzzy
 msgid "B<--list-sources>"
 msgstr "B<--list-sources>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:30
-#, fuzzy
 msgid "List available sync sources known to I<gensync>."
 msgstr "I<gensync> が利用可能な同期元の一覧。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:42
-#, fuzzy
 msgid "B<--no-color>"
 msgstr "B<--no-color>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:44
-#, fuzzy
 msgid "Turn off colors."
 msgstr "カラー使用しない。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:47
-#, fuzzy
 msgid "B<-h>"
 msgstr "B<-h>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:49
-#, fuzzy
 msgid "B<--help>"
 msgstr "B<--help>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:51
-#, fuzzy
 msgid "Display help."
 msgstr "ヘルプを表示する。"
 
 #. type: SH
 #: en/gentoolkit-dev/gensync.1:52
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CONFIGURATION FILES"
 msgstr "設定ファイル"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:55
-#, fuzzy
 msgid "B</etc/gensync/gensync.conf>"
 msgstr "B</etc/gensync/gensync.conf>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:57
-#, fuzzy
 msgid "The main configuration file, commented and self-explanatory"
 msgstr "メインの設定ファイル。コメントに説明がある。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:60
-#, fuzzy
 msgid "B</etc/gensync/*.syncsource>"
 msgstr "B</etc/gensync/*.syncsource>"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:63
-#, fuzzy
 msgid ""
 "Per-sync source configuration files, describing the sync source to "
 "I<gensync>."
@@ -230,7 +208,6 @@ msgstr "同期元ごとの設定ファイル。"
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:69
-#, fuzzy
 msgid ""
 "The rest of the utilities in I<app-portage/gentoolkit-dev>, such as "
 "I<echangelog>, I<ebump> and I<ego>."
@@ -240,6 +217,5 @@ msgstr ""
 
 #. type: Plain text
 #: en/gentoolkit-dev/gensync.1:73
-#, fuzzy
 msgid "Matthew Schick E<lt>matt@breakmygentoo.netE<gt> (original author)"
 msgstr "Matthew Schick E<lt>matt@breakmygentoo.netE<gt> (原著者)"
