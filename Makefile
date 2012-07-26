@@ -11,7 +11,16 @@ vpath %.txt $(podir)
 vpath %.cfg $(podir)
 vpath %     $(srcdir)
 
-POD2MAN := pod2man --stderr --utf8
+define pod2man
+  @addendum=$(subst $(builddir)/,$(podir)/,$@).txt; \
+  if [ ! -f $$addendum ]; then \
+    addendum=/dev/null; \
+  fi; \
+  echo "cat $$addendum > $@"; \
+  cat $$addendum > $@
+  pod2man --stderr --utf8 $(PODFLAGS) $< >> $@
+endef
+
 define po4a
   po4a \
     --no-backups \
@@ -176,18 +185,11 @@ portage_MANS    := $(addprefix $(builddir)/,$(filter %.1 %.5,$(portage_SOURCES))
 
 
 .PHONY: all clean pod epm esearch gentoolkit gentoolkit-dev portage
+.SUFFIXES:
 .SECONDEXPANSION:
 
-%.1: %.in
-	@addendum=$(subst $(builddir)/,$(podir)/,$@).txt; \
-	if [ -f $$addendum ]; then \
-	  echo "cat $$addendum  >$@"; \
-	  cat $$addendum  >$@; \
-	fi
-	cat $< >>$@
-
-%.in: %.pod
-	$(POD2MAN) $(PODFLAGS) $< >$@
+%.1: %.pod
+	$(call pod2man)
 
 all: epm esearch gentoolkit gentoolkit-dev portage
 
