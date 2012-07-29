@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the Portage package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portage 2.0.51-r3\n"
-"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"POT-Creation-Date: 2012-07-29 16:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +29,7 @@ msgstr ""
 #: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage 2.0.51"
 msgstr "Portage 2.0.51"
 
@@ -39,7 +38,7 @@ msgstr "Portage 2.0.51"
 #: en/portage/env-update.1:1 en/portage/etc-update.1:1
 #: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
 #: en/portage/portage.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage"
 msgstr "Portage"
 
@@ -57,7 +56,7 @@ msgstr "Portage"
 #: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
 #: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
 #: en/portage/vim.eclass.5:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -66,7 +65,7 @@ msgstr "名前"
 #: en/portage/env-update.1:4 en/portage/etc-update.1:4
 #: en/portage/g-cpan.pl.1:4 en/portage/quickpkg.1:4 en/portage/repoman.1:4
 #: en/portage/make.conf.5:4 en/portage/portage.5:12
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
@@ -84,7 +83,7 @@ msgstr "書式"
 #: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
 #: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
 #: en/portage/vim.eclass.5:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -92,7 +91,7 @@ msgstr "説明"
 #: en/portage/dispatch-conf.1:26 en/portage/emerge.1:167
 #: en/portage/env-update.1:17 en/portage/etc-update.1:19
 #: en/portage/quickpkg.1:21 en/portage/repoman.1:14
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
@@ -111,63 +110,9 @@ msgstr "オプション"
 #: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
 #: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
 #: en/portage/vim.eclass.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPORTING BUGS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグの報告\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告"
+msgstr "バグ報告"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -183,61 +128,9 @@ msgstr ""
 #: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
 #: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
 #: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照"
+msgstr "関連項目"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:80 en/portage/ebuild.1:170
@@ -251,14 +144,14 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:59 en/portage/rpm.eclass.5:32
 #: en/portage/ssl-cert.eclass.5:49 en/portage/stardict.eclass.5:29
 #: en/portage/toolchain-funcs.eclass.5:76 en/portage/vim.eclass.5:47
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FILES"
 msgstr "ファイル"
 
 #. type: TP
 #: en/portage/dispatch-conf.1:81 en/portage/emerge.1:530
 #: en/portage/etc-update.1:30
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/dispatch-conf.conf>"
 msgstr "B</etc/dispatch-conf.conf>"
 
@@ -277,63 +170,9 @@ msgstr "B</etc/dispatch-conf.conf>"
 #: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
 #: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
 #: en/portage/vim.eclass.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者"
+msgstr "著者"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:90 en/portage/ebuild.1:183
@@ -343,7 +182,6 @@ msgstr ""
 #: en/portage/games.eclass.5:118 en/portage/make.conf.5:372
 #: en/portage/perl-module.eclass.5:65 en/portage/rpm.eclass.5:36
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
-#, fuzzy
 msgid "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
 msgstr "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
 
@@ -362,93 +200,36 @@ msgstr "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
 #: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
 #: en/portage/vim.eclass.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CVS HEADER"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVSヘッダー\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ"
+msgstr "CVS ヘッダ"
 
 #. type: TP
 #: en/portage/ebuild.1:171 en/portage/emerge.1:525 en/portage/ebuild.5:809
 #: en/portage/make.conf.5:354
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.conf> "
 msgstr "B</etc/make.conf> "
 
 #. type: Plain text
 #: en/portage/ebuild.1:177 en/portage/emerge.1:564
-#, fuzzy
 msgid "Achim Gottinger E<lt>achim@gentoo.orgE<gt>"
 msgstr "Achim Gottinger E<lt>achim@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:179 en/portage/emerge.1:560 en/portage/env-update.1:22
 #: en/portage/repoman.1:115 en/portage/make.conf.5:368
-#, fuzzy
 msgid "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
 msgstr "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:181 en/portage/emerge.1:566 en/portage/make.conf.5:370
-#, fuzzy
 msgid "Nicholas Jones E<lt>carpaski@gentoo.orgE<gt>"
 msgstr "Nicholas Jones E<lt>carpaski@gentoo.orgE<gt>"
 
 #. type: TH
 #: en/portage/emerge.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EMERGE"
 msgstr "EMERGE"
 
@@ -459,26 +240,24 @@ msgstr "EMERGE"
 #: en/portage/perl-module.eclass.5:1 en/portage/rpm.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Jun 2003"
 msgstr "Jun 2003"
 
 #. type: Plain text
 #: en/portage/emerge.1:4
-#, fuzzy
 msgid "emerge - Command-line interface to the Portage system"
 msgstr "emerge - Portage システムへのコマンドラインインタフェース"
 
 #. type: TP
 #: en/portage/emerge.1:5 en/portage/emerge.1:8 en/portage/emerge.1:11
 #: en/portage/emerge.1:14
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<emerge>"
 msgstr "B<emerge>"
 
 #. type: Plain text
 #: en/portage/emerge.1:8
-#, fuzzy
 msgid ""
 "[I<options>] [I<action>] [I<ebuild> | I<tbz2file> | I<class> | "
 "I<dependency>] ..."
@@ -488,25 +267,21 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/emerge.1:11
-#, fuzzy
 msgid "B<--sync> | B<--info> | B<--search>"
 msgstr "B<--sync> | B<--info> | B<--search>"
 
 #. type: Plain text
 #: en/portage/emerge.1:14
-#, fuzzy
 msgid "I<--help> [B<system> | B<config> | B<sync>]"
 msgstr "I<--help> [B<system> | B<config> | B<sync>]"
 
 #. type: Plain text
 #: en/portage/emerge.1:17
-#, fuzzy
 msgid "I<--version> | I<-V>"
 msgstr "I<--version> | I<-V>"
 
 #. type: Plain text
 #: en/portage/emerge.1:26
-#, fuzzy
 msgid ""
 "B<emerge> is the definitive command-line interface to the Portage system.  "
 "It is primarily used for installing packages, and B<emerge> can "
@@ -516,42 +291,40 @@ msgid ""
 "packages to newer releases as well.  It handles both source and binary "
 "packages, and it can be used to create binary packages for distribution."
 msgstr ""
-"B<emerge> は Portage システムへのもっとも信頼のおける コマンドラインインタ"
-"フェースである。 B<emerge> の主要な用途はパッケージのインストールであり、 イ"
-"ンストールしたいパッケージの依存関係を自動的に解決することができる。 それに加"
-"え、B<emerge> は B<Portage ツリー> をアップデートし、 新しく更新されたパッ"
-"ケージを使えるようにもできる。 B<emerge> はインストールされているパッケージを"
-"新しいリリースに 更新することも巧みにやってのける。 ソースパッケージもバイナ"
-"リパッケージも扱うことができ、 配布するためのバイナリパッケージを作成すること"
-"もできる。"
+"B<emerge> は Portage システムへのもっとも信頼のおけるコマンドラインインタ"
+"フェースである。B<emerge> の主要な用途はパッケージのインストールであり、イン"
+"ストールしたいパッケージの依存関係を自動的に解決することができる。それに加"
+"え、B<emerge> は B<Portage ツリー> をアップデートし、新しく更新されたパッケー"
+"ジを使えるようにもできる。B<emerge> はインストールされているパッケージを新し"
+"いリリースに更新することも巧みにやってのける。ソースパッケージもバイナリパッ"
+"ケージも扱うことができ、配布するためのバイナリパッケージを作成することもでき"
+"る。"
 
 #. type: SH
 #: en/portage/emerge.1:26
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EBUILDS, TBZ2S, CLASSES AND DEPENDENCIES"
 msgstr "EBUILD、TBZ2、クラスと依存関係"
 
 #. type: Plain text
 #: en/portage/emerge.1:30
-#, fuzzy
 msgid ""
 "B<emerge> primarily installs packages.  You can specify packages to install "
 "in one of four main ways: an I<ebuild>, a I<tbz2file>, a I<class>, or a "
 "I<dependency>."
 msgstr ""
-"B<emerge> は主にパッケージのインストールに使用される。 パッケージをインストー"
-"ルするに当たっては、 大きく分けて4つの方法のうちから選ぶことができる: "
-"I<ebuild>、I<tbz2 ファイル>、I<クラス> もしくは I<依存関係>。"
+"B<emerge> は主にパッケージのインストールに使用される。パッケージをインストー"
+"ルするに当たっては、大きく分けて 4 つの方法のうちから選ぶことができる: "
+"I<ebuild>、I<tbz2file>、I<クラス> もしくは I<依存関係>。"
 
 #. type: TP
 #: en/portage/emerge.1:31
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild>"
 msgstr "B<ebuild>"
 
 #. type: Plain text
 #: en/portage/emerge.1:43
-#, fuzzy
 msgid ""
 "An I<ebuild> must be, at a minimum, a valid Portage package directory name "
 "without a version or category, such as B<portage> or B<python>.  Both "
@@ -562,44 +335,42 @@ msgid ""
 "WARNING: The implementation of B<emerge /path/to/ebuild> is broken and so "
 "this syntax shouldn't be used."
 msgstr ""
-"I<ebuild> としては、いちばん短く書けば、バージョンやカテゴリーを 除いた "
+"I<ebuild> としては、いちばん短く書けば、バージョンやカテゴリーを除いた "
 "Portage パッケージのディレクトリ名、たとえば B<portage> や B<python> を指定す"
-"る。 カテゴリーやバージョン番号を B<sys-apps/portage> や B<=python-2.2.1-r2> "
-"のように付加的に使うことができる。 B<emerge> は末尾のスラッシュを無視するの"
-"で、 ファイル名の補完を使うこともできる。 また、I<ebuild> には B</usr/"
-"portage/app-admin/python/python-2.2.1-r2.ebuild> のような実際のファイル名を使"
-"うこともできる。 警告:B<emerge /path/to/ebuild>の実装は正しく動かないので、 "
-"この構文を使ってはならない。"
+"る。カテゴリーやバージョン番号を B<sys-apps/portage> や B<=python-2.2.1-r2> "
+"のように付加的に使うことができる。B<emerge> は末尾のスラッシュを無視するの"
+"で、ファイル名の補完を使うこともできる。また、I<ebuild> には B</usr/portage/"
+"app-admin/python/python-2.2.1-r2.ebuild> のような実際のファイル名を使うことも"
+"できる。警告: B<emerge /path/to/ebuild> の実装は正しく動かないので、この構文"
+"を使ってはならない。"
 
 #. type: TP
 #: en/portage/emerge.1:43
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<tbz2file>"
-msgstr "B<tbz2>ファイル"
+msgstr "B<tbz2file>"
 
 #. type: Plain text
 #: en/portage/emerge.1:48
-#, fuzzy
 msgid ""
 "A I<tbz2file> must be a valid .tbz2 created with B<ebuild E<lt>packageE<gt>-"
 "E<lt>versionE<gt>.ebuild package> or B<emerge --buildpkg [category/]"
 "E<lt>packageE<gt>> or B<quickpkg /var/db/pkg/E<lt>categoryE<gt>/"
 "E<lt>packageE<gt>>."
 msgstr ""
-"I<tbz2 ファイル> は B<ebuild E<lt>パッケージ名E<gt>-E<lt>バージョン番号E<gt>."
+"I<tbz2file> は B<ebuild E<lt>パッケージ名E<gt>-E<lt>バージョン番号E<gt>."
 "ebuild package> もしくは B<emerge --buildpkg [カテゴリー/]E<lt>パッケージ名"
 "E<gt>> もしくは B<quickpkg /var/db/pkg/E<lt>カテゴリーE<gt>/E<lt>パッケージ名"
 "E<gt>> で作成された正しい .tbz2 ファイルでなければならない。"
 
 #. type: TP
 #: en/portage/emerge.1:48
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<class>"
 msgstr "B<クラス>"
 
 #. type: Plain text
 #: en/portage/emerge.1:58
-#, fuzzy
 msgid ""
 "Package classes are a convenient shorthand for large groups of packages.  "
 "Two classes are currently supported: B<system> and B<world>.  B<system> "
@@ -609,22 +380,21 @@ msgid ""
 "for more information].  Note that these commands are generally used in "
 "conjunction with B<--update>."
 msgstr ""
-"パッケージクラスは巨大なパッケージ群を短く書き表わすのに便利である。 現在は2"
-"つのクラスがサポートされている: B<system> と B<world> である。 B<system> はシ"
-"ステムが正しく動作するために必要と思われるパッケージ 群を指し、B<world> は "
-"B<system> にあるパッケージ全てに加え、 B</var/lib/portage/world> に挙げられて"
-"いるパッケージを含む。 [詳しい情報は後述する B<ファイル> を参照。] これらのコ"
+"パッケージクラスは巨大なパッケージ群を短く書き表わすのに便利である。現在は 2 "
+"つのクラスがサポートされている: B<system> と B<world> である。B<system> はシ"
+"ステムが正しく動作するために必要と思われるパッケージ群を指し、B<world> は "
+"B<system> にあるパッケージ全てに加え、B</var/lib/portage/world> に挙げられて"
+"いるパッケージを含む。[詳しい情報は後述する B<ファイル> を参照。] これらのコ"
 "マンドは一般的に B<--update> と組み合わせて使う。"
 
 #. type: TP
 #: en/portage/emerge.1:58
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dependency>"
 msgstr "B<依存関係>"
 
 #. type: Plain text
 #: en/portage/emerge.1:69
-#, fuzzy
 msgid ""
 "A I<dependency> describes bounds on a package that you wish to install. "
 "I<See portage(5) for the details on these 'atoms'.> For example, B<E<gt>=dev-"
@@ -634,29 +404,28 @@ msgid ""
 "you will need to escape characters such as 'E<lt>' and '='; use single- or "
 "double-quotes around the I<dependency> to get around escaping problems."
 msgstr ""
-"I<依存関係> はインストールしたいパッケージに依存するパッケージを 記述してい"
-"る。I<これらの「アトム」について詳しくはportage(5)を参照。 たとえば、"
+"I<依存関係> はインストールしたいパッケージに依存するパッケージを記述してい"
+"る。I<これらの「アトム」について詳しくは portage(5) を参照。たとえば、"
 ">B<E<gt>=dev-lang/python-2.2.1-r2> は Python の 2.2.1-r2 以上の最新バージョン"
-"にマッチする。 同様に、B<E<lt>dev-lang/python-2.0> は Python の 2.0 より前の"
-"最新バージョンにマッチする。 多くのシェルでは「E<lt>」や「=」といった文字をエ"
-"スケープする必要があることに 注意。エスケープ問題を解決するには、 シングル"
-"クォート(')やダブルクォート(\")で I<依存関係> を囲む。"
+"にマッチする。同様に、B<E<lt>dev-lang/python-2.0> は Python の 2.0 より前の最"
+"新バージョンにマッチする。多くのシェルでは「E<lt>」や「=」といった文字をエス"
+"ケープする必要があることに注意。エスケープ問題を解決するには、シングルクォー"
+"ト (') やダブルクォート (\") で I<依存関係> を囲む。"
 
 #. type: SH
 #: en/portage/emerge.1:69
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "ACTIONS"
 msgstr "アクション"
 
 #. type: TP
 #: en/portage/emerge.1:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<No action>"
 msgstr "B<アクション指定なし>"
 
 #. type: Plain text
 #: en/portage/emerge.1:79
-#, fuzzy
 msgid ""
 "If no action is specified, the action is to merge in the specified packages, "
 "satisfying any dependencies that they may have.  The arguments can be "
@@ -665,22 +434,21 @@ msgid ""
 "added to the B<world> file at the end, so that they are considered for later "
 "updating."
 msgstr ""
-"アクションが指定されなければ、指定されたパッケージの依存関係を満たしながら、 "
-"そのパッケージをインストールする、というアクションをする。 引数には "
-"I<ebuild>、I<tbz2>、I<クラス> もしくは I<依存関係> をとることができる。 "
+"アクションが指定されなければ、指定されたパッケージの依存関係を満たしながら、"
+"そのパッケージをインストールする、というアクションをする。引数には "
+"I<ebuild>、I<tbz2>、I<クラス> もしくは I<依存関係> をとることができる。"
 "B<tbz2 をインストールしたいなら、--usepkg オプションを使う必要があることに注"
-"意>。 最終的にパッケージは B<world> ファイルに追加され、 のちのちの更新対象に"
-"なる。"
+"意>。最終的にパッケージは B<world> ファイルに追加され、のちのちの更新対象にな"
+"る。"
 
 #. type: TP
 #: en/portage/emerge.1:79
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--clean >(B<-c>)"
 msgstr "B<--clean >(B<-c>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:88
-#, fuzzy
 msgid ""
 "Cleans the system by removing packages that will not affect the "
 "functionality of the system.  The arguments can be I<ebuilds>, I<classes>, "
@@ -689,22 +457,21 @@ msgid ""
 "that specific version of Mozilla.  This is generally safe to use.  B<Note "
 "that> --clean B<does not remove unslotted packages.>"
 msgstr ""
-"システムの機能に影響を与えないパッケージを削除し、 システムをきれいにする。 "
-"引数には I<ebuild>、I<クラス>、もしくはI<依存関係> をとることができる。例え"
-"ば、B<emerge --clean binutils> とすると binutils の古いバージョンを削除し、 "
+"システムの機能に影響を与えないパッケージを削除し、システムをきれいにする。引"
+"数には I<ebuild>、I<クラス>、もしくは I<依存関係> をとることができる。例え"
+"ば、B<emerge --clean binutils> とすると binutils の古いバージョンを削除し、"
 "B<emerge clean net-www/mozilla-0.9.9-r2> とすると特定のバージョンの Mozilla "
-"を削除する。 一般的に、このオプションは使っても安全である。 --clean B<ではス"
+"を削除する。一般的に、このオプションは使っても安全である。--clean B<ではス"
 "ロットがないパッケージは削除しないことに注意>。"
 
 #. type: TP
 #: en/portage/emerge.1:88
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--depclean>"
 msgstr "B<--depclean>"
 
 #. type: Plain text
 #: en/portage/emerge.1:102
-#, fuzzy
 msgid ""
 "Determines all packages installed on the system that have no explicit reason "
 "for being there.  B<emerge> generates a list of packages which it expects to "
@@ -717,44 +484,42 @@ msgid ""
 "issue.  B<Note that changes in USE flags can drastically affect the output "
 "of --depclean.>"
 msgstr ""
-"システムにインストールされているパッケージで、 はっきりとした理由なしにインス"
-"トールされているパッケージ全てを 決定する。 B<emerge> は B<system> パッケージ"
-"のリストと B<world> ファイルをチェックし、 インストールされているべきパッケー"
-"ジのリストを生成する。 そしてそのリストと実際インストールされているパッケージ"
-"のリストを 比較し、挙げられた違いが不要なパッケージとして削除の対象となる。 "
-"B<警告: パッケージを削除すると、削除されたパッケージに リンクするパッケージが"
-"動かなくなり、ライブラリが見つからない と文句を言うパッケージが出る可能性があ"
-"る。> 文句を言うパッケージを再 emerge すればこの問題は解決される。 B<USE フラ"
-"グを変更すると --depclean の出力に大きな影響を与えることに注意。>"
+"システムにインストールされているパッケージで、はっきりとした理由なしにインス"
+"トールされているパッケージ全てを決定する。B<emerge> は B<system> パッケージの"
+"リストと B<world> ファイルをチェックし、インストールされているべきパッケージ"
+"のリストを生成する。そしてそのリストと実際インストールされているパッケージの"
+"リストを比較し、挙げられた違いが不要なパッケージとして削除の対象となる。B<警"
+"告: パッケージを削除すると、削除されたパッケージにリンクするパッケージが動か"
+"なくなり、ライブラリが見つからないと文句を言うパッケージが出る可能性がある。>"
+"文句を言うパッケージを再 emerge すればこの問題は解決される。B<USE フラグを変"
+"更すると --depclean の出力に大きな影響を与えることに注意。>"
 
 #. type: TP
 #: en/portage/emerge.1:102
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--info>"
 msgstr "B<--info>"
 
 #. type: Plain text
 #: en/portage/emerge.1:108
-#, fuzzy
 msgid ""
 "This is a list of information to include in bug reports which aids the "
 "developers with fixing any problems you may report.  B<Please include this "
 "information when submitting a bug report.> Expanded output can be obtained "
 "with the I<--verbose> option."
 msgstr ""
-"これはバグ報告に入れるための情報のリストで、 開発者が報告を受けた問題を解決す"
-"るために役立つ。 B<バグ報告を出すときにはこの情報を入れること。> I<--"
-"verbose> オプションをつけると詳細な出力がえられる。"
+"これはバグ報告に入れるための情報のリストで、開発者が報告を受けた問題を解決す"
+"るために役立つ。B<バグ報告を出すときにはこの情報を入れること。>I<--verbose> "
+"オプションをつけると詳細な出力がえられる。"
 
 #. type: TP
 #: en/portage/emerge.1:108
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--inject >(B<-i>)"
 msgstr "B<--inject >(B<-i>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:116
-#, fuzzy
 msgid ""
 "Injecting a package inserts a 'stub' for that package so that Portage thinks "
 "that it is installed.  It is handy if you need, say, a binary version of "
@@ -762,40 +527,38 @@ msgid ""
 "You B<must> specify a category and particular version of a package for "
 "injecting.  For example, B<emerge --inject sys-kernel/gentoo-sources-2.4.19>."
 msgstr ""
-"パッケージを注入(inject)し、そのパッケージの「スタブ」を挿入して、 Portage に"
-"そのパッケージがインストールされたと思わせる。 これが便利なのは、たとえば "
-"XFree86 のバイナリバージョンが 深遠なハードウェアのために必要だったり、もしく"
-"は単に 自分で作ったパッケージを使いたかったりするときである。 注入するために"
-"はカテゴリーとパッケージの特定のバージョンを 指定B<しなければならない>。 例: "
+"パッケージを注入 (inject) し、そのパッケージの「スタブ」を挿入して、Portage "
+"にそのパッケージがインストールされたと思わせる。これが便利なのは、たとえば "
+"XFree86 のバイナリバージョンが深遠なハードウェアのために必要だったり、もしく"
+"は単に自分で作ったパッケージを使いたかったりするときである。注入するためには"
+"カテゴリーとパッケージの特定のバージョンを指定 B<しなければならない>。例: "
 "B<emerge --inject sys-kernel/gentoo-sources-2.4.19>"
 
 #. type: TP
 #: en/portage/emerge.1:116
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--metadata>"
 msgstr "B<--metadata>"
 
 #. type: Plain text
 #: en/portage/emerge.1:122
-#, fuzzy
 msgid ""
 "Causes portage to process all the metacache files as is normally done on the "
 "tail end of an rsync update using B<emerge --sync>. The processing creates "
 "the cache database that portage uses for pre-parsed lookups of package data."
 msgstr ""
-"通常はB<emerge --sync>を使ってrsyncアップデートを行った時の最後に行われる、 "
-"メタキャッシュファイルの処理を行う。この処理で、Portageがパッケージデータを "
-"解析する前の探索に使うキャッシュデータベースを作成する。"
+"通常は B<emerge --sync> を使って rsync アップデートを行った時の最後に行われ"
+"る、メタキャッシュファイルの処理を行う。この処理で、Portage がパッケージデー"
+"タを解析する前の探索に使うキャッシュデータベースを作成する。"
 
 #. type: TP
 #: en/portage/emerge.1:122
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--prune >(B<-P>)"
 msgstr "B<--prune >(B<-P>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:133
-#, fuzzy
 msgid ""
 "B<WARNING: This action can remove important packages!> Tries to remove all "
 "but the last version installed.  Since the command currently doesn't handle "
@@ -805,24 +568,23 @@ msgid ""
 "what you're doing>.  Its arguments can be I<ebuilds>, I<classes>, or "
 "I<dependencies> -- see B<--clean> above for examples.  You have been warned !"
 msgstr ""
-"B<警告: このアクションは重要なパッケージを削除する可能性がある!> マッチする"
-"パッケージの最新版以外のバージョンを全て削除しようとする。 このコマンドは現在"
-"のところ同じパッケージに複数のバージョンがあると 正しく処理することができない"
-"ので、注意すること！ このアクションは依存関係のチェックをしないので、 システ"
-"ムが正常に稼働するために必要なパッケージまで削除しかねない。 B<自分がなにをし"
-"ているのか本当に分かっていなければ、 このアクションの代わりに> --clean B<を使"
-"うこと>。 このアクションの引数は I<ebuild>、I<クラス>またはI<依存関係> であ"
-"る。-- 具体例は上記 B<--clean> を参照。 厳重注意！"
+"B<警告: このアクションは重要なパッケージを削除する可能性がある！>マッチする"
+"パッケージの最新版以外のバージョンを全て削除しようとする。このコマンドは現在"
+"のところ同じパッケージに複数のバージョンがあると正しく処理することができない"
+"ので、注意すること！このアクションは依存関係のチェックをしないので、システム"
+"が正常に稼働するために必要なパッケージまで削除しかねない。B<自分がなにをして"
+"いるのか本当に分かっていなければ、このアクションの代わりに> --clean B<を使う"
+"こと>。このアクションの引数は I<ebuild>、I<クラス> または I<依存関係> であ"
+"る。-- 具体例は上記 B<--clean> を参照。厳重注意！"
 
 #. type: TP
 #: en/portage/emerge.1:133
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--regen>"
 msgstr "B<--regen>"
 
 #. type: Plain text
 #: en/portage/emerge.1:144
-#, fuzzy
 msgid ""
 "Causes portage to check and update the dependency cache of all ebuilds in "
 "the portage tree.  The cache is used to speed up searches and the building "
@@ -834,24 +596,23 @@ msgid ""
 "convenient to run B<emerge --metadata> to rebuild the cache as portage does "
 "at the end of a sync operation."
 msgstr ""
-"Portage に Portage ツリーに入っている全 ebuild の依存関係キャッシュを チェッ"
-"クし更新させる。キャッシュは検索と依存関係ツリーの構築の速度向上 に使われる。"
-"rsync はサーバ側のキャッシュを使ってキャッシュを更新するので、 rsync ユーザに"
-"はこのコマンドは薦めない。「rsync ユーザ」と他のユーザの 間の違いを知らないな"
-"ら、あなたは「rsync ユーザ」だろう :)  rsync ユーザはキャッシュを再生成するた"
-"めには単に B<emerge --sync> を実行するだけでよい。 Portageが更新されたあと、"
-"通常Portageがsync操作の最後に行うように、 rsyncユーザはB<emerge --metadata>を"
-"実行してキャッシュを再構築するのが 簡便かもしれない。"
+"Portage に Portage ツリーに入っている全 ebuild の依存関係キャッシュをチェック"
+"し更新させる。キャッシュは検索と依存関係ツリーの構築の速度向上に使われる。"
+"rsync はサーバ側のキャッシュを使ってキャッシュを更新するので、rsync ユーザに"
+"はこのコマンドは薦めない。「rsync ユーザ」と他のユーザの間の違いを知らないな"
+"ら、あなたは「rsync ユーザ」だろう :) rsync ユーザはキャッシュを再生成するた"
+"めには単に B<emerge --sync> を実行するだけでよい。Portage が更新されたあと、"
+"通常 Portage が sync 操作の最後に行うように、rsync ユーザは B<emerge --"
+"metadata> を実行してキャッシュを再構築するのが簡便かもしれない。"
 
 #. type: TP
 #: en/portage/emerge.1:144
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--search >(B<-s>)"
-msgstr "B<--search>(B<-s>)"
+msgstr "B<--search >(B<-s>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:153
-#, fuzzy
 msgid ""
 "Searches for matches of the supplied string in the portage tree.  The --"
 "search string is a regular expression.  For example, B<emerge --search \"^kde"
@@ -861,22 +622,21 @@ msgid ""
 "you want to search the package descriptions as well, use the B<--searchdesc> "
 "option."
 msgstr ""
-"Portage ツリーの中を指定された文字列でマッチするものを検索する。 検索文字列は"
-"正規表現である。たとえば、 B<emerge --search \"^kde\"> は「kde」で始まるパッ"
-"ケージ全てを検索し、 B<emerge --search \"gcc$\"> は「gcc」で終わるパッケージ"
-"全てを検索し、 B<emerge --search \"office\"> は「office」という単語を含むパッ"
-"ケージ全てを検索する。 パッケージの説明文も検索したいなら、 B<--searchdesc> "
-"オプションを使う。"
+"Portage ツリーの中を指定された文字列でマッチするものを検索する。検索文字列は"
+"正規表現である。たとえば、B<emerge --search \"^kde\"> は「kde」で始まるパッ"
+"ケージ全てを検索し、B<emerge --search \"gcc$\"> は「gcc」で終わるパッケージ全"
+"てを検索し、B<emerge --search \"office\"> は「office」という単語を含むパッ"
+"ケージ全てを検索する。パッケージの説明文も検索したいなら、B<--searchdesc> オ"
+"プションを使う。"
 
 #. type: TP
 #: en/portage/emerge.1:153
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--sync>"
 msgstr "B<--sync>"
 
 #. type: Plain text
 #: en/portage/emerge.1:160
-#, fuzzy
 msgid ""
 "Initiates a portage tree update with one of the rsync.gentoo.org mirrors.  "
 "B<Note that any changes you have made to the portage tree will be erased>.  "
@@ -884,20 +644,19 @@ msgid ""
 "B<make.conf>(5)'s description of PORTDIR_OVERLAY for a method to avoid "
 "deletions."
 msgstr ""
-"rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。 B<Portage "
-"ツリーに対して行った変更は全て消去されることに注意>。 特殊な環境を除いて、こ"
-"のアクションは更新に B<rsync> を用いる。 変更の削除を防ぐ方法については、"
-"make.conf の PORTDIR_OVERLAY の記述を参照。"
+"rsync.gentoo.org ミラーのいずれかと Portage ツリーの更新を始める。B<Portage "
+"ツリーに対して行った変更は全て消去されることに注意>。特殊な環境を除いて、この"
+"アクションは更新に B<rsync> を用いる。変更の削除を防ぐ方法については、make."
+"conf の PORTDIR_OVERLAY の記述を参照。"
 
 #. type: TP
 #: en/portage/emerge.1:160
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--unmerge >(B<-C>)"
-msgstr "B<--unmerge>(B<-C>)"
+msgstr "B<--unmerge >(B<-C>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:167
-#, fuzzy
 msgid ""
 "B<WARNING: This action can remove important packages!> Removes all matching "
 "packages.  This does no checking of dependencies, so it may remove packages "
@@ -905,21 +664,20 @@ msgid ""
 "I<ebuilds>, I<classes>, or I<dependencies> -- see B<--clean> above for "
 "examples."
 msgstr ""
-"B<警告: このアクションは重要なパッケージを削除する可能性がある!> マッチする"
-"パッケージ全てを削除する。 このアクションは依存関係のチェックをしないので、 "
-"システムが正常に稼働するために必要なパッケージまで削除しかねない。 このアク"
-"ションの引数は I<ebuild>、I<クラス>またはI<依存関係> である。-- 具体例は上記 "
+"B<警告: このアクションは重要なパッケージを削除する可能性がある！>マッチする"
+"パッケージ全てを削除する。このアクションは依存関係のチェックをしないので、シ"
+"ステムが正常に稼働するために必要なパッケージまで削除しかねない。このアクショ"
+"ンの引数は I<ebuild>、I<クラス> または I<依存関係> である。-- 具体例は上記 "
 "B<--clean> を参照。"
 
 #. type: TP
 #: en/portage/emerge.1:168
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--ask >(B<-a>)"
 msgstr "B<--ask >(B<-a>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:176
-#, fuzzy
 msgid ""
 "Before performing the merge, display what ebuilds and tbz2s will be "
 "installed, in the same format as when using B<--pretend>; then ask whether "
@@ -929,19 +687,18 @@ msgid ""
 msgstr ""
 "マージを実行する前に、どの ebuild と tbz2 ファイルがインストールされるのか、"
 "B<--pretend> を実行するのと同じ形式で表示したあと、マージするか中止するか尋ね"
-"る。 B<--ask> を使うのは、B<--pretend> を使って確認したのち B<--pretend> なし"
-"で同じコマンドを実行するのより効率がよい。 依存関係を計算する必要が一度だけで"
+"る。B<--ask> を使うのは、B<--pretend> を使って確認したのち B<--pretend> なし"
+"で同じコマンドを実行するのより効率がよい。依存関係を計算する必要が一度だけで"
 "済むからである。"
 
 #. type: TP
 #: en/portage/emerge.1:176
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--buildpkg >(B<-b>)"
 msgstr "B<--buildpkg >(B<-b>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:185
-#, fuzzy
 msgid ""
 "Tells emerge to build binary packages for all ebuilds processed in addition "
 "to actually merging the packages.  Useful for maintainers or if you "
@@ -950,92 +707,86 @@ msgid ""
 "directory.  An alternative for already-merged packages is to use B<quickpkg> "
 "which creates a tbz2 from the live filesystem."
 msgstr ""
-"emerge の際パッケージを実際にインストールすることに加え、 処理される全 "
-"ebuild についてバイナリパッケージもビルドする。 メンテナーにも便利であるし、"
-"複数の Gentoo Linux システムを 管理していても便利である(ビルド一発どこでも "
-"emerge tbz2)。 パッケージは I<${PKGDIR}>/All ディレクトリに作成される。 すで"
-"にインストールされているパッケージに対しては、 稼働中のファイルシステムから "
-"tbz2 を作成する B<quickpkg> が使える。"
+"emerge の際パッケージを実際にインストールすることに加え、処理される全 ebuild "
+"についてバイナリパッケージもビルドする。メンテナーにも便利であるし、複数の "
+"Gentoo Linux システムを管理していても便利である (ビルド一発どこでも emerge "
+"tbz2)。パッケージは I<${PKGDIR}>/All ディレクトリに作成される。すでにインス"
+"トールされているパッケージに対しては、稼働中のファイルシステムから tbz2 を作"
+"成する B<quickpkg> が使える。"
 
 #. type: TP
 #: en/portage/emerge.1:185
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--buildpkgonly >(B<-B>)"
 msgstr "B<--buildpkgonly >(B<-B>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:190
-#, fuzzy
 msgid ""
 "Creates binary packages for all ebuilds processed without actually merging "
 "the packages.  This comes with the caveat that all build-time dependencies "
 "must already be emerged on the system."
 msgstr ""
-"emerge の際パッケージを実際にインストールすることに加え、 処理される全 "
-"ebuild についてバイナリパッケージもビルドする。 このオプションには、ビルド時"
-"の全依存関係が事前にシステムに emerge されていなければならないという落し穴が"
-"ある。"
+"emerge の際パッケージを実際にインストールすることに加え、処理される全 ebuild "
+"についてバイナリパッケージもビルドする。このオプションには、ビルド時の全依存"
+"関係が事前にシステムに emerge されていなければならないという落し穴がある。"
 
 #. type: TP
 #: en/portage/emerge.1:190
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--changelog >(B<-l>)"
 msgstr "B<--changelog >(B<-l>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:194
-#, fuzzy
 msgid ""
 "Use this in conjunction with the B<--pretend> action.  This will show the "
 "ChangeLog entries for all the packages that will be upgraded."
 msgstr ""
-"B<--pretend> アクションと組み合わせて使う。 このオプションを使うとアップグ"
-"レードされる全パッケージの ChangeLog エントリーが表示される。"
+"B<--pretend> アクションと組み合わせて使う。このオプションを使うとアップグレー"
+"ドされる全パッケージの ChangeLog エントリーが表示される。"
 
 #. type: TP
 #: en/portage/emerge.1:194
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--columns>"
 msgstr "B<--columns>"
 
 #. type: Plain text
 #: en/portage/emerge.1:198
-#, fuzzy
 msgid ""
 "Used alongside B<--pretend> to cause the package name, new version, and old "
 "version to be displayed in an aligned format for easy cut-n-paste."
 msgstr ""
-"I<--pretend> といっしょに使い、カット＆ペーストしやすい ように整形されたパッ"
+"I<--pretend> といっしょに使い、カット＆ペーストしやすいように整形されたパッ"
 "ケージ名、新バージョン、旧バージョンが表示される。"
 
 #. type: TP
 #: en/portage/emerge.1:198
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--debug >(B<-d>)"
 msgstr "B<--debug >(B<-d>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:204
-#, fuzzy
 msgid ""
 "Tells emerge to run the emerge command in B<--debug> mode.  In this mode the "
 "bash build environment will run with the -x option, causing it to output "
 "verbose debugging information to stdout.  B<--debug> is great for finding "
 "bash syntax errors."
 msgstr ""
-"emerge コマンドをデバッグモードで動かす。 このモードでは bash のビルド環境は "
-"-x オプションつきで動作し、 標準出力に詳細なデバッグ情報を出力する。 --debug "
-"は bash の構文エラーを探すために役立つ。"
+"emerge コマンドをデバッグモードで動かす。このモードでは Bash のビルド環境は -"
+"x オプションつきで動作し、標準出力に詳細なデバッグ情報を出力する。--debug は "
+"Bash の構文エラーを探すために役立つ。"
 
 #. type: TP
 #: en/portage/emerge.1:204
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--deep >(B<-D>)"
 msgstr "B<--deep >(B<-D>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:211
-#, fuzzy
 msgid ""
 "When used in conjunction with B<--update>, this flag forces B<emerge> to "
 "consider the entire dependency tree of packages, instead of checking only "
@@ -1043,40 +794,38 @@ msgid ""
 "updates in libraries that are not directly listed in the dependencies of a "
 "package."
 msgstr ""
-"B<--update> と組み合わせて使い、B<emerge> にパッケージの 直接の依存関係だけを"
-"チェックするのではなく、パッケージの依存ツリー 全体を考慮に入れるよう強制す"
-"る。 たとえば、このフラグを使うとパッケージの依存関係として直接 挙げられては"
-"いないライブラリのアップデートを捉えることができる。"
+"B<--update> と組み合わせて使い、B<emerge> にパッケージの直接の依存関係だけを"
+"チェックするのではなく、パッケージの依存ツリー全体を考慮に入れるよう強制す"
+"る。たとえば、このフラグを使うとパッケージの依存関係として直接挙げられてはい"
+"ないライブラリのアップデートを捉えることができる。"
 
 #. type: TP
 #: en/portage/emerge.1:211
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--emptytree >(B<-e>)"
 msgstr "B<--emptytree >(B<-e>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:217
-#, fuzzy
 msgid ""
 "Virtually tweaks the tree of installed packages to only contain libc; this "
 "is great to use together with B<--pretend>.  This allows developers to get a "
 "complete overview of the complete dependency tree of a package, and it "
 "enables complete trees to be rebuilt using the latest libraries."
 msgstr ""
-"仮想的にインストールされたパッケージのツリーが libc だけ含むように 手を加え"
-"る。このオプションは B<--pretend> といっしょに使うととても便利 である。このオ"
-"プションを使うと、開発者はパッケージの全依存関係のツリー の概観を知ることがで"
-"きるし、最新のライブラリを使って全ツリーを再ビルド することもできる。"
+"仮想的にインストールされたパッケージのツリーが libc だけ含むように手を加え"
+"る。このオプションは B<--pretend> といっしょに使うととても便利である。このオ"
+"プションを使うと、開発者はパッケージの全依存関係のツリーの概観を知ることがで"
+"きるし、最新のライブラリを使って全ツリーを再ビルドすることもできる。"
 
 #. type: TP
 #: en/portage/emerge.1:217
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--fetchonly >(B<-f>)"
 msgstr "B<--fetchonly >(B<-f>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:221
-#, fuzzy
 msgid ""
 "Instead of doing any package building, just perform fetches for all packages "
 "(the main package as well as all dependencies)."
@@ -1086,70 +835,65 @@ msgstr ""
 
 #. type: TP
 #: en/portage/emerge.1:221
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--fetch-all-uri >(B<-f>)"
 msgstr "B<--fetch-all-uri >(B<-f>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:226
-#, fuzzy
 msgid ""
 "Instead of doing any package building, just perform fetches for all packages "
 "(the main package as well as all dependencies), grabbing all potential files."
 msgstr ""
 "パッケージをビルドせず、単に全パッケージの fetch だけを行う (メインパッケージ"
-"に加えて依存するパッケージ全部)。 必要ある可能性のあるファイル全てを取得す"
-"る。"
+"に加えて依存するパッケージ全部)。必要ある可能性のあるファイル全てを取得する。"
 
 #. type: TP
 #: en/portage/emerge.1:226
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--getbinpkg >(B<-g>)"
 msgstr "B<--getbinpkg >(B<-g>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:232
-#, fuzzy
 msgid ""
 "Using the server and location defined in I<PORTAGE_BINHOST> (see B<make.conf>"
 "(5)), portage will download the information from each binary package found "
 "and it will use that information to help build the dependency list.  This "
 "option implies B<-k>.  (Use B<-gK> for binary-only merging.)"
 msgstr ""
-"I<PORTAGE_BINHOST> (B<make.conf>(5)参照)で設定されたサーバーと場所を用い、"
-"Portageが見つけた各バイナリパッケージの情報をダウンロードする。Portageはこの"
-"情報を使って依存関係リストを構築する。このオプションはB<-k>を含意する。(バイ"
-"ナリパッケージだけでインストールする場合はB<-gK>を用いる。)"
+"I<PORTAGE_BINHOST> (B<make.conf>(5) 参照) で設定されたサーバーと場所を用い、"
+"Portage が見つけた各バイナリパッケージの情報をダウンロードする。Portage はこ"
+"の情報を使って依存関係リストを構築する。このオプションは B<-k> を含意する。"
+"(バイナリパッケージだけでインストールする場合は B<-gK> を用いる)"
 
 #. type: TP
 #: en/portage/emerge.1:232
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--getbinpkgonly >(B<-G>)"
 msgstr "B<--getbinpkgonly >(B<-G>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:238
-#, fuzzy
 msgid ""
 "This option is identical to B<-g>, as above, except it will not use ANY "
 "information from the local machine.  All binaries will be downloaded from "
 "the remote server without consulting packages existing in the local packages "
 "directory."
 msgstr ""
-"上で見たように、このオプションはB<-g>と等価であるが、ローカルの計算機の情報を"
-"一切用いない点が異なる。ローカルのパッケージディレクトリにパッケージが存在す"
-"るかどうか調べることなく、全部のバイナリがリモートサーバーからダウンロードさ"
-"れる。"
+"上で見たように、このオプションは B<-g> と等価であるが、ローカルの計算機の情報"
+"を一切用いない点が異なる。ローカルのパッケージディレクトリにパッケージが存在"
+"するかどうか調べることなく、全部のバイナリがリモートサーバーからダウンロード"
+"される。"
 
 #. type: TP
 #: en/portage/emerge.1:238
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--help >(B<-h>)"
 msgstr "B<--help >(B<-h>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:245
-#, fuzzy
 msgid ""
 "Displays help information for emerge.  Adding one of the additional "
 "arguments listed above will give you more specific help information on that "
@@ -1157,38 +901,36 @@ msgid ""
 "frequently than this man page; check it out if you are having problems that "
 "this man page does not help resolve."
 msgstr ""
-"emerge のヘルプを表示する。 上に挙げた追加引数をどれか加えると、 その項目に特"
-"化したヘルプを提示する。 B<emerge> 内部のヘルプ文書はこの man ページよりも更"
-"新頻度が高いので、 この man ページが解決に役立たない問題があるなら、 こちらの"
-"ヘルプを調べること。"
+"emerge のヘルプを表示する。上に挙げた追加引数をどれか加えると、その項目に特化"
+"したヘルプを提示する。B<emerge> 内部のヘルプ文書はこの man ページよりも更新頻"
+"度が高いので、この man ページが解決に役立たない問題があるなら、こちらのヘルプ"
+"を調べること。"
 
 #. type: TP
 #: en/portage/emerge.1:245
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--newuse>"
 msgstr "B<--newuse>"
 
 #. type: Plain text
 #: en/portage/emerge.1:250
-#, fuzzy
 msgid ""
 "Tells emerge to include installed packages where USE flags have changed "
 "since compilation. An asterisk marks when a USE flag has changed since the "
 "package was compiled."
 msgstr ""
-"PortageにコンパイルしたあとUSEフラグが変化したパッケージを更新対象に含めるよ"
-"うにする。 パッケージがコンパイルされてから変化したUSEフラグにはアステリスク"
-"マークがついている。"
+"Portage にコンパイルしたあと USE フラグが変化したパッケージを更新対象に含める"
+"ようにする。パッケージがコンパイルされてから変化した USE フラグにはアステリス"
+"クマークがついている。"
 
 #. type: TP
 #: en/portage/emerge.1:250
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--noconfmem>"
-msgstr "B<--noconfmem >"
+msgstr "B<--noconfmem>"
 
 #. type: Plain text
 #: en/portage/emerge.1:257
-#, fuzzy
 msgid ""
 "Causes portage to disregard merge records indicating that a config file "
 "inside of a B<CONFIG_PROTECT> directory has been merged already.  Portage "
@@ -1196,37 +938,35 @@ msgid ""
 "with the same config multiple times.  This flag will cause the file to "
 "always be merged."
 msgstr ""
-"Portage に CONFIG_PROTECT のディレクトリ内の設定ファイルがすでに マージされて"
-"いることを示すマージ記録を無視させる。 Portage は通常 CONFIG_PROTECT のディレ"
-"クトリにあるファイルは 1回だけしかマージせず、ユーザが同じ設定ファイルを何回"
-"もマージ することを防いでいる。このフラグは設定ファイルを常にマージ させる。"
+"Portage に CONFIG_PROTECT のディレクトリ内の設定ファイルがすでにマージされて"
+"いることを示すマージ記録を無視させる。Portage は通常 CONFIG_PROTECT のディレ"
+"クトリにあるファイルは 1 回だけしかマージせず、ユーザが同じ設定ファイルを何回"
+"もマージすることを防いでいる。このフラグは設定ファイルを常にマージさせる。"
 
 #. type: TP
 #: en/portage/emerge.1:257
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--nodeps >(B<-O>)"
 msgstr "B<--nodeps >(B<-O>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:261
-#, fuzzy
 msgid ""
 "Merges specified packages without merging any dependencies.  Note that the "
 "build may fail if the dependencies aren't satisfied."
 msgstr ""
-"依存するパッケージを全くインストールせず、指定されたパッケージだけを インス"
-"トールする。依存関係が満たされていない場合、ビルドが失敗する 可能性があること"
+"依存するパッケージを全くインストールせず、指定されたパッケージだけをインス"
+"トールする。依存関係が満たされていない場合、ビルドが失敗する可能性があること"
 "に注意。"
 
 #. type: TP
 #: en/portage/emerge.1:261
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--noreplace >(B<-n>)"
 msgstr "B<--noreplace >(B<-n>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:268
-#, fuzzy
 msgid ""
 "Skips the packages specified on the command-line that have already been "
 "installed.  Without this option, any packages, ebuilds, or deps you specify "
@@ -1234,38 +974,36 @@ msgid ""
 "is already installed.  Note that Portage will not remerge dependencies by "
 "default."
 msgstr ""
-"コマンドラインで指定されたパッケージですでにインストールされているものを 飛ば"
-"す。このオプションを指定しなければ、パッケージ、ebuild、そして 依存パッケージ"
-"をコマンドラインで指定すると、そのパッケージがすでに インストールされていたと"
-"しても、Portage はそのパッケージを再インストール する。デフォルトでは "
-"Portage は依存パッケージは再インストールしないこと に注意。"
+"コマンドラインで指定されたパッケージですでにインストールされているものを飛ば"
+"す。このオプションを指定しなければ、パッケージ、ebuild、そして依存パッケージ"
+"をコマンドラインで指定すると、そのパッケージがすでにインストールされていたと"
+"しても、Portage はそのパッケージを再インストールする。デフォルトでは Portage "
+"は依存パッケージは再インストールしないことに注意。"
 
 #. type: TP
 #: en/portage/emerge.1:268
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--nospinner>"
 msgstr "B<--nospinner>"
 
 #. type: Plain text
 #: en/portage/emerge.1:272
-#, fuzzy
 msgid ""
 "Disables the spinner for the session.  The spinner is active when the "
 "terminal device is determined to be a TTY.  This flag disables it regardless."
 msgstr ""
-"そのセッションではバーの回転を無効にする。 端末デバイスが TTY だと判断された"
-"ときにはバーの回転がアクティブになる。 このフラグはそれに関係なくバーの回転を"
-"無効にする。"
+"そのセッションではバーの回転を無効にする。端末デバイスが TTY だと判断されたと"
+"きにはバーの回転がアクティブになる。このフラグはそれに関係なくバーの回転を無"
+"効にする。"
 
 #. type: TP
 #: en/portage/emerge.1:272
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--oneshot>"
 msgstr "B<--oneshot>"
 
 #. type: Plain text
 #: en/portage/emerge.1:276
-#, fuzzy
 msgid ""
 "Emerge as normal, but do not add the packages to the world profile for later "
 "updating."
@@ -1275,232 +1013,213 @@ msgstr ""
 
 #. type: TP
 #: en/portage/emerge.1:276
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--onlydeps >(B<-o>)"
 msgstr "B<--onlydeps >(B<-o>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:280
-#, fuzzy
 msgid ""
 "Only merge (or pretend to merge) the dependencies of the packages specified, "
 "not the packages themselves."
 msgstr ""
-"指定されたパッケージ自身ではなく、 そのパッケージに依存するパッケージをインス"
+"指定されたパッケージ自身ではなく、そのパッケージに依存するパッケージをインス"
 "トール (もしくはインストールのふりを) する。"
 
 #. type: TP
 #: en/portage/emerge.1:280
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--pretend >(B<-p>)"
 msgstr "B<--pretend >(B<-p>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:286
-#, fuzzy
 msgid ""
 "Instead of actually performing the merge, simply display what *would* have "
 "been installed if B<--pretend> weren't used.  Using B<--pretend> is strongly "
 "recommended before installing an unfamiliar package.  In the printout,"
 msgstr ""
-"実際にインストールを行わず、B<--pretend> が指定されなかったとすれば どんな"
-"パッケージがインストールされるのかを単に表示する。 よく知らないパッケージをイ"
-"ンストールする前には B<--pretend> を使うことを強く勧める。 出力は、"
+"実際にインストールを行わず、B<--pretend> が指定されなかったとすればどんなパッ"
+"ケージがインストールされるのかを単に表示する。よく知らないパッケージをインス"
+"トールする前には B<--pretend> を使うことを強く勧める。出力は、"
 
 #. type: Plain text
 #: en/portage/emerge.1:290
-#, fuzzy
 msgid "I<N> = new, (not yet installed)"
 msgstr "I<N> = 新規、(まだインストールされていない)"
 
 #. type: Plain text
 #: en/portage/emerge.1:292
-#, fuzzy
 msgid "I<S> = new, Slot installation (side-by-side versions)"
-msgstr "I<S> = 新規、SLOTインストール(並立するバージョン)"
+msgstr "I<S> = 新規、SLOT インストール (並立するバージョン)"
 
 #. type: Plain text
 #: en/portage/emerge.1:294
-#, fuzzy
 msgid "I<U> = updating, (changing versions)"
 msgstr "I<U> = 更新、(バージョン変更)"
 
 #. type: Plain text
 #: en/portage/emerge.1:296
-#, fuzzy
 msgid "I<D> = downgrade, (Best version seems lower)"
 msgstr "I<D> = ダウングレード、(最新バージョンよ古いものを入れる)"
 
 #. type: Plain text
 #: en/portage/emerge.1:298
-#, fuzzy
 msgid "I<R> = replacing, (Remerging same version))"
 msgstr "I<R> = 入れ換え、(同じバージョンを再度インストール)"
 
 #. type: Plain text
 #: en/portage/emerge.1:300
-#, fuzzy
 msgid "I<F> = fetch restricted, (Manual download)"
 msgstr "I<F> = 制限つきパッケージの fetch、(手動でダウンロード)"
 
 #. type: Plain text
 #: en/portage/emerge.1:302
-#, fuzzy
 msgid "I<f> = fetch restricted, (Already downloaded)"
 msgstr "I<f> = 制限つきパッケージの fetch、(すでにダウンロード済)"
 
 #. type: Plain text
 #: en/portage/emerge.1:304
-#, fuzzy
 msgid "I<B> = blocked by an already installed package"
-msgstr "I<B> = インストール済みパッケージによってブロック、 となっている。"
+msgstr "I<B> = インストール済みパッケージによってブロック、となっている。"
 
 #. type: TP
 #: en/portage/emerge.1:304
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--quiet >(B<-q>)"
 msgstr "B<--quiet >(B<-q>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:308
-#, fuzzy
 msgid ""
 "Results may vary, but the general outcome is a reduced or condensed output "
 "from portage's displays."
 msgstr ""
-"結果はさまざまだが、全体的に見て Portage が表示する出力を減らしたり 凝縮した"
-"りする。"
+"結果はさまざまだが、全体的に見て Portage が表示する出力を減らしたり凝縮したり"
+"する。"
 
 #. type: TP
 #: en/portage/emerge.1:308
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--resume>"
 msgstr "B<--resume>"
 
 #. type: Plain text
 #: en/portage/emerge.1:313
-#, fuzzy
 msgid ""
 "Resumes the last merge operation.  Please note that this operation will only "
 "return an error on failure.  If there is nothing for portage to do, then "
 "portage will exit with a message and a success condition."
 msgstr ""
-"最後のインストール操作を再開する。この操作は失敗したらエラーを 返すだけだとい"
-"うことに注意。Portage になにもすることがなければ、 メッセージと成功の戻り値を"
+"最後のインストール操作を再開する。この操作は失敗したらエラーを返すだけだとい"
+"うことに注意。Portage になにもすることがなければ、メッセージと成功の戻り値を"
 "返して終了する。"
 
 #. type: TP
 #: en/portage/emerge.1:313
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--searchdesc >(B<-S>)"
 msgstr "B<--searchdesc >(B<-S>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:318
-#, fuzzy
 msgid ""
 "Matches the search string against the description field as well as the "
 "package name.  B<Take caution> as the descriptions are also matched as "
 "regular expressions."
 msgstr ""
-"検索文字列がパッケージ名に加え、説明フィールドにもマッチする。 説明も正規表現"
+"検索文字列がパッケージ名に加え、説明フィールドにもマッチする。説明も正規表現"
 "でマッチすることに B<注意>。"
 
 #. type: TP
 #: en/portage/emerge.1:318
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--skipfirst>"
 msgstr "B<--skipfirst>"
 
 #. type: Plain text
 #: en/portage/emerge.1:324
-#, fuzzy
 msgid ""
 "This action is only valid when used with B<--resume>.  It removes the first "
 "package in the resume list so that a merge may continue in the presence of "
 "an uncorrectable or inconsequential error.  This should only be used in "
 "cases where skipping the package will not result in failed dependencies."
 msgstr ""
-"このアクションは B<--resume> といっしょに使ったときだけ有効である。 これを使"
-"うと再開リストにある最初のパッケージを取り除くので、 修正不能なエラーやあまり"
-"重要でないエラーがあってもインストール を継続することができる。 このアクショ"
-"ンはパッケージを飛ばしても依存関係を壊さない場合 にだけ使うべきである。"
+"このアクションは B<--resume> といっしょに使ったときだけ有効である。これを使う"
+"と再開リストにある最初のパッケージを取り除くので、修正不能なエラーやあまり重"
+"要でないエラーがあってもインストールを継続することができる。このアクションは"
+"パッケージを飛ばしても依存関係を壊さない場合にだけ使うべきである。"
 
 #. type: TP
 #: en/portage/emerge.1:324
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--tree >(B<-t>)"
 msgstr "B<--tree >(B<-t>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:329
-#, fuzzy
 msgid ""
 "Shows the dependency tree for the given target by indenting dependencies.  "
 "This is only really useful in combination with B<--emptytree> or B<--update> "
 "and B<--deep>."
 msgstr ""
-"指定したターゲットについての依存関係のツリーをインデントを用いて表示する。 実"
-"際のところは\"B<--emptytree>\"、\"B<--update>\"もしくは\"B<--deep>\" と組み合"
-"わせて使ったときだけ便利である。"
+"指定したターゲットについての依存関係のツリーをインデントを用いて表示する。実"
+"際のところは \"B<--emptytree>\"、\"B<--update>\" もしくは \"B<--deep>\" と組"
+"み合わせて使ったときだけ便利である。"
 
 #. type: TP
 #: en/portage/emerge.1:329
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--update >(B<-u>)"
 msgstr "B<--update >(B<-u>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:336
-#, fuzzy
 msgid ""
 "Updates packages to the best version available, which may not always be the "
 "highest version number due to masking for testing and development.  This "
 "will also update direct dependencies which may not be what you want.  In "
 "general, use this option only in combination with the world or system target."
 msgstr ""
-"パッケージを利用可能な最新バージョンにアップデートする。 テストや開発のために"
+"パッケージを利用可能な最新バージョンにアップデートする。テストや開発のために"
 "マスクされていたりする結果、もっともバージョン番号が高いものが常に対象となる"
-"わけではない。 このオプションを使うと意図しない直接の依存パッケージが更新され"
-"ることもある。 一般的に、このオプションは world もしくは system ターゲットと"
-"のみ組み合わせて使うこと。"
+"わけではない。このオプションを使うと意図しない直接の依存パッケージが更新され"
+"ることもある。一般的に、このオプションは world もしくは system ターゲットとの"
+"み組み合わせて使うこと。"
 
 #. type: TP
 #: en/portage/emerge.1:336
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--upgradeonly >(B<-U>)"
 msgstr "B<--upgradeonly >(B<-U>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:341
-#, fuzzy
 msgid ""
 "Updates packages, but excludes updates that would result in a lower version "
 "of the package being installed.  B<SLOT>s are considered at a basic level."
 msgstr ""
-"パッケージをアップデートするが、インストールされている パッケージのバージョン"
-"を下げるようなアップデートは行わない。 B<SLOT> は基本的なレベルで対象に含まれ"
+"パッケージをアップデートするが、インストールされているパッケージのバージョン"
+"を下げるようなアップデートは行わない。B<SLOT> は基本的なレベルで対象に含まれ"
 "る。"
 
 #. type: Plain text
 #: en/portage/emerge.1:344
-#, fuzzy
 msgid ""
 "This option is deprecated and shouldn't be used anymore. Please use the /etc/"
 "portage/package.* files from now on."
 msgstr ""
-"このオプションは非推奨で今後使うべきではない。 今後は代わりに/etc/portage/"
-"package.*ファイルを使ってほしい。"
+"このオプションは非推奨で今後使うべきではない。今後は代わりに /etc/portage/"
+"package.* ファイルを使ってほしい。"
 
 #. type: TP
 #: en/portage/emerge.1:344
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--usepkg >(B<-k>)"
 msgstr "B<--usepkg >(B<-k>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:349
-#, fuzzy
 msgid ""
 "Tells emerge to use binary packages (from $PKGDIR) if they are available, "
 "thus possibly avoiding some time-consuming compiles.  This option is useful "
@@ -1509,14 +1228,14 @@ msgid ""
 "satisfy dependencies."
 msgstr ""
 "バイナリパッケージが使えるのであれば、emerge にバイナリパッケージ ($PKGDIR か"
-"ら読み取る)を使い、時間の食うコンパイルを避けることができる。 このオプション"
-"は CD インストールのとき便利である。 export PKGDIR=/mnt/cdrom/packages し、こ"
-"のオプションを使うことで、 emerge の際依存関係を満たすために CD からバイナリ"
-"パッケージを「引っ張って」 くることができる。"
+"ら読み取る) を使い、時間の食うコンパイルを避けることができる。このオプション"
+"は CD インストールのとき便利である。export PKGDIR=/mnt/cdrom/packages し、こ"
+"のオプションを使うことで、emerge の際依存関係を満たすために CD からバイナリ"
+"パッケージを「引っ張って」くることができる。"
 
 #. type: TP
 #: en/portage/emerge.1:349
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--usepkgonly >(B<-K>)"
 msgstr "B<--usepkgonly >(B<-K>)"
 
@@ -1534,219 +1253,205 @@ msgstr ""
 
 #. type: TP
 #: en/portage/emerge.1:354
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--verbose >(B<-v>)"
 msgstr "B<--verbose >(B<-v>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:357
-#, fuzzy
 msgid ""
 "Tell emerge to run in verbose mode.  Currently this flag causes emerge to "
 "print out GNU info errors, if any, and to show the USE flags that will be "
 "used for each package when pretending."
 msgstr ""
-"詳細モードで emerge を動かす。 現在のところ、このフラグは emerge の際 GNU "
-"info にエラーがあれば 出力させる。"
+"詳細モードで emerge を動かす。現在のところ、このフラグは emerge の際 GNU "
+"info にエラーがあれば出力させる。"
 
 #. type: TP
 #: en/portage/emerge.1:357
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--version >(B<-V>)"
 msgstr "B<--version >(B<-V>)"
 
 #. type: Plain text
 #: en/portage/emerge.1:361
-#, fuzzy
 msgid ""
 "Displays the version number of B<emerge>.  It cannot be used in conjunction "
 "with other options."
 msgstr ""
-"B<emerge> のバージョン番号を表示する。 他のオプションと組み合わせて使うことは"
+"B<emerge> のバージョン番号を表示する。他のオプションと組み合わせて使うことは"
 "できない。"
 
 #. type: SH
 #: en/portage/emerge.1:361
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "ENVIRONMENT OPTIONS"
 msgstr "環境オプション"
 
 #. type: TP
 #: en/portage/emerge.1:362 en/portage/make.conf.5:284
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ROOT> = I<[path]>"
 msgstr "B<ROOT> = I<[path]>"
 
 #. type: Plain text
 #: en/portage/emerge.1:367
-#, fuzzy
 msgid ""
 "Use B<ROOT> to specify the target root filesystem to be used for merging "
 "packages or ebuilds.  Defaults to /."
 msgstr ""
-"パッケージや ebuild をマージするために使われるターゲットとなる ルートファイル"
-"システムを指定するには、B<ROOT> を使う。 デフォルトは / である。"
+"パッケージや ebuild をマージするために使われるターゲットとなるルートファイル"
+"システムを指定するには、B<ROOT> を使う。デフォルトは / である。"
 
 #. type: SH
 #: en/portage/emerge.1:367
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OUTPUT"
 msgstr "出力"
 
 #. type: Plain text
 #: en/portage/emerge.1:371
-#, fuzzy
 msgid ""
 "When utilizing B<emerge> with the B<--pretend> and B<--verbose> flags, the "
 "output may be a little hard to understand at first.  This section explains "
 "the abbreviations."
 msgstr ""
-"B<emerge> に B<--pretend> と B<--verbose> フラグを組み合わせて使う場合、 その"
-"出力は一見しただけではちょっと理解しがたいかもしれない。 このセクションではこ"
+"B<emerge> に B<--pretend> と B<--verbose> フラグを組み合わせて使う場合、その"
+"出力は一見しただけではちょっと理解しがたいかもしれない。このセクションではこ"
 "こで使われる省略形について説明する。"
 
 #. type: TP
 #: en/portage/emerge.1:371
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[blocks B ] app-text/dos2unix (from pkg app-text/hd2u-0.8.0)>"
 msgstr "B<[blocks B ] app-text/dos2unix (from pkg app-text/hd2u-0.8.0)>"
 
 #. type: Plain text
 #: en/portage/emerge.1:377
-#, fuzzy
 msgid ""
 "Dos2unix is Blocking hd2u from being emerged.  Blockers are defined when two "
 "packages will clobber each others files, or otherwise cause some form of "
 "breakage in your system.  However, blockers usually do not need to be "
 "simultaneously emerged because they usually provide the same functionality."
 msgstr ""
-"dos2unix は hd2u がインストールされるのをブロックしている。 ブロックするパッ"
-"ケージというのは、2つのパッケージが互いのファイルを 上書きしてしまうか、もし"
-"くはシステムの中をなんらかの形で壊してしまう パッケージという意味である。しか"
-"しながら、ブロックするパッケージは 通常同じ機能を提供するので、普通同時にイン"
+"dos2unix は hd2u がインストールされるのをブロックしている。ブロックするパッ"
+"ケージというのは、2 つのパッケージが互いのファイルを上書きしてしまうか、もし"
+"くはシステムの中をなんらかの形で壊してしまうパッケージという意味である。しか"
+"しながら、ブロックするパッケージは通常同じ機能を提供するので、普通同時にイン"
 "ストールする必要はない。"
 
 #. type: TP
 #: en/portage/emerge.1:377
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild N ] app-games/qstat-25c>"
 msgstr "B<[ebuild N ] app-games/qstat-25c>"
 
 #. type: Plain text
 #: en/portage/emerge.1:380
-#, fuzzy
 msgid "Qstat is New to your system, and will be emerged for the first time."
 msgstr "qstat は新規インストールパッケージであり、初めてインストールされる。"
 
 #. type: TP
 #: en/portage/emerge.1:380
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild NS ] dev-libs/glib-2.4.7>"
 msgstr "B<[ebuild NS ] dev-libs/glib-2.4.7>"
 
 #. type: Plain text
 #: en/portage/emerge.1:384
-#, fuzzy
 msgid ""
 "You already have a version of glib installed, but a 'new' version in a "
 "different SLOT is available."
 msgstr ""
-"あるバージョンの glib をすでにインストールしているが、 違う SLOT の「新しい」"
+"あるバージョンの glib をすでにインストールしているが、違う SLOT の「新しい」"
 "バージョンがインストール可能である。"
 
 #. type: TP
 #: en/portage/emerge.1:384
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild R ] sys-apps/sed-4.0.5>"
 msgstr "B<[ebuild R ] sys-apps/sed-4.0.5>"
 
 #. type: Plain text
 #: en/portage/emerge.1:388
-#, fuzzy
 msgid ""
 "Sed 4.0.5 has already been emerged, but if you run the command, then portage "
 "will Re-emerge the specified package (sed in this case)."
 msgstr ""
-"sed 4.0.5 はすでにインストールされているが、 emerge を実行したら Portage は指"
+"sed 4.0.5 はすでにインストールされているが、emerge を実行したら Portage は指"
 "定されたパッケージを再インストールする (この場合は sed である)。"
 
 #. type: TP
 #: en/portage/emerge.1:388
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild F ] media-video/realplayer-8-r6>"
 msgstr "B<[ebuild F ] media-video/realplayer-8-r6>"
 
 #. type: Plain text
 #: en/portage/emerge.1:394
-#, fuzzy
 msgid ""
 "The realplayer package requires that you Fetch the sources manually.  When "
 "you attempt to emerge the package, if the sources are not found, then "
 "portage will halt and you will be provided with instructions on how to "
 "download the required files."
 msgstr ""
-"realplayer パッケージは手動でソースを fetch する必要がある。 パッケージを "
-"emerge しようとするとき、ソースが見つからなければ、 Portage は停止し必要な"
-"ファイルをダウンロードするための手順を提示する。"
+"realplayer パッケージは手動でソースを fetch する必要がある。パッケージを "
+"emerge しようとするとき、ソースが見つからなければ、Portage は停止し必要なファ"
+"イルをダウンロードするための手順を提示する。"
 
 #. type: TP
 #: en/portage/emerge.1:394
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild f ] media-video/realplayer-8-r6>"
 msgstr "B<[ebuild f ] media-video/realplayer-8-r6>"
 
 #. type: Plain text
 #: en/portage/emerge.1:397
-#, fuzzy
 msgid "The realplayer package's files are already downloaded."
 msgstr "realplayer パッケージのファイルはすでにダウンロードされている。"
 
 #. type: TP
 #: en/portage/emerge.1:397
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild U ] net-fs/samba-2.2.8_pre1 [2.2.7a]>"
 msgstr "B<[ebuild U ] net-fs/samba-2.2.8_pre1 [2.2.7a]>"
 
 #. type: Plain text
 #: en/portage/emerge.1:401
-#, fuzzy
 msgid ""
 "Samba 2.2.7a has already been emerged and can be Updated to version "
 "2.2.8_pre1."
 msgstr ""
-"Samba 2.2.7a はすでに emerge されており、 バージョン 2.2.8_pre1 へとアップ"
-"デートすることができる。"
+"Samba 2.2.7a はすでに emerge されており、バージョン 2.2.8_pre1 へとアップデー"
+"トすることができる。"
 
 #. type: TP
 #: en/portage/emerge.1:401
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild UD] media-libs/libgd-1.8.4 [2.0.11]>"
 msgstr "B<[ebuild UD] media-libs/libgd-1.8.4 [2.0.11]>"
 
 #. type: Plain text
 #: en/portage/emerge.1:405
-#, fuzzy
 msgid ""
 "Libgd 2.0.11 is already emerged, but if you run the command, then portage "
 "will Downgrade to version 1.8.4 for you."
 msgstr ""
-"libgd 2.0.11 はすでに emerge されているが、 emerge を実行したら Portage は "
+"libgd 2.0.11 はすでに emerge されているが、emerge を実行したら Portage は "
 "libgd をバージョン 1.8.4 にダウングレードしてくれる。"
 
 #. type: Plain text
 #: en/portage/emerge.1:409
-#, fuzzy
 msgid ""
 "This may occur if a newer version of a package has been masked because it is "
 "broken or it creates a security risk on your system and a fix has not been "
 "released yet."
 msgstr ""
-"これは新しいバージョンのパッケージが壊れていたり、セキュリティホール を作るが"
-"対策がまだ出されていないなどの理由でマスクされた場合に 起きることがある。"
+"これは新しいバージョンのパッケージが壊れていたり、セキュリティホールを作るが"
+"対策がまだ出されていないなどの理由でマスクされた場合に起きることがある。"
 
 #. type: Plain text
 #: en/portage/emerge.1:415
-#, fuzzy
 msgid ""
 "Another reason this may occur is if a package you are trying to emerge "
 "requires an older version of a package in order to emerge successfully.  In "
@@ -1754,42 +1459,40 @@ msgid ""
 "packages that were created with libgd 1.x will not compile with 2.x and must "
 "downgrade libgd first before they can emerge."
 msgstr ""
-"これが起きるその他の理由としては、emerge しようとしているパッケージが うまく "
-"emerge するために古いバージョンのパッケージを要求している場合 も考えられる。"
-"これは libgd 1.x とともに作成されたパッケージが libgd 2.x ではコンパイルでき"
-"ず、emerge する前に libgd をまずダウングレード しなければならないという意味で"
+"これが起きるその他の理由としては、emerge しようとしているパッケージがうまく "
+"emerge するために古いバージョンのパッケージを要求している場合も考えられる。こ"
+"れは libgd 1.x とともに作成されたパッケージが libgd 2.x ではコンパイルでき"
+"ず、emerge する前に libgd をまずダウングレードしなければならないという意味で"
 "ある。"
 
 #. type: TP
 #: en/portage/emerge.1:415
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild U-] x11-base/xfree-4.3.0 [4.2.99.902]>"
 msgstr "B<[ebuild U-] x11-base/xfree-4.3.0 [4.2.99.902]>"
 
 #. type: Plain text
 #: en/portage/emerge.1:421
-#, fuzzy
 msgid ""
 "The - represents lack of B<SLOT> information about Xfree.  This will occur "
 "when the previous version emerged was injected (see B<inject> for more "
 "info)  or very outdated (so old that B<SLOT> did not exist).  Either way, a "
 "newer version of Xfree is availabe for your updating delight."
 msgstr ""
-"この - は xfree についての B<SLOT> 情報がないことを表している。 これは前に "
-"emerge されたバージョンが注入されたもの (詳しい情報は B<inject> を参照)だった"
-"ときや、 とても古いもの(なので SLOT が存在していない場合)だったり するときに"
-"起こる。いずれの場合でも新しいバージョンの xfree がアップデートする楽しみに使"
-"える。"
+"この - は xfree についての B<SLOT> 情報がないことを表している。これは前に "
+"emerge されたバージョンが注入されたもの (詳しい情報は B<inject> を参照) だっ"
+"たときや、とても古いもの (なので SLOT が存在していない場合) だったりするとき"
+"に起こる。いずれの場合でも新しいバージョンの xfree がアップデートする楽しみに"
+"使える。"
 
 #. type: TP
 #: en/portage/emerge.1:421
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<[ebuild U ] sys-devel/distcc-2.16 [2.13-r1] -gnome -gtk +ipv6* (-selinux)>"
-msgstr "B<[ebuild U ] sys-devel/distcc-2.16 [2.13-r1] -gtk +ipv6* (-selinux)>"
+msgstr "B<[ebuild U ] sys-devel/distcc-2.16 [2.13-r1] -gnome -gtk +ipv6* (-selinux)>"
 
 #. type: Plain text
 #: en/portage/emerge.1:431
-#, fuzzy
 msgid ""
 "The -gtk and -gnome reflect the status of B<USE> variables when emerging "
 "distcc.  Here we see that distcc can use the B<USE> variables gtk and gnome, "
@@ -1801,34 +1504,32 @@ msgid ""
 "disabled and shows that the flag is not available for the current system "
 "profile."
 msgstr ""
-"-gtk と -gnome は distcc を emerge するときの B<USE> 変数の 状態を示してい"
-"る。この場合 distcc が B<USE> 変数の gtk と gnome が利用可能だが、現在の設定"
-"では gtk と gnome は無効になっていることが 分かる。そのため、distcc を "
-"emerge するとき gtk と gnome のサポートは 有効にならない。アステリスクはパッ"
-"ケージが最後にインストールされてから B<USE> フラグが変わったことを示す。この"
-"例では、ipv6 は現在有効になっているが、以前は無効であったことを示している。 "
-"(-selinux)のように、丸括弧に囲まれた B<USE> フラグは、 現在のシステムプロファ"
-"イルでは常に無効にされ、 使うことはできないフラグであることを示している。"
+"-gtk と -gnome は distcc を emerge するときの B<USE> 変数の状態を示している。"
+"この場合 distcc が B<USE> 変数の gtk と gnome が利用可能だが、現在の設定では "
+"gtk と gnome は無効になっていることが分かる。そのため、distcc を emerge する"
+"とき gtk と gnome のサポートは有効にならない。アステリスクはパッケージが最後"
+"にインストールされてから B<USE> フラグが変わったことを示す。この例では、ipv6 "
+"は現在有効になっているが、以前は無効であったことを示している。(-selinux) のよ"
+"うに、丸括弧に囲まれた B<USE> フラグは、現在のシステムプロファイルでは常に無"
+"効にされ、使うことはできないフラグであることを示している。"
 
 #. type: Plain text
 #: en/portage/emerge.1:434
-#, fuzzy
 msgid ""
 "B<*Note:> The B<USE> status is only displayed when you use the B<--pretend> "
 "and B<--verbose> options."
 msgstr ""
-"B<*注:> B<USE> の状態は B<--pretend> と B<--verbose> オプションを同時に使った"
-"ときだけ表示される。"
+"B<*注意:> B<USE> の状態は B<--pretend> と B<--verbose> オプションを同時に使っ"
+"たときだけ表示される。"
 
 #. type: SH
 #: en/portage/emerge.1:434
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NOTES"
 msgstr "注意"
 
 #. type: Plain text
 #: en/portage/emerge.1:442
-#, fuzzy
 msgid ""
 "You should almost always precede any package install or update attempt with "
 "a B<--pretend> install or update.  This lets you see how much will be done, "
@@ -1836,41 +1537,38 @@ msgid ""
 "goes doubly so for the B<system> and B<world> classes, which can update a "
 "large number of packages if the portage tree has been particularly active."
 msgstr ""
-"ほとんど常に、パッケージをインストールしたりアップデートしたり しようとする前"
+"ほとんど常に、パッケージをインストールしたりアップデートしたりしようとする前"
 "は、B<--pretend> install もしくは update を実行するべきである。そうすればどこ"
-"まで実行されるのか分かり、 修正しなければならないブロックするパッケージを表示"
-"させることができる。 これは Portage ツリーが特に活動的だと多数のパッケージが "
+"まで実行されるのか分かり、修正しなければならないブロックするパッケージを表示"
+"させることができる。これは Portage ツリーが特に活動的だと多数のパッケージが"
 "アップデートされる可能性のある B<system> と B<world> クラスに対しても同様であ"
 "る。"
 
 #. type: Plain text
 #: en/portage/emerge.1:446
-#, fuzzy
 msgid ""
 "You also want to typically use B<--update>, which ignores packages that are "
 "already fully updated but upgrades those that are not."
 msgstr ""
-"また、典型的には B<--update> を使い、 すでに完全に更新されたパッケージは無視"
-"するが、 まだ更新されていないパッケージをアップグレードしたいだろう。"
+"また、典型的には B<--update> を使い、すでに完全に更新されたパッケージは無視す"
+"るが、まだ更新されていないパッケージをアップグレードしたいだろう。"
 
 #. type: Plain text
 #: en/portage/emerge.1:452
-#, fuzzy
 msgid ""
 "When you install a package with uninstalled dependencies and do not "
 "explicitly state those dependencies in the list of parameters, they will not "
 "be added to the world file.  If you want them to be detected for world "
 "updates, make sure to explicitly list them as parameters to B<emerge>."
 msgstr ""
-"まだインストールされていないパッケージに依存関係があるパッケージで、 パラメー"
-"タでその依存関係を明示的に指定しないでそのパッケージを インストールするとき、"
+"まだインストールされていないパッケージに依存関係があるパッケージで、パラメー"
+"タでその依存関係を明示的に指定しないでそのパッケージをインストールするとき、"
 "依存関係でインストールされるパッケージは world ファイルには追加されない。"
-"world のアップデートでそういった パッケージも検出したいなら、依存関係のパッ"
+"world のアップデートでそういったパッケージも検出したいなら、依存関係のパッ"
 "ケージも B<emerge> のパラメータとして必ず明示的に列挙すること。"
 
 #. type: Plain text
 #: en/portage/emerge.1:460
-#, fuzzy
 msgid ""
 "B<USE variables> may be specified on the command line to override those "
 "specified in the default locations, letting you avoid using some "
@@ -1879,16 +1577,14 @@ msgid ""
 "emerge mc with those USE settings.  If you want those USE settings to be "
 "more permanent, you can put them in /etc/portage/package.use instead."
 msgstr ""
-"B<USE 変数> は、コマンドラインで指定してデフォルトの場所 で指定されている値を"
-"上書きし、インストールしたくない 依存パッケージを使うのを避けることができ"
-"る。 B<コマンドラインで指定された USE フラグは記憶されない>。 たとえば、"
-"B<USE=\"-X -gnome\" emerge mc> とすると mc をこの USE 設定で emerge する。 も"
-"しこの USE フラグの設定を保持したければ、/etc/portage/package.use に書けばよ"
-"い。"
+"B<USE 変数> は、コマンドラインで指定してデフォルトの場所で指定されている値を"
+"上書きし、インストールしたくない依存パッケージを使うのを避けることができる。"
+"B<コマンドラインで指定された USE フラグは記憶されない>。たとえば、B<USE=\"-X "
+"-gnome\" emerge mc> とすると mc をこの USE 設定で emerge する。もしこの USE "
+"フラグの設定を保持したければ、/etc/portage/package.use に書けばよい。"
 
 #. type: Plain text
 #: en/portage/emerge.1:466
-#, fuzzy
 msgid ""
 "If B<emerge --update system> or B<emerge --update world> fails with an error "
 "message, it may be that an ebuild uses some newer feature not present in "
@@ -1896,33 +1592,31 @@ msgid ""
 "upgrade to the lastest version, which should support any necessary new "
 "features."
 msgstr ""
-"If B<emerge --update system> および B< emerge --update world> はがエラーメッ"
-"セージを出して失敗する場合、ebuild がその時点で使っている バージョンの "
-"B<emerge> にはない新しい機能を使っている可能性がある。 その場合は、B<emerge "
-"--update portage> を使って Portage を必要な新機能をサポートする最新バージョン"
-"にアップグレードすることが できる。"
+"B<emerge --update system> および B< emerge --update world> がエラーメッセージ"
+"を出して失敗する場合、ebuild がその時点で使っているバージョンの B<emerge> に"
+"はない新しい機能を使っている可能性がある。その場合は、B<emerge --update "
+"portage> を使って Portage を必要な新機能をサポートする最新バージョンにアップ"
+"グレードすることができる。"
 
 #. type: SH
 #: en/portage/emerge.1:466
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "MASKED PACKAGES"
 msgstr "マスクされたパッケージ"
 
 #. type: Plain text
 #: en/portage/emerge.1:471
-#, fuzzy
 msgid ""
 "I<NOTE: Please use caution when using development packages.  Problems and "
 "bugs resulting from misusing masked packages drains Gentoo developer time.  "
 "Please be sure you are capable of handling any problems that may ensue.>"
 msgstr ""
-"I<注意: 開発中のパッケージを使うときは用心しなさい。 マスクされたパッケージを"
+"I<注意: 開発中のパッケージを使うときは用心しなさい。マスクされたパッケージを"
 "間違って使うことに起因する問題やバグは Gentoo 開発者の時間を浪費させる。もし"
-"かりに問題が起きても 自分で対処できるのを確認すること。>"
+"かりに問題が起きても自分で対処できるのを確認すること。>"
 
 #. type: Plain text
 #: en/portage/emerge.1:480
-#, fuzzy
 msgid ""
 "Masks in B<portage> provide three primary functions: they allow a testing "
 "period where the packages can be used in live machines; they prevent the use "
@@ -1932,38 +1626,36 @@ msgid ""
 "either case.  Also note that if you give B<emerge> an ebuild, then all forms "
 "of masking will be ignored and B<emerge> will attempt to emerge the package."
 msgstr ""
-"B<Portage> におけるマスクとは3つの重要な機能を提供する: 実際に計算機で使う"
-"パッケージのテスト期間を設け、 失敗するであろうパッケージを使うことを防ぎ、 "
-"壊れたパッケージやセキュリティホールになりうるパッケージをマスクする。 マスク"
-"は B<package.mask> と KEYWORDS という2つの方法で行うことができる。"
+"B<Portage> におけるマスクとは 3 つの重要な機能を提供する: 実際に計算機で使う"
+"パッケージのテスト期間を設け、失敗するであろうパッケージを使うことを防ぎ、壊"
+"れたパッケージやセキュリティホールになりうるパッケージをマスクする。マスクは "
+"B<package.mask> と KEYWORDS という 2 つの方法で行うことができる。"
 
 #. type: TP
 #: en/portage/emerge.1:480 en/portage/portage.5:272 en/portage/portage.5:442
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package.mask>"
 msgstr "B<package.mask>"
 
 #. type: Plain text
 #: en/portage/emerge.1:485
-#, fuzzy
 msgid ""
 "The B<package.mask> file primarily blocks the use of packages that cause "
 "problems or are known to have issues on different systems.  It resides in I</"
 "usr/portage/profiles>."
 msgstr ""
-"B<package.mask> はまず問題を引き起こすパッケージの使用や、 異なったシステムで"
-"は問題があることが知られているパッケージの使用を ブロックする。このファイル"
-"は I</usr/portage/profiles> にある。"
+"B<package.mask> はまず問題を引き起こすパッケージの使用や、異なったシステムで"
+"は問題があることが知られているパッケージの使用をブロックする。このファイルは "
+"I</usr/portage/profiles> にある。"
 
 #. type: TP
 #: en/portage/emerge.1:485
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<KEYWORDS>"
 msgstr "B<KEYWORDS>"
 
 #. type: Plain text
 #: en/portage/emerge.1:501
-#, fuzzy
 msgid ""
 "The B<KEYWORDS> variable in an B<ebuild> file is also used for masking a "
 "package still in testing.  There are architecture-specific keywords for each "
@@ -1981,35 +1673,31 @@ msgid ""
 "corresponding to your architecture."
 msgstr ""
 "B<ebuild> ファイルの中の B<KEYWORDS> 変数もテスト中のパッケージをマスクするた"
-"めに使うことができる。 各パッケージにはアーキテクチャ固有のキーワードがあ"
-"り、 B<Portage> にどのシステムがそのパッケージをインストールすることが できる"
-"か知らせることができる。 あるアーキテクチャでコンパイルできるが、まだそのアー"
-"キテクチャでは 「stable」だと分かっていないパッケージは、アーキテクチャ名の前"
-"に チルダ (B<~>) をつけることでマスクする。 B<emerge> は B<ACCEPT_KEYWORDS> "
-"環境変数を調べ、KEYWORD でマスクされているパッケージの emerge を許可したり禁"
-"止したりする。 B<emerge> にこれらの「testing」バージョンをビルドするよう伝え"
-"るには、 B<ACCEPT_KEYWORDS> に「B<~arch>」を設定すればよい。 B<arch> は "
-"I<x86 ppc sparc mips alpha arm hppa> のいずれかである。たとえば、 "
-"B<ACCEPT_KEYWORDS=\"~x86\" emerge xfree> とすれば B<emerge> は KEYWORDS でマ"
-"スクされたバージョンの xfree もアップグレード候補として対象に入れる。 B<警告:"
-"> 自分のアーキテクチャに相当する値以外のものをこの 変数に設定 I<してはいけな"
-"い>。"
+"めに使うことができる。各パッケージにはアーキテクチャ固有のキーワードがあり、"
+"B<Portage> にどのシステムがそのパッケージをインストールすることができるか知ら"
+"せることができる。あるアーキテクチャでコンパイルできるが、まだそのアーキテク"
+"チャでは「stable」だと分かっていないパッケージは、アーキテクチャ名の前にチル"
+"ダ (B<~>) をつけることでマスクする。B<emerge> は B<ACCEPT_KEYWORDS> 環境変数"
+"を調べ、B<KEYWORDS> でマスクされているパッケージの emerge を許可したり禁止し"
+"たりする。B<emerge> にこれらの「testing」バージョンをビルドするよう伝えるに"
+"は、B<ACCEPT_KEYWORDS> に「B<~arch>」を設定すればよい。B<arch> は I<x86 ppc "
+"sparc mips alpha arm hppa> のいずれかである。たとえば、B<ACCEPT_KEYWORDS="
+"\"~x86\" emerge xfree> とすれば B<emerge> は B<KEYWORDS> でマスクされたバー"
+"ジョンの xfree もアップグレード候補として対象に入れる。B<警告:> 自分のアーキ"
+"テクチャに相当する値以外のものをこの変数に設定 I<してはいけない>。"
 
 #. type: Plain text
 #: en/portage/emerge.1:503
-#, fuzzy
 msgid "Please report any bugs you encounter through our website:"
 msgstr "バグに出会ったら web サイト経由で報告してください:"
 
 #. type: Plain text
 #: en/portage/emerge.1:505
-#, fuzzy
 msgid "B<http://bugs.gentoo.org/>"
 msgstr "B<http://bugs.gentoo.org/>"
 
 #. type: Plain text
 #: en/portage/emerge.1:508
-#, fuzzy
 msgid ""
 "Please include the output of B<emerge --info> when you submit your bug "
 "report."
@@ -2019,7 +1707,6 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/emerge.1:514
-#, fuzzy
 msgid ""
 "B<emerge --help>, B<ebuild>(1), B<ebuild>(5), B<make.conf>(5), B<portage>(5)"
 msgstr ""
@@ -2027,52 +1714,47 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/emerge.1:516
-#, fuzzy
 msgid "A number of helper applications reside in I</usr/lib/portage/bin>."
 msgstr "I</usr/lib/portage/bin> にあるたくさんの補助アプリケーション"
 
 #. type: Plain text
 #: en/portage/emerge.1:519
-#, fuzzy
 msgid ""
 "The B<app-admin/gentoolkit> package contains useful scripts such as B<qpkg> "
 "(a package query tool)."
 msgstr ""
-"B<app-admin/gentoolkit> パッケージには B<qpkg> (パッケージ検索ツール)  のよう"
+"B<app-admin/gentoolkit> パッケージには B<qpkg> (パッケージ検索ツール) のよう"
 "な有用なスクリプトが収められている。"
 
 #. type: TP
 #: en/portage/emerge.1:520
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</var/lib/portage/world> "
 msgstr "B</var/lib/portage/world> "
 
 #. type: Plain text
 #: en/portage/emerge.1:525
-#, fuzzy
 msgid ""
 "Contains a list of all user-specified packages.  You can safely edit this "
 "file, adding packages that you want to be considered in B<world> class "
 "updates and removing those that you do not want to be considered."
 msgstr ""
-"ユーザ指定パッケージの全リストが書かれている。 このファイルは編集しても問題な"
-"い。 B<world> クラスのアップデートで更新してほしいパッケージを追加したり、 更"
-"新してほしくないパッケージを削ったりしてかまわない。"
+"ユーザ指定パッケージの全リストが書かれている。このファイルは編集しても問題な"
+"い。B<world> クラスのアップデートで更新してほしいパッケージを追加したり、更新"
+"してほしくないパッケージを削ったりしてかまわない。"
 
 #. type: Plain text
 #: en/portage/emerge.1:530
-#, fuzzy
 msgid ""
 "Contains variables for the build process, overriding those in B<make."
 "globals>.  B<You should edit this file instead of the ones listed below>."
 msgstr ""
-"ビルドプロセスのための変数が書かれており、 B<make.globals> に書かれている変数"
-"を上書きする。 B<下に挙げられているファイルではなく、このファイルを編集するこ"
+"ビルドプロセスのための変数が書かれており、B<make.globals> に書かれている変数"
+"を上書きする。B<下に挙げられているファイルではなく、このファイルを編集するこ"
 "と>。"
 
 #. type: Plain text
 #: en/portage/emerge.1:534
-#, fuzzy
 msgid ""
 "Contains settings to handle automatic updates/backups of configuration files."
 msgstr ""
@@ -2080,121 +1762,111 @@ msgstr ""
 
 #. type: TP
 #: en/portage/emerge.1:534
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.profile/make.defaults>"
 msgstr "B</etc/make.profile/make.defaults>"
 
 #. type: Plain text
 #: en/portage/emerge.1:538
-#, fuzzy
 msgid ""
 "Contains profile-specific variables for the build process.  B<Do not edit "
 "this file>."
 msgstr ""
-"ビルドプロセスのためのプロファイル特有の変数が書かれている。 B<このファイルを"
+"ビルドプロセスのためのプロファイル特有の変数が書かれている。B<このファイルを"
 "編集してはならない>。"
 
 #. type: TP
 #: en/portage/emerge.1:538
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.profile/use.defaults>"
 msgstr "B</etc/make.profile/use.defaults>"
 
 #. type: Plain text
 #: en/portage/emerge.1:542
-#, fuzzy
 msgid ""
 "Contains a list of packages which, if installed, cause the respective USE "
 "flag to be enabled by default.  B<Do not edit this file>."
 msgstr ""
 "パッケージをインストールするとき、それぞれについてデフォルトで有効になる USE "
-"フラグが書かれている。 B<このファイルを編集してはならない>。"
+"フラグが書かれている。B<このファイルを編集してはならない>。"
 
 #. type: TP
 #: en/portage/emerge.1:542
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</usr/portage/profiles/use.desc> "
 msgstr "B</usr/portage/profiles/use.desc> "
 
 #. type: Plain text
 #: en/portage/emerge.1:546
-#, fuzzy
 msgid ""
 "Contains the master list of USE flags with descriptions of their functions.  "
 "B<Do not edit this file>."
 msgstr ""
-"USE フラグのマスターリストが機能の説明と一緒に書かれている。 B<このファイルを"
+"USE フラグのマスターリストが機能の説明と一緒に書かれている。B<このファイルを"
 "編集してはならない>。"
 
 #. type: TP
 #: en/portage/emerge.1:546
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.profile/virtuals> "
 msgstr "B</etc/make.profile/virtuals> "
 
 #. type: Plain text
 #: en/portage/emerge.1:550
-#, fuzzy
 msgid ""
 "Contains a list of default packages used to resolve virtual dependencies.  "
 "B<Do not edit this file>."
 msgstr ""
-"virtual 依存関係を解決するために使われるデフォルトパッケージのリストが 書かれ"
-"ている。 B<このファイルを編集してはならない>。"
+"virtual 依存関係を解決するために使われるデフォルトパッケージのリストが書かれ"
+"ている。B<このファイルを編集してはならない>。"
 
 #. type: TP
 #: en/portage/emerge.1:550
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.profile/packages>"
 msgstr "B</etc/make.profile/packages>"
 
 #. type: Plain text
 #: en/portage/emerge.1:554
-#, fuzzy
 msgid ""
 "Contains a list of packages used for the base system.  The B<system> and "
 "B<world> classes consult this file.  B<Do not edit this file>."
 msgstr ""
-"基本システムとして使われるパッケージのリストが書かれている。 B<system> と "
-"B<world> クラスがこのファイルを参照する。 B<このファイルを編集してはならない"
+"基本システムとして使われるパッケージのリストが書かれている。B<system> と "
+"B<world> クラスがこのファイルを参照する。B<このファイルを編集してはならない"
 ">。"
 
 #. type: TP
 #: en/portage/emerge.1:554 en/portage/make.conf.5:357
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.globals> "
 msgstr "B</etc/make.globals> "
 
 #. type: Plain text
 #: en/portage/emerge.1:558
-#, fuzzy
 msgid ""
 "Contains the default variables for the build process.  B<Do not edit this "
 "file>."
 msgstr ""
-"ビルドプロセスのためのデフォルト変数が書かれている。 B<このファイルを編集して"
+"ビルドプロセスのためのデフォルト変数が書かれている。B<このファイルを編集して"
 "はならない>。"
 
 #. type: Plain text
 #: en/portage/emerge.1:562
-#, fuzzy
 msgid "Geert Bevin E<lt>gbevin@gentoo.orgE<gt>"
 msgstr "Geert Bevin E<lt>gbevin@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/emerge.1:568
-#, fuzzy
 msgid "Phil Bordelon E<lt>phil@thenexusproject.orgE<gt>"
 msgstr "Phil Bordelon E<lt>phil@thenexusproject.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/emerge.1:572
-#, fuzzy
 msgid "Marius Mauch E<lt>genone@gentoo.orgE<gt>"
 msgstr "Marius Mauch E<lt>genone@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/emerge.1:574
-#, fuzzy
 msgid "$Id: emerge.1,v 1.71 2004/10/26 02:48:17 vapier Exp $"
-msgstr "原文: emerge.1,v 1.71"
+msgstr "$Id: emerge.1,v 1.71 2004/10/26 02:48:17 vapier Exp $"

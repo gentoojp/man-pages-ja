@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the Portage package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portage 2.0.51-r3\n"
-"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"POT-Creation-Date: 2012-07-29 16:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +29,7 @@ msgstr ""
 #: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage 2.0.51"
 msgstr "Portage 2.0.51"
 
@@ -48,7 +47,7 @@ msgstr "Portage 2.0.51"
 #: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
 #: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
 #: en/portage/vim.eclass.5:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -66,7 +65,7 @@ msgstr "名前"
 #: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
 #: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
 #: en/portage/vim.eclass.5:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -85,63 +84,9 @@ msgstr "説明"
 #: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
 #: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
 #: en/portage/vim.eclass.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPORTING BUGS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグの報告\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告"
+msgstr "バグ報告"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -157,61 +102,8 @@ msgstr ""
 #: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
 #: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
 #: en/portage/vim.eclass.5:44
-#, fuzzy
 msgid "Please report bugs via http://bugs.gentoo.org/"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグは、http://bugs.gentoo.org/ から報告すること。\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+msgstr "バグ報告は http://bugs.gentoo.org/ 経由で行ってください。"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -227,61 +119,9 @@ msgstr ""
 #: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
 #: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
 #: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照"
+msgstr "関連項目"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:80 en/portage/ebuild.1:170
@@ -295,7 +135,7 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:59 en/portage/rpm.eclass.5:32
 #: en/portage/ssl-cert.eclass.5:49 en/portage/stardict.eclass.5:29
 #: en/portage/toolchain-funcs.eclass.5:76 en/portage/vim.eclass.5:47
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FILES"
 msgstr "ファイル"
 
@@ -314,63 +154,9 @@ msgstr "ファイル"
 #: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
 #: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
 #: en/portage/vim.eclass.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者"
+msgstr "著者"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:92 en/portage/ebuild.1:183
@@ -387,69 +173,15 @@ msgstr ""
 #: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
 #: en/portage/vim.eclass.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CVS HEADER"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVSヘッダー\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ"
+msgstr "CVS ヘッダ"
 
 #. type: TH
 #: en/portage/check-kernel.eclass.5:1 en/portage/ebook.eclass.5:1
 #: en/portage/font.eclass.5:1 en/portage/horde.eclass.5:1
 #: en/portage/libtool.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Aug 2004"
 msgstr "Aug 2004"
 
@@ -463,45 +195,9 @@ msgstr "Aug 2004"
 #: en/portage/perl-module.eclass.5:1 en/portage/rpm.eclass.5:1
 #: en/portage/ssl-cert.eclass.5:1 en/portage/stardict.eclass.5:1
 #: en/portage/toolchain-funcs.eclass.5:1 en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "portage"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage"
+msgstr "Portage"
 
 #. type: SH
 #: en/portage/check-kernel.eclass.5:7 en/portage/cvs.eclass.5:16
@@ -512,39 +208,9 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:9 en/portage/rpm.eclass.5:12
 #: en/portage/ssl-cert.eclass.5:8 en/portage/stardict.eclass.5:10
 #: en/portage/vim.eclass.5:17
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "VARIABLES"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"VARIABLES\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数"
+msgstr "変数"
 
 #. type: SH
 #: en/portage/check-kernel.eclass.5:21 en/portage/cvs.eclass.5:59
@@ -554,7 +220,7 @@ msgstr ""
 #: en/portage/horde.eclass.5:15 en/portage/libtool.eclass.5:12
 #: en/portage/perl-module.eclass.5:15 en/portage/rpm.eclass.5:17
 #: en/portage/ssl-cert.eclass.5:36 en/portage/toolchain-funcs.eclass.5:10
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FUNCTIONS"
 msgstr "関数"
 
@@ -565,38 +231,33 @@ msgstr "関数"
 #: en/portage/games.eclass.5:114 en/portage/libtool.eclass.5:42
 #: en/portage/rpm.eclass.5:32 en/portage/ssl-cert.eclass.5:49
 #: en/portage/stardict.eclass.5:29 en/portage/toolchain-funcs.eclass.5:76
-#, fuzzy
 msgid "B<ebuild>(5)"
 msgstr "B<ebuild>(5)"
 
 #. type: Plain text
 #: en/portage/check-kernel.eclass.5:52 en/portage/ebook.eclass.5:74
 #: en/portage/libtool.eclass.5:46
-#, fuzzy
 msgid "Aaron Walker E<lt>ka0ttic@gentoo.orgE<gt>"
 msgstr "Aaron Walker E<lt>ka0ttic@gentoo.orgE<gt>"
 
 #. type: TH
 #: en/portage/ebook.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EBOOK.ECLASS"
 msgstr "EBOOK.ECLASS"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:4
-#, fuzzy
 msgid "ebook - easy installation of ebooks"
-msgstr "ebook - ebooksの簡単な導入機能を提供する"
+msgstr "ebook - ebooks の簡単な導入機能を提供する"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:6
-#, fuzzy
 msgid "The B<ebook> eclass makes writing ebuilds for ebooks a trivial task."
 msgstr "B<ebook> eclass は、ebook の ebuild を書く作業を簡単なものにする。"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:9
-#, fuzzy
 msgid ""
 "I<NOTE>: the following variables should be set B<BEFORE> inheriting the "
 "B<ebook> eclass:"
@@ -604,246 +265,231 @@ msgstr "I<注意>: 次の変数は、B<ebook> eclass を継承する B<前に> �
 
 #. type: TP
 #: en/portage/ebook.eclass.5:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DESCRIPTION>"
-msgstr "B<説明>"
+msgstr "B<DESCRIPTION>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:12
-#, fuzzy
 msgid ""
 "Package description.  Defaults to \"B<${P}> ebook based on ebook eclass\"."
 msgstr ""
-"パッケージに関する説明。 \"B<${P}> ebook based on ebook eclass\" が初期値であ"
+"パッケージに関する説明。\"B<${P}> ebook based on ebook eclass\" が初期値であ"
 "る。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:12 en/portage/ebuild.5:291
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<RDEPEND>"
 msgstr "B<RDEPEND>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:15
-#, fuzzy
 msgid "Run-time dependencies.  Defaults to \"E<gt>=dev-util/devhelp-0.6\"."
-msgstr "実行時依存関係。 \"E<gt>=dev-util/devhelp-0.6\" が初期値である。"
+msgstr "実行時依存関係。\"E<gt>=dev-util/devhelp-0.6\" が初期値である。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:15
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EBOOKNAME>"
 msgstr "B<EBOOKNAME>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:18
-#, fuzzy
 msgid "The name of the ebook.  This variable I<must> be set."
 msgstr "ebook の名称。この変数は I<必ず> 設定すること。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:18
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EBOOKVERSION>"
 msgstr "B<EBOOKVERSION>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:22
-#, fuzzy
 msgid ""
 "The version of the ebook.  This variable I<must> be set, even if there is no "
 "version.  See the B<${NOVERSION}> variable below for more information."
 msgstr ""
 "ebook のバージョン。たとえバージョンがなかったとしても、この変数は I<必ず> 設"
-"定すること。 詳細については 下記の B<${NOVERSION}> 変数を参照する。"
+"定すること。詳細については下記の B<${NOVERSION}> 変数を参照する。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:22
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<SRC>"
 msgstr "B<SRC>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:26
-#, fuzzy
 msgid ""
 "The name of the file to download, minus the file extension.  This variable "
 "defaults to B<${EBOOKNAME}>-B<${EBOOKVERSION}>."
 msgstr ""
-"拡張子をのぞいた、ダウンロード用のファイル名を設定する。 この変数の初期値は "
-"B<${EBOOKNAME}>-B<${EBOOKVERSION}> である。"
+"拡張子をのぞいた、ダウンロード用のファイル名を設定する。この変数の初期値は B<"
+"${EBOOKNAME}>-B<${EBOOKVERSION}> である。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:26
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<SRC_URI>"
 msgstr "B<SRC_URI>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:29
-#, fuzzy
 msgid ""
 "The ebook URI to download.  Defaults to \"http://lidn.sourceforge.net/"
 "books_download/B<${SRC}>.B<${EBOOKEXT}>\"."
 msgstr ""
-"ebook のダウンロード先のURIを設定する。 この初期値は、 \"http://lidn."
+"ebook のダウンロード先の URI を設定する。この初期値は、\"http://lidn."
 "sourceforge.net/books_download/B<${SRC}>.B<${EBOOKEXT}>\" となる。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:29
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EBOOKEXT>"
 msgstr "B<EBOOKEXT>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:32
-#, fuzzy
 msgid "The file name extension of B<${SRC}>.  Defaults to tar.gz."
-msgstr "B<${SRC}> のファイル名の拡張子を設定する。 初期値は、 tar.gz である。"
+msgstr "B<${SRC}> のファイル名の拡張子を設定する。初期値は、tar.gz である。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:32
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EBOOKDESTDIR>"
 msgstr "B<EBOOKDESTDIR>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:37
-#, fuzzy
 msgid ""
 "The directory inside B<${DEVHELPROOT}>/books/B<${EBOOKDIR}> in which the "
 "ebook will be installed.  This variable defaults to B<${EBOOKNAME}>-B<"
 "${EBOOKVERSION}> or B<${EBOOKNAME}> if the B<${NOVERSION}> variable is set."
 msgstr ""
-"B<${DEVHELPROOT}>/books/B<${EBOOKDIR}> 内のこのディレクトリには、 ebookをイン"
-"ストールするディレクトリを設定する。 この変数の初期値として、B<${EBOOKNAME}>-"
-"B<${EBOOKVERSION}> が設定される。ただし、 B<${NOVERSION}> 変数が設定されてい"
-"る場合には、B<${EBOOKNAME}> が初期値となる。"
+"B<${DEVHELPROOT}>/books/B<${EBOOKDIR}> 内のこのディレクトリには、ebook をイン"
+"ストールするディレクトリを設定する。この変数の初期値として、B<${EBOOKNAME}>-"
+"B<${EBOOKVERSION}> が設定される。ただし、B<${NOVERSION}> 変数が設定されている"
+"場合には、B<${EBOOKNAME}> が初期値となる。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:37
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<EBOOKFROMDIR>"
 msgstr "B<EBOOKFROMDIR>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:43
-#, fuzzy
 msgid ""
 "The directory in which the ebook's HTML files are located after unpacking B<"
 "${SRC_URI}>.  This directory is relative to B<${WORKDIR}>.  This variable "
 "defaults to B<${EBOOKNAME}>-B<${EBOOKVERSION}> or B<${EBOOKNAME}> if the B<"
 "${NOVERSION}> variable is set."
 msgstr ""
-"この変数には、B<${SRC_URI}> を展開後のebookのHTMLファイルまでのパスを設定す"
-"る。 このディレクトリは、B<${WORKDIR}> からの相対パスである。 この変数の初期"
-"値として、B<${EBOOKNAME}>-B<${EBOOKVERSION}> が設定される。 ただし、B<"
+"この変数には、B<${SRC_URI}> を展開後の ebook の HTML ファイルまでのパスを設定"
+"する。このディレクトリは、B<${WORKDIR}> からの相対パスである。この変数の初期"
+"値として、B<${EBOOKNAME}>-B<${EBOOKVERSION}> が設定される。ただし、B<"
 "${NOVERSION}> 変数が設定されている場合には、B<${EBOOKNAME}> が初期値となる。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:43
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<BOOKDEVHELPFILE>"
 msgstr "B<BOOKDEVHELPFILE>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:48
-#, fuzzy
 msgid ""
 "The file name that the ebook's book.devhelp will be installed as.  This "
 "variable defaults to B<${EBOOKNAME}>-B<${EBOOKVERSION}>.devhelp or B<"
 "${EBOOKNAME}>.devhelp if the B<${NOVERSION}> variable is set."
 msgstr ""
-"この変数には、ebookのbook.devhelpとしてインストールされるファイル名が設定され"
-"る。 この変数の初期値として、B<${EBOOKNAME}>-B<${EBOOKVERSION}>.devhelp が設"
-"定される。 ただし、B<${NOVERSION}> 変数が設定されている場合は、B<${EBOOKNAME}"
-">.devhelp が初期として設定される。"
+"この変数には、ebook の book.devhelp としてインストールされるファイル名が設定"
+"される。この変数の初期値として、B<${EBOOKNAME}>-B<${EBOOKVERSION}>.devhelp が"
+"設定される。ただし、B<${NOVERSION}> 変数が設定されている場合は、B<"
+"${EBOOKNAME}>.devhelp が初期として設定される。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:48
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<BOOKDESTDIR>"
 msgstr "B<BOOKDESTDIR>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:53
-#, fuzzy
 msgid ""
 "The directory in which the ebook's HTML will be installed into.  Defaults to "
 "B<${EBOOKNAME}>-B<${EBOOKVERSION}> or B<${EBOOKNAME}> is the B<${NOVERSION}> "
 "variable is set."
 msgstr ""
-"この変数にはebookのHTMLファイルがインストールされるディレクトリ名が設定され"
-"る。 B<${EBOOKNAME}>-B<${EBOOKVERSION}> が初期となる。ただし、B<${NOVERSION}"
+"この変数には ebook の HTML ファイルがインストールされるディレクトリ名が設定さ"
+"れる。B<${EBOOKNAME}>-B<${EBOOKVERSION}> が初期となる。ただし、B<${NOVERSION}"
 "> が設定されている場合は、B<${EBOOKNAME}> が初期となる。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:53
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<NOVERSION>"
 msgstr "B<NOVERSION>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:57
-#, fuzzy
 msgid ""
 "If this variable is not empty, all instances of B<${EBOOKVERSION}> will be "
 "removed from all variables."
 msgstr ""
-"この変数が設定されていれば、全ての変数より B<${EBOOKVERSION}> の例が 削除され"
+"この変数が設定されていれば、全ての変数より B<${EBOOKVERSION}> の例が削除され"
 "る。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:57
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DEVHELPROOT>"
 msgstr "B<DEVHELPROOT>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:60
-#, fuzzy
 msgid ""
 "The location of devhelp's data directory.  Defaults to usr/share/devhelp."
 msgstr ""
-"この変数は、devhelpのデータディレクトリのパスが設定される。 初期値は、 usr/"
+"この変数は、devhelp のデータディレクトリのパスが設定される。初期値は、usr/"
 "share/devhelp である。"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:63
-#, fuzzy
 msgid ""
 "I<NOTE>: the following functions will be used as the defaults should they be "
 "omitted from the ebuild."
 msgstr ""
-"I<注意>: 次の関数は、初期値として使われているので、 ebuildから削除するべきで"
+"I<注意>: 次の関数は、初期値として使われているので、ebuild から削除するべきで"
 "ある。"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:63
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebook_src_install>"
 msgstr "B<ebook_src_install>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:66
-#, fuzzy
 msgid ""
 "Installs B<${BOOKDEVHELPFILE}> and all HTML files into B<${DEVHELPROOT}>/"
 "books/B<${EBOOKDESTDIR}>."
 msgstr ""
-"B<${BOOKDEVHELPFILE}> と全てのHTMLファイルを B<${DEVHELPROOT}>/books/B<"
+"B<${BOOKDEVHELPFILE}> と全ての HTML ファイルを B<${DEVHELPROOT}>/books/B<"
 "${EBOOKDESTDIR}> へインストールする。"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:72
-#, fuzzy
 msgid "B</usr/portage/eclass/ebook.eclass>"
 msgstr "B</usr/portage/eclass/ebook.eclass>"
 
 #. type: Plain text
 #: en/portage/ebook.eclass.5:75
-#, fuzzy
 msgid ""
 "$Header: /var/cvsroot/gentoo-src/portage/man/ebook.eclass.5,v 1.2 2004/09/29 "
 "12:55:49 vapier Exp $"
-msgstr "原文: ebook.eclass.5,v 1.2"
+msgstr ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/ebook.eclass.5,v 1.2 2004/09/29 "
+"12:55:49 vapier Exp $"

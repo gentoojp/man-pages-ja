@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the Portage package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portage 2.0.51-r3\n"
-"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"POT-Creation-Date: 2012-07-29 16:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +29,7 @@ msgstr ""
 #: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage 2.0.51"
 msgstr "Portage 2.0.51"
 
@@ -39,7 +38,7 @@ msgstr "Portage 2.0.51"
 #: en/portage/env-update.1:1 en/portage/etc-update.1:1
 #: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
 #: en/portage/portage.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage"
 msgstr "Portage"
 
@@ -57,7 +56,7 @@ msgstr "Portage"
 #: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
 #: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
 #: en/portage/vim.eclass.5:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -66,7 +65,7 @@ msgstr "名前"
 #: en/portage/env-update.1:4 en/portage/etc-update.1:4
 #: en/portage/g-cpan.pl.1:4 en/portage/quickpkg.1:4 en/portage/repoman.1:4
 #: en/portage/make.conf.5:4 en/portage/portage.5:12
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
@@ -84,7 +83,7 @@ msgstr "書式"
 #: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
 #: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
 #: en/portage/vim.eclass.5:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -103,63 +102,9 @@ msgstr "説明"
 #: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
 #: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
 #: en/portage/vim.eclass.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPORTING BUGS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグの報告\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告"
+msgstr "バグ報告"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -175,61 +120,8 @@ msgstr ""
 #: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
 #: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
 #: en/portage/vim.eclass.5:44
-#, fuzzy
 msgid "Please report bugs via http://bugs.gentoo.org/"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグは、http://bugs.gentoo.org/ から報告すること。\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+msgstr "バグ報告は http://bugs.gentoo.org/ 経由で行ってください。"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -245,61 +137,9 @@ msgstr ""
 #: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
 #: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
 #: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照"
+msgstr "関連項目"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:80 en/portage/ebuild.1:170
@@ -313,7 +153,7 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:59 en/portage/rpm.eclass.5:32
 #: en/portage/ssl-cert.eclass.5:49 en/portage/stardict.eclass.5:29
 #: en/portage/toolchain-funcs.eclass.5:76 en/portage/vim.eclass.5:47
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FILES"
 msgstr "ファイル"
 
@@ -332,63 +172,9 @@ msgstr "ファイル"
 #: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
 #: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
 #: en/portage/vim.eclass.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者"
+msgstr "著者"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:90 en/portage/ebuild.1:183
@@ -398,7 +184,6 @@ msgstr ""
 #: en/portage/games.eclass.5:118 en/portage/make.conf.5:372
 #: en/portage/perl-module.eclass.5:65 en/portage/rpm.eclass.5:36
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
-#, fuzzy
 msgid "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
 msgstr "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
 
@@ -417,79 +202,24 @@ msgstr "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>"
 #: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
 #: en/portage/vim.eclass.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CVS HEADER"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVSヘッダー\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ"
+msgstr "CVS ヘッダ"
 
 #. type: TH
 #: en/portage/ebuild.1:1 en/portage/ebuild.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EBUILD"
 msgstr "EBUILD"
 
 #. type: TH
 #: en/portage/ebuild.1:1 en/portage/repoman.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Nov 2002"
 msgstr "Nov 2002"
 
 #. type: Plain text
 #: en/portage/ebuild.1:5
-#, fuzzy
 msgid ""
 "ebuild - manual page for the ebuild program, a low level interface to the "
 "Portage system."
@@ -497,13 +227,11 @@ msgstr "ebuild - Portage システムへの低レベルインタフェース、e
 
 #. type: Plain text
 #: en/portage/ebuild.1:8
-#, fuzzy
 msgid "B<ebuild> I<file command [command]>..."
 msgstr "B<ebuild> I<file command [command]>..."
 
 #. type: Plain text
 #: en/portage/ebuild.1:18
-#, fuzzy
 msgid ""
 "The ebuild program is a direct interface to the Portage system. It allows "
 "for direct action upon an ebuild with specific subcommands or groups of "
@@ -514,25 +242,24 @@ msgid ""
 "a temporary directory \"image\", merge the image to the local filesystem, "
 "create a bzipped tarball package out of the image, and more."
 msgstr ""
-"ebuild プログラムは Portage システムへの直接のインタフェースである。 このプロ"
-"グラムによって、ebuild を特定のサブコマンドやグループコマンド で直接操作し、"
-"特定の環境や機能で実行することができる。ebuild プログラム は ebuild スクリプ"
-"トと1つ以上のコマンドを引数として取り、ebuild スクリプトを解析して指定された"
-"コマンドを実行する。ソースを取得する、 ソースを展開する、ソースをコンパイルす"
-"る、「image」という一時ディレクトリ にオブジェクトファイルをインストールす"
-"る、一時ディレクトリにインストール されたイメージを実際にローカルファイルシス"
-"テムにインストールする、その イメージから bzip 圧縮された tar アーカイブパッ"
-"ケージを作成する、 などのコマンドがある。"
+"ebuild プログラムは Portage システムへの直接のインタフェースである。このプロ"
+"グラムによって、ebuild を特定のサブコマンドやグループコマンドで直接操作し、特"
+"定の環境や機能で実行することができる。ebuild プログラムは ebuild スクリプト"
+"と 1 つ以上のコマンドを引数として取り、ebuild スクリプトを解析して指定された"
+"コマンドを実行する。ソースを取得する、ソースを展開する、ソースをコンパイルす"
+"る、「image」という一時ディレクトリにオブジェクトファイルをインストールする、"
+"一時ディレクトリにインストールされたイメージを実際にローカルファイルシステム"
+"にインストールする、そのイメージから bzip 圧縮された tar アーカイブパッケージ"
+"を作成する、などのコマンドがある。"
 
 #. type: SH
 #: en/portage/ebuild.1:18
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FILE"
 msgstr "ファイル"
 
 #. type: Plain text
 #: en/portage/ebuild.1:21
-#, fuzzy
 msgid ""
 "This must be a valid ebuild script.  For further information read B<ebuild>"
 "(5)."
@@ -542,19 +269,18 @@ msgstr ""
 
 #. type: SH
 #: en/portage/ebuild.1:21
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "COMMANDS"
 msgstr "コマンド"
 
 #. type: TP
 #: en/portage/ebuild.1:22 en/portage/repoman.1:33
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<help>"
 msgstr "B<help>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:26
-#, fuzzy
 msgid ""
 "Show a condensed form of the man page along with a lot of package specific "
 "information."
@@ -562,25 +288,23 @@ msgstr "パッケージ固有の情報とともにこのマニュアルページ
 
 #. type: TP
 #: en/portage/ebuild.1:26
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<setup>"
 msgstr "B<setup>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:29
-#, fuzzy
 msgid "Run all package specific setup actions and exotic system checks."
 msgstr "パッケージ固有のセットアップとさまざまなシステムチェックを行なう。"
 
 #. type: TP
 #: en/portage/ebuild.1:29
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<clean>"
 msgstr "B<clean>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:39
-#, fuzzy
 msgid ""
 "Cleans the temporary build directory that Portage has created for this "
 "particular ebuild file.  The temporary build directory normally contains the "
@@ -590,17 +314,15 @@ msgid ""
 "For information on what this variable is, run I<emerge [-v] info>, or to "
 "override this variable, see B<make.conf>(5)."
 msgstr ""
-"その特定の ebuild ファイルのために作られた Portage の一時ビルド ディレクトリ"
-"を消去する。通常一時ビルドディレクトリは展開された ソースコードと \"インス"
-"トールイメージ\" (ローカルファイルシステムに インストールされるファイル、もし"
-"くはバイナリパッケージに保存される ファイル全て)を含む。ビルドディレクトリは "
-"BUILD_PREFIX 変数によって 設定される。この変数がなにか知りたい場合は "
-"I<emerge [-v] info> を実行する。この変数を上書きしたい場合は B<make.conf>(5) "
-"を参照。"
+"その特定の ebuild ファイルのために作られた Portage の一時ビルドディレクトリを"
+"消去する。通常一時ビルドディレクトリは展開されたソースコードと \"インストール"
+"イメージ\" (ローカルファイルシステムにインストールされるファイル、もしくはバ"
+"イナリパッケージに保存されるファイル全て) を含む。ビルドディレクトリは "
+"BUILD_PREFIX 変数によって設定される。この変数がなにか知りたい場合は I<emerge "
+"[-v] info> を実行する。この変数を上書きしたい場合は B<make.conf>(5) を参照。"
 
 #. type: Plain text
 #: en/portage/ebuild.1:47
-#, fuzzy
 msgid ""
 "Note: Portage cleans up almost everything after a package has been "
 "successfully merged unless FEATURES contains 'noclean'. Adding noclean to "
@@ -609,23 +331,22 @@ msgid ""
 "have use for the sources post-merge. Optionally one may, manual clean I<rm -"
 "rf /var/tmp/portage> will take care of all of these files."
 msgstr ""
-"註: FEATURES 変数に「noclean」が含まれていないかぎり、パッケージが 問題なくイ"
-"ンストールされると Portage は一時ビルドディレクトリにある ものほとんど全てを"
-"消去する。FEATURES に noclean を追加するとたくさん のファイルが残りすぐに膨大"
-"な容量を消費してしまう結果になる。 インストール後にソースを使う必要がないので"
-"あれば、noclean を指定する ことはお奨めしない。一方、手動で I<rm -rf /var/"
-"tmp/portage> として 一時ビルドディレクトリにあるファイル全てを消すという方法"
-"もある。"
+"注意: FEATURES 変数に「noclean」が含まれていないかぎり、パッケージが問題なく"
+"インストールされると Portage は一時ビルドディレクトリにあるものほとんど全てを"
+"消去する。FEATURES に noclean を追加するとたくさんのファイルが残りすぐに膨大"
+"な容量を消費してしまう結果になる。インストール後にソースを使う必要がないので"
+"あれば、noclean を指定することはお奨めしない。一方、手動で I<rm -rf /var/tmp/"
+"portage> として一時ビルドディレクトリにあるファイル全てを消すという方法もあ"
+"る。"
 
 #. type: TP
 #: en/portage/ebuild.1:47
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<fetch>"
 msgstr "B<fetch>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:60
-#, fuzzy
 msgid ""
 "Checks to see if all the sources specified in SRC_URI are available in "
 "DISTDIR (see B<make.conf>(5) for more information) and have a valid md5 "
@@ -638,46 +359,44 @@ msgid ""
 "recorded in files/digest-[package]-[version-rev], a warning is printed and "
 "ebuild exits with an error code of 1."
 msgstr ""
-"SRC_URI で指定されているソースが全て DISTDIR (詳細は B<make.conf>(5)  参照)に"
-"あって使える状態になっているか、正しい md5 チェックサムであるか どうかを調べ"
-"る。ソースが使えない状態なら SRC_URI で指定された場所から ダウンロードしよう"
-"とする。1つのファイルに対し複数のダウンロード場所が 挙げられていた場合、"
-"Portage は各々の場所のうちどこがより近いか ping を 打って調べる(現在は間違っ"
-"ているかもしれないが)。Gentoo Linux のミラー サイトは GENTOO_MIRRORS で定義さ"
-"れており、常にこの場所が最初に調べられる。 もしなんらかの理由で現在のソースや"
+"SRC_URI で指定されているソースが全て DISTDIR (詳細は B<make.conf>(5) 参照) に"
+"あって使える状態になっているか、正しい md5 チェックサムであるかどうかを調べ"
+"る。ソースが使えない状態なら SRC_URI で指定された場所からダウンロードしようと"
+"する。1 つのファイルに対し複数のダウンロード場所が挙げられていた場合、"
+"Portage は各々の場所のうちどこがより近いか ping を打って調べる (現在は間違っ"
+"ているかもしれないが)。Gentoo Linux のミラーサイトは GENTOO_MIRRORS で定義さ"
+"れており、常にこの場所が最初に調べられる。もしなんらかの理由で現在のソースや"
 "ダウンロードしたばかりのソースの md5 ダイジェストが files/digest-[パッケージ"
-"名]-[バージョン-リビジョン] に 記録されている値と一致しなかった場合、警告が出"
-"力され、ebuild はエラー コード 1 で終了する。"
+"名]-[バージョン-リビジョン] に記録されている値と一致しなかった場合、警告が出"
+"力され、ebuild はエラーコード 1 で終了する。"
 
 #. type: TP
 #: en/portage/ebuild.1:60 en/portage/make.conf.5:117
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<digest>"
 msgstr "B<digest>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:66
-#, fuzzy
 msgid ""
 "Creates a digest file for the package in /usr/portage/[category]/[package]/"
 "files/. This digest file lists the md5sum's of all the files found in the "
 "SRC_URI.  If the fetched source of the package is corrupt/bogus in some way, "
 "the md5sum will catch this."
 msgstr ""
-"/usr/portage/[カテゴリー]/[パッケージ名]/files/ にパッケージのダイジェスト "
-"ファイルを作成する。このダイジェストファイルには SRC_URI に書いてあるファイ"
-"ル 全ての md5sum が列挙されている。取得したパッケージのソースファイルが 壊れ"
-"ている、もしくは変な場合には、md5sum がそれを検出する。"
+"/usr/portage/[カテゴリー]/[パッケージ名]/files/ にパッケージのダイジェスト"
+"ファイルを作成する。このダイジェストファイルには SRC_URI に書いてあるファイル"
+"全ての md5sum が列挙されている。取得したパッケージのソースファイルが壊れてい"
+"る、もしくは変な場合には、md5sum がそれを検出する。"
 
 #. type: TP
 #: en/portage/ebuild.1:66
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<unpack>"
 msgstr "B<unpack>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:75
-#, fuzzy
 msgid ""
 "Extracts the sources to a subdirectory in the I<build directory> "
 "(BUILD_PREFIX) by running the I<src_unpack()> function in the ebuild file.  "
@@ -687,16 +406,15 @@ msgid ""
 "work. This particular directory can be referenced by using the ${WORKDIR} "
 "variable."
 msgstr ""
-"ebuild ファイルの I<src_unpack()> 関数を実行し、 I<ビルドディレクトリ> "
-"(BUILD_PREFIX) のサブディレクトリへと ソースを展開する。 src_unpack() 関数が"
-"指定されていない場合、 デフォルトの src_unpack() 関数が使用され、SRC_URI で指"
-"定されている 全ファイルを展開する。ソースは普通 ${BUILD_PREFIX}/[パッケージ"
-"名]-[バージョン-リビジョン]/work に展開される。このディレクトリは ${WORKDIR} "
-"変数で参照することが できる。"
+"ebuild ファイルの I<src_unpack()> 関数を実行し、I<ビルドディレクトリ> "
+"(BUILD_PREFIX) のサブディレクトリへとソースを展開する。src_unpack() 関数が指"
+"定されていない場合、デフォルトの src_unpack() 関数が使用され、SRC_URI で指定"
+"されている全ファイルを展開する。ソースは普通 ${BUILD_PREFIX}/[パッケージ名]-"
+"[バージョン-リビジョン]/work に展開される。このディレクトリは ${WORKDIR} 変数"
+"で参照することができる。"
 
 #. type: Plain text
 #: en/portage/ebuild.1:83
-#, fuzzy
 msgid ""
 "If you're creating an ebuild, you'll want to make sure that the S (source "
 "directory) variable defined at at the top of your ebuild script points to "
@@ -705,72 +423,68 @@ msgid ""
 "src_unpack() function is also responsible for making the appropriate patches "
 "to the sources so that they're ready for compilation."
 msgstr ""
-"ebuild を作成しているなら、ebuild スクリプトの先頭で定義されている ${S} 変数"
-"(ソースディレクトリ) が展開されたソースのあるディレクトリを 指していることを"
-"確認しよう。${S} はデフォルトでは ${WORKDIR}/${P} と定義されているので、あま"
-"り変更する必要はない。 src_unpack() 関数は そのままコンパイルに取りかかれるよ"
-"うソースに適切なパッチを当てる 関数でもある。"
+"ebuild を作成しているなら、ebuild スクリプトの先頭で定義されている ${S} 変数 "
+"(ソースディレクトリ) が展開されたソースのあるディレクトリを指していることを確"
+"認しよう。${S} はデフォルトでは ${WORKDIR}/${P} と定義されているので、あまり"
+"変更する必要はない。src_unpack() 関数はそのままコンパイルに取りかかれるよう"
+"ソースに適切なパッチを当てる関数でもある。"
 
 #. type: TP
 #: en/portage/ebuild.1:83
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<compile>"
 msgstr "B<compile>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:89
-#, fuzzy
 msgid ""
 "Compiles the extracted sources by running the the I<src_compile()> function "
 "specified in the ebuild file.  When src_compile() starts, the current "
 "working directory will be set to ${S}.  When src_compile()  completes, the "
 "sources should be fully compiled."
 msgstr ""
-"ebuild ファイルの中で指定された I<src_compile()> 関数を実行し、 展開したソー"
-"スをコンパイルする。src_compile() の開始時には カレントディレクトリが ${S} に"
-"設定される。 src_compile() の 終了時にはソースは完全にコンパイルされていなけ"
-"ればならない。"
+"ebuild ファイルの中で指定された I<src_compile()> 関数を実行し、展開したソース"
+"をコンパイルする。src_compile() の開始時にはカレントディレクトリが ${S} に設"
+"定される。src_compile() の終了時にはソースは完全にコンパイルされていなければ"
+"ならない。"
 
 #. type: TP
 #: en/portage/ebuild.1:89
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<test>"
 msgstr "B<test>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:93
-#, fuzzy
 msgid ""
 "Run package specific test cases to verify that everything was built properly."
 msgstr ""
-"全て正しくビルドされたかどうか検証するため、 パッケージ固有のテストケースを実"
+"全て正しくビルドされたかどうか検証するため、パッケージ固有のテストケースを実"
 "行する。"
 
 #. type: TP
 #: en/portage/ebuild.1:93
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<preinst>"
 msgstr "B<preinst>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:97
-#, fuzzy
 msgid ""
 "Run package specific actions that need to be done before the package is "
 "installed into the live filesystem."
 msgstr ""
-"稼働中のファイルシステムにパッケージをインストールする前に実行 する必要がある"
+"稼働中のファイルシステムにパッケージをインストールする前に実行する必要がある"
 "パッケージ固有のアクションを実行する。"
 
 #. type: TP
 #: en/portage/ebuild.1:97
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<install>"
 msgstr "B<install>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:104
-#, fuzzy
 msgid ""
 "Installs the package to the temporary I<install directory> by running the "
 "I<src_install()> function.  When completed, the I<install directory> "
@@ -778,38 +492,36 @@ msgid ""
 "that should either be merged to the local file system or included in a "
 "binary package."
 msgstr ""
-"I<src_install()> 関数を実行し、パッケージを一時 I<インストール ディレクトリ> "
+"I<src_install()> 関数を実行し、パッケージを一時 I<インストールディレクトリ> "
 "にインストールする。完了すると、 I<インストールディレクトリ> "
-"(${BUILD_PREFIX}/[パッケージ名]-[バージョン-リビジョン]/image)  にはローカル"
-"ファイルシステムにインストールされるべきファイルか バイナリパッケージに含まれ"
+"(${BUILD_PREFIX}/[パッケージ名]-[バージョン-リビジョン]/image) にはローカル"
+"ファイルシステムにインストールされるべきファイルかバイナリパッケージに含まれ"
 "るべきファイル全てがインストールされる。"
 
 #. type: TP
 #: en/portage/ebuild.1:104
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<postinst>"
 msgstr "B<postinst>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:109
-#, fuzzy
 msgid ""
 "Run package specific actions that need to be done after the package is "
 "installed into the live filesystem.  Usually helpful messages are shown here."
 msgstr ""
-"稼働中のファイルシステムにパッケージをインストールしたあと実行 する必要がある"
-"パッケージ固有のアクションを実行する。有益なメッセージが 表示されることが多"
+"稼働中のファイルシステムにパッケージをインストールしたあと実行する必要がある"
+"パッケージ固有のアクションを実行する。有益なメッセージが表示されることが多"
 "い。"
 
 #. type: TP
 #: en/portage/ebuild.1:109
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<qmerge>"
 msgstr "B<qmerge>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:119
-#, fuzzy
 msgid ""
 "This function installs all the files in the I<install directory> to the live "
 "filesystem. The process works as follows: first, the I<pkg_preinst()> "
@@ -818,23 +530,22 @@ msgid ""
 "pkg/${CATEOGRY}/${PN}-[version-rev]/CONTENTS>.  After all the files have "
 "been merged, the I<pkg_postinst()> function (if specified) is executed."
 msgstr ""
-"この関数は I<インストールディレクトリ> の全てのファイルを稼働中の ファイルシ"
-"ステムにインストールする。そのプロセスは、まず(指定されて いれば) "
-"I<pkg_preinst()> 関数が実行され、そしてファイルが稼働中の ファイルシステムに"
-"インストールされ、インストールされたファイルの md5 ダイジェストが I</var/db/"
-"pkg/${CATEOGRY}/${PN}-[バージョン-リビジョン]/CONTENTS> に記録される。全ファ"
-"イルがインストールされると、I<pkg_postinst()> 関数が(指定されていれば)実行さ"
-"れる。"
+"この関数は I<インストールディレクトリ> の全てのファイルを稼働中のファイルシス"
+"テムにインストールする。そのプロセスは、まず (指定されていれば) I<pkg_preinst"
+"()> 関数が実行され、そしてファイルが稼働中のファイルシステムにインストールさ"
+"れ、インストールされたファイルの md5 ダイジェストが I</var/db/pkg/"
+"${CATEOGRY}/${PN}-[バージョン-リビジョン]/CONTENTS> に記録される。全ファイル"
+"がインストールされると、I<pkg_postinst()> 関数が (指定されていれば) 実行され"
+"る。"
 
 #. type: TP
 #: en/portage/ebuild.1:119
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<merge>"
 msgstr "B<merge>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:126
-#, fuzzy
 msgid ""
 "Normally, to merge an ebuild, you need to I<fetch>, I<unpack>, I<compile>, "
 "I<install> and I<qmerge>.  If you're simply interested in merging the "
@@ -842,20 +553,19 @@ msgid ""
 "you, stopping along the way if a particular step doesn't complete "
 "successfully."
 msgstr ""
-"通常、ebuild をインストールするには、I<fetch>、I<unpack>、 I<compile>、"
-"I<install> そして I<qmerge> する必要がある。 単に ebuild をインストールしたい"
-"だけならこのコマンドを使ってもよい。 このコマンドはこれら5つのステップ全てを"
-"実行し、ある特定のステップが 失敗したらそこで止まってくれる。"
+"通常、ebuild をインストールするには、I<fetch>、I<unpack>、I<compile>、"
+"I<install> そして I<qmerge> する必要がある。単に ebuild をインストールしたい"
+"だけならこのコマンドを使ってもよい。このコマンドはこれら 5 つのステップ全てを"
+"実行し、ある特定のステップが失敗したらそこで止まってくれる。"
 
 #. type: TP
 #: en/portage/ebuild.1:126
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<unmerge>"
 msgstr "B<unmerge>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:135
-#, fuzzy
 msgid ""
 "This function first executes the I<pkg_prerm> function (if specified).  Then "
 "it removes all files from the live filesystem that have a valid md5 checksum "
@@ -865,73 +575,69 @@ msgid ""
 "unmerge the old one.  In fact, this is the recommended package upgrade "
 "method."
 msgstr ""
-"この関数は(指定されていれば)まず I<pkg_prerm> 関数を実行する。 次に現在のファ"
-"イルシステムから、パッケージの内容が書かれているファイル に挙げられているもの"
-"のうち、md5 チェックサムと更新時刻が記録と一致する ファイル全てを削除する。空"
-"のディレクトリは全て再帰的に削除される。 最後に(指定されていれば) "
-"I<pkg_postrm> 関数が実行される。 パッケージの新しいバージョンを先にインストー"
-"ルし、それから古い バージョンを unmerge するのは安全である。実のところ、そう"
-"するのが 推奨パッケージアップグレード方法である。"
+"この関数は (指定されていれば) まず I<pkg_prerm> 関数を実行する。次に現在の"
+"ファイルシステムから、パッケージの内容が書かれているファイルに挙げられている"
+"もののうち、md5 チェックサムと更新時刻が記録と一致するファイル全てを削除す"
+"る。空のディレクトリは全て再帰的に削除される。最後に (指定されていれば) "
+"I<pkg_postrm> 関数が実行される。パッケージの新しいバージョンを先にインストー"
+"ルし、それから古いバージョンを unmerge するのは安全である。実のところ、そうす"
+"るのが推奨パッケージアップグレード方法である。"
 
 #. type: TP
 #: en/portage/ebuild.1:135
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prerm>"
 msgstr "B<prerm>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:139
-#, fuzzy
 msgid ""
 "Run package specific actions that need to be executed before the package is "
 "removed from the filesystem.  See also I<unmerge>."
 msgstr ""
-"ファイルシステムからパッケージが削除される前に実行されなければならない パッ"
+"ファイルシステムからパッケージが削除される前に実行されなければならないパッ"
 "ケージ固有のアクションを実行する。I<unmerge> も参照。"
 
 #. type: TP
 #: en/portage/ebuild.1:139
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<postrm>"
 msgstr "B<postrm>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:143
-#, fuzzy
 msgid ""
 "Run package specific actions that need to be executed after the package is "
 "removed from the filesystem.  See also I<unmerge>."
 msgstr ""
-"ファイルシステムからパッケージが削除されたあとに実行されなければならない パッ"
+"ファイルシステムからパッケージが削除されたあとに実行されなければならないパッ"
 "ケージ固有のアクションを実行する。I<unmerge> も参照。"
 
 #. type: TP
 #: en/portage/ebuild.1:143
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<config>"
 msgstr "B<config>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:148
-#, fuzzy
 msgid ""
 "Run package specific actions needed to be executed after the emerge process "
 "has completed.  This usually entails configuration file setup or other "
 "similar setups that the user may wish to run."
 msgstr ""
-"emerge プロセスが完了したあとに実行が必要なパッケージ固有の設定を実行する。 "
-"設定ファイルのセットアップや、それと同じようにユーザが実行しておきたい セット"
+"emerge プロセスが完了したあとに実行が必要なパッケージ固有の設定を実行する。設"
+"定ファイルのセットアップや、それと同じようにユーザが実行しておきたいセット"
 "アップなどが多い。"
 
 #. type: TP
 #: en/portage/ebuild.1:148
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package>"
 msgstr "B<package>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:155
-#, fuzzy
 msgid ""
 "This command is a lot like the I<merge> command, except that after fetching, "
 "unpacking, compiling and installing, a .tbz2 binary package tarball is "
@@ -939,96 +645,81 @@ msgid ""
 "packages).  A symbolic link is created in ${PKGDIR}/${CATEGORY} that points "
 "to the package in ${PKGDIR}/All."
 msgstr ""
-"I<merge> コマンドとよく似ているが、ソースを取得、展開、コンパイル、 そしてイ"
-"ンストールしたあと、${PKGDIR}/All (${PKGDIR} はデフォルトでは /usr/portage/"
-"packages) に .tbz2 バイナリパッケージが作成される。 ${PKGDIR}/${CATEGORY} に"
-"は ${PKGDIR}/All にあるパッケージ本体への シンボリックリンクが作成される。"
+"I<merge> コマンドとよく似ているが、ソースを取得、展開、コンパイル、そしてイン"
+"ストールしたあと、${PKGDIR}/All (${PKGDIR} はデフォルトでは /usr/portage/"
+"packages) に .tbz2 バイナリパッケージが作成される。${PKGDIR}/${CATEGORY} に"
+"は ${PKGDIR}/All にあるパッケージ本体へのシンボリックリンクが作成される。"
 
 #. type: TP
 #: en/portage/ebuild.1:155
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<rpm>"
 msgstr "B<rpm>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:160
-#, fuzzy
 msgid ""
 "Builds a RedHat RPM package from the files in the temporary I<install "
 "directory>. At the moment, the ebuild's dependency information is not "
 "incorporated into the RPM."
 msgstr ""
 "一時 I<インストールディレクトリ> にあるファイルから RedHat RPM パッケージをビ"
-"ルドする。現時点では ebuild の依存情報は RPM には 反映されない。"
+"ルドする。現時点では ebuild の依存情報は RPM には反映されない。"
 
 #. type: Plain text
 #: en/portage/ebuild.1:166
-#, fuzzy
 msgid "B<emerge>(1), B<ebuild>(5), B<make.conf>(5)"
 msgstr "B<emerge>(1), B<ebuild>(5), B<make.conf>(5)"
 
 #. type: TP
 #: en/portage/ebuild.1:166 en/portage/make.conf.5:349
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "The I</usr/sbin/ebuild.sh> script. "
-msgstr ""
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/sbin/ebuild.sh> スクリプト\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/sbin/ebuild.sh> スクリプト。"
+msgstr "I</usr/sbin/ebuild.sh> スクリプト"
 
 #. type: TP
 #: en/portage/ebuild.1:168 en/portage/ebuild.5:806 en/portage/make.conf.5:351
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "The helper apps in I</usr/lib/portage/bin>."
-msgstr ""
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/lib/portage/bin> にある補助アプリケーション。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/lib/portage/bin> にある補助アプリケーション\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/lib/portage/bin> にある補助プログラム。"
+msgstr "I</usr/lib/portage/bin> にある補助アプリケーション"
 
 #. type: TP
 #: en/portage/ebuild.1:171 en/portage/emerge.1:525 en/portage/ebuild.5:809
 #: en/portage/make.conf.5:354
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.conf> "
 msgstr "B</etc/make.conf> "
 
 #. type: Plain text
 #: en/portage/ebuild.1:175
-#, fuzzy
 msgid ""
 "Contains variables for the build-process and overwrites those in make."
 "globals."
 msgstr ""
-"ビルドプロセスのための変数が書かれており、make.globals で設定された 変数を上"
-"書きする。"
+"ビルドプロセスのための変数が書かれており、make.globals で設定された変数を上書"
+"きする。"
 
 #. type: Plain text
 #: en/portage/ebuild.1:177 en/portage/emerge.1:564
-#, fuzzy
 msgid "Achim Gottinger E<lt>achim@gentoo.orgE<gt>"
 msgstr "Achim Gottinger E<lt>achim@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:179 en/portage/emerge.1:560 en/portage/env-update.1:22
 #: en/portage/repoman.1:115 en/portage/make.conf.5:368
-#, fuzzy
 msgid "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
 msgstr "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:181 en/portage/emerge.1:566 en/portage/make.conf.5:370
-#, fuzzy
 msgid "Nicholas Jones E<lt>carpaski@gentoo.orgE<gt>"
 msgstr "Nicholas Jones E<lt>carpaski@gentoo.orgE<gt>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:184
-#, fuzzy
 msgid ""
 "$Header: /var/cvsroot/gentoo-src/portage/man/ebuild.1,v 1.16 2004/09/17 "
 "00:17:10 vapier Exp $\""
-msgstr "原文: ebuild.1,v 1.16"
+msgstr ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/ebuild.1,v 1.16 2004/09/17 "
+"00:17:10 vapier Exp $\""

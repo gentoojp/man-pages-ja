@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the Portage package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portage 2.0.51-r3\n"
-"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"POT-Creation-Date: 2012-07-29 16:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +29,7 @@ msgstr ""
 #: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage 2.0.51"
 msgstr "Portage 2.0.51"
 
@@ -48,7 +47,7 @@ msgstr "Portage 2.0.51"
 #: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
 #: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
 #: en/portage/vim.eclass.5:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -66,7 +65,7 @@ msgstr "名前"
 #: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
 #: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
 #: en/portage/vim.eclass.5:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -85,63 +84,9 @@ msgstr "説明"
 #: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
 #: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
 #: en/portage/vim.eclass.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPORTING BUGS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグの報告\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告"
+msgstr "バグ報告"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -157,61 +102,8 @@ msgstr ""
 #: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
 #: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
 #: en/portage/vim.eclass.5:44
-#, fuzzy
 msgid "Please report bugs via http://bugs.gentoo.org/"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグは、http://bugs.gentoo.org/ から報告すること。\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+msgstr "バグ報告は http://bugs.gentoo.org/ 経由で行ってください。"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -227,61 +119,9 @@ msgstr ""
 #: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
 #: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
 #: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照"
+msgstr "関連項目"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:80 en/portage/ebuild.1:170
@@ -295,7 +135,7 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:59 en/portage/rpm.eclass.5:32
 #: en/portage/ssl-cert.eclass.5:49 en/portage/stardict.eclass.5:29
 #: en/portage/toolchain-funcs.eclass.5:76 en/portage/vim.eclass.5:47
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FILES"
 msgstr "ファイル"
 
@@ -314,63 +154,9 @@ msgstr "ファイル"
 #: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
 #: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
 #: en/portage/vim.eclass.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者"
+msgstr "著者"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:92 en/portage/ebuild.1:183
@@ -387,110 +173,42 @@ msgstr ""
 #: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
 #: en/portage/vim.eclass.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CVS HEADER"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVSヘッダー\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ"
+msgstr "CVS ヘッダ"
 
 #. type: TH
 #: en/portage/ebuild.1:1 en/portage/ebuild.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EBUILD"
 msgstr "EBUILD"
 
 #. type: TP
 #: en/portage/ebuild.1:168 en/portage/ebuild.5:806 en/portage/make.conf.5:351
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "The helper apps in I</usr/lib/portage/bin>."
-msgstr ""
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/lib/portage/bin> にある補助アプリケーション。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/lib/portage/bin> にある補助アプリケーション\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"I</usr/lib/portage/bin> にある補助プログラム。"
+msgstr "I</usr/lib/portage/bin> にある補助アプリケーション"
 
 #. type: TP
 #: en/portage/ebuild.1:171 en/portage/emerge.1:525 en/portage/ebuild.5:809
 #: en/portage/make.conf.5:354
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.conf> "
 msgstr "B</etc/make.conf> "
 
 #. type: TH
 #: en/portage/env-update.1:1 en/portage/etc-update.1:1 en/portage/ebuild.5:1
 #: en/portage/make.conf.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Feb 2003"
 msgstr "Feb 2003"
 
 #. type: SH
 #: en/portage/g-cpan.pl.1:14 en/portage/quickpkg.1:30 en/portage/ebuild.5:12
 #: en/portage/font.eclass.5:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "EXAMPLES"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"例\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"サンプル\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"例\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"実行例"
+msgstr "例"
 
 #. type: TH
 #: en/portage/check-kernel.eclass.5:1 en/portage/cvs.eclass.5:1
@@ -502,45 +220,9 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:1 en/portage/rpm.eclass.5:1
 #: en/portage/ssl-cert.eclass.5:1 en/portage/stardict.eclass.5:1
 #: en/portage/toolchain-funcs.eclass.5:1 en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "portage"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"portage\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"Portage"
+msgstr "Portage"
 
 #. type: SH
 #: en/portage/check-kernel.eclass.5:7 en/portage/cvs.eclass.5:16
@@ -551,39 +233,9 @@ msgstr ""
 #: en/portage/perl-module.eclass.5:9 en/portage/rpm.eclass.5:12
 #: en/portage/ssl-cert.eclass.5:8 en/portage/stardict.eclass.5:10
 #: en/portage/vim.eclass.5:17
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "VARIABLES"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"VARIABLES\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"変数"
+msgstr "変数"
 
 #. type: SH
 #: en/portage/check-kernel.eclass.5:21 en/portage/cvs.eclass.5:59
@@ -593,26 +245,24 @@ msgstr ""
 #: en/portage/horde.eclass.5:15 en/portage/libtool.eclass.5:12
 #: en/portage/perl-module.eclass.5:15 en/portage/rpm.eclass.5:17
 #: en/portage/ssl-cert.eclass.5:36 en/portage/toolchain-funcs.eclass.5:10
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "FUNCTIONS"
 msgstr "関数"
 
 #. type: TP
 #: en/portage/ebook.eclass.5:12 en/portage/ebuild.5:291
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<RDEPEND>"
 msgstr "B<RDEPEND>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:4
-#, fuzzy
 msgid ""
 "ebuild - the internal format, variables, and functions in an ebuild script"
 msgstr "ebuild - ebuild スクリプトの内部フォーマット・変数・関数"
 
 #. type: Plain text
 #: en/portage/ebuild.5:12
-#, fuzzy
 msgid ""
 "The B<ebuild>(1)  program accepts a single ebuild script as an argument.  "
 "This script contains variables and commands that specify how to download, "
@@ -620,25 +270,20 @@ msgid ""
 "its original sources.  In addition to all of this, the ebuild script can "
 "also contain pre/post install/remove commands, as required."
 msgstr ""
-"B<ebuild>(1)  プログラムは ebuild スクリプトを1つ引数に取る。 このスクリプト"
-"には変数とコマンドが書かれており、 オリジナルソースから特定のソフトウェアパッ"
-"ケージを ダウンロード、展開、パッチ、コンパイル、インストール そしてマージす"
-"る手順を指定している。 これらの手順に加え、必要であれば ebuild スクリプトにイ"
-"ンストール前後/ アンインストール前後のコマンドを書くこともできる。"
+"B<ebuild>(1) プログラムは ebuild スクリプトを 1 つ引数に取る。このスクリプト"
+"には変数とコマンドが書かれており、オリジナルソースから特定のソフトウェアパッ"
+"ケージをダウンロード、展開、パッチ、コンパイル、インストールそしてマージする"
+"手順を指定している。これらの手順に加え、必要であれば ebuild スクリプトにイン"
+"ストール前後/アンインストール前後のコマンドを書くこともできる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:14 en/portage/font.eclass.5:11
-#, fuzzy
 msgid "Here's a simple example ebuild:"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"以下に簡単なebuildの例を示す:\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"簡単な ebuild のサンプルを示す:"
+msgstr "以下に簡単な ebuild の例を示す:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:20
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# Copyright 1999-2004 Gentoo Foundation\n"
 "# Distributed under the terms of the GNU General Public License v2\n"
@@ -650,7 +295,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:25
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "inherit some_eclass another_eclass\n"
 "DESCRIPTION=\"Super-useful stream editor (sed)\"\n"
@@ -664,7 +309,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:30
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "LICENSE=\"GPL-2\"\n"
 "SLOT=\"0\"\n"
@@ -678,7 +323,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:33
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "DEPEND=\"virtual/libc\"\n"
 "RDEPEND=\"virtual/libc\"\n"
@@ -688,7 +333,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:38
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "src_compile() {\n"
 "\teconf || die \"could not configure\"\n"
@@ -702,7 +347,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "src_install() {\n"
 "\tinto /usr\n"
@@ -728,297 +373,272 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:51
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<MISC USAGE NOTES>"
 msgstr "B<使用方法>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:54
-#, fuzzy
 msgid "- PORTAGE* and PORTDIR* variables may be found in B<make.conf>(5)."
 msgstr "- PORTAGE* と PORTDIR* 変数は B<make.conf>(5) に書かれている。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:57
-#, fuzzy
 msgid ""
 "- When assigning values to variables in ebuilds, you B<cannot have a space> "
 "between the variable name and the equal sign."
 msgstr ""
-"- ebuild で変数に値を割り当てるときは、 変数名と等号の間に B<スペースを含める"
+"- ebuild で変数に値を割り当てるときは、変数名と等号の間に B<スペースを含める"
 "ことはできない>。"
 
 #. type: TP
 #: en/portage/ebuild.5:57
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<P>"
 msgstr "B<P>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:61
-#, fuzzy
 msgid ""
 "This variable contains the package name without the ebuild revision.  This "
 "variable must NEVER be modified."
 msgstr ""
-"この変数には ebuild のリビジョンを除いたパッケージ名が入っている。 この変数"
-"は B<絶対に> 変更してはいけない。"
+"この変数には ebuild のリビジョンを除いたパッケージ名が入っている。この変数は "
+"B<絶対に> 変更してはいけない。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:63
-#, fuzzy
 msgid "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$P>=='I<xfree-4.2.1>'"
 msgstr "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$P>=='I<xfree-4.2.1>'"
 
 #. type: TP
 #: en/portage/ebuild.5:63
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PN>"
 msgstr "B<PN>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:66
-#, fuzzy
 msgid "Contains the name of the script without the version number."
 msgstr "この変数にはバージョン番号を除いた ebuild スクリプト名が入っている。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:68
-#, fuzzy
 msgid "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PN>=='I<xfree>'"
 msgstr "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PN>=='I<xfree>'"
 
 #. type: TP
 #: en/portage/ebuild.5:68
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PV>"
 msgstr "B<PV>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:71
-#, fuzzy
 msgid "Contains the version number without the revision."
 msgstr "この変数にはリビジョンを除いたバージョン番号が入っている。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:73
-#, fuzzy
 msgid "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PV>=='I<4.2.1>'"
 msgstr "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PV>=='I<4.2.1>'"
 
 #. type: TP
 #: en/portage/ebuild.5:73
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PR>"
 msgstr "B<PR>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:76
-#, fuzzy
 msgid "Contains the revision number or 'r0' if no revision number exists."
 msgstr ""
-"この変数にはリビジョン番号、もしくはリビジョン番号が存在しない場合 は「r0」が"
+"この変数にはリビジョン番号、もしくはリビジョン番号が存在しない場合は「r0」が"
 "入っている。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:78
-#, fuzzy
 msgid "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PR>=='I<r2>'"
 msgstr "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PR>=='I<r2>'"
 
 #. type: TP
 #: en/portage/ebuild.5:78
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PVR>"
 msgstr "B<PVR>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:81
-#, fuzzy
 msgid "Contains the version number with the revision."
 msgstr "この変数にはリビジョン番号つきのバージョン番号が入っている。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:83
-#, fuzzy
 msgid "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PVR>=='I<4.2.1-r2>'"
 msgstr "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PVR>=='I<4.2.1-r2>'"
 
 #. type: TP
 #: en/portage/ebuild.5:83
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PF>"
 msgstr "B<PF>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:86
-#, fuzzy
 msgid "Contains the full package name I<[PN]-[PVR]>"
 msgstr "この変数には完全なパッケージ名 I<[PN]-[PVR]> が入っている。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:88
-#, fuzzy
 msgid "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PF>=='I<xfree-4.2.1-r2>'"
 msgstr "B<xfree-4.2.1-r2.ebuild> --E<gt> B<$PF>=='I<xfree-4.2.1-r2>'"
 
 #. type: TP
 #: en/portage/ebuild.5:88
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<A>"
 msgstr "B<A>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:92
-#, fuzzy
 msgid ""
 "Contains all source files required for the package.  This variable must not "
 "be defined. It is autogenerated from the I<SRC_URI> variables."
 msgstr ""
-"この変数にはパッケージに必要なソースファイル名全てが入っている。 ebuild 内で"
-"この変数を定義してはいけない。この変数は I<SRC_URI\\F 変数から自動生成され"
-"る。>"
+"この変数にはパッケージに必要なソースファイル名全てが入っている。ebuild 内でこ"
+"の変数を定義してはいけない。この変数は I<SRC_URI> 変数から自動生成される。"
 
 #. type: TP
 #: en/portage/ebuild.5:92
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<WORKDIR> = I<\"${PORTAGE_TMPDIR}/portage/${PF}/work\">"
 msgstr "B<WORKDIR> = I<\"${PORTAGE_TMPDIR}/portage/${PF}/work\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:95
-#, fuzzy
 msgid ""
 "Contains the path to the package build root.  Do not modify this variable."
 msgstr ""
-"この変数にはパッケージビルドルートのパスが入っている。 この変数を変更しないこ"
+"この変数にはパッケージビルドルートのパスが入っている。この変数を変更しないこ"
 "と。"
 
 #. type: TP
 #: en/portage/ebuild.5:95
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<FILESDIR> = I<\"${PORTDIR}/${CATEGORY}/${PN}/files\">"
 msgstr "B<FILESDIR> = I<\"${PORTDIR}/${CATEGORY}/${PN}/files\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:99
-#, fuzzy
 msgid ""
 "Contains the path to the 'files' sub folder in the package specific location "
 "in the portage tree.  Do not modify this variable."
 msgstr ""
-"この変数には Portage ツリーの中のパッケージごとの「files」 サブフォルダへのパ"
-"スが入っている。 この変数を変更しないこと。"
+"この変数には Portage ツリーの中のパッケージごとの「files」サブフォルダへのパ"
+"スが入っている。この変数を変更しないこと。"
 
 #. type: TP
 #: en/portage/ebuild.5:99
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<S> = I<\"${WORKDIR}/${P}\">"
 msgstr "B<S> = I<\"${WORKDIR}/${P}\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:105
-#, fuzzy
 msgid ""
 "Contains the path to the temporary I<build directory>.  This variable is "
 "used by the functions I<src_compile> and I<src_install>.  Both are executed "
 "with I<S> as the current directory.  This variable may be modified to match "
 "the extraction directory of a tarball for the package."
 msgstr ""
-"この変数には一時 I<ビルドディレクトリ> のパスが入っている。 この変数は "
-"I<src_compile> と I<src_install> 関数で使われる。 いずれの関数も I<S> をカレ"
-"ントディレクトリとして実行される。 この変数はパッケージの tar アーカイブを展"
-"開したときにできる ディレクトリ名に合うように変更してもよい。"
+"この変数には一時 I<ビルドディレクトリ> のパスが入っている。この変数は "
+"I<src_compile> と I<src_install> 関数で使われる。いずれの関数も I<S> をカレン"
+"トディレクトリとして実行される。この変数はパッケージの tar アーカイブを展開し"
+"たときにできるディレクトリ名に合うように変更してもよい。"
 
 #. type: TP
 #: en/portage/ebuild.5:105
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<T> = I<\"${PORTAGE_TMPDIR}/portage/${PF}/temp\">"
 msgstr "B<T> = I<\"${PORTAGE_TMPDIR}/portage/${PF}/temp\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:109
-#, fuzzy
 msgid ""
 "Contains the path to a I<temporary directory>.  You may use this for "
 "whatever you like."
 msgstr ""
-"この変数には I<一時ディレクトリ> のパスが入っている。 この変数は好きなように"
+"この変数には I<一時ディレクトリ> のパスが入っている。この変数は好きなように"
 "使ってよい。"
 
 #. type: TP
 #: en/portage/ebuild.5:109
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<D> = I<\"${PORTAGE_TMPDIR}/portage/${PF}/image\">"
 msgstr "B<D> = I<\"${PORTAGE_TMPDIR}/portage/${PF}/image\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:114
-#, fuzzy
 msgid ""
 "Contains the path to the temporary I<install directory>.  Every write "
 "operation that does not involve the helper tools and functions (found below) "
 "should be prefixed with ${D}.  Do not modify this variable."
 msgstr ""
-"この変数には一時 I<インストールディレクトリ> のパスが入っている。 補助ツール"
-"と補助関数(下で述べる)を使わずに書き込む操作は ${D} という接頭辞をつけなけれ"
-"ばならない。 この変数を変更しないこと。"
+"この変数には一時 I<インストールディレクトリ> のパスが入っている。補助ツールと"
+"補助関数 (下で述べる) を使わずに書き込む操作は ${D} という接頭辞をつけなけれ"
+"ばならない。この変数を変更しないこと。"
 
 #. type: TP
 #: en/portage/ebuild.5:114
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DESCRIPTION> = I<\"A happy little package\">"
 msgstr "B<DESCRIPTION> = I<\"A happy little package\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:117
-#, fuzzy
 msgid "Should contain a short description of the package."
 msgstr "この変数にはパッケージの簡単な説明が入っていなければならない。"
 
 #. type: TP
 #: en/portage/ebuild.5:117
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<SRC_URI> = I<\"http://happy.com/little/${P}.tar.gz\">"
 msgstr "B<SRC_URI> = I<\"http://happy.com/little/${P}.tar.gz\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:122
-#, fuzzy
 msgid ""
 "Contains a list of URI's for the required source files.  It can contain "
 "multiple URI's for a single source file.  The fastest location is chosen if "
 "the file was not found at I<GENTOO_MIRROR>."
 msgstr ""
-"この変数には必要なソースファイルへの URI のリストが入っている。 1つのソース"
-"ファイルへの複数の URI が入っていてもよい。 I<GENTOO_MIRRORS> にファイルが見"
-"つからなかった場合、 最も速い場所が選ばれる。"
+"この変数には必要なソースファイルへの URI のリストが入っている。1 つのソース"
+"ファイルへの複数の URI が入っていてもよい。I<GENTOO_MIRRORS> にファイルが見つ"
+"からなかった場合、最も速い場所が選ばれる。"
 
 #. type: TP
 #: en/portage/ebuild.5:122
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<HOMEPAGE> = I<\"http://happy.com/\">"
 msgstr "B<HOMEPAGE> = I<\"http://happy.com/\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:126
-#, fuzzy
 msgid ""
 "Should contain a list of URL's for the sources main sites and other further "
 "package dependent information."
 msgstr ""
-"この変数にはソースのメインサイトと、パッケージについてのもっと詳しい 情報を得"
+"この変数にはソースのメインサイトと、パッケージについてのもっと詳しい情報を得"
 "るための URL のリストを入れなければならない。"
 
 #. type: TP
 #: en/portage/ebuild.5:126
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<KEYWORDS> = I<[-~][x86,ppc,sparc,mips,alpha,arm,hppa]>"
 msgstr "B<KEYWORDS> = I<[-~][x86,ppc,sparc,mips,alpha,arm,hppa]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:137
-#, fuzzy
 msgid ""
 "Should contain appropriate list of arches that the ebuild is know to work/"
 "not work.  By default if you do not know if an ebuild runs under a "
@@ -1029,128 +649,122 @@ msgid ""
 "setting ACCEPT_KEYWORDS=\"~arch\" on the command line, or in B<make.conf>"
 "(5)) For an authoritative list please review /usr/portage/profiles/arch.list."
 msgstr ""
-"この変数にはその ebuild が動作する/しないことが分かっている アーキテクチャ"
-"(arch)の適切なリストを入れなければならない。 デフォルトでは、特定の arch で "
-"ebuild が動作するかどうか 分からない場合、単にその arch を KEYWORD から除"
-"く。 特定の arch でその ebuild が動作しない場合、 それをたとえば -ppc のよう"
-"にして KEYWORD に含める。 Portage ツリーに取り込むための ebuild が提出された"
-"とき、 その ebuild が B<動作することが証明されている > 場合、 証明された "
-"arch に対する ~arch セットが KEYWORD になければならない (このように KEYWORD "
-"がついているパッケージは コマンドラインから ACCEPT_KEYWORDS=\"~arch\" と指定"
-"したり B<make.conf>(5) の中で設定することによって、 テストのためにマスクを解"
-"除することができる)。 指定するべき arch についての信頼できるリストは /usr/"
-"portage/profiles/arch.list を見てください。"
+"この変数にはその ebuild が動作する/しないことが分かっているアーキテクチャ "
+"(arch) の適切なリストを入れなければならない。デフォルトでは、特定の arch で "
+"ebuild が動作するかどうか分からない場合、単にその arch を KEYWORD から除く。"
+"特定の arch でその ebuild が動作しない場合、それをたとえば -ppc のようにして "
+"KEYWORD に含める。Portage ツリーに取り込むための ebuild が提出されたとき、そ"
+"の ebuild が B<動作することが証明されている> 場合、証明された arch に対する "
+"~arch セットが KEYWORD になければならない (このように KEYWORD がついている"
+"パッケージはコマンドラインから ACCEPT_KEYWORDS=\"~arch\" と指定したり B<make."
+"conf>(5) の中で設定することによって、テストのためにマスクを解除することができ"
+"る)。指定するべき arch についての信頼できるリストは /usr/portage/profiles/"
+"arch.list を見てください。"
 
 #. type: TP
 #: en/portage/ebuild.5:137
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<SLOT>"
 msgstr "B<SLOT>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:142
-#, fuzzy
 msgid ""
 "This sets the SLOT for packages that may need to co-exist.  By default you "
 "should set B<SLOT>=\"0\" unless you know what you are doing and need to do "
 "otherwise.  This value should I<NEVER> be left undefined."
 msgstr ""
 "この変数は、複数パージョンのパッケージが共存するために必要な SLOT を指定す"
-"る。 なにをしているのか分かっており、SLOT を変更しなければどうにもならない 場"
-"合を除き、デフォルトでは、B<SLOT>=\"0\" を指定しなければならない。 この変数"
-"は I<絶対> 未定義のままであってはいけない。"
+"る。なにをしているのか分かっており、SLOT を変更しなければどうにもならない場合"
+"を除き、デフォルトでは、B<SLOT>=\"0\" を指定しなければならない。この変数は I<"
+"絶対> 未定義のままであってはいけない。"
 
 #. type: TP
 #: en/portage/ebuild.5:142
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<LICENSE>"
 msgstr "B<LICENSE>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:148
-#, fuzzy
 msgid ""
 "This should be a space delimited list of licenses that the package falls "
 "under.  This B<_must_> be set to a matching license in /usr/portage/"
 "licenses/. If the license does not exist in portage yet you must add it "
 "first."
 msgstr ""
-"この変数はパッケージが該当するライセンスのスペースで区切られた リストを入れな"
+"この変数はパッケージが該当するライセンスのスペースで区切られたリストを入れな"
 "ければならない。この変数には /usr/portage/licenses/ にあるライセンスと B<_必"
-"ず_> マッチしなければならない。 Portage にマッチするライセンスが存在しないの"
-"だとしても、 まずそのライセンスを Portage に追加しなければならない。"
+"ず_> マッチしなければならない。Portage にマッチするライセンスが存在しないのだ"
+"としても、まずそのライセンスを Portage に追加しなければならない。"
 
 #. type: TP
 #: en/portage/ebuild.5:148
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<IUSE>"
 msgstr "B<IUSE>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:153
-#, fuzzy
 msgid ""
 "This should be a list of any and all USE flags that are leveraged within "
 "your build script.  The only USE flags that should not be listed here are "
 "arch related flags (see B<KEYWORDS>)."
 msgstr ""
-"この変数にはそのビルドスクリプトの中で使われている全ての USE フラグの リスト"
-"が入っていなければならない。 ここに列記してはいけない唯一の USE フラグは "
-"arch 関連のフラグである (B<KEYWORDS> 参照)。"
+"この変数にはそのビルドスクリプトの中で使われている全ての USE フラグのリストが"
+"入っていなければならない。ここに列記してはいけない唯一の USE フラグは arch 関"
+"連のフラグである (B<KEYWORDS> 参照)。"
 
 #. type: TP
 #: en/portage/ebuild.5:153
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DEPEND>"
 msgstr "B<DEPEND>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:157
-#, fuzzy
 msgid ""
 "This should contain a list of all packages that are required for the program "
 "to compile."
 msgstr ""
-"この変数にはそのプログラムをコンパイルするために必要な全パッケージ のリストが"
+"この変数にはそのプログラムをコンパイルするために必要な全パッケージのリストが"
 "入っていなければならない。"
 
 #. type: TP
 #: en/portage/ebuild.5:158
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DEPEND Atoms>"
 msgstr "B<DEPEND アトム>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:163
-#, fuzzy
 msgid ""
 "A depend atom is simply a dependency that is used by portage when "
 "calculating relationships between packages.  Please note that if the atom "
 "has not already been emerged, then the latest version available is matched."
 msgstr ""
-"DEPEND に含まれるアトム(それぞれのパッケージ名)は単に Portage がパッケージ同"
-"士の関係を計算するときに使う依存性のことである。 DEPEND アトムがまだ emerge "
-"されていない場合、 最新のバージョンがマッチすることに留意してください。"
+"DEPEND に含まれるアトム (それぞれのパッケージ名) は単に Portage がパッケージ"
+"同士の関係を計算するときに使う依存性のことである。DEPEND アトムがまだ emerge "
+"されていない場合、最新のバージョンがマッチすることに留意してください。"
 
 #. type: TP
 #: en/portage/ebuild.5:164
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<Atom Bases>"
 msgstr "B<ベースアトム>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:167
-#, fuzzy
 msgid ""
 "The base atom is just a full category/packagename.  Hence, these are base "
 "atoms:"
 msgstr ""
-"ベースアトムとは完全な カテゴリー/パッケージ名 のことである。 したがって、以"
-"下に挙げるものはベースアトムである:"
+"ベースアトムとは完全な カテゴリー/パッケージ名 のことである。したがって、以下"
+"に挙げるものはベースアトムである:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:172
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "I<sys-apps/sed>\n"
 "I<sys-libs/zlib>\n"
@@ -1162,25 +776,24 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:173
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<Atom Versions>"
 msgstr "B<アトムバージョン>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:178
-#, fuzzy
 msgid ""
 "It is nice to be more specific and say that only certain versions of atoms "
 "are acceptable.  Note that versions must be combined with a prefix (see "
 "below).  Hence you may add a version number as a postfix to the base:"
 msgstr ""
-"より詳細に特定のバージョンのアトムだけが使用可能であると言うのはいいことだ。 "
-"バージョンは接頭辞(下を参照)と一緒に使わねばならないことに注意。 よって、バー"
-"ジョン番号は接尾辞としてベースに加えるとよい:"
+"より詳細に特定のバージョンのアトムだけが使用可能であると言うのはいいことだ。"
+"バージョンは接頭辞 (下を参照) と一緒に使わねばならないことに注意。よって、"
+"バージョン番号は接尾辞としてベースに加えるとよい:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:183
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "sys-apps/sedI<-4.0.5>\n"
 "sys-libs/zlibI<-1.1.4-r1>\n"
@@ -1192,7 +805,6 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:191
-#, fuzzy
 msgid ""
 "Versions are normally made up of two or three numbers separated by periods, "
 "such as 1.2 or 4.5.2.  This string may be followed by a character such as "
@@ -1202,36 +814,35 @@ msgid ""
 "means for the 3rd pre-release of a package, you would use something like "
 "1.2_pre3."
 msgstr ""
-"バージョン番号は 1.2 や 4.5.2 のように、通例ピリオドで区切られた2つか3 つの番"
-"号からなっている。この文字列には 1.2a や 4.5.2z のように1文字末 尾につけるこ"
-"ともできる。この文字は alpha や beta などなどのリリース状態を 示すために使っ"
-"ては B<ならない> ことに注意。リリース状態を示すためには、 補助的な接頭辞 "
-"_alpha, _beta, _pre (プリリリース、pre-release), _rc (リリース候補の状態、"
-"release candidate) もしくは _p (パッチ patch)  を使うこと。つまり、あるパッ"
-"ケージの3度目もプリリリースには、1.2_pre3 のようなバージョンを使う、というこ"
-"とである。"
+"バージョン番号は 1.2 や 4.5.2 のように、通例ピリオドで区切られた 2 つか 3 つ"
+"の番号からなっている。この文字列には 1.2a や 4.5.2z のように 1 文字末尾につけ"
+"ることもできる。この文字は alpha や beta などなどのリリース状態を示すために"
+"使っては B<ならない> ことに注意。リリース状態を示すためには、補助的な接頭辞 "
+"_alpha、beta、_pre (プリリリース、pre-release)、_rc (リリース候補の状態、"
+"release candidate) もしくは _p (パッチ patch) を使うこと。つまり、あるパッ"
+"ケージの 3 度目もプリリリースには、1.2_pre3 のようなバージョンを使う、という"
+"ことである。"
 
 #. type: TP
 #: en/portage/ebuild.5:191
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<Atom Prefix Operators [E<gt> E<gt>= = E<lt>= E<lt>]>"
 msgstr "B<アトム接頭演算子 [E<gt> E<gt>= = E<lt>= E<lt>]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:195
-#, fuzzy
 msgid ""
 "Sometimes you want to be able to depend on general versions rather than "
 "specifying exact versions all the time.  Hence we provide standard boolean "
 "operators:"
 msgstr ""
-"いつも正確なバージョンを特定するのではなく、 広く使われているバージョンに依存"
-"させることができたらと 思うこともある。 そのため、普通のブール演算子を用意し"
-"ている:"
+"いつも正確なバージョンを特定するのではなく、広く使われているバージョンに依存"
+"させることができたらと思うこともある。そのため、普通のブール演算子を用意して"
+"いる:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:202
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "I<E<gt>>media-libs/libgd-1.6\n"
 "I<E<gt>=>media-libs/libgd-1.6\n"
@@ -1247,28 +858,26 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:203
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<Extended Atom Prefixes [!~] and Postfixes [*]>"
 msgstr "B<拡張アトム接頭辞 [!~] と接尾辞 [*]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:209
-#, fuzzy
 msgid ""
 "Now to get even fancier, we provide the ability to define blocking packages "
 "and version range matching.  Also note that these extended prefixes/"
 "postfixes may be combined in any way with the atom classes defined above.  "
 "Here are some common examples you may find in the portage tree:"
 msgstr ""
-"もっとすごいこともできる。「!」と「*」を使えばパッケージのブロックや、 ある範"
-"囲のバージョンにマッチするパッケージを定義したりすることができる のだ。また、"
-"これらの拡張された接頭辞/接尾辞は上で定義されているアトム クラスとどのように"
-"も組み合わせることができる。 Portage ツリーにあるありふれた例をいくつか挙げる"
-"と:"
+"もっとすごいこともできる。「!」と「*」を使えばパッケージのブロックや、ある範"
+"囲のバージョンにマッチするパッケージを定義したりすることができるのだ。また、"
+"これらの拡張された接頭辞/接尾辞は上で定義されているアトムクラスとどのようにも"
+"組み合わせることができる。Portage ツリーにあるありふれた例をいくつか挙げると:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:215
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "I<!>app-text/dos2unix\n"
 "=dev-libs/glib-2I<*>\n"
@@ -1282,44 +891,40 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:218
-#, fuzzy
 msgid "I<!> means block packages from being installed at the same time."
 msgstr "I<!> は同時にインストールされるパッケージのブロックを意味する。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:222
-#, fuzzy
 msgid ""
 "I<*> means match any version of the package so long as the specified base is "
 "matched.  So with a version of '2*', we can match '2.1', '2.2', '2.2.1', "
 "etc... and not match version '1.0', '3.0', '4.1', etc..."
 msgstr ""
-"I<*> は指定されたベースがマッチするのであれば、 パッケージのバージョンは問わ"
-"ないことを意味する。 したがって、バージョン「2*」と書けば、 「2.1」「2.2」"
-"「2.2.1」などにマッチし、 「1.0」「3.0」「4.1」などにはマッチしないようにする"
+"I<*> は指定されたベースがマッチするのであれば、パッケージのバージョンは問わな"
+"いことを意味する。したがって、バージョン「2*」と書けば、「2.1」「2.2」"
+"「2.2.1」などにマッチし、「1.0」「3.0」「4.1」などにはマッチしないようにする"
 "ことができる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:226
-#, fuzzy
 msgid ""
 "I<~> means match any revision of the base version specified.  So in the "
 "above example, we would match versions '1.0.2a', '1.0.2a-r1', '1.0.2a-r2', "
 "etc..."
 msgstr ""
-"I<~> は指定されたベースとなるバージョンのどのリビジョンにもマッチ することを"
-"意味する。よって、上の例では、「1.0.2a」「1.0.2a-r1」 「1.0.2a-r2」などにマッ"
-"チする。"
+"I<~> は指定されたベースとなるバージョンのどのリビジョンにもマッチすることを意"
+"味する。よって、上の例では、「1.0.2a」「1.0.2a-r1」「1.0.2a-r2」などにマッチ"
+"する。"
 
 #. type: TP
 #: en/portage/ebuild.5:227
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<Dynamic DEPENDs>"
 msgstr "B<動的な DEPEND>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:234
-#, fuzzy
 msgid ""
 "Sometimes programs may depend on different things depending on the USE "
 "variable.  Portage offers a few options to handle this.  Note that when "
@@ -1327,114 +932,105 @@ msgid ""
 "it appears.  That means that each Atom both conditionally include multiple "
 "Atoms and be nested to an infinite depth."
 msgstr ""
-"プログラムは USE 変数に従って違うものに依存することがあるかもしれない。 "
-"Portage はこの依存関係を扱うために選択肢をいくつか用意している。 後述する構文"
-"を使う場合、ここの事例はそれが現れたスコープで1アトムとして 扱われることに注"
-"意。つまり、個々のアトムは条件節を使うことによって複数の アトムを含むこともで"
+"プログラムは USE 変数に従って違うものに依存することがあるかもしれない。"
+"Portage はこの依存関係を扱うために選択肢をいくつか用意している。後述する構文"
+"を使う場合、ここの事例はそれが現れたスコープで 1 アトムとして扱われることに注"
+"意。つまり、個々のアトムは条件節を使うことによって複数のアトムを含むこともで"
 "きるし、無限の深さまで入れ子にすることもできる。"
 
 #. type: TP
 #: en/portage/ebuild.5:235
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<usevar? ( DEPEND Atom )>"
 msgstr "B<usevar? ( DEPEND アトム )>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:239
-#, fuzzy
 msgid ""
 "To include the jpeg library when the user has jpeg in B<USE>, simply use the "
 "following syntax:"
 msgstr ""
-"ユーザが B<USE> に jpeg を指定しているときに jpeg のライブラリを 含めるには、"
+"ユーザが B<USE> に jpeg を指定しているときに jpeg のライブラリを含めるには、"
 "単に下記の構文を使えばよい:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:241
-#, fuzzy
 msgid "B<jpeg? ( media-libs/jpeg)>"
 msgstr "B<jpeg? ( media-libs/jpeg )>"
 
 #. type: TP
 #: en/portage/ebuild.5:241
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<!usevar? ( Atom )>"
 msgstr "B<!usevar? ( アトム )>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:245
-#, fuzzy
 msgid ""
 "If you want to include a package only if the user does not have a certain "
 "option in their B<USE> variable, then use the following syntax:"
 msgstr ""
-"ユーザが B<USE> 変数にあるオプションを設定していないときにかぎり あるパッケー"
+"ユーザが B<USE> 変数にあるオプションを設定していないときにかぎりあるパッケー"
 "ジを含めるには、次の構文を使う:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:247
-#, fuzzy
 msgid "B<!nophysfs? ( dev-games/physfs )>"
 msgstr "B<!nophysfs? ( dev-games/physfs )>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:250
-#, fuzzy
 msgid ""
 "This is often useful for those times when you want to want to add optional "
 "support for a feature and have it enabled by default."
 msgstr ""
-"この構文はある機能の選択をサポートし、さらにデフォルトではその機能を 有効にし"
+"この構文はある機能の選択をサポートし、さらにデフォルトではその機能を有効にし"
 "ておきたいときに便利である。"
 
 #. type: TP
 #: en/portage/ebuild.5:250
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<usevar? ( Atom if true ) !usevar? ( Atom if false )>"
 msgstr "B<usevar? ( USE が真の場合のアトム ) : ( USE が偽の場合のアトム )>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:255
-#, fuzzy
 msgid ""
 "For functionality like the tertiary operator found in C you must use two "
 "statements, one normal and one inverted.  If a package uses GTK2 or GTK1, "
 "but not both, then you can handle that like this:"
 msgstr ""
 "これは C 言語での三項演算子と同じように働く。あるパッケージが GTK2 か GTK1 を"
-"使うが、両方同時には使えない場合、このように書けばそれを 扱うことができる:"
+"使うが、両方同時には使えない場合、このように書けばそれを扱うことができる:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:257
-#, fuzzy
 msgid "B<gtk2? ( =x11-libs/gtk+-2* ) !gtk2? ( =x11-libs/gtk+-1* )>"
-msgstr "B<gtk2? ( =x11-libs/gtk+-2* ) : ( =x11-libs/gtk+-1* )>"
+msgstr "B<gtk2? ( =x11-libs/gtk+-2* ) !gtk2? ( =x11-libs/gtk+-1* )>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:259
-#, fuzzy
 msgid "That way the default is the superior GTK2 library."
 msgstr "こうすることでデフォルトは優れた GTK2 ライブラリになる。"
 
 #. type: TP
 #: en/portage/ebuild.5:259
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<|| ( Atom Atom ... )>"
 msgstr "B<|| ( アトム アトム ... )>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:263
-#, fuzzy
 msgid ""
 "When a package can work with a few different packages but a virtual is not "
 "appropriate, this syntax can easily be used."
 msgstr ""
-"あるパッケージを複数の異なるパッケージと動かすことができるが、 バーチャルパッ"
+"あるパッケージを複数の異なるパッケージと動かすことができるが、バーチャルパッ"
 "ケージは適当でないとき、この構文を手軽に使うことができる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:268
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "B<|| (>\n"
 "B<\tapp-games/unreal-tournament>\n"
@@ -1448,30 +1044,28 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:272
-#, fuzzy
 msgid ""
 "Here we see that unreal-tournament has a normal version and it has a goty "
 "version.  Since they provide the same base set of files, another package can "
 "use either.  Adding a virtual is inappropriate due to the small scope of it."
 msgstr ""
-"この例では unreal-tournament には通常版と goty 版があることが分かる。 これら"
-"は同じベースファイルを提供するため、これらに依存するパッケージは 通常版と "
-"goty 版のいずれに依存することもできる。バーチャルを追加するのは はこの例だと"
-"適用範囲が狭いので不適切である。"
+"この例では unreal-tournament には通常版と goty 版があることが分かる。これらは"
+"同じベースファイルを提供するため、これらに依存するパッケージは通常版と goty "
+"版のいずれに依存することもできる。バーチャルを追加するのはこの例だと適用範囲"
+"が狭いので不適切である。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:275
-#, fuzzy
 msgid ""
 "Another good example is when a package can be built with multiple video "
 "interfaces, but it can only ever have just one."
 msgstr ""
-"別の好例は、パッケージが複数のビデオインタフェース向けにビルドできるが、 同時"
-"にはそのうちの1つにだけ対応し、それ以外には対応できない場合がある。"
+"別の好例は、パッケージが複数のビデオインタフェース向けにビルドできるが、同時"
+"にはそのうちの 1 つにだけ対応し、それ以外には対応できない場合がある。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:283
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "B<|| (>\n"
 "B<\tsdl? ( media-libs/libsdl )>\n"
@@ -1482,95 +1076,85 @@ msgid ""
 "B<)>\n"
 msgstr ""
 "B<|| (>\n"
-"B<sdl? ( media-libs/libsdl )>\n"
-"B<svga? ( media-libs/svgalib )>\n"
-"B<opengl? ( virtual/opengl )>\n"
-"B<ggi? ( media-libs/libggi )>\n"
-"B<virtual/x11>\n"
+"B<\tsdl? ( media-libs/libsdl )>\n"
+"B<\tsvga? ( media-libs/svgalib )>\n"
+"B<\topengl? ( virtual/opengl )>\n"
+"B<\tggi? ( media-libs/libggi )>\n"
+"B<\tvirtual/x11>\n"
 "B<)>\n"
 
 #. type: Plain text
 #: en/portage/ebuild.5:288
-#, fuzzy
 msgid ""
 "Here only one of the packages will be chosen, and the order of preference is "
 "determined by the order in which they appear.  So sdl has the best chance of "
 "being chosen, followed by svga, then opengl, then ggi, with a default of X "
 "if the user does not specify any of the previous choices."
 msgstr ""
-"この例では列挙されたパッケージのうち1つだけが選択され、順番づけは現れる 順番"
+"この例では列挙されたパッケージのうち 1 つだけが選択され、順番づけは現れる順番"
 "によって決定される。したがって、sdl が選ばれる機会が最も高く、次に svga、その"
-"次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれ も指定しなかっ"
-"た場合には X がデフォルトで使われる。"
+"次に opengl、さらに ggi、そしてユーザがこれらの選択肢のいずれも指定しなかった"
+"場合には X がデフォルトで使われる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:296
-#, fuzzy
 msgid ""
 "This should contain a list of all packages that are required for this "
 "program to run (aka runtime depend).  If this is not set, then it defaults "
 "to the value of B<DEPEND>."
 msgstr ""
-"この変数にはこのプログラムを実行するために必要な全パッケージのリストが 入って"
-"いなければならない (つまり実行時の依存パッケージのリスト)。 この変数が設定さ"
-"れていなければ、B<DEPEND> の値がデフォルトで設定 される。"
+"この変数にはこのプログラムを実行するために必要な全パッケージのリストが入って"
+"いなければならない (つまり実行時の依存パッケージのリスト)。この変数が設定され"
+"ていなければ、B<DEPEND> の値がデフォルトで設定される。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:298 en/portage/ebuild.5:304
-#, fuzzy
 msgid ""
 "You may use the same syntax to vary dependencies as seen above in B<DEPEND>."
-msgstr ""
-"#-#-#-#-#  ja/portage/ebuild.5:333  #-#-#-#-#\n"
-"依存関係を変えるには上の B<DEPEND> で示したのと同じ構文が使える。\n"
-"#-#-#-#-#  ja/portage/ebuild.5:339  #-#-#-#-#\n"
-"依存性を変えるには上の B<DEPEND> で示したのと同じ構文が使える。"
+msgstr "依存関係を変えるには上の B<DEPEND> で示したのと同じ構文が使える。"
 
 #. type: TP
 #: en/portage/ebuild.5:298
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PDEPEND>"
 msgstr "B<PDEPEND>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:302
-#, fuzzy
 msgid ""
 "This should contain a list of all packages that will have to be installed "
 "after the program has been merged."
 msgstr ""
-"この変数にはそのプログラムがマージされたあとにインストールされなければ ならな"
+"この変数にはそのプログラムがマージされたあとにインストールされなければならな"
 "い全パッケージのリストが入っていなければならない。"
 
 #. type: TP
 #: en/portage/ebuild.5:304
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<RESTRICT> = I<[nostrip,nomirror,fetch,nouserpriv]>"
-msgstr "B<RESTRICT> = I<[nostrip,nomirror,fetch]>"
+msgstr "B<RESTRICT> = I<[nostrip,nomirror,fetch,nouserpriv]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:307
-#, fuzzy
 msgid "This should be a space delimited list of portage features to restrict."
 msgstr ""
-"この変数には Portage FEATURE 機能のうち、制限するものをスペースで 区切って列"
-"挙する。"
+"この変数には Portage FEATURE 機能のうち、制限するものをスペースで区切って列挙"
+"する。"
 
 #. type: TP
 #: en/portage/ebuild.5:309
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "I<nostrip>"
 msgstr "I<nostrip>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:312
-#, fuzzy
 msgid "final binaries/libraries will not be stripped of debug symbols."
 msgstr "最終的なバイナリ/ライブラリからデバッグシンボルを取り除かない。"
 
 #. type: TP
 #: en/portage/ebuild.5:312
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "I<nouserpriv>"
 msgstr "I<nouserpriv>"
 
@@ -1582,13 +1166,12 @@ msgstr "Disables userpriv for specific packages."
 
 #. type: TP
 #: en/portage/ebuild.5:315
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "I<nomirror>"
 msgstr "I<nomirror>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:318
-#, fuzzy
 msgid "files in B<SRC_URI> will not be downloaded from the B<GENTOO_MIRRORS>."
 msgstr ""
 "B<SRC_URI> に書かれているファイルを B<GENTOO_MIRRORS> からはダウンロードしな"
@@ -1596,52 +1179,49 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:318
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "I<fetch>"
 msgstr "I<fetch>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:321
-#, fuzzy
 msgid ""
 "like I<nomirror> but the files will not be fetched via B<SRC_URI> either."
 msgstr "I<nomirror> と同様だが、ファイルは B<SRC_URI> 経由でも取得されない。"
 
 #. type: TP
 #: en/portage/ebuild.5:323
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PROVIDE> = I<\"virtual/TARGET\">"
 msgstr "B<PROVIDE> = I<\"virtual/TARGET\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:329
-#, fuzzy
 msgid ""
 "This variable should only be used when a package provides a virtual target.  "
 "For example, blackdown-jdk and sun-jdk provide I<virtual/jdk>.  This allows "
 "for packages to depend on I<virtual/jdk> rather than on blackdown or sun "
 "specifically."
 msgstr ""
-"この変数にはパッケージがバーチャルターゲットを提供するときのみ使う。 例えば、"
-"blackdown-jdk と sun-jdk は I<virtual/jdk> を提供する。 この機能によってパッ"
-"ケージが blackdown や sun に特化して依存するのでは なく、I<virtual/jdk> に依"
-"存することができる。"
+"この変数にはパッケージがバーチャルターゲットを提供するときのみ使う。例えば、"
+"blackdown-jdk と sun-jdk は I<virtual/jdk> を提供する。この機能によってパッ"
+"ケージが blackdown や sun に特化して依存するのではなく、I<virtual/jdk> に依存"
+"することができる。"
 
 #. type: SH
 #: en/portage/ebuild.5:329
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "PORTAGE DECLARATIONS"
-msgstr "Portage DECLARATIONS"
+msgstr "PORTAGE DECLARATIONS"
 
 #. type: TP
 #: en/portage/ebuild.5:330
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<inherit>"
 msgstr "B<inherit>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:339
-#, fuzzy
 msgid ""
 "Inherit is portage's maintainance of extra classes of functions that are "
 "external to ebuilds and provided as inheritable capabilities and data. They "
@@ -1651,23 +1231,22 @@ msgid ""
 "wrapped within any conditionals> of any kind. Specification of the eclasses "
 "contains only their name and not the I<.eclass> extention."
 msgstr ""
-"inheritはPortageがebuildの外部の追加関数を定義するための特別なクラス (eclass)"
-"を保守するためのものであり、 機能やデータを継承することができるようになってい"
-"る。 eclassでは、ビルドプロセスの効率を上げるために、 非常にありふれた作業の"
-"ために、代替ルーチン、拡張ルーチン、 そして簡略化ルーチンとして関数が定義さ"
-"れ、データの型が設定される。 inheritはebuildの中で1回だけ呼ぶことができ、いか"
-"なる B<条件文の中に入れてもいけない>。 eclassを指定するときは名前だけを指定"
-"し、拡張子I<.eclass> を含めてはいけない。"
+"inherit は Portage が ebuild の外部の追加関数を定義するための特別なクラス "
+"(eclass) を保守するためのものであり、機能やデータを継承することができるように"
+"なっている。eclass では、ビルドプロセスの効率を上げるために、非常にありふれた"
+"作業のために、代替ルーチン、拡張ルーチン、そして簡略化ルーチンとして関数が定"
+"義され、データの型が設定される。inherit は ebuild の中で 1 回だけ呼ぶことがで"
+"き、いかなる B<条件文の中に入れてもいけない>。eclass を指定するときは名前だけ"
+"を指定し、拡張子 I<.eclass> を含めてはいけない。"
 
 #. type: TP
 #: en/portage/ebuild.5:340
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<pkg_nofetch>"
 msgstr "B<pkg_nofetch>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:347
-#, fuzzy
 msgid ""
 "If you turn on I<fetch> in B<RESTRICT>, then this function will be run when "
 "the files in B<SRC_URI> cannot be found.  Useful for displaying information "
@@ -1675,199 +1254,184 @@ msgid ""
 "message and let the function return.  Do not end the function with a call to "
 "B<die>."
 msgstr ""
-"B<RESTRICT> 変数に I<fetch> を書いたにもかかわらず、 B<SRC_URI> にあるファイ"
-"ルを見つけることができなかった場合、 この関数が実行される。 ユーザに *どうし"
-"たら* 言われたファイルを入手することができるのか の情報を表示するのに有用であ"
-"る。"
+"B<RESTRICT> 変数に I<fetch> を書いたにもかかわらず、B<SRC_URI> にあるファイル"
+"を見つけることができなかった場合、この関数が実行される。ユーザに *どうしたら"
+"* 言われたファイルを入手することができるのかの情報を表示するのに有用である。"
 
 #. type: TP
 #: en/portage/ebuild.5:347
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<pkg_setup>"
 msgstr "B<pkg_setup>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:351
-#, fuzzy
 msgid ""
 "This function can be used if the package needs specific setup actions or "
 "checks to be preformed before anything else."
 msgstr ""
-"この関数はなによりも先にパッケージ固有のセットアップアクションや チェックが必"
+"この関数はなによりも先にパッケージ固有のセットアップアクションやチェックが必"
 "要な場合に使うことができる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:353
-#, fuzzy
 msgid "Initial working directory of ${PORTAGE_TMPDIR}."
 msgstr "初期作業ディレクトリは ${PORTAGE_TMPDIR}。"
 
 #. type: TP
 #: en/portage/ebuild.5:353
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<src_unpack>"
 msgstr "B<src_unpack>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:358
-#, fuzzy
 msgid ""
 "This function is used to unpack all the sources in I<A> to I<WORKDIR>.  If "
 "not defined in the I<ebuild script> it calls I<unpack ${A}>. Any patches and "
 "other pre configure/compile modifications should be done here."
 msgstr ""
-"この関数は I<A> にある全ソースを I<WORKDIR> に展開するために使う。 この関数"
-"が I<ebuild スクリプト> で定義されていなかった場合、 I<unpack ${A}> が実行さ"
-"れる。 パッチ当てやその他ビルド設定やコンパイルの前に行なっておくべき 変更は"
-"この関数で行なわなければならない。"
+"この関数は I<A> にある全ソースを I<WORKDIR> に展開するために使う。この関数が "
+"I<ebuild スクリプト> で定義されていなかった場合、I<unpack ${A}> が実行され"
+"る。パッチ当てやその他ビルド設定やコンパイルの前に行なっておくべき変更はこの"
+"関数で行なわなければならない。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:360
-#, fuzzy
 msgid "Initial working directory of $WORKDIR."
 msgstr "初期作業ディレクトリは $WORKDIR。"
 
 #. type: TP
 #: en/portage/ebuild.5:360
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<src_compile>"
 msgstr "B<src_compile>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:363
-#, fuzzy
 msgid ""
 "All necessary steps for configuration and compilation should be done in here."
 msgstr ""
-"ビルド設定とコンパイルのために必要なステップ全ては この関数で行なわれなければ"
+"ビルド設定とコンパイルのために必要なステップ全てはこの関数で行なわれなければ"
 "ならない。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:365 en/portage/ebuild.5:371 en/portage/ebuild.5:377
-#, fuzzy
 msgid "Initial working directory of $S."
 msgstr "初期作業ディレクトリは $S。"
 
 #. type: TP
 #: en/portage/ebuild.5:365
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<src_test>"
 msgstr "B<src_test>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:369
-#, fuzzy
 msgid ""
 "Run all package specific test cases.  The default is to run 'make check' "
 "followed 'make test'."
 msgstr ""
-"パッケージ固有のテストケースを全て実行する。 デフォルトは 'make test' のあと"
+"パッケージ固有のテストケースを全て実行する。デフォルトは 'make test' のあと"
 "に 'make check' を実行する。"
 
 #. type: TP
 #: en/portage/ebuild.5:371
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<src_install>"
 msgstr "B<src_install>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:375
-#, fuzzy
 msgid ""
 "Should contain everything required to install the package in the temporary "
 "I<install directory>."
 msgstr ""
-"一時 I<インストールディレクトリ> にあるパッケージを インストールするために必"
-"要なこと全てが含まれていなければならない。"
+"一時 I<インストールディレクトリ> にあるパッケージをインストールするために必要"
+"なこと全てが含まれていなければならない。"
 
 #. type: TP
 #: en/portage/ebuild.5:377
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<pkg_preinst pkg_postinst>"
 msgstr "B<pkg_preinst pkg_postinst>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:382
-#, fuzzy
 msgid ""
 "All modifications required on the live-filesystem before and after the "
 "package is merged should be placed here. Also commentary for the user should "
 "be listed here as it will be displayed last."
 msgstr ""
-"パッケージがインストールされる前と後で稼働中のファイルシステムに必要な 全ての"
-"変更はこの関数に置かなければならない。ユーザへのコメントも、 最後に表示される"
+"パッケージがインストールされる前と後で稼働中のファイルシステムに必要な全ての"
+"変更はこの関数に置かなければならない。ユーザへのコメントも、最後に表示される"
 "ようにここに列挙すること。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:384 en/portage/ebuild.5:389 en/portage/ebuild.5:394
-#, fuzzy
 msgid "Initial working directory of $PWD."
 msgstr "初期作業ディレクトリは $PWD。"
 
 #. type: TP
 #: en/portage/ebuild.5:384
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<pkg_prerm pkg_postrm>"
 msgstr "B<pkg_prerm pkg_postrm>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:387
-#, fuzzy
 msgid "Like the pkg_*inst functions but for unmerge."
 msgstr "pkg_*inst 関数と同様だが、アンインストール用である。"
 
 #. type: TP
 #: en/portage/ebuild.5:389
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<pkg_config>"
 msgstr "B<pkg_config>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:392
-#, fuzzy
 msgid "This function should contain optional basic configuration steps."
 msgstr ""
-"この関数には、必須ではないがパッケージを使うためには欠かせない 設定ステップを"
+"この関数には、必須ではないがパッケージを使うためには欠かせない設定ステップを"
 "入れる。"
 
 #. type: SH
 #: en/portage/ebuild.5:394
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "HELPER FUNCTIONS: GENERAL"
 msgstr "補助関数: 汎用"
 
 #. type: TP
 #: en/portage/ebuild.5:395
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<die> I<[reason]>"
 msgstr "B<die> I<[reason]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:399
-#, fuzzy
 msgid ""
 "Causes the current emerge process to be aborted. The final display will "
 "include I<reason>."
 msgstr ""
-"現在の emerge プロセスを中止させる。 最後の画面には I<reason> が表示される。"
+"現在の emerge プロセスを中止させる。最後の画面には I<reason> が表示される。"
 
 #. type: TP
 #: en/portage/ebuild.5:399
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use> I<E<lt>USE itemE<gt>>"
 msgstr "B<use> I<E<lt>USE itemE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:405
-#, fuzzy
 msgid ""
 "If I<USE item> is in the B<USE> variable, I<USE item> will be echoed and the "
 "function will return 0.  If I<USE item> is not in the B<USE> variable, the "
 "function will return 1. B<useq> is a non-echoing version of B<use>."
 msgstr ""
 "もし I<USE item> が B<USE> 変数にあれば、I<USE item> がエコーされて関数は 0 "
-"を返す。 もし I<USE item> が B<USE> 変数になければ、関数は 1 を返す。 "
-"B<useq> はエコーを返さない B<use> である。"
+"を返す。もし I<USE item> が B<USE> 変数になければ、関数は 1 を返す。B<useq> "
+"はエコーを返さない B<use> である。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:406 en/portage/ebuild.5:431 en/portage/ebuild.5:479
@@ -1877,13 +1441,13 @@ msgstr ""
 #: en/portage/portage.5:396 en/portage/portage.5:420 en/portage/portage.5:436
 #: en/portage/portage.5:457 en/portage/portage.5:477 en/portage/portage.5:495
 #: en/portage/portage.5:512 en/portage/portage.5:542
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "I<Example:>"
 msgstr "I<例:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:419
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "if useq gnome ; then\n"
 "\tguiconf=\"--enable-gui=gnome --with-x\"\n"
@@ -1909,13 +1473,12 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:421
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use_with> I<E<lt>USE itemE<gt>> I<[configure option]>"
 msgstr "B<use_with> I<E<lt>USE itemE<gt>> I<[configure option]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:430
-#, fuzzy
 msgid ""
 "Useful for creating custom options to pass to a configure script. If I<USE "
 "item> is in the B<USE> variable, then the string I<--with-[configure option]"
@@ -1923,15 +1486,15 @@ msgid ""
 "string I<--without-[configure option]> will be echoed.  If I<configure "
 "option> is not specified, than I<USE item> will be used in its place."
 msgstr ""
-"カスタムオプションを作成し、configure スクリプトに渡すのに便利である。 I<USE "
-"item> が B<USE> 変数にある場合、 I<--with-[configure option]> という文字列が"
-"エコーされる。 I<USE item> が B<USE> 変数にない場合、 I<--without-[configure "
-"option]> という文字列がエコーされる。 I<configure option> が指定されていなけ"
-"れば、 I<USE item> がその場所で使われる。"
+"カスタムオプションを作成し、configure スクリプトに渡すのに便利である。I<USE "
+"item> が B<USE> 変数にある場合、I<--with-[configure option]> という文字列がエ"
+"コーされる。I<USE item> が B<USE> 変数にない場合、I<--without-[configure "
+"option]> という文字列がエコーされる。I<configure option> が指定されていなけれ"
+"ば、I<USE item> がその場所で使われる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:437
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "USE=\"jpeg\"\n"
 "myconf=\"$(use_with jpeg libjpeg)\"\n"
@@ -1943,7 +1506,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:441
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "USE=\"\"\n"
 "myconf=\"$(use_with jpeg libjpeg)\"\n"
@@ -1955,7 +1518,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:445
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "USE=\"opengl\"\n"
 "myconf=\"$(use_with opengl\")\n"
@@ -1967,13 +1530,12 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:447
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use_enable> I<E<lt>USE itemE<gt>> I<[configure option]>"
 msgstr "B<use_enable> I<E<lt>USE itemE<gt>> I<[configure option]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:455
-#, fuzzy
 msgid ""
 "Useful for creating custom options to pass to a configure script. If I<USE "
 "item> is in the B<USE> variable, then the string I<--enable-[configure "
@@ -1981,77 +1543,72 @@ msgid ""
 "the string I<--disable-[configure option]> will be echoed. If I<configure "
 "option> is not specified, than I<USE item> will be used in its place."
 msgstr ""
-"カスタムオプションを作成し、configure スクリプトに渡すのに便利である。 I<USE "
-"item> が B<USE> 変数にある場合、 I<--enable-[configure option]> という文字列"
-"がエコーされる。 I<USE item> が B<USE> 変数にない場合、 I<--disable-"
-"[configure option]> という文字列がエコーされる。 I<configure option> が指定さ"
-"れていなければ、 I<USE item> がその場所で使われる。"
+"カスタムオプションを作成し、configure スクリプトに渡すのに便利である。I<USE "
+"item> が B<USE> 変数にある場合、I<--enable-[configure option]> という文字列が"
+"エコーされる。I<USE item> が B<USE> 変数にない場合、I<--disable-[configure "
+"option]> という文字列がエコーされる。I<configure option> が指定されていなけれ"
+"ば、I<USE item> がその場所で使われる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:457
-#, fuzzy
 msgid "See B<use_with> for an example."
 msgstr "使用例は B<use_with> を参照。"
 
 #. type: TP
 #: en/portage/ebuild.5:457
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<has> I<E<lt>itemE<gt>> I<E<lt>item listE<gt>>"
 msgstr "B<has> I<E<lt>itemE<gt>> I<E<lt>item listE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:463
-#, fuzzy
 msgid ""
 "If I<item> is in I<item list>, then I<item> is echoed and B<has> returns 0.  "
 "Otherwise, nothing is echoed and 1 is returned. As indicated with use, there "
 "is a non-echoing version B<hasq>. Please use B<hasq> in all places where "
 "output is to be disregarded. Never use the output for calculation."
 msgstr ""
-"I<item> が I<item list> にあった場合、 I<item> がエコーされて B<has> が 0 を"
-"返す。 なかった場合、なにもエコーされず 1 を返す。 use の項で示されているよう"
-"に、エコーを返さない B<hasq> がある。 出力を無視してよいところ全てで B<hasq> "
-"を使ってほしい。 出力を計算に使ってはならない。"
+"I<item> が I<item list> にあった場合、I<item> がエコーされて B<has> が 0 を返"
+"す。なかった場合、なにもエコーされず 1 を返す。use の項で示されているように、"
+"エコーを返さない B<hasq> がある。出力を無視してよいところ全てで B<hasq> を"
+"使ってほしい。出力を計算に使ってはならない。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:466
-#, fuzzy
 msgid ""
 "The I<item list> is delimited by the I<IFS> variable.  This variable has a "
 "default value of ' ', or a space.  It is a B<bash>(1) setting."
 msgstr ""
-"I<item list> は I<IFS> 変数によって区切られている。 この変数はデフォルトで"
-"「 」つまりスペースという値をもっている。 これは B<bash>(1) の設定である。"
+"I<item list> は I<IFS> 変数によって区切られている。この変数はデフォルトで"
+"「 」つまりスペースという値をもっている。これは B<bash>(1) の設定である。"
 
 #. type: TP
 #: en/portage/ebuild.5:466
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<has_version> I<E<lt>category/package-versionE<gt>>"
 msgstr "B<has_version> I<E<lt>category/package-versionE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:472
-#, fuzzy
 msgid ""
 "Check to see if I<category/package-version> is installed on the system.  The "
 "parameter accepts all values that are acceptable in the B<DEPEND> variable.  "
 "The function returns 0 if I<category/package-version> is installed, 1 "
 "otherwise."
 msgstr ""
-"I<category/package-version> がシステムにインストール されているかどうか調べ"
-"る。 このパラメータは B<DEPEND> 変数で使用可能な全ての値を使うことができる。 "
-"この関数は I<category/package-version> がインストール されていたら 0 を返し、"
-"インストールされていないなら 1 を返す。"
+"I<category/package-version> がシステムにインストールされているかどうか調べ"
+"る。このパラメータは B<DEPEND> 変数で使用可能な全ての値を使うことができる。こ"
+"の関数は I<category/package-version> がインストールされていたら 0 を返し、イ"
+"ンストールされていないなら 1 を返す。"
 
 #. type: TP
 #: en/portage/ebuild.5:472
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<best_version> I<E<lt>package nameE<gt>>"
 msgstr "B<best_version> I<E<lt>package nameE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:478
-#, fuzzy
 msgid ""
 "This function will look up I<package name> in the database of currently "
 "installed programs and echo the \"best version\" of the package that is "
@@ -2059,118 +1616,111 @@ msgid ""
 "matches I<package name>.  Otherwise, the function will return 1."
 msgstr ""
 "この関数は現在インストールされているプログラムのデータベースの中から "
-"I<package name> を探し、現在インストールされているパッケージの 「いちばんいい"
-"バージョン」を返す。 もし I<package name> にマッチするパッケージがなければこ"
-"の関数は 0 を返す。マッチすれば 1 を返す。"
+"I<package name> を探し、現在インストールされているパッケージの「いちばんいい"
+"バージョン」を返す。もし I<package name> にマッチするパッケージがなければこの"
+"関数は 0 を返す。マッチすれば 1 を返す。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:482
-#, fuzzy
 msgid "VERINS=\"$(best_version net-ftp/glftpd)\""
 msgstr "VERINS=\"$(best_version net-ftp/glftpd)\""
 
 #. type: Plain text
 #: en/portage/ebuild.5:484
-#, fuzzy
 msgid ""
 "(VERINS now has the value \"net-ftp/glftpd-1.27\" if glftpd-1.27 is "
 "installed)"
 msgstr ""
-"(もし glftpd-1.27 がインストールされていれば、 VERINS は \"net-ftp/"
+"(もし glftpd-1.27 がインストールされていれば、VERINS は \"net-ftp/"
 "glftpd-1.27\" という値になる)"
 
 #. type: SH
 #: en/portage/ebuild.5:485
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "HELPER FUNCTIONS: OUTPUT"
 msgstr "補助関数: 出力"
 
 #. type: TP
 #: en/portage/ebuild.5:486
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<einfo> I<\"informative message\">"
 msgstr "B<einfo> I<\"informative message\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:491
-#, fuzzy
 msgid ""
 "If you need to display an message that you wish the user to read and take "
 "notice of, then use B<einfo>.  It works just like B<echo>(1), but adds a "
 "little more to the output so as to catch the user's eye."
 msgstr ""
-"もしメッセージを出力してユーザに読んでもらって注意を喚起したい場合は、 "
-"B<einfo> を使う。こrは B<echo>(1) と全く同じに働くが、出力にもう 少し手を加え"
+"もしメッセージを出力してユーザに読んでもらって注意を喚起したい場合は、"
+"B<einfo> を使う。これは B<echo>(1) と全く同じに働くが、出力にもう少し手を加え"
 "てユーザの目を引くようにする。"
 
 #. type: TP
 #: en/portage/ebuild.5:491
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ewarn> I<\"warning message\">"
 msgstr "B<ewarn> I<\"warning message\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:494
-#, fuzzy
 msgid ""
 "Same as B<einfo>, but should be used when showing a warning to the user."
 msgstr "B<einfo> と同様だが、ユーザに警告を示したいときに使う。"
 
 #. type: TP
 #: en/portage/ebuild.5:494
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<eerror> I<\"error message\">"
-msgstr ".fBeerror I<\"error message\">"
+msgstr "B<eerror> I<\"error message\">"
 
 #. type: Plain text
 #: en/portage/ebuild.5:497
-#, fuzzy
 msgid "Same as B<einfo>, but should be used when showing an error to the user."
 msgstr "B<einfo> と同様だが、ユーザにエラーを示したいときに使う。"
 
 #. type: SH
 #: en/portage/ebuild.5:497
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "HELPER FUNCTIONS: UNPACK"
 msgstr "補助関数: 展開"
 
 #. type: TP
 #: en/portage/ebuild.5:498
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<unpack> I<E<lt>sourceE<gt>> I<[list of more sources]>"
 msgstr "B<unpack> I<E<lt>sourceE<gt>> I<[list of more sources]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:502
-#, fuzzy
 msgid ""
 "This function uncompresses and/or untars a list of sources into the current "
 "directory. The function will append I<source> to the B<DISTDIR> variable."
 msgstr ""
-"この関数は列挙されたソースをカレントディレクトリに解凍/展開する。 この関数は "
+"この関数は列挙されたソースをカレントディレクトリに解凍/展開する。この関数は "
 "I<ソース> を B<DISTDIR> 変数に追加する。"
 
 #. type: SH
 #: en/portage/ebuild.5:502
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "HELPER FUNCTIONS: COMPILE"
 msgstr "補助関数: コンパイル"
 
 #. type: TP
 #: en/portage/ebuild.5:503
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<econf> I<[configure options]>"
-msgstr "B<econf> I<[configure option]>"
+msgstr "B<econf> I<[configure options]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:506
-#, fuzzy
 msgid "This is used as a replacement for configure.  Performs:"
 msgstr "この関数は configure の代わりに使われる。以下のオプションが実行される:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:517
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "configure \\e\n"
 "\t--prefix=/usr \\e\n"
@@ -2192,77 +1742,72 @@ msgstr ""
 "\t--sysconfdir=/etc \\e\n"
 "\t--localstatedir=/var/lib \\e\n"
 "\tI<${EXTRA_ECONF}> \\e\n"
-"\tI<configure optioins>\n"
+"\tI<configure options>\n"
 
 #. type: Plain text
 #: en/portage/ebuild.5:521
-#, fuzzy
 msgid ""
 "Note that the I<EXTRA_ECONF> is for users only, not for ebuild writers.  If "
 "you wish to pass more options to configure, just pass the extra arguements "
 "to B<econf>."
 msgstr ""
-"I<EXTRA_ECONF>はユーザのためだけにあり、ebuild 書きのためにあるわけではないこ"
-"とに注意せよ。 configureにもっとオプションを渡したければ、 B<econf>に追加の引"
-"数を渡すだけでよい。"
+"I<EXTRA_ECONF> はユーザのためだけにあり、ebuild 書きのためにあるわけではない"
+"ことに注意せよ。configure にもっとオプションを渡したければ、B<econf> に追加の"
+"引数を渡すだけでよい。"
 
 #. type: TP
 #: en/portage/ebuild.5:521
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<emake> I<[make options]>"
 msgstr "B<emake> I<[make options]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:526
-#, fuzzy
 msgid ""
 "This is used as a replacement for make.  Performs 'make ${MAKEOPTS} I<make "
 "options>' (as set in /etc/make.globals), default is MAKEOPTS=\"-j2\"."
 msgstr ""
-"この関数は make の代わりに使われる。 'make ${MAKEOPTS} I<make "
-"options>' (${MAKEOPTS} は /etc/make.globals で設定される)  を実行する。デフォ"
+"この関数は make の代わりに使われる。'make ${MAKEOPTS} I<make "
+"options>' (${MAKEOPTS} は /etc/make.globals で設定される) を実行する。デフォ"
 "ルトは MAKEOPTS=\"-j2\"。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:528 en/portage/make.conf.5:335
-#, fuzzy
 msgid "B<***warning***>"
 msgstr "B<***警告***>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:532
-#, fuzzy
 msgid ""
 "if you are going to use B<emake>, make sure your build is happy with "
 "parallel makes (make -j2).  It should be tested thoroughly as parallel makes "
 "are notorious for failing _sometimes_ but not always."
 msgstr ""
-"B<emake> を使おうとするのであれば、ビルド時に 並列 make (make -j2) を使って問"
-"題ないことを確認すること。 並列 make は _ときどき_ 失敗するが毎回失敗しないこ"
-"とで悪名高いので、 徹底的にテストしなければならない。"
+"B<emake> を使おうとするのであれば、ビルド時に並列 make (make -j2) を使って問"
+"題ないことを確認すること。並列 make は _ときどき_ 失敗するが毎回失敗しないこ"
+"とで悪名高いので、徹底的にテストしなければならない。"
 
 #. type: SH
 #: en/portage/ebuild.5:532
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "HELPER FUNCTIONS: INSTALL"
 msgstr "補助関数: インストール"
 
 #. type: TP
 #: en/portage/ebuild.5:533
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<einstall> I<[make options]>"
 msgstr "B<einstall> I<[make options]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:536
-#, fuzzy
 msgid "This is used as a replacement for make install.  Performs:"
 msgstr ""
 "この関数は make install の代わりとして使われる。実行されるオプションは:"
 
 #. type: Plain text
 #: en/portage/ebuild.5:546
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "make \\e\n"
 "\tprefix=${D}/usr \\e\n"
@@ -2275,61 +1820,59 @@ msgid ""
 "\tI<make options> install\n"
 msgstr ""
 "make \\e\n"
-"       prefix=${D}/usr \\e\n"
-"       datadir=${D}/usr/share \\e\n"
-"       infodir=${D}/usr/share/info \\e\n"
-"       localstatedir=${D}/var/lib \\e\n"
-"       mandir=${D}/usr/share/man \\e\n"
-"       sysconfdir=${D}/etc \\e\n"
-"       I<${EXTRA_EINSTALL}> \\e\n"
-"       I<make options> install\n"
+"\tprefix=${D}/usr \\e\n"
+"\tdatadir=${D}/usr/share \\e\n"
+"\tinfodir=${D}/usr/share/info \\e\n"
+"\tlocalstatedir=${D}/var/lib \\e\n"
+"\tmandir=${D}/usr/share/man \\e\n"
+"\tsysconfdir=${D}/etc \\e\n"
+"\tI<${EXTRA_EINSTALL}> \\e\n"
+"\tI<make options> install\n"
 
 #. type: Plain text
 #: en/portage/ebuild.5:550
-#, fuzzy
 msgid ""
 "Please do not use this in place of 'make install DESTDIR=${D}'.  That is the "
 "preferred way of installing make-based packages.  Also, do not utilize the "
 "I<EXTRA_EINSTALL> variable since it is for users."
 msgstr ""
-" 'make install DESTDIR=${D}' が使える場所で einstall を使わないでほしい。\n"
-"make ベースのパッケージをインストールするときは 'make install DESTDIR=${D}'\n"
-"とするほうが好まれる。また、I<EXTRA_EINSTALL>変数を使わないこと。\n"
-"この変数はユーザのためのものである。\n"
+"'make install DESTDIR=${D}' が使える場所で einstall を使わないでほしい。make "
+"ベースのパッケージをインストールするときは 'make install DESTDIR=${D}' とする"
+"ほうが好まれる。また、I<EXTRA_EINSTALL> 変数を使わないこと。この変数はユーザ"
+"のためのものである。"
 
 #. type: TP
 #: en/portage/ebuild.5:552
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepall>"
 msgstr "B<prepall>"
 
 #. type: TP
 #: en/portage/ebuild.5:554
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepalldocs>"
 msgstr "B<prepalldocs>"
 
 #. type: TP
 #: en/portage/ebuild.5:556
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepallinfo>"
 msgstr "B<prepallinfo>"
 
 #. type: TP
 #: en/portage/ebuild.5:558
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepallman>"
 msgstr "B<prepallman>"
 
 #. type: TP
 #: en/portage/ebuild.5:560
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepallstrip>"
 msgstr "B<prepallstrip>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:568
-#, fuzzy
 msgid ""
 "Useful for when a package installs into B<${D}> via scripts (i.e. "
 "makefiles).  If you want to be sure that libraries are executable, aclocal "
@@ -2337,127 +1880,119 @@ msgid ""
 "compressed, and that executables are all stripped of debugging symbols, then "
 "use these suite of functions."
 msgstr ""
-"これらの関数はスクリプト(つまり Makefile など)経由で B<${D}> にパッケージをイ"
-"ンストールするとき有用である。 もし確実にライブラリが実行可能、aclocal ファイ"
-"ルが適切な場所に インストールされていて、ドキュメント/info/man ファイルが 全"
+"これらの関数はスクリプト (つまり Makefile など) 経由で B<${D}> にパッケージを"
+"インストールするとき有用である。もし確実にライブラリが実行可能、aclocal ファ"
+"イルが適切な場所にインストールされていて、ドキュメント /info/man ファイルが全"
 "部圧縮されており、実行バイナリからデバッグシンボルが全て strip されているよう"
 "にしたければ、これらの関数一式を使う。"
 
 #. type: TP
 #: en/portage/ebuild.5:570
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepall:>"
 msgstr "B<prepall:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:575
-#, fuzzy
 msgid ""
 "Runs B<prepallman>, B<prepallinfo>, B<prepallstrip>, sets libraries +x, and "
 "then checks aclocal directories.  Please note this does I<*not*> run "
 "B<prepalldocs>."
 msgstr ""
 "この関数は B<prepallman>、B<prepallinfo>、B<prepallstrip> を実行し、ライブラ"
-"リを実行可能に設定し、aclocal ディレクトリをチェック する。この関数は "
-"B<prepalldocs> を実行 I<*しない*> ことに 注意すること。"
+"リを実行可能に設定し、aclocal ディレクトリをチェックする。この関数は "
+"B<prepalldocs> を実行 I<*しない*> ことに注意すること。"
 
 #. type: TP
 #: en/portage/ebuild.5:575
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepalldocs:>"
 msgstr "B<prepalldocs:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:578
-#, fuzzy
 msgid "Compresses all doc files in ${D}/usr/share/doc."
 msgstr "${D}/usr/share/doc にある全てのドキュメントファイルを圧縮する。"
 
 #. type: TP
 #: en/portage/ebuild.5:578
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepallinfo:>"
 msgstr "B<prepallinfo:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:581
-#, fuzzy
 msgid "Compresses all info files in ${D}/usr/share/info."
 msgstr "${D}/usr/share/info にある全ての info ファイルを圧縮する。"
 
 #. type: TP
 #: en/portage/ebuild.5:581
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepallman:>"
 msgstr "B<prepallman:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:584
-#, fuzzy
 msgid "Compresses all man files in ${D}/usr/share/man."
 msgstr "${D}/usr/share/man にある全ての man ファイルを圧縮する。"
 
 #. type: TP
 #: en/portage/ebuild.5:584
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepallstrip:>"
 msgstr "B<prepallstrip:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:587
-#, fuzzy
 msgid ""
 "Strips all executable files of debugging symboles.  This includes libraries."
 msgstr ""
-"全実行バイナリからデバッグシンボルを strip する。 ライブラリも対象に含まれ"
-"る。"
+"全実行バイナリからデバッグシンボルを strip する。ライブラリも対象に含まれる。"
 
 #. type: TP
 #: en/portage/ebuild.5:589
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepinfo> I<[dir]>"
 msgstr "B<prepinfo> I<[dir]>"
 
 #. type: TP
 #: en/portage/ebuild.5:591
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<preplib> I<[dir]>"
 msgstr "B<preplib> I<[dir]>"
 
 #. type: TP
 #: en/portage/ebuild.5:593
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<preplib.so> I<[dir]>"
 msgstr "B<preplib.so> I<[dir]>"
 
 #. type: TP
 #: en/portage/ebuild.5:595
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepman> I<[dir]>"
 msgstr "B<prepman> I<[dir]>"
 
 #. type: TP
 #: en/portage/ebuild.5:597
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepstrip> I<[dir]>"
 msgstr "B<prepstrip> I<[dir]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:601
-#, fuzzy
 msgid ""
 "Similiar to the B<prepall> functions, these are subtle in their differences."
 msgstr "これらの関数も B<prepall> 関数と似ており、違いも微妙である。"
 
 #. type: TP
 #: en/portage/ebuild.5:603
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepinfo:>"
 msgstr "B<prepinfo:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:608
-#, fuzzy
 msgid ""
 "If a I<dir> is not specified, then B<prepinfo> will assume the dir I<usr>. "
 "B<prepinfo> will then compress all the files in ${D}/I<dir>/info."
@@ -2467,13 +2002,12 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:608
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<preplib:>"
 msgstr "B<preplib:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:612
-#, fuzzy
 msgid ""
 "If a I<dir> is not specified, then B<preplib> will assume the dir I<usr>. "
 "B<preplib> will then run 'ldconfig -n -N' on ${D}/I<dir>/lib."
@@ -2483,29 +2017,27 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:612
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<preplib.so:>"
 msgstr "B<preplib.so:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:616
-#, fuzzy
 msgid ""
 "All the files with '.so' in their name and are found in ${D}/I<dir> will be "
 "stripped of their debug symbols.  You may specify multiple directories."
 msgstr ""
-"${D}/I<dir> にあり、ファイル名に「.so」を含むファイル全ての デバッグシンボル"
-"を strip する。複数のディレクトリを指定する こともできる。"
+"${D}/I<dir> にあり、ファイル名に「.so」を含むファイル全てのデバッグシンボル"
+"を strip する。複数のディレクトリを指定することもできる。"
 
 #. type: TP
 #: en/portage/ebuild.5:616
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepman:>"
 msgstr "B<prepman:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:621
-#, fuzzy
 msgid ""
 "If a I<dir> is not specified, then B<prepman> will assume the dir I<usr>. "
 "B<prepman> will then compress all the files in ${D}/I<dir>/man/*/."
@@ -2515,47 +2047,43 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:621
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<prepstrip:>"
 msgstr "B<prepstrip:>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:625
-#, fuzzy
 msgid ""
 "All the files found in ${D}/I<dir> will be stripped.  You may specify "
 "multiple directories."
 msgstr ""
-"${D}/I<dir> にあるファイル全てを strip する。 複数のディレクトリを指定するこ"
-"ともできる。"
+"${D}/I<dir> にあるファイル全てを strip する。複数のディレクトリを指定すること"
+"もできる。"
 
 #. type: TP
 #: en/portage/ebuild.5:627
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dopython> I<E<lt>commandsE<gt>>"
 msgstr "B<dopython> I<E<lt>commandsE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:630
-#, fuzzy
 msgid "Performs I<commands> with python and returns the result."
 msgstr "python で I<commands> を実行し、結果を返す。"
 
 #. type: TP
 #: en/portage/ebuild.5:630
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dosed> I<\"s:orig:change:g\" E<lt>filenameE<gt>>"
 msgstr "B<dosed> I<\"s:orig:change:g\" E<lt>filenameE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:633
-#, fuzzy
 msgid "Performs sed (including cp/mv I<filename>) on I<filename>."
-msgstr "I<filename名> に対し (I<filename名> の cp/mv を含め) sed を実行する。"
+msgstr "I<filename> に対し (I<filename> の cp/mv を含め) sed を実行する。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:636
-#, fuzzy
 msgid ""
 "B<'dosed\\ \"s:/usr/local:/usr:g\"\\ /usr/bin/some-script'> runs sed on ${D}/"
 "usr/bin/some-script"
@@ -2565,51 +2093,47 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:636
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dodir> I<E<lt>pathE<gt>>"
 msgstr "B<dodir> I<E<lt>pathE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:639
-#, fuzzy
 msgid "Creates a directory inside of ${D}."
 msgstr "${D} の中にディレクトリを作成する。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:643
-#, fuzzy
 msgid ""
 "B<'dodir\\ /usr/lib/apache'> creates ${D}/usr/lib/apache.  Note that the do* "
 "functions will run B<dodir> for you."
 msgstr ""
-"B<'dodir\\ /usr/lib/apache'> ${D}/usr/lib/apache を作成。 他のdo*関数は、明示"
-"的に指定しなくてもB<dodir>を実行してくれることに注意。"
+"B<'dodir\\ /usr/lib/apache'> ${D}/usr/lib/apache を作成。他の do* 関数は、明"
+"示的に指定しなくても B<dodir> を実行してくれることに注意。"
 
 #. type: TP
 #: en/portage/ebuild.5:643
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<diropts> I<[options for install(1)]>"
 msgstr "B<diropts> I<[options for install(1)]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:647
-#, fuzzy
 msgid ""
 "Can be used to define options for the install function used in B<dodir>.  "
 "The default is I<-m0755>."
 msgstr ""
-"B<dodir> で使われる install 関数のオプションを定義するために使われる。 デフォ"
+"B<dodir> で使われる install 関数のオプションを定義するために使われる。デフォ"
 "ルトは I<-m0755>。"
 
 #. type: TP
 #: en/portage/ebuild.5:647
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<into> I<E<lt>pathE<gt>>"
 msgstr "B<into> I<E<lt>pathE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:651
-#, fuzzy
 msgid ""
 "Sets the root (I<DESTTREE>) for other functions like B<dobin>, B<dosbin>, "
 "B<doman>, B<doinfo>, B<dolib>."
@@ -2619,19 +2143,17 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:653
-#, fuzzy
 msgid "The default root is /usr."
 msgstr "デフォルトルートは /usr。"
 
 #. type: TP
 #: en/portage/ebuild.5:653
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<keepdir> I<E<lt>pathE<gt>>"
 msgstr "B<keepdir> I<E<lt>pathE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:657
-#, fuzzy
 msgid ""
 "Tells portage to leave a directory behind even if it is empty.  Functions "
 "the same as B<dodir>."
@@ -2641,13 +2163,12 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:657
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dobin> I<E<lt>binaryE<gt> [list of more binaries]>"
 msgstr "B<dobin> I<E<lt>binaryE<gt> [list of more binaries]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:661
-#, fuzzy
 msgid ""
 "Installs a I<binary> or a list of binaries into I<DESTTREE>/bin.  Creates "
 "all necessary dirs."
@@ -2657,13 +2178,12 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:661
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dosbin> I<E<lt>binaryE<gt> [list of more binaries]>"
 msgstr "B<dosbin> I<E<lt>binaryE<gt> [list of more binaries]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:665
-#, fuzzy
 msgid ""
 "Installs a I<binary> or a list of binaries into I<DESTTREE>/sbin.  Creates "
 "all necessary dirs."
@@ -2673,77 +2193,73 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:665
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doinitd> I<E<lt>init.d scriptE<gt> [list of more init.d scripts]>"
-msgstr "B<doinitd> I<E<lt>init.d E<gt> [list of more init.d scripts]>"
+msgstr "B<doinitd> I<E<lt>init.d scriptE<gt> [list of more init.d scripts]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:670
-#, fuzzy
 msgid ""
 "Install Gentoo I<init.d scripts>.  They will be installed into the correct "
 "location for Gentoo init.d scripts (/etc/init.d/).  Creates all necessary "
 "dirs."
 msgstr ""
-"Gentoo I<init.d スクリプト> をインストールする。 Gentoo init.d スクリプト用の"
-"正しい場所にインストールされなければならない(/etc/init.d/)。 必要なディレクト"
+"Gentoo I<init.d スクリプト> をインストールする。Gentoo init.d スクリプト用の"
+"正しい場所にインストールされなければならない (/etc/init.d/)。必要なディレクト"
 "リは全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:670
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doconfd> I<E<lt>conf.d fileE<gt> [list of more conf.d file]>"
 msgstr "B<doconfd> I<E<lt>conf.d fileE<gt> [list of more conf.d file]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:675
-#, fuzzy
 msgid ""
 "Install Gentoo I<conf.d files>.  They will be installed into the correct "
 "location for Gentoo conf.d files (/etc/conf.d/).  Creates all necessary dirs."
 msgstr ""
-"Gentoo I<conf.d ファイル> をインストールする。 Gentoo conf.d ファイル用の正し"
-"い場所にインストールされなければならない(/etc/conf.d/)。 必要なディレクトリは"
+"Gentoo I<conf.d ファイル> をインストールする。Gentoo conf.d ファイル用の正し"
+"い場所にインストールされなければならない (/etc/conf.d/)。必要なディレクトリは"
 "全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:675
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doenvd> I<E<lt>env.d entryE<gt> [list of more env.d entries]>"
 msgstr "B<doenvd> I<E<lt>env.d entryE<gt> [list of more env.d entries]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:680
-#, fuzzy
 msgid ""
 "Install Gentoo I<env.d entries>.  They will be installed into the correct "
 "location for Gentoo env.d entries (/etc/env.d/).  Creates all necessary dirs."
 msgstr ""
-"Gentoo I<env.d エントリー> をインストールする。 Gentoo env.d エントリー用の正"
-"しい場所にインストールされなければならない(/etc/env.d/)。 必要なディレクトリ"
+"Gentoo I<env.d エントリー> をインストールする。Gentoo env.d エントリー用の正"
+"しい場所にインストールされなければならない (/etc/env.d/)。必要なディレクトリ"
 "は全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:682
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dolib> I<E<lt>libraryE<gt>> I<[list of more libraries]>"
 msgstr "B<dolib> I<E<lt>libraryE<gt>> I<[list of more libraries]>"
 
 #. type: TP
 #: en/portage/ebuild.5:684
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dolib.a> I<E<lt>libraryE<gt>> I<[list of more libraries]>"
 msgstr "B<dolib.a> I<E<lt>libraryE<gt>> I<[list of more libraries]>"
 
 #. type: TP
 #: en/portage/ebuild.5:686
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dolib.so> I<E<lt>libraryE<gt>> I<[list of more libraries]>"
 msgstr "B<dolib.so> I<E<lt>libraryE<gt>> I<[list of more libraries]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:691
-#, fuzzy
 msgid ""
 "Installs a library or a list of libraries into I<DESTTREE>/lib.  Creates all "
 "necessary dirs."
@@ -2753,65 +2269,61 @@ msgstr ""
 
 #. type: TP
 #: en/portage/ebuild.5:691
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<libopts> I<[options for install(1)]>"
 msgstr "B<libopts> I<[options for install(1)]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:695
-#, fuzzy
 msgid ""
 "Can be used to define options for the install function used in the B<dolib> "
 "functions.  The default is I<-m0644>."
 msgstr ""
-"B<dolib> で使われる install 関数のオプションを定義するために使われる。 デフォ"
+"B<dolib> で使われる install 関数のオプションを定義するために使われる。デフォ"
 "ルトは I<-m0644>。"
 
 #. type: TP
 #: en/portage/ebuild.5:695
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doman> I<E<lt>man-pageE<gt> [list of more man-pages]>"
 msgstr "B<doman> I<E<lt>man-pageE<gt> [list of more man-pages]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:700
-#, fuzzy
 msgid ""
 "Installs manual-pages into /usr/share/man/man[1-8n] depending on the manual "
 "file ending.  The files are gzipped if they are not already.  Creates all "
 "necessary dirs."
 msgstr ""
 "man ファイルの拡張子に従って man ページを /usr/share/man/man[1-8n] にインス"
-"トールする。ファイルが gzip されていなければ gzip する。 必要なディレクトリは"
+"トールする。ファイルが gzip されていなければ gzip する。必要なディレクトリは"
 "全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:701
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dohard> I<E<lt>filenameE<gt> E<lt>linknameE<gt>>"
 msgstr "B<dohard> I<E<lt>filenameE<gt> E<lt>linknameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:703
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dosym> I<E<lt>filenameE<gt> E<lt>linknameE<gt>>"
 msgstr "B<dosym> I<E<lt>filenameE<gt> E<lt>linknameE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:707
-#, fuzzy
 msgid "Performs the ln command as either a hard link or symlink."
 msgstr "ln コマンドをハードリンクもしくはシンボリックリンクとして実行する。"
 
 #. type: TP
 #: en/portage/ebuild.5:707
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dohtml> I< [-a filetypes] [-r] [-x list-of-dirs-to-ignore] [list-of-files-and-dirs]>"
 msgstr "B<dohtml> I< [-a filetypes] [-r] [-x list-of-dirs-to-ignore] [list-of-files-and-dirs]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:714
-#, fuzzy
 msgid ""
 "Installs the files in the list of files (space-separated list) into /usr/"
 "share/doc/${PF}/html provided the file ends in .html, .png, .js, .jpg or ."
@@ -2819,344 +2331,319 @@ msgid ""
 "the default list, setting -x sets which dirs to exclude (CVS excluded by "
 "default), -r sets recursive."
 msgstr ""
-"ファイルの拡張子が .html、.png、.js、.jpg か .css であった場合、 ファイルリス"
-"ト(スペースで区切られたリスト)に挙げられたファイルを /usr/share/doc/${PF}/"
-"html にインストールする。 -a を設定すればでどのタイプのファイルを含めるか制限"
-"することができる。 -A を設定すればデフォルトのタイプリストに新たなタイプを追"
-"加することができる。 -x で除外するディレクトリを設定できる(CVS はデフォルトで"
-"除外される)。 -r を設定すれば再帰的に dohtml を実行できる。"
+"ファイルの拡張子が .html、.png、.js、.jpg か .css であった場合、ファイルリス"
+"ト (スペースで区切られたリスト) に挙げられたファイルを /usr/share/doc/${PF}/"
+"html にインストールする。-a を設定すればでどのタイプのファイルを含めるか制限"
+"することができる。-A を設定すればデフォルトのタイプリストに新たなタイプを追加"
+"することができる。-x で除外するディレクトリを設定できる (CVS はデフォルトで除"
+"外される)。-r を設定すれば再帰的に dohtml を実行できる。"
 
 #. type: TP
 #: en/portage/ebuild.5:714
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doinfo> I<E<lt>info-fileE<gt> [list of more info-files]>"
 msgstr "B<doinfo> I<E<lt>info-fileE<gt> [list of more info-files]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:718
-#, fuzzy
 msgid ""
 "Installs info-pages into I<DESTDIR>/info.  Files are automatically gzipped.  "
 "Creates all necessary dirs."
 msgstr ""
-"info ページを I<DESTDIR>/info にインストールする。 ファイルは自動的に gzip さ"
+"info ページを I<DESTDIR>/info にインストールする。ファイルは自動的に gzip さ"
 "れる。必要なディレクトリは全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:718
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dojar> I<E<lt>jar fileE<gt> [list of more jar files]>"
 msgstr "B<dojar> I<E<lt>jar fileE<gt> [list of more jar files]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:722
-#, fuzzy
 msgid ""
 "Installs jar files into /usr/share/${PN}/lib and adds them to /usr/share/"
 "${PN}/classpath.env."
 msgstr ""
-"jar ファイルを /usr/share/${PN}/lib にインストールし、 /usr/share/${PN}/"
+"jar ファイルを /usr/share/${PN}/lib にインストールし、/usr/share/${PN}/"
 "classpath.env に追加する。"
 
 #. type: TP
 #: en/portage/ebuild.5:722
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<domo> I<E<lt>locale-fileE<gt> [list of more locale-files] >"
 msgstr "B<domo> I<E<lt>locale fileE<gt> [list of more locale-files] >"
 
 #. type: Plain text
 #: en/portage/ebuild.5:726
-#, fuzzy
 msgid ""
 "Installs locale-files into I<DESTDIR>/usr/share/locale/[LANG] depending on "
 "local-file's ending.  Creates all necessary dirs."
 msgstr ""
 "locale ファイルを locale ファイルの拡張子に従って I<DESTDIR>/usr/share/"
-"locale/[言語] に追加する。 必要なディレクトリは全て作成する。"
+"locale/[言語] に追加する。必要なディレクトリは全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:728
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<fowners> I<E<lt>permissionsE<gt> E<lt>fileE<gt> [files]>"
 msgstr "B<fowners> I<E<lt>permissionsE<gt> E<lt>fileE<gt> [files]>"
 
 #. type: TP
 #: en/portage/ebuild.5:730
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<fperms> I<E<lt>permissionsE<gt> E<lt>fileE<gt> [files]>"
 msgstr "B<fperms> I<E<lt>permissionsE<gt> E<lt>fileE<gt> [files]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:735
-#, fuzzy
 msgid ""
 "Performs chown (B<fowners>) or chmod (B<fperms>), applying I<permissions> to "
 "I<files>."
 msgstr ""
-"chown (B<fowners>) か chmod (B<fperms>) を実行し、 I<file> に I<permissions> "
+"chown (B<fowners>) か chmod (B<fperms>) を実行し、I<file> に I<permissions> "
 "を適用する。"
 
 #. type: TP
 #: en/portage/ebuild.5:735
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<insinto> I<[path]>"
 msgstr "B<insinto> I<[path]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:738
-#, fuzzy
 msgid "Sets the root (I<INSDESTTREE>) for the B<doins> function."
 msgstr "B<doins> 関数のルート (I<INSDESTTREE>) を設定する。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:740 en/portage/ebuild.5:753
-#, fuzzy
 msgid "The default root is /."
 msgstr "デフォルトルートは /。"
 
 #. type: TP
 #: en/portage/ebuild.5:740
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<insopts> I<[options for install(1)]>"
 msgstr "B<insopts> I<[options for install(1)]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:744
-#, fuzzy
 msgid ""
 "Can be used to define options for the install function used in B<doins>.  "
 "The default is I<-m0644>."
 msgstr ""
-"B<doins> で使われる install に対するオプションを定義するために 使うことができ"
+"B<doins> で使われる install に対するオプションを定義するために使うことができ"
 "る。デフォルトは I<-m0644>。"
 
 #. type: TP
 #: en/portage/ebuild.5:744
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doins> I<E<lt>fileE<gt> [list of more files]>"
 msgstr "B<doins> I<E<lt>fileE<gt> [list of more files]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:748
-#, fuzzy
 msgid ""
 "Installs files into I<INSDESTTREE>.  This function uses B<install>(1).  "
 "Creates all necessary dirs."
 msgstr ""
-"ファイルを I<INSDESTTREE> にインストールする。 この関数は B<install>(1) を使"
-"う。 必要なディレクトリは全て作成する。"
+"ファイルを I<INSDESTTREE> にインストールする。この関数は B<install>(1) を使"
+"う。必要なディレクトリは全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:748
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<exeinto> I<[path]>"
 msgstr "B<exeinto> I<[path]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:751
-#, fuzzy
 msgid "Sets the root (I<EXEDESTTREE>) for the B<doexe> function."
 msgstr "B<doexe> 関数のルート (I<EXEDESTTREE>) を設定する。"
 
 #. type: TP
 #: en/portage/ebuild.5:753
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<exeopts> I<[options for install(1)]>"
 msgstr "B<exeopts> I<[options for install(1)]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:757
-#, fuzzy
 msgid ""
 "Can be used to define options for the install function used in B<doexe>.  "
 "The default is I<-m0755>."
 msgstr ""
-"B<doexe> で使われる install に対するオプションを定義するために 使うことができ"
+"B<doexe> で使われる install に対するオプションを定義するために使うことができ"
 "る。デフォルトは I<-m0755>。"
 
 #. type: TP
 #: en/portage/ebuild.5:757
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<doexe> I<E<lt>executableE<gt> [list of more executables]>"
 msgstr "B<doexe> I<E<lt>executableE<gt> [list of more executables]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:761
-#, fuzzy
 msgid ""
 "Installs a executable or a list of executable into I<EXEDESTTREE>.  This "
 "function uses B<install>(1).  Creates all necessary dirs."
 msgstr ""
 "実行バイナリや列挙された実行バイナリを I<EXEDESTTREE> にインストールする。こ"
-"の関数は B<install>(1) を使う。 必要なディレクトリは全て作成する。"
+"の関数は B<install>(1) を使う。必要なディレクトリは全て作成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:761
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<docinto> I<[path]>"
 msgstr "B<docinto> I<[path]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:764
-#, fuzzy
 msgid "Sets the relative subdir (I<DOCDESTTREE>) used by B<dodoc>."
-msgstr "B<dodoc> が使う相対サブディレクトリ (I<DOCDESTTREE>)  を設定する。"
+msgstr "B<dodoc> が使う相対サブディレクトリ (I<DOCDESTTREE>) を設定する。"
 
 #. type: TP
 #: en/portage/ebuild.5:764
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<dodoc> I<E<lt>documentE<gt> [list of more documents]>"
 msgstr "B<dodoc> I<E<lt>documentE<gt> [list of more documents]>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:768
-#, fuzzy
 msgid ""
 "Installs a document or a list of document into /usr/share/doc/${PF}/"
 "I<DOCDESTTREE>.  Files are automatically gzipped.  Creates all necessary "
 "dirs."
 msgstr ""
 "ドキュメントや列挙されたドキュメントを /usr/share/doc/${PV}/I<DOCDESTTREE> に"
-"インストールする。ファイルは自動的に gzip される。 必要なディレクトリは全て作"
+"インストールする。ファイルは自動的に gzip される。必要なディレクトリは全て作"
 "成する。"
 
 #. type: TP
 #: en/portage/ebuild.5:770
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newbin> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newbin> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:772
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newsbin> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newsbin> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:774
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newinitd> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newinitd> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:776
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newconfd> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newconfd> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:778
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newenvd> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newenvd> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:780
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newlib> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newlib> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:782
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newlib.so> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newlib.so> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:784
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newlib.a> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newlib.a> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:786
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newman> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newman> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:788
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newinfo> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newinfo> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:790
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newins> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newins> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:792
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newexe> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newexe> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: TP
 #: en/portage/ebuild.5:794
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<newdoc> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 msgstr "B<newdoc> I<E<lt>old fileE<gt> E<lt>new filenameE<gt>>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:799
-#, fuzzy
 msgid ""
 "All these functions act like the do* functions, but they only work with one "
 "file and the file is installed as I<[new filename]>."
 msgstr ""
-"これらの関数は全て do* 関数と同じように使えるが、 これらの関数は1つのファイル"
-"だけに使うことができ、 そのファイルは I<[new filename]> としてインストールさ"
+"これらの関数は全て do* 関数と同じように使えるが、これらの関数は 1 つのファイ"
+"ルだけに使うことができ、そのファイルは I<[new filename]> としてインストールさ"
 "れる。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:804
-#, fuzzy
 msgid "B<ebuild>(1), B<make.conf>(5)"
 msgstr "B<ebuild>(1), B<make.conf>(5)"
 
 #. type: TP
 #: en/portage/ebuild.5:804
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "The I</usr/sbin/ebuild.sh> script."
-msgstr "I</usr/sbin/ebuild.sh> スクリプト。"
+msgstr "I</usr/sbin/ebuild.sh> スクリプト"
 
 #. type: Plain text
 #: en/portage/ebuild.5:812 en/portage/make.conf.5:357
-#, fuzzy
 msgid ""
 "Contains variables for the build-process and overwrites those in make."
 "defaults."
 msgstr ""
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"ビルドプロセスで使う変数が書かれており、make.defaults で設定されている 変数を"
-"上書きする。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
 "ビルドプロセスのための変数が書かれており、make.defaults の変数を上書きする。"
 
 #. type: TP
 #: en/portage/ebuild.5:812
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.globals>"
 msgstr "B</etc/make.globals>"
 
 #. type: Plain text
 #: en/portage/ebuild.5:816 en/portage/make.conf.5:360
-#, fuzzy
 msgid ""
 "Contains the default variables for the build-process, you should edit I</etc/"
 "make.conf> instead."
 msgstr ""
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"ビルドプロセスで使うデフォルトの変数が書かれているが、 変数を変更したい場合は"
-"このファイルではなく I</etc/make.conf> を編集すること。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"ビルドプロセスのためのデフォルト変数が書かれているが、 変数の値を変えたい場合"
+"ビルドプロセスのためのデフォルト変数が書かれているが、変数の値を変えたい場合"
 "はこのファイルではなく I</etc/make.conf> を編集すること。"
 
 #. type: Plain text
 #: en/portage/ebuild.5:822
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "Achim Gottinger E<lt>achim@gentoo.orgE<gt>\n"
 "Mark Guertin E<lt>gerk@gentoo.orgE<gt>\n"
@@ -3170,8 +2657,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/ebuild.5:824
-#, fuzzy
 msgid ""
 "$Header: /var/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.73 2004/10/16 "
 "20:15:48 vapier Exp $"
-msgstr "原文: ebuild.5,v 1.73"
+msgstr ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/ebuild.5,v 1.73 2004/10/16 "
+"20:15:48 vapier Exp $"

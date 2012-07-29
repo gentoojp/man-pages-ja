@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the Portage package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portage 2.0.51-r3\n"
-"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"POT-Creation-Date: 2012-07-29 16:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +29,7 @@ msgstr ""
 #: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage 2.0.51"
 msgstr "Portage 2.0.51"
 
@@ -39,7 +38,7 @@ msgstr "Portage 2.0.51"
 #: en/portage/env-update.1:1 en/portage/etc-update.1:1
 #: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
 #: en/portage/portage.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage"
 msgstr "Portage"
 
@@ -57,7 +56,7 @@ msgstr "Portage"
 #: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
 #: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
 #: en/portage/vim.eclass.5:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -66,7 +65,7 @@ msgstr "名前"
 #: en/portage/env-update.1:4 en/portage/etc-update.1:4
 #: en/portage/g-cpan.pl.1:4 en/portage/quickpkg.1:4 en/portage/repoman.1:4
 #: en/portage/make.conf.5:4 en/portage/portage.5:12
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
@@ -84,7 +83,7 @@ msgstr "書式"
 #: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
 #: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
 #: en/portage/vim.eclass.5:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -92,7 +91,7 @@ msgstr "説明"
 #: en/portage/dispatch-conf.1:26 en/portage/emerge.1:167
 #: en/portage/env-update.1:17 en/portage/etc-update.1:19
 #: en/portage/quickpkg.1:21 en/portage/repoman.1:14
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "OPTIONS"
 msgstr "オプション"
 
@@ -111,63 +110,9 @@ msgstr "オプション"
 #: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
 #: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
 #: en/portage/vim.eclass.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPORTING BUGS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグの報告\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告"
+msgstr "バグ報告"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -183,61 +128,8 @@ msgstr ""
 #: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
 #: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
 #: en/portage/vim.eclass.5:44
-#, fuzzy
 msgid "Please report bugs via http://bugs.gentoo.org/"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグは、http://bugs.gentoo.org/ から報告すること。\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+msgstr "バグ報告は http://bugs.gentoo.org/ 経由で行ってください。"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -253,61 +145,9 @@ msgstr ""
 #: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
 #: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
 #: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照"
+msgstr "関連項目"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:84 en/portage/ebuild.1:175
@@ -324,63 +164,9 @@ msgstr ""
 #: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
 #: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
 #: en/portage/vim.eclass.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者"
+msgstr "著者"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:92 en/portage/ebuild.1:183
@@ -397,92 +183,36 @@ msgstr ""
 #: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
 #: en/portage/vim.eclass.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CVS HEADER"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVSヘッダー\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ"
+msgstr "CVS ヘッダ"
 
 #. type: TH
 #: en/portage/ebuild.1:1 en/portage/repoman.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Nov 2002"
 msgstr "Nov 2002"
 
 #. type: TP
 #: en/portage/ebuild.1:22 en/portage/repoman.1:33
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<help>"
 msgstr "B<help>"
 
 #. type: Plain text
 #: en/portage/ebuild.1:179 en/portage/emerge.1:560 en/portage/env-update.1:22
 #: en/portage/repoman.1:115 en/portage/make.conf.5:368
-#, fuzzy
 msgid "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
 msgstr "Daniel Robbins E<lt>drobbins@gentoo.orgE<gt>"
 
 #. type: TH
 #: en/portage/repoman.1:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPOMAN"
 msgstr "REPOMAN"
 
 #. type: Plain text
 #: en/portage/repoman.1:4
-#, fuzzy
 msgid ""
 "repoman - Gentoo's program to enforce a minimal level of quality assurance "
 "in packages added to the portage tree"
@@ -492,43 +222,37 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/repoman.1:6
-#, fuzzy
 msgid "B<repoman> [I<option>] [I<mode>]"
-msgstr "B<repoman> [I<オプション>] [I<モード>]"
+msgstr "B<repoman> [I<option>] [I<mode>]"
 
 #. type: Plain text
 #: en/portage/repoman.1:8
-#, fuzzy
 msgid "B<Quality is job zero.>"
 msgstr "B<「質なんてどうだっていい。」>"
 
 #. type: Plain text
 #: en/portage/repoman.1:12
-#, fuzzy
 msgid ""
 "B<repoman> is meant for Gentoo developers only due to the fact it does not "
 "work on a per-ebuild basis.  It checks the quality of CVS repositories."
 msgstr ""
-"B<repoman> は Gentoo 開発者向けのプログラムである。 repoman は CVS リポジトリ"
-"の品質をチェックするが、 ebuild 一つ一つについてチェックするわけではないの"
-"で、"
+"B<repoman> は Gentoo 開発者向けのプログラムである。repoman は CVS リポジトリ"
+"の品質をチェックするが、ebuild 一つ一つについてチェックするわけではないので。"
 
 #. type: Plain text
 #: en/portage/repoman.1:14
-#, fuzzy
 msgid "Note: B<repoman> only runs I<inside local> CVS repositories."
 msgstr ""
-"註: B<repoman> は I<ローカル内部> の CVS リポジトリに対してのみ実行される。"
+"注意: B<repoman> は I<ローカル内部> の CVS リポジトリに対してのみ実行される。"
 
 #. type: TP
 #: en/portage/repoman.1:15
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--pretend>"
 msgstr "B<--pretend>"
 
 #. type: Plain text
 #: en/portage/repoman.1:18
-#, fuzzy
 msgid ""
 "Don't actually perform commit or fix problems, just show what would be done."
 msgstr ""
@@ -537,150 +261,140 @@ msgstr ""
 
 #. type: TP
 #: en/portage/repoman.1:18
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 #. type: Plain text
 #: en/portage/repoman.1:21 en/portage/repoman.1:36
-#, fuzzy
 msgid "Show the help screen."
 msgstr "ヘルプ画面を表示する。"
 
 #. type: SH
 #: en/portage/repoman.1:21
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "MODES"
 msgstr "モード"
 
 #. type: TP
 #: en/portage/repoman.1:22
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<scan>"
 msgstr "B<scan>"
 
 #. type: Plain text
 #: en/portage/repoman.1:26
-#, fuzzy
 msgid ""
 "Scan current directory tree for QA issues (default).  See B<QA KEYWORDS> for "
 "more information."
 msgstr ""
-"品質保証(QA)のためにカレントディレクトリツリーをスキャンする(デフォルト)。 詳"
-"細は B<QA キーワード> を参照。"
+"品質保証 (QA) のためにカレントディレクトリツリーをスキャンする (デフォル"
+"ト)。 詳細は B<QA キーワード> を参照。"
 
 #. type: TP
 #: en/portage/repoman.1:26
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<fix>"
 msgstr "B<fix>"
 
 #. type: Plain text
 #: en/portage/repoman.1:29
-#, fuzzy
 msgid "Fix those issues that can be fixed (stray digests, missing digests)."
 msgstr ""
-"直せる QA 問題(ダイジェストに対応する ebuild がない、ebuild に対応する ダイ"
-"ジェストがない)を修正する。"
+"直せる QA 問題 (ダイジェストに対応する ebuild がない、ebuild に対応するダイ"
+"ジェストがない) を修正する。"
 
 #. type: TP
 #: en/portage/repoman.1:29
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<full>"
 msgstr "B<full>"
 
 #. type: Plain text
 #: en/portage/repoman.1:33
-#, fuzzy
 msgid ""
 "Scan current directory tree for QA issues (full listing).  See B<QA "
 "KEYWORDS> for more information."
 msgstr ""
-"QA のためにカレントディレクトリツリーをスキャンする(すべてリストする)。 詳細"
+"QA のためにカレントディレクトリツリーをスキャンする (すべてリストする)。詳細"
 "は B<QA キーワード> を参照。"
 
 #. type: TP
 #: en/portage/repoman.1:36
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<commit>"
 msgstr "B<commit>"
 
 #. type: Plain text
 #: en/portage/repoman.1:39
-#, fuzzy
 msgid "Scan current directory tree for QA issues.  If OK, commit via cvs."
 msgstr ""
-"QA のためにカレントディレクトリツリーをスキャンする。 問題がなければ cvs 経由"
+"QA のためにカレントディレクトリツリーをスキャンする。問題がなければ CVS 経由"
 "でコミットする。"
 
 #. type: SH
 #: en/portage/repoman.1:39
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "QA KEYWORDS"
 msgstr "QA キーワード"
 
 #. type: TP
 #: en/portage/repoman.1:40
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<CVS/Entries.IO_error>"
 msgstr "B<CVS/Entries.IO_error>"
 
 #. type: Plain text
 #: en/portage/repoman.1:43
-#, fuzzy
 msgid ""
 "While attempting to commit, a CVS/Entries directory wasn't found- either the "
 "cvs co is damaged, or permissions block repoman from reading the file."
 msgstr ""
-"コミットしようとするとき、CVS/Entriesディレクトリが見つからなかった。 cvs co"
-"が打撃を受けたのか、もしくはパーミッションのためにrepoman がファイルを読み取"
+"コミットしようとするとき、CVS/Entriesディレクトリが見つからなかった。cvs co "
+"が打撃を受けたのか、もしくはパーミッションのために repoman がファイルを読み取"
 "ることができなかった。"
 
 #. type: TP
 #: en/portage/repoman.1:43
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<digest.stray>"
 msgstr "B<digest.stray>"
 
 #. type: Plain text
 #: en/portage/repoman.1:46
-#, fuzzy
 msgid "Digest files were found that do not have a corresponding ebuild."
 msgstr "対応する ebuild がないダイジェストファイルが見つかった。"
 
 #. type: TP
 #: en/portage/repoman.1:46
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<digest.missing>"
 msgstr "B<digest.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:49
-#, fuzzy
 msgid "Ebuild files were found that do not have a corresponding digest."
 msgstr "対応するダイジェストがない ebuild ファイルが見つかった。"
 
 #. type: TP
 #: en/portage/repoman.1:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild.invalidname>"
 msgstr "B<ebuild.invalidname>"
 
 #. type: Plain text
 #: en/portage/repoman.1:52
-#, fuzzy
 msgid "The ebuild has a filename that is not-parseable by portage."
 msgstr "ebuild に Portage が解析できないファイル名がついている。"
 
 #. type: TP
 #: en/portage/repoman.1:52
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild.namenomatch>"
 msgstr "B<ebuild.namenomatch>"
 
 #. type: Plain text
 #: en/portage/repoman.1:55
-#, fuzzy
 msgid ""
 "The euild has a filename that does not have the same name as the parent "
 "directory."
@@ -688,272 +402,254 @@ msgstr "ebuild に親ディレクトリと違う名前がついている。"
 
 #. type: TP
 #: en/portage/repoman.1:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<changelog.missing>"
 msgstr "B<changelog.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:58
-#, fuzzy
 msgid "The ChangeLog file was not found."
 msgstr "ChangeLog ファイルが見つからない。"
 
 #. type: TP
 #: en/portage/repoman.1:58
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild.notadded>"
 msgstr "B<ebuild.notadded>"
 
 #. type: Plain text
 #: en/portage/repoman.1:61
-#, fuzzy
 msgid "The ebuilds were found but have not been added to cvs."
-msgstr "ebuild ファイルが見つかったが、まだ cvs に追加されていない。"
+msgstr "ebuild ファイルが見つかったが、まだ CVS に追加されていない。"
 
 #. type: TP
 #: en/portage/repoman.1:61
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<digest.notadded>"
 msgstr "B<digest.notadded>"
 
 #. type: Plain text
 #: en/portage/repoman.1:64
-#, fuzzy
 msgid "The digests were found but have not been added to cvs."
-msgstr "ダイジェストファイルが見つかったが、まだ cvs に追加されていない。"
+msgstr "ダイジェストファイルが見つかったが、まだ CVS に追加されていない。"
 
 #. type: TP
 #: en/portage/repoman.1:64
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild.disjointed>"
 msgstr "B<ebuild.disjointed>"
 
 #. type: Plain text
 #: en/portage/repoman.1:67
-#, fuzzy
 msgid ""
 "The ebuilds were not added to cvs when the matching digest had already been "
 "added."
 msgstr ""
-"対応するダイジェストがすでに追加されていたので、ebuild ファイルは cvs に追加"
+"対応するダイジェストがすでに追加されていたので、ebuild ファイルは CVS に追加"
 "されなかった。"
 
 #. type: TP
 #: en/portage/repoman.1:67
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<digest.disjointed>"
-msgstr "B<filedir.missing>"
+msgstr "B<digest.disjointed>"
 
 #. type: Plain text
 #: en/portage/repoman.1:70
-#, fuzzy
 msgid ""
 "The digests were not added to cvs when the matching ebuild had already been "
 "added."
-msgstr "パッケージにfilesディレクトリがない。"
+msgstr ""
+"対応する ebuild がすでに追加されていたので、ダイジェストファイルは CVS に追加"
+"されなかった。"
 
 #. type: TP
 #: en/portage/repoman.1:70
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<filedir.missing>"
-msgstr "B<file.size>"
+msgstr "B<filedir.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:73
-#, fuzzy
 msgid "The package lacks a files directory."
-msgstr ""
-"ファイルサイズが20kを越えている。現在のポリシーは、20k を越えるファイルはパッ"
-"ケージのfilesディレクトリに置いてはいけない。"
+msgstr "パッケージに files ディレクトリがない。"
 
 #. type: TP
 #: en/portage/repoman.1:73
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<file.size>"
-msgstr "B<file.executable>"
+msgstr "B<file.size>"
 
 #. type: Plain text
 #: en/portage/repoman.1:76
-#, fuzzy
 msgid ""
 "The file's size exceeds 20k, current policy is no files over 20k in a "
 "packages files directory."
 msgstr ""
-"必要がないのにファイルに実行ビットが立っている。 チェック対象はebuild、"
-"digest、Manifest、ChangeLog、metadata.xmlに限られる。"
+"ファイルサイズが 20k を越えている。現在のポリシーは、20k を越えるファイルは"
+"パッケージの files ディレクトリに置いてはいけない。"
 
 #. type: TP
 #: en/portage/repoman.1:76
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<file.executable>"
-msgstr "B<digest.disjointed>"
+msgstr "B<file.executable>"
 
 #. type: Plain text
 #: en/portage/repoman.1:79
-#, fuzzy
 msgid ""
 "The file has the executable bit set, when it's not needed- check is limited "
 "to ebuilds, digests, Manifest, ChangeLog, and metadata.xml."
 msgstr ""
-"対応する ebuild がすでに追加されていたので、ダイジェストファイルは cvs に追加"
-"されなかった。"
+"必要がないのにファイルに実行ビットが立っている。チェック対象は ebuild、"
+"digest、Manifest、ChangeLog、metadata.xml に限られる。"
 
 #. type: TP
 #: en/portage/repoman.1:79
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DEPEND.bad>"
 msgstr "B<DEPEND.bad>"
 
 #. type: Plain text
 #: en/portage/repoman.1:83
-#, fuzzy
 msgid ""
 "User-visible ebuilds with bad DEPEND settings (matched against *visible* "
 "ebuilds).  In other words, user-visiable ebuilds could not be found to "
 "satisfy the DEPEND settings."
 msgstr ""
-"ユーザに見える(mask されていない) ebuild に間違った DEPEND 設定がある (*見え"
-"ている* ebuild に対してのみ調べられる)。 つまり、ユーザに見える ebuild 内で "
+"ユーザに見える (mask されていない) ebuild に間違った DEPEND 設定がある (*見え"
+"ている* ebuild に対してのみ調べられる)。つまり、ユーザに見える ebuild 内で "
 "DEPEND の設定を満たすことができない。"
 
 #. type: TP
 #: en/portage/repoman.1:83
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<RDEPEND.bad>"
 msgstr "B<RDEPEND.bad>"
 
 #. type: Plain text
 #: en/portage/repoman.1:87
-#, fuzzy
 msgid ""
 "User-visible ebuilds with bad RDEPEND settings (matched against *visible* "
 "ebuilds).  In other words, user-visiable ebuilds could not be found to "
 "satisfy the RDEPEND settings."
 msgstr ""
-"ユーザに見える(mask されていない) ebuild に間違った RDEPEND 設定がある (*見え"
-"ている* ebuild に対してのみ調べられる)。 つまり、ユーザに見える ebuild 内で "
+"ユーザに見える (mask されていない) ebuild に間違った RDEPEND 設定がある (*見"
+"えている* ebuild に対してのみ調べられる)。つまり、ユーザに見える ebuild 内で "
 "RDEPEND の設定を満たすことができない。"
 
 #. type: TP
 #: en/portage/repoman.1:87
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DEPEND.badmasked>"
 msgstr "B<DEPEND.badmasked>"
 
 #. type: Plain text
 #: en/portage/repoman.1:91
-#, fuzzy
 msgid ""
 "Masked ebuilds with bad DEPEND settings (matched against *all* ebuilds)  In "
 "other words, no ebuilds could not be found to satisfy the DEPEND settings."
 msgstr ""
 "mask された ebuild に間違った DEPEND 設定がある (*全ての* ebuild に対して調べ"
-"られる)。 つまり、どの ebuild も DEPEND の設定を満たすことができない。"
+"られる)。つまり、どの ebuild も DEPEND の設定を満たすことができない。"
 
 #. type: TP
 #: en/portage/repoman.1:91
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<RDEPEND.badmasked>"
 msgstr "B<RDEPEND.badmasked>"
 
 #. type: Plain text
 #: en/portage/repoman.1:95
-#, fuzzy
 msgid ""
 "Masked ebuilds with RDEPEND settings (matched against *all* ebuilds)  In "
 "other words, no ebuilds could not be found to satisfy the RDEPEND settings."
 msgstr ""
 "mask された ebuild に間違った RDEPEND 設定がある (*全ての* ebuild に対して調"
-"べられる)。 つまり、どの ebuild も RDEPEND の設定を満たすことができない。"
+"べられる)。つまり、どの ebuild も RDEPEND の設定を満たすことができない。"
 
 #. type: TP
 #: en/portage/repoman.1:95
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild.syntax>"
 msgstr "B<ebuild.syntax>"
 
 #. type: Plain text
 #: en/portage/repoman.1:98
-#, fuzzy
 msgid ""
 "An error occured while generating the cache entry.  This typically means the "
 "ebuild contains syntax error(s)."
 msgstr ""
-"キャッシュエントリーを生成している際にエラーが起きた。 典型的には ebuild に構"
+"キャッシュエントリーを生成している際にエラーが起きた。典型的には ebuild に構"
 "文エラーがあることを意味する。"
 
 #. type: TP
 #: en/portage/repoman.1:98
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ebuild.output>"
 msgstr "B<ebuild.output>"
 
 #. type: Plain text
 #: en/portage/repoman.1:101
-#, fuzzy
 msgid ""
 "A simple sourcing of the ebuild produces output.  This breaks ebuild policy."
 msgstr ""
-"単に ebuild を source しただけで出力がある。 これは ebuild ポリシーに反する。"
+"単に ebuild を source しただけで出力がある。これは ebuild ポリシーに反する。"
 
 #. type: TP
 #: en/portage/repoman.1:101
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<KEYWORDS.missing>"
 msgstr "B<KEYWORDS.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:104
-#, fuzzy
 msgid "The ebuild does not have a KEYWORDS variable."
 msgstr "ebuild に KEYWORDS 変数がない。"
 
 #. type: TP
 #: en/portage/repoman.1:104
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<LICENSE.missing>"
 msgstr "B<LICENSE.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:107
-#, fuzzy
 msgid "The ebuild does not have a LICENSE variable."
 msgstr "ebuild に LICENSE 変数がない。"
 
 #. type: TP
 #: en/portage/repoman.1:107
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DESCRIPTION.missing>"
 msgstr "B<DESCRIPTION.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:110
-#, fuzzy
 msgid "The ebuild does not have a DESCRIPTION variable."
 msgstr "ebuild に DESCRIPTION 変数がない。"
 
 #. type: TP
 #: en/portage/repoman.1:110
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<SLOT.missing>"
 msgstr "B<SLOT.missing>"
 
 #. type: Plain text
 #: en/portage/repoman.1:113
-#, fuzzy
 msgid "The ebuild does not have a SLOT variable."
 msgstr "ebuild に SLOT 変数がない。"
 
 #. type: Plain text
 #: en/portage/repoman.1:119
-#, fuzzy
 msgid "B<emerge>(1)"
 msgstr "B<emerge>(1)"
 
 #. type: Plain text
 #: en/portage/repoman.1:120
-#, fuzzy
 msgid ""
 "$Header: /var/cvsroot/gentoo-src/portage/man/repoman.1,v 1.7 2004/09/17 "
 "00:17:10 vapier Exp $"
-msgstr "原文: repoman.1,v 1.7"
+msgstr ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/repoman.1,v 1.7 2004/09/17 "
+"00:17:10 vapier Exp $"

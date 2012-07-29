@@ -3,11 +3,10 @@
 # This file is distributed under the same license as the Portage package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portage 2.0.51-r3\n"
-"POT-Creation-Date: 2012-07-22 21:40+0900\n"
+"POT-Creation-Date: 2012-07-29 16:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +29,7 @@ msgstr ""
 #: en/portage/rpm.eclass.5:1 en/portage/ssl-cert.eclass.5:1
 #: en/portage/stardict.eclass.5:1 en/portage/toolchain-funcs.eclass.5:1
 #: en/portage/vim.eclass.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage 2.0.51"
 msgstr "Portage 2.0.51"
 
@@ -39,7 +38,7 @@ msgstr "Portage 2.0.51"
 #: en/portage/env-update.1:1 en/portage/etc-update.1:1
 #: en/portage/g-cpan.pl.1:1 en/portage/quickpkg.1:1 en/portage/repoman.1:1
 #: en/portage/portage.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Portage"
 msgstr "Portage"
 
@@ -57,7 +56,7 @@ msgstr "Portage"
 #: en/portage/rpm.eclass.5:2 en/portage/ssl-cert.eclass.5:2
 #: en/portage/stardict.eclass.5:2 en/portage/toolchain-funcs.eclass.5:2
 #: en/portage/vim.eclass.5:2
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "NAME"
 msgstr "名前"
 
@@ -66,7 +65,7 @@ msgstr "名前"
 #: en/portage/env-update.1:4 en/portage/etc-update.1:4
 #: en/portage/g-cpan.pl.1:4 en/portage/quickpkg.1:4 en/portage/repoman.1:4
 #: en/portage/make.conf.5:4 en/portage/portage.5:12
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SYNOPSIS"
 msgstr "書式"
 
@@ -84,7 +83,7 @@ msgstr "書式"
 #: en/portage/rpm.eclass.5:4 en/portage/ssl-cert.eclass.5:4
 #: en/portage/stardict.eclass.5:4 en/portage/toolchain-funcs.eclass.5:5
 #: en/portage/vim.eclass.5:4
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DESCRIPTION"
 msgstr "説明"
 
@@ -103,63 +102,9 @@ msgstr "説明"
 #: en/portage/rpm.eclass.5:28 en/portage/ssl-cert.eclass.5:45
 #: en/portage/stardict.eclass.5:25 en/portage/toolchain-funcs.eclass.5:72
 #: en/portage/vim.eclass.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "REPORTING BUGS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグの報告\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告"
+msgstr "バグ報告"
 
 #. type: Plain text
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -175,61 +120,8 @@ msgstr ""
 #: en/portage/rpm.eclass.5:30 en/portage/ssl-cert.eclass.5:47
 #: en/portage/stardict.eclass.5:27 en/portage/toolchain-funcs.eclass.5:74
 #: en/portage/vim.eclass.5:44
-#, fuzzy
 msgid "Please report bugs via http://bugs.gentoo.org/"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由でしてください。\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"http://bugs.gentoo.org/ 経由でバグ報告してください。\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行ってください。\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグは、http://bugs.gentoo.org/ から報告すること。\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告はhttp://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"バグ報告は http://bugs.gentoo.org/ 経由で行なってください。"
+msgstr "バグ報告は http://bugs.gentoo.org/ 経由で行ってください。"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:78 en/portage/ebuild.1:162
@@ -245,61 +137,9 @@ msgstr ""
 #: en/portage/portage.5:556 en/portage/rpm.eclass.5:30
 #: en/portage/ssl-cert.eclass.5:47 en/portage/stardict.eclass.5:27
 #: en/portage/toolchain-funcs.eclass.5:74 en/portage/vim.eclass.5:44
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SEE ALSO"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"関連項目\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"参照"
+msgstr "関連項目"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:84 en/portage/ebuild.1:175
@@ -316,63 +156,9 @@ msgstr ""
 #: en/portage/rpm.eclass.5:34 en/portage/ssl-cert.eclass.5:51
 #: en/portage/stardict.eclass.5:31 en/portage/toolchain-funcs.eclass.5:78
 #: en/portage/vim.eclass.5:49
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "AUTHORS"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"作者\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"著者"
+msgstr "著者"
 
 #. type: SH
 #: en/portage/dispatch-conf.1:92 en/portage/ebuild.1:183
@@ -389,67 +175,13 @@ msgstr ""
 #: en/portage/rpm.eclass.5:36 en/portage/ssl-cert.eclass.5:53
 #: en/portage/stardict.eclass.5:33 en/portage/toolchain-funcs.eclass.5:80
 #: en/portage/vim.eclass.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "CVS HEADER"
-msgstr ""
-"#-#-#-#-#  font.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  cvs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  quickpkg.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  g-cpan.pl.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVSヘッダー\n"
-"#-#-#-#-#  dispatch-conf.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  libtool.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  toolchain-funcs.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  perl-module.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebook.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  rpm.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  check-kernel.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  horde.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  repoman.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ebuild.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  env-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  portage.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  games.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  emerge.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  distutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  ssl-cert.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  etc-update.1.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  eutils.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  stardict.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  vim.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  make.conf.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ\n"
-"#-#-#-#-#  flag-o-matic.eclass.5.ja.po (Portage 2.0.51-r3)  #-#-#-#-#\n"
-"CVS ヘッダ"
+msgstr "CVS ヘッダ"
 
 #. type: TP
 #: en/portage/emerge.1:480 en/portage/portage.5:272 en/portage/portage.5:442
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package.mask>"
 msgstr "B<package.mask>"
 
@@ -461,31 +193,29 @@ msgstr "B<package.mask>"
 #: en/portage/portage.5:396 en/portage/portage.5:420 en/portage/portage.5:436
 #: en/portage/portage.5:457 en/portage/portage.5:477 en/portage/portage.5:495
 #: en/portage/portage.5:512 en/portage/portage.5:542
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "I<Example:>"
 msgstr "I<例:>"
 
 #. type: TH
 #: en/portage/portage.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "PORTAGE"
 msgstr "PORTAGE"
 
 #. type: TH
 #: en/portage/portage.5:1
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Jan 2004"
 msgstr "Jan 2004"
 
 #. type: Plain text
 #: en/portage/portage.5:4
-#, fuzzy
 msgid "portage - the heart of Gentoo"
-msgstr "portage - Gentooの中核"
+msgstr "portage - Gentoo の中核"
 
 #. type: Plain text
 #: en/portage/portage.5:9
-#, fuzzy
 msgid ""
 "The current portage code uses many different configuration files, most of "
 "which are unknown to users and normal developers.  Here we will try to "
@@ -493,36 +223,35 @@ msgid ""
 "portage.  This is a reference only for files which do not already have a man "
 "page."
 msgstr ""
-"現在のPortageコードは、多くの異なった設定ファイルを使用する。その多くは、 "
-"ユーザーや通常の開発者には知られていない。ここでは、ユーザーがPortageをより "
-"効果的に使用できるように、その知られていない部分を明らかにしていく。 これは、"
-"まだmanページに乗っていないファイルのみに対するリファレンスである。"
+"現在の Portage コードは、多くの異なった設定ファイルを使用する。その多くは、"
+"ユーザーや通常の開発者には知られていない。ここでは、ユーザーが Portage をより"
+"効果的に使用できるように、その知られていない部分を明らかにしていく。これは、"
+"まだ man ページに乗っていないファイルのみに対するリファレンスである。"
 
 #. type: IP
 #: en/portage/portage.5:9
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Note:"
-msgstr "注釈:"
+msgstr "注意:"
 
 #. type: Plain text
 #: en/portage/portage.5:12
-#, fuzzy
 msgid ""
 "If you are looking for information on how to emerge something, please see "
 "B<emerge>(1)."
 msgstr ""
-"もし、何かをemergeする方法についての情報を探しているのなら、 B<emerge>(1)を参"
-"照のこと。"
+"もし、何かを emerge する方法についての情報を探しているのなら、B<emerge>(1) を"
+"参照のこと。"
 
 #. type: TP
 #: en/portage/portage.5:13 en/portage/portage.5:87
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/>"
 msgstr "B</etc/>"
 
 #. type: Plain text
 #: en/portage/portage.5:18
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "make.globals\n"
 "B<make.conf>(5)\n"
@@ -532,13 +261,13 @@ msgstr ""
 
 #. type: TP
 #: en/portage/portage.5:19 en/portage/portage.5:99
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/make.profile/>"
 msgstr "B</etc/make.profile/>"
 
 #. type: Plain text
 #: en/portage/portage.5:30
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "deprecated\n"
 "make.defaults\n"
@@ -560,13 +289,13 @@ msgstr ""
 
 #. type: TP
 #: en/portage/portage.5:31 en/portage/portage.5:264
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/portage/>"
 msgstr "B</etc/portage/>"
 
 #. type: Plain text
 #: en/portage/portage.5:41
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "bashrc\n"
 "package.mask\n"
@@ -583,29 +312,27 @@ msgstr ""
 "package.use\n"
 "mirrors\n"
 "categories\n"
-"use.mask\n"
 
 #. type: TP
 #: en/portage/portage.5:42
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</etc/portage/profile/>"
 msgstr "B</etc/portage/profile/>"
 
 #. type: Plain text
 #: en/portage/portage.5:45
-#, fuzzy
 msgid "site-specific overrides of B</etc/make.profile/>"
-msgstr "サイト固有のB</etc/make.profile/>上書き設定"
+msgstr "サイト固有の B</etc/make.profile/> 上書き設定"
 
 #. type: TP
 #: en/portage/portage.5:45 en/portage/portage.5:405
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</usr/portage/profiles/>"
 msgstr "B</usr/portage/profiles/>"
 
 #. type: Plain text
 #: en/portage/portage.5:55
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "arch.list\n"
 "categories\n"
@@ -621,125 +348,118 @@ msgstr ""
 "thirdpartymirrors\n"
 "use.desc\n"
 "use.local.desc\n"
+"use.mask\n"
 
 #. type: TP
 #: en/portage/portage.5:56 en/portage/portage.5:523
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B</var/lib/portage/>"
 msgstr "B</var/lib/portage/>"
 
 #. type: Plain text
 #: en/portage/portage.5:59
-#, fuzzy
 msgid "world"
 msgstr "world"
 
 #. type: SH
 #: en/portage/portage.5:59
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "GLOSSARY"
 msgstr "用語解説"
 
 #. type: Plain text
 #: en/portage/portage.5:63
-#, fuzzy
 msgid ""
 "In the following sections, some terminology may be foreign to you or used "
 "with meaning specific to Portage.  Please see the referenced manpages for "
 "more detailed explanations."
 msgstr ""
-"後続の章では、いくつかの用語は聞き慣れない、あるいはPortage特有の意味で使用 "
-"されているかもしれない。詳細な説明は、参照先のmanページを見ること。"
+"後続の章では、いくつかの用語は聞き慣れない、あるいは Portage 特有の意味で使用"
+"されているかもしれない。詳細な説明は、参照先の man ページを見ること。"
 
 #. type: TP
 #: en/portage/portage.5:64
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<DEPEND atom>"
-msgstr "B<DEPENDアトム(それぞれのパッケージ名)>"
+msgstr "B<DEPENDアトム (それぞれのパッケージ名)>"
 
 #. type: Plain text
 #: en/portage/portage.5:68
-#, fuzzy
 msgid ""
 "A string which matches a package.  It is of the form category/package.  It "
 "may also contain optional logical operators and versions."
 msgstr ""
-"パッケージ名と一致する文字列。カテゴリ名/パッケージ名という形式で構成され"
-"る。 任意で、論理演算子やバージョンを含めることも可能。"
+"パッケージ名と一致する文字列。カテゴリ名/パッケージ名という形式で構成される。"
+"任意で、論理演算子やバージョンを含めることも可能。"
 
 #. type: Plain text
 #: en/portage/portage.5:71 en/portage/portage.5:77 en/portage/portage.5:85
-#, fuzzy
 msgid "More reading: B<ebuild>(5)"
 msgstr "さらに詳しくは: B<ebuild>(5)"
 
 #. type: TP
 #: en/portage/portage.5:71
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<KEYWORD>"
 msgstr "B<KEYWORD>"
 
 #. type: Plain text
 #: en/portage/portage.5:74
-#, fuzzy
 msgid "Each architecture has a unique KEYWORD."
-msgstr "それぞれのアーキテクチャは、一意なKEYWORDを持つ。"
+msgstr "それぞれのアーキテクチャは、一意な KEYWORD を持つ。"
 
 #. type: TP
 #: en/portage/portage.5:77
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<virtual>"
 msgstr "B<virtual>"
 
 #. type: Plain text
 #: en/portage/portage.5:82
-#, fuzzy
 msgid ""
 "A DEPEND atom that is part of the \"virtual\" category.  They are used when "
 "different packages can satisfy a dependency and only one of them is needed."
 msgstr ""
-"\"virtual\"カテゴリの一部であるDEPENDアトム。異なるパッケージが依存性を満足 "
-"するが、それらのうち1つしか必要ないようなときに使用される。"
+"\"virtual\" カテゴリの一部である DEPEND アトム。異なるパッケージが依存性を満"
+"足するが、それらのうち 1 つしか必要ないようなときに使用される。"
 
 #. type: SH
 #: en/portage/portage.5:86
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "SPECIFIC FILE DESCRIPTIONS"
 msgstr "ファイルの説明"
 
 #. type: TP
 #: en/portage/portage.5:90
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<make.globals>"
 msgstr "B<make.globals>"
 
 #. type: Plain text
 #: en/portage/portage.5:95
-#, fuzzy
 msgid ""
 "The global default settings for Portage.  This comes from the portage "
 "package itself.  Settings in B<make.conf> override values here.  The format "
 "is described extensivly in B<make.conf>(5)."
 msgstr ""
-"Portageのグローバルなデフォルト設定。このファイルはportageパッケージに 含まれ"
-"ている。B<make.conf>内の設定は、これを上書きする。書式 については、B<make."
-"conf>(5)にて広範に説明されている。"
+"Portage のグローバルなデフォルト設定。このファイルは portage パッケージに含ま"
+"れている。B<make.conf> 内の設定は、これを上書きする。書式については、B<make."
+"conf>(5) にて広範に説明されている。"
 
 #. type: TP
 #: en/portage/portage.5:95
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<make.conf>"
 msgstr "B<make.conf>"
 
 #. type: Plain text
 #: en/portage/portage.5:98
-#, fuzzy
 msgid "The global custom settings for Portage.  See B<make.conf>(5)."
-msgstr "Portageに対するグローバルなカスタム設定。B<make.conf>(5)を参照のこと。"
+msgstr ""
+"Portage に対するグローバルなカスタム設定。B<make.conf>(5) を参照のこと。"
 
 #. type: Plain text
 #: en/portage/portage.5:110
-#, fuzzy
 msgid ""
 "This is usually just a symlink to the correct profile in B</usr/portage/"
 "profiles/>.  Since it is part of the portage tree, it may easily be updated/"
@@ -750,148 +470,140 @@ msgid ""
 "because they WILL be lost with the next `emerge --sync`.  See the section "
 "below on B</etc/portage/> for overriding."
 msgstr ""
-"通常はB</usr/portage/profiles/>内の正確なプロファイルに対するシンボリック リ"
-"ンクになっている。これは、Portageツリーの一部であるため`emerge --sync`を 実行"
-"することで簡単にアップデート/再生成することができる。 このファイルでは、(通常"
-"はアーキテクチャ特有の)プロファイルが定義される。 もし、カスタムプロファイル"
-"が必要なら、独自のB</etc/make.profile/>を作成して、 そちらに移行すること。し"
-"かし、単にいくつかの設定を上書きしたい場合、 これらのファイルは編集しないよう"
-"に。というのは、次回の`emerge --sync`で それらの変更は消失してしまうためであ"
-"る。上書き設定については、後述される章の B</etc/portage/>を参照のこと。"
+"通常は B</usr/portage/profiles/> 内の正確なプロファイルに対するシンボリックリ"
+"ンクになっている。これは、Portage ツリーの一部であるため `emerge --sync` を実"
+"行することで簡単にアップデート/再生成することができる。このファイルでは、(通"
+"常はアーキテクチャ特有の) プロファイルが定義される。もし、カスタムプロファイ"
+"ルが必要なら、独自の B</etc/make.profile/> を作成して、そちらに移行すること。"
+"しかし、単にいくつかの設定を上書きしたい場合、これらのファイルは編集しないよ"
+"うに。というのは、次回の `emerge --sync` でそれらの変更は消失してしまうためで"
+"ある。上書き設定については、後述される章の B</etc/portage/> を参照のこと。"
 
 #. type: TP
 #: en/portage/portage.5:111
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<deprecated>"
 msgstr "B<deprecated>"
 
 #. type: Plain text
 #: en/portage/portage.5:116
-#, fuzzy
 msgid ""
 "The existence of this file marks a profile as deprecated, meaning it is not "
 "supported by Gentoo anymore.  It contains the name of the profile to which "
 "users are encouraged to upgrade."
 msgstr ""
-"そのプロファイルが非推奨であることを示すファイルで、既にGentooによってサポー"
-"ト されていないことを意味する。 ユーザーのアップグレード対象として推奨される"
-"プロファイル名を含む。"
+"そのプロファイルが非推奨であることを示すファイルで、既に Gentoo によってサ"
+"ポートされていないことを意味する。ユーザーのアップグレード対象として推奨され"
+"るプロファイル名を含む。"
 
 #. type: TP
 #: en/portage/portage.5:116
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<make.defaults>"
 msgstr "B<make.defaults>"
 
 #. type: Plain text
 #: en/portage/portage.5:121
-#, fuzzy
 msgid ""
 "The profile default settings for Portage.  The general format is described "
 "in B<make.conf>(5).  The I<make.defaults> for your profile defines a few "
 "specific variables too:"
 msgstr ""
-"Portageのデフォルトのプロファイル設定。一般的な書式については B<make.conf>(5)"
-"で述べられてる。使用しているプロファイルの I<make.defaults>ではいくつかの特殊"
-"な変数も定義されている。"
+"Portage のデフォルトのプロファイル設定。一般的な書式については B<make.conf>"
+"(5) で述べられてる。使用しているプロファイルの I<make.defaults> ではいくつか"
+"の特殊な変数も定義されている。"
 
 #. type: TP
 #: en/portage/portage.5:124
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<ARCH>"
 msgstr "B<ARCH>"
 
 #. type: Plain text
 #: en/portage/portage.5:127
-#, fuzzy
 msgid "Architecture type (x86/ppc/hppa/etc...)."
-msgstr "アーキテクチャタイプ(x86/ppc/hppa/etc...)。"
+msgstr "アーキテクチャタイプ (x86/ppc/hppa/etc...)。"
 
 #. type: TP
 #: en/portage/portage.5:127
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<USERLAND = >I<\"GNU\">"
 msgstr "B<USERLAND = >I<\"GNU\">"
 
 #. type: Plain text
 #: en/portage/portage.5:130
-#, fuzzy
 msgid "Support BSD/cygwin/etc..."
 msgstr "BSD/cygwin/etc... サポート"
 
 #. type: TP
 #: en/portage/portage.5:130
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PORTAGE_LIBC = >I<\"glibc\">"
 msgstr "B<PORTAGE_LIBC = >I<\"glibc\">"
 
 #. type: Plain text
 #: en/portage/portage.5:133
-#, fuzzy
 msgid "Support uClibc/BSD libc/etc..."
 msgstr "uClibc/BSD libc/etc... サポート"
 
 #. type: TP
 #: en/portage/portage.5:133
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<PROFILE_ARCH>"
 msgstr "B<PROFILE_ARCH>"
 
 #. type: Plain text
 #: en/portage/portage.5:137
-#, fuzzy
 msgid ""
 "Distinguish machines classes that have the same B<ARCH>.  All sparc machines "
 "have ARCH=sparc but set this to either 'sparc32' or 'sparc64'."
 msgstr ""
-"同じB<ARCH>の中のマシンを区別する。sparcマシンは全てARCH=sparc であるが、この"
-"変数は'sparc32'か'sparc64'に設定されている。"
+"同じ B<ARCH> の中のマシンを区別する。sparc マシンは全て ARCH=sparc であるが、"
+"この変数は 'sparc32' か 'sparc64' に設定されている。"
 
 #. type: TP
 #: en/portage/portage.5:137
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<STAGE1_USE>"
 msgstr "B<STAGE1_USE>"
 
 #. type: Plain text
 #: en/portage/portage.5:140
-#, fuzzy
 msgid ""
 "Special USE flags which may be needed when bootstrapping from stage1 to "
 "stage2."
 msgstr ""
-"stage1からstage2へとブートストラップするときに必要となる可能性がある特殊なUSE"
-"フラグ。"
+"stage1 から stage2 へとブートストラップするときに必要となる可能性がある特殊"
+"な USE フラグ。"
 
 #. type: TP
 #: en/portage/portage.5:140
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<GRP_STAGE23_USE>"
 msgstr "B<GRP_STAGE23_USE>"
 
 #. type: Plain text
 #: en/portage/portage.5:143
-#, fuzzy
 msgid "Special USE flags used by catalyst for building a stage3 and GRP sets."
-msgstr "stage3とGRPセットをビルドするときにcatalystが使う特殊なUSEフラグ。"
+msgstr ""
+"stage3 と GRP セットをビルドするときに catalyst が使う特殊な USE フラグ。"
 
 #. type: TP
 #: en/portage/portage.5:145
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<packages>"
 msgstr "B<packages>"
 
 #. type: Plain text
 #: en/portage/portage.5:150
-#, fuzzy
 msgid ""
 "This file serves two purposes.  The first is to mask out specific packages/"
 "versions on a per-profile basis.  The second is to provide the list of "
 "packages that compose the special I<system> class."
 msgstr ""
-"このファイルには、2つの目的がある。1つは、特定のパッケージ/バージョンを プロ"
-"ファイルに基づいてマスクすること。2つ目は、I<system>という特別な クラスを構成"
-"するパッケージのリストを提供すること。"
+"このファイルには、2 つの目的がある。1 つは、特定のパッケージ/バージョンをプロ"
+"ファイルに基づいてマスクすること。2 つ目は、I<system> という特別なクラスを構"
+"成するパッケージのリストを提供すること。"
 
 #. type: Plain text
 #: en/portage/portage.5:152 en/portage/portage.5:190 en/portage/portage.5:218
@@ -900,37 +612,35 @@ msgstr ""
 #: en/portage/portage.5:371 en/portage/portage.5:390 en/portage/portage.5:415
 #: en/portage/portage.5:431 en/portage/portage.5:451 en/portage/portage.5:471
 #: en/portage/portage.5:489 en/portage/portage.5:506 en/portage/portage.5:537
-#, fuzzy
 msgid "I<Format:>"
 msgstr "I<書式:>"
 
 #. type: Plain text
 #: en/portage/portage.5:156
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one DEPEND atom per line of what to mask OUT\n"
 "- packages to be added to the system class begin with a *\n"
 msgstr ""
-"- #から始まる行はコメント。 \n"
-"- 1行に1つのマスク対象のDEPENDアトムを記述する。\n"
-"- systemクラスに追加されるパッケージは、*で始まる。\n"
+"- # から始まる行はコメント。\n"
+"- 1 行に 1 つのマスク対象の DEPEND アトムを記述する。\n"
+"- system クラスに追加されるパッケージは、* で始まる。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:161
-#, fuzzy
 msgid ""
 "I<Note:> In a cascading profile setup, you can remove packages in children "
 "profiles which were added by parent profiles by prefixing the atom with a "
 "'-'."
 msgstr ""
-"I<注:> カスケードプロファイル設定においては、パッケージアトムの先頭に '-' を"
-"つけることによって、親プロファイルで追加されたパッケージを子プロファイルで削"
-"除することができる。"
+"I<注意:> カスケードプロファイル設定においては、パッケージアトムの先頭に '-' "
+"をつけることによって、親プロファイルで追加されたパッケージを子プロファイルで"
+"削除することができる。"
 
 #. type: Plain text
 #: en/portage/portage.5:172
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# i am a comment !\n"
 "# only allow versions of glibc less than 2.3\n"
@@ -941,40 +651,38 @@ msgid ""
 "# and add it to the system class\n"
 "*E<lt>sys-libs/readline-4.2\n"
 msgstr ""
-"# この行はコメント!\n"
+"# この行はコメント！\n"
 "# glibc 2.3 以下のバージョンのみを許可する場合\n"
 "E<lt>sys-libs/glibc-2.3\n"
-"# バージョンを問わず、bashをsystemクラスに追加する場合\n"
+"# バージョンを問わず、bash を system クラスに追加する場合\n"
 "*app-shells/bash\n"
-"# 4.2以前のバージョンのreadlineのみを許可し、\n"
-"# systemクラスに追加する場合\n"
+"# 4.2 以前のバージョンの readline のみを許可し、\n"
+"# system クラスに追加する場合\n"
 "*E<lt>sys-libs/readline-4.2\n"
 
 #. type: TP
 #: en/portage/portage.5:173
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<packages.build>"
 msgstr "B<packages.build>"
 
 #. type: Plain text
 #: en/portage/portage.5:177
-#, fuzzy
 msgid ""
 "A list of packages (one per line) that make up a stage1 tarball.  Really "
 "only useful for stage builders."
 msgstr ""
-"stage1 tarballを構成するパッケージのリスト(1行に1つ)。 実際は、stageを構築す"
-"る人にしか関係ない。"
+"stage1 tarball を構成するパッケージのリスト (1 行に 1 つ)。実際は、stage を構"
+"築する人にしか関係ない。"
 
 #. type: TP
 #: en/portage/portage.5:177
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package.provided>"
 msgstr "B<package.provided>"
 
 #. type: Plain text
 #: en/portage/portage.5:184
-#, fuzzy
 msgid ""
 "A list of packages (one per line) that portage should assume have been "
 "provided.  Useful for porting to non-Linux systems.  Portage will not "
@@ -982,27 +690,26 @@ msgid ""
 "explicitly requires a version that is newer than what has been listed.  "
 "Basically, it's a list that replaces the B<emerge --inject> syntax."
 msgstr ""
-"Portageがインストールされている(provided)とみなすパッケージのリスト (1行に1"
-"つ)。Linux 以外のシステムに移植するときに便利である。 Portage はここに挙げら"
-"れたパッケージは、 別のパッケージがここに挙げられているバージョンより新しいも"
-"のを 明示的に要求しないかぎり、パッケージを更新しようとしない。 基本的に、こ"
-"れはB<emerge --inject>の文法を置き換えるリストである。"
+"Portage がインストールされている (provided) とみなすパッケージのリスト (1 行"
+"に 1 つ)。Linux 以外のシステムに移植するときに便利である。Portage はここに挙"
+"げられたパッケージは、別のパッケージがここに挙げられているバージョンより新し"
+"いものを明示的に要求しないかぎり、パッケージを更新しようとしない。基本的に、"
+"これは B<emerge --inject> の文法を置き換えるリストである。"
 
 #. type: Plain text
 #: en/portage/portage.5:188
-#, fuzzy
 msgid ""
 "For example, if you manage your own copy of a 2.6 kernel, then you can tell "
 "portage that 'sys-kernel/development-sources-2.6.7' is already taken care of "
 "and it should get off your back about it."
 msgstr ""
-"例えば、自分で2.6系列のカーネルを管理しているとすると、 Portage に「sys-"
-"kernel/development-sources-2.6.7」 がすでにインストールされていると教え、 こ"
-"の依存関係を外すことができる。"
+"例えば、自分で 2.6 系列のカーネルを管理しているとすると、Portage に「sys-"
+"kernel/development-sources-2.6.7」がすでにインストールされていると教え、この"
+"依存関係を外すことができる。"
 
 #. type: Plain text
 #: en/portage/portage.5:195
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one DEPEND atom per line\n"
@@ -1010,13 +717,13 @@ msgid ""
 "- must include a version\n"
 msgstr ""
 "- コメントは # で始まる\n"
-"- 1行につき1 DEPEND アトム\n"
+"- 1 行につき 1 DEPEND アトム\n"
 "- 関係演算子は使えない\n"
 "- バージョンは必須\n"
 
 #. type: Plain text
 #: en/portage/portage.5:201
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# you take care of the kernel\n"
 "sys-kernel/development-sources-2.6.7\n"
@@ -1026,7 +733,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:204
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# you installed your own special copy of QT\n"
 "x11-libs/qt-3.3.0\n"
@@ -1036,13 +743,12 @@ msgstr ""
 
 #. type: TP
 #: en/portage/portage.5:205
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use.defaults>"
 msgstr "B<use.defaults>"
 
 #. type: Plain text
 #: en/portage/portage.5:212
-#, fuzzy
 msgid ""
 "Here we DO NOT define the default USE flags, but the so-called auto-USE "
 "flags.  This rather unknown portage feature activates a USE flag if a "
@@ -1050,38 +756,37 @@ msgid ""
 "This file contains the associations between USE flags and packages that "
 "trigger the auto-USE feature."
 msgstr ""
-"ここでは、デフォルトのUSEフラグは定義していないが、auto-USEフラグと 呼ばれて"
-"いるものを定義している。Portageのあまり知られていない機能として、 フラグが明"
-"示的には無効にされていない状態で、パッケージがインストールされる場合、 USEフ"
-"ラグが有効にされる場合がある、というものがある。このファイルは、USEフラグと "
-"パッケージの関係が記述されており、これに基づいてauto-USE機能が動作することに"
-"なる。"
+"ここでは、デフォルトの USE フラグは定義していないが、auto-USE フラグと呼ばれ"
+"ているものを定義している。Portage のあまり知られていない機能として、フラグが"
+"明示的には無効にされていない状態で、パッケージがインストールされる場合、USE "
+"フラグが有効にされる場合がある、というものがある。このファイルは、USE フラグ"
+"とパッケージの関係が記述されており、これに基づいて auto-USE 機能が動作するこ"
+"とになる。"
 
 #. type: Plain text
 #: en/portage/portage.5:216
-#, fuzzy
 msgid ""
 "In other words, if we never put \"sdl\" or \"-sdl\" into our USE, but we "
 "have media-libs/libsdl emerged, then portage automagically sticks \"sdl\" "
 "into our USE for us."
 msgstr ""
-"言い換えると、もし\"sdl\"あるいは\"-sdl\"をUSEフラグに指定していなくても、 "
-"media-libs/libsdlはemergeしている場合、Portageは自動的に\"sdl\"をUSEフラグに "
-"追加する。"
+"言い換えると、もし \"sdl\" あるいは \"-sdl\" を USE フラグに指定していなくて"
+"も、media-libs/libsdl は emerge している場合、Portage は自動的に \"sdl\" を "
+"USE フラグに追加する。"
 
 #. type: Plain text
 #: en/portage/portage.5:221
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one USE flag per line with a list of DEPEND atom bases\n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- 1行に1つのUSEフラグと、DEPENDベースアトムのリストを記述する。\n"
+"- 1 行に 1 つの USE フラグと、DEPEND ベースアトムのリストを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:230
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# media-libs/libsdl will activate \"sdl\"\n"
 "sdl        media-libs/libsdl\n"
@@ -1089,47 +794,46 @@ msgid ""
 "# dev-lang/tcl and dev-lang/tk\n"
 "tcltk      dev-lang/tcl   dev-lang/tk\n"
 msgstr ""
-"# media-libs/libsdlで\"sdl\"を有効にする場合\n"
+"# media-libs/libsdl で \"sdl\" を有効にする場合\n"
 "sdl        media-libs/libsdl\n"
-"# dev-lang/tclおよびdev-lang/tkが両方ある場合のみ\n"
-"# tcltkを有効にしたい場合\n"
+"# dev-lang/tcl および dev-lang/tk が両方ある場合のみ\n"
+"# tcltk を有効にしたい場合\n"
 "tcltk      dev-lang/tcl   dev-lang/tk\n"
 
 #. type: TP
 #: en/portage/portage.5:231 en/portage/portage.5:518
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use.mask>"
 msgstr "B<use.mask>"
 
 #. type: Plain text
 #: en/portage/portage.5:235
-#, fuzzy
 msgid ""
 "Some USE flags don't make sense on some archs (for example altivec on non-"
 "ppc or mmx on non-x86).  Here we list the masked ones."
 msgstr ""
-"USEフラグの中には、アーキテクチャによっては意味を成さないものもある (例えば、"
-"非ppc環境でのaltivecや非x86環境でのmmx)。ここには、マスクするものを列挙する。"
+"USE フラグの中には、アーキテクチャによっては意味を成さないものもある (例え"
+"ば、非 ppc 環境での altivec や非 x86 環境での mmx)。ここには、マスクするもの"
+"を列挙する。"
 
 #. type: Plain text
 #: en/portage/portage.5:240
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one USE flag per line\n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- 1行に1つのUSEフラグを記述する。\n"
+"- 1 行に 1 つの USE フラグを記述する。\n"
 
 #. type: TP
 #: en/portage/portage.5:241 en/portage/portage.5:380
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<virtuals>"
 msgstr "B<virtuals>"
 
 #. type: Plain text
 #: en/portage/portage.5:249 en/portage/portage.5:388
-#, fuzzy
 msgid ""
 "This controls what packages will provide a virtual by default.  For example, "
 "if a package needs to send e-mail, it will need virtual/mta.  In the absence "
@@ -1138,154 +842,136 @@ msgid ""
 "Gentoo uses net-mail/ssmtp as the default (as defined in the virtuals file) "
 "because it's the package that does the very bare minimum to send e-mail."
 msgstr ""
-"#-#-#-#-#  ja/portage/portage.5:255  #-#-#-#-#\n"
-"このファイルでは、デフォルトでvirtualとなるパッケージを管理する。 例えば、あ"
-"るパッケージがe-mailを送信する必要がある場合、virtual/mtaが必要となる。 "
-"virtual/mtaを提供するパッケージ(qmail、sendmail、postfix等)が無い場合、"
+"このファイルでは、デフォルトで virtual となるパッケージを管理する。例えば、あ"
+"るパッケージが e-mail を送信する必要がある場合、virtual/mta が必要となる。"
+"virtual/mta を提供するパッケージ (qmail、sendmail、postfix 等) が無い場合、"
 "Portageは このファイルを見てどのパッケージを使用するかを決定する。この場合、"
-"Gentooは (virtualファイルで定義されているので)、net-mail/ssmtpをデフォルトで"
-"使用する。 net-mail/ssmtpがデフォルトで定義されているのは、このパッケージが "
-"e-mailを送信するには極めて単純で最小限であると言う理由からである。\n"
-"#-#-#-#-#  ja/portage/portage.5:393  #-#-#-#-#\n"
-"このファイルはデフォルトでどのパッケージがvirtualを提供するのか制御する。 例"
-"えば、あるパッケージが e-mail を送る必要があるのであれば、 そのパッケージは "
-"virtual/mta を必要とする。 virtual/mta (qmail、sendmail、postfix、など)を提供"
-"するパッケージがなければ、 Portageはこのファイルを見てどのパッケージを使うか"
-"知る。 この例では、Gentoo は net-mail/ssmtp を (virtualsファイルで定義されて"
-"いる)  デフォルトとして使う。 これは、e-mailを送るのにまさに最小のことだけを"
-"するパッケージだからである。"
+"Gentoo は (virtual ファイルで定義されているので)、net-mail/ssmtp をデフォルト"
+"で使用する。net-mail/ssmtp がデフォルトで定義されているのは、このパッケージ"
+"が e-mail を送信するには極めて単純で最小限であると言う理由からである。"
 
 #. type: Plain text
 #: en/portage/portage.5:254
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one virtual and DEPEND atom base pair per line\n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- 1行に1つのvirtual名とDEPENDアトムのペアを記述する。\n"
+"- 1 行に 1 つの virtual 名と DEPEND アトムのペアを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:262
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# use net-mail/ssmtp as the default mta\n"
 "virtual/mta           net-mail/ssmtp\n"
 "# use app-dicts/aspell-en as the default dictionary\n"
 "virtual/aspell-dict   app-dicts/aspell-en\n"
 msgstr ""
-"# net-mail/ssmtpをデフォルトのMTAとして使用する場合\n"
+"# net-mail/ssmtp をデフォルトの MTA として使用する場合\n"
 "virtual/mta           net-mail/ssmtp\n"
-"# app-dicts/aspell-enをデフォルトの辞書として使用する場合\n"
+"# app-dicts/aspell-en をデフォルトの辞書として使用する場合\n"
 "virtual/aspell-dict   app-dicts/aspell-en\n"
 
 #. type: TP
 #: en/portage/portage.5:267
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<bashrc>"
 msgstr "B<bashrc>"
 
 #. type: Plain text
 #: en/portage/portage.5:272
-#, fuzzy
 msgid ""
 "If needed, this file can be used to set up a special environment for "
 "ebuilds, different from the standard root environment.  The syntax is the "
 "same as for any other bash script."
 msgstr ""
-"必要な時、このファイルはebuild用に標準のroot 環境とは異なる特殊な環境を構築す"
-"るのに使用される。 構文は、他のbashスクリプトと同じである。"
+"必要な時、このファイルは ebuild 用に標準の root 環境とは異なる特殊な環境を構"
+"築するのに使用される。構文は、他の Bash スクリプトと同じである。"
 
 #. type: Plain text
 #: en/portage/portage.5:277
-#, fuzzy
 msgid ""
 "A list of DEPEND atoms to mask.  Useful if specific versions of packages do "
 "not work well for you.  For example, you swear by the Nvidia drivers, but "
 "only versions earlier than 1.0.4496.  No problem!"
 msgstr ""
-"マスクするDEPENDアトムのリスト。特定のバージョンのパッケージがうまく動作しな"
-"い 場合に役に立つ。例えば、Nvidiaドライバーを使用いるが、1.0.4496以前ものだけ"
-"を 使いたい、という場合。問題なし!"
+"マスクする DEPEND アトムのリスト。特定のバージョンのパッケージがうまく動作し"
+"ない場合に役に立つ。例えば、Nvidia ドライバーを使用いるが、1.0.4496 以前もの"
+"だけを使いたい、という場合。問題なし！"
 
 #. type: Plain text
 #: en/portage/portage.5:282 en/portage/portage.5:454
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one DEPEND atom per line\n"
 msgstr ""
-"#-#-#-#-#  ja/portage/portage.5:288  #-#-#-#-#\n"
 "- # から始まる行はコメントである。\n"
-"- 1行に1つのDEPENDアトムを記述する。\n"
-"\n"
-"#-#-#-#-#  ja/portage/portage.5:460  #-#-#-#-#\n"
-"- # から始まる行はコメントである。\n"
-"-  1行に1つのDEPENDアトムを記述する。\n"
+"- 1 行に 1 つの DEPEND アトムを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:290
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# mask out versions 1.0.4496 of the nvidia\n"
 "# drivers and later\n"
 "E<gt>=media-video/nvidia-kernel-1.0.4496\n"
 "E<gt>=media-video/nvidia-glx-1.0.4496\n"
 msgstr ""
-"# 1.0.4496以前のバージョンの\n"
-"# nvidiaドライバーをマスクしたい場合\n"
+"# 1.0.4496 以前のバージョンの\n"
+"# nvidia ドライバーをマスクしたい場合\n"
 "E<gt>=media-video/nvidia-kernel-1.0.4496\n"
 "E<gt>=media-video/nvidia-glx-1.0.4496\n"
 
 #. type: TP
 #: en/portage/portage.5:291
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package.unmask>"
 msgstr "B<package.unmask>"
 
 #. type: Plain text
 #: en/portage/portage.5:297
-#, fuzzy
 msgid ""
 "Just like package.mask above, except here you list packages you want to "
 "unmask.  Useful for overriding the global package.mask file (see below).  "
 "Note that this does not override packages that are masked via KEYWORDS."
 msgstr ""
-"前述したpackage.maskのように、マスクを外したいパッケージを列挙する。 グローバ"
-"ルなpackage.maskファイルの設定を上書きしたい場合に使用される(詳細は後述)。 "
-"KEYWORDSによってマスクされたパッケージは上書きしないことに注意。"
+"前述した package.mask のように、マスクを外したいパッケージを列挙する。グロー"
+"バルな package.mask ファイルの設定を上書きしたい場合に使用される (詳細は後"
+"述)。KEYWORDS によってマスクされたパッケージは上書きしないことに注意。"
 
 #. type: TP
 #: en/portage/portage.5:297
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package.keywords>"
 msgstr "B<package.keywords>"
 
 #. type: Plain text
 #: en/portage/portage.5:302
-#, fuzzy
 msgid ""
 "Per-package KEYWORDS.  Useful for mixing unstable packages in with a "
 "normally stable machine or vice versa.  This will allow you to augment "
 "ACCEPT_KEYWORDS for a single package."
 msgstr ""
-"パッケージごとのKEYWORD。通常の安定したマシンにまだ非安定版のパッケージを混在"
-"させたい場合、あるいはその逆の場合に使用される。このファイルは、1パッケージに"
-"対するACCEPT_KEYWORDSを追加する。"
+"パッケージごとの KEYWORD。通常の安定したマシンにまだ非安定版のパッケージを混"
+"在させたい場合、あるいはその逆の場合に使用される。このファイルは、1 パッケー"
+"ジに対する ACCEPT_KEYWORDS を追加する。"
 
 #. type: Plain text
 #: en/portage/portage.5:307
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one DEPEND atom per line followed by additional ACCEPT_KEYWORDS \n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- 1行に1つのDEPENDアトムと、それに続けてACCEPT_KEYWORDSを記述する。\n"
+"- 1 行に 1 つの DEPEND アトムと、それに続けて ACCEPT_KEYWORDS を記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:317
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# always use unstable libgd\n"
 "media-libs/libgd ~x86\n"
@@ -1294,46 +980,45 @@ msgid ""
 "# use a package that is marked -*\n"
 "E<gt>=sys-kernel/linux-headers-2.6 -*\n"
 msgstr ""
-"# 常に非安定版のlibgdを使用したい場合\n"
+"# 常に非安定版の libgd を使用したい場合\n"
 "media-libs/libgd ~x86\n"
-"# 安定版のmplayerのみを使用する場合\n"
+"# 安定版の mplayer のみを使用する場合\n"
 "media-video/mplayer -~x86\n"
 "# -* でマスクされたパッケージを使う\n"
 "E<gt>=sys-kernel/linux-headers-2.6 -*\n"
 
 #. type: TP
 #: en/portage/portage.5:318
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<package.use>"
 msgstr "B<package.use>"
 
 #. type: Plain text
 #: en/portage/portage.5:324
-#, fuzzy
 msgid ""
 "Per-package USE flags.  Useful for tracking local USE flags or for enabling "
 "USE flags for certain packages only.  Perhaps you develop GTK and thus you "
 "want documentation for it, but you don't want documentation for QT.  Easy as "
 "pie my friend!"
 msgstr ""
-"パッケージごとのUSEフラグ。ローカルUSEフラグを追跡したり、特定のパッケージの"
-"みに USEフラグを有効にしたい時に使用される。GTKの開発を行っていて、 GTK用のド"
-"キュメントは欲しいが、QTのドキュメントはいらないといった場合に、 極めて簡単に"
-"それを実現することが可能である。"
+"パッケージごとの USE フラグ。ローカル USE フラグを追跡したり、特定のパッケー"
+"ジのみに USE フラグを有効にしたい時に使用される。GTK の開発を行っていて、GTK "
+"用のドキュメントは欲しいが、QT のドキュメントはいらないといった場合に、極めて"
+"簡単にそれを実現することが可能である。"
 
 #. type: Plain text
 #: en/portage/portage.5:329
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- one DEPEND atom per line with space-separated row of USE flags\n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- 1行に1つのDEPENDアトムと、それに続けて空白区切りでUSEフラグのリストを記述する。\n"
+"- 1 行に 1 つの DEPEND アトムと、それに続けて空白区切りで USE フラグのリストを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:337
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# turn on docs for GTK 2.x\n"
 "=x11-libs/gtk+-2* doc\n"
@@ -1342,18 +1027,17 @@ msgid ""
 msgstr ""
 "# GTK 2.x のドキュメントを有効にする場合\n"
 "=x11-libs/gtk+-2* doc\n"
-"# QTのmysqlサポートを無効にする場合\n"
+"# QT の mysql サポートを無効にする場合\n"
 "x11-libs/qt -mysql\n"
 
 #. type: TP
 #: en/portage/portage.5:338
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<mirrors>"
 msgstr "B<mirrors>"
 
 #. type: Plain text
 #: en/portage/portage.5:346
-#, fuzzy
 msgid ""
 "Whenever portage encounters a mirror:// style URL it will look up the actual "
 "hosts here.  If the mirror set is not found here, it will check the global "
@@ -1362,31 +1046,26 @@ msgid ""
 "before GENTOO_MIRRORS and will be used even if the package has RESTRICT="
 "\"nomirror\"."
 msgstr ""
-"Portageは、mirror:// の形式のURLに遭遇した場合、実際のホストをこのファイルか"
-"ら 検索する。もしミラーサイトがここに見つからない場合、グローバルなミラーサイ"
-"トの ファイルである/usr/portage/profiles/thirdpartymirrorsを調べる。ま"
-"た、\"local\"と 呼ばれる特別なミラー種別も設定しているかもしれない。このミ"
-"ラーリストは、 GENTOO_MIRRORSより前に調べられ、パッケージにRESTRICT="
-"\"nomirror\"が指定してあっても 使用される。"
+"Portage は、mirror:// の形式の URL に遭遇した場合、実際のホストをこのファイル"
+"から検索する。もしミラーサイトがここに見つからない場合、グローバルなミラーサ"
+"イトのファイルである /usr/portage/profiles/thirdpartymirrors を調べる。ま"
+"た、\"local\" と呼ばれる特別なミラー種別も設定しているかもしれない。このミ"
+"ラーリストは、GENTOO_MIRRORS より前に調べられ、パッケージに RESTRICT="
+"\"nomirror\" が指定してあっても使用される。"
 
 #. type: Plain text
 #: en/portage/portage.5:351 en/portage/portage.5:474
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- mirror type followed by a list of hosts\n"
 msgstr ""
-"#-#-#-#-#  ja/portage/portage.5:354  #-#-#-#-#\n"
 "- # から始まる行はコメントである。\n"
 "- ミラーの種類と、それに続けてホストのリストを記述する。\n"
-"\n"
-"#-#-#-#-#  ja/portage/portage.5:480  #-#-#-#-#\n"
-"- # から始まる行はコメントである。\n"
-"- ミラー種別と、それに続けてホストのリストを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:357
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# local private mirrors used only by my company\n"
 "local ftp://192.168.0.3/mirrors/gentoo http://192.168.0.4/distfiles\n"
@@ -1396,7 +1075,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:360
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# people in japan would want to use the japanese mirror first\n"
 "sourceforge http://keihanna.dl.sourceforge.net/sourceforge\n"
@@ -1406,41 +1085,40 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:363
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# people in tawain would want to use the local gnu mirror first\n"
 "gnu ftp://ftp.nctu.edu.tw/UNIX/gnu/\n"
 msgstr ""
-"# 台湾在住なので、GNUのローカルミラーを最初に使用したい場合\n"
+"# 台湾在住なので、GNU のローカルミラーを最初に使用したい場合\n"
 "gnu ftp://ftp.nctu.edu.tw/UNIX/gnu/\n"
 
 #. type: TP
 #: en/portage/portage.5:364 en/portage/portage.5:425
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<categories>"
 msgstr "B<categories>"
 
 #. type: Plain text
 #: en/portage/portage.5:369
-#, fuzzy
 msgid ""
 "A simple list of valid categories that may be used in /usr/portage, "
 "PORTDIR_OVERLAY, and PKGDIR (see B<make.conf>(5)).  This allows for custom "
 "categories to be created."
 msgstr ""
-"/usr/portage、PORTDIR_OVERLAY、PKGDIRで使用される、有効なカテゴリのリスト "
-"(B<make.conf>(5)を参照のこと)。このファイルによって、カスタムカテゴリを 作成"
+"/usr/portage、PORTDIR_OVERLAY、PKGDIR で使用される、有効なカテゴリのリスト "
+"(B<make.conf>(5) を参照のこと)。このファイルによって、カスタムカテゴリを作成"
 "することが可能になる。"
 
 #. type: Plain text
 #: en/portage/portage.5:373 en/portage/portage.5:433
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "- one category per line\n"
-msgstr "- 1行に1つのカテゴリを記述する。\n"
+msgstr "- 1 行に 1 つのカテゴリを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:379
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "app-hackers\n"
 "media-other\n"
@@ -1450,71 +1128,63 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:392
-#, fuzzy
 msgid "- comments begin with #"
 msgstr "- コメントは # で始まる"
 
 #. type: Plain text
 #: en/portage/portage.5:394
-#, fuzzy
 msgid "- one virtual and DEPEND atom base pair per line"
-msgstr "- 1行につき1 virtual と DEPEND アトムベース"
+msgstr "- 1 行につき 1 virtual と DEPEND アトムベース"
 
 #. type: Plain text
 #: en/portage/portage.5:398
-#, fuzzy
 msgid "# use net-mail/ssmtp as the default mta"
 msgstr "# net-mail/ssmtp をデフォルトの mta に"
 
 #. type: Plain text
 #: en/portage/portage.5:400
-#, fuzzy
 msgid "virtual/mta net-mail/ssmtp"
 msgstr "virtual/mta net-mail/ssmtp"
 
 #. type: Plain text
 #: en/portage/portage.5:402
-#, fuzzy
 msgid "# use app-dicts/aspell-en as the default dictionary"
 msgstr "# app-dicts/aspell-en をデフォルトの辞書に"
 
 #. type: Plain text
 #: en/portage/portage.5:404
-#, fuzzy
 msgid "virtual/aspell-dict app-dicts/aspell-en"
 msgstr "virtual/aspell-dict app-dicts/aspell-en"
 
 #. type: Plain text
 #: en/portage/portage.5:409
-#, fuzzy
 msgid ""
 "Global Gentoo settings that are controlled by the developers.  To override "
 "these settings, you can use the files in B</etc/portage/>."
 msgstr ""
-"開発者によって管理されるGentooのグローバルな設定。これらの設定を上書きするに"
-"は B</etc/portage/>にあるファイルを使用すること。"
+"開発者によって管理される Gentoo のグローバルな設定。これらの設定を上書きする"
+"には B</etc/portage/> にあるファイルを使用すること。"
 
 #. type: TP
 #: en/portage/portage.5:410
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<arch.list>"
 msgstr "B<arch.list>"
 
 #. type: Plain text
 #: en/portage/portage.5:413
-#, fuzzy
 msgid "A list of all valid KEYWORDS.  This does not include modifiers."
-msgstr "すべての有効なKEYWORDのリスト。これには修飾子は含まれない。"
+msgstr "すべての有効な KEYWORD のリスト。これには修飾子は含まれない。"
 
 #. type: Plain text
 #: en/portage/portage.5:417
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "- one KEYWORD per line\n"
-msgstr "- 1行に1つのKEYWORDを記述する。\n"
+msgstr "- 1 行に 1 つの KEYWORD を記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:424
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "x86\n"
 "ppc\n"
@@ -1526,17 +1196,16 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:429
-#, fuzzy
 msgid ""
 "A simple list of valid categories that may be used in /usr/portage, "
 "PORTDIR_OVERLAY, and PKGDIR (see B<make.conf>(5))."
 msgstr ""
-"/usr/portage、PORTDIR_OVERLAY、PKGDIRで使用される、有効なカテゴリのリスト "
-"(B<make.conf>(5)を参照のこと)。"
+"/usr/portage、PORTDIR_OVERLAY、PKGDIR で使用される、有効なカテゴリのリスト "
+"(B<make.conf>(5) を参照のこと)。"
 
 #. type: Plain text
 #: en/portage/portage.5:441
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "app-admin\n"
 "dev-lang\n"
@@ -1550,7 +1219,6 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:449
-#, fuzzy
 msgid ""
 "This contains a list of DEPEND atoms for packages that should not be "
 "installed in any profile.  Useful for adding the latest KDE betas and making "
@@ -1559,15 +1227,15 @@ msgid ""
 "explaining WHY the package has been masked and WHO is doing the masking."
 msgstr ""
 "どのプロファイルにおいてもインストールされるべきでないパッケージに対する "
-"DEPENDアトムのリストが記述されている。最新のKDEのベータ版をPortageに 追加はす"
-"るが、誰かが不本意にそれらにアップグレードしてしまわないようにする 時に使用さ"
-"れる。また、セキュリティの問題で、特定のバージョンを手早く マスクしてしまいた"
-"い場合にも使用される。このファイルには、なぜそのパッケージが マスクされている"
-"のか、また、誰がマスクしたのかをコメントとして必ず記述すること。"
+"DEPEND アトムのリストが記述されている。最新の KDE のベータ版を Portage に追加"
+"はするが、誰かが不本意にそれらにアップグレードしてしまわないようにする時に使"
+"用される。また、セキュリティの問題で、特定のバージョンを手早くマスクしてしま"
+"いたい場合にも使用される。このファイルには、なぜそのパッケージがマスクされて"
+"いるのか、また、誰がマスクしたのかをコメントとして必ず記述すること。"
 
 #. type: Plain text
 #: en/portage/portage.5:464
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "# masked for security reasons\n"
 "E<lt>sys-libs/zlib-1.1.4\n"
@@ -1579,72 +1247,70 @@ msgstr ""
 "# セキュリティ対策\n"
 "E<lt>sys-libs/zlib-1.1.4\n"
 "# E<lt>caleb@gentoo.orgE<gt> (10 Sep 2003)\n"
-"# 新しいKDEのベータ版\n"
+"# 新しい KDE のベータ版\n"
 "=kde-base/kde-3.2.0_beta1\n"
 "=kde-base/kdeaccessibility-3.2.0_beta1\n"
 
 #. type: TP
 #: en/portage/portage.5:465
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<thirdpartymirrors>"
 msgstr "B<thirdpartymirrors>"
 
 #. type: Plain text
 #: en/portage/portage.5:469
-#, fuzzy
 msgid ""
 "Controls the mapping of mirror:// style URLs to actual lists of mirrors.  "
 "Keeps us from overloading a single server."
 msgstr ""
-"mirror:// 形式のURLと、実際のミラーリストと対応づけを制御する。 こうすること"
-"で、1つのサーバーに過負荷がかかることを防ぐ。"
+"mirror:// 形式の URL と、実際のミラーリストと対応づけを制御する。こうすること"
+"で、1 つのサーバーに過負荷がかかることを防ぐ。"
 
 #. type: Plain text
 #: en/portage/portage.5:479
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "sourceforge http://aleron.dl.sourceforge.net/sourceforge http://unc.dl.sourceforge.net/sourceforge\n"
 msgstr "sourceforge http://aleron.dl.sourceforge.net/sourceforge http://unc.dl.sourceforge.net/sourceforge\n"
 
 #. type: Plain text
 #: en/portage/portage.5:481
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "gentoo http://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/ ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo/distfiles\n"
 msgstr "gentoo http://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/ ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo/distfiles\n"
 
 #. type: Plain text
 #: en/portage/portage.5:483
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "kernel http://www.kernel.org/pub http://www.us.kernel.org/pub\n"
 msgstr "kernel http://www.kernel.org/pub http://www.us.kernel.org/pub\n"
 
 #. type: TP
 #: en/portage/portage.5:484
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use.desc>"
 msgstr "B<use.desc>"
 
 #. type: Plain text
 #: en/portage/portage.5:487
-#, fuzzy
 msgid ""
 "All global USE flags must be listed here with a description of what they do."
 msgstr ""
-"全てのグローバルなUSEフラグは、それが何をするものなのかという説明と共に、 こ"
+"全てのグローバルな USE フラグは、それが何をするものなのかという説明と共に、こ"
 "のファイルに記述されていなければならない。"
 
 #. type: Plain text
 #: en/portage/portage.5:492
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- use flag - some description\n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- USEフラグ - 簡単な説明\n"
+"- USE フラグ - 簡単な説明\n"
 
 #. type: Plain text
 #: en/portage/portage.5:499
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "3dfx - Adds support for 3dfx video cards\n"
 "acl - Adds support for Access Control Lists\n"
@@ -1656,61 +1322,59 @@ msgstr ""
 
 #. type: TP
 #: en/portage/portage.5:500
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<use.local.desc>"
 msgstr "B<use.local.desc>"
 
 #. type: Plain text
 #: en/portage/portage.5:504
-#, fuzzy
 msgid ""
 "All local USE flags must be listed here along with the package and a "
 "description."
 msgstr ""
-"全てのローカルなUSEフラグは、パッケージ名とその説明と共に、 ここに記述されて"
+"全てのローカルな USE フラグは、パッケージ名とその説明と共に、ここに記述されて"
 "いなければならない。"
 
 #. type: Plain text
 #: en/portage/portage.5:509
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "- comments begin with #\n"
 "- package:use flag - description\n"
 msgstr ""
 "- # から始まる行はコメントである。\n"
-"- パッケージ:USEフラグ - 説明\n"
+"- パッケージ:USE フラグ - 説明\n"
 
 #. type: Plain text
 #: en/portage/portage.5:517
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "app-editors/nano:justify - Toggles the justify option\n"
 "dev-games/clanlib:clanJavaScript - Enables javascript support\n"
 "dev-libs/DirectFB:fusion - Adds Multi Application support\n"
 "games-emulation/xmess:net - Adds network support\n"
 msgstr ""
-"app-editors/nano:justify - Toggle the justify option\n"
+"app-editors/nano:justify - Toggles the justify option\n"
 "dev-games/clanlib:clanJavaScript - Enables javascript support\n"
-"dev-libs/DirectFB:fusion - add Multi Application support\n"
-"games-emulation/xmess:net - Add network support\n"
+"dev-libs/DirectFB:fusion - Adds Multi Application support\n"
+"games-emulation/xmess:net - Adds network support\n"
 
 #. type: Plain text
 #: en/portage/portage.5:522
-#, fuzzy
 msgid ""
 "Just like the B<use.mask> found in B</etc/make.profile/>.  See above for "
 "more information."
-msgstr "B</etc/make.profile/>にあるB<use.mask>のようなもの。 詳細は上記参照。"
+msgstr ""
+"B</etc/make.profile/> にある B<use.mask> のようなもの。詳細は上記参照。"
 
 #. type: TP
 #: en/portage/portage.5:526
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "B<world>"
 msgstr "B<world>"
 
 #. type: Plain text
 #: en/portage/portage.5:535
-#, fuzzy
 msgid ""
 "Every time you emerge a package, the package that you requested is recorded "
 "here.  Then when you run `emerge world -up`, the list of packages is read "
@@ -1720,23 +1384,23 @@ msgid ""
 "recorded in the world file but \"net-www/apache\" is not.  For more "
 "information, review B<emerge>(1)."
 msgstr ""
-"パッケージをemargeする時はいつでも、指定したパッケージ名はここに記録される。 "
-"そして、`emerge world -up`を実行したときには、パッケージのリストは このファイ"
-"ルから読み込まれる。依存関係のために、インストールされたパッケージまで ここに"
-"記述されるという意味ではないことに注意すること。例えば、 `emerge mod_php`を実"
-"行した段階で、まだapacheをインストールしていない場合、 \"dev-php/mod_php\"は"
-"worldファイルに記録されるが、\"net-www/apache\"は 記録されない。詳細は、"
-"B<emerge>(1)を参照のこと。"
+"パッケージを emarge する時はいつでも、指定したパッケージ名はここに記録され"
+"る。そして、`emerge world -up` を実行したときには、パッケージのリストはこの"
+"ファイルから読み込まれる。依存関係のために、インストールされたパッケージまで"
+"ここに記述されるという意味ではないことに注意すること。例えば、`emerge "
+"mod_php` を実行した段階で、まだ apache をインストールしていない場合、\"dev-"
+"php/mod_php\" は world ファイルに記録されるが、\"net-www/apache\" は記録され"
+"ない。詳細は、B<emerge>(1) を参照のこと。"
 
 #. type: Plain text
 #: en/portage/portage.5:539
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "- one DEPEND atom base per line\n"
-msgstr "- 1行に1つのDEPENDベースアトムを記述する。\n"
+msgstr "- 1 行に 1 つの DEPEND ベースアトムを記述する。\n"
 
 #. type: Plain text
 #: en/portage/portage.5:546
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "games-misc/fortune-mod-gentoo-dev\n"
 "dev-libs/uclibc\n"
@@ -1748,7 +1412,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:553
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "Marius Mauch E<lt>genone@gentoo.orgE<gt>\n"
 "Mike Frysinger E<lt>vapier@gentoo.orgE<gt>\n"
@@ -1760,14 +1424,14 @@ msgstr ""
 
 #. type: Plain text
 #: en/portage/portage.5:561
-#, fuzzy
 msgid "B<emerge>(1), B<ebuild>(1), B<ebuild>(5), B<make.conf>(5)"
 msgstr "B<emerge>(1), B<ebuild>(1), B<ebuild>(5), B<make.conf>(5)"
 
 #. type: Plain text
 #: en/portage/portage.5:562
-#, fuzzy
 msgid ""
 "$Header: /var/cvsroot/gentoo-src/portage/man/portage.5,v 1.18 2004/10/23 "
 "04:07:48 vapier Exp $"
-msgstr "原文: portage.5,v 1.18"
+msgstr ""
+"$Header: /var/cvsroot/gentoo-src/portage/man/portage.5,v 1.18 2004/10/23 "
+"04:07:48 vapier Exp $"
