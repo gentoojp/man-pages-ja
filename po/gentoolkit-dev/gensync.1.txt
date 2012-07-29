@@ -1,6 +1,4 @@
 PO4A-HEADER: mode=before; position=^\.TH
 .\"
-.\" Japanese Version Copyright (c) 2004 Akinori Hattori
-.\"     all rights reserved.
-.\" Translated on 11 Nov 2004 by Akinori Hattori <hattya@gentoo.org>
+.\" Japanese Version Copyright (c) 2004 Akinori Hattori <hattya@gentoo.org>
 .\"

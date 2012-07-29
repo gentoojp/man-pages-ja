@@ -1,7 +1,5 @@
 PO4A-HEADER: mode=before; position=^.TH
 .\"
-.\" Japanese Version Copyright (c) 2003 TAKEDA hiroyuki
-.\"                                2004 Mamoru KOMACHI
-.\"     all rights reserved
-.\" Translated on 16 Feb 2004 by TAKEDA hiroyuki <diapar@mizar.freemail.ne.jp>
+.\" Japanese Version Copyright (c) 2004 TAKEDA hiroyuki <diapar@mizar.freemail.ne.jp>
+.\" Japanese Version Copyright (c) 2004 Mamoru KOMACHI <usata@gentoo.org>
 .\"
