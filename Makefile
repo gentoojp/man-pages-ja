@@ -13,17 +13,18 @@ vpath %     $(srcdir)
 
 define pod2man
   @addendum=$(subst $(builddir)/,$(podir)/,$@).txt; \
-  if [ ! -f $$addendum ]; then \
-    addendum=/dev/null; \
-  fi; \
-  echo "cat $$addendum > $@"; \
-  cat $$addendum > $@
+   if [ ! -f $$addendum ]; then \
+     addendum=/dev/null; \
+   fi; \
+   echo "cat $$addendum > $@"; \
+   cat $$addendum > $@
   pod2man --stderr --utf8 $(PODFLAGS) $< >> $@
 endef
 
 define po4a
   po4a \
-    --no-backups \
+    -M UTF-8 \
+    -L UTF-8 \
     --variable srcdir=$(srcdir)/$(1) \
     --variable builddir=$(builddir)/$(1) \
     --variable podir=$(podir)/$(1) \
@@ -32,6 +33,7 @@ define po4a
     $(POFLAGS) \
     $(podir)/$(1)/$(1).cfg
 endef
+
 
 epm_NAME    := epm
 epm_VERSION := 0.8.4
@@ -184,7 +186,7 @@ portage_SOURCES := portage/dispatch-conf.1 \
 portage_MANS    := $(addprefix $(builddir)/,$(filter %.1 %.5,$(portage_SOURCES)))
 
 
-.PHONY: all clean pod epm esearch gentoolkit gentoolkit-dev portage
+.PHONY: all clean po pod epm esearch gentoolkit gentoolkit-dev portage
 .SUFFIXES:
 .SECONDEXPANSION:
 
@@ -198,12 +200,19 @@ clean:
 	rm -f  $(podir)/*/*.pot
 	rm -f  .*.po4a-stamp
 
-pod: override P := $(subst -,_,$(P))
-pod: PODFLAGS   := --center=$($(P)_NAME) --date=$($(P)_DATE) --release="$($(P)_NAME) $($(P)_VERSION)"
-pod: $$($$(P)_MANS)
+po: override PN      := $(subst -,_,$(PN))
+po: override POFLAGS += --no-translations
+po: $$(filter-out %.po %.txt,$$($$(PN)_SOURCES))
+	@if [ -z "$(PN)" ]; then exit -1; fi
+	$(call po4a,$(subst _,-,$(PN)))
+
+pod: override PN       := $(subst -,_,$(PN))
+pod: override PODFLAGS += --center=$($(PN)_NAME) --date=$($(PN)_DATE) --release="$($(PN)_NAME) $($(PN)_VERSION)"
+pod: $$($$(PN)_MANS)
+
 
 epm:
-	$(MAKE) P=$@ pod
+	$(MAKE) PN=$@ pod
 $(epm_MANS): $(epm_PODS)
 $(epm_PODS): .epm.po4a-stamp
 .epm.po4a-stamp: $(epm_SOURCES)
@@ -223,7 +232,7 @@ $(gentoolkit_MANS): .gentoolkit.po4a-stamp
 	touch $@
 
 gentoolkit-dev:
-	$(MAKE) P=$@ pod
+	$(MAKE) PN=$@ pod
 $(gentoolkit_dev_MANS): $(gentoolkit_dev_PODS)
 $(gentoolkit_dev_PODS): .gentoolkit-dev.po4a-stamp
 .gentoolkit-dev.po4a-stamp: $(gentoolkit_dev_SOURCES)
