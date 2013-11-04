@@ -125,6 +125,15 @@ portage_SOURCES := portage/dispatch-conf.1 \
                    portage/repoman.1 \
                    portage/repoman.1.ja.po \
                    portage/repoman.1.txt \
+                   portage/ebuild.5 \
+                   portage/ebuild.5.ja.po \
+                   portage/ebuild.5.txt \
+                   portage/make.conf.5 \
+                   portage/make.conf.5.ja.po \
+                   portage/make.conf.5.txt \
+                   portage/portage.5 \
+                   portage/portage.5.ja.po \
+                   portage/portage.5.txt \
                    portage/check-kernel.eclass.5 \
                    portage/check-kernel.eclass.5.ja.po \
                    portage/check-kernel.eclass.5.txt \
@@ -137,9 +146,6 @@ portage_SOURCES := portage/dispatch-conf.1 \
                    portage/ebook.eclass.5 \
                    portage/ebook.eclass.5.ja.po \
                    portage/ebook.eclass.5.txt \
-                   portage/ebuild.5 \
-                   portage/ebuild.5.ja.po \
-                   portage/ebuild.5.txt \
                    portage/eutils.eclass.5 \
                    portage/eutils.eclass.5.ja.po \
                    portage/eutils.eclass.5.txt \
@@ -158,15 +164,9 @@ portage_SOURCES := portage/dispatch-conf.1 \
                    portage/libtool.eclass.5 \
                    portage/libtool.eclass.5.ja.po \
                    portage/libtool.eclass.5.txt \
-                   portage/make.conf.5 \
-                   portage/make.conf.5.ja.po \
-                   portage/make.conf.5.txt \
                    portage/perl-module.eclass.5 \
                    portage/perl-module.eclass.5.ja.po \
                    portage/perl-module.eclass.5.txt \
-                   portage/portage.5 \
-                   portage/portage.5.ja.po \
-                   portage/portage.5.txt \
                    portage/rpm.eclass.5 \
                    portage/rpm.eclass.5.ja.po \
                    portage/rpm.eclass.5.txt \
